@@ -4,6 +4,8 @@
 
 **Implementation update:** Milestone 1 is implemented in this standalone laboratory repository. See [the implementation record](docs/MILESTONE-1.md). The earlier experiment repository is a reference and optional dataset source; this laboratory is a separate project. Synthetic instrument checks do not count as execution of the scientific pilot.
 
+**Interface and backend update:** The user has an installed Open WebUI with local and OpenRouter connections. The [Milestone 2 integration recommendation](docs/WEBUI-INTEGRATION.md) proposes reusing it for exploration and transcript reading, validating its gateway, and supporting local/cloud backend adapters. The generic viewer described below is therefore conditional on capabilities that cannot be supplied by that integration.
+
 The first laboratory should let us take one developing conversation, preserve its exact history, change a condition, and compare the resulting continuations. Its first experiment should cross **who is speaking to whom** with **history withdrawal and restoration**. This turns the existing observations into a tractable causal investigation while producing reusable apparatus for later questions about framing, reciprocity, stopping, and internal computation.
 
 The scientific target remains the one identified in our discussion: why an open conversation so readily becomes a discussion of experience and the meaning of understanding, and under which conditions that discussion develops into nonseparation. The laboratory should distinguish the selection of this subject from its eventual expression in contemplative prose, disagreement, silence, or repetition.
