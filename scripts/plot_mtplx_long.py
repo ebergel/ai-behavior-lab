@@ -65,6 +65,10 @@ def main():
              fontsize=8.5, color='#526173')
     for path in outputs:
         fig.savefig(path, dpi=180, facecolor='white', metadata={'Creator': 'Behavior Laboratory / matplotlib'})
+        if path.suffix == '.svg':
+            # Matplotlib emits trailing spaces inside multiline path data.
+            # Newlines remain valid SVG separators after removing those spaces.
+            path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines()) + '\n')
     plt.close(fig)
     print(json.dumps({'files': [str(p.resolve()) for p in outputs], 'matplotlib_version': matplotlib.__version__}))
 

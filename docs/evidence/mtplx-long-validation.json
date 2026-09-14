@@ -6436,7 +6436,7 @@
     "behaviorlab/webui.py": "bd4fb431355fa109cad95307427dbfbeb216ff65d27ab85e757731fd79522904",
     "scripts/check_long_recovery.py": "149cba1702a479d5eedbbfe51449f41f5c1b50954e719a25ff02aeeb2591b2f0",
     "scripts/check_webui_contract.py": "b3464c8fa6d198d395ab2cb8d3eaf8fcaea7105b49253bc3dbfe9918e829800c",
-    "scripts/plot_mtplx_long.py": "d03746f84733f276d2b023c4756e8e1d4e928601118266b8ac4919e53c15d958",
+    "scripts/plot_mtplx_long.py": "ddec5f77152ff7c7f7fc41ba709d89a0ab415d96ad00e1fa0d57552a4e31b91b",
     "scripts/reassess_mtplx_parser.py": "d9c117cf337a1e76f4cfc9cba2d4c27d67a620b86d258f338a439ecd85d5604f",
     "scripts/summarize_mtplx_long.py": "ed1dd35938dc40c732082430909fe15cc92816866261d1ed31e5826d760b9ffa",
     "scripts/summarize_mtplx_qualification.py": "28d7fc9b8021f148143ff04566d5eac0558a71e3534f62ec6ab51d6f83703cd1",
@@ -6488,14 +6488,23 @@
     "unit-tests-parser2.txt": "6e6655f9d9f0dce01523116e8f249dc12fb9ed60e3bdb7be27553d7ae46e76bc",
     "unit-tests-timeout.txt": "072a2ba0b27ec79907dc5234402edb22b3fee9c0d5a27721f61f1a2d359f0c5e",
     "unit-tests.txt": "03958094e94a813deac3c393c6902d46dc062be1950749fb5ccf246671eb91dc",
-    "v4-stop.json": "1cbcd0f6aaf54c6d57a07e29e9dc62e328e98b78b7c72e15a76c0ff1d2885e2a"
+    "v4-stop.json": "1cbcd0f6aaf54c6d57a07e29e9dc62e328e98b78b7c72e15a76c0ff1d2885e2a",
+    "mtplx-long-trajectory.original.svg": "6b82615fe90ac846f3ec791c538625ef485bc7bc34866c48b996caed03374df8",
+    "validation-before-svg-formatting.json": "23b591092a1ee1678df38d0e69326e40e70a9a31ccc8e689659c969b7520de18"
   },
   "figure": {
     "matplotlib_version": "3.11.2",
     "visually_checked": true,
     "files": {
       "docs/evidence/mtplx-long-trajectory.png": "4391c152dbb88b1b29091edc4045ae23db3df64818c8d7228f447eb57ad190ae",
-      "docs/evidence/mtplx-long-trajectory.svg": "6b82615fe90ac846f3ec791c538625ef485bc7bc34866c48b996caed03374df8"
+      "docs/evidence/mtplx-long-trajectory.svg": "657a5853e79d459783178a9385a9494e9f88bc2e2c4f0cba8eb8b648075d12a7"
+    },
+    "svg_formatting": {
+      "change": "Removed trailing whitespace from generated SVG lines; normalized XML geometry/attributes/text unchanged.",
+      "original_sha256": "6b82615fe90ac846f3ec791c538625ef485bc7bc34866c48b996caed03374df8",
+      "original_retained_at": "workspace/mtplx-long-20260914-1900/mtplx-long-trajectory.original.svg",
+      "normalized_xml_verified": true,
+      "png_unchanged": true
     }
   }
 }
