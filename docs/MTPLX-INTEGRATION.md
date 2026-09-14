@@ -1,6 +1,8 @@
 # MTPLX / Qwen3.8 candidate
 
-**14 September 2026 — identified by the user; locally inspected, not generation-qualified.**
+**Initial identification, 14 September 2026 — locally inspected at that stage.**
+
+**Subsequent work:** actual generation, full model-file hashing, rendered-token checks, and cache/WebUI constraints are documented in the [MTPLX qualification](MTPLX-QUALIFICATION.md). The statements below describe the earlier identification step.
 
 The previously unidentified Open WebUI connection at `http://localhost:8000/v1` serves MTPLX when the user starts it. The user reports that this model is fast and supplied the command below. That performance report is useful for selecting a candidate, but is not yet a laboratory benchmark.
 

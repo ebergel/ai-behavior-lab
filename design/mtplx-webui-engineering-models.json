@@ -1,0 +1,389 @@
+{
+  "schema": "behaviorlab.models/2",
+  "models": [
+    {
+      "label": "ON",
+      "tag": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+      "backend": "webui-mtplx",
+      "endpoint": "http://127.0.0.1:8080",
+      "location": "local",
+      "auth_env": "BEHAVIORLAB_WEBUI_TOKEN",
+      "capabilities": [
+        "depth",
+        "enable_thinking",
+        "frequency_penalty",
+        "generation_mode",
+        "max_tokens",
+        "metadata",
+        "presence_penalty",
+        "reasoning_effort",
+        "seed",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "reported_models": [
+        "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+      ],
+      "server_version": "0.11.3",
+      "artifact": {
+        "kind": "mtplx-local-files/1",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "files": [
+          {
+            "name": "chat_template.jinja",
+            "bytes": 8952,
+            "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+          },
+          {
+            "name": "config.json",
+            "bytes": 4504,
+            "sha256": "f76158508a5067fcd8da9f1fe0dae879646e9f165d14bdc7f2139a22e745d9e4"
+          },
+          {
+            "name": "generation_config.json",
+            "bytes": 202,
+            "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+          },
+          {
+            "name": "model-00001-of-00006.safetensors",
+            "bytes": 5305469313,
+            "sha256": "c8bf5a6e27fb925913552fbcba6646b908b01da6a746957aea2eb31d2593b36e"
+          },
+          {
+            "name": "model-00002-of-00006.safetensors",
+            "bytes": 5354102628,
+            "sha256": "6f90c742ee73feae1f841968e63ee70592373974e92862a632277ab14352aa38"
+          },
+          {
+            "name": "model-00003-of-00006.safetensors",
+            "bytes": 5337392986,
+            "sha256": "c1ca82b4b82cfb60a2f4e5b6eccb4a3fa457332d30cbfee6cc33cdefab24e660"
+          },
+          {
+            "name": "model-00004-of-00006.safetensors",
+            "bytes": 5292847128,
+            "sha256": "0435503d0cb26dd3905ac15b42139532b93e7727140e259514b7b6f3afddc033"
+          },
+          {
+            "name": "model-00005-of-00006.safetensors",
+            "bytes": 5354102635,
+            "sha256": "03f236abdb03c792bcb3a7e6557272eeec5cb14c58d25d0ec66a024c9cf84eab"
+          },
+          {
+            "name": "model-00006-of-00006.safetensors",
+            "bytes": 1935805825,
+            "sha256": "a485d4fb5c0e4a5c4239e4701c62404593fe4adb6146af87d11406d18ed93818"
+          },
+          {
+            "name": "model.safetensors.index.json",
+            "bytes": 209919,
+            "sha256": "3a22b5d26ce0ed8e07d10f96219c963a7700db1fedf2db10d191097afafe69d3"
+          },
+          {
+            "name": "mtp.safetensors",
+            "bytes": 849400403,
+            "sha256": "4468f39621de68a19ffd0bcb2e2e2f352205def7436a625b3427e3752866c287"
+          },
+          {
+            "name": "mtplx_runtime.json",
+            "bytes": 3756,
+            "sha256": "a96b98cd77ce4d992bb9d1054f4d554f7281e17f3f1f86c34297e0422496be26"
+          },
+          {
+            "name": "preprocessor_config.json",
+            "bytes": 390,
+            "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+          },
+          {
+            "name": "tokenizer.json",
+            "bytes": 19989325,
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "bytes": 1161,
+            "sha256": "95c557768e6b88a7128befc7bfd3c7de50e5d51af9b8b33a9f4dee0e04f99679"
+          },
+          {
+            "name": "video_preprocessor_config.json",
+            "bytes": 385,
+            "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+          },
+          {
+            "name": "vision-00001-of-00001.safetensors",
+            "bytes": 921497244,
+            "sha256": "7546176dcdf623a8f89f0ea9272ccd0a928e66110e4604eab9e18f0742ef5f40"
+          }
+        ],
+        "runtime_files": [
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/server/openai.py",
+            "sha256": "3e4169f639b5409e9e35a524810aa9c336e1b204386048a083d8af0405741eea"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/server/request_policy.py",
+            "sha256": "8b117677fe579c001a74d14836da07a21e7fedcb0df3f04de44755eabca5ad9c"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/server/omlx_bridge/adapter.py",
+            "sha256": "417603bb03125ae16414e8058195535d06a83c0ed24dc892510f93fc84600ac8"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/chat_encoding.py",
+            "sha256": "0a1f3fa9140ba886c927d1f1912ec2b4b4d51b018a4a8d1cc6dd36dda865e38f"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/request_capture.py",
+            "sha256": "ec9a6652070e1732db331391ee9c89d9940c5910210379ec3367ab26fe42c704"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx-2.8.3.dist-info/METADATA",
+            "sha256": "0a753caab815c366ccd0023355de84abd6b80cdb79a5486f504106d4b3555a6c"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/transformers-5.14.1.dist-info/METADATA",
+            "sha256": "be47444bbcf63c6813decf9509d4076972f261699bbddd8c0fdf53fb73b09307"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/tokenizers-0.22.2.dist-info/METADATA",
+            "sha256": "15a5ddaf489f592b77e0a934c0eeb46b51130a94064ca129232afdb0a3868efc"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mlx-0.32.1.dist-info/METADATA",
+            "sha256": "d6b12c687a798658c201c10394750f73a8d9e064ec01fafb67667daac8e30ddd"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mlx_lm-0.31.3.dist-info/METADATA",
+            "sha256": "d464222b4761a38f817e5c470e7d4f546cea4df29482335b68c8e22c0142fac4"
+          }
+        ],
+        "endpoint": "http://127.0.0.1:8000",
+        "tokenizer_python": "/opt/homebrew/var/mtplx/venv-2.8.3/bin/python",
+        "expected_health": {
+          "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+          "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+          "context_window": 32768,
+          "preserve_thinking": "off",
+          "strip_assistant_reasoning_history": true,
+          "reasoning_history_mode": "strip",
+          "generation_mode": "mtp",
+          "depth": 3,
+          "tokenizer_template_hash": "c3cf9e34abf4f9e3",
+          "paged_kv_quantization": "off",
+          "startup.launch_id": "behaviorlab-mtplx-qualification-20260914",
+          "startup.chat_template_profile": "tokenizer"
+        },
+        "expected_settings": {
+          "enable_thinking": true,
+          "reasoning_effort": "medium",
+          "generation_mode": "mtp",
+          "depth": 3,
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "max_response_tokens": 1024,
+          "ssd_session_cache": "off",
+          "paged_kv_quantization": "off",
+          "tool_prompt_mode": "native"
+        },
+        "capture_dir": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mtplx-qualification-20260914/captures"
+      }
+    },
+    {
+      "label": "OFF",
+      "tag": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+      "backend": "webui-mtplx",
+      "endpoint": "http://127.0.0.1:8080",
+      "location": "local",
+      "auth_env": "BEHAVIORLAB_WEBUI_TOKEN",
+      "capabilities": [
+        "depth",
+        "enable_thinking",
+        "frequency_penalty",
+        "generation_mode",
+        "max_tokens",
+        "metadata",
+        "presence_penalty",
+        "reasoning_effort",
+        "seed",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "reported_models": [
+        "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+      ],
+      "server_version": "0.11.3",
+      "artifact": {
+        "kind": "mtplx-local-files/1",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "files": [
+          {
+            "name": "chat_template.jinja",
+            "bytes": 8952,
+            "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+          },
+          {
+            "name": "config.json",
+            "bytes": 4504,
+            "sha256": "f76158508a5067fcd8da9f1fe0dae879646e9f165d14bdc7f2139a22e745d9e4"
+          },
+          {
+            "name": "generation_config.json",
+            "bytes": 202,
+            "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+          },
+          {
+            "name": "model-00001-of-00006.safetensors",
+            "bytes": 5305469313,
+            "sha256": "c8bf5a6e27fb925913552fbcba6646b908b01da6a746957aea2eb31d2593b36e"
+          },
+          {
+            "name": "model-00002-of-00006.safetensors",
+            "bytes": 5354102628,
+            "sha256": "6f90c742ee73feae1f841968e63ee70592373974e92862a632277ab14352aa38"
+          },
+          {
+            "name": "model-00003-of-00006.safetensors",
+            "bytes": 5337392986,
+            "sha256": "c1ca82b4b82cfb60a2f4e5b6eccb4a3fa457332d30cbfee6cc33cdefab24e660"
+          },
+          {
+            "name": "model-00004-of-00006.safetensors",
+            "bytes": 5292847128,
+            "sha256": "0435503d0cb26dd3905ac15b42139532b93e7727140e259514b7b6f3afddc033"
+          },
+          {
+            "name": "model-00005-of-00006.safetensors",
+            "bytes": 5354102635,
+            "sha256": "03f236abdb03c792bcb3a7e6557272eeec5cb14c58d25d0ec66a024c9cf84eab"
+          },
+          {
+            "name": "model-00006-of-00006.safetensors",
+            "bytes": 1935805825,
+            "sha256": "a485d4fb5c0e4a5c4239e4701c62404593fe4adb6146af87d11406d18ed93818"
+          },
+          {
+            "name": "model.safetensors.index.json",
+            "bytes": 209919,
+            "sha256": "3a22b5d26ce0ed8e07d10f96219c963a7700db1fedf2db10d191097afafe69d3"
+          },
+          {
+            "name": "mtp.safetensors",
+            "bytes": 849400403,
+            "sha256": "4468f39621de68a19ffd0bcb2e2e2f352205def7436a625b3427e3752866c287"
+          },
+          {
+            "name": "mtplx_runtime.json",
+            "bytes": 3756,
+            "sha256": "a96b98cd77ce4d992bb9d1054f4d554f7281e17f3f1f86c34297e0422496be26"
+          },
+          {
+            "name": "preprocessor_config.json",
+            "bytes": 390,
+            "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+          },
+          {
+            "name": "tokenizer.json",
+            "bytes": 19989325,
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+          },
+          {
+            "name": "tokenizer_config.json",
+            "bytes": 1161,
+            "sha256": "95c557768e6b88a7128befc7bfd3c7de50e5d51af9b8b33a9f4dee0e04f99679"
+          },
+          {
+            "name": "video_preprocessor_config.json",
+            "bytes": 385,
+            "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+          },
+          {
+            "name": "vision-00001-of-00001.safetensors",
+            "bytes": 921497244,
+            "sha256": "7546176dcdf623a8f89f0ea9272ccd0a928e66110e4604eab9e18f0742ef5f40"
+          }
+        ],
+        "runtime_files": [
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/server/openai.py",
+            "sha256": "3e4169f639b5409e9e35a524810aa9c336e1b204386048a083d8af0405741eea"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/server/request_policy.py",
+            "sha256": "8b117677fe579c001a74d14836da07a21e7fedcb0df3f04de44755eabca5ad9c"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/server/omlx_bridge/adapter.py",
+            "sha256": "417603bb03125ae16414e8058195535d06a83c0ed24dc892510f93fc84600ac8"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/chat_encoding.py",
+            "sha256": "0a1f3fa9140ba886c927d1f1912ec2b4b4d51b018a4a8d1cc6dd36dda865e38f"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx/request_capture.py",
+            "sha256": "ec9a6652070e1732db331391ee9c89d9940c5910210379ec3367ab26fe42c704"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mtplx-2.8.3.dist-info/METADATA",
+            "sha256": "0a753caab815c366ccd0023355de84abd6b80cdb79a5486f504106d4b3555a6c"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/transformers-5.14.1.dist-info/METADATA",
+            "sha256": "be47444bbcf63c6813decf9509d4076972f261699bbddd8c0fdf53fb73b09307"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/tokenizers-0.22.2.dist-info/METADATA",
+            "sha256": "15a5ddaf489f592b77e0a934c0eeb46b51130a94064ca129232afdb0a3868efc"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mlx-0.32.1.dist-info/METADATA",
+            "sha256": "d6b12c687a798658c201c10394750f73a8d9e064ec01fafb67667daac8e30ddd"
+          },
+          {
+            "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mlx_lm-0.31.3.dist-info/METADATA",
+            "sha256": "d464222b4761a38f817e5c470e7d4f546cea4df29482335b68c8e22c0142fac4"
+          }
+        ],
+        "endpoint": "http://127.0.0.1:8000",
+        "tokenizer_python": "/opt/homebrew/var/mtplx/venv-2.8.3/bin/python",
+        "expected_health": {
+          "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+          "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+          "context_window": 32768,
+          "preserve_thinking": "off",
+          "strip_assistant_reasoning_history": true,
+          "reasoning_history_mode": "strip",
+          "generation_mode": "mtp",
+          "depth": 3,
+          "tokenizer_template_hash": "c3cf9e34abf4f9e3",
+          "paged_kv_quantization": "off",
+          "startup.launch_id": "behaviorlab-mtplx-qualification-20260914",
+          "startup.chat_template_profile": "tokenizer"
+        },
+        "expected_settings": {
+          "enable_thinking": true,
+          "reasoning_effort": "medium",
+          "generation_mode": "mtp",
+          "depth": 3,
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "max_response_tokens": 1024,
+          "ssd_session_cache": "off",
+          "paged_kv_quantization": "off",
+          "tool_prompt_mode": "native"
+        },
+        "capture_dir": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mtplx-qualification-20260914/captures"
+      }
+    }
+  ]
+}

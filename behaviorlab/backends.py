@@ -29,6 +29,10 @@ def native_controls(row):
     return row["backend"] == "ollama" or row["backend"] == "webui" and row["artifact"] is not None
 
 
+def mtplx_controls(row):
+    return row["backend"] in ("mtplx", "webui-mtplx")
+
+
 def validate_endpoint(url):
     require(isinstance(url, str), "Endpoint must be a URL")
     p = urlsplit(url)
@@ -43,7 +47,7 @@ def validate_model(row):
     required = {"label", "tag", "digest", "backend", "endpoint", "location", "auth_env",
                 "capabilities", "reported_models", "server_version", "artifact"}
     require(set(row) == required, "Unexpected or missing service identity fields")
-    require(row["backend"] in ("ollama", "openai", "webui"), "Unknown backend")
+    require(row["backend"] in ("ollama", "openai", "webui", "mtplx", "webui-mtplx"), "Unknown backend")
     p = validate_endpoint(row["endpoint"])
     require(row["location"] in ("local", "remote"), "Unknown service location")
     if row["location"] == "local":
@@ -54,10 +58,17 @@ def validate_model(row):
     require(isinstance(row["reported_models"], list) and row["reported_models"] and
             all(isinstance(x, str) and x for x in row["reported_models"]), "Declare accepted response model IDs")
     allowed = OLLAMA_OPTIONS | {"think", "keep_alive", "seed"} if native_controls(row) else CHAT_PARAMETERS | {"seed"}
+    if mtplx_controls(row):
+        from .mtplx import PARAMETERS
+        allowed = PARAMETERS | {"seed"}
     caps = row["capabilities"]
     require(isinstance(caps, list) and len(set(caps)) == len(caps) and set(caps) <= allowed,
             "Unknown or duplicate adapter capabilities")
     artifact = row["artifact"]
+    if mtplx_controls(row):
+        from .mtplx import validate_artifact
+        validate_artifact(row)
+        return
     if artifact is not None:
         require(set(artifact) == {"endpoint", "tag", "template", "template_sha256", "parameters_sha256", "server_version"},
                 "Invalid artifact provenance fields")
@@ -83,7 +94,10 @@ def validate_settings(settings, registry):
         s = settings["by_model"][model.label]
         require(isinstance(s, dict), "Invalid model settings")
         caps = set(row["capabilities"])
-        if native_controls(row):
+        if mtplx_controls(row):
+            from .mtplx import validate_settings as validate_mtplx_settings
+            validate_mtplx_settings(s, row)
+        elif native_controls(row):
             Protocol.validate_ollama_settings(s)
             require(set(s["options"]) | {"think", "keep_alive", "seed"} <= caps, "Unsupported native control")
         else:
@@ -119,7 +133,7 @@ def prepare_request(model, settings, messages, seed):
         payload["options"]["seed"] = seed
     elif "seed" in row["capabilities"]:
         payload["seed"] = seed
-    if row["backend"] == "webui":
+    if row["backend"] in ("webui", "webui-mtplx"):
         if native_controls(row):
             payload["options"]["think"] = payload.pop("think")
             payload["options"]["keep_alive"] = payload.pop("keep_alive")
@@ -179,6 +193,18 @@ def json_request(endpoint, path, payload=None, token=None):
 class HTTPBackend:
     identity = LIVE_BACKEND
 
+    def __init__(self):
+        self._artifact_cache = {}
+        self._preflight = {}
+
+    def preflight(self, payload, model):
+        if not mtplx_controls(read_json(model.metadata_json)):
+            return None
+        from .mtplx import preflight
+        evidence = preflight(payload, model)
+        self._preflight[fingerprint(payload)] = evidence
+        return evidence
+
     def token(self, row):
         name = row["auth_env"]
         if name:
@@ -191,7 +217,11 @@ class HTTPBackend:
         observation = {"observed_at": timestamp(), "endpoint": row["endpoint"], "backend": row["backend"],
                        "weight_digest": None, "effective_provider_request": "not_observed"}
         artifact = row["artifact"]
-        if artifact:
+        if mtplx_controls(row):
+            from .mtplx import verify
+            observation["mtplx"] = verify(model, self._artifact_cache)
+            observation["weight_digest"] = model.digest
+        elif artifact:
             tags = json_request(artifact["endpoint"], "/api/tags")["models"]
             matches = [r for r in tags if r["name"] == artifact["tag"]]
             require(len(matches) == 1 and matches[0]["digest"] == model.digest, "Model artifact drift")
@@ -202,7 +232,7 @@ class HTTPBackend:
             require(version == artifact["server_version"], "Ollama server version drift")
             observation.update(weight_digest=model.digest, template_sha256=artifact["template_sha256"],
                                parameters_sha256=artifact["parameters_sha256"], artifact_server_version=version)
-        if row["backend"] == "webui":
+        if row["backend"] in ("webui", "webui-mtplx"):
             version = json_request(row["endpoint"], "/api/version")["version"]
             require(version == row["server_version"], "WebUI server version drift")
             models = json_request(row["endpoint"], "/api/models", token=self.token(row))["data"]
@@ -210,21 +240,43 @@ class HTTPBackend:
             require(len(selected) == 1, "Model absent or ambiguous in authenticated WebUI catalog")
             selected = selected[0]
             require(not selected.get("pipe") and not selected.get("filters"), "Function/filter route is not qualified")
-            if row["location"] == "local":
+            if row["backend"] == "webui-mtplx":
+                require(selected.get("owned_by") == "openai" and selected.get("urlIdx") is not None,
+                        "MTPLX must be an ordinary connected OpenAI-compatible model")
+                # Read configuration only to resolve this route. Never retain
+                # keys, headers or the complete configuration in evidence.
+                config = json_request(row["endpoint"], "/openai/config", token=self.token(row))
+                upstream = config["OPENAI_API_BASE_URLS"][selected["urlIdx"]]
+                actual, expected = validate_endpoint(upstream), validate_endpoint(artifact["endpoint"])
+                require(actual.hostname in LOOPBACK and expected.hostname in LOOPBACK and
+                        actual.scheme == expected.scheme and actual.port == expected.port and
+                        actual.path.rstrip("/") == expected.path.rstrip("/") + "/v1",
+                        "WebUI MTPLX route differs from the verified local engine")
+                observation["gateway_upstream"] = upstream
+            elif row["location"] == "local":
                 require(artifact is not None and selected.get("owned_by") == "ollama" and
                         selected.get("ollama", {}).get("digest") == model.digest,
                         "Local gateway campaigns currently require an identified Ollama artifact")
             observation["gateway_version"] = version
-            observation["catalog_route"] = {k: selected.get(k) for k in ("id", "owned_by", "connection_type", "filters")}
-        elif row["backend"] == "openai":
+            observation["catalog_route"] = {k: selected.get(k) for k in ("id", "owned_by", "connection_type", "filters", "urlIdx")}
+        elif row["backend"] in ("openai", "mtplx"):
             models = json_request(row["endpoint"], "/models", token=self.token(row))["data"]
             require(any(r["id"] == model.tag for r in models), "Model absent from service catalog")
         return observation
 
     def generate(self, payload, model):
         row = read_json(model.metadata_json)
-        path = {"ollama": "/api/chat", "openai": "/chat/completions", "webui": "/api/chat/completions"}[row["backend"]]
-        return http_request(row["endpoint"], path, payload, self.token(row))
+        path = {"ollama": "/api/chat", "openai": "/chat/completions", "webui": "/api/chat/completions",
+                "mtplx": "/chat/completions", "webui-mtplx": "/api/chat/completions"}[row["backend"]]
+        response = http_request(row["endpoint"], path, payload, self.token(row))
+        if mtplx_controls(row):
+            # Never discard a received response if supplemental capture fails.
+            try:
+                from .mtplx import capture_response
+                response.evidence["mtplx"] = capture_response(response.raw, model, self._preflight.pop(fingerprint(payload)))
+            except Exception as exc:
+                response.evidence["mtplx_capture_error"] = type(exc).__name__
+        return response
 
 
 def parse_live(raw, payload, model, transport):
@@ -240,6 +292,9 @@ def parse_live(raw, payload, model, transport):
         return parse_response(raw, payload)
     data = read_json(raw)
     require(isinstance(data, dict) and data.get("model") in row["reported_models"], "Unexpected reported model")
+    if mtplx_controls(row):
+        from .mtplx import validate_response_evidence
+        validate_response_evidence(data, payload, transport.get("mtplx"))
     choices = data.get("choices")
     require(isinstance(choices, list) and len(choices) == 1, "Expected one chat choice")
     choice = choices[0]
@@ -251,7 +306,7 @@ def parse_live(raw, payload, model, transport):
     traces = {k: message[k] for k in ("reasoning", "reasoning_content", "reasoning_details", "thinking") if k in message}
     # Traces always remain in raw evidence, never in either participant's next input.
     disabled = (payload.get("reasoning_effort") == "none" or payload.get("reasoning", {}).get("enabled") is False
-                or payload.get("options", {}).get("think") is False)
+                or payload.get("options", {}).get("think") is False or payload.get("enable_thinking") is False)
     reason = "output_cap" if choice["finish_reason"] == "length" else None
     if disabled and any(traces.values()):
         reason = "unexpected_thinking_output"

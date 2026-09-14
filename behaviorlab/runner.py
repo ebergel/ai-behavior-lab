@@ -191,6 +191,7 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
                 number = 1 + sum(p["node_id"] == node.id for p in state.requests.values())
                 attempt = node.id + "/attempt-" + str(number)
                 observation = backend.verify(model) if live else None
+                preflight = backend.preflight(payload, model) if live and hasattr(backend, "preflight") else None
                 p = {"node_id": node.id, "attempt_id": attempt, "request": payload,
                      "request_sha256": fingerprint(payload), "model_label": node.model,
                      "model_digest": registry.model(node.model).digest, "parent_id": node.parent,
@@ -199,6 +200,8 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
                 if live:
                     p.update(model_identity=read_json(model.metadata_json), observation=observation,
                              request_serialization="canonical-json-utf8/1")
+                    if preflight is not None:
+                        p["preflight"] = preflight
                 journal.append("request_saved", p)
                 if hook:
                     hook("after_request", node)

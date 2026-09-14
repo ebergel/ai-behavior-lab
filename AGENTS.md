@@ -6,9 +6,11 @@ This is a standalone laboratory repository. The user explicitly clarified that i
 
 Keep generated campaigns and imported datasets under the ignored `workspace/` directory or another explicitly selected evidence directory. Label synthetic engineering output separately from actual inference and scientific results. Preserve exact source bytes and missing historical metadata.
 
-Run `python3 -m unittest discover -s tests -v` from this repository. No third-party runtime packages are currently required. The research proposal and executable synthetic protocol have different schemas; do not convert an unqualified design into an actual behavioral campaign implicitly.
+Run `python3 -m unittest discover -s tests -v` from this repository. The core and tests require no third-party packages. The optional MTPLX tokenizer helper uses the separately installed MTPLX Python environment. The research proposal and executable synthetic protocol have different schemas; do not convert an unqualified design into an actual behavioral campaign implicitly.
 
 Runtime protocol v2 permits bounded local engineering via `run-local`; it is not a qualified research protocol. Keep cloud execution blocked until explicit budgeting and routing verification are implemented. Use the existing WebUI for transcript display. Credentials belong in runtime environment variables or owner-only ignored files, never in protocol documents or journal payloads. Gateway conversion tests and actual outbound network captures are different evidence; report their scopes accurately.
+
+MTPLX's initial controlled baseline uses direct calls with session-cache bypass. Cache-enabled runs preserved rendered input but changed seeded replies at two matched requests; do not assume cache equivalence. The tested WebUI version strips metadata and cannot preserve this bypass request. Consult `docs/MTPLX-QUALIFICATION.md` before extending those profiles. Short engineering qualification does not qualify the full configured context window or a behavioral campaign.
 
 # Session records
 

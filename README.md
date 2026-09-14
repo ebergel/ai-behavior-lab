@@ -6,11 +6,11 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: the instrument core and the Milestone 2 integration bridge work.** The laboratory executes synthetic campaigns and bounded local engineering protocols through native Ollama, a local OpenAI-compatible endpoint, and authenticated Open WebUI. It preserves branching histories and raw evidence, resumes interrupted campaigns, imports the reference corpus, and exports a branch into WebUI for reading. Fifteen real local calls and 39 automated tests passed. Long-context qualification, cloud budgeting, experimental probes, and semantic annotation remain before the research pilot. See the [integration validation](docs/MILESTONE-2-BRIDGE.md).
+**Current state: the instrument core and local integration bridge work, including MTPLX/Qwen3.8.** The laboratory runs bounded engineering protocols through Ollama, local OpenAI-compatible endpoints, and Open WebUI. It preserves branching histories, raw responses, and MTPLX's actual rendered input tokens. The suite has 49 passing tests. The latest qualification made 47 local calls: 46 accepted and one expected rejection when WebUI dropped a requested cache policy. Cached execution also changed seeded replies at two matched requests, so the MTPLX baseline uses direct calls with cache bypass. See the [MTPLX qualification](docs/MTPLX-QUALIFICATION.md) and the [earlier bridge validation](docs/MILESTONE-2-BRIDGE.md). Long trajectories, cloud budgeting, probes, and semantic annotation remain before the research pilot.
 
 ## Try the instrument
 
-Python 3.9 or later is sufficient. There are no third-party runtime dependencies. Run these commands from this repository's directory; installation is optional.
+Python 3.9 or later is sufficient for the instrument core and tests. The optional MTPLX preflight helper uses the tokenizer libraries in the separately installed MTPLX environment. Run these commands from this repository's directory; installation is optional.
 
 ```sh
 python3 -m unittest discover -s tests -v
@@ -93,4 +93,4 @@ The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](do
 
 The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents what is implemented and what remains. Next are recipient-specific rendered-context checks and longer mixed-model technical trials, followed by phenotype qualification and a frozen research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
 
-The user's other local engine is now identified as **MTPLX / Qwen3.8 27B**. Its cached artifact passed MTPLX's compatibility inspection; its laboratory generation route remains to be qualified. See the [MTPLX integration record](docs/MTPLX-INTEGRATION.md).
+**MTPLX / Qwen3.8 27B** now has a verified short engineering route, full local file fingerprints, and rendered-token checks. The [qualification record](docs/MTPLX-QUALIFICATION.md) includes executable examples, the WebUI cache-control limitation, and remaining repeatability/long-context work. The [initial identification record](docs/MTPLX-INTEGRATION.md) is preserved as the earlier inspection stage.
