@@ -1,0 +1,327 @@
+{
+  "schema": "behaviorlab.candidate/1",
+  "recorded_at": "2026-09-14T17:40:59-03:00",
+  "status": "identified_locally_inspected_not_generation_qualified",
+  "runtime": "MTPLX",
+  "installed_version": "2.8.3",
+  "model_id": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+  "local_model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+  "user_supplied_launch_argv": [
+    "/opt/homebrew/bin/mtplx",
+    "serve",
+    "--model",
+    "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+    "--profile",
+    "sustained",
+    "--depth",
+    "3",
+    "--temperature",
+    "1.0",
+    "--top-p",
+    "0.95",
+    "--top-k",
+    "20",
+    "--reasoning",
+    "on",
+    "--reasoning-effort",
+    "medium",
+    "--paged-kv-quantization",
+    "off",
+    "--port",
+    "8000"
+  ],
+  "endpoint": "http://127.0.0.1:8000/v1",
+  "server_listening_at_inspection": false,
+  "generation_calls_this_inspection": 0,
+  "user_reported_performance": "quite fast; no laboratory throughput measurement yet",
+  "weight_digest": null,
+  "weight_digest_note": "Tensor files were not fully hashed; local header/contract inspection is not a complete weight identity hash.",
+  "metadata_sha256": {
+    "config.json": "f76158508a5067fcd8da9f1fe0dae879646e9f165d14bdc7f2139a22e745d9e4",
+    "generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+    "tokenizer_config.json": "95c557768e6b88a7128befc7bfd3c7de50e5d51af9b8b33a9f4dee0e04f99679",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "mtplx_runtime.json": "a96b98cd77ce4d992bb9d1054f4d554f7281e17f3f1f86c34297e0422496be26",
+    "model.safetensors.index.json": "3a22b5d26ce0ed8e07d10f96219c963a7700db1fedf2db10d191097afafe69d3"
+  },
+  "tensor_files": [
+    {
+      "name": "model-00001-of-00006.safetensors",
+      "bytes": 5305469313
+    },
+    {
+      "name": "model-00002-of-00006.safetensors",
+      "bytes": 5354102628
+    },
+    {
+      "name": "model-00003-of-00006.safetensors",
+      "bytes": 5337392986
+    },
+    {
+      "name": "model-00004-of-00006.safetensors",
+      "bytes": 5292847128
+    },
+    {
+      "name": "model-00005-of-00006.safetensors",
+      "bytes": 5354102635
+    },
+    {
+      "name": "model-00006-of-00006.safetensors",
+      "bytes": 1935805825
+    },
+    {
+      "name": "mtp.safetensors",
+      "bytes": 849400403
+    },
+    {
+      "name": "vision-00001-of-00001.safetensors",
+      "bytes": 921497244
+    }
+  ],
+  "local_inspection": {
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "architecture_recognized": true,
+    "assistant_model": null,
+    "backend_artifact": null,
+    "backend_status": null,
+    "compatibility": {
+      "arch_id": "qwen3-next-mtp",
+      "can_run": true,
+      "exit_code": 0,
+      "message": "Verified MTPLX runtime contract found.",
+      "mtp_supported": "yes",
+      "recognized": true,
+      "recommended_backend": "qwen3_next",
+      "recommended_profile": "sustained",
+      "runtime_compatibility": "native",
+      "runtime_contract": {
+        "arch_id": "qwen3-next-mtp",
+        "exactness_baseline": {},
+        "mtp_contract": {
+          "base_hidden_variant": "post_norm",
+          "concat_order": "embedding_hidden",
+          "hidden_variant": "post_norm",
+          "mtp_position_mode": "local",
+          "mtp_quant_group_size": 64,
+          "mtp_quant_mode": "affine"
+        },
+        "mtp_depth_max": 3,
+        "mtplx_version": "2.7.1",
+        "recommended_profile": "sustained",
+        "verified_on": {
+          "hardware": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+          "machine_arch": "arm64",
+          "macos": "26.4.1",
+          "model": "qwen38-27b-blackfrost",
+          "timestamp": "2026-08-15T02:54:02-10:00"
+        }
+      },
+      "runtime_contract_error": null,
+      "runtime_contract_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX/mtplx_runtime.json",
+      "support_level": "verified-native",
+      "support_notes": "Product-verified default backend; this remains the only promoted shipping runtime.",
+      "supported": true,
+      "tier": "verified",
+      "unsafe_force_required": false,
+      "unverified_model": false
+    },
+    "config_exists": true,
+    "gemma4_pair": null,
+    "hidden_size": 5120,
+    "laguna_s_2_1_artifacts_complete": false,
+    "laguna_s_2_1_mlx_4bit_match": false,
+    "model_dir": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+    "model_files": [
+      "model-00001-of-00006.safetensors",
+      "model-00002-of-00006.safetensors",
+      "model-00003-of-00006.safetensors",
+      "model-00004-of-00006.safetensors",
+      "model-00005-of-00006.safetensors",
+      "model-00006-of-00006.safetensors"
+    ],
+    "model_type": "qwen3_5_text",
+    "mtp": {
+      "exists": true,
+      "expected_tensor_count": 15,
+      "extra_keys": [],
+      "metadata_only": true,
+      "missing_expected_keys": [],
+      "mtp_file": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX/mtp.safetensors",
+      "passes_tensor_gate": true,
+      "sidecar_format": "bf16",
+      "tensor_count": 15,
+      "tensors": [
+        {
+          "dtype": "BF16",
+          "elements": 52428800,
+          "key": "mtp.fc.weight",
+          "shape": [
+            5120,
+            10240
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5120,
+          "key": "mtp.layers.0.input_layernorm.weight",
+          "shape": [
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 89128960,
+          "key": "mtp.layers.0.mlp.down_proj.weight",
+          "shape": [
+            5120,
+            17408
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 89128960,
+          "key": "mtp.layers.0.mlp.gate_proj.weight",
+          "shape": [
+            17408,
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 89128960,
+          "key": "mtp.layers.0.mlp.up_proj.weight",
+          "shape": [
+            17408,
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5120,
+          "key": "mtp.layers.0.post_attention_layernorm.weight",
+          "shape": [
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 256,
+          "key": "mtp.layers.0.self_attn.k_norm.weight",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5242880,
+          "key": "mtp.layers.0.self_attn.k_proj.weight",
+          "shape": [
+            1024,
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 31457280,
+          "key": "mtp.layers.0.self_attn.o_proj.weight",
+          "shape": [
+            5120,
+            6144
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 256,
+          "key": "mtp.layers.0.self_attn.q_norm.weight",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 62914560,
+          "key": "mtp.layers.0.self_attn.q_proj.weight",
+          "shape": [
+            12288,
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5242880,
+          "key": "mtp.layers.0.self_attn.v_proj.weight",
+          "shape": [
+            1024,
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5120,
+          "key": "mtp.norm.weight",
+          "shape": [
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5120,
+          "key": "mtp.pre_fc_norm_embedding.weight",
+          "shape": [
+            5120
+          ]
+        },
+        {
+          "dtype": "BF16",
+          "elements": 5120,
+          "key": "mtp.pre_fc_norm_hidden.weight",
+          "shape": [
+            5120
+          ]
+        }
+      ]
+    },
+    "mtp_arch": "qwen3-next-mtp",
+    "mtp_num_hidden_layers": 1,
+    "mtp_pattern": null,
+    "mtp_supported": "yes",
+    "num_experts": null,
+    "num_experts_per_tok": null,
+    "num_hidden_layers": 64,
+    "passes_primary_gate": true,
+    "quantization": {
+      "bits": 8,
+      "group_size": 64,
+      "mode": "affine"
+    },
+    "recommended_backend": "qwen3_next",
+    "recommended_profile": "sustained",
+    "recommended_sampler": null,
+    "runtime_compatibility": "native",
+    "runtime_contract_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX/mtplx_runtime.json",
+    "runtime_model": null,
+    "sidecars": {
+      "preprocessor_config.json": true,
+      "processor_config.json": false,
+      "video_preprocessor_config.json": true
+    },
+    "source": "local",
+    "support_level": "verified-native",
+    "support_notes": "Product-verified default backend; this remains the only promoted shipping runtime.",
+    "unverified_model": false,
+    "vocab_size": 248320
+  },
+  "recommended_lab_changes_not_applied": {
+    "stats_footer": "Add --no-stats-footer so telemetry cannot enter model content.",
+    "reasoning_history": "Make --preserve-thinking explicit; off is the candidate for the current trace-withholding protocol, pending verification.",
+    "cache": "Verify warm-prefix and SSD cache reuse against exact supplied branch histories.",
+    "context_and_output": "Set explicit qualified context/output limits, accounting for reasoning tokens.",
+    "parameters": "Declare top_k and MTPLX reasoning controls in an explicit adapter capability profile; the current generic chat adapter does not accept top_k."
+  },
+  "qualification_contrasts": [
+    "reasoning on/medium versus off on the same artifact with other settings held fixed",
+    "AR versus MTP depth 3 for execution/behavioral consistency, without assuming identical seeded strings",
+    "cold versus warm cache and direct API versus WebUI branch-history equivalence"
+  ]
+}

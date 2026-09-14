@@ -92,3 +92,5 @@ python3 -m behaviorlab legacy-reindex workspace/reference-corpus
 The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](docs/ARCHITECTURE.md) describes the implementation and recovery rules. [References](docs/REFERENCES.md) records the relationship to the earlier research. [Validation](docs/MILESTONE-1.md) distinguishes verified engineering behavior from proposed experiments.
 
 The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents what is implemented and what remains. Next are recipient-specific rendered-context checks and longer mixed-model technical trials, followed by phenotype qualification and a frozen research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
+
+The user's other local engine is now identified as **MTPLX / Qwen3.8 27B**. Its cached artifact passed MTPLX's compatibility inspection; its laboratory generation route remains to be qualified. See the [MTPLX integration record](docs/MTPLX-INTEGRATION.md).

@@ -4,6 +4,8 @@
 
 The standalone laboratory can now make real local calls through three adapters and mirror a completed branch into the user's existing Open WebUI. The integration step is complete. The wider Milestone 2 qualification, including recipient-specific context bounds and long trajectories, remains open. No behavioral factorial campaign or paid cloud completion was launched.
 
+**Subsequent identification:** the user identified the stopped port-8000 service as MTPLX with `grant-ai/Qwen3.8-27B-Abliterated-MTPLX`. [The MTPLX record](MTPLX-INTEGRATION.md) contains the supplied launch configuration and successful local artifact inspection. Statements below about an unidentified service describe the earlier bridge check.
+
 ## What was exercised
 
 | Check | Observed result |
@@ -61,6 +63,6 @@ The viewed local transcript is [Behavior Lab · local engineering · AB-r01:RF:6
 
 1. Establish recipient-specific rendered-input counts or defensible bounds, then run the planned long and mixed-model technical trajectories. The short real prompts and long synthetic receiver input do not establish context validity.
 2. Capture the final WebUI → Ollama payload through a controlled route if that gateway will be used in the research baseline, and freeze or recheck relevant gateway configuration. The current native adapter provides a simpler inspectable baseline.
-3. Identify and start the user's non-Ollama server, then qualify its model identities, supported parameters, and trace behavior.
+3. Qualify the now-identified MTPLX/Qwen3.8 server, including artifact identity, top-k support, reasoning-history policy, cached prefixes, and removal of telemetry footers. Its local inspection passed; no MTPLX generation trial has run yet.
 4. Add budget enforcement and provider verification before cloud execution. Direct OpenAI-compatible transport and remote identity structures exist, and provider-control forwarding passed a synthetic receiver check; paid cloud execution remains intentionally unsupported by the runtime protocol.
 5. Complete phenotype qualification, probes, codebook/annotation, and protocol freezing before the 20-root factorial pilot. No experimental conclusion about experience or nonduality follows from this integration check.
