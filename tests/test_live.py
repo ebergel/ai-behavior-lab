@@ -95,6 +95,19 @@ class LiveTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_endpoint(endpoint)
 
+    def test_client_deadline_is_validated_and_does_not_enter_model_payload(self):
+        for value in (0, -1, True, float('nan'), float('inf'), 3601):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                HTTPBackend(request_timeout=value)
+        model = self.registry.model('A')
+        payload = prepare_request(model, self.d['settings']['by_model']['A'], [], 7)
+        before = canonical(payload)
+        with patch('behaviorlab.backends.http_request', return_value=wire('{}')) as api:
+            HTTPBackend(request_timeout=300).generate(payload, model)
+        self.assertEqual(api.call_args.kwargs['timeout'], 300)
+        self.assertEqual(canonical(payload), before)
+        self.assertNotIn('timeout', payload)
+
     def test_live_resume_reuses_raw_response_and_final_rerun_needs_no_network(self):
         self.create()
         def crash(stage, node):
@@ -112,6 +125,17 @@ class LiveTests(unittest.TestCase):
         execute(self.directory, backend=after)
         self.assertEqual((after.calls, after.verifications), (0, 0))
         self.assertEqual(original, (self.directory / "events.jsonl").read_bytes())
+
+    def test_legacy_parser_replay_preserves_bytes_and_refuses_new_inference(self):
+        with patch('behaviorlab.runner.LIVE_PARSER', 'http-chat/1'):
+            self.create()
+            execute(self.directory, backend=FixtureHTTPBackend(), max_calls=1)
+        before = (self.directory / 'events.jsonl').read_bytes()
+        backend = FixtureHTTPBackend()
+        with self.assertRaisesRegex(ValueError, 'replay-only'):
+            execute(self.directory, backend=backend)
+        self.assertEqual(backend.calls, 0)
+        self.assertEqual(before, (self.directory / 'events.jsonl').read_bytes())
 
     def test_http_failure_body_and_status_saved_without_generation_retry(self):
         class Failure(FixtureHTTPBackend):

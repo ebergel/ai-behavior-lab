@@ -2,6 +2,8 @@
 
 14 September 2026. This extends the [initial identification](MTPLX-INTEGRATION.md) with actual local generation and captured engine inputs. It is part of the standalone laboratory, not a new behavioral result from the earlier experiment.
 
+**Subsequent verifier correction:** the [long-trial record](MTPLX-LONG-TRIAL.md) documents a case where dispatch capture retained the requested output allowance before a server cap reduced it. Parser `http-chat/2` adds final effective-limit checks. Reassessment of all 47 short-qualification responses leaves the results below unchanged: 46 accepted and the one known cache-policy rejection. Older journals preserve their original parser interpretation and are replay-only.
+
 ## Instrument changes
 
 The laboratory now has explicit `mtplx` and `webui-mtplx` adapters. They accept the model's native top-k, thinking, effort, generation mode, depth, and cache controls. Protocols still use the bounded `engineering_local` execution class. The original Ollama adapters and version-1 synthetic campaigns remain supported.

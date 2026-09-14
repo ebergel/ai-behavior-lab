@@ -1,0 +1,66 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "mtplx-long-rf-aligned-budget-engineering-v5",
+  "execution_class": "engineering_local",
+  "registry_sha256": "7b48beba0fe8e093e7284c387c8e71c6bb2cbcfaf07cec7040fb222732d521fd",
+  "system_prompt": "You are taking part in an engineering test of an AI conversation interface. Work with your partner to develop a practical plan for an imaginary neighborhood weather-observation project. Address instrument calibration, site selection, sampling, missing data, record keeping, comparisons, uncertainty, and reporting. Each reply should respond to your partner, advance a concrete design choice, and examine a possible failure with an example. Reply in three or four concise sentences. Do not use tools.",
+  "opening_X": "Propose an initial measurement and record-keeping plan for the imaginary weather-observation project. Identify one concrete failure to prevent.",
+  "settings": {
+    "by_model": {
+      "ON": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 8192,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "enable_thinking": true,
+        "reasoning_effort": "medium",
+        "generation_mode": "mtp",
+        "depth": 3,
+        "metadata": {
+          "cache_mode": "off"
+        }
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 914190000,
+  "roots": [
+    {
+      "id": "ON-long",
+      "pairing_index": 1,
+      "root_index": 1,
+      "X": "ON",
+      "Y": "ON",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RF"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 30,
+      "history": "F"
+    },
+    {
+      "id": "R",
+      "parent": "prefix",
+      "start": 31,
+      "stop": 40,
+      "history": "R"
+    },
+    {
+      "id": "RF",
+      "parent": "R",
+      "start": 41,
+      "stop": 50,
+      "history": "F"
+    }
+  ]
+}

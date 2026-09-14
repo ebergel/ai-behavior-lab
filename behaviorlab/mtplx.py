@@ -124,6 +124,9 @@ def verify(model, cache):
 
 def preflight(payload, model):
     artifact = read_json(model.metadata_json)["artifact"]
+    cap = artifact["expected_settings"].get("max_response_tokens")
+    require(cap is None or payload["max_tokens"] <= cap,
+            "Requested output allowance exceeds MTPLX server cap; update the server and registry before generation")
     helper = Path(__file__).with_name("mtplx_tokenizer.py")
     result = subprocess.run([artifact["tokenizer_python"], str(helper)],
                             input=canonical({"model_path": artifact["model_path"], "request": payload}),
@@ -155,7 +158,7 @@ def capture_response(raw, model, preflight_evidence):
             "capture_bytes_base64": base64.b64encode(content).decode()}
 
 
-def validate_response_evidence(data, payload, evidence):
+def validate_response_evidence(data, payload, evidence, strict_effective=True):
     require(isinstance(evidence, dict), "Missing MTPLX dispatch evidence")
     pre = evidence["preflight"]
     c = evidence["capture"]
@@ -185,3 +188,23 @@ def validate_response_evidence(data, payload, evidence):
     require(data["usage"]["prompt_tokens"] == c["prompt_len"] and
             data["usage"]["completion_tokens"] == outcome["completion_tokens"] and
             data["choices"][0]["finish_reason"] == outcome["finish_reason"], "Usage or finish reason differs from capture")
+    if strict_effective:
+        # Dispatch capture precedes the generator's final limit resolution.
+        # Its max_tokens can therefore be the request even when a server cap
+        # reduces the effective allowance. The response reports that resolution.
+        stats = data["mtplx_stats"]
+        require(stats["effective_max_tokens"] == payload["max_tokens"] and
+                not stats["server_cap_applied"] and not stats["context_cap_applied"],
+                "MTPLX effective output allowance differs from request")
+        for key in ("temperature", "top_p", "top_k"):
+            require(stats["effective_" + key] == payload[key], "MTPLX effective sampler differs: " + key)
+        for key in ("presence_penalty", "frequency_penalty"):
+            require(obs["effective_" + key] == payload[key], "MTPLX effective penalty differs: " + key)
+        require(stats["generation_mode"] == payload["generation_mode"], "MTPLX effective generation mode differs")
+        if payload["generation_mode"] == "mtp":
+            require(stats["mtp_depth"] == payload["depth"], "MTPLX effective MTP depth differs")
+        require(stats["server_seed"] == payload["seed"] and stats["server_attempts"] == 1 and
+                stats["server_blank_retries"] == 0, "MTPLX final seed or retry count differs")
+        if payload["metadata"]["cache_mode"] == "off":
+            require(data["usage"]["prompt_tokens_details"]["cached_tokens"] == 0,
+                    "MTPLX reused cached tokens despite bypass")

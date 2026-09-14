@@ -10,7 +10,7 @@ from statistics import median
 from behaviorlab.backends import LIVE_BACKEND
 from behaviorlab.common import canonical, fingerprint, read_json, require, sha256, timestamp
 from behaviorlab.journal import read_events
-from behaviorlab.runner import campaign_documents, execute
+from behaviorlab.runner import campaign_documents, execute, summarize_events
 
 
 class OfflineBackend:
@@ -21,14 +21,25 @@ class OfflineBackend:
         raise AssertionError('Offline audit cannot generate')
 
 
-def summarize(directory):
+def summarize(directory, allow_incomplete=False):
     directory = Path(directory)
     journal = directory / 'events.jsonl'
     before = journal.read_bytes()
     events = read_events(journal)
     protocol, registry, state = campaign_documents(events)
-    require(state.complete, 'Audit requires a completed campaign')
-    result = execute(directory, backend=OfflineBackend())
+    require(state.complete or allow_incomplete, 'Audit requires a completed campaign')
+    if state.complete:
+        result = execute(directory, backend=OfflineBackend())
+        method = 'completed campaign replay'
+    else:
+        require(len(protocol.roots) == 1 and len(state.requests) == len(state.responses) == len(state.outcomes)
+                and state.outcomes and all(k == 'turn_committed' for k, _ in state.outcomes.values()),
+                'Only a fully saved, committed single-root prefix can be audited as incomplete')
+        from behaviorlab.webui import export_transcript
+        leaf = protocol.nodes()[len(state.outcomes)-1].id
+        export_transcript(directory, leaf)  # read-only reconstruction and raw-outcome verification
+        result = summarize_events(events)
+        method = 'read-only committed-prefix export validation'
     require(journal.read_bytes() == before, 'Completed audit altered journal')
     calls = []
     for request in state.requests.values():
@@ -48,6 +59,10 @@ def summarize(directory):
             'session_restore_mode': c['session_restore_mode'],
             'cached_tokens': usage.get('prompt_tokens_details', {}).get('cached_tokens', 0),
             'prompt_tokens': usage['prompt_tokens'], 'completion_tokens': usage['completion_tokens'],
+            'requested_output_limit': request['request']['max_tokens'],
+            'effective_output_limit': stats.get('effective_max_tokens'),
+            'server_output_cap': stats.get('server_max_response_tokens'),
+            'server_cap_applied': stats.get('server_cap_applied'),
             'reasoning_tokens': usage.get('completion_tokens_details', {}).get('reasoning_tokens'),
             'input_token_ids_match': fingerprint(c['prompt_token_ids']) == request['preflight']['prompt_token_ids_sha256'],
             'seed_requested': request['request']['seed'], 'seed_resolved': out['resolved_seed'],
@@ -60,7 +75,8 @@ def summarize(directory):
             'outcome': kind, 'invalid_detail': outcome.get('detail'),
             'capture_sha256': response['transport']['mtplx']['capture_sha256']})
     result.update(directory=directory.name, journal_sha256=sha256(before),
-                  offline_replay_preserved_journal=True, calls=calls)
+                  offline_replay_preserved_journal=True, validation_method=method,
+                  original_parser_version=state.meta['parser_version'], calls=calls)
     return result
 
 

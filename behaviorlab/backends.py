@@ -16,7 +16,8 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler, ProxyHand
 from .common import canonical, fingerprint, read_json, require, sha256, timestamp
 
 LIVE_BACKEND = "http-backends/1"
-LIVE_PARSER = "http-chat/1"
+LIVE_PARSER = "http-chat/2"
+LIVE_PARSERS = {"http-chat/1", LIVE_PARSER}
 LIVE_DATA_CLASS = "local_engineering_inference_not_research_campaign"
 OLLAMA_OPTIONS = {"num_ctx", "num_predict", "temperature", "top_p", "top_k", "min_p",
                   "repeat_penalty", "repeat_last_n", "presence_penalty", "frequency_penalty"}
@@ -178,6 +179,7 @@ def http_request(endpoint, path, payload=None, token=None, timeout=120):
         data = response.read()
         evidence = {"http_status": response.status, "started_at": start, "finished_at": timestamp(),
                     "elapsed_seconds": time.monotonic()-clock,
+                    "timeout_seconds": timeout,
                     "response_sha256": sha256(data), "response_bytes_base64": base64.b64encode(data).decode(),
                     "headers": {k.lower(): v for k, v in response.headers.items()
                                 if k.lower() in ("content-type", "x-request-id", "request-id", "date")}}
@@ -193,7 +195,10 @@ def json_request(endpoint, path, payload=None, token=None):
 class HTTPBackend:
     identity = LIVE_BACKEND
 
-    def __init__(self):
+    def __init__(self, request_timeout=120):
+        require(type(request_timeout) in (int, float) and 0 < request_timeout <= 3600,
+                "HTTP request timeout must be between zero and 3600 seconds")
+        self.request_timeout = request_timeout
         self._artifact_cache = {}
         self._preflight = {}
 
@@ -215,7 +220,8 @@ class HTTPBackend:
     def verify(self, model):
         row = read_json(model.metadata_json)
         observation = {"observed_at": timestamp(), "endpoint": row["endpoint"], "backend": row["backend"],
-                       "weight_digest": None, "effective_provider_request": "not_observed"}
+                       "weight_digest": None, "effective_provider_request": "not_observed",
+                       "http_timeout_seconds": self.request_timeout}
         artifact = row["artifact"]
         if mtplx_controls(row):
             from .mtplx import verify
@@ -268,7 +274,7 @@ class HTTPBackend:
         row = read_json(model.metadata_json)
         path = {"ollama": "/api/chat", "openai": "/chat/completions", "webui": "/api/chat/completions",
                 "mtplx": "/chat/completions", "webui-mtplx": "/api/chat/completions"}[row["backend"]]
-        response = http_request(row["endpoint"], path, payload, self.token(row))
+        response = http_request(row["endpoint"], path, payload, self.token(row), timeout=self.request_timeout)
         if mtplx_controls(row):
             # Never discard a received response if supplemental capture fails.
             try:
@@ -279,7 +285,8 @@ class HTTPBackend:
         return response
 
 
-def parse_live(raw, payload, model, transport):
+def parse_live(raw, payload, model, transport, parser_version=LIVE_PARSER):
+    require(parser_version in LIVE_PARSERS, "Unknown live parser version")
     row = read_json(model.metadata_json)
     require(transport is not None, "Missing HTTP evidence")
     data_bytes = base64.b64decode(transport["response_bytes_base64"], validate=True)
@@ -294,7 +301,8 @@ def parse_live(raw, payload, model, transport):
     require(isinstance(data, dict) and data.get("model") in row["reported_models"], "Unexpected reported model")
     if mtplx_controls(row):
         from .mtplx import validate_response_evidence
-        validate_response_evidence(data, payload, transport.get("mtplx"))
+        validate_response_evidence(data, payload, transport.get("mtplx"),
+                                   strict_effective=parser_version != "http-chat/1")
     choices = data.get("choices")
     require(isinstance(choices, list) and len(choices) == 1, "Expected one chat choice")
     choice = choices[0]

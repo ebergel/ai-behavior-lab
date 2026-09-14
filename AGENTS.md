@@ -12,6 +12,8 @@ Runtime protocol v2 permits bounded local engineering via `run-local`; it is not
 
 MTPLX's initial controlled baseline uses direct calls with session-cache bypass. Cache-enabled runs preserved rendered input but changed seeded replies at two matched requests; do not assume cache equivalence. The tested WebUI version strips metadata and cannot preserve this bypass request. Consult `docs/MTPLX-QUALIFICATION.md` before extending those profiles. Short engineering qualification does not qualify the full configured context window or a behavioral campaign.
 
+HTTP parser `http-chat/2` checks MTPLX's final effective generator limits as well as dispatch capture. The latter can contain a requested budget that is subsequently clamped. Preserve parser-1 journals and use explicit reassessment sidecars; do not rewrite outcomes or issue new inference from a legacy-parser campaign. Client HTTP deadlines are recorded outside model inputs.
+
 # Session records
 
 Use a new `SESSION-RECORD-YYYY-MM-DD-HHMM.md` in this repository for each session record. Use local time in `America/Argentina/Cordoba`, include the full timestamp and scope inside, and preserve earlier records. Distinguish completed and verified work from proposals and future experiments.

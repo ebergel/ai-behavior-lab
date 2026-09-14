@@ -59,7 +59,7 @@ def export_transcript(directory, leaf):
         require(saved["request"] == payload, "Saved history differs from reconstructed ancestry")
         response = state.responses[p["attempt_id"]]
         expected = outcome(node, p["attempt_id"], response["raw_response"], payload,
-                           registry.model(node.model) if live else None, response.get("transport"))
+                           registry.model(node.model) if live else None, response.get("transport"), state.meta["parser_version"])
         require(expected == state.outcomes[node.id], "Saved outcome differs from raw evidence")
         turns[node.id] = Turn(node.id, node.parent, node.root, node.turn, node.speaker, p["content"], p["thinking"])
     head = events[-1]["hash"]

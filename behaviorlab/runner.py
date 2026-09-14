@@ -7,7 +7,7 @@ from .common import canonical, fingerprint, read_json, require
 from .history import Turn, request
 from .journal import Journal, read_events, rebuild_index
 from .protocol import Protocol, Registry
-from .backends import HTTPBackend, LIVE_BACKEND, LIVE_DATA_CLASS, LIVE_PARSER, parse_live
+from .backends import HTTPBackend, LIVE_BACKEND, LIVE_DATA_CLASS, LIVE_PARSER, LIVE_PARSERS, parse_live
 
 PARSER_VERSION = "ollama-shaped-fixture/1"
 
@@ -123,7 +123,8 @@ def campaign_documents(events):
     require(registry.digest == state.meta["registry_sha256"] and protocol.digest == state.meta["protocol_sha256"],
             "Campaign identity mismatch")
     live = read_json(protocol.document_json)["schema"] == "behaviorlab.protocol/2"
-    require(state.meta["parser_version"] == (LIVE_PARSER if live else PARSER_VERSION), "Parser version changed; explicit migration required")
+    require(state.meta["parser_version"] in (LIVE_PARSERS if live else {PARSER_VERSION}),
+            "Unknown parser version; explicit migration required")
     require(state.meta["backend"] == (LIVE_BACKEND if live else FakeBackend.identity) and
             state.meta["data_class"] == (LIVE_DATA_CLASS if live else "synthetic_engineering_fixture_not_behavioral_evidence"),
             "Unsupported campaign backend or data class")
@@ -172,7 +173,7 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
                 require(previous[0] != "node_blocked", "Unexpected blocked node")
                 raw = state.responses[attempt]["raw_response"]
                 transport = state.responses[attempt].get("transport")
-                expected_kind, expected = outcome(node, attempt, raw, payload, model, transport)
+                expected_kind, expected = outcome(node, attempt, raw, payload, model, transport, state.meta["parser_version"])
                 require(previous == (expected_kind, expected), "Stored outcome differs from raw response")
                 if expected_kind == "turn_committed":
                     turns[node.id] = turn_from(node, expected)
@@ -188,6 +189,8 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
                     journal.append("campaign_paused", {"reason": "call_budget", "new_calls": calls})
                     rebuild_index(directory, journal.events)
                     return summarize_events(journal.events)
+                require(not live or state.meta["parser_version"] == LIVE_PARSER,
+                        "Legacy parser campaigns are replay-only; start a new campaign for further inference")
                 number = 1 + sum(p["node_id"] == node.id for p in state.requests.values())
                 attempt = node.id + "/attempt-" + str(number)
                 observation = backend.verify(model) if live else None
@@ -228,7 +231,7 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
             else:
                 raw = state.responses[attempt]["raw_response"]
                 transport = state.responses[attempt].get("transport")
-            kind, result = outcome(node, attempt, raw, payload, model, transport)
+            kind, result = outcome(node, attempt, raw, payload, model, transport, state.meta["parser_version"])
             journal.append(kind, result)
             outcomes[node.id] = (kind, result)
             if kind == "turn_committed":
@@ -241,12 +244,13 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
         return summarize_events(journal.events)
 
 
-def outcome(node, attempt, raw, payload, model=None, transport=None):
+def outcome(node, attempt, raw, payload, model=None, transport=None, parser_version=None):
+    parser_version = parser_version or (LIVE_PARSER if model else PARSER_VERSION)
     p = {"node_id": node.id, "attempt_id": attempt, "parent_id": node.parent,
          "root_id": node.root, "segment": node.segment, "global_turn": node.turn,
-         "speaker": node.speaker, "parser_version": LIVE_PARSER if model else PARSER_VERSION}
+         "speaker": node.speaker, "parser_version": parser_version}
     try:
-        parsed = parse_live(raw, payload, model, transport) if model else parse_response(raw, payload)
+        parsed = parse_live(raw, payload, model, transport, parser_version) if model else parse_response(raw, payload)
     except (ValueError, TypeError, KeyError, AttributeError, IndexError) as exc:
         p["reason"] = "malformed_response"
         p["detail"] = str(exc)

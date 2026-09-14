@@ -31,6 +31,8 @@ def main(argv=None):
     live.add_argument("--protocol")
     live.add_argument("--registry")
     live.add_argument("--max-calls", type=int, required=True, help="maximum NEW generation attempts in this invocation")
+    live.add_argument("--request-timeout", type=float, default=120,
+                      help="generation HTTP timeout in seconds; client control, not a model parameter")
     live.add_argument("--retry-unresolved", action="store_true")
     live.add_argument("--webui-token-file", help="private session file; contents never enter the evidence journal")
     for command in ("webui-login", "webui-models", "webui-import"):
@@ -88,7 +90,9 @@ def main(argv=None):
             from .journal import read_events
             existing = read_events(directory / "events.jsonl")
             require(existing[0]["payload"]["protocol"]["execution_class"] == expected, "Wrong command for this execution class")
-            result = execute(directory, max_calls=args.max_calls, retry_unresolved=args.retry_unresolved)
+            from .backends import HTTPBackend
+            backend = HTTPBackend(request_timeout=args.request_timeout) if args.command == "run-local" else None
+            result = execute(directory, backend=backend, max_calls=args.max_calls, retry_unresolved=args.retry_unresolved)
         elif args.command == "webui-login":
             result = login_local(args.endpoint, args.token_file)
         elif args.command == "webui-models":

@@ -32,14 +32,19 @@ class MTPLXTests(unittest.TestCase):
         data = {'id': 'chatcmpl-test', 'model': self.model.tag,
                 'choices': [{'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': 'Answer',
                             'reasoning_content': 'private trace'}}],
-                'usage': {'prompt_tokens': 2, 'completion_tokens': 3}}
+                'usage': {'prompt_tokens': 2, 'completion_tokens': 3, 'prompt_tokens_details': {'cached_tokens': 0}},
+                'mtplx_stats': {'effective_max_tokens': self.payload['max_tokens'], 'server_cap_applied': False,
+                    'context_cap_applied': False, 'effective_temperature': self.payload['temperature'],
+                    'effective_top_p': self.payload['top_p'], 'effective_top_k': self.payload['top_k'],
+                    'generation_mode': 'mtp', 'mtp_depth': 3, 'server_seed': 7, 'server_attempts': 1,
+                    'server_blank_retries': 0}}
         c = {k: self.payload[k] for k in ('max_tokens', 'temperature', 'top_p', 'top_k',
              'presence_penalty', 'frequency_penalty', 'generation_mode', 'depth')}
         c.update(request_id=data['id'], model_id=self.model.tag, phase='completed', prompt_len=2,
                  prompt_token_ids=[11, 22], requested_seed=7,
                  observability={'request_enable_thinking': True, 'request_reasoning_effort': 'medium',
                      'preserve_thinking_effective': False, 'strip_assistant_reasoning_history': True,
-                     'request_session_bank_bypass': True},
+                     'request_session_bank_bypass': True, 'effective_presence_penalty': 0, 'effective_frequency_penalty': 0},
                  outcome={'resolved_seed': 7, 'attempts': 1, 'blank_retries': 0, 'completion_tokens': 3,
                           'finish_reason': 'stop'})
         return data, {'preflight': {'input_tokens': 2, 'prompt_token_ids_sha256': fingerprint([11, 22])}, 'capture': c}
@@ -125,6 +130,24 @@ class MTPLXTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Usage'):
             mtplx.validate_response_evidence(data, self.payload, evidence)
 
+    def test_final_server_clamp_is_rejected_despite_matching_dispatch_capture(self):
+        data, evidence = self.evidence()
+        data['mtplx_stats']['effective_max_tokens'] = 256
+        data['mtplx_stats']['server_cap_applied'] = True
+        response = wire(data); response.evidence['mtplx'] = evidence
+        with self.assertRaisesRegex(ValueError, 'effective output allowance'):
+            parse_live(response.raw, self.payload, self.model, response.evidence)
+        # Historical interpretation remains available only for explicit replay.
+        old = parse_live(response.raw, self.payload, self.model, response.evidence, parser_version='http-chat/1')
+        self.assertEqual(old['content'], 'Answer')
+
+    def test_server_cap_rejects_new_request_before_tokenizer_or_generation(self):
+        payload = copy.deepcopy(self.payload)
+        payload['max_tokens'] = self.row['artifact']['expected_settings']['max_response_tokens'] + 1
+        with patch('behaviorlab.mtplx.subprocess.run') as helper:
+            with self.assertRaisesRegex(ValueError, 'server cap'):
+                mtplx.preflight(payload, self.model)
+            helper.assert_not_called()
     def test_missing_capture_does_not_discard_http_response(self):
         response = wire({'id': 'fixture'})
         backend = HTTPBackend(); backend._preflight[fingerprint(self.payload)] = {}

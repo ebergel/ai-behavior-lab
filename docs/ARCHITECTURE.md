@@ -1,6 +1,6 @@
-# Milestone 1 architecture
+# Instrument architecture
 
-The instrument is independent of the source experiment repository. Python's standard library provides the current implementation; the local inference adapter and user interface are not yet present.
+The instrument is independent of the source experiment repository. Python's standard library provides the core and local HTTP adapters; the optional MTPLX tokenizer uses its installed runtime. Open WebUI displays exported transcripts. The initial synthetic design is described first, followed by the live integration extensions.
 
 | Module | Responsibility |
 |---|---|
@@ -78,3 +78,11 @@ Runtime registry/protocol v2 adds local engineering execution while preserving v
 `mtplx.py` verifies a full local artifact manifest and selected runtime source/package fingerprints, checks effective server settings, renders recipient-specific input through an optional local tokenizer helper, and validates MTPLX engine captures against the intended tokens and controls. This helper uses the separately installed MTPLX environment; the core and tests remain standard-library Python. Unsupported settings are rejected and oversize rendered requests stop before generation. Captured reasoning remains separate from visible conversation content.
 
 Direct and WebUI MTPLX routes require the generation destination to match the verified local engine. WebUI strips the metadata used for MTPLX cache bypass; its tested route requires caching enabled. Observed cache hits preserved rendered inputs but sometimes changed seeded output, so the initial controlled baseline uses direct cache-bypassed requests. The earlier Ollama-only gateway restrictions above describe the initial bridge stage. See [the current qualification](MTPLX-QUALIFICATION.md) for measured scope and unresolved work.
+
+## Final generation controls and parser history
+
+MTPLX's dispatch capture can contain the requested output allowance even when its generator later applies a lower server cap. Parser `http-chat/2` checks the final effective allowance and clamp flags, sampling values, generation mode/depth, seed/retry counts, and cache usage as well as the captured input. Preflight rejects a requested allowance above the pinned server cap before tokenization or generation. The [long-trial record](MTPLX-LONG-TRIAL.md) documents the discrepancy that exposed this gap.
+
+Campaigns retain their original parser version. Parser-1 evidence can still be replayed and exported, but new inference from those campaigns is blocked. `scripts/reassess_mtplx_parser.py` evaluates saved responses under the current contract in a separate report, preserving the original journal bytes and outcomes. This makes a corrected interpretation distinguishable from the instrument's historical decision.
+
+The client HTTP deadline is independently configurable through `run-local --request-timeout` and is recorded in transport evidence. It is not sent as a generation parameter. Increasing that deadline does not change the model's output allowance or the server's context limit. Received responses survive supplemental-capture failures; an unresolved request still requires explicit retry authorization.
