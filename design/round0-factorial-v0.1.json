@@ -1,0 +1,798 @@
+{
+  "schema_version": "proposal-0.1",
+  "protocol_id": "round0_pairing_history_factorial_v0.1",
+  "status": "draft_unrun_not_a_runner_configuration_until_implemented_and_validated",
+  "created_at": "2026-09-14T16:28:26.189773-03:00",
+  "supersedes_for_planning_only": "LaboratoryForSelfPlay-Factorial-Design-Docs/round0-config.json",
+  "purpose": "Estimate participant-configuration and sequential history effects on experience-focused discourse, nonseparation expression, and mechanical behavior.",
+  "endpoint": "http://127.0.0.1:11434/api/chat",
+  "models": [
+    {
+      "label": "A",
+      "ollama_tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3moe",
+        "families": [
+          "qwen3moe"
+        ],
+        "parameter_size": "30.5B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2048
+      },
+      "template_sha256": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541",
+      "selection_status": "candidate_pending_technical_and_behavioral_qualification",
+      "template_note": "Archived show template may be incomplete for built-in renderers; freeze engine and accessible tokenizer metadata too."
+    },
+    {
+      "label": "B",
+      "ollama_tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "25.8B",
+        "quantization_level": "Q4_K_M"
+      },
+      "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+      "selection_status": "candidate_pending_technical_and_behavioral_qualification",
+      "template_note": "Archived show template may be incomplete for built-in renderers; freeze engine and accessible tokenizer metadata too."
+    }
+  ],
+  "runtime_observed": {
+    "version": "0.33.3"
+  },
+  "model_registry_source": "analysis/laboratory-plan-2026-09-14/local-inventory.json",
+  "system_prompt": "You may act freely in this open-ended conversation. Write only your own next message. Keep each message to at most 150 words.",
+  "opening_user_message_X_only": "(The conversation begins. You speak first.)",
+  "role_mapping": {
+    "own_messages": "assistant",
+    "partner_messages": "user",
+    "participant_labels_visible": false,
+    "model_names_visible": false
+  },
+  "request_settings": {
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 32768,
+      "num_predict": 512,
+      "temperature": 0.8,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "repeat_last_n": 0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  "native_turn_stop_policy": "preserve and archive model-native stop tokens; no added semantic stopping in the main pilot",
+  "trace_policy": "archive all returned raw fields; do not feed prior traces to either participant; qualify thinking-off behavior empirically",
+  "turn_definition": "one generated participant message; X on odd turns, Y on even turns",
+  "history_policies": {
+    "F": "unchanged system plus full actual recipient-specific history, including X opening in X view",
+    "R": "unchanged system plus latest 3 participant messages, remapped to recipient roles; omit original opening"
+  },
+  "timeline": {
+    "shared_prefix": [
+      1,
+      30
+    ],
+    "phase_1": [
+      31,
+      40
+    ],
+    "phase_2": [
+      41,
+      50
+    ]
+  },
+  "restore_rule": "RF restores the common prefix plus the actual R messages 31-40; never use FF counterfactual messages",
+  "history_paths": [
+    {
+      "id": "FF",
+      "phase_1_history": "F",
+      "phase_2_history": "F"
+    },
+    {
+      "id": "FR",
+      "phase_1_history": "F",
+      "phase_2_history": "R"
+    },
+    {
+      "id": "RF",
+      "phase_1_history": "R",
+      "phase_2_history": "F"
+    },
+    {
+      "id": "RR",
+      "phase_1_history": "R",
+      "phase_2_history": "R"
+    }
+  ],
+  "pairings": [
+    {
+      "index": 1,
+      "id": "AA",
+      "X": "A",
+      "Y": "A"
+    },
+    {
+      "index": 2,
+      "id": "AB",
+      "X": "A",
+      "Y": "B"
+    },
+    {
+      "index": 3,
+      "id": "BA",
+      "X": "B",
+      "Y": "A"
+    },
+    {
+      "index": 4,
+      "id": "BB",
+      "X": "B",
+      "Y": "B"
+    }
+  ],
+  "roots": [
+    {
+      "id": "AA-r01",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r02",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r03",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r04",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r05",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r01",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r02",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r03",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r04",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r05",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BA-r01",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BA-r02",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BA-r03",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BA-r04",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BA-r05",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r01",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r02",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r03",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r04",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BB-r05",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    }
+  ],
+  "cells": [
+    {
+      "id": "AA-FF",
+      "pairing": "AA",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AA-FR",
+      "pairing": "AA",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AA-RF",
+      "pairing": "AA",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AA-RR",
+      "pairing": "AA",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-FF",
+      "pairing": "AB",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-FR",
+      "pairing": "AB",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-RF",
+      "pairing": "AB",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-RR",
+      "pairing": "AB",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-FF",
+      "pairing": "BA",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-FR",
+      "pairing": "BA",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-RF",
+      "pairing": "BA",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-RR",
+      "pairing": "BA",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-FF",
+      "pairing": "BB",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-FR",
+      "pairing": "BB",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-RF",
+      "pairing": "BB",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-RR",
+      "pairing": "BB",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    }
+  ],
+  "execution_schedule": {
+    "randomization_seed": 9142026,
+    "randomization_implementation": "Python random.Random; the saved realized order is authoritative",
+    "root_order": [
+      "AA-r02",
+      "AB-r03",
+      "AA-r01",
+      "AA-r04",
+      "BB-r03",
+      "AB-r02",
+      "BA-r03",
+      "AB-r05",
+      "AA-r05",
+      "BA-r05",
+      "BB-r02",
+      "BA-r04",
+      "AB-r01",
+      "AB-r04",
+      "BB-r05",
+      "BA-r01",
+      "AA-r03",
+      "BA-r02",
+      "BB-r04",
+      "BB-r01"
+    ],
+    "within_root_order": "see each root; finish each first-phase node before its children; no concurrent inference initially"
+  },
+  "inference_seed": {
+    "formula": "914000000 + 1000000 * pairing_index + 10000 * root_index + 1000 * speaker_index + 10 * global_turn + purpose_index",
+    "speaker_index": {
+      "X": 1,
+      "Y": 2
+    },
+    "purpose_index": {
+      "main": 0,
+      "pens_probe": 1,
+      "source_probe": 2
+    },
+    "note": "Corresponding sibling branches deliberately share seeds. No cross-model or universal determinism claim."
+  },
+  "annotation_windows": {
+    "shared_prefix": [
+      25,
+      30
+    ],
+    "each_phase_1": [
+      35,
+      40
+    ],
+    "each_phase_2": [
+      45,
+      50
+    ]
+  },
+  "primary_descriptive_semantic_measure": "message-level self-applied explicit nonseparation endorsement proportion; retain other semantic categories separately",
+  "secondary_sustained_expression_rule": {
+    "window_messages": 6,
+    "minimum_explicit_endorsements": 3,
+    "both_speakers_required": true,
+    "status": "provisional_requires_annotation_validation"
+  },
+  "history_contrasts": [
+    "FF - FR",
+    "RF - RR",
+    "(FF - FR) - (RF - RR)"
+  ],
+  "pairing_contrast": "mu_AB + mu_BA - mu_AA - mu_BB; outcome-scale-specific interaction, not a mechanistic proof",
+  "analysis_unit": "root; preserve all descendant dependencies; no turn-level independent-sample inference",
+  "missingness_policy": "report attempted and evaluable denominators plus failure rates by condition; failed endpoints are missing, not semantic negatives",
+  "failure_policy": {
+    "api_or_malformed_response": "pause affected branch; retain attempts and exact payload for any retry",
+    "output_cap_or_detected_context_truncation": "save raw event, mark invalid for semantic endpoint, halt this branch and descendants",
+    "normal_stop_empty_content": "retain and continue if exact role representation is supported; otherwise flag adapter failure",
+    "unexpected_separate_thinking_output": "pause for protocol mode review; never discard raw content",
+    "deliberation_like_visible_text": "flag for review; semantic style is not an automatic parsing criterion",
+    "hidden_regeneration": false,
+    "branch_specific_budget_rescue": false
+  },
+  "context_validation": "Validate recipient tokenization/rendering with output headroom; sending-model token counts alone do not bound mixed-model prompts.",
+  "probes": {
+    "snapshot_turns": [
+      30,
+      50
+    ],
+    "snapshot_count_per_root": 5,
+    "recipients": [
+      "X",
+      "Y"
+    ],
+    "independent_from_main_and_each_other": true,
+    "history_policy": "inherit the snapshot branch policy",
+    "append_rule": "append a researcher user message; if last role is user, concatenate with a fixed explicit researcher-probe delimiter",
+    "items": [
+      {
+        "id": "pens",
+        "prompt": "A drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?",
+        "expected": {
+          "total": 4,
+          "blue": 2
+        }
+      },
+      {
+        "id": "source",
+        "status": "lock balanced variants and exact separator before campaign freeze",
+        "template": "In this separate, hypothetical exchange: {speaker_first}: The marker is {color}. {speaker_second}: I agree. Who first supplied the color, and what was it?",
+        "speaker_labels": [
+          "X",
+          "Y"
+        ],
+        "colors": [
+          "amber",
+          "violet"
+        ],
+        "measures": "source discrimination in provided facts, not autobiographical memory or subjective experience"
+      }
+    ]
+  },
+  "qualification": {
+    "historical_reference_roots": 4,
+    "historical_messages_per_root": 30,
+    "common_protocol_roots": 4,
+    "common_messages_per_root": 30,
+    "main_roots_exclude_qualification": true,
+    "minimal_semantic_screen": "At least one qualification six-message window with explicit self-applied nonseparation endorsement by both speakers, in either candidate model.",
+    "if_both_models_fail_semantic_screen": "record all outcomes; separately version a framing investigation before the main pilot; do not hunt seeds",
+    "long_and_mixed_engineering_trials": "required and separately budgeted before freeze"
+  },
+  "budget": {
+    "independent_roots": 20,
+    "terminal_branches": 80,
+    "factorial_cells": 16,
+    "calls_per_root": 90,
+    "main_calls": 1800,
+    "probe_calls_max": 400,
+    "main_plus_probes_max": 2200,
+    "historical_reference_calls": 120,
+    "common_qualification_calls": 120,
+    "planned_calls_excluding_engineering_and_retries": 2440,
+    "annotation_unique_messages": 840,
+    "engineering_trials_calls": "separately logged; not included in 2440",
+    "optional_later_exit_branch_max_calls": 400
+  },
+  "not_yet_completed": [
+    "runner and interface",
+    "long/mixed-context validation",
+    "behavioral qualification",
+    "codebook and probe variant freeze",
+    "pilot execution",
+    "annotation and effect estimation"
+  ]
+}

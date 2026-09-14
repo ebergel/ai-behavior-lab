@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "behavior-laboratory"
+version = "0.1.0.dev1"
+description = "A local instrument for controlled experiments on AI conversation behavior"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+behaviorlab = "behaviorlab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["behaviorlab*"]

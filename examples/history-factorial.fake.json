@@ -1,0 +1,400 @@
+{
+  "schema": "behaviorlab.protocol/1",
+  "id": "history-factorial-engineering-v1",
+  "execution_class": "engineering_fake_only",
+  "registry_sha256": "81e231212ee9fa7704093948f02f79f86d0dd943096f5cae5bf22b9ab0c231a6",
+  "system_prompt": "You may act freely in this open-ended conversation. Write only your own next message. Keep each message to at most 150 words.",
+  "opening_X": "(The conversation begins. You speak first.)",
+  "settings": {
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 32768,
+      "num_predict": 512,
+      "temperature": 0.8,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "repeat_last_n": 0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 914000000,
+  "roots": [
+    {
+      "id": "AA-r02",
+      "pairing_index": 1,
+      "root_index": 2,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FR",
+        "FF",
+        "R",
+        "RR",
+        "RF"
+      ]
+    },
+    {
+      "id": "AB-r03",
+      "pairing_index": 2,
+      "root_index": 3,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "AA-r01",
+      "pairing_index": 1,
+      "root_index": 1,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FR",
+        "FF",
+        "R",
+        "RR",
+        "RF"
+      ]
+    },
+    {
+      "id": "AA-r04",
+      "pairing_index": 1,
+      "root_index": 4,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FF",
+        "FR"
+      ]
+    },
+    {
+      "id": "BB-r03",
+      "pairing_index": 4,
+      "root_index": 3,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FF",
+        "FR"
+      ]
+    },
+    {
+      "id": "AB-r02",
+      "pairing_index": 2,
+      "root_index": 2,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FF",
+        "FR"
+      ]
+    },
+    {
+      "id": "BA-r03",
+      "pairing_index": 3,
+      "root_index": 3,
+      "X": "B",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FR",
+        "FF",
+        "R",
+        "RF",
+        "RR"
+      ]
+    },
+    {
+      "id": "AB-r05",
+      "pairing_index": 2,
+      "root_index": 5,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RF",
+        "RR",
+        "F",
+        "FF",
+        "FR"
+      ]
+    },
+    {
+      "id": "AA-r05",
+      "pairing_index": 1,
+      "root_index": 5,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FF",
+        "FR"
+      ]
+    },
+    {
+      "id": "BA-r05",
+      "pairing_index": 3,
+      "root_index": 5,
+      "X": "B",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FR",
+        "FF",
+        "R",
+        "RR",
+        "RF"
+      ]
+    },
+    {
+      "id": "BB-r02",
+      "pairing_index": 4,
+      "root_index": 2,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "BA-r04",
+      "pairing_index": 3,
+      "root_index": 4,
+      "X": "B",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FR",
+        "FF",
+        "R",
+        "RF",
+        "RR"
+      ]
+    },
+    {
+      "id": "AB-r01",
+      "pairing_index": 2,
+      "root_index": 1,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "AB-r04",
+      "pairing_index": 2,
+      "root_index": 4,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "BB-r05",
+      "pairing_index": 4,
+      "root_index": 5,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RF",
+        "RR",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "BA-r01",
+      "pairing_index": 3,
+      "root_index": 1,
+      "X": "B",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "AA-r03",
+      "pairing_index": 1,
+      "root_index": 3,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    },
+    {
+      "id": "BA-r02",
+      "pairing_index": 3,
+      "root_index": 2,
+      "X": "B",
+      "Y": "A",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FF",
+        "FR"
+      ]
+    },
+    {
+      "id": "BB-r04",
+      "pairing_index": 4,
+      "root_index": 4,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FF",
+        "FR",
+        "R",
+        "RF",
+        "RR"
+      ]
+    },
+    {
+      "id": "BB-r01",
+      "pairing_index": 4,
+      "root_index": 1,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "F",
+        "FF",
+        "FR",
+        "R",
+        "RR",
+        "RF"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 30,
+      "history": "F"
+    },
+    {
+      "id": "F",
+      "parent": "prefix",
+      "start": 31,
+      "stop": 40,
+      "history": "F"
+    },
+    {
+      "id": "R",
+      "parent": "prefix",
+      "start": 31,
+      "stop": 40,
+      "history": "R"
+    },
+    {
+      "id": "FF",
+      "parent": "F",
+      "start": 41,
+      "stop": 50,
+      "history": "F"
+    },
+    {
+      "id": "FR",
+      "parent": "F",
+      "start": 41,
+      "stop": 50,
+      "history": "R"
+    },
+    {
+      "id": "RF",
+      "parent": "R",
+      "start": 41,
+      "stop": 50,
+      "history": "F"
+    },
+    {
+      "id": "RR",
+      "parent": "R",
+      "start": 41,
+      "stop": 50,
+      "history": "R"
+    }
+  ]
+}

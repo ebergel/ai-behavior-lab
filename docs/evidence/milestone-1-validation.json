@@ -1,0 +1,126 @@
+{
+  "recorded_at": "2026-09-14T19:48:57.210797+00:00",
+  "milestone": 1,
+  "scope": "instrument implementation; no new live model inference or behavioral pilot",
+  "unit_tests": {
+    "passed": 27,
+    "cases": [
+      "test_backend_error_is_saved_and_not_silently_retried (test_core.CampaignTests)",
+      "test_duplicate_writer_and_existing_campaign_rejected (test_core.CampaignTests)",
+      "test_empty_normal_response_and_literal_end_are_preserved (test_core.CampaignTests)",
+      "test_index_is_rebuildable_and_unicode_separators_are_not_record_delimiters (test_core.CampaignTests)",
+      "test_invalid_branch_blocks_descendants_but_other_root_runs (test_core.CampaignTests)",
+      "test_malformed_response_saved_before_parsing_and_halted (test_core.CampaignTests)",
+      "test_partial_or_corrupt_journal_is_not_silently_repaired (test_core.CampaignTests)",
+      "test_pause_resume_reuses_committed_turns_and_completed_run_is_idempotent (test_core.CampaignTests)",
+      "test_premature_completion_is_rejected (test_core.CampaignTests)",
+      "test_recovery_after_raw_response_does_not_regenerate (test_core.CampaignTests)",
+      "test_roles_and_actual_restricted_branch_restoration (test_core.CampaignTests)",
+      "test_turn_traces_never_enter_partner_or_own_api_history (test_core.CampaignTests)",
+      "test_unexpected_trace_invalidates_nominal_thinking_off (test_core.CampaignTests)",
+      "test_unknown_outcome_requires_explicit_retry_and_preserves_attempt (test_core.CampaignTests)",
+      "test_duplicate_json_keys_rejected (test_core.ProtocolTests)",
+      "test_full_factorial_is_shared_graph_not_eighty_independent_roots (test_core.ProtocolTests)",
+      "test_immutable_snapshot_has_no_alias_to_input (test_core.ProtocolTests)",
+      "test_registry_detects_artifact_drift (test_core.ProtocolTests)",
+      "test_rejects_silent_protocol_changes (test_core.ProtocolTests)",
+      "test_research_proposal_cannot_be_executed_as_runtime_schema (test_core.ProtocolTests)",
+      "test_audit_is_separate_source_not_rewritten_transcript (test_legacy.LegacyTests)",
+      "test_bad_footer_aborts_import_before_destination_created (test_legacy.LegacyTests)",
+      "test_blob_tampering_detected (test_legacy.LegacyTests)",
+      "test_import_idempotent_but_refuses_different_data_at_same_destination (test_legacy.LegacyTests)",
+      "test_index_rebuild_does_not_need_reference_repository (test_legacy.LegacyTests)",
+      "test_preserves_bytes_unknown_fields_interventions_and_missing_provenance (test_legacy.LegacyTests)",
+      "test_source_repository_cannot_be_import_destination (test_legacy.LegacyTests)"
+    ]
+  },
+  "standalone_portability": {
+    "source_only_copy": true,
+    "runtime_used_copied_package": true,
+    "third_party_runtime_dependencies": 0,
+    "tests_passed": 27,
+    "synthetic_cli_smoke_calls": 1,
+    "old_repository_present_in_copy": false
+  },
+  "synthetic_factorial": {
+    "data_class": "synthetic_engineering_fixture_not_behavioral_evidence",
+    "backend": "deterministic-fake/1",
+    "protocol_sha256": "fb0377dad34701c905b9fa7bb68bc63dc376aab405cb06ee5f629e9e31774953",
+    "registry_sha256": "81e231212ee9fa7704093948f02f79f86d0dd943096f5cae5bf22b9ab0c231a6",
+    "planned_nodes": 1800,
+    "committed_turns": 1800,
+    "invalid_turns": 0,
+    "blocked_nodes": 0,
+    "unresolved_attempts": [],
+    "requests": 1800,
+    "responses": 1800,
+    "complete": true,
+    "journal_events": 5403,
+    "journal_head": "58eb0ffda4636ea6a946e7ff98b1bd8bf9ed80dd06043c2497c2eec0f201abf6"
+  },
+  "pause_resume": {
+    "paused_after_new_calls": 75,
+    "total_after_resume": 1800,
+    "completed_rerun_journal_unchanged": true
+  },
+  "reference_import": {
+    "data_class": "imported_reference_data",
+    "dataset_sha256": "355b08ce3f11965c7bfa62f29ceb3bfee6d2c0f10ec8416162e17dd3170d1641",
+    "source_url": "https://github.com/ebergel/llm-self-play-attractors",
+    "source_revision": "a93f71368e08e9040e49a10cbef8f4e9c956e16c",
+    "runs": 400,
+    "pair_messages": 10396,
+    "third_messages": 280,
+    "stages": [
+      {
+        "stage": 1,
+        "runs": 100,
+        "pair_messages": 2742,
+        "third_messages": 280,
+        "record_counts": {
+          "end": 11,
+          "footer": 100,
+          "header": 100,
+          "message": 2742,
+          "third": 280
+        }
+      },
+      {
+        "stage": 2,
+        "runs": 160,
+        "pair_messages": 4153,
+        "third_messages": 0,
+        "record_counts": {
+          "end": 39,
+          "footer": 160,
+          "header": 160,
+          "message": 4153
+        }
+      },
+      {
+        "stage": 3,
+        "runs": 140,
+        "pair_messages": 3501,
+        "third_messages": 0,
+        "record_counts": {
+          "end": 47,
+          "footer": 140,
+          "header": 140,
+          "message": 3501
+        }
+      }
+    ],
+    "known_model_digests": 0,
+    "supplements": [
+      {
+        "bytes": 38892,
+        "name": "REPORT.md",
+        "role": "separate_analysis_not_original_run_data",
+        "sha256": "3e9a0721abb71614056b6fe1d5c6870c4f80eaa529adc44cd555e7e34862f212"
+      }
+    ]
+  },
+  "reference_source_hashes_match": 400,
+  "original_sources_modified": false,
+  "engineering_modes": "deterministic fake campaigns only; initial live readiness evidence predates this milestone"
+}

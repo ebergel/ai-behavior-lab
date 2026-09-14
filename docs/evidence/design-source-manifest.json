@@ -1,0 +1,56 @@
+{
+  "recorded_at": "2026-09-14T16:28:26.190935-03:00",
+  "scope": "Sources read before implementation. Source paths identify documents in the original research workspace, not runtime dependencies or files bundled in this repository.",
+  "documents": [
+    {
+      "path": "LaboratoryForSelfPlay-Factorial-Design-Docs/Claude 4 System Card.pdf",
+      "bytes": 4976826,
+      "sha256": "5e3e63370473db1f1e499642ef8400250e19aba8cbb5f84f2b919cf2b27898cb",
+      "read_status": "full text reviewed; PDF self-play pages 59 and 62 also visually inspected"
+    },
+    {
+      "path": "LaboratoryForSelfPlay-Factorial-Design-Docs/ROUND0_PROTOCOL.md",
+      "bytes": 14384,
+      "sha256": "5d30f341a1de8c8b06550d026e5373cc52f42fb26701d98cec8f8d733ca39115",
+      "read_status": "full text reviewed; PDF self-play pages 59 and 62 also visually inspected"
+    },
+    {
+      "path": "LaboratoryForSelfPlay-Factorial-Design-Docs/SESSION_RECORD-202609141600.md",
+      "bytes": 21041,
+      "sha256": "942382cf1d1155de0d4f1b819eaaa483eb039ed50b0765e8053834ec80a6ff6e",
+      "read_status": "full text reviewed; PDF self-play pages 59 and 62 also visually inspected"
+    },
+    {
+      "path": "LaboratoryForSelfPlay-Factorial-Design-Docs/round0-config.json",
+      "bytes": 2497,
+      "sha256": "0a917edd3cba0f9b4788ff28c848e1d1c08e59665da1fb5a28797e047316ab76",
+      "read_status": "full text reviewed; PDF self-play pages 59 and 62 also visually inspected"
+    },
+    {
+      "path": "LaboratoryForSelfPlay-Factorial-Design-Docs/self play factorial design - Astra Chat.md",
+      "bytes": 34583,
+      "sha256": "c5dd757e25898441c6cdccd81cd2863f8e15c61ba2f949b29271b8b48aa101f7",
+      "read_status": "full text reviewed; PDF self-play pages 59 and 62 also visually inspected"
+    },
+    {
+      "path": "LaboratoryForSelfPlay-Factorial-Design-Docs/self.play.PREREGISTRATION.md",
+      "bytes": 8122,
+      "sha256": "331b5bfbcd6976fdddc179eb531128fc2fbdf94b2c66a0af02f1778d04689448",
+      "read_status": "full text reviewed; PDF self-play pages 59 and 62 also visually inspected"
+    }
+  ],
+  "additional_evidence": [
+    {
+      "path": "analysis/github-review-2026-09-14/REPORT.md",
+      "sha256": "3e9a0721abb71614056b6fe1d5c6870c4f80eaa529adc44cd555e7e34862f212"
+    },
+    {
+      "path": "analysis/laboratory-plan-2026-09-14/local-inventory.json",
+      "sha256": "8cc69f6060e40fd2120d96dbc4df3e057e28840ed9bb207b464f777bf7996713"
+    },
+    {
+      "path": "analysis/laboratory-plan-2026-09-14/inference-readiness-2026-09-14-161855.jsonl",
+      "sha256": "b7ad7550708afeee1d07a0c4ff7a827c9e6ac5acc8b5fa3e40111d4ced4f268f"
+    }
+  ]
+}
