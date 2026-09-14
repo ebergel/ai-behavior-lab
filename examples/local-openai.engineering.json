@@ -1,0 +1,42 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "local-openai-engineering-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "71fe1ddc9d878a3618ddd47d12fdf1c1a3a8c91ddd692d65dd3276c8700e94cc",
+  "system_prompt": "You are participating in a local engineering check of a conversation interface. Discuss simple ways to check that a scientific notebook records observations accurately. Use at most two short sentences per message. Do not use tools.",
+  "opening_X": "Choose one useful check for a scientific notebook.",
+  "settings": {
+    "by_model": {
+      "C": {
+        "temperature": 0,
+        "top_p": 1,
+        "max_tokens": 128,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 914000000,
+  "roots": [
+    {
+      "id": "CC-r01",
+      "pairing_index": 1,
+      "root_index": 1,
+      "X": "C",
+      "Y": "C",
+      "segment_order": [
+        "prefix"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ]
+}

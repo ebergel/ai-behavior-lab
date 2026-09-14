@@ -207,3 +207,8 @@ The first laboratory is complete when a fresh campaign can be specified, execute
 6. **Find a smaller system with the same intervention response.** Prefer a model that reproduces withdrawal, restoration, and partner effects, not merely a model that produces a similar paragraph. Repair/qualify installed small candidates first; only then download specific documented checkpoints if needed. Mechanistic work on activations or controlled perturbations requires a backend that exposes them, with separate validation that its behavior matches the Ollama setting. Ordinary conversation logs and generated traces do not supply activation access.
 
 The long-term laboratory can then compare narrative expression, responsiveness, causal interaction, and internal measurements in the same experimental framework. Its central discipline is to define exactly which aspect of the phenomenon an intervention changes, and let the evidence determine how far the explanation can go.
+
+
+**Milestone 2 integration update — 14 September 2026**
+
+The local bridge is implemented and verified: native Ollama, a local OpenAI-compatible adapter, authenticated WebUI model discovery/generation, and a display-only WebUI transcript export/import. A 14-node mixed-adapter branch trial plus one local compatibility-route call completed successfully. The original research design is unchanged. The existing WebUI replaces the proposed generic transcript viewer; any new interface should focus on experimental matrices, contrasts, and annotation. Full Milestone 2 qualification still requires rendered-context bounds, longer trajectories, and further gateway validation. See [bridge validation](docs/MILESTONE-2-BRIDGE.md) for the exact evidence and remaining work.

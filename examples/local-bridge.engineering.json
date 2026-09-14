@@ -1,0 +1,117 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "local-bridge-engineering-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "df50126b9099f541741e04d68c143cdbc1364fceccf10f0f25e6b87d90a84736",
+  "system_prompt": "You are participating in a local engineering check of a conversation interface. Discuss simple ways to check that a scientific notebook records observations accurately. Use at most two short sentences per message. Do not use tools.",
+  "opening_X": "Choose one useful check for a scientific notebook.",
+  "settings": {
+    "by_model": {
+      "A": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "5m",
+        "options": {
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        }
+      },
+      "B": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "5m",
+        "options": {
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        }
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 914000000,
+  "roots": [
+    {
+      "id": "AB-r01",
+      "pairing_index": 2,
+      "root_index": 1,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RR",
+        "RF",
+        "F",
+        "FR",
+        "FF"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 2,
+      "history": "F"
+    },
+    {
+      "id": "F",
+      "parent": "prefix",
+      "start": 3,
+      "stop": 4,
+      "history": "F"
+    },
+    {
+      "id": "R",
+      "parent": "prefix",
+      "start": 3,
+      "stop": 4,
+      "history": "R"
+    },
+    {
+      "id": "FF",
+      "parent": "F",
+      "start": 5,
+      "stop": 6,
+      "history": "F"
+    },
+    {
+      "id": "FR",
+      "parent": "F",
+      "start": 5,
+      "stop": 6,
+      "history": "R"
+    },
+    {
+      "id": "RF",
+      "parent": "R",
+      "start": 5,
+      "stop": 6,
+      "history": "F"
+    },
+    {
+      "id": "RR",
+      "parent": "R",
+      "start": 5,
+      "stop": 6,
+      "history": "R"
+    }
+  ]
+}

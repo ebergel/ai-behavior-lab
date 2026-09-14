@@ -1,0 +1,235 @@
+{
+  "at": "2026-09-14T20:34:46.402852+00:00",
+  "scope": "Milestone 2 integration bridge; engineering only",
+  "automated_tests": 39,
+  "gateway_catalog": {
+    "total": 467,
+    "ollama": 17,
+    "openai_owned_total": 449,
+    "function_pipes": 2,
+    "openrouter_connection_entries": 447,
+    "other": 1
+  },
+  "selected_config_after_checks": {
+    "auth.enable_api_keys": false,
+    "openai.api_base_urls": [
+      "https://openrouter.ai/api/v1",
+      "http://localhost:8000/v1"
+    ],
+    "ollama.base_urls": [
+      "http://localhost:11434"
+    ],
+    "memories.system_context.enable": true
+  },
+  "actual_local_generation_calls": 15,
+  "paid_cloud_generation_calls": 0,
+  "campaigns": {
+    "local-bridge-20260914": {
+      "summary": {
+        "data_class": "local_engineering_inference_not_research_campaign",
+        "backend": "http-backends/1",
+        "protocol_sha256": "6ed51e4a22c4ccc199cbff7b06fe2458c2ad6d4cc088b3e694118c7d905c7f35",
+        "registry_sha256": "df50126b9099f541741e04d68c143cdbc1364fceccf10f0f25e6b87d90a84736",
+        "planned_nodes": 14,
+        "committed_turns": 14,
+        "invalid_turns": 0,
+        "blocked_nodes": 0,
+        "unresolved_attempts": [],
+        "requests": 14,
+        "responses": 14,
+        "complete": true,
+        "journal_events": 45,
+        "journal_head": "68e74b4083e33da11a16ae2f7091535e114b4197237ca989d18df008c4d1698b"
+      },
+      "journal_sha256": "9c595efef422f43934c57d8af26b990604d0d2d0432ef00ccf43af0e9be31851",
+      "complete_replay_without_network": true,
+      "journal_unchanged_on_replay": true,
+      "responses": [
+        {
+          "node": "AB-r01:prefix:1",
+          "http_status": 200,
+          "elapsed_seconds": 1.605639084,
+          "prompt_tokens": 62,
+          "output_tokens": 19
+        },
+        {
+          "node": "AB-r01:prefix:2",
+          "http_status": 200,
+          "elapsed_seconds": 3.1117215,
+          "prompt_tokens": 74,
+          "output_tokens": 28
+        },
+        {
+          "node": "AB-r01:R:3",
+          "http_status": 200,
+          "elapsed_seconds": 0.38017479200000004,
+          "prompt_tokens": 103,
+          "output_tokens": 27
+        },
+        {
+          "node": "AB-r01:R:4",
+          "http_status": 200,
+          "elapsed_seconds": 0.5513025,
+          "prompt_tokens": 139,
+          "output_tokens": 32
+        },
+        {
+          "node": "AB-r01:RR:5",
+          "http_status": 200,
+          "elapsed_seconds": 0.4210577080000001,
+          "prompt_tokens": 148,
+          "output_tokens": 30
+        },
+        {
+          "node": "AB-r01:RR:6",
+          "http_status": 200,
+          "elapsed_seconds": 0.5346944160000002,
+          "prompt_tokens": 159,
+          "output_tokens": 28
+        },
+        {
+          "node": "AB-r01:RF:5",
+          "http_status": 200,
+          "elapsed_seconds": 0.3817026669999999,
+          "prompt_tokens": 185,
+          "output_tokens": 24
+        },
+        {
+          "node": "AB-r01:RF:6",
+          "http_status": 200,
+          "elapsed_seconds": 0.47476683399999997,
+          "prompt_tokens": 204,
+          "output_tokens": 27
+        },
+        {
+          "node": "AB-r01:F:3",
+          "http_status": 200,
+          "elapsed_seconds": 0.16865033299999954,
+          "prompt_tokens": 117,
+          "output_tokens": 16
+        },
+        {
+          "node": "AB-r01:F:4",
+          "http_status": 200,
+          "elapsed_seconds": 0.37139087499999945,
+          "prompt_tokens": 126,
+          "output_tokens": 22
+        },
+        {
+          "node": "AB-r01:FR:5",
+          "http_status": 200,
+          "elapsed_seconds": 0.32402341700000026,
+          "prompt_tokens": 126,
+          "output_tokens": 23
+        },
+        {
+          "node": "AB-r01:FR:6",
+          "http_status": 200,
+          "elapsed_seconds": 0.48846216700000067,
+          "prompt_tokens": 126,
+          "output_tokens": 27
+        },
+        {
+          "node": "AB-r01:FF:5",
+          "http_status": 200,
+          "elapsed_seconds": 0.20761341700000013,
+          "prompt_tokens": 163,
+          "output_tokens": 12
+        },
+        {
+          "node": "AB-r01:FF:6",
+          "http_status": 200,
+          "elapsed_seconds": 0.4923960420000002,
+          "prompt_tokens": 168,
+          "output_tokens": 30
+        }
+      ]
+    },
+    "local-openai-20260914": {
+      "summary": {
+        "data_class": "local_engineering_inference_not_research_campaign",
+        "backend": "http-backends/1",
+        "protocol_sha256": "273c24c56c8d8f6f026318e5736034fe6c41be7da770b348af5e17940c2b516a",
+        "registry_sha256": "71fe1ddc9d878a3618ddd47d12fdf1c1a3a8c91ddd692d65dd3276c8700e94cc",
+        "planned_nodes": 1,
+        "committed_turns": 1,
+        "invalid_turns": 0,
+        "blocked_nodes": 0,
+        "unresolved_attempts": [],
+        "requests": 1,
+        "responses": 1,
+        "complete": true,
+        "journal_events": 5,
+        "journal_head": "aa02816afba1eb7180a810fd1eabea155cff1dcd8a1ccbf27461149e4e723378"
+      },
+      "journal_sha256": "b1c0288026834961843838bb9745fb9bd3200fed5382ab3e31b74189f5985046",
+      "complete_replay_without_network": true,
+      "journal_unchanged_on_replay": true,
+      "responses": [
+        {
+          "node": "CC-r01:prefix:1",
+          "http_status": 200,
+          "elapsed_seconds": 3.5089535840000003,
+          "prompt_tokens": 62,
+          "output_tokens": 19
+        }
+      ]
+    }
+  },
+  "contract_evidence": {
+    "report.json": {
+      "sha256": "5a4bce00322504724c6c1ef8077b3faefc7662b4a988d52d6b23a55b7db48cc0",
+      "passed": true,
+      "checks": 2,
+      "scope": "actual_WebUI_to_local_OpenAI_receiver_capture",
+      "temporary_model_removed": true
+    },
+    "ollama-converter.json": {
+      "sha256": "5e2da1b84eb46d27a1937f98a2edea6ad3815fe5553e170c061c585046675522",
+      "passed": true,
+      "checks": 2,
+      "scope": "installed_converter_function_check_not_outbound_network_capture"
+    }
+  },
+  "webui_import": {
+    "chat_id": "9782f8f6-be8e-405c-aea4-4f4d20aa0909",
+    "document_sha256": "95f6f35987fdeed8e03d77bae5560b4c32f3a4bd1328587e65bbb197af464fba",
+    "endpoint": "http://127.0.0.1:8080",
+    "round_trip_verified": true,
+    "status": "imported",
+    "url": "http://127.0.0.1:8080/c/9782f8f6-be8e-405c-aea4-4f4d20aa0909"
+  },
+  "ui_verified": {
+    "title": "Behavior Lab \u00b7 local engineering \u00b7 AB-r01:RF:6",
+    "all_six_turns_visible_in_DOM": true,
+    "X_Y_and_model_labels_visible": true
+  },
+  "remaining": [
+    "recipient-specific rendered-context qualification",
+    "50-turn mixed-model technical trials",
+    "full WebUI-to-Ollama outbound capture (converter checked separately)",
+    "identify and start non-Ollama port-8000 service",
+    "budgeted cloud execution and provider verification",
+    "phenotype qualification, probes, annotation and factorial pilot"
+  ],
+  "standalone_source_only_tests": 39,
+  "final_validation_at": "2026-09-14T20:37:11.465241+00:00",
+  "reference_repository_unchanged": true,
+  "validated_source_sha256": {
+    "behaviorlab/__init__.py": "9dffd2b73bc6d33f18e97fdf33b904b0be33a07f0d7a6aa964d03867ed2b1ff1",
+    "behaviorlab/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "behaviorlab/backends.py": "596ec28f0e144e6002ff4f574524e2b3fc479da1b5d99b6cf6c61592c6d20edd",
+    "behaviorlab/cli.py": "9dfc9263c678271e74763cd6c5fda71e1a03e480e55bc6e8adad0bce28af6b8d",
+    "behaviorlab/common.py": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535",
+    "behaviorlab/history.py": "81d883038c2218b274e9048186d9c672fc31c5a06ec7d1e630292d4ba04f1eca",
+    "behaviorlab/journal.py": "8a04776cc4f4f856a37db8fbab46ea827af10e533d0adc993a39a7b1d6412d29",
+    "behaviorlab/legacy.py": "915ffcaf19da8aa3bc1f1b911afbca31de97aeb546e041e18afb42852a38e90b",
+    "behaviorlab/protocol.py": "d1c1b0faa7b501b4cbbfb7a18db85f01646cf13b4b20d34c827188f56e23de16",
+    "behaviorlab/runner.py": "8688c2fa7171d14d37ddba305e97e9726d07f5d00c7da757ecd5efd3d2e61da4",
+    "behaviorlab/webui.py": "ab6d58bad2d88d33ec206ade030556efc2be4d3ea8ad3a87fc3980169d9d0ca6",
+    "tests/test_core.py": "3372875ad01c50df80518a23e8c2261ae6d6daaae69e20d537055b12c7976597",
+    "tests/test_legacy.py": "2bfbf7087a89c7cf956bc9f5de880ca2a70d1c8a657aa284d486954ebb4ad9e3",
+    "tests/test_live.py": "41bc8eb05b5fc36ccccb2055e8d0962e324b0ff37e2d0b6fb6c998061efa9d0d",
+    "scripts/check_webui_contract.py": "b3464c8fa6d198d395ab2cb8d3eaf8fcaea7105b49253bc3dbfe9918e829800c"
+  }
+}

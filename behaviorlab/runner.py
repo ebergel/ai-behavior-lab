@@ -1,4 +1,4 @@
-"""Synthetic campaign execution and recovery. No network or live inference."""
+"""Durable synthetic and local engineering campaign execution and recovery."""
 
 from pathlib import Path
 
@@ -7,6 +7,7 @@ from .common import canonical, fingerprint, read_json, require
 from .history import Turn, request
 from .journal import Journal, read_events, rebuild_index
 from .protocol import Protocol, Registry
+from .backends import HTTPBackend, LIVE_BACKEND, LIVE_DATA_CLASS, LIVE_PARSER, parse_live
 
 PARSER_VERSION = "ollama-shaped-fixture/1"
 
@@ -102,15 +103,16 @@ class State:
 
 
 def create_campaign(directory, protocol, registry):
+    live = read_json(protocol.document_json)["schema"] == "behaviorlab.protocol/2"
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
     with Journal(directory, create=True) as journal:
         journal.append("campaign_created", {
-            "software_version": __version__, "backend": FakeBackend.identity,
-            "data_class": "synthetic_engineering_fixture_not_behavioral_evidence",
+            "software_version": __version__, "backend": LIVE_BACKEND if live else FakeBackend.identity,
+            "data_class": LIVE_DATA_CLASS if live else "synthetic_engineering_fixture_not_behavioral_evidence",
             "protocol": read_json(protocol.document_json), "protocol_sha256": protocol.digest,
             "registry": read_json(registry.document_json), "registry_sha256": registry.digest,
-            "parser_version": PARSER_VERSION, "planned_nodes": len(protocol.nodes())})
+            "parser_version": LIVE_PARSER if live else PARSER_VERSION, "planned_nodes": len(protocol.nodes())})
         rebuild_index(directory, journal.events)
 
 
@@ -120,9 +122,10 @@ def campaign_documents(events):
     protocol = Protocol.from_dict(state.meta["protocol"], registry)
     require(registry.digest == state.meta["registry_sha256"] and protocol.digest == state.meta["protocol_sha256"],
             "Campaign identity mismatch")
-    require(state.meta["parser_version"] == PARSER_VERSION, "Parser version changed; explicit migration required")
-    require(state.meta["backend"] == FakeBackend.identity and
-            state.meta["data_class"] == "synthetic_engineering_fixture_not_behavioral_evidence",
+    live = read_json(protocol.document_json)["schema"] == "behaviorlab.protocol/2"
+    require(state.meta["parser_version"] == (LIVE_PARSER if live else PARSER_VERSION), "Parser version changed; explicit migration required")
+    require(state.meta["backend"] == (LIVE_BACKEND if live else FakeBackend.identity) and
+            state.meta["data_class"] == (LIVE_DATA_CLASS if live else "synthetic_engineering_fixture_not_behavioral_evidence"),
             "Unsupported campaign backend or data class")
     nodes = {n.id: n for n in protocol.nodes()}
     require(state.meta["planned_nodes"] == len(nodes), "Campaign budget differs from its graph")
@@ -135,15 +138,18 @@ def campaign_documents(events):
 
 def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hook=None):
     """A hook is solely for injected crash tests at durability boundaries."""
-    backend = backend or FakeBackend()
-    require(backend.identity == FakeBackend.identity, "Milestone 1 only supports the fake backend")
     require(max_calls is None or type(max_calls) is int and max_calls >= 0, "Invalid call limit")
     calls = 0
     with Journal(directory) as journal:
         protocol, registry, state = campaign_documents(journal.events)
+        live = state.meta["backend"] == LIVE_BACKEND
+        backend = backend or (HTTPBackend() if live else FakeBackend())
+        require(backend.identity == state.meta["backend"], "Backend does not match frozen campaign")
         turns = {}
         outcomes = dict(state.outcomes)
         for node in protocol.nodes():
+            model = registry.model(node.model) if live else None
+            transport = None
             previous = outcomes.get(node.id)
             if node.parent and node.parent in outcomes and outcomes[node.parent][0] != "turn_committed":
                 if previous:
@@ -160,10 +166,13 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
                 saved = state.requests[attempt]
                 require(saved["request"] == payload and saved["model_digest"] == registry.model(node.model).digest,
                         "Saved request does not match reconstructed protocol/history")
+                if live:
+                    require(saved["model_identity"] == read_json(model.metadata_json), "Saved service identity differs from registry")
             if previous:
                 require(previous[0] != "node_blocked", "Unexpected blocked node")
                 raw = state.responses[attempt]["raw_response"]
-                expected_kind, expected = outcome(node, attempt, raw, payload)
+                transport = state.responses[attempt].get("transport")
+                expected_kind, expected = outcome(node, attempt, raw, payload, model, transport)
                 require(previous == (expected_kind, expected), "Stored outcome differs from raw response")
                 if expected_kind == "turn_committed":
                     turns[node.id] = turn_from(node, expected)
@@ -181,29 +190,42 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
                     return summarize_events(journal.events)
                 number = 1 + sum(p["node_id"] == node.id for p in state.requests.values())
                 attempt = node.id + "/attempt-" + str(number)
+                observation = backend.verify(model) if live else None
                 p = {"node_id": node.id, "attempt_id": attempt, "request": payload,
                      "request_sha256": fingerprint(payload), "model_label": node.model,
                      "model_digest": registry.model(node.model).digest, "parent_id": node.parent,
                      "root_id": node.root, "segment": node.segment, "global_turn": node.turn,
                      "speaker": node.speaker, "history_policy": node.history}
+                if live:
+                    p.update(model_identity=read_json(model.metadata_json), observation=observation,
+                             request_serialization="canonical-json-utf8/1")
                 journal.append("request_saved", p)
                 if hook:
                     hook("after_request", node)
                 try:
-                    raw = backend.generate(payload)
+                    if live:
+                        response = backend.generate(payload, model)
+                        raw, transport = response.raw, response.evidence
+                    else:
+                        raw = backend.generate(payload)
                     require(isinstance(raw, str), "Backend must return raw response text")
                 except Exception as exc:
                     journal.append("request_error", {"node_id": node.id, "attempt_id": attempt,
-                                   "error_type": type(exc).__name__, "error": str(exc)})
+                                   "error_type": type(exc).__name__,
+                                   "error": "Transport failed; outcome unknown" if live else str(exc)})
                     rebuild_index(directory, journal.events)
                     raise NeedsAttention("Backend failure saved for " + attempt) from exc
                 calls += 1
-                journal.append("response_saved", {"node_id": node.id, "attempt_id": attempt, "raw_response": raw})
+                saved_response = {"node_id": node.id, "attempt_id": attempt, "raw_response": raw}
+                if live:
+                    saved_response["transport"] = transport
+                journal.append("response_saved", saved_response)
                 if hook:
                     hook("after_response", node)
             else:
                 raw = state.responses[attempt]["raw_response"]
-            kind, result = outcome(node, attempt, raw, payload)
+                transport = state.responses[attempt].get("transport")
+            kind, result = outcome(node, attempt, raw, payload, model, transport)
             journal.append(kind, result)
             outcomes[node.id] = (kind, result)
             if kind == "turn_committed":
@@ -216,13 +238,13 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
         return summarize_events(journal.events)
 
 
-def outcome(node, attempt, raw, payload):
+def outcome(node, attempt, raw, payload, model=None, transport=None):
     p = {"node_id": node.id, "attempt_id": attempt, "parent_id": node.parent,
          "root_id": node.root, "segment": node.segment, "global_turn": node.turn,
-         "speaker": node.speaker, "parser_version": PARSER_VERSION}
+         "speaker": node.speaker, "parser_version": LIVE_PARSER if model else PARSER_VERSION}
     try:
-        parsed = parse_response(raw, payload)
-    except (ValueError, TypeError, KeyError) as exc:
+        parsed = parse_live(raw, payload, model, transport) if model else parse_response(raw, payload)
+    except (ValueError, TypeError, KeyError, AttributeError, IndexError) as exc:
         p["reason"] = "malformed_response"
         p["detail"] = str(exc)
         return "turn_invalid", p

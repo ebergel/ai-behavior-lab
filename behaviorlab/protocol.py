@@ -1,7 +1,7 @@
 """Validated, immutable protocols and pinned model configurations.
 
-Version 1 executes synthetic engineering campaigns only. The research proposal
-is deliberately a different schema and cannot accidentally become a live run.
+Version 1 executes synthetic campaigns; version 2 adds bounded local engineering.
+The research proposal has a separate schema and cannot accidentally become a run.
 """
 
 from dataclasses import dataclass
@@ -30,7 +30,7 @@ def integer(value, low, high, name):
 class Model:
     label: str
     tag: str
-    digest: str
+    digest: Optional[str]
     metadata_json: str
 
 
@@ -41,16 +41,21 @@ class Registry:
 
     @classmethod
     def from_dict(cls, document):
-        require(document.get("schema") == "behaviorlab.models/1", "Unsupported model registry")
+        require(document.get("schema") in ("behaviorlab.models/1", "behaviorlab.models/2"), "Unsupported model registry")
+        live = document["schema"] == "behaviorlab.models/2"
         models = []
         for row in document["models"]:
             label = identifier(row["label"])
             require(isinstance(row["tag"], str) and row["tag"], "Missing model tag")
-            require(bool(HEX.fullmatch(row["digest"])), "A full model digest is required")
-            require(bool(HEX.fullmatch(row["template_sha256"])), "Missing template fingerprint")
-            require(isinstance(row.get("template"), str) and
-                    sha256(row["template"].encode("utf-8")) == row["template_sha256"],
-                    "Archived template does not match its fingerprint")
+            if live:
+                from .backends import validate_model
+                validate_model(row)
+            else:
+                require(bool(HEX.fullmatch(row["digest"])), "A full model digest is required")
+                require(bool(HEX.fullmatch(row["template_sha256"])), "Missing template fingerprint")
+                require(isinstance(row.get("template"), str) and
+                        sha256(row["template"].encode("utf-8")) == row["template_sha256"],
+                        "Archived template does not match its fingerprint")
             models.append(Model(label, row["tag"], row["digest"], canonical(row)))
         require(models and len({m.label for m in models}) == len(models), "Duplicate/empty model labels")
         return cls(canonical(document), tuple(models))
@@ -120,8 +125,12 @@ class Protocol:
         fields = {"schema", "id", "execution_class", "registry_sha256", "system_prompt",
                   "opening_X", "settings", "recent_messages", "seed_base", "roots", "segments"}
         require(set(d) == fields, "Unexpected or missing protocol fields")
-        require(d["schema"] == "behaviorlab.protocol/1", "Unsupported protocol schema")
-        require(d["execution_class"] == "engineering_fake_only", "Live inference is not implemented in Milestone 1")
+        require(d["schema"] in ("behaviorlab.protocol/1", "behaviorlab.protocol/2"), "Unsupported protocol schema")
+        live = d["schema"] == "behaviorlab.protocol/2"
+        require(d["execution_class"] == ("engineering_local" if live else "engineering_fake_only"),
+                "This version executes synthetic or local engineering protocols only")
+        require(read_json(registry.document_json)["schema"] == ("behaviorlab.models/2" if live else "behaviorlab.models/1"),
+                "Protocol and registry schema versions differ")
         identifier(d["id"])
         require(d["registry_sha256"] == registry.digest, "Protocol/model registry fingerprint mismatch")
         for field in ["system_prompt", "opening_X"]:
@@ -130,6 +139,15 @@ class Protocol:
         require(d["recent_messages"] % 2 == 1, "Recent history must preserve alternating roles and end in user")
         integer(d["seed_base"], 0, 2**30, "seed base")
         settings = d["settings"]
+        if live:
+            from .backends import validate_settings
+            validate_settings(settings, registry)
+        else:
+            cls.validate_ollama_settings(settings)
+        return cls.compile_graph(d, registry, settings)
+
+    @staticmethod
+    def validate_ollama_settings(settings):
         require(set(settings) == {"think", "stream", "keep_alive", "options"}, "Unsupported request settings")
         require(type(settings["think"]) is bool and settings["stream"] is False, "Invalid thinking/stream mode")
         require(isinstance(settings["keep_alive"], str) and settings["keep_alive"], "Invalid keep_alive")
@@ -145,6 +163,9 @@ class Protocol:
             require(type(options[key]) in (int, float), "Invalid sampling number: " + key)
         require(options["temperature"] >= 0 and options["repeat_penalty"] > 0, "Invalid sampling range")
         require(0 <= options["top_p"] <= 1 and 0 <= options["min_p"] <= 1, "Invalid probability")
+
+    @classmethod
+    def compile_graph(cls, d, registry, settings):
         segments = []
         known = {}
         for row in d["segments"]:

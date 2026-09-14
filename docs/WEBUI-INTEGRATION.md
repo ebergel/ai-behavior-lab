@@ -1,6 +1,6 @@
 # Open WebUI and cloud model integration
 
-**14 September 2026 — assessed recommendation for Milestone 2; integration not implemented.**
+**14 September 2026 — initial assessment and design.** The integration bridge was subsequently implemented and tested in this session; see [Milestone 2 bridge validation](MILESTONE-2-BRIDGE.md) for the current state. The inspection below is retained as the pre-integration record, including which checks had not yet occurred at that point.
 
 The user already has Open WebUI with local and cloud connections. Reuse that installation for model exploration and transcript reading. Keep the laboratory responsible for protocol execution, history interventions, sampling specifications, and authoritative evidence. Add experiment-specific visualization only where the existing interface does not express the factorial matrix or shared branch ancestry.
 

@@ -6,7 +6,7 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: Milestone 1 is implemented.** The command-line instrument validates protocols and model fingerprints, builds immutable branching histories, journals raw requests and responses, resumes interrupted synthetic campaigns, and imports the reference corpus without rewriting its evidence. Live inference, the browser interface, experimental probes, and semantic annotation are later milestones. All generated examples in this version are explicitly marked synthetic; they are not model-behavior results.
+**Current state: the instrument core and the Milestone 2 integration bridge work.** The laboratory executes synthetic campaigns and bounded local engineering protocols through native Ollama, a local OpenAI-compatible endpoint, and authenticated Open WebUI. It preserves branching histories and raw evidence, resumes interrupted campaigns, imports the reference corpus, and exports a branch into WebUI for reading. Fifteen real local calls and 39 automated tests passed. Long-context qualification, cloud budgeting, experimental probes, and semantic annotation remain before the research pilot. See the [integration validation](docs/MILESTONE-2-BRIDGE.md).
 
 ## Try the instrument
 
@@ -39,6 +39,29 @@ Restoration on RF includes the messages actually generated on R. The input build
 
 The [research proposal](design/round0-factorial-v0.1.json) and the [executable synthetic example](examples/history-factorial.fake.json) have intentionally different schemas. The research protocol still requires qualification and scientific decisions before a live pilot. The example validates the proposed graph and instrumentation without claiming that qualification has occurred.
 
+## Use the local WebUI bridge
+
+These commands use the installed single-user WebUI instance. Normal authenticated installations should supply their own session/API credential; `webui-login` only supports WebUI's existing local single-user sign-in mode. The private token stays in the ignored workspace, with file permissions restricted to its owner. API-key settings remain unchanged.
+
+```sh
+python3 -m behaviorlab webui-login
+python3 -m behaviorlab webui-models
+python3 -m behaviorlab validate --protocol examples/local-bridge.engineering.json --registry design/local-engineering-models.json
+python3 -m behaviorlab run-local workspace/my-local-check \
+  --protocol examples/local-bridge.engineering.json --registry design/local-engineering-models.json \
+  --max-calls 3 --webui-token-file workspace/private/webui-token
+python3 -m behaviorlab run-local workspace/my-local-check \
+  --max-calls 11 --webui-token-file workspace/private/webui-token
+python3 -m behaviorlab webui-export workspace/my-local-check AB-r01:RF:6 workspace/my-local-check/RF.json
+python3 -m behaviorlab webui-import workspace/my-local-check/RF.json --receipt workspace/my-local-check/RF.receipt.json
+```
+
+The example makes **14 local generation calls**, using Qwen 30B through Ollama and Gemma 26B through WebUI. It has a two-turn prefix and two-turn branch segments to test the machinery quickly. Its neutral notebook discussion is an engineering stimulus, not the proposed open-ended behavioral condition. The registry pins the installation observed on 14 September 2026; a different machine needs its own explicitly captured registry. Drift in weights, template, model defaults, or server version stops new inference.
+
+`examples/local-openai.engineering.json` with `design/local-openai-engineering-models.json` makes one local call through Ollama's `/v1` compatibility route. This verifies the separate adapter, not a second inference engine. Runtime schemas remain restricted to local engineering; the remote identity and parameter structures are groundwork for a separately budgeted cloud implementation.
+
+The WebUI transcript labels both AI participants and identifies the actual branch. WebUI's user/assistant bubbles are display roles. Editing or continuing that copy does not update the laboratory journal. Generated traces remain available in raw evidence and are excluded from both participant histories and this initial display export.
+
 ## Import the earlier experiments as reference data
 
 Provide an explicit path to a checkout or extracted archive of the source repository. The laboratory does not assume that it lives in a sibling directory.
@@ -68,4 +91,4 @@ python3 -m behaviorlab legacy-reindex workspace/reference-corpus
 
 The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](docs/ARCHITECTURE.md) describes the implementation and recovery rules. [References](docs/REFERENCES.md) records the relationship to the earlier research. [Validation](docs/MILESTONE-1.md) distinguishes verified engineering behavior from proposed experiments.
 
-The [updated Milestone 2 recommendation](docs/WEBUI-INTEGRATION.md) reuses the user's installed Open WebUI for exploration and transcript reading, and adds local/cloud backend adapters to the laboratory. It includes verified model identity and thinking behavior, recipient-specific context validation, authenticated model discovery, and checks of WebUI's request transformations. A small experiment-specific view can follow if needed. The first live calls should be labeled engineering trials; the behavioral factorial pilot comes after protocol qualification.
+The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents what is implemented and what remains. Next are recipient-specific rendered-context checks and longer mixed-model technical trials, followed by phenotype qualification and a frozen research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.

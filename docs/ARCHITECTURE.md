@@ -64,3 +64,10 @@ The import directory holds a manifest, content-addressed raw blobs, and a rebuil
 SQLite indexes original headers and footers, all records, source line numbers, and selected query fields. Complete original file bytes remain authoritative. `thinking_present` distinguishes an absent field from a recorded empty/null field. Model fingerprints are only populated if the source recorded them; the current registry is never used to fill historical gaps.
 
 An audit is stored as a separately identified supplement. Its interpretations do not rewrite the original data. A rebuilt import works after the original source checkout is removed, which preserves the boundary between the new laboratory and the earlier study.
+
+
+## Version 2 integration bridge
+
+Runtime registry/protocol v2 adds local engineering execution while preserving v1 synthetic histories and hashes. `backends.py` owns capability validation, explicit request mapping, HTTP transport, artifact observations, and response parsing. `runner.py` retains the same durable request/response/outcome sequence for both backend classes. Credentials are resolved from environment variables at dispatch and are excluded from protocol/journal payloads. Original response bytes and HTTP metadata accompany live raw responses.
+
+`webui.py` implements supported single-user session authentication, catalog discovery, and display-only export/import of one actual branch ancestry. Import receipts prevent automatic duplication after an uncertain outcome. The existing WebUI is the transcript reader; the laboratory remains the authoritative evidence store. Local gateway campaigns currently require an identified Ollama artifact. Cloud execution, rendered-context qualification, and research annotations remain unimplemented; see [current validation](MILESTONE-2-BRIDGE.md).

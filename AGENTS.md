@@ -8,6 +8,8 @@ Keep generated campaigns and imported datasets under the ignored `workspace/` di
 
 Run `python3 -m unittest discover -s tests -v` from this repository. No third-party runtime packages are currently required. The research proposal and executable synthetic protocol have different schemas; do not convert an unqualified design into an actual behavioral campaign implicitly.
 
+Runtime protocol v2 permits bounded local engineering via `run-local`; it is not a qualified research protocol. Keep cloud execution blocked until explicit budgeting and routing verification are implemented. Use the existing WebUI for transcript display. Credentials belong in runtime environment variables or owner-only ignored files, never in protocol documents or journal payloads. Gateway conversion tests and actual outbound network captures are different evidence; report their scopes accurately.
+
 # Session records
 
 Use a new `SESSION-RECORD-YYYY-MM-DD-HHMM.md` in this repository for each session record. Use local time in `America/Argentina/Cordoba`, include the full timestamp and scope inside, and preserve earlier records. Distinguish completed and verified work from proposals and future experiments.

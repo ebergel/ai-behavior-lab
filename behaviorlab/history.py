@@ -50,6 +50,10 @@ def request(protocol, registry, node, turns):
     if history:
         require(history[0].root == node.root, "Cross-root parent")
     payload = read_json(protocol.settings_json)
+    if "by_model" in payload:
+        from .backends import prepare_request
+        return prepare_request(registry.model(node.model), payload["by_model"][node.model],
+                               messages(protocol, history, node.speaker, node.history), node.seed)
     payload["model"] = registry.model(node.model).tag
     payload["messages"] = messages(protocol, history, node.speaker, node.history)
     payload["options"]["seed"] = node.seed
