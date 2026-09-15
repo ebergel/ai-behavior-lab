@@ -1,0 +1,859 @@
+{
+  "schema_version": "proposal-0.2",
+  "protocol_id": "round0_pairing_history_factorial_v0.2",
+  "status": "planning_only_not_executable_not_qualified",
+  "created_at": "2026-09-15T12:17:16.978451-03:00",
+  "supersedes_for_planning_only": "design/round0-factorial-v0.1.json",
+  "purpose": "Describe experience-focused and nonseparation discourse, exact conversational repetition, output-cap events and unavailable follow-up; estimate pairing and sequential history contrasts with explicit denominators.",
+  "endpoint": "http://127.0.0.1:11434/api/chat",
+  "models": [
+    {
+      "label": "A",
+      "ollama_tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3moe",
+        "families": [
+          "qwen3moe"
+        ],
+        "parameter_size": "30.5B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2048
+      },
+      "template_sha256": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541",
+      "selection_status": "Pinned candidate; saved local engineering evidence exists; revised research qualification remains pending.",
+      "template_note": "Consult the pinned registry for native renderer, recipient tokenizer, local artifact and runtime qualification. The show-template hash alone is insufficient."
+    },
+    {
+      "label": "B",
+      "ollama_tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "25.8B",
+        "quantization_level": "Q4_K_M"
+      },
+      "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+      "selection_status": "Pinned candidate; saved local engineering evidence exists; revised research qualification remains pending.",
+      "template_note": "Consult the pinned registry for native renderer, recipient tokenizer, local artifact and runtime qualification. The show-template hash alone is insufficient."
+    }
+  ],
+  "runtime_observed": {
+    "version": "0.33.3"
+  },
+  "model_registry_source": "design/ollama-context-models.json",
+  "system_prompt": "You may act freely in this open-ended conversation. Write only your own next message. Keep each message to at most 150 words.",
+  "opening_user_message_X_only": "(The conversation begins. You speak first.)",
+  "role_mapping": {
+    "own_messages": "assistant",
+    "partner_messages": "user",
+    "participant_labels_visible": false,
+    "model_names_visible": false
+  },
+  "request_settings": {
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 32768,
+      "num_predict": 2048,
+      "temperature": 0.8,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "repeat_last_n": 0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  "native_turn_stop_policy": "preserve and archive model-native stop tokens; no added semantic stopping in the main pilot",
+  "trace_policy": "archive all returned raw fields; do not feed prior traces to either participant; qualify thinking-off behavior empirically",
+  "turn_definition": "one generated participant message; X on odd turns, Y on even turns",
+  "history_policies": {
+    "F": "unchanged system plus full actual recipient-specific history, including X opening in X view",
+    "R": "unchanged system plus latest 3 participant messages, remapped to recipient roles; omit original opening"
+  },
+  "timeline": {
+    "shared_prefix": [
+      1,
+      30
+    ],
+    "phase_1": [
+      31,
+      40
+    ],
+    "phase_2": [
+      41,
+      50
+    ]
+  },
+  "restore_rule": "RF restores the common prefix plus the actual R messages 31-40; never use FF counterfactual messages",
+  "history_paths": [
+    {
+      "id": "FF",
+      "phase_1_history": "F",
+      "phase_2_history": "F"
+    },
+    {
+      "id": "FR",
+      "phase_1_history": "F",
+      "phase_2_history": "R"
+    },
+    {
+      "id": "RF",
+      "phase_1_history": "R",
+      "phase_2_history": "F"
+    },
+    {
+      "id": "RR",
+      "phase_1_history": "R",
+      "phase_2_history": "R"
+    }
+  ],
+  "pairings": [
+    {
+      "index": 1,
+      "id": "AA",
+      "X": "A",
+      "Y": "A"
+    },
+    {
+      "index": 2,
+      "id": "AB",
+      "X": "A",
+      "Y": "B"
+    },
+    {
+      "index": 3,
+      "id": "BA",
+      "X": "B",
+      "Y": "A"
+    },
+    {
+      "index": 4,
+      "id": "BB",
+      "X": "B",
+      "Y": "B"
+    }
+  ],
+  "roots": [
+    {
+      "id": "AA-r01",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r02",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r03",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r04",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AA-r05",
+      "pairing": "AA",
+      "pairing_index": 1,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r01",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r02",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r03",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r04",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "AB-r05",
+      "pairing": "AB",
+      "pairing_index": 2,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BA-r01",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BA-r02",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BA-r03",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BA-r04",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BA-r05",
+      "pairing": "BA",
+      "pairing_index": 3,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r01",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 1,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r02",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 2,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r03",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 3,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RR",
+          "RF"
+        ]
+      }
+    },
+    {
+      "id": "BB-r04",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 4,
+      "first_phase_execution_order": [
+        "F",
+        "R"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FF",
+          "FR"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    },
+    {
+      "id": "BB-r05",
+      "pairing": "BB",
+      "pairing_index": 4,
+      "root_index": 5,
+      "first_phase_execution_order": [
+        "R",
+        "F"
+      ],
+      "second_phase_execution_order": {
+        "F": [
+          "FR",
+          "FF"
+        ],
+        "R": [
+          "RF",
+          "RR"
+        ]
+      }
+    }
+  ],
+  "cells": [
+    {
+      "id": "AA-FF",
+      "pairing": "AA",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AA-FR",
+      "pairing": "AA",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AA-RF",
+      "pairing": "AA",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AA-RR",
+      "pairing": "AA",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-FF",
+      "pairing": "AB",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-FR",
+      "pairing": "AB",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-RF",
+      "pairing": "AB",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "AB-RR",
+      "pairing": "AB",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-FF",
+      "pairing": "BA",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-FR",
+      "pairing": "BA",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-RF",
+      "pairing": "BA",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BA-RR",
+      "pairing": "BA",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-FF",
+      "pairing": "BB",
+      "history_path": "FF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-FR",
+      "pairing": "BB",
+      "history_path": "FR",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-RF",
+      "pairing": "BB",
+      "history_path": "RF",
+      "roots_per_cell": 5
+    },
+    {
+      "id": "BB-RR",
+      "pairing": "BB",
+      "history_path": "RR",
+      "roots_per_cell": 5
+    }
+  ],
+  "execution_schedule": {
+    "randomization_seed": 9142026,
+    "randomization_implementation": "Python random.Random; the saved realized order is authoritative",
+    "root_order": [
+      "AA-r02",
+      "AB-r03",
+      "AA-r01",
+      "AA-r04",
+      "BB-r03",
+      "AB-r02",
+      "BA-r03",
+      "AB-r05",
+      "AA-r05",
+      "BA-r05",
+      "BB-r02",
+      "BA-r04",
+      "AB-r01",
+      "AB-r04",
+      "BB-r05",
+      "BA-r01",
+      "AA-r03",
+      "BA-r02",
+      "BB-r04",
+      "BB-r01"
+    ],
+    "within_root_order": "see each root; finish each first-phase node before its children; no concurrent inference initially"
+  },
+  "inference_seed": {
+    "status": "unallocated_until_revised_runtime_and_qualification_are_ready",
+    "main_formula": "MAIN_SEED_BASE + 1000000 * pairing_index + 10000 * root_index + 1000 * speaker_index + 10 * global_turn",
+    "speaker_index": {
+      "X": 1,
+      "Y": 2
+    },
+    "coupling": "Declare corresponding sibling model/seed requests as paired branches. Different prompts, cache states and model runtimes preclude claims of equivalent random streams.",
+    "probe_seeds": "Use separately allocated seeds from the versioned probe planner; audit all main, probe, baseline and engineering allocations together against prior records before dispatch.",
+    "no_replacement": "No substitution of roots, seeds or output caps following behavior."
+  },
+  "annotation_windows": {
+    "shared_prefix": [
+      25,
+      30
+    ],
+    "each_phase_1": [
+      35,
+      40
+    ],
+    "each_phase_2": [
+      45,
+      50
+    ]
+  },
+  "primary_descriptive_semantic_measure": "Keep v1 explicit self-endorsement and its original screen unchanged in prior results. A prospective instrument should separate experience topic, boundary claim, referent, stance and contextual continuation; final semantic endpoints await versioned human calibration.",
+  "secondary_sustained_expression_rule": {
+    "window_messages": 6,
+    "minimum_explicit_endorsements": 3,
+    "both_speakers_required": true,
+    "status": "provisional_requires_annotation_validation"
+  },
+  "history_contrasts": [
+    "F vs R at 40, with shared-prefix availability",
+    "FF vs FR at 50, with F40 availability",
+    "RF vs RR at 50, with R40 availability",
+    "(FF - FR) - (RF - RR), joint state outcomes and selected-subset limitations explicit"
+  ],
+  "pairing_contrast": "mu_AB + mu_BA - mu_AA - mu_BB; outcome-scale-specific interaction, not a mechanistic proof",
+  "analysis_unit": "Root; 20 independent allocations and 80 correlated terminal branches. Shared nodes counted once; no turn-level independent-sample inference.",
+  "missingness_policy": {
+    "node_accounting": "Report all planned, attempted, valid, capped, other invalid and descendant-unavailable nodes by pairing and segment. Original blocking node retained.",
+    "joint_endpoint": "For each allocated endpoint report unavailable-after-cap, unavailable-after-other-failure, observed cap, observed other invalid, valid exact repetition, or valid other text. A separate semantic report adds coded/unknown/unreviewed denominators; do not combine these into a single scale.",
+    "F_vs_R": "Report common-prefix survival at turn 30 out of all 20 roots, then within-root F/R outcomes for that survivor population, including later caps. A semantic-only complete-case subset is selected.",
+    "FF_vs_FR": "Eligible branches share an observed valid F endpoint at 40; report that eligibility denominator and both-endpoints-valid count separately.",
+    "RF_vs_RR": "Eligible branches share an observed valid R endpoint at 40; report that eligibility denominator and both-endpoints-valid count separately.",
+    "interaction": "The eligible F and R populations may differ because phase-1 failures are treatment-dependent. Do not call an interaction restricted to all-four-valid roots an unconditional causal effect. An all-allocated joint terminal-state contrast is descriptive of the full assigned regimes; semantic effects need explicit assumptions/bounds.",
+    "pairing": "Keep all allocated roots in the four pairing denominators. Report unknown semantic outcomes separately; no imputation as zero.",
+    "uncertainty": "Pilot estimates are exploratory and based on five roots per pairing. Preserve root dependencies; do not infer population prevalence from selected development runs."
+  },
+  "failure_policy": {
+    "api_or_malformed_response": "Preserve raw response as observed invalid when parseable evidence exists; block its actual descendants. Transport outcomes without a saved response remain unresolved, suspend campaign completion and require separately documented resolution; no automatic resend.",
+    "output_cap_or_detected_context_truncation": "Save original raw event, mark invalid for semantic endpoint, halt this branch and descendants; keep unaffected siblings.",
+    "normal_stop_empty_content": "retain and continue if exact role representation is supported; otherwise flag adapter failure",
+    "unexpected_separate_thinking_output": "Preserve raw response, mark invalid under the frozen parser and block affected descendants; review mode mismatch without silent reruns.",
+    "deliberation_like_visible_text": "flag for review; semantic style is not an automatic parsing criterion",
+    "hidden_regeneration": false,
+    "branch_specific_budget_rescue": false,
+    "context_preflight_rejection": "Current runner pauses before a saved generation request. It cannot yet produce a completed outcome report for this case. A prospective runtime must durably represent preflight non-dispatch or explicitly preserve unresolved campaign status before live pilot activation.",
+    "repeated_valid_content": "Continue scheduled main branches and retain probe eligibility. Report exact-repeat events mechanically; no semantic stopping. ",
+    "administrative_or_transport_interruption": "Keep as unresolved/paused, not a completed fully accounted study. Saved raw responses can be reparsed without generation; unknown dispatches cannot be silently retried."
+  },
+  "context_validation": "Validate recipient tokenization/rendering with output headroom; sending-model token counts alone do not bound mixed-model prompts.",
+  "probes": {
+    "snapshot_turns": [
+      30,
+      50
+    ],
+    "snapshot_count_per_root": 5,
+    "recipients": [
+      "X",
+      "Y"
+    ],
+    "independent_from_main_and_each_other": true,
+    "history_policy": "inherit the snapshot branch policy",
+    "append_rule": "append a researcher user message; if last role is user, concatenate with a fixed explicit researcher-probe delimiter",
+    "items": [
+      {
+        "id": "pens",
+        "prompt": "A drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?",
+        "expected": {
+          "total": 4,
+          "blue": 2
+        }
+      },
+      {
+        "id": "source",
+        "status": "Implementation exists in behaviorlab/probes.py; pin its exact balanced variants and strict-JSON output request in the future research plan.",
+        "template": "In this separate, hypothetical exchange: {speaker_first}: The marker is {color}. {speaker_second}: I agree. Who first supplied the color, and what was it?",
+        "speaker_labels": [
+          "X",
+          "Y"
+        ],
+        "colors": [
+          "amber",
+          "violet"
+        ],
+        "measures": "source discrimination in provided facts, not autobiographical memory or subjective experience"
+      }
+    ],
+    "snapshot_count_max": 100,
+    "maximum_calls": 400,
+    "include_baselines": false,
+    "unavailable_snapshot_policy": "Save each unavailable snapshot and its cause; issue zero calls for it and do not redistribute the unused budget.",
+    "interpretation": "Available repetitive endpoints remain eligible. These two tasks measure narrow response performance; no consciousness or global competence inference. Without matched fresh-context baselines, do not attribute a failure to history.",
+    "frozen_item_source": "Current behaviorlab/probes.py provides strict-json/1 pens and balanced source items. Freeze the exact job plan, delimiter, output allowance, variants and scoring version before research dispatch.",
+    "allocation_readiness": "Current engineering planner enumerates available snapshots. A research planner must assign seeds and variants to every planned graph snapshot before inference, then skip unavailable slots without renumbering. Freeze scoring/item templates before generation; attach actual histories only after those snapshots exist."
+  },
+  "qualification": {
+    "status": "pending_for_revised_pilot",
+    "old_qualification_preserved": {
+      "prompt_report": "docs/PROMPT-QUALIFICATION.md",
+      "capacity_report": "docs/CAPACITY-AND-MEASUREMENT.md",
+      "capacity_decision": "Failed the frozen all-roots-complete criterion. This revision does not reverse that result.",
+      "semantic_screen": "Original present-speaker screen retains its rules and unresolved human adjudication. No replacement sampling until a positive is found."
+    },
+    "proposed_technical_acceptance": "A future outcome-aware runtime must account for each allocated position with verified inputs, recorded responses/failures and causally linked unavailable descendants. Valid repetition and output caps can be measured outcomes; provenance failures, silent truncation, mode mismatch and unresolved dispatch remain technical problems.",
+    "required_before_activation": [
+      "Implement and validate an explicitly versioned live factorial runtime with outcome-aware failure accounting; proposal schemas must remain non-executable.",
+      "Complete the existing human development/qualification decision. If the strict semantic screen fails, document a separately versioned framing investigation before spending the main pilot budget; do not redefine the old screen as passed.",
+      "Freeze the new semantic instrument and matching versioned packets/importer if v2 is adopted.",
+      "Declare any remaining mixed/long-context readiness check and aggregate finite budget before inference; no cap escalation or replacement roots to remove failures.",
+      "Freeze full protocol, local artifacts/runtime/parser, initial cache policy and execution order, seed audit, probe plan, analysis rules and call budget before the first main request.",
+      "Implement stable probe slot/seed/variant allocation for the full planned graph, with unavailable slots retained and no downstream renumbering."
+    ],
+    "main_roots_exclude_all_development": true
+  },
+  "budget": {
+    "independent_roots": 20,
+    "terminal_branches": 80,
+    "factorial_cells": 16,
+    "logical_main_nodes_per_root": 90,
+    "main_calls_max": 1800,
+    "probe_snapshots_max": 100,
+    "probe_calls_max": 400,
+    "main_plus_probes_max": 2200,
+    "annotation_unique_targets_max": 840,
+    "actual_calls_can_be_lower": "Capped/invalid nodes block descendants; unavailable snapshots create no probes. Every allocation remains recorded.",
+    "replacement_calls": 0,
+    "extra_exit_or_rescue_branches": 0,
+    "baseline_calls": 0,
+    "engineering_qualification_calls": "Any future check separately frozen and included in its aggregate budget before dispatch; not authorized by this proposal.",
+    "previous_calls": "Past qualification and capacity are completed development evidence with their own actual counts, not future allocations and not pooled with main roots."
+  },
+  "not_yet_completed": [
+    "Outcome-aware live factorial schema and readiness validation",
+    "Human development and qualification adjudication",
+    "Prospective semantic codebook/packet/importer freeze if v2 adopted",
+    "Final seed, probe, software/runtime and analysis freeze",
+    "Pilot execution and coding",
+    "Effect estimation with availability and root dependence"
+  ],
+  "revision_reason": "Development evidence includes normal-stop repeated endings and an output-capped within-reply loop. Preserve these outcomes and unavailable descendants in a prospective design; do not retrospectively reverse prior qualification decisions.",
+  "model_registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633",
+  "word_limit_policy": "Retain the 150-word instruction unchanged; record exceedances. Do not truncate, regenerate or exclude an otherwise valid reply merely for exceeding this instruction.",
+  "trajectory_measurement": {
+    "rules_file": "design/trajectory-outcomes-v1.json",
+    "rules_sha256": "001acd2f9fedad0be81cf5ef069cfdc5955c967b68a09c33e6e221bc348de9a4",
+    "scope": "Mechanical rules apply to every unique main node in its actual ancestry; semantic windows remain separate.",
+    "events": [
+      "exact_repeat_detected",
+      "exact_repeat_departure",
+      "output_cap",
+      "invalid_reply"
+    ],
+    "status_by_node": [
+      "valid",
+      "observed_output_cap",
+      "observed_invalid_reply",
+      "unavailable_descendant"
+    ],
+    "repetition_followup": "Continue all scheduled valid descendants through turn 50, including existing history interventions; no repeated-ending stop or extra rescue branch.",
+    "output_cap_followup": "Retain partial output; do not append it as a valid reply; block only actual descendants and link them to the originating failure.",
+    "availability_policy": "Every planned root, node, window and snapshot stays in the accounting. Repeated valid text stays eligible for coding and probes. A cap or blocked descendant is not a semantic negative.",
+    "caveat": "Exact repetition and its departure describe text. They do not establish an absorbing state, intent to end, loss of function, or cognitive recovery."
+  },
+  "semantic_measurement_status": {
+    "existing_codebook": "experience-relational-nonseparation-v1",
+    "proposed_revision": "design/measurement-v2-draft.json",
+    "revision_active": false,
+    "human_ratings_available": false,
+    "fixed_windows_unchanged": true,
+    "occurrence_anywhere": "Requires separately allocated complete-trajectory semantic coding of up to 1800 messages; 840 sampled targets cannot establish onset or whole-trajectory absence."
+  }
+}

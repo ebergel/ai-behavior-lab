@@ -8,6 +8,7 @@ The instrument is independent of the source experiment repository. Python's stan
 | `history.py` | Follow immutable parent links and construct the receiving participant's full or restricted API history. |
 | `journal.py` | Enforce a single writer; append and synchronize evidence records; verify sequence and hash integrity; rebuild a SQLite index. |
 | `runner.py` | Execute a deterministic fake backend, retain raw response text, commit parsed turns, resume or report uncertain attempts, and account for invalid descendants. |
+| `trajectory_outcomes.py` | Derive exact-repeat events, partial repeated-line features, original failure links and branch-availability denominators from completed verified journals without inference or semantic labeling. |
 | `legacy.py` | Import original JSONL bytes, preserve unknown/missing fields, attach optional analysis supplements, and build/rebuild a catalog. |
 | `cli.py` | Expose validation, synthetic campaigns, evidence inspection, and corpus import/verification. |
 

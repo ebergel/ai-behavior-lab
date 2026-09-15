@@ -1,5 +1,7 @@
 # Laboratory v0.1: from recurring behavior to controlled interventions
 
+**Planning update, 15 September 2026:** the prospective [v0.2 proposal](design/round0-factorial-v0.2.json) and [trajectory-outcomes report](docs/PILOT-OUTCOMES-V0.2.md) incorporate completed capacity observations, explicit failures and branch availability. The original design below is retained as historical planning context; current work is in [CONTINUATION.md](docs/CONTINUATION.md).
+
 **Proposed 14 September 2026. Scientific status: design, not an executed experiment.**
 
 **Implementation update:** Milestone 1 is implemented in this standalone laboratory repository. See [the implementation record](docs/MILESTONE-1.md). The earlier experiment repository is a reference and optional dataset source; this laboratory is a separate project. Synthetic instrument checks do not count as execution of the scientific pilot.

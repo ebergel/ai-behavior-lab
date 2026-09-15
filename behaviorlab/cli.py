@@ -59,6 +59,8 @@ def main(argv=None):
     ratings.add_argument('directory'); ratings.add_argument('submission')
     sub.add_parser('annotation-report').add_argument('directory')
     sub.add_parser('mechanics', help='derive mechanical measures from unchanged campaign evidence').add_argument('campaign')
+    trajectory = sub.add_parser('trajectory-report', help='describe repetition, recorded failures and unavailable follow-up without new generation')
+    trajectory.add_argument('campaign')
     probes = sub.add_parser('probe-create', help='freeze independent probes from a completed campaign; no generation')
     probes.add_argument('campaign'); probes.add_argument('directory')
     probes.add_argument('--snapshot-turns', type=int, nargs='+', default=[30, 50])
@@ -133,6 +135,10 @@ def main(argv=None):
             from .annotations import mechanical_report
             from .evidence import completed_campaign
             result = mechanical_report(completed_campaign(args.campaign))
+        elif args.command == 'trajectory-report':
+            from .trajectory_outcomes import report
+            from .evidence import completed_campaign
+            result = report(completed_campaign(args.campaign))
         elif args.command == 'probe-create':
             from .probes import create_batch
             result = create_batch(args.campaign, args.directory, tuple(args.snapshot_turns), args.baselines, args.seed_base)

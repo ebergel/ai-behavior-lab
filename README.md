@@ -6,7 +6,7 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: the capacity and measurement preparation milestone is complete.** The [new report](docs/CAPACITY-AND-MEASUREMENT.md) covers 187 additional local calls: three fresh roots completed 50 messages, while one Qwen root filled a 2,048-token reply with repetition. The frozen technical criterion failed, so the factorial pilot remains disabled. Aggregate seed checks, a [measurement draft](docs/MEASUREMENT-V2-DRAFT.md) and an audited [120-target coding panel](docs/RATER-HANDOFF.md) are ready; independent human coding remains pending. All 86 tests pass. The earlier [221-call prompt qualification](docs/PROMPT-QUALIFICATION.md), [annotation/probe](docs/ANNOTATION-AND-PROBES.md), [mixed-model Ollama](docs/OLLAMA-MIXED-QUALIFICATION.md), and [MTPLX](docs/MTPLX-LONG-TRIAL.md) records remain available.
+**Current state: trajectory outcome measurement and pilot revision v0.2 are complete.** The [new report](docs/PILOT-OUTCOMES-V0.2.md) describes repetition, output caps and unavailable descendants, with a fully accounted 1,800-node synthetic trial and read-only reassessment of four saved real runs. This round made no new model calls. All 95 tests pass. The [earlier capacity criterion](docs/CAPACITY-AND-MEASUREMENT.md) still failed, and the revised factorial proposal remains planning-only. A [measurement draft](docs/MEASUREMENT-V2-DRAFT.md) and [120-target coding panel](docs/RATER-HANDOFF.md) are prepared; independent human coding and live research qualification remain pending. The earlier [prompt qualification](docs/PROMPT-QUALIFICATION.md), [annotation/probe](docs/ANNOTATION-AND-PROBES.md), [mixed-model Ollama](docs/OLLAMA-MIXED-QUALIFICATION.md), and [MTPLX](docs/MTPLX-LONG-TRIAL.md) records remain available.
 
 ## Try the instrument
 
@@ -91,7 +91,7 @@ python3 -m behaviorlab legacy-reindex workspace/reference-corpus
 
 The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](docs/ARCHITECTURE.md) describes the implementation and recovery rules. [References](docs/REFERENCES.md) records the relationship to the earlier research. [Validation](docs/MILESTONE-1.md) distinguishes verified engineering behavior from proposed experiments.
 
-The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory now pass for the original Ollama candidates. Scientific-prompt qualification is now documented. Next are human adjudication of the persona/fiction and temporal-endpoint boundaries, a separately frozen output-capacity check, and a qualified research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
+The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory passed for the original Ollama candidates. Prompt qualification and the failed capacity screen are documented. The [current proposal](design/round0-factorial-v0.2.json) includes repeated text and capped replies as outcomes. Next are durable non-dispatch/unresolved-request accounting, human adjudication of the measurement boundaries and a qualified live research protocol; see [the continuation package](docs/CONTINUATION.md).
 
 **Ollama / Qwen 30B and Gemma 26B** completed one AB RF trajectory with thinking off and the proposed common sampler settings. The largest input was 8,697 tokens; all 50 generation prompt counts agreed with recipient preflight, and recovery made no duplicate call. See the [report and figure](docs/OLLAMA-MIXED-QUALIFICATION.md). This checks one engineering configuration and does not qualify every factorial cell. The pinned local registry is installation-specific; creating a campaign requires matching its files, runner arguments, and server version.
 
@@ -100,6 +100,7 @@ The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended d
 ## Annotate and probe saved conversations
 
 ```sh
+python3 -m behaviorlab trajectory-report workspace/my-campaign
 python3 -m behaviorlab annotation-packet workspace/my-campaign workspace/my-review --seed 15092026
 python3 -m behaviorlab annotation-import workspace/my-review /path/to/completed-ratings.json
 python3 -m behaviorlab annotation-report workspace/my-review
