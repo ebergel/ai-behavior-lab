@@ -13,6 +13,7 @@ from behaviorlab.evidence import completed_campaign
 from behaviorlab.journal import read_events
 from behaviorlab.protocol import Protocol, Registry
 from behaviorlab.runner import create_campaign, execute, summarize
+from behaviorlab.seeds import protocol_entries, require_clean
 
 
 def main():
@@ -22,6 +23,14 @@ def main():
     require(sum(j['max_calls'] for j in frozen['jobs']) == frozen['maximum_generation_calls'], 'Budget mismatch')
     for path, digest in frozen['file_sha256'].items():
         require(sha256(Path(path).read_bytes()) == digest, 'Frozen input changed: '+path)
+    # Completed historical campaigns remain replayable. Any new generation must
+    # pass the aggregate allocation check, including jobs not yet reached.
+    if any(not (base/j['name']).exists() or not summarize(base/j['name'])['complete'] for j in frozen['jobs']):
+        allocation = []
+        for job in frozen['jobs']:
+            registry = Registry.load(job['registry']); protocol = Protocol.load(job['protocol'], registry)
+            allocation += protocol_entries(job['name'], protocol, registry)
+        require_clean(allocation)
     if not (base/'initial-models.json').exists():
         response = http_request('http://127.0.0.1:11434', '/api/ps')
         save_new(base/'initial-models.json', {'at': timestamp(), 'response': read_json(response.raw)})
