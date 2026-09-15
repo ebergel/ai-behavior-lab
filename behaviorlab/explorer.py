@@ -26,6 +26,7 @@ from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
 REPORTS = [('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
+           ('framing', 'Nemotron framing comparison', 'NEMOTRON-FRAMING.md'),
            ('assessment', 'Model assessment & cloud checks', 'MODEL-ASSESSMENT.md'),
            ('capacity', 'Output capacity & measurement', 'CAPACITY-AND-MEASUREMENT.md'),
            ('qualification', 'Prompt qualification', 'PROMPT-QUALIFICATION.md'),
@@ -220,6 +221,12 @@ class Catalog:
                     if first['hash'] in seen: continue
                     from .assessment_explorer import load_assessment
                     found,assessment=load_assessment(path.parent); seen.add(first['hash'])
+                    assessments.append(assessment)
+                    for run in found: runs[run['id']]=run
+                elif first.get('kind')=='framing_comparison_created':
+                    if first['hash'] in seen: continue
+                    from .framing_explorer import load_framing
+                    found,assessment=load_framing(path.parent); seen.add(first['hash'])
                     assessments.append(assessment)
                     for run in found: runs[run['id']]=run
                 elif first.get('kind')=='probe_batch_created':

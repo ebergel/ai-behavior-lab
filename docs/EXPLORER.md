@@ -81,3 +81,9 @@ python3 -m behaviorlab explore --workspace workspace/explorer/ui-fixture --port 
 Choose a fresh fixture destination when repeating preparation. Its historical-format transcript is explicitly synthetic. Its factorial outputs use deterministic fixture backends. Browser test observations are stored only in that fixture's notebook; the real researcher notebook was left empty. No model calls, cloud costs, WebUI writes or new scientific claims were introduced.
 
 The initial portable [validation record](evidence/explorer-validation.json) and [collection validation](evidence/first-reading-validation.json) records counts, checks and preserved source fingerprints. Full test logs and screenshots are under ignored `workspace/explorer/validation/`.
+
+## Framing comparisons
+
+The [Nemotron framing screen](NEMOTRON-FRAMING.md) adds four complete twelve-message conversations and a fourth saved screen under **Model assessment**. Its overview shows the exact prompt difference, each root's trajectory, exploratory onset judgments, word-limit overruns and clickable message maps. Seven Codex findings link seventeen exact spans. **Open the research collection** keeps the four fully read roots and findings in one place for personal observations and export. The earlier collection is preserved.
+
+The current default library has 458 entries, including the earlier cloud checks and assessment conversations; synthetic fixtures remain excluded. No Explorer control launches inference. The framing runner has a separate finite contract and journal. See [the framing validation](evidence/nemotron-framing-validation.json) for the 137-test result, browser checks and preserved evidence fingerprints.
