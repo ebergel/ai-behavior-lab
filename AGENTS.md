@@ -2,6 +2,16 @@
 
 This is a standalone laboratory repository. The user explicitly clarified that it is a new GitHub project, not an extension or fork of `ebergel/llm-self-play-attractors`. Treat that earlier repository as a reference and optional data source. Do not require its directory structure at runtime or change its files as part of laboratory development.
 
+# Autonomous continuation
+
+The user requested longer rounds without repeated intervention on 15 September 2026. Treat "go next" and equivalent instructions as authorization to complete the next coherent laboratory milestone, including its dependent implementation, appropriate checks, bounded local experiments, analysis, documentation and timestamped session record. Continue through routine intermediate successes and recoverable implementation failures without asking for another "go next". Give concise progress updates while working.
+
+Use the current plan, latest evidence and session records to choose the next useful step. Resolve routine implementation choices autonomously. Before new inference, freeze the relevant protocol, seed allocation, aggregate call budget and failure rules; keep each experimental batch finite and preserve failed or negative outcomes. Save enough state to resume without duplicating generation.
+
+When one workstream needs external information or independent human judgment, complete useful independent work first. Prepare a concrete, reviewable decision and ask only for the missing input. Human validation must remain accurately labeled as pending until it exists; the scientific qualification requirements below still apply. Existing authorization carries forward, while any new spending or external action must have appropriate authorization.
+
+Use [the continuation milestone](docs/CONTINUATION.md) as the immediate work package and update its status as work is completed. End an active work round at a meaningful completed milestone or an actual blocker, with the evidence and remaining dependencies recorded. Future scheduled wakeups require an actual scheduled task; report whether one has been activated.
+
 # Evidence and verification
 
 Keep generated campaigns and imported datasets under the ignored `workspace/` directory or another explicitly selected evidence directory. Label synthetic engineering output separately from actual inference and scientific results. Preserve exact source bytes and missing historical metadata.
