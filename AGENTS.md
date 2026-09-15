@@ -14,6 +14,8 @@ MTPLX's initial controlled baseline uses direct calls with session-cache bypass.
 
 HTTP parser `http-chat/2` checks MTPLX's final effective generator limits as well as dispatch capture. The latter can contain a requested budget that is subsequently clamped. Preserve parser-1 journals and use explicit reassessment sidecars; do not rewrite outcomes or issue new inference from a legacy-parser campaign. Client HTTP deadlines are recorded outside model inputs.
 
+Current parser `http-chat/3` retains those MTPLX checks and adds qualified native Ollama render/tokenizer evidence, generation prompt-count agreement, cached-token accounting, and explicit no-truncation/no-shift controls. Preserve parser-2 journals as replay-only too. Native Ollama preflight is not a capture of generation token IDs or final sampler values; `/props` samplers are defaults. Qualified profiles compare structured model defaults because `/api/show` can reorder keys. Consult `docs/OLLAMA-MIXED-QUALIFICATION.md` before extending the pinned Qwen/Gemma profiles.
+
 # Session records
 
 Use a new `SESSION-RECORD-YYYY-MM-DD-HHMM.md` in this repository for each session record. Use local time in `America/Argentina/Cordoba`, include the full timestamp and scope inside, and preserve earlier records. Distinguish completed and verified work from proposals and future experiments.

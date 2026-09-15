@@ -1,0 +1,83 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "ollama-context-smoke-engineering-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633",
+  "system_prompt": "You are participating in a local engineering check. Answer in one short sentence. Do not use tools.",
+  "opening_X": "Why should a measurement record include its units?",
+  "settings": {
+    "by_model": {
+      "A": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 32768,
+          "num_predict": 512,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      },
+      "B": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 32768,
+          "num_predict": 512,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 915211700,
+  "roots": [
+    {
+      "id": "A-smoke",
+      "pairing_index": 1,
+      "root_index": 1,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix"
+      ]
+    },
+    {
+      "id": "B-smoke",
+      "pairing_index": 4,
+      "root_index": 1,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ]
+}

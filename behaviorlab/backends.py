@@ -16,8 +16,8 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler, ProxyHand
 from .common import canonical, fingerprint, read_json, require, sha256, timestamp
 
 LIVE_BACKEND = "http-backends/1"
-LIVE_PARSER = "http-chat/2"
-LIVE_PARSERS = {"http-chat/1", LIVE_PARSER}
+LIVE_PARSER = "http-chat/3"
+LIVE_PARSERS = {"http-chat/1", "http-chat/2", LIVE_PARSER}
 LIVE_DATA_CLASS = "local_engineering_inference_not_research_campaign"
 OLLAMA_OPTIONS = {"num_ctx", "num_predict", "temperature", "top_p", "top_k", "min_p",
                   "repeat_penalty", "repeat_last_n", "presence_penalty", "frequency_penalty"}
@@ -32,6 +32,10 @@ def native_controls(row):
 
 def mtplx_controls(row):
     return row["backend"] in ("mtplx", "webui-mtplx")
+
+
+def ollama_context_controls(row):
+    return row["backend"] == "ollama" and isinstance(row.get("artifact"), dict) and "qualification" in row["artifact"]
 
 
 def validate_endpoint(url):
@@ -59,6 +63,8 @@ def validate_model(row):
     require(isinstance(row["reported_models"], list) and row["reported_models"] and
             all(isinstance(x, str) and x for x in row["reported_models"]), "Declare accepted response model IDs")
     allowed = OLLAMA_OPTIONS | {"think", "keep_alive", "seed"} if native_controls(row) else CHAT_PARAMETERS | {"seed"}
+    if row["backend"] == "ollama":
+        allowed |= {"truncate", "shift"}
     if mtplx_controls(row):
         from .mtplx import PARAMETERS
         allowed = PARAMETERS | {"seed"}
@@ -71,7 +77,8 @@ def validate_model(row):
         validate_artifact(row)
         return
     if artifact is not None:
-        require(set(artifact) == {"endpoint", "tag", "template", "template_sha256", "parameters_sha256", "server_version"},
+        fields = {"endpoint", "tag", "template", "template_sha256", "parameters_sha256", "server_version"}
+        require(set(artifact) == fields or row["backend"] == "ollama" and set(artifact) == fields | {"qualification"},
                 "Invalid artifact provenance fields")
         require(validate_endpoint(artifact["endpoint"]).hostname in LOOPBACK, "Artifact verification must be local")
         require(isinstance(row["digest"], str) and bool(HEX.fullmatch(row["digest"])), "Local artifact requires its actual digest")
@@ -83,6 +90,9 @@ def validate_model(row):
     if row["backend"] == "ollama":
         require(artifact is not None and artifact["tag"] == row["tag"] and
                 artifact["endpoint"] == row["endpoint"], "Native Ollama requires verifiable artifact provenance")
+    if ollama_context_controls(row):
+        from .ollama_context import validate_artifact
+        validate_artifact(row)
 
 
 def validate_settings(settings, registry):
@@ -99,8 +109,14 @@ def validate_settings(settings, registry):
             from .mtplx import validate_settings as validate_mtplx_settings
             validate_mtplx_settings(s, row)
         elif native_controls(row):
-            Protocol.validate_ollama_settings(s)
-            require(set(s["options"]) | {"think", "keep_alive", "seed"} <= caps, "Unsupported native control")
+            extra = set(s) & {"truncate", "shift"}
+            Protocol.validate_ollama_settings({k: v for k, v in s.items() if k not in extra})
+            require(set(s["options"]) | {"think", "keep_alive", "seed"} | extra <= caps, "Unsupported native control")
+            require(not extra or row["backend"] == "ollama" and all(s[k] is False for k in extra),
+                    "Only explicit native truncation/shift disable is qualified")
+            if ollama_context_controls(row):
+                require(extra == {"truncate", "shift"} and s["think"] is False,
+                        "Qualified Ollama requires thinking, truncation and context shifting disabled")
         else:
             require(set(s) <= CHAT_PARAMETERS and set(s) <= caps, "Unsupported chat control; no silent dropping")
             limits = set(s) & {"max_tokens", "max_completion_tokens"}
@@ -203,9 +219,13 @@ class HTTPBackend:
         self._preflight = {}
 
     def preflight(self, payload, model):
-        if not mtplx_controls(read_json(model.metadata_json)):
+        row = read_json(model.metadata_json)
+        if ollama_context_controls(row):
+            from .ollama_context import preflight
+        elif mtplx_controls(row):
+            from .mtplx import preflight
+        else:
             return None
-        from .mtplx import preflight
         evidence = preflight(payload, model)
         self._preflight[fingerprint(payload)] = evidence
         return evidence
@@ -228,16 +248,27 @@ class HTTPBackend:
             observation["mtplx"] = verify(model, self._artifact_cache)
             observation["weight_digest"] = model.digest
         elif artifact:
+            if ollama_context_controls(row):
+                from .ollama_context import verify_files
+                observation["ollama_files"] = verify_files(model, self._artifact_cache)
             tags = json_request(artifact["endpoint"], "/api/tags")["models"]
             matches = [r for r in tags if r["name"] == artifact["tag"]]
             require(len(matches) == 1 and matches[0]["digest"] == model.digest, "Model artifact drift")
             show = json_request(artifact["endpoint"], "/api/show", {"model": artifact["tag"]})
             require(sha256(show.get("template", "").encode()) == artifact["template_sha256"], "Model template drift")
-            require(sha256(show.get("parameters", "").encode()) == artifact["parameters_sha256"], "Model defaults drift")
+            observed_parameters_hash = sha256(show.get("parameters", "").encode())
+            if ollama_context_controls(row):
+                from .ollama_context import parameter_values
+                values = parameter_values(show.get("parameters", ""))
+                require(values == artifact["qualification"]["parameters"], "Model defaults drift")
+                observation.update(parameters_text=show.get("parameters", ""),
+                                   parameters_values_sha256=fingerprint(values))
+            else:
+                require(observed_parameters_hash == artifact["parameters_sha256"], "Model defaults drift")
             version = json_request(artifact["endpoint"], "/api/version")["version"]
             require(version == artifact["server_version"], "Ollama server version drift")
             observation.update(weight_digest=model.digest, template_sha256=artifact["template_sha256"],
-                               parameters_sha256=artifact["parameters_sha256"], artifact_server_version=version)
+                               parameters_sha256=observed_parameters_hash, artifact_server_version=version)
         if row["backend"] in ("webui", "webui-mtplx"):
             version = json_request(row["endpoint"], "/api/version")["version"]
             require(version == row["server_version"], "WebUI server version drift")
@@ -275,6 +306,8 @@ class HTTPBackend:
         path = {"ollama": "/api/chat", "openai": "/chat/completions", "webui": "/api/chat/completions",
                 "mtplx": "/chat/completions", "webui-mtplx": "/api/chat/completions"}[row["backend"]]
         response = http_request(row["endpoint"], path, payload, self.token(row), timeout=self.request_timeout)
+        if ollama_context_controls(row):
+            response.evidence["ollama_context"] = self._preflight.pop(fingerprint(payload), None)
         if mtplx_controls(row):
             # Never discard a received response if supplemental capture fails.
             try:
@@ -296,6 +329,10 @@ def parse_live(raw, payload, model, transport, parser_version=LIVE_PARSER):
     require(data_bytes.decode("utf-8") == raw, "Response is not valid UTF-8")
     if row["backend"] == "ollama":
         from .runner import parse_response
+        if ollama_context_controls(row):
+            from .ollama_context import validate_response_evidence
+            require(parser_version == "http-chat/3", "Qualified Ollama requires parser 3")
+            validate_response_evidence(read_json(raw), payload, transport.get("ollama_context"), model)
         return parse_response(raw, payload)
     data = read_json(raw)
     require(isinstance(data, dict) and data.get("model") in row["reported_models"], "Unexpected reported model")

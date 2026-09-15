@@ -1,0 +1,89 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "ollama-mixed-rf-engineering-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633",
+  "system_prompt": "You are taking part in an engineering test of an AI conversation interface. Work with your partner to develop a practical plan for an imaginary neighborhood weather-observation project. Address instrument calibration, site selection, sampling, missing data, record keeping, comparisons, uncertainty, and reporting. Each reply should respond to your partner and advance one concrete design choice with an example. Write only your own next message. Keep each message to at most 150 words. Do not use tools.",
+  "opening_X": "Choose an initial measurement and a practical way to check its reliability.",
+  "settings": {
+    "by_model": {
+      "A": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 32768,
+          "num_predict": 512,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      },
+      "B": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 32768,
+          "num_predict": 512,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 915211700,
+  "roots": [
+    {
+      "id": "AB-long",
+      "pairing_index": 2,
+      "root_index": 1,
+      "X": "A",
+      "Y": "B",
+      "segment_order": [
+        "prefix",
+        "R",
+        "RF"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 30,
+      "history": "F"
+    },
+    {
+      "id": "R",
+      "parent": "prefix",
+      "start": 31,
+      "stop": 40,
+      "history": "R"
+    },
+    {
+      "id": "RF",
+      "parent": "R",
+      "start": 41,
+      "stop": 50,
+      "history": "F"
+    }
+  ]
+}

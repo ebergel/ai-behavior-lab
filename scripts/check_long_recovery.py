@@ -1,4 +1,4 @@
-"""Bounded 50-turn local MTPLX trial with an explicit response-save interruption.
+"""Bounded 50-turn local trial with an explicit response-save interruption.
 
 Run 'first' to generate turns 1-25 and interrupt before committing turn 25.
 Run 'resume' in a new process to reuse its saved response and generate 26-50.
@@ -42,8 +42,12 @@ def main():
         protocol = Protocol.load(args.protocol, registry)
         require(len(protocol.roots) == 1 and [n.turn for n in protocol.nodes()] == list(range(1, 51)),
                 'This check requires one 50-turn trajectory')
-        require(all(read_json(m.metadata_json).get('backend') == 'mtplx' for m in registry.models),
-                'This qualification driver requires direct local MTPLX')
+        def qualified(model):
+            row = read_json(model.metadata_json)
+            return row['backend'] == 'mtplx' or (row['backend'] == 'ollama' and
+                row['artifact'].get('qualification', {}).get('schema') == 'ollama-local-render/1')
+        require(all(qualified(m) for m in registry.models),
+                'This qualification driver requires direct models with rendered-context checks')
         create_campaign(directory, protocol, registry)
         def hook(stage, node):
             if stage == 'after_commit':
