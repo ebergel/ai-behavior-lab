@@ -2,6 +2,8 @@
 
 **Model assessment** is a new sidebar section for participant profiles, exact instruction checks, service availability and short self-play samples when available. It links to the same close reader, comparison, notes, tags and collections. Frozen protocols and Codex-attributed findings are kept beside their evidence. The first free-route screens encountered configuration, quota and access restrictions; missing replies are not negative behavioral labels. See [the assessment record](MODEL-ASSESSMENT.md). Inference still runs only through an explicitly frozen CLI batch, never from the Explorer.
 
+The latest screen contains four-message conversations from Nemotron and Ling. Use **Choose assessment batch** to return to an earlier screen. Nemotron's system-check button is labeled **earlier batch** and opens its original source; the current call count excludes that reused observation. Word-limit overruns are visible on the candidate card. **Read & annotate** opens each conversation for close reading, comparison or saving a passage.
+
 Recorded 15 September 2026. This local application makes close reading a first-class part of the laboratory. The user requested an overview of the experiments, a detailed transcript view and a way to connect passages to the conditions that produced them. The explorer is an additional layer alongside WebUI.
 
 ## Open it

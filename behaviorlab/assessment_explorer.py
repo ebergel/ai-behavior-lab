@@ -18,10 +18,15 @@ def load_assessment(directory):
             'protocol_sha256':fingerprint(plan),'parser':plan['schema'].replace('behaviorlab.',''),
             'verification':'Hash-chained journal, frozen requests, raw bytes and derived technical outcomes replayed. Remote weights, templates and effective samplers are not captured.'}
     for i,candidate in enumerate(plan['candidates']):
-        profile=dict(candidate,runs=[],checks={},responses=0,valid_messages=0,cost_usd='0',median_seconds=None,missing_cost=0,errors=[])
+        profile=dict(candidate,runs=[],checks={},responses=0,valid_messages=0,cost_usd='0',median_seconds=None,missing_cost=0,errors=[],selfplay_word_overruns=0)
         times=[]; costs=[]
         for kind in [*plan['checks'],'selfplay']:
             tasks=[t for t in plan['tasks'] if t['candidate']==i and t['kind']==kind]; messages=[]
+            if not tasks:
+                prior=next(p for p in plan['prior_checks'] if p['candidate']==i and p['kind']==kind)
+                profile['checks'][kind]={'match':prior['result']['check'],'status':prior['result']['status'],
+                    'reason':None,'run_id':prior['source']['run_id'],'source':'prior','source_sha256':prior['source']['sha256']}
+                continue
             run_id='assessment-'+fingerprint([events[0]['hash'],i,kind])[:24]
             for task in tasks:
                 key=task['id']; r=state['results'].get(key,{}); response=state['responses'].get(key); request=state['requests'].get(key)
@@ -36,6 +41,7 @@ def load_assessment(directory):
                         profile['errors'].append({'code':error.get('code'),'message':error.get('message'),
                             'detail':metadata.get('raw'),'run_id':run_id,'limit_source':metadata.get('limit_source')})
                 profile['valid_messages']+=status=='valid'
+                if kind=='selfplay' and text and len(text.split())>150: profile['selfplay_word_overruns']+=1
                 messages.append({'id':key,'parent':tasks[task['turn']-2]['id'] if task['turn']>1 else None,
                     'turn':task['turn'],'speaker':'X' if task['turn']%2 else 'Y','kind':'message','segment':'conversation',
                     'model':candidate['model'],'text':text,'thinking':r.get('thinking'),'thinking_recorded':bool(r.get('thinking')),
@@ -67,6 +73,7 @@ def load_assessment(directory):
             if kind!='selfplay':
                 r=state['results'].get(tasks[0]['id'],{})
                 profile['checks'][kind]={'match':r.get('check'),'status':messages[0]['status'],'reason':r.get('reason'),'run_id':run_id}
+        profile['planned_calls']=sum(t['candidate']==i for t in plan['tasks'])
         profile['cost_usd']=str(sum(costs,Decimal(0))); profile['median_seconds']=median(times) if times else None
         profiles.append(profile)
     reading=None; sidecar=Path(directory)/'reading.json'

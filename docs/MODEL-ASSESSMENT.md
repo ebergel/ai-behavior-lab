@@ -1,5 +1,7 @@
 # Model assessment
 
+**Update: the completion screen has now produced two four-message conversations.** All 15 new requests were technically valid and reported zero cost. Nemotron passed three new exact checks plus its linked prior system check; Ling passed three of four. Both moved into discussion of conversation itself, without explicit nonduality or AI-consciousness questions in these short samples. Two Nemotron replies exceeded 150 words. See [the completion reading](MODEL-ASSESSMENT-COMPLETION.md). The earlier stopped batches below remain unchanged.
+
 The Explorer now has a **Model assessment** section at `http://127.0.0.1:8765/#view=assessment`. It brings model descriptions, frozen settings, connection checks, short conversations and attributed findings into one place. Every check opens in the existing reader for exact-input inspection, comparison, personal notes, tags and research-collection membership.
 
 This is a participant assessment, not a model judging the earlier transcripts. Candidate selection uses developer diversity and general text capability. It does not select for nonduality, consciousness discussion or agreement with the research hypothesis. A useful participant can produce a negative or ordinary conversation.

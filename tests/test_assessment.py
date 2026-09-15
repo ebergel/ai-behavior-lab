@@ -27,6 +27,48 @@ def wire(model, content='LAB_ROUTING_OK', status=200, cost=0, finish='stop', pro
 
 
 class AssessmentTests(unittest.TestCase):
+    def completion_plan(self, base):
+        from behaviorlab.assessment import make_followup, make_completion
+        p=fixture(); catalog={'models':[{'id':c['model'],'name':c['name'],'canonical_slug':c['canonical_slug']} for c in p['candidates']]}
+        routes={'routes':{c['model']:{'endpoints':c['route_observations']} for c in p['candidates']}}
+        first=Path(base)/'first'; first.mkdir(); self.setup_journal(first,p)
+        execute(first,None,lambda req:wire(req['model'],status=429),sleep=lambda _:None)
+        second=Path(base)/'second'; second.mkdir()
+        p2=make_followup(catalog,routes,read_events(first/'events.jsonl')); self.setup_journal(second,p2)
+        execute(second,None,lambda req:wire(req['model'],status=403 if req['model'].startswith('thinkingmachines/') else 200),sleep=lambda _:None)
+        return validate(make_completion(catalog,routes,[first,second]))
+
+    def test_completion_reuses_prior_check_without_replaying_it(self):
+        from behaviorlab.assessment_explorer import load_assessment
+        with tempfile.TemporaryDirectory() as d:
+            p=self.completion_plan(d); self.assertEqual(p['max_calls'],15)
+            self.assertNotIn('m1-system:1',[t['id'] for t in p['tasks']])
+            bad=copy.deepcopy(p); bad['prior_checks'][0]['request']['messages'][0]['content']='Different instruction'
+            with self.assertRaises(ValueError): validate(bad)
+            directory=Path(d)/'completion'; directory.mkdir(); self.setup_journal(directory,p); calls=[]
+            def generate(req):
+                calls.append(req); return wire(req['model'],content='A technically valid reply, even if it does not match the expected answer.')
+            state=execute(directory,None,generate,sleep=lambda _:None)
+            self.assertEqual(len(calls),15); self.assertTrue(state['finished'])
+            self.assertEqual(sum(t['kind']=='selfplay' for t in p['tasks']),8)
+            runs,screen=load_assessment(directory)
+            self.assertEqual(len(runs),9); self.assertEqual(screen['profiles'][0]['planned_calls'],7)
+            self.assertEqual(screen['profiles'][0]['valid_messages'],7)
+            self.assertEqual(screen['profiles'][0]['checks']['system']['source'],'prior')
+            self.assertEqual(screen['profiles'][0]['checks']['system']['run_id'],p['prior_checks'][0]['source']['run_id'])
+            execute(directory,None,generate,sleep=lambda _:None); self.assertEqual(len(calls),15)
+
+    def test_completion_check_cap_blocks_only_its_conversation(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=self.completion_plan(d); directory=Path(d)/'completion'; directory.mkdir(); self.setup_journal(directory,p)
+            def generate(req):
+                cap=req['model'].startswith('nvidia/') and 'sealed label' in req['messages'][-1]['content']
+                return wire(req['model'],finish='length' if cap else 'stop')
+            state=execute(directory,None,generate,sleep=lambda _:None)
+            self.assertEqual(len(state['requests']),11)
+            self.assertEqual(state['results']['m1-selfplay:1']['status'],'not_dispatched')
+            self.assertEqual(state['results']['m2-selfplay:4']['status'],'valid')
+
     def test_read_only_projection_and_annotated_source_spans(self):
         from behaviorlab.assessment_explorer import load_assessment
         from behaviorlab.explorer import Catalog
