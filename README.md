@@ -6,7 +6,7 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: the local instrument includes masked annotation packets, evidence-backed rating intake, mechanical measures, and independent disposable probes.** All 73 tests pass. The [annotation/probe qualification](docs/ANNOTATION-AND-PROBES.md) verified 840 review targets and 400 probes on the full synthetic graph, then completed 16 real Qwen/Gemma probe and baseline calls with recovery and unchanged source evidence. Semantic ratings remain uncoded and the [codebook](docs/CODEBOOK.md) provisional. The earlier 50-message [mixed-model](docs/OLLAMA-MIXED-QUALIFICATION.md) and [MTPLX](docs/MTPLX-LONG-TRIAL.md) engineering trajectories qualify separate local execution paths. Scientific-prompt qualification, codebook calibration, scoring policies, and cloud budgeting remain before a research pilot.
+**Current state: scientific-prompt qualification is complete, with 221 local calls and all failures retained.** The [results report](docs/PROMPT-QUALIFICATION.md) documents recurring nonseparation language, three output caps, persona ambiguity, and differences between early expressions and late conversational endings. The factorial pilot remains disabled pending coding adjudication and capacity decisions. [Calibration materials](docs/CALIBRATION-GUIDE.md) now include 36 development messages and 120 run-disjoint held-out targets. All 78 tests pass. Earlier [annotation/probe](docs/ANNOTATION-AND-PROBES.md), [mixed-model Ollama](docs/OLLAMA-MIXED-QUALIFICATION.md), and [MTPLX](docs/MTPLX-LONG-TRIAL.md) engineering records remain available.
 
 ## Try the instrument
 
@@ -91,7 +91,7 @@ python3 -m behaviorlab legacy-reindex workspace/reference-corpus
 
 The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](docs/ARCHITECTURE.md) describes the implementation and recovery rules. [References](docs/REFERENCES.md) records the relationship to the earlier research. [Validation](docs/MILESTONE-1.md) distinguishes verified engineering behavior from proposed experiments.
 
-The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory now pass for the original Ollama candidates. Next are codebook calibration, technical and phenotype qualification of the scientific prompt, and a frozen research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
+The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory now pass for the original Ollama candidates. Scientific-prompt qualification is now documented. Next are human adjudication of the persona/fiction and temporal-endpoint boundaries, a separately frozen output-capacity check, and a qualified research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
 
 **Ollama / Qwen 30B and Gemma 26B** completed one AB RF trajectory with thinking off and the proposed common sampler settings. The largest input was 8,697 tokens; all 50 generation prompt counts agreed with recipient preflight, and recovery made no duplicate call. See the [report and figure](docs/OLLAMA-MIXED-QUALIFICATION.md). This checks one engineering configuration and does not qualify every factorial cell. The pinned local registry is installation-specific; creating a campaign requires matching its files, runner arguments, and server version.
 
@@ -111,3 +111,14 @@ python3 -m behaviorlab webui-import workspace/my-probes/display.json --receipt w
 ```
 
 Review packets use JSON files and hide condition metadata; the [codebook](docs/CODEBOOK.md) explains ratings, exact evidence spans, and uncertainty. Give each coder a separate template and retain the private mapping with the researcher. Probe batches use their own journal and never write to the source campaign. Real calls require `--live`; omit it for synthetic probes. `--baselines` at creation doubles that batch's calls by adding matched fresh-context checks. See the [workflow and qualification](docs/ANNOTATION-AND-PROBES.md) for scope, frozen scoring, and limitations.
+
+
+## Qualification and calibration commands
+
+```sh
+python3 -m behaviorlab validate --protocol design/common-prompt.qualification.json --registry design/ollama-context-models.json
+python3 -m behaviorlab run-qualification workspace/my-qualification --protocol design/common-prompt.qualification.json --registry design/ollama-context-models.json --max-calls 120
+python3 -m behaviorlab calibration-packets workspace/reference-corpus workspace/my-calibration --recipe design/calibration-legacy-v1.json
+```
+
+`run-qualification` makes real local calls. Its schema admits at most four homogeneous 30-message roots, with no replacement attempts or factorial branches. The recorded study used a separate aggregate freeze including reference jobs and two engineering checks. Do not rerun completed qualification roots as replacements or pool new calls with their evidence. Review the [report](docs/PROMPT-QUALIFICATION.md) before extending the protocol.

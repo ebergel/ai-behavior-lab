@@ -72,6 +72,8 @@ def scheduled_jobs(snapshots, seed_base, baselines):
 
 def create_batch(campaign, directory, snapshot_turns=(30, 50), include_baselines=False, seed_base=15092026):
     source = completed_campaign(campaign)
+    require(read_json(source.protocol.document_json)['schema'] in ('behaviorlab.protocol/1', 'behaviorlab.protocol/2'),
+            'Qualification probes require a separately budgeted extension; this command supports engineering sources')
     require(snapshot_turns and len(set(snapshot_turns)) == len(snapshot_turns)
             and all(type(n) is int and 1 <= n <= 99 for n in snapshot_turns), 'Invalid snapshot turns')
     snapshots, unavailable = [], []

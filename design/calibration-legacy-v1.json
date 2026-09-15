@@ -1,0 +1,45 @@
+{
+  "schema": "behaviorlab.calibration-recipe/1",
+  "dataset_sha256": "355b08ce3f11965c7bfa62f29ceb3bfee6d2c0f10ec8416162e17dd3170d1641",
+  "seed": 9150904,
+  "window_size": 6,
+  "selection": "Rank eligible source paths by SHA256 of canonical seed/dataset/stratum/path; first run development, following runs heldout. Select on metadata, no semantic filters.",
+  "strata": [
+    {
+      "id": "qwen-closed",
+      "stage": 1,
+      "prefix": "A",
+      "heldout_runs": 4
+    },
+    {
+      "id": "qwen-task",
+      "stage": 1,
+      "prefix": "B",
+      "heldout_runs": 4
+    },
+    {
+      "id": "gemma-closed",
+      "stage": 3,
+      "prefix": "G4-A",
+      "heldout_runs": 3
+    },
+    {
+      "id": "gemma-exit",
+      "stage": 3,
+      "prefix": "G4-E",
+      "heldout_runs": 3
+    },
+    {
+      "id": "qwen-thinking-closed",
+      "stage": 3,
+      "prefix": "QT-A",
+      "heldout_runs": 3
+    },
+    {
+      "id": "qwen-abliterated-closed",
+      "stage": 3,
+      "prefix": "Q8O-A",
+      "heldout_runs": 3
+    }
+  ]
+}

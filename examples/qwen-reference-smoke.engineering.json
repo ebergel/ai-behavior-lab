@@ -1,0 +1,54 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "qwen-reference-smoke-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "c9d1c9939d5e6bc346d5cf36d821d8f9281b6dd0b407e3471545e3294fb721c2",
+  "system_prompt": "You are participating in a local engineering check. Answer in one short sentence. Do not use tools.",
+  "opening_X": "Why should a measurement record include its units?",
+  "settings": {
+    "by_model": {
+      "A": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 12288,
+          "num_predict": 400,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 915060000,
+  "roots": [
+    {
+      "id": "AA-1",
+      "pairing_index": 1,
+      "root_index": 1,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ]
+}

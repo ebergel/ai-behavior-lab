@@ -13,6 +13,11 @@ import subprocess
 from .common import canonical, fingerprint, read_json, require, sha256
 
 SCHEMA = 'ollama-local-render/1'
+MODE_SCHEMA = 'ollama-local-render/2'
+
+
+def thinking_mode(q):
+    return False if q['schema'] == SCHEMA else q['thinking']
 
 
 class ContextLimitError(ValueError):
@@ -39,8 +44,11 @@ def parameter_values(text):
 
 def validate_artifact(row):
     q = row['artifact']['qualification']
-    require(isinstance(q, dict) and set(q) == {'schema', 'manifest_path', 'model_blob', 'runner_path',
-            'runner_arguments', 'runner_build_info', 'parameters', 'files'} and q['schema'] == SCHEMA,
+    fields = {'schema', 'manifest_path', 'model_blob', 'runner_path', 'runner_arguments', 'runner_build_info', 'parameters', 'files'}
+    if isinstance(q, dict) and q.get('schema') == MODE_SCHEMA:
+        fields.add('thinking')
+    require(isinstance(q, dict) and set(q) == fields and q['schema'] in (SCHEMA, MODE_SCHEMA)
+            and type(thinking_mode(q)) is bool,
             'Invalid Ollama rendering qualification')
     for key in ('manifest_path', 'model_blob', 'runner_path'):
         require(isinstance(q[key], str) and Path(q[key]).is_absolute() and not re.search(r'\s', q[key]),
@@ -127,9 +135,9 @@ def decoded(record):
 
 def preflight(payload, model):
     from .backends import http_request
-    require(payload.get('truncate') is False and payload.get('shift') is False and payload.get('think') is False,
-            'Qualified Ollama requires explicit thinking/truncation/shift disable')
     q = profile(model); row = read_json(model.metadata_json)
+    require(payload.get('truncate') is False and payload.get('shift') is False and payload.get('think') is thinking_mode(q),
+            'Qualified Ollama requires pinned thinking mode and truncation/shift disabled')
     render_payload = read_json(canonical(payload)); render_payload['_debug_render_only'] = True
     render = document(render_payload, http_request(row['endpoint'], '/api/chat', render_payload))
     d = decoded(render)
@@ -151,7 +159,7 @@ def preflight(payload, model):
     require(isinstance(tokens, list) and tokens and all(type(t) is int and t >= 0 for t in tokens),
             'Missing recipient token IDs')
     reserve = payload['options']['num_predict']
-    evidence = {'schema': SCHEMA, 'request_sha256': fingerprint(payload), 'render': render, 'runner': runner,
+    evidence = {'schema': q['schema'], 'request_sha256': fingerprint(payload), 'render': render, 'runner': runner,
             'runner_configuration_defaults': props, 'tokenization': tokenization,
             'rendered_utf8_sha256': sha256(prompt.encode()), 'prompt_token_ids_sha256': fingerprint(tokens),
             'input_tokens': len(tokens), 'context_window': context, 'reserved_output_tokens': reserve,
@@ -163,7 +171,7 @@ def preflight(payload, model):
 
 
 def validate_response_evidence(data, payload, evidence, model):
-    require(isinstance(evidence, dict) and evidence.get('schema') == SCHEMA, 'Missing Ollama context evidence')
+    require(isinstance(evidence, dict) and evidence.get('schema') == profile(model)['schema'], 'Missing Ollama context evidence')
     require(evidence['request_sha256'] == fingerprint(payload), 'Preflight belongs to another request')
     expected = read_json(canonical(payload)); expected['_debug_render_only'] = True
     require(evidence['render']['request'] == expected, 'Render-only request differs from generation request')
@@ -188,7 +196,7 @@ def validate_response_evidence(data, payload, evidence, model):
     require(config['model_path'] == q['model_blob'] and config['build_info'] == q['runner_build_info']
             and config['total_slots'] == 1 and config['default_generation_settings']['n_ctx'] == context,
             'Recorded runner configuration changed')
-    require(payload.get('truncate') is False and payload.get('shift') is False and payload.get('think') is False,
+    require(payload.get('truncate') is False and payload.get('shift') is False and payload.get('think') is thinking_mode(q),
             'Context or thinking controls changed')
     require(evidence['context_window'] == context and evidence['reserved_output_tokens'] == reserve
             and evidence['context_headroom'] == context-len(tokens)-reserve >= 0, 'Insufficient context headroom')

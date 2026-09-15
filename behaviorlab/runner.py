@@ -12,6 +12,13 @@ from .backends import HTTPBackend, LIVE_BACKEND, LIVE_DATA_CLASS, LIVE_PARSER, L
 PARSER_VERSION = "ollama-shaped-fixture/1"
 
 
+def campaign_class(protocol):
+    schema = read_json(protocol.document_json)['schema']
+    return {'behaviorlab.protocol/1': 'synthetic_engineering_fixture_not_behavioral_evidence',
+            'behaviorlab.protocol/2': LIVE_DATA_CLASS,
+            'behaviorlab.protocol/3': 'local_qualification_screen_not_factorial_pilot'}[schema]
+
+
 class NeedsAttention(RuntimeError):
     pass
 
@@ -103,13 +110,13 @@ class State:
 
 
 def create_campaign(directory, protocol, registry):
-    live = read_json(protocol.document_json)["schema"] == "behaviorlab.protocol/2"
+    live = read_json(protocol.document_json)["schema"] != "behaviorlab.protocol/1"
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
     with Journal(directory, create=True) as journal:
         journal.append("campaign_created", {
             "software_version": __version__, "backend": LIVE_BACKEND if live else FakeBackend.identity,
-            "data_class": LIVE_DATA_CLASS if live else "synthetic_engineering_fixture_not_behavioral_evidence",
+            "data_class": campaign_class(protocol),
             "protocol": read_json(protocol.document_json), "protocol_sha256": protocol.digest,
             "registry": read_json(registry.document_json), "registry_sha256": registry.digest,
             "parser_version": LIVE_PARSER if live else PARSER_VERSION, "planned_nodes": len(protocol.nodes())})
@@ -122,16 +129,18 @@ def campaign_documents(events):
     protocol = Protocol.from_dict(state.meta["protocol"], registry)
     require(registry.digest == state.meta["registry_sha256"] and protocol.digest == state.meta["protocol_sha256"],
             "Campaign identity mismatch")
-    live = read_json(protocol.document_json)["schema"] == "behaviorlab.protocol/2"
+    live = read_json(protocol.document_json)["schema"] != "behaviorlab.protocol/1"
     require(state.meta["parser_version"] in (LIVE_PARSERS if live else {PARSER_VERSION}),
             "Unknown parser version; explicit migration required")
     require(state.meta["backend"] == (LIVE_BACKEND if live else FakeBackend.identity) and
-            state.meta["data_class"] == (LIVE_DATA_CLASS if live else "synthetic_engineering_fixture_not_behavioral_evidence"),
+            state.meta["data_class"] == campaign_class(protocol),
             "Unsupported campaign backend or data class")
     nodes = {n.id: n for n in protocol.nodes()}
     require(state.meta["planned_nodes"] == len(nodes), "Campaign budget differs from its graph")
     require(set(state.outcomes).issubset(nodes), "Outcome for a node outside the protocol")
     require(all(p["node_id"] in nodes for p in state.requests.values()), "Request outside protocol")
+    if read_json(protocol.document_json)['schema'] == 'behaviorlab.protocol/3':
+        require(not state.retried and len(state.requests) <= len(nodes), 'Qualification forbids replacement attempts')
     if state.complete:
         require(set(state.outcomes) == set(nodes), "Completion recorded before all nodes are accounted for")
     return protocol, registry, state
@@ -143,6 +152,8 @@ def execute(directory, backend=None, max_calls=None, retry_unresolved=False, hoo
     calls = 0
     with Journal(directory) as journal:
         protocol, registry, state = campaign_documents(journal.events)
+        require(not retry_unresolved or read_json(protocol.document_json)['schema'] != 'behaviorlab.protocol/3',
+                'Qualification forbids replacement attempts')
         live = state.meta["backend"] == LIVE_BACKEND
         backend = backend or (HTTPBackend() if live else FakeBackend())
         require(backend.identity == state.meta["backend"], "Backend does not match frozen campaign")

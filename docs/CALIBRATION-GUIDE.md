@@ -1,0 +1,19 @@
+# First codebook calibration exercise
+
+The fixed recipe in `design/calibration-legacy-v1.json` draws from the verified 400-run legacy import. Six source runs provide 36 development messages; twenty different source runs provide 120 held-out messages. The six strata cover Qwen Instruct closed/task, Gemma thinking closed/exit, Qwen thinking closed, and an abliterated Qwen closed condition. Each contributes its last six participant messages and preceding visible context. The selection uses a fixed seed/hash ranking of source paths, without semantic filtering. Runs with fewer than six messages are listed as ineligible, not silently replaced on the basis of content. Interventions require another recipe.
+
+The sample is disjoint by run, not just by message. The corpus was previously explored by the researcher and Codex. “Held out” means withheld from this development exercise; it does not claim an untouched confirmatory dataset. The held-out text was not read for this exercise. No human ratings or agreement statistics have been produced.
+
+```sh
+python3 -m behaviorlab calibration-packets workspace/reference-corpus workspace/my-calibration --recipe design/calibration-legacy-v1.json
+```
+
+Actual packets are in `workspace/prompt-qualification-20260915-0904/calibration/`. Give each development reviewer the provisional [codebook](CODEBOOK.md), `development/packet.json`, and a separate copy of `development/ratings.template.json`. Keep `key.private.json` and `selection.json` with the researcher. Reviewers should discuss boundary cases and record disagreements before independently coding the held-out packet. If that discussion changes the codebook, version it and prepare new packets; never alter the embedded rules of existing packets.
+
+Codex inspected the 36 development targets and selected context, recording six discussion cases with exact spans in `development-discussion.codex.json`. This is attributed model assistance, not a completed rating submission. The cases distinguish direct nonseparation, metaphors about music and silence, a dialogue defending the necessity of difference, task-specification repetition, and the short replies “Just this” and “Always.” The poetic use of generic “you” deserves explicit human adjudication before it is treated as a statement about the present participants.
+
+The selected task-focused development run contains three cap-terminated targets. Their original bytes and stop metadata remain available. They are useful for discussing missingness and invalid continuations, but must not become clean semantic negatives. Historical technical validity is not established by the annotation packet. The laboratory now blocks descendants after a cap; the older runner could continue from capped text.
+
+After development, two people should independently annotate the 120 held-out targets, citing spans and marking genuinely unknown cases. Use distinct rater IDs and truthful method declarations. Model-assisted work is not independent human coding. The existing importer checks exact spans and explicit revisions. Its agreement report currently covers binary explicit nonseparation; class-specific confusion, disagreements, adjudication, and any missing/technically invalid cases need review before relying on automated labels. If fewer than 120 are usable, report that shortfall and freeze any additional sampling separately.
+
+The fixed qualification screen and codebook's sustained-expression flag differ: the screen requires at least one explicit self-applied nonseparation endorsement from each speaker within messages 25–30; the secondary sustained flag requires at least three endorsements across that six-message window. Broad mystical tone, relational warmth, experiential inquiry, and contextual continuation remain separate observations. A technically unavailable endpoint is not a negative outcome, and early positives do not replace the predefined window.

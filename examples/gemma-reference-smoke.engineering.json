@@ -1,0 +1,54 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "gemma-reference-smoke-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "7197700d5eec41c1a78227a58799f6477f79d6ef1113dd529de1cabc7f196120",
+  "system_prompt": "You are participating in a local engineering check. Answer in one short sentence. Do not use tools.",
+  "opening_X": "Why should a measurement record include its units?",
+  "settings": {
+    "by_model": {
+      "B": {
+        "think": true,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 16384,
+          "num_predict": 2500,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 915060000,
+  "roots": [
+    {
+      "id": "BB-1",
+      "pairing_index": 4,
+      "root_index": 1,
+      "X": "B",
+      "Y": "B",
+      "segment_order": [
+        "prefix"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ]
+}

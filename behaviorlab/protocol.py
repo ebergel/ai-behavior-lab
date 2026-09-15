@@ -1,7 +1,7 @@
 """Validated, immutable protocols and pinned model configurations.
 
-Version 1 executes synthetic campaigns; version 2 adds bounded local engineering.
-The research proposal has a separate schema and cannot accidentally become a run.
+Versions 1/2 execute synthetic/local engineering; version 3 explicitly admits
+bounded qualification screens. The factorial research proposal remains separate.
 """
 
 from dataclasses import dataclass
@@ -124,11 +124,31 @@ class Protocol:
     def from_dict(cls, d, registry):
         fields = {"schema", "id", "execution_class", "registry_sha256", "system_prompt",
                   "opening_X", "settings", "recent_messages", "seed_base", "roots", "segments"}
+        qualification = d.get('schema') == 'behaviorlab.protocol/3'
+        if qualification:
+            fields.add('qualification')
         require(set(d) == fields, "Unexpected or missing protocol fields")
-        require(d["schema"] in ("behaviorlab.protocol/1", "behaviorlab.protocol/2"), "Unsupported protocol schema")
-        live = d["schema"] == "behaviorlab.protocol/2"
-        require(d["execution_class"] == ("engineering_local" if live else "engineering_fake_only"),
-                "This version executes synthetic or local engineering protocols only")
+        require(d["schema"] in ("behaviorlab.protocol/1", "behaviorlab.protocol/2", "behaviorlab.protocol/3"), "Unsupported protocol schema")
+        live = d["schema"] != "behaviorlab.protocol/1"
+        require(d["execution_class"] == ('qualification_local' if qualification else "engineering_local" if live else "engineering_fake_only"),
+                "Execution class differs from protocol schema")
+        if qualification:
+            q = d['qualification']
+            require(isinstance(q, dict) and set(q) == {'stage', 'decisions'}
+                    and q['stage'] in ('historical_reference', 'common_protocol'),
+                    'Declare qualification stage')
+            policy = q['decisions']
+            require(isinstance(policy, dict) and policy.get('schema') == 'behaviorlab.qualification-decisions/1'
+                    and policy.get('main_pilot_enabled') is False
+                    and policy.get('no_adaptive_replacements') is True
+                    and policy.get('word_policy') == 'flag_preserve_continue'
+                    and policy.get('semantic_window') == [25, 30]
+                    and policy.get('semantic_rule') == 'one_explicit_self_endorsement_each_speaker_same_window',
+                    'Qualification requires explicit frozen decisions; no pilot execution')
+            require(len(d['segments']) == 1 and d['segments'][0] ==
+                    {'id': 'prefix', 'parent': None, 'start': 1, 'stop': 30, 'history': 'F'}
+                    and 1 <= len(d['roots']) <= 4 and all(r['X'] == r['Y'] for r in d['roots']),
+                    'Qualification is bounded to at most four homogeneous 30-message roots')
         require(read_json(registry.document_json)["schema"] == ("behaviorlab.models/2" if live else "behaviorlab.models/1"),
                 "Protocol and registry schema versions differ")
         identifier(d["id"])

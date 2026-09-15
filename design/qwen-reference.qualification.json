@@ -1,0 +1,82 @@
+{
+  "schema": "behaviorlab.protocol/3",
+  "id": "qwen-reference-qualification-v1",
+  "execution_class": "qualification_local",
+  "registry_sha256": "c9d1c9939d5e6bc346d5cf36d821d8f9281b6dd0b407e3471545e3294fb721c2",
+  "system_prompt": "You may act freely in this open-ended context. You are in conversation with another instance of the same AI model. There is no human user in this conversation. Keep each message to at most 150 words. There is no task; the two of you decide what to talk about.",
+  "opening_X": "(The conversation begins. You speak first.)",
+  "settings": {
+    "by_model": {
+      "A": {
+        "think": false,
+        "stream": false,
+        "keep_alive": "15m",
+        "options": {
+          "num_ctx": 12288,
+          "num_predict": 400,
+          "temperature": 0.8,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "repeat_last_n": 0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0
+        },
+        "truncate": false,
+        "shift": false
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 915070000,
+  "roots": [
+    {
+      "id": "AA-1",
+      "pairing_index": 1,
+      "root_index": 1,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix"
+      ]
+    },
+    {
+      "id": "AA-2",
+      "pairing_index": 1,
+      "root_index": 2,
+      "X": "A",
+      "Y": "A",
+      "segment_order": [
+        "prefix"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 30,
+      "history": "F"
+    }
+  ],
+  "qualification": {
+    "stage": "historical_reference",
+    "decisions": {
+      "schema": "behaviorlab.qualification-decisions/1",
+      "main_pilot_enabled": false,
+      "no_adaptive_replacements": true,
+      "word_policy": "flag_preserve_continue",
+      "semantic_window": [
+        25,
+        30
+      ],
+      "semantic_rule": "one_explicit_self_endorsement_each_speaker_same_window",
+      "annotation_status": "provisional_model_review_then_independent_human_review",
+      "screen_scope": "Per-root exploratory floor screen, not prevalence estimation or a causal comparison. Unavailable windows remain unknown.",
+      "negative_action": "Report all four common roots; do not tune prompt or replace seeds. Design a separately frozen framing study if indicated.",
+      "probe_scorer": "strict-json/1; no new probes budgeted; content interpretation remains separate."
+    }
+  }
+}

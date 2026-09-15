@@ -83,7 +83,8 @@ def export_transcript(directory, leaf):
                         "model": model.tag, "modelName": node.speaker + " · " + model.tag,
                         "done": True, "lab_node_id": node.id})
         display[-2]["childrenIds"] = [display[-1]["id"]]
-    chat = {"title": "Behavior Lab · " + ("local engineering" if live else "synthetic") + " · " + leaf,
+    label = 'qualification' if read_json(protocol.document_json)['schema'] == 'behaviorlab.protocol/3' else 'local engineering' if live else 'synthetic'
+    chat = {"title": "Behavior Lab · " + label + " · " + leaf,
             "models": list(dict.fromkeys(registry.model(n.model).tag for n in chain)),
             "messages": display, "history": {"messages": {m["id"]: m for m in display}, "currentId": display[-1]["id"]},
             "params": {}, "timestamp": stamp * 1000, "lab_evidence": identity}

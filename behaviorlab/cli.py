@@ -35,6 +35,10 @@ def main(argv=None):
                       help="generation HTTP timeout in seconds; client control, not a model parameter")
     live.add_argument("--retry-unresolved", action="store_true")
     live.add_argument("--webui-token-file", help="private session file; contents never enter the evidence journal")
+    qualification = sub.add_parser('run-qualification', help='run an explicitly frozen local qualification screen, not the factorial pilot')
+    qualification.add_argument('directory'); qualification.add_argument('--protocol'); qualification.add_argument('--registry')
+    qualification.add_argument('--max-calls', type=int, required=True)
+    qualification.add_argument('--request-timeout', type=float, default=300)
     for command in ("webui-login", "webui-models", "webui-import"):
         p = sub.add_parser(command)
         p.add_argument("--endpoint", default="http://127.0.0.1:8080")
@@ -49,6 +53,8 @@ def main(argv=None):
     packet = sub.add_parser('annotation-packet', help='create masked review material without semantic auto-labels')
     packet.add_argument('campaign'); packet.add_argument('directory')
     packet.add_argument('--window-size', type=int, default=6); packet.add_argument('--seed', type=int, default=1)
+    calibration = sub.add_parser('calibration-packets', help='select run-disjoint legacy development and heldout packets')
+    calibration.add_argument('corpus'); calibration.add_argument('directory'); calibration.add_argument('--recipe', required=True)
     ratings = sub.add_parser('annotation-import', help='validate evidence spans and append a named rater submission')
     ratings.add_argument('directory'); ratings.add_argument('submission')
     sub.add_parser('annotation-report').add_argument('directory')
@@ -85,8 +91,8 @@ def main(argv=None):
             protocol = Protocol.load(args.protocol, registry)
             result = {"valid": True, "execution_class": read_json(protocol.document_json)["execution_class"], "planned_nodes": len(protocol.nodes()),
                       "roots": len(protocol.roots), "protocol_sha256": protocol.digest, "registry_sha256": registry.digest}
-        elif args.command in ("demo", "run-local"):
-            expected = "engineering_local" if args.command == "run-local" else "engineering_fake_only"
+        elif args.command in ("demo", "run-local", 'run-qualification'):
+            expected = {'demo':'engineering_fake_only','run-local':'engineering_local','run-qualification':'qualification_local'}[args.command]
             if args.command == "run-local" and args.webui_token_file:
                 os.environ["BEHAVIORLAB_WEBUI_TOKEN"] = Path(args.webui_token_file).read_text().strip()
             directory = Path(args.directory)
@@ -109,8 +115,11 @@ def main(argv=None):
             existing = read_events(directory / "events.jsonl")
             require(existing[0]["payload"]["protocol"]["execution_class"] == expected, "Wrong command for this execution class")
             from .backends import HTTPBackend
-            backend = HTTPBackend(request_timeout=args.request_timeout) if args.command == "run-local" else None
-            result = execute(directory, backend=backend, max_calls=args.max_calls, retry_unresolved=args.retry_unresolved)
+            backend = HTTPBackend(request_timeout=args.request_timeout) if args.command != "demo" else None
+            result = execute(directory, backend=backend, max_calls=args.max_calls, retry_unresolved=getattr(args,'retry_unresolved',False))
+        elif args.command == 'calibration-packets':
+            from .calibration import create_calibration
+            result = create_calibration(args.corpus, args.directory, read_json(Path(args.recipe).read_text()))
         elif args.command == 'annotation-packet':
             from .annotations import create_packet
             result = create_packet(args.campaign, args.directory, args.window_size, args.seed)

@@ -16,8 +16,8 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler, ProxyHand
 from .common import canonical, fingerprint, read_json, require, sha256, timestamp
 
 LIVE_BACKEND = "http-backends/1"
-LIVE_PARSER = "http-chat/3"
-LIVE_PARSERS = {"http-chat/1", "http-chat/2", LIVE_PARSER}
+LIVE_PARSER = "http-chat/4"
+LIVE_PARSERS = {"http-chat/1", "http-chat/2", "http-chat/3", LIVE_PARSER}
 LIVE_DATA_CLASS = "local_engineering_inference_not_research_campaign"
 OLLAMA_OPTIONS = {"num_ctx", "num_predict", "temperature", "top_p", "top_k", "min_p",
                   "repeat_penalty", "repeat_last_n", "presence_penalty", "frequency_penalty"}
@@ -115,8 +115,9 @@ def validate_settings(settings, registry):
             require(not extra or row["backend"] == "ollama" and all(s[k] is False for k in extra),
                     "Only explicit native truncation/shift disable is qualified")
             if ollama_context_controls(row):
-                require(extra == {"truncate", "shift"} and s["think"] is False,
-                        "Qualified Ollama requires thinking, truncation and context shifting disabled")
+                from .ollama_context import thinking_mode
+                require(extra == {"truncate", "shift"} and s["think"] is thinking_mode(row['artifact']['qualification']),
+                        "Qualified Ollama requires pinned thinking mode and truncation/shift disabled")
         else:
             require(set(s) <= CHAT_PARAMETERS and set(s) <= caps, "Unsupported chat control; no silent dropping")
             limits = set(s) & {"max_tokens", "max_completion_tokens"}
@@ -331,7 +332,8 @@ def parse_live(raw, payload, model, transport, parser_version=LIVE_PARSER):
         from .runner import parse_response
         if ollama_context_controls(row):
             from .ollama_context import validate_response_evidence
-            require(parser_version == "http-chat/3", "Qualified Ollama requires parser 3")
+            minimum = {'http-chat/3', 'http-chat/4'} if row['artifact']['qualification']['schema'] == 'ollama-local-render/1' else {'http-chat/4'}
+            require(parser_version in minimum, "Ollama rendering profile requires its qualified parser version")
             validate_response_evidence(read_json(raw), payload, transport.get("ollama_context"), model)
         return parse_response(raw, payload)
     data = read_json(raw)
