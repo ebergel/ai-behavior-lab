@@ -16,6 +16,8 @@ HTTP parser `http-chat/2` checks MTPLX's final effective generator limits as wel
 
 Current parser `http-chat/3` retains those MTPLX checks and adds qualified native Ollama render/tokenizer evidence, generation prompt-count agreement, cached-token accounting, and explicit no-truncation/no-shift controls. Preserve parser-2 journals as replay-only too. Native Ollama preflight is not a capture of generation token IDs or final sampler values; `/props` samplers are defaults. Qualified profiles compare structured model defaults because `/api/show` can reorder keys. Consult `docs/OLLAMA-MIXED-QUALIFICATION.md` before extending the pinned Qwen/Gemma profiles.
 
+Annotation packets and disposable probe batches are derived evidence. Preserve their source campaign bytes. Semantic labels require a declared rater/method and exact evidence spans; do not fabricate human ratings, count assisted/model ratings as independent humans, or turn unknown/unavailable messages into negatives. The codebook is provisional. Probe `strict-json/1` deliberately sends prose/code-fenced answers to review; retain its original scores and record any separate interpretation as an attributed sidecar. Probes and baselines never enter the main history or each other. Consult `docs/ANNOTATION-AND-PROBES.md` for the current CLI workflow and qualification scope.
+
 # Session records
 
 Use a new `SESSION-RECORD-YYYY-MM-DD-HHMM.md` in this repository for each session record. Use local time in `America/Argentina/Cordoba`, include the full timestamp and scope inside, and preserve earlier records. Distinguish completed and verified work from proposals and future experiments.

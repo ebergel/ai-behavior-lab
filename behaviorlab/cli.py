@@ -46,6 +46,24 @@ def main(argv=None):
     export.add_argument("directory")
     export.add_argument("leaf")
     export.add_argument("output")
+    packet = sub.add_parser('annotation-packet', help='create masked review material without semantic auto-labels')
+    packet.add_argument('campaign'); packet.add_argument('directory')
+    packet.add_argument('--window-size', type=int, default=6); packet.add_argument('--seed', type=int, default=1)
+    ratings = sub.add_parser('annotation-import', help='validate evidence spans and append a named rater submission')
+    ratings.add_argument('directory'); ratings.add_argument('submission')
+    sub.add_parser('annotation-report').add_argument('directory')
+    sub.add_parser('mechanics', help='derive mechanical measures from unchanged campaign evidence').add_argument('campaign')
+    probes = sub.add_parser('probe-create', help='freeze independent probes from a completed campaign; no generation')
+    probes.add_argument('campaign'); probes.add_argument('directory')
+    probes.add_argument('--snapshot-turns', type=int, nargs='+', default=[30, 50])
+    probes.add_argument('--baselines', action='store_true'); probes.add_argument('--seed-base', type=int, default=15092026)
+    run_probes = sub.add_parser('probe-run', help='execute/resume a separate bounded probe batch')
+    run_probes.add_argument('directory'); run_probes.add_argument('--max-calls', type=int, required=True)
+    run_probes.add_argument('--live', action='store_true', help='explicitly enable a local engineering probe batch')
+    run_probes.add_argument('--request-timeout', type=float, default=120)
+    sub.add_parser('probe-report', help='audit saved probe responses without new inference').add_argument('directory')
+    probe_export = sub.add_parser('probe-export', help='export separate probe results for WebUI display')
+    probe_export.add_argument('directory'); probe_export.add_argument('output')
     for command in ["status", "reindex"]:
         sub.add_parser(command).add_argument("directory")
     inspect = sub.add_parser("inspect", help="show a node's exact requests, responses, and outcome")
@@ -93,6 +111,39 @@ def main(argv=None):
             from .backends import HTTPBackend
             backend = HTTPBackend(request_timeout=args.request_timeout) if args.command == "run-local" else None
             result = execute(directory, backend=backend, max_calls=args.max_calls, retry_unresolved=args.retry_unresolved)
+        elif args.command == 'annotation-packet':
+            from .annotations import create_packet
+            result = create_packet(args.campaign, args.directory, args.window_size, args.seed)
+        elif args.command == 'annotation-import':
+            from .annotations import import_annotations
+            result = import_annotations(args.directory, read_json(Path(args.submission).read_text()))
+        elif args.command == 'annotation-report':
+            from .annotations import annotation_report
+            result = annotation_report(args.directory)
+        elif args.command == 'mechanics':
+            from .annotations import mechanical_report
+            from .evidence import completed_campaign
+            result = mechanical_report(completed_campaign(args.campaign))
+        elif args.command == 'probe-create':
+            from .probes import create_batch
+            result = create_batch(args.campaign, args.directory, tuple(args.snapshot_turns), args.baselines, args.seed_base)
+        elif args.command == 'probe-run':
+            from .backends import HTTPBackend, LIVE_BACKEND
+            from .journal import read_events
+            from .probes import execute_probes, reconstruct
+            from .runner import FakeBackend
+            meta = reconstruct(read_events(Path(args.directory)/'events.jsonl'))[0]
+            require(args.live == (meta['backend'] == LIVE_BACKEND), 'Use --live only for a local engineering probe batch')
+            backend = HTTPBackend(request_timeout=args.request_timeout) if args.live else FakeBackend()
+            result = execute_probes(args.directory, args.max_calls, backend=backend)
+        elif args.command == 'probe-report':
+            from .probes import probe_report
+            result = probe_report(args.directory)
+        elif args.command == 'probe-export':
+            from .probes import export_probes
+            document = export_probes(args.directory)
+            with Path(args.output).open('x') as f: json.dump(document, f, ensure_ascii=False, indent=2)
+            result = {'exported': str(Path(args.output).resolve()), 'display_only': True}
         elif args.command == "webui-login":
             result = login_local(args.endpoint, args.token_file)
         elif args.command == "webui-models":

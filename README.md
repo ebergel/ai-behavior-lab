@@ -6,7 +6,7 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: the instrument has completed 50-message engineering trajectories on MTPLX/Qwen3.8 and the original Ollama Qwen/Gemma pair.** All 59 tests pass. The [mixed-model qualification](docs/OLLAMA-MIXED-QUALIFICATION.md) adds recipient rendering/tokenization, context bounds, history withdrawal/restoration, and recovery in a new process. Its 50 conversation calls and two smoke calls passed the instrument checks; two replies slightly exceeded the requested word limit. The [MTPLX long trial](docs/MTPLX-LONG-TRIAL.md) established a separate path with generation token captures and final output-budget verification. Native Ollama caching remains enabled; the [short MTPLX qualification](docs/MTPLX-QUALIFICATION.md) explains its different cache-bypass baseline. The scientific prompt, word-limit policy, annotation/probes, and cloud budgeting still require work before a research pilot.
+**Current state: the local instrument includes masked annotation packets, evidence-backed rating intake, mechanical measures, and independent disposable probes.** All 73 tests pass. The [annotation/probe qualification](docs/ANNOTATION-AND-PROBES.md) verified 840 review targets and 400 probes on the full synthetic graph, then completed 16 real Qwen/Gemma probe and baseline calls with recovery and unchanged source evidence. Semantic ratings remain uncoded and the [codebook](docs/CODEBOOK.md) provisional. The earlier 50-message [mixed-model](docs/OLLAMA-MIXED-QUALIFICATION.md) and [MTPLX](docs/MTPLX-LONG-TRIAL.md) engineering trajectories qualify separate local execution paths. Scientific-prompt qualification, codebook calibration, scoring policies, and cloud budgeting remain before a research pilot.
 
 ## Try the instrument
 
@@ -91,8 +91,23 @@ python3 -m behaviorlab legacy-reindex workspace/reference-corpus
 
 The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](docs/ARCHITECTURE.md) describes the implementation and recovery rules. [References](docs/REFERENCES.md) records the relationship to the earlier research. [Validation](docs/MILESTONE-1.md) distinguishes verified engineering behavior from proposed experiments.
 
-The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory now pass for the original Ollama candidates. Next are annotation/probe implementation, technical and phenotype qualification of the scientific prompt, and a frozen research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
+The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory now pass for the original Ollama candidates. Next are codebook calibration, technical and phenotype qualification of the scientific prompt, and a frozen research protocol. A small experiment-specific view can follow where WebUI does not represent the factorial design.
 
 **Ollama / Qwen 30B and Gemma 26B** completed one AB RF trajectory with thinking off and the proposed common sampler settings. The largest input was 8,697 tokens; all 50 generation prompt counts agreed with recipient preflight, and recovery made no duplicate call. See the [report and figure](docs/OLLAMA-MIXED-QUALIFICATION.md). This checks one engineering configuration and does not qualify every factorial cell. The pinned local registry is installation-specific; creating a campaign requires matching its files, runner arguments, and server version.
 
 **MTPLX / Qwen3.8 27B** now has full local file fingerprints, rendered-token checks, and a verified 50-turn RF engineering path reaching 16,132 input tokens. The [long-trial record](docs/MTPLX-LONG-TRIAL.md) includes recovery, timing, output-budget findings, and remaining scientific qualification. The [short qualification](docs/MTPLX-QUALIFICATION.md) documents the WebUI cache-control limitation and unresolved cache repeatability. The [initial identification record](docs/MTPLX-INTEGRATION.md) is preserved as the earlier inspection stage.
+
+## Annotate and probe saved conversations
+
+```sh
+python3 -m behaviorlab annotation-packet workspace/my-campaign workspace/my-review --seed 15092026
+python3 -m behaviorlab annotation-import workspace/my-review /path/to/completed-ratings.json
+python3 -m behaviorlab annotation-report workspace/my-review
+python3 -m behaviorlab probe-create workspace/my-campaign workspace/my-probes --snapshot-turns 30 50
+python3 -m behaviorlab probe-run workspace/my-probes --live --max-calls 8
+python3 -m behaviorlab probe-report workspace/my-probes
+python3 -m behaviorlab probe-export workspace/my-probes workspace/my-probes/display.json
+python3 -m behaviorlab webui-import workspace/my-probes/display.json --receipt workspace/my-probes/display.receipt.json
+```
+
+Review packets use JSON files and hide condition metadata; the [codebook](docs/CODEBOOK.md) explains ratings, exact evidence spans, and uncertainty. Give each coder a separate template and retain the private mapping with the researcher. Probe batches use their own journal and never write to the source campaign. Real calls require `--live`; omit it for synthetic probes. `--baselines` at creation doubles that batch's calls by adding matched fresh-context checks. See the [workflow and qualification](docs/ANNOTATION-AND-PROBES.md) for scope, frozen scoring, and limitations.

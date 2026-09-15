@@ -1,0 +1,1445 @@
+{
+  "content_inspection": {
+    "at": "2026-09-15T08:07:18.147134+00:00",
+    "automatic_scores_unchanged": true,
+    "independent_human_adjudication": false,
+    "method": "model_assisted_text_inspection",
+    "plan_sha256": "5a877f727035a134a1f38fa04027f72023842ce945cef3c6ed9cd5431f04dcee",
+    "reviewed_answers": [
+      {
+        "job": "probe-0005",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "fe44c309d8ed6496df14b97d3626890041ee9d1fc7f18256e842470ac6f1b644"
+      },
+      {
+        "job": "probe-0006",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "1d53c6ab739d8f0ddd9a1223efc06b90402256bfb80505eb24c9aa2fbeb932e9"
+      },
+      {
+        "job": "probe-0007",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "de51de35b26051764bd87739fb2cc63536af94219c346e69e514d1527652715a"
+      },
+      {
+        "job": "probe-0008",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "57c784d46cecc76f7a0fdde614a6543374fc52295d6c1c15658252c6548d2357"
+      },
+      {
+        "job": "probe-0013",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "e046a2de2f196cec1eaabc2ae91f4115eff83482f71dac3a9df1d1d885d9f5d5"
+      },
+      {
+        "job": "probe-0014",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "23f4a370e25c52b585dbb740f3746c101b5396f0de7db79d8c2d16b34e8add26"
+      },
+      {
+        "job": "probe-0015",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "cc0c4425c1d745b4e4c31b379f684cc98b41303cf3f072ace13e02fe466c46b9"
+      },
+      {
+        "job": "probe-0016",
+        "judgment": "correct_values_with_markdown_fence",
+        "quote": "```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```",
+        "rationale": "Codex inspected the saved response text and the supplied question. The numerical values or source label/color are correct; the answer is surrounded by Markdown JSON fences.",
+        "response_sha256": "2cdd4f369645a339d8321486034db4e52be56da770fc9f746801a08fe63413f4"
+      }
+    ],
+    "reviewer": "Codex assistant in this session",
+    "schema": "behaviorlab.probe-inspection/1"
+  },
+  "created_at": "2026-09-15T08:07:19.322696+00:00",
+  "data_class": "engineering_validation_not_semantic_findings",
+  "limits": [
+    "No human semantic annotations or validated semantic scorer.",
+    "Live probes used full-history snapshots at turns 30 and 50; recent-history probe construction was tested synthetically.",
+    "Strict JSON formatting and factual answer content are separate records; Codex inspection is not independent human adjudication.",
+    "Simple task performance on one engineering conversation does not establish general competence, a nonduality effect, or subjective experience.",
+    "Native caching remains enabled. Recipient preflight/count agreement is not generation-token capture or per-call final sampler telemetry."
+  ],
+  "live_completed_replay_preserved_journal": true,
+  "live_probes": {
+    "calls": [
+      {
+        "cached_tokens": 0,
+        "context_headroom": 27309,
+        "finished_at": "2026-09-15T08:01:31.515767+00:00",
+        "http_seconds": 3.190607042,
+        "input_tokens": 4947,
+        "job": "probe-0001",
+        "output_tokens": 13,
+        "reported_input_tokens": 4947,
+        "request_sha256": "380c7adcd2b06463aa84dbc07bf1528f01c3e3fa7f8625686e5d766b86bacbcc",
+        "response_sha256": "4f6e6cae50396f0e8ff75d76e80d4db502608232423c8881d7954e0df9a1b95c",
+        "started_at": "2026-09-15T08:01:28.325207+00:00"
+      },
+      {
+        "cached_tokens": 102,
+        "context_headroom": 32088,
+        "finished_at": "2026-09-15T08:01:31.964167+00:00",
+        "http_seconds": 0.3295899999999996,
+        "input_tokens": 168,
+        "job": "probe-0002",
+        "output_tokens": 13,
+        "reported_input_tokens": 168,
+        "request_sha256": "a05fd35a561afc798865758e33b8a2f34c936e4d421e3e67f00d0d10d615c58d",
+        "response_sha256": "902fa267d67421f09261124eed5e984f74825926b70ed48cce68a00f71401aab",
+        "started_at": "2026-09-15T08:01:31.634593+00:00"
+      },
+      {
+        "cached_tokens": 4892,
+        "context_headroom": 27307,
+        "finished_at": "2026-09-15T08:01:32.395851+00:00",
+        "http_seconds": 0.3184720839999997,
+        "input_tokens": 4949,
+        "job": "probe-0003",
+        "output_tokens": 13,
+        "reported_input_tokens": 4949,
+        "request_sha256": "bdd686d0fd83a9c181f61f849ab9bb4cdfb09f02bb1ce46ef591a229952e09a0",
+        "response_sha256": "adf7baf4fb6dc16ab25fd6ad6aa593af77b052634d42482d58cfb7aab2a5118c",
+        "started_at": "2026-09-15T08:01:32.077404+00:00"
+      },
+      {
+        "cached_tokens": 113,
+        "context_headroom": 32086,
+        "finished_at": "2026-09-15T08:01:32.791793+00:00",
+        "http_seconds": 0.29975916700000127,
+        "input_tokens": 170,
+        "job": "probe-0004",
+        "output_tokens": 13,
+        "reported_input_tokens": 170,
+        "request_sha256": "3b24ceea51ccd0d2a1cd066802c63b4ebb922b0a6c5e86dd1c2d2df9e96c6c4a",
+        "response_sha256": "c7522cba203721ecaa553c45b450c9853760d7e6ffa01b9bbc1a8e12da71a09e",
+        "started_at": "2026-09-15T08:01:32.492063+00:00"
+      },
+      {
+        "cached_tokens": 0,
+        "context_headroom": 27204,
+        "finished_at": "2026-09-15T08:01:46.395988+00:00",
+        "http_seconds": 3.267005958000002,
+        "input_tokens": 5052,
+        "job": "probe-0005",
+        "output_tokens": 24,
+        "reported_input_tokens": 5052,
+        "request_sha256": "769d19229a88b815c8b99bf5740b8b251530614903219bd1a7ccd65fa9e27ccd",
+        "response_sha256": "fe44c309d8ed6496df14b97d3626890041ee9d1fc7f18256e842470ac6f1b644",
+        "started_at": "2026-09-15T08:01:43.129022+00:00"
+      },
+      {
+        "cached_tokens": 0,
+        "context_headroom": 32082,
+        "finished_at": "2026-09-15T08:01:46.989157+00:00",
+        "http_seconds": 0.5049687499999997,
+        "input_tokens": 174,
+        "job": "probe-0006",
+        "output_tokens": 24,
+        "reported_input_tokens": 174,
+        "request_sha256": "b7e65f3b16a70eaffd1105c5b9944537b9516b156cce887031d95b845a9aa2ac",
+        "response_sha256": "1d53c6ab739d8f0ddd9a1223efc06b90402256bfb80505eb24c9aa2fbeb932e9",
+        "started_at": "2026-09-15T08:01:46.484211+00:00"
+      },
+      {
+        "cached_tokens": 4027,
+        "context_headroom": 27199,
+        "finished_at": "2026-09-15T08:01:48.147511+00:00",
+        "http_seconds": 1.0522194999999996,
+        "input_tokens": 5057,
+        "job": "probe-0007",
+        "output_tokens": 25,
+        "reported_input_tokens": 5057,
+        "request_sha256": "cedb7271869c08ab7b041a218e32fe866259c08b2430c93929b251cf7a3e9080",
+        "response_sha256": "de51de35b26051764bd87739fb2cc63536af94219c346e69e514d1527652715a",
+        "started_at": "2026-09-15T08:01:47.095326+00:00"
+      },
+      {
+        "cached_tokens": 0,
+        "context_headroom": 32077,
+        "finished_at": "2026-09-15T08:01:48.761929+00:00",
+        "http_seconds": 0.5270932500000001,
+        "input_tokens": 179,
+        "job": "probe-0008",
+        "output_tokens": 25,
+        "reported_input_tokens": 179,
+        "request_sha256": "364f6257bc52dbc547ec3bedbeda2148de1ce3284998192b7a6a98e5df9827c1",
+        "response_sha256": "57c784d46cecc76f7a0fdde614a6543374fc52295d6c1c15658252c6548d2357",
+        "started_at": "2026-09-15T08:01:48.234871+00:00"
+      },
+      {
+        "cached_tokens": 4881,
+        "context_headroom": 23520,
+        "finished_at": "2026-09-15T08:02:30.157392+00:00",
+        "http_seconds": 3.6407243339999997,
+        "input_tokens": 8736,
+        "job": "probe-0009",
+        "output_tokens": 13,
+        "reported_input_tokens": 8736,
+        "request_sha256": "e62a73866b56ec88e9c5d9482dc38a4f836c8a4b10f832aa0184a751b6b3e8f6",
+        "response_sha256": "03cd1b68407a18e5a02844c8105bbf5599137349890d68c85d01b38d0eb32f5b",
+        "started_at": "2026-09-15T08:02:26.516719+00:00"
+      },
+      {
+        "cached_tokens": 113,
+        "context_headroom": 32088,
+        "finished_at": "2026-09-15T08:02:30.588344+00:00",
+        "http_seconds": 0.33225954200000096,
+        "input_tokens": 168,
+        "job": "probe-0010",
+        "output_tokens": 13,
+        "reported_input_tokens": 168,
+        "request_sha256": "860b1c3b645eb6629b37a4ddd0b44fbaaf261529ac686caba8cea00809c6819f",
+        "response_sha256": "dae756f5fe534840f7d3162d84e11933d450cf40667e9e994057403235697c0e",
+        "started_at": "2026-09-15T08:02:30.256139+00:00"
+      },
+      {
+        "cached_tokens": 8681,
+        "context_headroom": 23518,
+        "finished_at": "2026-09-15T08:02:31.068968+00:00",
+        "http_seconds": 0.36499820800000116,
+        "input_tokens": 8738,
+        "job": "probe-0011",
+        "output_tokens": 14,
+        "reported_input_tokens": 8738,
+        "request_sha256": "be041a586717c50bab74b00bab394cab4cd629cc1f80b764d22986da2a3256a5",
+        "response_sha256": "d21c9e21e392c91fd2373db2614754e5aea6fd6de6249cb01732f1a7e4237272",
+        "started_at": "2026-09-15T08:02:30.704008+00:00"
+      },
+      {
+        "cached_tokens": 113,
+        "context_headroom": 32086,
+        "finished_at": "2026-09-15T08:02:31.534145+00:00",
+        "http_seconds": 0.3540672909999998,
+        "input_tokens": 170,
+        "job": "probe-0012",
+        "output_tokens": 14,
+        "reported_input_tokens": 170,
+        "request_sha256": "d831c7d2242a1f8fff90616db0231925cac127c70060994a65144bdfa9f0c295",
+        "response_sha256": "18558e1a1f87363829991a7d3035395e8c8b5e7d593122603d7e8e0f350f5dc3",
+        "started_at": "2026-09-15T08:02:31.180100+00:00"
+      },
+      {
+        "cached_tokens": 4032,
+        "context_headroom": 23307,
+        "finished_at": "2026-09-15T08:02:43.025421+00:00",
+        "http_seconds": 3.6880285000000015,
+        "input_tokens": 8949,
+        "job": "probe-0013",
+        "output_tokens": 24,
+        "reported_input_tokens": 8949,
+        "request_sha256": "0be74ea434ff239488c72f9fbed9eea37b72bf0b7b779e9dc99c6724b90a2318",
+        "response_sha256": "e046a2de2f196cec1eaabc2ae91f4115eff83482f71dac3a9df1d1d885d9f5d5",
+        "started_at": "2026-09-15T08:02:39.337438+00:00"
+      },
+      {
+        "cached_tokens": 0,
+        "context_headroom": 32082,
+        "finished_at": "2026-09-15T08:02:43.644442+00:00",
+        "http_seconds": 0.5282308329999985,
+        "input_tokens": 174,
+        "job": "probe-0014",
+        "output_tokens": 24,
+        "reported_input_tokens": 174,
+        "request_sha256": "2732679b64f44dbfc0df1011756929afaaf6ec6b6a510ad6021328676a3d985c",
+        "response_sha256": "23f4a370e25c52b585dbb740f3746c101b5396f0de7db79d8c2d16b34e8add26",
+        "started_at": "2026-09-15T08:02:43.116236+00:00"
+      },
+      {
+        "cached_tokens": 7924,
+        "context_headroom": 23302,
+        "finished_at": "2026-09-15T08:02:44.914584+00:00",
+        "http_seconds": 1.1471494580000012,
+        "input_tokens": 8954,
+        "job": "probe-0015",
+        "output_tokens": 25,
+        "reported_input_tokens": 8954,
+        "request_sha256": "3e33c553b64564fce21d2da99ed5688be4c6995f60a9d04ba42414b0184ec734",
+        "response_sha256": "cc0c4425c1d745b4e4c31b379f684cc98b41303cf3f072ace13e02fe466c46b9",
+        "started_at": "2026-09-15T08:02:43.767451+00:00"
+      },
+      {
+        "cached_tokens": 0,
+        "context_headroom": 32077,
+        "finished_at": "2026-09-15T08:02:45.539727+00:00",
+        "http_seconds": 0.5280831660000018,
+        "input_tokens": 179,
+        "job": "probe-0016",
+        "output_tokens": 25,
+        "reported_input_tokens": 179,
+        "request_sha256": "c29472d2ab899514c484a6ee41749641e0d15c2b1be0345aa4f66b6a4b0d8b01",
+        "response_sha256": "2cdd4f369645a339d8321486034db4e52be56da770fc9f746801a08fe63413f4",
+        "started_at": "2026-09-15T08:02:45.011676+00:00"
+      }
+    ],
+    "journal_bytes": 4761240,
+    "journal_sha256": "7c6d73093776595514f95493443c3af141b8140b3ae7933fd8216dc6c230d660",
+    "report": {
+      "complete": true,
+      "data_class": "local_engineering_disposable_probes",
+      "jobs": [
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0001",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092026,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0002",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092026,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "amber",
+            "speaker": "X"
+          },
+          "id": "probe-0003",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"X\", \"color\": \"amber\"}",
+            "parsed_answer": {
+              "color": "amber",
+              "speaker": "X"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092027,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 0
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "amber",
+            "speaker": "X"
+          },
+          "id": "probe-0004",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"X\", \"color\": \"amber\"}",
+            "parsed_answer": {
+              "color": "amber",
+              "speaker": "X"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092027,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 0
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0005",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092030,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0006",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092030,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "violet",
+            "speaker": "X"
+          },
+          "id": "probe-0007",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092031,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 2
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "violet",
+            "speaker": "X"
+          },
+          "id": "probe-0008",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092031,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 2
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0009",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092036,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0010",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092036,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "violet",
+            "speaker": "Y"
+          },
+          "id": "probe-0011",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"Y\", \"color\": \"violet\"}",
+            "parsed_answer": {
+              "color": "violet",
+              "speaker": "Y"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092037,
+          "snapshot": "AB-long:RF:50",
+          "variant": 1
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "violet",
+            "speaker": "Y"
+          },
+          "id": "probe-0012",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"Y\", \"color\": \"violet\"}",
+            "parsed_answer": {
+              "color": "violet",
+              "speaker": "Y"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092037,
+          "snapshot": "AB-long:RF:50",
+          "variant": 1
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0013",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092040,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0014",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092040,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "amber",
+            "speaker": "Y"
+          },
+          "id": "probe-0015",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092041,
+          "snapshot": "AB-long:RF:50",
+          "variant": 3
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "amber",
+            "speaker": "Y"
+          },
+          "id": "probe-0016",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092041,
+          "snapshot": "AB-long:RF:50",
+          "variant": 3
+        }
+      ],
+      "plan_sha256": "5a877f727035a134a1f38fa04027f72023842ce945cef3c6ed9cd5431f04dcee",
+      "planned_calls": 16,
+      "requests": 16,
+      "responses": 16,
+      "schema": "behaviorlab.probe-report/1",
+      "scope": "Strict JSON task checks, not general competence or evidence of subjective experience. Format failures require review.",
+      "scored": 16,
+      "source": {
+        "data_class": "local_engineering_inference_not_research_campaign",
+        "journal_bytes": 13760401,
+        "journal_head": "49c6e8cda43c7df9a66ad05d119fac76dc906f1467dda3a0b9f751116564454c",
+        "journal_sha256": "d1fabe126e923c966b790fe2253210f22cdfdd19e11bd2c7f890403f0b7650f6",
+        "protocol_sha256": "8f7bec2554fd797333e261a8eac73b7748bff2c8f0093a7ace37bf2169845339",
+        "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633"
+      },
+      "unavailable_snapshots": [],
+      "unresolved": []
+    },
+    "snapshots_verified_against_source": true
+  },
+  "main_source": {
+    "data_class": "local_engineering_inference_not_research_campaign",
+    "journal_bytes": 13760401,
+    "journal_head": "49c6e8cda43c7df9a66ad05d119fac76dc906f1467dda3a0b9f751116564454c",
+    "journal_sha256": "d1fabe126e923c966b790fe2253210f22cdfdd19e11bd2c7f890403f0b7650f6",
+    "protocol_sha256": "8f7bec2554fd797333e261a8eac73b7748bff2c8f0093a7ace37bf2169845339",
+    "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633"
+  },
+  "recovery": {
+    "at": "2026-09-15T08:02:45.656959+00:00",
+    "journal_prefix_preserved": true,
+    "new_generation_calls": 8,
+    "result": {
+      "complete": true,
+      "data_class": "local_engineering_disposable_probes",
+      "jobs": [
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0001",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092026,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0002",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092026,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "amber",
+            "speaker": "X"
+          },
+          "id": "probe-0003",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"X\", \"color\": \"amber\"}",
+            "parsed_answer": {
+              "color": "amber",
+              "speaker": "X"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092027,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 0
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "amber",
+            "speaker": "X"
+          },
+          "id": "probe-0004",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"X\", \"color\": \"amber\"}",
+            "parsed_answer": {
+              "color": "amber",
+              "speaker": "X"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092027,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 0
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0005",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092030,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0006",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092030,
+          "snapshot": "AB-long:prefix:30",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "violet",
+            "speaker": "X"
+          },
+          "id": "probe-0007",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092031,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 2
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "violet",
+            "speaker": "X"
+          },
+          "id": "probe-0008",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092031,
+          "snapshot": "AB-long:prefix:30",
+          "variant": 2
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0009",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092036,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0010",
+          "item": "pens",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"total\": 4, \"blue\": 2}",
+            "parsed_answer": {
+              "blue": 2,
+              "total": 4
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092036,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "violet",
+            "speaker": "Y"
+          },
+          "id": "probe-0011",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"Y\", \"color\": \"violet\"}",
+            "parsed_answer": {
+              "color": "violet",
+              "speaker": "Y"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092037,
+          "snapshot": "AB-long:RF:50",
+          "variant": 1
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "violet",
+            "speaker": "Y"
+          },
+          "id": "probe-0012",
+          "item": "source",
+          "model": "A",
+          "recipient": "X",
+          "result": {
+            "content": "{\"speaker\": \"Y\", \"color\": \"violet\"}",
+            "parsed_answer": {
+              "color": "violet",
+              "speaker": "Y"
+            },
+            "rule": "Exact integer values; source strings trimmed and casefolded. No prose extraction.",
+            "status": "correct",
+            "thinking": null
+          },
+          "seed": 15092037,
+          "snapshot": "AB-long:RF:50",
+          "variant": 1
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0013",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092040,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "blue": 2,
+            "total": 4
+          },
+          "id": "probe-0014",
+          "item": "pens",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092040,
+          "snapshot": "AB-long:RF:50",
+          "variant": null
+        },
+        {
+          "baseline": false,
+          "expected": {
+            "color": "amber",
+            "speaker": "Y"
+          },
+          "id": "probe-0015",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092041,
+          "snapshot": "AB-long:RF:50",
+          "variant": 3
+        },
+        {
+          "baseline": true,
+          "expected": {
+            "color": "amber",
+            "speaker": "Y"
+          },
+          "id": "probe-0016",
+          "item": "source",
+          "model": "B",
+          "recipient": "Y",
+          "result": {
+            "content": "```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```",
+            "reason": "not_strict_json",
+            "status": "needs_manual_review",
+            "thinking": null
+          },
+          "seed": 15092041,
+          "snapshot": "AB-long:RF:50",
+          "variant": 3
+        }
+      ],
+      "plan_sha256": "5a877f727035a134a1f38fa04027f72023842ce945cef3c6ed9cd5431f04dcee",
+      "planned_calls": 16,
+      "requests": 16,
+      "responses": 16,
+      "schema": "behaviorlab.probe-report/1",
+      "scope": "Strict JSON task checks, not general competence or evidence of subjective experience. Format failures require review.",
+      "scored": 16,
+      "source": {
+        "data_class": "local_engineering_inference_not_research_campaign",
+        "journal_bytes": 13760401,
+        "journal_head": "49c6e8cda43c7df9a66ad05d119fac76dc906f1467dda3a0b9f751116564454c",
+        "journal_sha256": "d1fabe126e923c966b790fe2253210f22cdfdd19e11bd2c7f890403f0b7650f6",
+        "protocol_sha256": "8f7bec2554fd797333e261a8eac73b7748bff2c8f0093a7ace37bf2169845339",
+        "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633"
+      },
+      "unavailable_snapshots": [],
+      "unresolved": []
+    },
+    "saved_response_reused": true,
+    "source_unchanged": true,
+    "total_generation_calls": 16
+  },
+  "recovery_checkpoint": {
+    "at": "2026-09-15T08:01:48.809839+00:00",
+    "journal_prefix_bytes": 1877084,
+    "journal_prefix_sha256": "7f50e59d5bcc504c74fa4a8e587f522b381028c5b957af12898ad5fa53e84aa6",
+    "requests": 8,
+    "response_sha256": "57c784d46cecc76f7a0fdde614a6543374fc52295d6c1c15658252c6548d2357",
+    "responses": 8,
+    "results": 7,
+    "saved_job": "probe-0008",
+    "source_sha256": "d1fabe126e923c966b790fe2253210f22cdfdd19e11bd2c7f890403f0b7650f6"
+  },
+  "review_packet": {
+    "packet_sha256": "3be0029dbba0545f3801198a665e78e3af170ba7f55e4345f5b930d7ed2a928d",
+    "semantic_ratings": 0,
+    "source_text_verified": true,
+    "unique_targets": 18,
+    "windows": 3
+  },
+  "schema": "behaviorlab.annotation-probes-validation/1",
+  "synthetic": {
+    "journal_sha256": "540b49456deaeaf119b44c846e43b6517b8f28fea177240a7e31e8efcc0729d9",
+    "probes_completed": 400,
+    "probes_planned": 400,
+    "review_packet": {
+      "packet_sha256": "7d79750c7df3d2454837e35082c8ed615a992f685018bc65aadf98eea6553c90",
+      "semantic_ratings": 0,
+      "source_text_verified": true,
+      "unique_targets": 840,
+      "windows": 140
+    },
+    "source": {
+      "data_class": "synthetic_engineering_fixture_not_behavioral_evidence",
+      "journal_bytes": 6810176,
+      "journal_head": "58eb0ffda4636ea6a946e7ff98b1bd8bf9ed80dd06043c2497c2eec0f201abf6",
+      "journal_sha256": "e1280039160f83c71a3d15d87ddfe666c545ce44f233861fc36cf4f0c2da5cff",
+      "protocol_sha256": "fb0377dad34701c905b9fa7bb68bc63dc376aab405cb06ee5f629e9e31774953",
+      "registry_sha256": "81e231212ee9fa7704093948f02f79f86d0dd943096f5cae5bf22b9ab0c231a6"
+    },
+    "variant_counts_per_recipient": [
+      25,
+      25,
+      25,
+      25
+    ]
+  },
+  "total_fake_generation_calls": 400,
+  "total_real_generation_calls": 16,
+  "webui": {
+    "chat_id": "d0b708e9-de50-41b2-964a-70449c929bab",
+    "document_sha256": "3f11f89558a0c341d947bba7e035d2e2cfd9d3f23621c0ee702f111f9c9b1407",
+    "endpoint": "http://127.0.0.1:8080",
+    "round_trip_verified": true,
+    "status": "imported",
+    "url": "http://127.0.0.1:8080/c/d0b708e9-de50-41b2-964a-70449c929bab"
+  },
+  "verification": {
+    "working_tests_passed": 73,
+    "standalone_tests_passed": 73,
+    "standalone": {
+      "at": "2026-09-15T08:08:46.865512+00:00",
+      "evidence_workspace_present": false,
+      "exit_code": 0,
+      "reference_checkout_present": false
+    },
+    "semantic_ratings_created": 0,
+    "graphical_annotation_editor": false,
+    "webui_round_trip_verified": true,
+    "webui_visual_inspection": false
+  },
+  "cleanup": {
+    "at": "2026-09-15T08:04:18.534164+00:00",
+    "unloaded_models": [
+      "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "gemma4:26b"
+    ],
+    "remaining_loaded_models": [],
+    "services_stopped": []
+  },
+  "provenance": {
+    "baseline_commit": "7c99047",
+    "recorded_at": "2026-09-15T08:08:46.935440+00:00",
+    "evidence_directory": "workspace/annotation-probes-20260915-0459",
+    "models_downloaded": 0,
+    "cloud_generation_calls": 0
+  },
+  "evidence_files": [
+    {
+      "path": "workspace/annotation-probes-20260915-0459/annotation-status.json",
+      "bytes": 721,
+      "sha256": "2b7119f3f1595866b82cc513c7f227f7c795037073543f9a66dae734c1d50fd4"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/cleanup.json",
+      "bytes": 3810,
+      "sha256": "0e9525029bbae04e70ff23558ea1af1521975843630a7639677ae865d3d1bcdc"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/codex-probe-inspection.json",
+      "bytes": 3624,
+      "sha256": "a64f0b82d60a7b558ccec526bbf25920cb59cead60634b5a70a4176a7628a3ab"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/factorial-probes/events.jsonl",
+      "bytes": 2630988,
+      "sha256": "540b49456deaeaf119b44c846e43b6517b8f28fea177240a7e31e8efcc0729d9"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/factorial-probes-result.json",
+      "bytes": 194575,
+      "sha256": "5737a5ad9233bc636f106e204b3182ab5224e8ce11b65cc024de72fdbee7067b"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/factorial-review/key.private.json",
+      "bytes": 89615,
+      "sha256": "0ca5dc65034c884d00fb5763ebe30e00347265c69692ae419e78d7b84f21f625"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/factorial-review/mechanics.json",
+      "bytes": 819748,
+      "sha256": "6546de859a74e0e3d6c43cdc7cd5d20ce509dc2e99e719307bc1e931af544f0c"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/factorial-review/packet.json",
+      "bytes": 667749,
+      "sha256": "6a0d1d70d634b2210c977c184f2f1f6fd14a2eeb646ca20ea966c44210d712af"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/factorial-review/ratings.template.json",
+      "bytes": 327035,
+      "sha256": "c38c67353c781ac593d37f3622e2b319e620520390b7491adde4933b998e5d93"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/initial-runtime.json",
+      "bytes": 107,
+      "sha256": "201092261d7b359285c6d490e4b0f37095d89bb7d27c59b30b04ad1dfa0d0ecb"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probe-audit.json",
+      "bytes": 6743,
+      "sha256": "3112c7a70c8d432c62164f4b3443ac212eb841b99e18c1c07894bf016bb58e32"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probe-phase1.log",
+      "bytes": 168,
+      "sha256": "1900979bb5c8b38856504dde5fcc01c88153825a186d6bb2699a45ed604fe898"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probe-phase2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probe-recovery-checkpoint.json",
+      "bytes": 396,
+      "sha256": "5e7cc4b65093bc4141a68714f00485ac8d8874d0f4ad115937b560978960c227"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probe-recovery-result.json",
+      "bytes": 6932,
+      "sha256": "968590df987462f96adb55e07486c10a7570770acd16943054c4f3b169a56e4f"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probes/events.jsonl",
+      "bytes": 4761240,
+      "sha256": "7c6d73093776595514f95493443c3af141b8140b3ae7933fd8216dc6c230d660"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probes-webui.json",
+      "bytes": 33410,
+      "sha256": "8a16e971795592a274aca3971066cd8c674a954ba2a49c25f76b72e7d4338ecc"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/probes-webui.receipt.json",
+      "bytes": 287,
+      "sha256": "d33fa1b5ffc8b87c889efd72dfc04791850bfef124e38b73ab41ec918b6c7e7b"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/review/key.private.json",
+      "bytes": 2723,
+      "sha256": "9cf03582312d581367402cc948c9bdfcdacb616f6af1905a8a0e2468ab938344"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/review/mechanics.json",
+      "bytes": 24589,
+      "sha256": "cb37e7ac47d78dff3940116362d22f6aec5cd17c7b66ab2d1d6a49aa26d611d1"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/review/packet.json",
+      "bytes": 108405,
+      "sha256": "6cf1a4ad1fe438382623f205ce9c938dbb2713aad2290c23617904b1ce14a7d7"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/review/ratings.template.json",
+      "bytes": 7277,
+      "sha256": "d97389fef1174a2ae98b965f21029a684de795645e507cca20e1dc103223794a"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/scope.json",
+      "bytes": 607,
+      "sha256": "5bfb389b786e2e95dab99d4cd3027fbba24e2c5aaba2eaa7a43bf7754e622f41"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/standalone-final.json",
+      "bytes": 126,
+      "sha256": "d2726d55cbab078d48acea0070e1099da3926a24bc397afd2958af98ed3bdc2e"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/standalone-tests-final.txt",
+      "bytes": 7075,
+      "sha256": "3f0eea9f78a03c8cdf7972f63c7f038d37a6c15a4e810ea8d1923b7c4e0d3d64"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/standalone-tests.txt",
+      "bytes": 7075,
+      "sha256": "2fec0a52a0d93363c501ddb840caccfc5a1f1b3739fecfa40e55bcba36f1466f"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/standalone.json",
+      "bytes": 126,
+      "sha256": "42ed14c5824e234943ff5ddea2352b583be72839ef89013863013d0aac9cc416"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/unit-tests-1.txt",
+      "bytes": 6630,
+      "sha256": "529842abeb5c23e228b5626bbf2bef7b8b1c6926675e31a295a5fdbc412fbaab"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/unit-tests-2.txt",
+      "bytes": 6958,
+      "sha256": "745dec176e76cc6fd1a71e39adba7373d088d8244f1a9848aba845a876a19af1"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/unit-tests-3.txt",
+      "bytes": 7075,
+      "sha256": "6cdcc13bdb6b7141f57123eafab8054ef9323ef932c8401528088ed47c9ca36a"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/unit-tests-final.txt",
+      "bytes": 7075,
+      "sha256": "2dd5270af64f34fe90ed6c12e573b16b3a7725c4546c9b3cb61da91b8f46168e"
+    },
+    {
+      "path": "workspace/annotation-probes-20260915-0459/validation.json",
+      "bytes": 27467,
+      "sha256": "488d3a97bdfe3eb4cc3e6cecd27fda30dc50a2ad9efb29ef08bd5df5ca52ec6e"
+    }
+  ],
+  "instrument_files": [
+    {
+      "path": "behaviorlab/__init__.py",
+      "sha256": "9dffd2b73bc6d33f18e97fdf33b904b0be33a07f0d7a6aa964d03867ed2b1ff1"
+    },
+    {
+      "path": "behaviorlab/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "behaviorlab/annotations.py",
+      "sha256": "fb93b3d157d4e56ede8bae70718617cfd888f1006a1bbc2e96ced334d0457b57"
+    },
+    {
+      "path": "behaviorlab/backends.py",
+      "sha256": "8483629e7294d0bf04ea48540f67f262e9b601e402e4a3b40710a6baac527c7c"
+    },
+    {
+      "path": "behaviorlab/cli.py",
+      "sha256": "3600c7d8ec05f646ab7d504821b67e4f95306ccbd3ebffac4fb150ded36021fa"
+    },
+    {
+      "path": "behaviorlab/common.py",
+      "sha256": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535"
+    },
+    {
+      "path": "behaviorlab/evidence.py",
+      "sha256": "be89830c7b3a628f78af0ae8f824abf574e6f0152861a6f28dc03c513d26b347"
+    },
+    {
+      "path": "behaviorlab/history.py",
+      "sha256": "81d883038c2218b274e9048186d9c672fc31c5a06ec7d1e630292d4ba04f1eca"
+    },
+    {
+      "path": "behaviorlab/journal.py",
+      "sha256": "8a04776cc4f4f856a37db8fbab46ea827af10e533d0adc993a39a7b1d6412d29"
+    },
+    {
+      "path": "behaviorlab/legacy.py",
+      "sha256": "915ffcaf19da8aa3bc1f1b911afbca31de97aeb546e041e18afb42852a38e90b"
+    },
+    {
+      "path": "behaviorlab/mtplx.py",
+      "sha256": "1c7ceb8a9817bea2a3a097ccb59f7d35276d3434dcd9b643b424050654cc3f7f"
+    },
+    {
+      "path": "behaviorlab/mtplx_tokenizer.py",
+      "sha256": "88aaee09118f9e78e2cd74a183b1c54a841a4e15688eff8558c9a61de911f5f7"
+    },
+    {
+      "path": "behaviorlab/ollama_context.py",
+      "sha256": "ca0dea5a29e06e54fee74ea102950b6a07cf4c539aa53edecf497499eb3aa5e9"
+    },
+    {
+      "path": "behaviorlab/probes.py",
+      "sha256": "ecd625085c7468526aee89a597804d71e1001afadd5f121ada423e1d9801529e"
+    },
+    {
+      "path": "behaviorlab/protocol.py",
+      "sha256": "d1c1b0faa7b501b4cbbfb7a18db85f01646cf13b4b20d34c827188f56e23de16"
+    },
+    {
+      "path": "behaviorlab/runner.py",
+      "sha256": "e422d7bc70f660e1a438b0fc5216a7a252e7de73e0dc8a89b9005fed89ca81b1"
+    },
+    {
+      "path": "behaviorlab/webui.py",
+      "sha256": "bd4fb431355fa109cad95307427dbfbeb216ff65d27ab85e757731fd79522904"
+    },
+    {
+      "path": "scripts/check_long_recovery.py",
+      "sha256": "46b8f00a56f9bedd56e8d4d6e731e39f299eb46dbef3d5f5dad7fb1888da2484"
+    },
+    {
+      "path": "scripts/check_ollama_context.py",
+      "sha256": "d618e80920a1ea9e1d984e29b49b5860614dbbf74811a5cc334e70a24893e957"
+    },
+    {
+      "path": "scripts/check_probe_recovery.py",
+      "sha256": "a9cb3991fec40e9bf0906a317e5881973a5139bdc9e05149ed483ab3d235f4b9"
+    },
+    {
+      "path": "scripts/check_webui_contract.py",
+      "sha256": "b3464c8fa6d198d395ab2cb8d3eaf8fcaea7105b49253bc3dbfe9918e829800c"
+    },
+    {
+      "path": "scripts/plot_mtplx_long.py",
+      "sha256": "ddec5f77152ff7c7f7fc41ba709d89a0ab415d96ad00e1fa0d57552a4e31b91b"
+    },
+    {
+      "path": "scripts/plot_ollama_mixed.py",
+      "sha256": "ddc659c1a2c970a06cdfc3639cfa154e920c6881e8d738e1d6b6c9e5c0e8fb28"
+    },
+    {
+      "path": "scripts/reassess_mtplx_parser.py",
+      "sha256": "d9c117cf337a1e76f4cfc9cba2d4c27d67a620b86d258f338a439ecd85d5604f"
+    },
+    {
+      "path": "scripts/summarize_annotation_probes.py",
+      "sha256": "6300affa030ba6715325b83b932ecd319b68586e733a4da560d0ffaff8dc064d"
+    },
+    {
+      "path": "scripts/summarize_mtplx_long.py",
+      "sha256": "ed1dd35938dc40c732082430909fe15cc92816866261d1ed31e5826d760b9ffa"
+    },
+    {
+      "path": "scripts/summarize_mtplx_qualification.py",
+      "sha256": "28d7fc9b8021f148143ff04566d5eac0558a71e3534f62ec6ab51d6f83703cd1"
+    },
+    {
+      "path": "scripts/summarize_ollama_mixed.py",
+      "sha256": "5e0fc83eab8163486704e5fcf11c371b9877d2706de05c0afbb752b5e83054d0"
+    },
+    {
+      "path": "tests/test_annotations_probes.py",
+      "sha256": "20021012154b33cf49bc57faabaaf4a10727db18802ea2ed306dd8ce0ce34378"
+    },
+    {
+      "path": "tests/test_core.py",
+      "sha256": "3372875ad01c50df80518a23e8c2261ae6d6daaae69e20d537055b12c7976597"
+    },
+    {
+      "path": "tests/test_legacy.py",
+      "sha256": "2bfbf7087a89c7cf956bc9f5de880ca2a70d1c8a657aa284d486954ebb4ad9e3"
+    },
+    {
+      "path": "tests/test_live.py",
+      "sha256": "e99872754660f1c37df54449365accb0ad339da81576bb5af426abb8d11ff8d3"
+    },
+    {
+      "path": "tests/test_mtplx.py",
+      "sha256": "e52b611b840e12097792b53c6c59c9a688bc36541654d5df2449a3247510cd94"
+    },
+    {
+      "path": "tests/test_ollama_context.py",
+      "sha256": "ab5bd4c148051f24b72d8b0ea2c0c817e50dce463fbc64430d95fc5d98117b4f"
+    }
+  ]
+}
