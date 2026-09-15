@@ -18,6 +18,7 @@ from urllib.parse import parse_qs, urlsplit
 
 from .common import canonical, fingerprint, read_json, require, sha256
 from .history import ancestry, request
+from .exploration_collections import ResearchCollections
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
@@ -315,11 +316,15 @@ class Notes:
             if existing:
                 prior=json.loads(existing[2]); require(prior['run_id']==run['id'] and prior['message_id']==message_id, 'Note source cannot be reassigned')
             else: require(not data.get('id'), 'Unknown note')
+            study_id=data.get('study_id')
+            if study_id:
+                collection=db.execute('SELECT body FROM research_collections WHERE id=?',(study_id,)).fetchone()
+                require(collection is not None and run['id'] in {r['run_id'] for r in json.loads(collection[0])['runs']}, 'Add this run to the collection first')
             revision=existing[0]+1 if existing else 1
             body={'id':identity,'revision':revision,'run_id':run['id'],'run_title':run['title'],'message_id':message_id,
                 'quote':quote,'start':start,'end':end,'tags':sorted({t.strip().casefold() for t in tags}),
                 'text':text,'source_sha256':run['source']['sha256'],'updated_at':datetime.now(timezone.utc).isoformat(),
-                'method':'personal_exploration_not_formal_annotation','author':'Local researcher'}
+                'method':'personal_exploration_not_formal_annotation','author':'Local researcher','study_id':study_id}
             db.execute('INSERT OR REPLACE INTO notes VALUES (?,?,0,?)',(identity,revision,canonical(body)))
             db.execute('INSERT INTO history VALUES (?,?,?)',(identity,revision,canonical(body)))
             return body
@@ -336,6 +341,7 @@ class Notes:
 
 def make_server(workspace, port=8765):
     catalog=Catalog(workspace); notes=Notes(Path(workspace)/'explorer'/'notes.sqlite'); token=secrets.token_urlsafe(32)
+    studies=ResearchCollections(notes)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args): pass
 
@@ -356,9 +362,9 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/style.css'):
-                    file={'/':'index.html','/app.js':'app.js','/style.css':'style.css'}[path]
-                    return self.send((STATIC/file).read_bytes(),mime={'/':'text/html; charset=utf-8','/app.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
+                if path in ('/','/app.js','/research.js','/style.css'):
+                    file={'/':'index.html','/app.js':'app.js','/research.js':'research.js','/style.css':'style.css'}[path]
+                    return self.send((STATIC/file).read_bytes(),mime={'/':'text/html; charset=utf-8','/app.js':'text/javascript; charset=utf-8','/research.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
                 if path=='/api/bootstrap':
                     runs=list(catalog.runs.values()); saved=notes.all()
                     return self.send({'token':token,'indexed_at':catalog.indexed_at,'issues':catalog.issues,
@@ -367,7 +373,14 @@ def make_server(workspace, port=8765):
                         'models':sorted({m for r in runs if r['kind']!='synthetic' for m in r['models']}),
                         'conditions':sorted({r['condition'] for r in runs if r['kind']!='synthetic'}),
                         'tags':dict(Counter(t for n in saved for t in n['tags'])),
+                        'studies':studies.summaries(),
                         'reports':[{'id':i,'title':t} for i,t,f in REPORTS if (Path(__file__).resolve().parents[1]/'docs'/f).exists()]})
+                if path=='/api/studies': return self.send({'collections':studies.summaries()})
+                if path.startswith('/api/studies/'):
+                    parts=path.split('/')
+                    if len(parts)==5 and parts[4]=='export': return self.send(studies.export(parts[3],catalog),download='research-collection-'+parts[3]+'.json')
+                    require(len(parts)==4,'Unknown collection route')
+                    return self.send(studies.detail(parts[3],catalog))
                 if path=='/api/runs': return self.send(catalog.search(parse_qs(url.query),notes.all()))
                 if path.startswith('/api/runs/'):
                     run=catalog.runs[path.rsplit('/',1)[-1]]
@@ -387,8 +400,10 @@ def make_server(workspace, port=8765):
             if not self.allowed(True): return self.send({'error':'Local authenticated request required'},403)
             try:
                 size=int(self.headers.get('Content-Length','0'))
-                require(0<size<=65536 and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
+                limit=524288 if self.path=='/api/studies' else 65536
+                require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
+                if self.path=='/api/studies': return self.send(studies.save(data,catalog))
                 if self.path=='/api/notes': return self.send(notes.save(data,catalog))
                 if self.path=='/api/notes/remove': return self.send(notes.delete(data))
                 if self.path=='/api/refresh': catalog.refresh(); return self.send({'refreshed':True})
@@ -396,7 +411,7 @@ def make_server(workspace, port=8765):
             except (ValueError,KeyError,TypeError,UnicodeDecodeError) as e:
                 self.send({'error':str(e)[:250]},400)
     server=ThreadingHTTPServer(('127.0.0.1',port),Handler)
-    server.catalog=catalog; server.notes=notes
+    server.catalog=catalog; server.notes=notes; server.studies=studies
     return server
 
 

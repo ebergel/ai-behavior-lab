@@ -159,6 +159,14 @@ class ExplorerTests(unittest.TestCase):
         code,data,meta=call('GET','/api/notes/export'); self.assertEqual(len(data['notes']),1)
         self.assertEqual(meta['download'],'behavior-lab-notebook.json')
         self.assertEqual(call('GET','/../../private/webui-token')[0],404)
+        collection={'title':'HTTP collection','author':'Codex','edited_by':'Codex','runs':[{'run_id':note['run_id']}],'findings':[]}
+        self.assertEqual(call('POST','/api/studies',collection)[0],403)
+        code,saved,_=call('POST','/api/studies',collection,headers); self.assertEqual(code,200)
+        code,bundle,meta=call('GET','/api/studies/'+saved['id']+'/export')
+        self.assertEqual(code,200); self.assertEqual(bundle['schema'],'behaviorlab.research-collection/1')
+        self.assertIn(note['run_id'],bundle['sources']); self.assertIn('research-collection-',meta['download'])
+        self.assertEqual(call('GET','/api/studies/'+saved['id']+'/unknown')[0],400)
+
 
 
 if __name__=='__main__': unittest.main()

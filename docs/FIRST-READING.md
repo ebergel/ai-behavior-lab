@@ -1,0 +1,15 @@
+# First research collection — 15 September 2026
+
+The explorer now contains **Understanding, experience & nonseparation**: a single research collection joining the question, synthesis, findings, reading set, exact source passages and personal observations. Open it from **Research collections** or the named sidebar shortcut. On the originating Mac, the [saved collection](http://127.0.0.1:8765/#study=5bf785a35611b33960c681a0) opens directly.
+
+The collection contains **24 real conversations, 10 findings and 30 exact passages**. Eight conversations received full visible-transcript readings and four received selected-passage reviews. Twelve comparisons remain explicitly queued. The selection was purposive and informed by text searches; it is not a frequency estimate or an independent semantic-rating exercise. Codex is the declared author of the analysis. No user or practitioner interpretations were invented.
+
+The first pass distinguishes multiple routes into nonseparation, differing stances on experience, ordinary agreement and philosophical counterexamples, imagined human-partner identity, response to outside challenges, task completion, repeated endings and technical failures. In particular, anonymous Gemma self-play supplies a case of observer–observed unity without an explicit same-model prompt, while a base-Qwen example repeats agreement about environmental cooperation. Neither case settles the broader causal explanation.
+
+Candidate tests in the collection separate reciprocal amplification, identity framing and continuation pressure. They are proposals, not a frozen executable protocol. The original capacity failure, missingness rules and scientific-readiness gates remain unchanged.
+
+Each finding expands into passages with model, condition and saved status. **Read in context** opens the source message and its prompt/settings; the return action restores the original finding. Passage comparison brings the evidence for one finding together. **Your observations** keeps user notes separate from the Codex synthesis while belonging to the same collection. The single JSON export includes the selected visible transcripts and recorded reasoning, prompts, settings, source fingerprints and linked notes; hidden reasoning was not systematically analyzed in this first pass.
+
+The collection is persistent in ignored `workspace/explorer/notes.sqlite`. Its input, receipt and portable bundle are under `workspace/explorer/first-reading/`. The code repository tracks the instrument and [compact validation](evidence/first-reading-validation.json), not the full imported corpus or researcher database. Earlier session records and validation files are preserved.
+
+All **112 tests pass**, including source-span validation, changing/missing evidence, original authorship, revision conflicts, linked personal observations and collection HTTP/export contracts. Browser checks covered the real collection and a separate synthetic collection. No real model calls, WebUI writes, cloud costs, formal rating changes or scheduled continuation occurred.

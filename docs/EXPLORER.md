@@ -1,4 +1,4 @@
-# Transcript explorer v1
+# Transcript explorer
 
 Recorded 15 September 2026. This local application makes close reading a first-class part of the laboratory. The user requested an overview of the experiments, a detailed transcript view and a way to connect passages to the conditions that produced them. The explorer is an additional layer alongside WebUI.
 
@@ -11,6 +11,16 @@ python3 -m behaviorlab explore --workspace workspace --port 8765
 ```
 
 Visit **http://127.0.0.1:8765**. Python 3.9+ is sufficient. No model server, API credential, Node build step or internet connection is needed to read saved conversations. An empty workspace opens an empty library; import reference data or create campaigns through the existing laboratory commands to populate it. Use a different `--port` if necessary.
+
+## Research collections
+
+**Research collections** brings a question, a short synthesis, linked findings, a reading set and personal observations into one entity. Each finding expands into exact passages, their models and conditions. **Read in context** opens the full transcript; returning takes you back to the finding you were reading. **Compare these passages** brings the evidence for one finding together.
+
+The first saved collection, **Understanding, experience & nonseparation**, contains 24 conversations, 10 attributed findings and 30 source passages. Eight conversations received a full visible-transcript reading, four a selected-passage review and twelve remain explicitly queued. The first pass is purposive and cannot estimate prevalence. Codex interpretations and personal researcher notes are distinct. See [the first-reading record](FIRST-READING.md).
+
+Create a collection from the Research collections page. Add transcripts from their reader, or select a collection when saving a passage or run observation. The app adds that run to the reading set when needed. **Your observations** keeps these notes beside the analysis. **Mark read by me** records your own reading action; it is not semantic validation. **Edit overview** changes the title, question and synthesis while preserving original authorship and recording the editor.
+
+**Export collection** downloads one JSON bundle containing the collection, its linked personal notes, selected visible transcripts, saved reasoning fields, prompts, settings and source fingerprints. Full request/transport payloads stay in the original evidence store. Collection and note revision histories remain in SQLite. The export is a current snapshot; UI import, history restore and structured finding editing are not yet implemented. Analyst findings can be saved through the validated local collection API; they are not automatically generated.
 
 ## Explore from overview to passage
 
@@ -51,11 +61,11 @@ The local inventory at delivery is **400 historical reference runs, 34 real labo
 
 The capacity snapshot diagnostic journal is listed as a source notice because it is a separate diagnostic format rather than a main conversation. Relevant findings remain accessible through the capacity report. The results view exposes six existing reports; it does not recompute formal scientific analyses for arbitrary filtered samples.
 
-Version 1 prioritizes reading and source traceability. It has no embeddings, topic clustering, automatic semantic annotations, parameter-value filter builder, named saved collections, annotation adjudication UI or experiment-launch controls. These are possible later developments guided by actual use.
+Version 1 prioritizes reading and source traceability. It has no embeddings, topic clustering, automatic semantic annotations, parameter-value filter builder, annotation adjudication UI or experiment-launch controls. These are possible later developments guided by actual use.
 
 ## Validation
 
-The standard-library suite passes **105 tests**, including catalogue/source verification, true RF ancestry, mixed-recipient settings, exact Unicode quote validation, note persistence and conflict handling, source exclusion, and local HTTP write protections. Browser checks exercised the real catalogue and a separate synthetic UI workspace: search/filter combinations and reloadable URLs, reader navigation, prompt/settings inspection, report display, saved full and selected quotes, notebook persistence, comparisons, branch selection, safe rendering of literal HTML, and a 390-pixel layout without horizontal overflow.
+The standard-library suite passes **112 tests**, including catalogue/source verification, true RF ancestry, mixed-recipient settings, exact Unicode quote validation, note persistence and conflict handling, source exclusion, and local HTTP write protections. Browser checks exercised the real catalogue and a separate synthetic UI workspace: search/filter combinations and reloadable URLs, reader navigation, prompt/settings inspection, report display, saved full and selected quotes, notebook persistence, comparisons, branch selection, safe rendering of literal HTML, and a 390-pixel layout without horizontal overflow.
 
 The disposable browser fixture is generated with:
 
@@ -66,4 +76,4 @@ python3 -m behaviorlab explore --workspace workspace/explorer/ui-fixture --port 
 
 Choose a fresh fixture destination when repeating preparation. Its historical-format transcript is explicitly synthetic. Its factorial outputs use deterministic fixture backends. Browser test observations are stored only in that fixture's notebook; the real researcher notebook was left empty. No model calls, cloud costs, WebUI writes or new scientific claims were introduced.
 
-The portable [validation record](evidence/explorer-validation.json) records counts, checks and preserved source fingerprints. Full test logs and screenshots are under ignored `workspace/explorer/validation/`.
+The initial portable [validation record](evidence/explorer-validation.json) and [collection validation](evidence/first-reading-validation.json) records counts, checks and preserved source fingerprints. Full test logs and screenshots are under ignored `workspace/explorer/validation/`.

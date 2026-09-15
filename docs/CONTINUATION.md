@@ -1,6 +1,6 @@
 # Continuation milestone: transcript exploration
 
-Updated 15 September 2026. The user redirected the immediate priority toward a dedicated application for first-hand exploration of transcripts, their experimental settings and results. **Explorer v1 is complete and locally usable.** WebUI remains in place. The previous [trajectory-outcome milestone](PILOT-OUTCOMES-V0.2.md) is complete; the original [capacity failure](CAPACITY-AND-MEASUREMENT.md) remains recorded and the live factorial pilot remains disabled.
+Updated 15 September 2026. The user redirected the immediate priority toward a dedicated application for first-hand exploration of transcripts, their experimental settings and results. **The explorer and first research collection are complete and locally usable.** WebUI remains in place. The previous [trajectory-outcome milestone](PILOT-OUTCOMES-V0.2.md) is complete; the original [capacity failure](CAPACITY-AND-MEASUREMENT.md) remains recorded and the live factorial pilot remains disabled.
 
 | Completed work | Evidence |
 |---|---|
@@ -9,18 +9,20 @@ Updated 15 September 2026. The user redirected the immediate priority toward a d
 | Experimental context | Prompts, per-recipient settings, requested output cap, model identities, source fingerprints and saved reports. |
 | Personal notebook | Run notes, selected passages, tags, persistent SQLite storage, exact Unicode spans, revision history and JSON export. |
 | Comparison and WebUI | Two-run reading with independent branch selection; existing verified WebUI exports remain accessible. |
-| Verification | 105 tests plus browser checks on the real library and an isolated synthetic fixture. No model calls. |
+| First research collection | 24 runs, 10 Codex-attributed findings, 30 exact passages; 8 full visible-text readings, 4 passage reviews and 12 queued. Synthesis and personal notes remain together. |
+| Verification | 112 tests plus browser checks on the real collection and an isolated synthetic fixture. No model calls. |
 
 The [explorer guide](EXPLORER.md) contains launch instructions and known limits. See [the validation record](evidence/explorer-validation.json). No scheduled continuation has been created.
 
 ## Next coherent work package
 
-Use the app to assemble a small, attributed set of passages illustrating the observed trajectories and counterexamples. Let direct reading inform the next design revision before launching more inference.
+The [first reading collection](FIRST-READING.md) is saved in the explorer. It is a completed, explicitly scoped first pass, with twelve additional comparisons queued. Continue reading within this entity instead of creating disconnected reports.
 
-1. Preserve the distinction between personal exploration and formal coding. User-written observations remain attributed to the user. Any assistant-generated interpretation must be separately and accurately attributed; do not save it as a local human research note.
-2. Organize contrasting passages by model, prompt and history condition. Include ordinary topic development, experience questions, relational understanding, nonseparation language, departures, repetition and capped/unknown outcomes. Do not prelabel all introspective discourse as nonduality.
-3. Review usability needs revealed by actual reading. Candidate extensions include saved named collections, richer parameter filters and full notebook revision/restore tools. These are proposals, not implemented features.
-4. Convert supported observations into explicit competing hypotheses and a revised, frozen experiment design. Preserve the previous negative outcomes and uncertainties. Runtime and semantic qualification are still required before the main research pilot.
+1. Invite and preserve the user's practitioner interpretation as personal observations. Do not write assistant interpretations as human notes. Codex findings are exploratory, not independent ratings.
+2. Read the twelve queued conversations and document review scope accurately. Keep negative cases, prompt-format differences, role drift, technical failures and stopping behavior in view. When adding or revising findings, validate exact source spans and preserve collection revisions.
+3. Refine the separate outcomes: first experience question, stance, relational language, explicit nonseparation, task state, repetition and technical availability. The proposed relation among them remains a hypothesis.
+4. Design matched-prefix interventions and identity/task/continuation contrasts only after this reading informs a concrete protocol. Retain the failed capacity result and the runtime/semantic readiness gates. No new inference has been authorized or scheduled by the collection workflow.
+5. Candidate UI follow-ups are an editor for structured findings, notebook/collection history and restore, richer parameter filters and reading-set removal. Named collections and passage comparison are now implemented.
 
 ## Deferred runtime work package
 

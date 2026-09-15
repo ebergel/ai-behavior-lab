@@ -6,7 +6,7 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: the transcript explorer is ready for use.** The new [local app](docs/EXPLORER.md) brings 400 imported reference conversations and 34 real laboratory roots into a searchable library, message atlas, close reader, comparison view and personal notebook. Prompts and recorded settings stay alongside the transcript. WebUI remains available through the existing bridge. All 105 tests pass; this milestone made no model calls.
+**Current state: the explorer now holds the first research collection.** The new [local app](docs/EXPLORER.md) brings 400 imported reference conversations and 34 real laboratory roots into a searchable library, message atlas, close reader, comparison view and personal notebook. Prompts and recorded settings stay alongside the transcript. WebUI remains available through the existing bridge. A [first reading collection](docs/FIRST-READING.md) gathers 24 conversations, 10 attributed findings and 30 exact passages with a synthesis, reading queue and space for personal observations. All 112 tests pass; this milestone made no model calls.
 
 The [trajectory-outcomes report](docs/PILOT-OUTCOMES-V0.2.md), [failed capacity screen](docs/CAPACITY-AND-MEASUREMENT.md), [measurement draft](docs/MEASUREMENT-V2-DRAFT.md) and [human coding handoff](docs/RATER-HANDOFF.md) retain their scientific status. The revised factorial proposal remains planning-only.
 
