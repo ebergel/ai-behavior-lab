@@ -14,3 +14,6 @@ behaviorlab = "behaviorlab.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["behaviorlab*"]
+
+[tool.setuptools.package-data]
+behaviorlab = ["explorer_ui/*.html", "explorer_ui/*.css", "explorer_ui/*.js"]

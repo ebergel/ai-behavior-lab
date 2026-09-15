@@ -17,6 +17,9 @@ from .webui import login_local, catalog, export_transcript, import_transcript
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="behaviorlab", description="Independent behavior laboratory: synthetic and bounded local engineering campaigns.")
     sub = parser.add_subparsers(dest="command", required=True)
+    explorer = sub.add_parser('explore', help='open the local transcript explorer; no model calls')
+    explorer.add_argument('--workspace', default='workspace')
+    explorer.add_argument('--port', type=int, default=8765)
     validate = sub.add_parser("validate", help="validate a protocol and pinned registry")
     validate.add_argument("--protocol", required=True)
     validate.add_argument("--registry", required=True)
@@ -88,7 +91,11 @@ def main(argv=None):
         sub.add_parser(command).add_argument("directory")
     args = parser.parse_args(argv)
     try:
-        if args.command == "validate":
+        if args.command == 'explore':
+            from .explorer import serve
+            serve(args.workspace, args.port)
+            return
+        elif args.command == "validate":
             registry = Registry.load(args.registry)
             protocol = Protocol.load(args.protocol, registry)
             result = {"valid": True, "execution_class": read_json(protocol.document_json)["execution_class"], "planned_nodes": len(protocol.nodes()),

@@ -1,0 +1,69 @@
+# Transcript explorer v1
+
+Recorded 15 September 2026. This local application makes close reading a first-class part of the laboratory. The user requested an overview of the experiments, a detailed transcript view and a way to connect passages to the conditions that produced them. The explorer is an additional layer alongside WebUI.
+
+## Open it
+
+Double-click `Open Explorer.command` in the repository. The launcher opens an existing explorer on port 8765 or starts one and waits for it to become ready. Keep its terminal window open while using the app; Control-C stops the server. To start manually, run from the repository:
+
+```sh
+python3 -m behaviorlab explore --workspace workspace --port 8765
+```
+
+Visit **http://127.0.0.1:8765**. Python 3.9+ is sufficient. No model server, API credential, Node build step or internet connection is needed to read saved conversations. An empty workspace opens an empty library; import reference data or create campaigns through the existing laboratory commands to populate it. Use a different `--port` if necessary.
+
+## Explore from overview to passage
+
+| View | What it offers |
+|---|---|
+| Library | Conversation cards, visible-text search, matching excerpts, collection/model/condition filters, recorded-signal and personal-tag filters, sorting and pagination. Campaign paths distinguish successive engineering versions with the same root name. |
+| Run atlas | One row per root and one mark per participant node; height reflects word count, with distinct colors for recorded repetition, caps and unavailable messages. Click a mark to open that message. Shared laboratory prefixes appear once. |
+| Close reader | Participant messages, actual history branches, within-run search, collapsible long replies and exact repeated groups. The prompt, opening, settings and source provenance appear alongside the text. |
+| Comparison | Select two runs using their comparison buttons, then open them side by side. Each column has its own scroll and actual-branch selection, immediate settings and an expandable prompt. |
+| Notebook | Save a whole message, select a shorter passage, or add a run-level observation. Add comma-separated tags, search notes and quotes, edit or remove observations, and export the notebook as JSON. |
+| Results | Coverage and recorded mechanical outcomes for the filtered selection, plus the existing project reports. Each report retains its original sample and scientific status. |
+
+A useful first route is to search **understanding**, select a model, switch to the atlas and open a matching reply. Read its preceding context, inspect the prompt and history condition, then save a passage with an observation or question. Compare it with a different condition or a counterexample. The `/` keyboard shortcut focuses the current search box. Filter URLs and run/message/branch links can be bookmarked locally.
+
+Search is literal and case-insensitive, over visible message text and run/model/condition metadata. It does not search prompts or hidden reasoning, infer synonyms, or assign semantic topics. “Nonduality” and “non-duality” are different search strings. Recorded reasoning can be opened within the reader when the source contains it. An absent historical trace is not treated as a recorded empty trace.
+
+## Experimental settings and source evidence
+
+The inspector shows the source prompt and opening, available per-recipient sampler settings, requested output cap, context setting, thinking mode and seed policy. Mixed-model differences are displayed by participant. MTPLX's recorded runtime context is explicitly labeled as a runtime value. Requested output limits are not a claim that older engines honored them; the earlier effective-limit findings and saved parser versions remain available.
+
+For laboratory replies, **Exact input** displays the saved request, including role mapping, retained history and seed; the saved raw response can be expanded. **All recorded settings** exposes the protocol settings and model fingerprints. Historical runs expose their original message records and header settings; missing historical requests or model identities remain unknown.
+
+RF follows the actual preceding R branch. It does not silently substitute messages from F. Outside-observer interventions remain in historical transcripts. Capped and invalid replies, blocked descendants, pending nodes, unresolved requests and raw outputs awaiting commitment remain distinguishable. Repeated text is collapsed for reading convenience and remains accessible message by message.
+
+Existing **Open in WebUI** links appear where a saved import receipt matches the source journal and export fingerprint. The explorer does not import new WebUI conversations or change WebUI settings. WebUI remains available for its existing model access and conversation display.
+
+## Notebook and evidence storage
+
+Source transcripts are read-only. Personal notes are stored separately in `workspace/explorer/notes.sqlite`, with owner-only file permissions. Passage quotes are checked against exact Unicode character offsets in the source, and each note records its source fingerprint. Edit conflicts are rejected; removal hides a note while retaining its revision history in SQLite. The JSON export contains the current visible notes. Revision browsing, restore and import are not yet implemented; back up the SQLite file to preserve the full notebook.
+
+Notebook observations are labeled `personal_exploration_not_formal_annotation`. They do not enter existing annotation packets, become independent human ratings, or change the research codebook. This is a local single-researcher application. The server binds only to 127.0.0.1, requires same-origin authenticated writes, and does not dispatch inference. It provides no public hosting or multi-user account system.
+
+The catalogue discovers imported manifests immediately under the selected workspace and campaign/probe journals one or two directories below it. Private directories, explorer storage and deeper software copies are excluded. Duplicate copies of the same campaign journal are counted once. Import checksums and journal chains are verified; saved requests and committed outcomes are reconstructed under their recorded parser. A malformed, unsupported or concurrently changing source appears in **Source index**. Use **Refresh evidence** after a writer has paused or new evidence is saved.
+
+## Verified inventory and limits
+
+The local inventory at delivery is **400 historical reference runs, 34 real laboratory roots and 60 synthetic roots**. Synthetic roots are excluded by default. The default 434-root selection contains 10,982 visible participant replies, including flagged partial outputs; 117 runs have a recorded cap and 35 have at least one mechanically detected exact repetition sequence. These are descriptive inventory counts, not estimates of experience-focused discourse or nonduality. Mixed-model coverage rows overlap. Missing observations do not become negatives.
+
+The capacity snapshot diagnostic journal is listed as a source notice because it is a separate diagnostic format rather than a main conversation. Relevant findings remain accessible through the capacity report. The results view exposes six existing reports; it does not recompute formal scientific analyses for arbitrary filtered samples.
+
+Version 1 prioritizes reading and source traceability. It has no embeddings, topic clustering, automatic semantic annotations, parameter-value filter builder, named saved collections, annotation adjudication UI or experiment-launch controls. These are possible later developments guided by actual use.
+
+## Validation
+
+The standard-library suite passes **105 tests**, including catalogue/source verification, true RF ancestry, mixed-recipient settings, exact Unicode quote validation, note persistence and conflict handling, source exclusion, and local HTTP write protections. Browser checks exercised the real catalogue and a separate synthetic UI workspace: search/filter combinations and reloadable URLs, reader navigation, prompt/settings inspection, report display, saved full and selected quotes, notebook persistence, comparisons, branch selection, safe rendering of literal HTML, and a 390-pixel layout without horizontal overflow.
+
+The disposable browser fixture is generated with:
+
+```sh
+PYTHONPATH=. python3 scripts/prepare_explorer_fixture.py workspace/explorer/ui-fixture
+python3 -m behaviorlab explore --workspace workspace/explorer/ui-fixture --port 0
+```
+
+Choose a fresh fixture destination when repeating preparation. Its historical-format transcript is explicitly synthetic. Its factorial outputs use deterministic fixture backends. Browser test observations are stored only in that fixture's notebook; the real researcher notebook was left empty. No model calls, cloud costs, WebUI writes or new scientific claims were introduced.
+
+The portable [validation record](evidence/explorer-validation.json) records counts, checks and preserved source fingerprints. Full test logs and screenshots are under ignored `workspace/explorer/validation/`.

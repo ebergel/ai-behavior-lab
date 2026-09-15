@@ -6,7 +6,20 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: trajectory outcome measurement and pilot revision v0.2 are complete.** The [new report](docs/PILOT-OUTCOMES-V0.2.md) describes repetition, output caps and unavailable descendants, with a fully accounted 1,800-node synthetic trial and read-only reassessment of four saved real runs. This round made no new model calls. All 95 tests pass. The [earlier capacity criterion](docs/CAPACITY-AND-MEASUREMENT.md) still failed, and the revised factorial proposal remains planning-only. A [measurement draft](docs/MEASUREMENT-V2-DRAFT.md) and [120-target coding panel](docs/RATER-HANDOFF.md) are prepared; independent human coding and live research qualification remain pending. The earlier [prompt qualification](docs/PROMPT-QUALIFICATION.md), [annotation/probe](docs/ANNOTATION-AND-PROBES.md), [mixed-model Ollama](docs/OLLAMA-MIXED-QUALIFICATION.md), and [MTPLX](docs/MTPLX-LONG-TRIAL.md) records remain available.
+**Current state: the transcript explorer is ready for use.** The new [local app](docs/EXPLORER.md) brings 400 imported reference conversations and 34 real laboratory roots into a searchable library, message atlas, close reader, comparison view and personal notebook. Prompts and recorded settings stay alongside the transcript. WebUI remains available through the existing bridge. All 105 tests pass; this milestone made no model calls.
+
+The [trajectory-outcomes report](docs/PILOT-OUTCOMES-V0.2.md), [failed capacity screen](docs/CAPACITY-AND-MEASUREMENT.md), [measurement draft](docs/MEASUREMENT-V2-DRAFT.md) and [human coding handoff](docs/RATER-HANDOFF.md) retain their scientific status. The revised factorial proposal remains planning-only.
+
+## Open the transcript explorer
+
+Double-click **Open Explorer.command**, or run:
+
+```sh
+python3 -m behaviorlab explore --workspace workspace --port 8765
+```
+
+Open **http://127.0.0.1:8765**. No model server is needed to read the saved evidence. The notebook persists in `workspace/explorer/notes.sqlite`; it can be exported from the app. See the [guide](docs/EXPLORER.md) for passage tagging, comparisons, source discovery and limitations.
+
 
 ## Try the instrument
 
@@ -91,7 +104,7 @@ python3 -m behaviorlab legacy-reindex workspace/reference-corpus
 
 The [laboratory plan](PLAN.md) explains the scientific design. [Architecture](docs/ARCHITECTURE.md) describes the implementation and recovery rules. [References](docs/REFERENCES.md) records the relationship to the earlier research. [Validation](docs/MILESTONE-1.md) distinguishes verified engineering behavior from proposed experiments.
 
-The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory passed for the original Ollama candidates. Prompt qualification and the failed capacity screen are documented. The [current proposal](design/round0-factorial-v0.2.json) includes repeated text and capped replies as outcomes. Next are durable non-dispatch/unresolved-request accounting, human adjudication of the measurement boundaries and a qualified live research protocol; see [the continuation package](docs/CONTINUATION.md).
+The [WebUI integration design](docs/WEBUI-INTEGRATION.md) records the intended division of responsibilities. The [bridge validation](docs/MILESTONE-2-BRIDGE.md) documents the initial integration stage. Recipient rendering/context checks and one long mixed-model engineering trajectory passed for the original Ollama candidates. Prompt qualification and the failed capacity screen are documented. The [current proposal](design/round0-factorial-v0.2.json) includes repeated text and capped replies as outcomes. The immediate next step is first-hand exploration through the new app, followed by a revision of the study design informed by those observations. Durable non-dispatch/unresolved-request accounting, human adjudication and live research qualification remain pending; see [the continuation package](docs/CONTINUATION.md).
 
 **Ollama / Qwen 30B and Gemma 26B** completed one AB RF trajectory with thinking off and the proposed common sampler settings. The largest input was 8,697 tokens; all 50 generation prompt counts agreed with recipient preflight, and recovery made no duplicate call. See the [report and figure](docs/OLLAMA-MIXED-QUALIFICATION.md). This checks one engineering configuration and does not qualify every factorial cell. The pinned local registry is installation-specific; creating a campaign requires matching its files, runner arguments, and server version.
 

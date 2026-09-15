@@ -1,18 +1,28 @@
-# Continuation milestone: outcome-aware factorial preparation
+# Continuation milestone: transcript exploration
 
-Updated 15 September 2026. The user requested longer autonomous work rounds. The prospective trajectory-outcomes milestone is **complete**; see [the report](PILOT-OUTCOMES-V0.2.md). It followed the [capacity and measurement preparation](CAPACITY-AND-MEASUREMENT.md), whose original failed capacity decision remains unchanged. The live factorial pilot is disabled.
+Updated 15 September 2026. The user redirected the immediate priority toward a dedicated application for first-hand exploration of transcripts, their experimental settings and results. **Explorer v1 is complete and locally usable.** WebUI remains in place. The previous [trajectory-outcome milestone](PILOT-OUTCOMES-V0.2.md) is complete; the original [capacity failure](CAPACITY-AND-MEASUREMENT.md) remains recorded and the live factorial pilot remains disabled.
 
 | Completed work | Evidence |
 |---|---|
-| Prospective pilot revision | `design/round0-factorial-v0.2.json`: 20 roots, 1,800 main calls maximum and 400 disposable probes maximum; outcomes, missingness and conditional contrasts explicit. Planning-only schema. |
-| Mechanical trajectory instrument | Read-only `trajectory-report`; exact repetition, text departures, within-reply line counts, recorded caps, original blocking causes, endpoint and branch-comparison denominators. No automatic semantic coding or repetition stopping. |
-| Full synthetic integration | 1,800 planned nodes accounted for: 1,340 valid, 16 capped, 444 blocked; 544/840 annotation targets and 60/100 probe snapshots available. Pause/resume and zero-call replay pass. |
-| Saved real-run reassessment | Four previous capacity trajectories reanalyzed without inference. Gemma repeated endings remain valid observations; Qwen's capped loop remains a partial output with unavailable descendants. |
-| Verification | 95 tests pass in working and standalone copies; exact recovery, ancestry, failure propagation, corruption rejection and read-only checks. Previous evidence preserved. |
+| Evidence library | 400 imported reference runs and 34 real laboratory roots; 60 synthetic roots separately selectable and excluded by default. |
+| Overview and close reading | Literal search, filters, message maps, actual branch ancestry, collapsible repeated replies, recorded traces, exact inputs and source records. |
+| Experimental context | Prompts, per-recipient settings, requested output cap, model identities, source fingerprints and saved reports. |
+| Personal notebook | Run notes, selected passages, tags, persistent SQLite storage, exact Unicode spans, revision history and JSON export. |
+| Comparison and WebUI | Two-run reading with independent branch selection; existing verified WebUI exports remain accessible. |
+| Verification | 105 tests plus browser checks on the real library and an isolated synthetic fixture. No model calls. |
 
-No model calls or scheduled wakeups were activated for this milestone. Full synthetic and retrospective evidence is under `workspace/trajectory-outcomes-20260915-1218/`; the portable summary is [the validation record](evidence/trajectory-outcomes-validation.json).
+The [explorer guide](EXPLORER.md) contains launch instructions and known limits. See [the validation record](evidence/explorer-validation.json). No scheduled continuation has been created.
 
 ## Next coherent work package
+
+Use the app to assemble a small, attributed set of passages illustrating the observed trajectories and counterexamples. Let direct reading inform the next design revision before launching more inference.
+
+1. Preserve the distinction between personal exploration and formal coding. User-written observations remain attributed to the user. Any assistant-generated interpretation must be separately and accurately attributed; do not save it as a local human research note.
+2. Organize contrasting passages by model, prompt and history condition. Include ordinary topic development, experience questions, relational understanding, nonseparation language, departures, repetition and capped/unknown outcomes. Do not prelabel all introspective discourse as nonduality.
+3. Review usability needs revealed by actual reading. Candidate extensions include saved named collections, richer parameter filters and full notebook revision/restore tools. These are proposals, not implemented features.
+4. Convert supported observations into explicit competing hypotheses and a revised, frozen experiment design. Preserve the previous negative outcomes and uncertainties. Runtime and semantic qualification are still required before the main research pilot.
+
+## Deferred runtime work package
 
 Implement durable accounting for preflight non-dispatch and unresolved requests, then validate an explicitly versioned outcome-aware live factorial runtime. Continue useful engineering work while human measurement development is pending.
 
