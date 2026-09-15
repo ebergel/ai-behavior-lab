@@ -26,6 +26,7 @@ from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
 REPORTS = [('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
+           ('assessment', 'Model assessment & cloud checks', 'MODEL-ASSESSMENT.md'),
            ('capacity', 'Output capacity & measurement', 'CAPACITY-AND-MEASUREMENT.md'),
            ('qualification', 'Prompt qualification', 'PROMPT-QUALIFICATION.md'),
            ('measurement', 'Measurement v2 · draft', 'MEASUREMENT-V2-DRAFT.md'),
@@ -53,7 +54,7 @@ def base_summary(run):
     run.update(message_count=sum(m['text'] is not None for m in participant),
         planned_count=len(participant), words=sum(len(t.split()) for t in texts),
         cap_count=sum(m['status']=='cap' for m in messages),
-        unavailable_count=sum(m['status'] in ('blocked', 'pending', 'unresolved') for m in messages),
+        unavailable_count=sum(m['status'] in ('blocked', 'pending', 'unresolved', 'not_dispatched') for m in messages),
         repeat_count=sum(m.get('repeat', False) for m in messages),
         has_thinking=any(m.get('thinking') for m in messages),
         preview=next((t for t in texts if t.strip()), '')[:240])
@@ -186,7 +187,7 @@ class Catalog:
         self.refresh()
 
     def refresh(self):
-        runs = {}; issues = []; probes = []; seen = set()
+        runs = {}; issues = []; probes = []; seen = set(); assessments = []
         # Only shallow experiment directories are discoverable; private files,
         # bundled dependencies and archived software copies are never traversed.
         paths = sorted({p for pattern in ('*/events.jsonl','*/*/events.jsonl') for p in self.workspace.glob(pattern)
@@ -205,6 +206,22 @@ class Catalog:
                     if first['hash'] in seen: continue
                     found = load_campaign(path.parent); seen.add(first['hash'])
                     for run in found: runs[run['id']] = run
+                elif first.get('kind')=='participant_comparison_created':
+                    if first['hash'] in seen: continue
+                    from .participant_explorer import load_participants
+                    found=load_participants(path.parent); seen.add(first['hash'])
+                    for run in found: runs[run['id']]=run
+                elif first.get('kind') in ('cloud_instruction_diagnostic_created','cloud_system_formats_created'):
+                    if first['hash'] in seen: continue
+                    from .participant_explorer import load_cloud_diagnostics
+                    found=load_cloud_diagnostics(path.parent); seen.add(first['hash'])
+                    for run in found: runs[run['id']]=run
+                elif first.get('kind')=='model_assessment_created':
+                    if first['hash'] in seen: continue
+                    from .assessment_explorer import load_assessment
+                    found,assessment=load_assessment(path.parent); seen.add(first['hash'])
+                    assessments.append(assessment)
+                    for run in found: runs[run['id']]=run
                 elif first.get('kind')=='probe_batch_created':
                     from .probes import probe_report
                     result = probe_report(path.parent)
@@ -212,6 +229,7 @@ class Catalog:
                 else: issues.append({'source':str(path.parent), 'reason':'Separate diagnostic journal; not a conversation campaign.'})
             except (ValueError, OSError, KeyError, TypeError, AttributeError) as e:
                 issues.append({'source':str(path.parent), 'reason':str(e)[:250]})
+        self.assessments=assessments
         for batch in probes:
             plan = batch['plan']
             for run in runs.values():
@@ -243,6 +261,9 @@ class Catalog:
         for n in notes: notes_by_run.setdefault(n['run_id'],[]).append(n)
         candidates = []
         for r in self.runs.values():
+            # Keep unstarted assessment slots in their profiles and direct reader,
+            # without counting them as observed conversations in the library.
+            if r.get('unstarted_assessment') and not tag: continue
             if scope=='all' and r['kind']=='synthetic' or scope in ('reference','lab','synthetic') and r['kind']!=scope: continue
             if collection and r['collection_id']!=collection: continue
             if model and model not in r['models']: continue
@@ -362,11 +383,11 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/style.css'):
-                    file={'/':'index.html','/app.js':'app.js','/research.js':'research.js','/style.css':'style.css'}[path]
-                    return self.send((STATIC/file).read_bytes(),mime={'/':'text/html; charset=utf-8','/app.js':'text/javascript; charset=utf-8','/research.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8'}[path])
+                if path in ('/','/app.js','/research.js','/assessment.js','/style.css'):
+                    file='index.html' if path=='/' else path[1:]
+                    return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
-                    runs=list(catalog.runs.values()); saved=notes.all()
+                    runs=[r for r in catalog.runs.values() if not r.get('unstarted_assessment')]; saved=notes.all()
                     return self.send({'token':token,'indexed_at':catalog.indexed_at,'issues':catalog.issues,
                         'counts':dict(Counter(r['kind'] for r in runs)),
                         'collections':dict(Counter(r['collection_id'] for r in runs if r['kind']!='synthetic')),
@@ -375,6 +396,10 @@ def make_server(workspace, port=8765):
                         'tags':dict(Counter(t for n in saved for t in n['tags'])),
                         'studies':studies.summaries(),
                         'reports':[{'id':i,'title':t} for i,t,f in REPORTS if (Path(__file__).resolve().parents[1]/'docs'/f).exists()]})
+                if path=='/api/assessments':
+                    return self.send({'assessments':[a for a in catalog.assessments if not a['synthetic']],
+                        'prior_checks':[{'id':r['id'],'title':r['title'],'models':r['models'],'cost_usd':r.get('cost_usd')}
+                                        for r in catalog.runs.values() if r['kind']=='lab' and r['data_class'] in ('cloud_integration_smoke','cloud_integration_diagnostic')]})
                 if path=='/api/studies': return self.send({'collections':studies.summaries()})
                 if path.startswith('/api/studies/'):
                     parts=path.split('/')

@@ -1,5 +1,7 @@
 # Instrument architecture
 
+The model-assessment extension is described in [MODEL-ASSESSMENT.md](MODEL-ASSESSMENT.md). `assessment.py` provides separately versioned, finite free-route screens with zero-price provider ceilings and no retries; `assessment_explorer.py` projects their verified bytes and attributed sidecars into the reader. `participants.py` retains the earlier separately budgeted mini/Haiku comparison contract, whose main self-play batch remains held. Neither runner is exposed for dispatch by the Explorer. Remote model IDs, catalog aliases and reported providers are observable; remote weights, effective templates and sampler internals remain unknown.
+
 The instrument is independent of the source experiment repository. Python's standard library provides the core and local HTTP adapters; the optional MTPLX tokenizer uses its installed runtime. Open WebUI displays exported transcripts. The initial synthetic design is described first, followed by the live integration extensions.
 
 | Module | Responsibility |

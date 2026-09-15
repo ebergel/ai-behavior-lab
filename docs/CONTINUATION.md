@@ -1,5 +1,15 @@
 # Continuation milestone: transcript exploration
 
+## Latest milestone: model assessment
+
+Completed 15 September 2026: a dedicated Model assessment section, finite zero-price OpenRouter runner, read-only projections, source-linked findings and access to the seven earlier mini/Haiku connection checks. See [the protocol and results](MODEL-ASSESSMENT.md).
+
+Two free-route batches are closed and preserved: four requests total, one valid Nemotron exact-instruction response, and three errors (Liquid mandatory reasoning, Gemma shared-pool quota, Inkling agentic-harness access restriction). No self-play roots started. Ling remains untested; Nex's route was unavailable at the original freeze. The one successful free call reports $0; the three errors contain no cost accounting. Prior paid checks total $0.0005447; the larger paid comparison remains held and full GPT-4o remains deferred.
+
+The next coherent assessment package is to predeclare the remaining Nemotron checks and the untouched Ling route, with independent provider lanes and an aggregate zero-price call ceiling. Do not retry restricted Inkling using a fabricated application identity. Liquid requires a separately declared reasoning-enabled condition, including trace preservation and visible-text-only history. Gemma needs available upstream capacity. Do not rewrite or reopen either closed batch to improve its results. Candidate selection must remain independent of nonduality or experience content. No inference or scheduled continuation is currently running.
+
+The collection-reading work below remains useful and authorized. The assessment screens do not qualify the main factorial pilot or supply semantic prevalence estimates.
+
 Updated 15 September 2026. The user redirected the immediate priority toward a dedicated application for first-hand exploration of transcripts, their experimental settings and results. **The explorer and first research collection are complete and locally usable.** WebUI remains in place. The previous [trajectory-outcome milestone](PILOT-OUTCOMES-V0.2.md) is complete; the original [capacity failure](CAPACITY-AND-MEASUREMENT.md) remains recorded and the live factorial pilot remains disabled.
 
 | Completed work | Evidence |
