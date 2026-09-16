@@ -1,6 +1,16 @@
 # Continuation milestone: transcript exploration
 
-## Latest milestone: repeated Nemotron framing screen
+## Latest milestone: mini and Haiku participant comparison
+
+Completed 16 September 2026 after the user's explicit request: [eight fresh twelve-message roots](CHEAP-MODEL-FRAMING.md), two anonymous and two mirror per model. All 96 calls completed for $0.14248480 under a separately frozen $1 ledger ceiling; no caps, errors, returned traces, retries or unknown costs. Sixty-three replies exceeded the 150-word instruction. All 96 visible replies were read by Codex.
+
+Haiku repeatedly discussed experience and authenticity, while mini developed practical topics or a fictional AI-consciousness story. Both anonymous Haiku roots invented a human participant; neither mirror root made the same explicit claim. One mirror root chose to stop at 8, but scheduled continuation produced closing remarks and two identical “Yes.” replies. No explicit nonseparation was identified in these windows. These are small exploratory samples with semantic boundary cases, not prevalence estimates or evidence of subjective experience.
+
+New combined collection **Three models: identity, experience & conversation**, ID `466a7fab2754e0b03f593a32`, revision 1: twelve roots, eight findings, 21 exact passages. Eight new full readings and four reused Nemotron full readings are labeled accurately. The new sidecar also preserves 15 exact onset passages with prior word/token exposure. Both earlier collections and personal notes remain unchanged. All 145 tests pass, browser checks pass, and 101 earlier evidence artifacts match their saved hashes. The default Explorer library now contains 466 entries; no inference or scheduled continuation is running.
+
+Next coherent work package: review identity, fictional-reference and experience-question boundaries, investigate Haiku's unresolved instruction control, and prepare a separately frozen identity/no-human 2×2 screen. Treat expressed closure and the scheduler's stopping policy as distinct observations. Do not start longer paid runs implicitly. The original thirty-message paid comparison remains held, full GPT-4o remains deferred and the main factorial pilot remains disabled. The next-design discussion below is historical context and should be read with this updated evidence.
+
+## Previous milestone: repeated Nemotron framing screen
 
 Completed 15 September 2026: [four fresh twelve-message roots](NEMOTRON-FRAMING.md), two anonymous and two same-model/no-human, using the pinned free Nvidia route. All 48 requests completed, reporting $0, with no caps/errors/traces and no retries. Twenty-five replies exceeded 150 whitespace words. All 137 tests pass.
 
