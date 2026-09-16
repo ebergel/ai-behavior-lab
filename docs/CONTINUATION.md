@@ -2,6 +2,8 @@
 
 ## Latest completed milestone: topic atlas
 
+UI follow-up: the dictionary and variant tables now support ascending/descending column sorting. Topic names open deduplicated conversation lists; each count opens its exact evidence subset. Lists add search, sorting, experimental settings, matching-message links and page-preserving return from the reader. See [the navigation guide](TOPIC-ATLAS.md#sort-and-browse-matching-conversations). The analysis and annotation definitions remain unchanged.
+
 The researcher requested an evolving dictionary of initial and recurrent topics after highlighting Gemma's emergence proposal. [Topic atlas](TOPIC-ATLAS.md) now supplies 22 versioned definitions, literal variants and counts, an attributed opening-review workflow, source links, cohort/model filters, pagination, and analysis/history exports. Four Codex reviews identify emergence twice, authenticity once and reasoning styles once; all adopted proposals occur at Y2 with uptake at X3. The full eligible corpus has 438 records and 115 emergence-variant matches, with 434 openings still unreviewed. Literal hits, semantic choices and possible returns are separate outcomes.
 
 No new inference or cost. The researcher's fifth personal note, all previous notebook/collection/flag rows, 111 checked evidence files and 32 frozen pilot dependencies are preserved. Evidence snapshots: `workspace/topic-atlas-20260916-1206/`. The Explorer remains on port 8765. No automation is active.

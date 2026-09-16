@@ -135,8 +135,8 @@ async function route(){
  if(p.has('study')){try{await loadStudies(p.get('study'));}catch(e){showError(e);}return;}
  if(p.get('view')==='studies'){await loadStudies();return;}
  if(p.get('view')==='assessment'){await loadAssessments();return;}
- if(p.get('view')==='topic-atlas'){await loadTopicAtlas({cohort:p.get('cohort'),subject:p.get('subject'),model:p.get('participant_model')});return;}
- if(p.has('fromAtlas')){state.view='topic-atlas';state.atlasFilters={cohort:p.get('cohort'),subject:p.get('subject'),model:p.get('participant_model')||''};}
+ if(p.get('view')==='topic-atlas'){await loadTopicAtlas(atlasRouteFilters(p));return;}
+ if(p.has('fromAtlas')){state.view='topic-atlas';state.atlasFilters=atlasRouteFilters(p);}
  if(p.get('view')==='topics'){await loadTopics(p.get('topic')||'any');return;}
  if(p.has('fromAssessment'))state.view='assessment';
  if(p.has('run')){await loadReader(p.get('run'),p.get('branch'),p.get('message'));return;}

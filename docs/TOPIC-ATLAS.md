@@ -2,7 +2,17 @@
 
 16 September 2026. This is a new reading instrument and an exploratory analysis of saved transcripts. No new inference was performed. The researcher highlighted Gemma's proposal of emergence in Haiku → Gemma message 2 and requested an evolving dictionary of initial and recurrent topics. Their note `1236932f318cd39d7b639d07`, including its original authorship and tags, remains unchanged.
 
-Open **Topic atlas** in the Explorer sidebar. The default reading cohort is the latest research collection. Select a topic to inspect its definition, literal variants, frequencies, proposing participant, matching passages and later first mentions. Cohort and model filters preserve whole conversations; filtering for Gemma includes its partners' replies. Source links open the transcript with its prompt, settings and personal notes. Review cards and matching excerpts have pagination. **Refresh evidence** reindexes saved sources. Dictionary edits recompute matches; review edits update the attributed counts. This is an interactive ongoing analysis, with no scheduled process or model judge.
+Open **Topic atlas** in the Explorer sidebar. The default reading cohort is the latest research collection. Select a topic to browse its matching conversations, or return to the dictionary to inspect definitions, literal variants, frequencies, proposing participants and later first mentions. Cohort and model filters preserve whole conversations; filtering for Gemma includes its partners' replies. Source links open the transcript with its prompt, settings and personal notes. Review cards and matching excerpts have pagination. **Refresh evidence** reindexes saved sources. Dictionary edits recompute matches; review edits update the attributed counts. This is an interactive ongoing analysis, with no scheduled process or model judge.
+
+### Sort and browse matching conversations
+
+Click any **Dictionary & frequency** column heading to sort; click again to reverse direction. Numeric columns start highest first, and topic names start A–Z. The arrow and accessible column state identify the active sort. The **Literal variants** table also sorts by phrase, occurrence count, message count or record count.
+
+Click a **topic name** to open its conversation list, with each conversation shown once. Click a **count** to open that specific subset: reviewed initial choices, phrase matches within the first six messages, matches anywhere, or matches in at least two distinct messages. These lists retain the selected cohort and model filter. A reviewed initial choice can appear even without a dictionary phrase match; stale opening reviews are excluded, consistently with the table count.
+
+Each conversation shows its models, experimental condition, a source excerpt, matching-message count and expandable passage links. Click the title to open the first relevant passage, or a message button to open that precise turn. Reviewed initial choices link both the proposal and partner uptake. Prompts and full settings remain beside the transcript. Use **Back to topic atlas** to return with the topic, subset, search, sorting and page retained; these controls are also encoded in the URL. **Back to dictionary** retains the selected entry for inspecting or editing its definition and variants.
+
+The conversation list can be sorted by title, number of matching messages or earliest matching/proposal turn, and searched across titles, models, conditions and matching excerpts. This search does not scan the entire transcript. An empty result is labeled explicitly. These are navigation controls over existing evidence; they do not add reviewed flags or change the dictionary, source records or frequency definitions.
 
 ## The first four reviewed openings
 

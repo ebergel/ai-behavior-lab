@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-09-16T12:45:54.618237-03:00",
+  "scope": "Topic atlas column sorting and conversation navigation; UI only",
+  "tests": {
+    "python_passed": 172,
+    "javascript_passed": 5,
+    "syntax_checks": "pass",
+    "whitespace_check": "pass",
+    "raw_logs": "workspace/topic-navigation-20260916-1242"
+  },
+  "browser_checks": [
+    "numeric sort descending and ascending",
+    "literal-variant occurrence sort",
+    "topic opens one row per matching conversation",
+    "ethics subsets: any 94, early 38, repeated 66, initial 0",
+    "initial-count link opens both emergence reviews",
+    "review link opens hg:2 with original researcher note",
+    "return retains page 2: 13\u201324 of 115",
+    "search Haiku returns 2 of 115, most-matches sort orders 11 before 6",
+    "zero-result state"
+  ],
+  "saved_export_count_checks": {
+    "pilot": {
+      "any": 3,
+      "early": 3,
+      "repeated": 3,
+      "initial": 2
+    },
+    "corpus": {
+      "any": 115,
+      "early": 83,
+      "repeated": 79,
+      "initial": 2
+    }
+  },
+  "unchanged_database_tables": {
+    "notes": 5,
+    "history": 5,
+    "research_collections": 5,
+    "collection_history": 6,
+    "topic_flags": 28,
+    "topic_flag_history": 28,
+    "topic_dictionary": 22,
+    "topic_dictionary_history": 22,
+    "topic_openings": 4,
+    "topic_opening_history": 4
+  },
+  "prior_evidence_artifacts_verified": 111,
+  "frozen_pilot_files_verified": 32,
+  "new_inference_calls": 0,
+  "screenshot": "docs/evidence/topic-navigation.jpg"
+}
