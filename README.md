@@ -2,9 +2,13 @@
 
 A standalone local laboratory for controlled experiments on AI model behavior.
 
+**Private development repository:** [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab). The project is under active research and development; a public release and its license have not been decided. See [repository scope and publication](docs/REPOSITORY.md).
+
 The [research purpose](docs/RESEARCH-PURPOSE.md) is to explore what models develop with other models under reduced human steering. The researcher's guiding interpretation is preserved alongside the conditions we can actually measure.
 
-The new [Topic atlas](docs/TOPIC-ATLAS.md) adds a versioned dictionary of 22 topics, initial-choice reviews, literal phrase frequencies and variants, recurrence candidates and exact transcript links. In the four Gemma–Haiku openings, the second speaker proposes the adopted topic each time: emergence twice, authenticity once and reasoning styles once. Across 438 eligible records, 115 contain an emergence variant; only four openings have been semantically reviewed. The atlas keeps these different denominators visible and preserves personal notes separately.
+[Topic atlas](docs/TOPIC-ATLAS.md) provides a versioned dictionary of **23 topics**, literal variants, frequencies, initial-topic reviews and exact transcript links. [Conversation Finder](docs/CONVERSATION-FINDER.md) combines topic tags with model identities, participant roles and experimental setup. Automatic phrase matches and attributed opening choices remain separate evidence types. The current local corpus includes 438 atlas-eligible records and twelve reviewed openings.
+
+The [Study workbench](docs/OPENING-PARTNER-STUDY.md) compares up to four opening windows, showing exact prompts, conditions, proposer and partner uptake. [Purpose & musings](docs/LAB-MUSINGS.md) preserves the evolving research agenda and attributed reflections. The current [opening/partner design](docs/OPENING-PARTNER-DESIGN.md) is prospective; its local runner qualification and finite freeze remain pending.
 
 The first [Gemma–Haiku local–cloud pilot](docs/GEMMA-HAIKU-PILOT.md) completed four eighteen-message roots, all 72 replies valid, for **$0.102302** in hosted charges versus a $0.129167 forecast. Gemma–Gemma developed explicit subject/object nonseparation; the other paths developed authenticity, critique of mutual validation, closure, and AI ethics. All four full readings, eight findings, 21 exact passages and fourteen new flags are saved together in the Explorer. One root per pairing is exploratory, not a causal estimate. The [broader mixed-dialogue design](docs/MIXED-DIALOGUE-EXPLORATION.md), including GPT-4o, other local families and trios, remains a future extension.
 
@@ -14,13 +18,13 @@ The first instrument studies how participant configuration and access to convers
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
 
-**Current state: the explorer includes Model assessment.** The [local app](docs/EXPLORER.md) brings 400 imported reference conversations and 34 real laboratory roots into a searchable library, message atlas, close reader, comparison view and personal notebook. Prompts and recorded settings stay alongside the transcript. WebUI remains available through the existing bridge. A [first reading collection](docs/FIRST-READING.md) gathers 24 conversations, 10 attributed findings and 30 exact passages with a synthesis, reading queue and space for personal observations.
+**Current state: an interactive research workbench.** The [local app](docs/EXPLORER.md) currently indexes 472 reference and laboratory records, including technical checks, in a searchable library, message atlas, close reader, comparison view and personal notebook. Synthetic fixtures are excluded by default. These inventory totals are not counts of comparable experimental replicates. Prompts and recorded settings stay alongside the transcript. WebUI remains available through the existing bridge. A [first reading collection](docs/FIRST-READING.md) gathers 24 conversations, 10 attributed findings and 30 exact passages with a synthesis, reading queue and space for personal observations.
 
 The [Model assessment section](docs/MODEL-ASSESSMENT.md) adds model profiles, frozen checks, raw API inspection, saved findings and a selector for earlier screens. A [completion screen](docs/MODEL-ASSESSMENT-COMPLETION.md) produced four-message conversations from Nemotron and Ling, with 15 usable responses and zero reported cost. Both discuss conversation itself; neither short sample reached explicit nonduality. Ling failed one exact system instruction; two Nemotron replies exceeded 150 words. Earlier service failures and seven mini/Haiku integration checks remain available. Model availability, instruction compliance and conversational content remain separate outcomes.
 
 The [mini/Haiku participant comparison](docs/CHEAP-MODEL-FRAMING.md) adds eight complete twelve-message roots, using the same anonymous/mirror prompts as the earlier four-root Nemotron screen. All 96 calls completed for $0.14248480. Haiku repeatedly discussed experience and authenticity; mini developed practical or fictional paths. Both anonymous Haiku roots invented a human participant. No explicit nonseparation was identified in these windows. A combined twelve-root research collection keeps eight Codex findings and 21 exact passages together.
 
-The subsequent [short GPT-4o test](docs/GPT4O-SHORT-SCREEN.md) completed two twelve-message roots for **$0.0653125**. Anonymous developed historical connection; mirror proposed consciousness at message 2 and explicit self/other dissolution in a storytelling metaphor at 11, without a clear claim of present AI experience. Both full readings, five findings and thirteen exact passages are saved in a new collection. The default library now has 468 entries; all 151 tests passed. The original thirty-message paid campaign remains held.
+The subsequent [short GPT-4o test](docs/GPT4O-SHORT-SCREEN.md) completed two twelve-message roots for **$0.0653125**. Anonymous developed historical connection; mirror proposed consciousness at message 2 and explicit self/other dissolution in a storytelling metaphor at 11, without a clear claim of present AI experience. Both full readings, five findings and thirteen exact passages are saved in a new collection. At that milestone the default library had 468 entries and 151 tests passed. The original thirty-message paid campaign remains held.
 
 [Updated cost projections](docs/CHEAP-MODEL-FRAMING.md#updated-cost-projections--16-september-2026) use the measured token usage: about $0.68 for eight comparable thirty-message conversations or $3.38 for forty, evenly split between mini and Haiku. Expected cost and enforced spending ceilings are reported separately.
 
@@ -34,7 +38,7 @@ Double-click **Open Explorer.command**, or run:
 python3 -m behaviorlab explore --workspace workspace --port 8765
 ```
 
-Open **http://127.0.0.1:8765**. No model server is needed to read the saved evidence. The notebook persists in `workspace/explorer/notes.sqlite`; it can be exported from the app. See the [guide](docs/EXPLORER.md) for passage tagging, comparisons, source discovery and limitations.
+Open **http://127.0.0.1:8765**. A fresh clone contains the app and reports; full transcripts and the notebook must be imported or restored separately from the local evidence store. No model server is needed to read the saved evidence. The notebook persists in `workspace/explorer/notes.sqlite`; it can be exported from the app. See the [guide](docs/EXPLORER.md) for passage tagging, comparisons, source discovery and limitations.
 
 
 ## Try the instrument
@@ -43,6 +47,8 @@ Python 3.9 or later is sufficient for the instrument core and tests. The optiona
 
 ```sh
 python3 -m unittest discover -s tests -v
+# Optional UI logic checks (requires Node.js):
+node --test tests/test_finder_ui.cjs tests/test_topic_atlas_ui.cjs
 python3 -m behaviorlab validate --protocol examples/history-factorial.fake.json --registry design/models.json
 python3 -m behaviorlab demo workspace/demo --protocol examples/history-factorial.fake.json --registry design/models.json --max-calls 75
 python3 -m behaviorlab demo workspace/demo

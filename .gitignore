@@ -6,3 +6,8 @@ build/
 dist/
 .DS_Store
 workspace/
+
+# Local credentials; publish example environment files only.
+.env
+.env.*
+!.env.example
