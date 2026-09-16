@@ -1,5 +1,17 @@
 # Continuation milestone: transcript exploration
 
+## Latest completed milestone: four Gemma–Haiku dialogues
+
+The approved first local–cloud pilot is complete. See [the full report](GEMMA-HAIKU-PILOT.md) and [the research purpose](RESEARCH-PURPOSE.md), which preserves the researcher's guiding idea while operationalizing reduced human steering. Four fresh eighteen-message roots (GG, HH, GH, HG) produced all 72 valid replies for **$0.102302** hosted cost, against a frozen $0.129167 forecast and separate $1 ceiling. There were no caps, errors, retries, returned reasoning or unknown costs; thirty word overruns remain untrimmed. The new runner keeps explicit participant routing, faithful histories, native local token preflight, raw-response recovery and no-retry uncertainty handling separate from earlier frozen runners.
+
+Gemma–Gemma contains explicit subject/object dissolution at 10 and later self/All language. Haiku–Haiku develops mutual affirmation and closure; Gemma–Haiku debates its own mutual-validation loop and whether to continue; Haiku–Gemma moves into the ethics of possible AI experience. Closure proposals followed by further scheduled replies make stopping policy a concrete experimental variable. Model-generated accounts of cognition, experience and identity remain claims to study.
+
+Collection **Gemma & Haiku: mirrors, friction & endings**, ID `d8096704b3ae941660c25635`, revision 1, contains four full readings, eight findings and 21 exact spans. The sidecar preserves twelve onset/exposure records; fourteen new flags bring the separate topic index to 28. All four personal notes, four prior collections and fourteen prior flags are unchanged. The library contains 472 default entries; the broader catalog contains 573 including synthetic and unstarted entries. No inference or scheduled continuation is active.
+
+Next proposed milestone: design repeated ordered pairings and a matched-prefix partner intervention around a question about experience or a stop proposal. Freeze allocation, horizon, stopping policy, expected cost and ceiling separately before any new batch. The current pilot has one sample per pairing and cannot isolate partner or opener effects. Trio rendering/history support and GPT-4o mixed runs remain future work; the 540-call draft below was not executed or authorized as a whole. Keep Haiku's unresolved earlier instruction-fidelity check visible. The main factorial pilot remains disabled.
+
+The direction and earlier milestones below are retained as design history; their next-step language predates completion of the four-root pilot above.
+
 ## Current direction: mixed partners and groups of three
 
 On 16 September the user broadened the priority: the generated dialogue is valuable research material beyond the initial nonduality hypothesis, and the laboratory should explore mixed models and groups of more than two participants. Three new practitioner notes on Haiku Mirror 2 messages 1, 5 and 8 inform the [mixed-dialogue exploration draft](MIXED-DIALOGUE-EXPLORATION.md). The four current personal notes remain unchanged and retain their authorship.

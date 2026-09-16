@@ -18,6 +18,8 @@ On 16 September the researcher explicitly included local–cloud mixtures, start
 
 # Evidence and verification
 
+The first local–cloud mixed pilot is now closed: `workspace/mixed-gemma-haiku-20260916-1139`, four eighteen-message Gemma/Haiku roots, 72 valid replies, $0.102302 hosted cost. See `docs/GEMMA-HAIKU-PILOT.md` and `docs/RESEARCH-PURPOSE.md`. Preserve this journal, frozen executable dependencies, complete reading, collection and flags. Its authorization does not extend to the larger 540-call draft, GPT-4o mixtures or trios. The new runner remains a bounded pair pilot; those extensions need their own design and freeze. Treat the researcher's untouched-self language as a guiding interpretation; reduced active human steering is the measured setup.
+
 Keep generated campaigns and imported datasets under the ignored `workspace/` directory or another explicitly selected evidence directory. Label synthetic engineering output separately from actual inference and scientific results. Preserve exact source bytes and missing historical metadata.
 
 Run `python3 -m unittest discover -s tests -v` from this repository. The core and tests require no third-party packages. The optional MTPLX tokenizer helper uses the separately installed MTPLX Python environment. The research proposal and executable synthetic protocol have different schemas; do not convert an unqualified design into an actual behavioral campaign implicitly.

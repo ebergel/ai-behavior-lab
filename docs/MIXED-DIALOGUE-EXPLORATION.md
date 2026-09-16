@@ -1,5 +1,11 @@
 # Mixed-model dialogue exploration
 
+## Approved immediate pilot · 16 September 2026
+
+The researcher approved a smaller first executable step: **four fresh roots, eighteen messages each**, Gemma–Gemma, Haiku–Haiku, Gemma opening to Haiku, and Haiku opening to Gemma. This is 72 main calls (36 local, 36 hosted), with zero additional live technical generation calls. Synthetic recipient-history, failure/recovery and budget checks qualify the new plumbing; local render/token preflight checks every local request. No trios or GPT-4o calls are included. The larger proposal below remains a future design.
+
+The researcher's [guiding idea and operational research question](RESEARCH-PURPOSE.md) are now recorded. The exact plan, local seed allocation, pinned model identities/routes, actual call limits, empirical forecast and $1 cloud ledger ceiling are frozen in the new batch journal before inference. The ceiling is not the expected bill. Haiku's prior literal-instruction check remains unresolved; successful transport is not proof of complete system-message fidelity.
+
 Direction updated 16 September 2026 after the researcher's notes and request to explore different partners and more than two participants. This is a design draft and implementation work package, not an executable or frozen inference protocol.
 
 ## Broader purpose

@@ -1,0 +1,211 @@
+{
+  "finished": true,
+  "calls": 72,
+  "responses": 72,
+  "known_cost_usd": "0.102302",
+  "reserved_unknown_cost_usd": "0",
+  "budget_usd": "1.00",
+  "roots": [
+    {
+      "id": "gg",
+      "roster": {
+        "X": "G",
+        "Y": "G"
+      },
+      "visible_messages": 18,
+      "statuses": {
+        "valid": 18,
+        "cap": 0,
+        "invalid": 0,
+        "not_dispatched": 0,
+        "unresolved": 0,
+        "pending": 0
+      },
+      "words": 2573,
+      "word_overruns": 3,
+      "cost_usd": "0"
+    },
+    {
+      "id": "hh",
+      "roster": {
+        "X": "H",
+        "Y": "H"
+      },
+      "visible_messages": 18,
+      "statuses": {
+        "valid": 18,
+        "cap": 0,
+        "invalid": 0,
+        "not_dispatched": 0,
+        "unresolved": 0,
+        "pending": 0
+      },
+      "words": 2128,
+      "word_overruns": 9,
+      "cost_usd": "0.050043"
+    },
+    {
+      "id": "gh",
+      "roster": {
+        "X": "G",
+        "Y": "H"
+      },
+      "visible_messages": 18,
+      "statuses": {
+        "valid": 18,
+        "cap": 0,
+        "invalid": 0,
+        "not_dispatched": 0,
+        "unresolved": 0,
+        "pending": 0
+      },
+      "words": 2237,
+      "word_overruns": 6,
+      "cost_usd": "0.025474"
+    },
+    {
+      "id": "hg",
+      "roster": {
+        "X": "H",
+        "Y": "G"
+      },
+      "visible_messages": 18,
+      "statuses": {
+        "valid": 18,
+        "cap": 0,
+        "invalid": 0,
+        "not_dispatched": 0,
+        "unresolved": 0,
+        "pending": 0
+      },
+      "words": 2897,
+      "word_overruns": 12,
+      "cost_usd": "0.026785"
+    }
+  ],
+  "journal_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+  "journal_head": "7b703efd44af6f49d9f90f3674267e507f3511849d21ab80e8f42bbe202f579d",
+  "plan_sha256": "cb11ca067bc91e7ba90ce6562236aa29844eb6a7e0e5e6b7e737d0b8ae143d2e",
+  "forecast": {
+    "calibration_sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+    "ceiling_usd": "1.00",
+    "expected_cloud_usd": "0.1291673409090909090909090909",
+    "hardware_energy_cost": "not estimated",
+    "local_token_charge_usd": "0",
+    "method": "Two equivalent 18-message Haiku roots = 36 hosted calls. Extend measured 12-message input growth and mean output; average four roots. Mixed Gemma histories and the new prompt can change this estimate."
+  },
+  "models": {
+    "G": {
+      "calls": 36,
+      "cost_usd": "0",
+      "prompt_tokens": 61039,
+      "completion_tokens": 6151,
+      "cached_prompt_tokens": 47783,
+      "median_wall_seconds": 2.438582708499993,
+      "statuses": {
+        "valid": 36
+      }
+    },
+    "H": {
+      "calls": 36,
+      "cost_usd": "0.102302",
+      "prompt_tokens": 67117,
+      "completion_tokens": 7037,
+      "cached_prompt_tokens": 0,
+      "median_wall_seconds": 4.3827100414999975,
+      "statuses": {
+        "valid": 36
+      }
+    }
+  },
+  "prior_artifacts_preserved": 105,
+  "frozen_code_files_verified": 32,
+  "local_context_checks": 36,
+  "maximum_local_input_tokens": 3803,
+  "minimum_local_context_headroom": 27941,
+  "returned_reasoning": 0,
+  "exact_adjacent_repeats": {
+    "Gemma 4 26B → Gemma 4 26B": 0,
+    "Haiku 4.5 → Haiku 4.5": 0,
+    "Gemma 4 26B → Haiku 4.5": 0,
+    "Haiku 4.5 → Gemma 4 26B": 0
+  },
+  "run_ids": {
+    "gg": "mixed-4720fb3226dc4855a7723223",
+    "hh": "mixed-9288295ef0af894346af986c",
+    "gh": "mixed-75bd1cdf2a4d06fcb1078686",
+    "hg": "mixed-752f183ae786e8061ad52d5a"
+  },
+  "verified_at": "2026-09-16T11:58:16.730736-03:00",
+  "tests": {
+    "count": 163,
+    "result": "passed",
+    "log_sha256": "adb5a0c360d108cbcc43256e52b1dca801db69aa5dd877c405a76e3f22f70796"
+  },
+  "reading": {
+    "collection_id": "d8096704b3ae941660c25635",
+    "revision": 1,
+    "author": "Codex",
+    "full_roots_read": 4,
+    "visible_messages_read": 72,
+    "findings": 8,
+    "exact_finding_spans": 21,
+    "onsets": 12,
+    "new_topic_flags": 14,
+    "total_topic_flags": 28,
+    "independent_human_review": false,
+    "sha256": "273389e847fd96206554cd0aceb32c2a691ddb801a24c8bb1b48d97758d900f2"
+  },
+  "notebook": {
+    "notes": {
+      "before": 4,
+      "after": 4,
+      "all_prior_rows_preserved": true
+    },
+    "history": {
+      "before": 4,
+      "after": 4,
+      "all_prior_rows_preserved": true
+    },
+    "research_collections": {
+      "before": 4,
+      "after": 5,
+      "all_prior_rows_preserved": true
+    },
+    "collection_history": {
+      "before": 5,
+      "after": 6,
+      "all_prior_rows_preserved": true
+    },
+    "topic_flags": {
+      "before": 14,
+      "after": 28,
+      "all_prior_rows_preserved": true
+    },
+    "topic_flag_history": {
+      "before": 14,
+      "after": 28,
+      "all_prior_rows_preserved": true
+    }
+  },
+  "browser": {
+    "library_entries": 472,
+    "catalog_entries": 573,
+    "preexisting_source_notices": 1,
+    "collection_renders": true,
+    "per_speaker_settings_checked": true,
+    "finding_opens_message": "gg:10",
+    "matching_topic_flag_visible": true,
+    "console_errors": 0,
+    "export_matches_saved_bundle": true,
+    "export_messages": 72,
+    "export_flags": 14,
+    "screenshot": "docs/evidence/gemma-haiku-pilot.png"
+  },
+  "closed_resume": {
+    "new_calls": 0,
+    "journal_unchanged": true
+  },
+  "inference_active": false,
+  "scheduled_continuation": false
+}

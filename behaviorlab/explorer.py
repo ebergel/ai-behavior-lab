@@ -27,6 +27,7 @@ from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
 REPORTS = [('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
+           ('mixed-dialogue', 'Gemma and Haiku: local–cloud dialogues', 'GEMMA-HAIKU-PILOT.md'),
            ('framing', 'Nemotron framing comparison', 'NEMOTRON-FRAMING.md'),
            ('cheap-framing', 'GPT-4o mini and Haiku comparison', 'CHEAP-MODEL-FRAMING.md'),
            ('gpt4o-screen', 'GPT-4o short cost and output screen', 'GPT4O-SHORT-SCREEN.md'),
@@ -232,6 +233,11 @@ class Catalog:
                     from .framing_explorer import load_framing
                     found,assessment=load_framing(path.parent); seen.add(first['hash'])
                     assessments.append(assessment)
+                    for run in found: runs[run['id']]=run
+                elif first.get('kind')=='mixed_dialogue_created':
+                    if first['hash'] in seen: continue
+                    from .mixed_explorer import load_mixed
+                    found=load_mixed(path.parent); seen.add(first['hash'])
                     for run in found: runs[run['id']]=run
                 elif first.get('kind')=='probe_batch_created':
                     from .probes import probe_report
