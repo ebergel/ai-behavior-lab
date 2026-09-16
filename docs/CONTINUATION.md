@@ -1,6 +1,14 @@
 # Continuation milestone: transcript exploration
 
-## Latest milestone: mini and Haiku participant comparison
+## Current direction: mixed partners and groups of three
+
+On 16 September the user broadened the priority: the generated dialogue is valuable research material beyond the initial nonduality hypothesis, and the laboratory should explore mixed models and groups of more than two participants. Three new practitioner notes on Haiku Mirror 2 messages 1, 5 and 8 inform the [mixed-dialogue exploration draft](MIXED-DIALOGUE-EXPLORATION.md). The four current personal notes remain unchanged and retain their authorship.
+
+Next coherent implementation milestone: introduce an explicit participant roster, per-speaker routing and faithful histories for mixed pairs and three-speaker groups; generalize the Explorer's X/Y-specific counts, maps and settings. Preserve existing journals and qualification boundaries. The proposed first exploration has eighteen fresh pair roots (same-model controls plus all mixed ordered pairs), then twelve trio roots (six different-model orders plus same-model controls). At thirty total messages each this is 900 main calls; the prior homogeneous bills give a rough $1.69 paid-share analogue, not a qualified mixed-model forecast. Exact protocols, technical-call allocation and aggregate budgets remain to be frozen before inference.
+
+Read for idea development, uptake, disagreement, changing identities, model-specific self-description and closure as well as experience and nonseparation. Keep open observations, surprising passages and alternative interpretations in a linked exploration collection. Human observations remain distinct from Codex findings and formal ratings. The identity/no-human 2×2 proposal remains useful as a later controlled study; it is no longer the sole immediate priority. This update is a documented plan, not a model run.
+
+## Latest completed experiment: mini and Haiku participant comparison
 
 Cost planning update, 16 September: use the [measured-token projections](CHEAP-MODEL-FRAMING.md#updated-cost-projections--16-september-2026). The eight-root twelve-message batch cost $0.1425; comparable balanced designs project about $0.68 for eight thirty-message roots, $3.38 for forty, or $8.46 for one hundred. Longer histories are included. Report spending ceilings separately from expected cost. The read-only estimator makes no model calls and does not authorize a new batch.
 

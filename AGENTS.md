@@ -12,6 +12,8 @@ When one workstream needs external information or independent human judgment, co
 
 Use [the continuation milestone](docs/CONTINUATION.md) as the immediate work package and update its status as work is completed. End an active work round at a meaningful completed milestone or an actual blocker, with the evidence and remaining dependencies recorded. Future scheduled wakeups require an actual scheduled task; report whether one has been activated.
 
+On 16 September the user broadened the immediate research direction to mixed-model pairs and groups of three, valuing first-hand dialogue exploration beyond the original attractor hypotheses. Follow `docs/MIXED-DIALOGUE-EXPLORATION.md` and the updated continuation milestone. Preserve open observations and counterexamples; do not define success by producing nonduality. The new participant roster, recipient histories and Explorer support need qualification before new inference. The design draft is not an executable freeze or authorization for arbitrary spending. Preserve the user's notebook authorship and keep their interpretations distinct from assistant findings.
+
 # Evidence and verification
 
 Keep generated campaigns and imported datasets under the ignored `workspace/` directory or another explicitly selected evidence directory. Label synthetic engineering output separately from actual inference and scientific results. Preserve exact source bytes and missing historical metadata.

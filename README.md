@@ -2,6 +2,8 @@
 
 A standalone local laboratory for controlled experiments on AI model behavior.
 
+The [next exploration](docs/MIXED-DIALOGUE-EXPLORATION.md) broadens the laboratory to mixed-model pairs and three-participant conversations, with close reading of how ideas develop, meet resistance or change direction. This design incorporates the researcher's new notes and treats interesting dialogue as a source of new questions. Implementation and protocol freezing precede new inference.
+
 The first instrument studies how participant configuration and access to conversation history affect self-play trajectories. The research questions include experience-focused discourse, relational meaning, nonseparation, repetition, and retained responsiveness. The experiment runner is designed to support later interventions without losing the exact inputs and outputs that produced an observation.
 
 This is a **new project and repository**. [llm-self-play-attractors](https://github.com/ebergel/llm-self-play-attractors) provides reference observations and an importable dataset. It is not a parent repository, submodule, runtime dependency, or codebase being extended here.
