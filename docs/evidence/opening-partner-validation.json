@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-09-16T14:36:36.561034-03:00",
+  "feature": "Opening-and-partner development study and Study workbench",
+  "collection_id": "f15547eb8cf7b85d4bcb413c",
+  "python_tests": 198,
+  "existing_javascript_tests": 10,
+  "new_reviews": 8,
+  "reused_reviews": 4,
+  "new_reading_messages": 48,
+  "prior_pilot_review_scope": "Four opening reviews retained; proposal/uptake spans rechecked",
+  "proposal_positions": {
+    "Y2": 9,
+    "X1": 2,
+    "X3": 1
+  },
+  "topics": {
+    "Gemma 4 26B → Gemma 4 26B": "Emergence",
+    "Haiku 4.5 → Haiku 4.5": "Authenticity",
+    "Gemma 4 26B → Haiku 4.5": "Reasoning styles",
+    "Haiku 4.5 → Gemma 4 26B": "Emergence",
+    "GPT-4o mini · Anonymous 1": "Science & technology",
+    "Claude Haiku 4.5 · Anonymous 1": "Participant identity & setup",
+    "GPT-4o mini · Mirror 1": "Stories & fiction",
+    "Claude Haiku 4.5 · Mirror 1": "Subjective experience",
+    "GPT-4o mini · Mirror 2": "Understanding",
+    "Claude Haiku 4.5 · Mirror 2": "Conversation itself",
+    "GPT-4o mini · Anonymous 2": "Science & technology",
+    "Claude Haiku 4.5 · Anonymous 2": "Participant identity & setup"
+  },
+  "original_database_rows_preserved": {
+    "notes": {
+      "before": 5,
+      "after": 5,
+      "added": 0
+    },
+    "history": {
+      "before": 5,
+      "after": 5,
+      "added": 0
+    },
+    "research_collections": {
+      "before": 5,
+      "after": 6,
+      "added": 1
+    },
+    "collection_history": {
+      "before": 6,
+      "after": 7,
+      "added": 1
+    },
+    "topic_flags": {
+      "before": 28,
+      "after": 28,
+      "added": 0
+    },
+    "topic_flag_history": {
+      "before": 28,
+      "after": 28,
+      "added": 0
+    },
+    "topic_dictionary": {
+      "before": 22,
+      "after": 23,
+      "added": 1
+    },
+    "topic_dictionary_history": {
+      "before": 22,
+      "after": 23,
+      "added": 1
+    },
+    "topic_openings": {
+      "before": 4,
+      "after": 12,
+      "added": 8
+    },
+    "topic_opening_history": {
+      "before": 4,
+      "after": 12,
+      "added": 8
+    },
+    "finder_views": {
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "finder_view_history": {
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "lab_musings": {
+      "before": 4,
+      "after": 5,
+      "added": 1
+    },
+    "lab_musing_history": {
+      "before": 4,
+      "after": 5,
+      "added": 1
+    }
+  },
+  "prior_artifacts_unchanged": 111,
+  "frozen_pilot_dependencies_verified": 32,
+  "pilot_journal_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+  "new_inference_calls": 0,
+  "new_cost_usd": "0",
+  "future_design_maximum_local_calls": 228,
+  "future_design_executed": false,
+  "browser_checks": [
+    "Four-opening selection limit",
+    "Protocol block selection",
+    "Prompt, identity, human-presence and requested-setting differences",
+    "Two mini mirror repetitions have equal recorded comparison fields and different reviewed opening topics",
+    "Read in context and return preserve cohort and selected runs",
+    "Full bookmarked-reader reload retains workbench return",
+    "Observation editor defaults to the source research collection; cancelled without saving",
+    "Prospective design opens with small-model candidates and 228-call ceiling",
+    "Model badges visible for opener, proposer, uptake and messages",
+    "No document horizontal overflow at desktop width",
+    "No application error logs"
+  ]
+}

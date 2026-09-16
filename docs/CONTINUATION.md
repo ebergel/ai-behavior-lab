@@ -1,6 +1,16 @@
 # Continuation milestone: transcript exploration
 
-## Latest completed milestone: Purpose & musings
+## Latest completed milestone: opening-and-partner development study
+
+The approved first step is complete: a bounded twelve-opening reading, a reusable **Study workbench**, and a concrete [prospective design](OPENING-PARTNER-DESIGN.md). [Opening & partner: who sets the direction?](OPENING-PARTNER-STUDY.md), collection `f15547eb8cf7b85d4bcb413c`, retains four pilot reviews and adds eight attributed mini/Haiku opening reviews. Five findings link exact proposal/uptake passages. The second speaker proposes the adopted topic in nine readings; the opener does so in three. Identity/setup negotiation now has its own provisional dictionary entry, with boundary cases recorded separately from experience claims.
+
+The workbench compares up to four openings from any research collection, shows protocol blocks, highlights recorded setting/prompt differences and unknowns, distinguishes opener/proposer/uptake, and preserves selection when opening a transcript. Existing evidence and earlier notes/collections/reviews remain intact. New reading is 48 framing messages plus checks of the reused pilot proposal/uptake spans; no new twelve-transcript full reading is claimed. No new inference or spending occurred.
+
+Next coherent milestone: implement and qualify the separately versioned local runner described in the design, then freeze and run the finite opening/partner pilot under the user's accepted direction. Installed candidates are `qwen3:4b` and `gemma4:e4b` (inventory reports 4.0B and 8.0B total parameters); their serving qualification is still pending. Planned allowance is at most eight technical checks, twenty eight-message roots across A–A/A–B/B–A/B–B, and sixty one-reply common-opening branches: 228 local calls total. Freeze exact prompts, task/seed allocations, effective controls, scoring guide, failure rules and executable hashes before any generation. Technical failure must be retained; do not substitute a candidate or increase caps without a revised design. Preserve the older four-root runner and all existing freezes.
+
+The design separates six-message adopted-topic outcomes from single-response partner moves and clusters repeated draws by source opening. It is a pilot with attributed exploratory coding, not a confirmatory causal estimate or independent human agreement. No scheduler or automation is active.
+
+## Previous completed milestone: Purpose & musings
 
 The researcher expanded the laboratory's purpose to AI–AI interaction across degrees of freedom, information disclosure, model diversity and mixtures, roles, sampling settings and factorial conditions. The central question is how much behavior comes from human direction, recurring model tendencies and their interaction. Small models provide a tractable starting point before testing transfer to larger systems. See the updated [research purpose](RESEARCH-PURPOSE.md).
 

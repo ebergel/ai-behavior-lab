@@ -23,13 +23,16 @@ from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
 from .topic_atlas import TopicAtlas
 from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
+from .study_workbench import build_workbench
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
 from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
-REPORTS = [('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
+REPORTS = [('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
+           ('opening-partner-design', 'Opening and partner: next study design', 'OPENING-PARTNER-DESIGN.md'),
+           ('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
            ('mixed-dialogue', 'Gemma and Haiku: local–cloud dialogues', 'GEMMA-HAIKU-PILOT.md'),
            ('framing', 'Nemotron framing comparison', 'NEMOTRON-FRAMING.md'),
@@ -419,7 +422,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/workbench.js','/workbench.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -444,6 +447,10 @@ def make_server(workspace, port=8765):
                     return self.send(finder_result(catalog,json.loads(q.get('filters',['{}'])[0]),studies,q.get('offset',['0'])[0]))
                 if path=='/api/finder/views': return self.send({'views':finder_views.all()})
                 if path=='/api/finder/export': return self.send(finder_views.export(),download='conversation-finder-views.json')
+                if path in ('/api/workbench','/api/workbench/export'):
+                    q=parse_qs(url.query,keep_blank_values=True);picks=q.get('picks',[None])[0]
+                    result=build_workbench(catalog,studies,topic_atlas,q.get('cohort',[''])[0],None if picks is None else [i for i in picks.split(',') if i])
+                    return self.send(result,**({'download':'opening-comparison.json'} if path.endswith('/export') else {}))
                 if path=='/api/musings': return self.send({'entries':musings.all(),'kinds':MUSING_KINDS,'statuses':MUSING_STATUSES})
                 if path=='/api/musings/export': return self.send(musings.export(),download='lab-purpose-and-musings.json')
                 if path.startswith('/api/musings/history/'):
