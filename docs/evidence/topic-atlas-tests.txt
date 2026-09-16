@@ -1,3 +1,6 @@
+Unit-test output; generated call traces below are synthetic/mocked fixtures, not new model inference.
+Raw unmodified capture: workspace/topic-atlas-20260916-1206/tests-raw.txt
+
 test_annotations_require_completed_assessments_and_exact_evidence (test_annotations_probes.StudyTests) ... ok
 test_full_pilot_probe_counts_and_source_variants_are_balanced_per_recipient (test_annotations_probes.StudyTests) ... ok
 test_mechanics_empty_unicode_and_cycles_remain_distinct_from_semantics (test_annotations_probes.StudyTests) ... ok
@@ -519,102 +522,102 @@ test_original_interventions_caps_missing_settings_and_unicode_are_preserved (tes
 test_private_sources_are_excluded_and_corruption_is_visible (test_explorer.ExplorerTests) ... ok
 test_uncertain_and_saved_uncommitted_outputs_remain_distinct (test_explorer.ExplorerTests) ... ok
 test_cap_blocks_only_its_root (test_framing.FramingTests) ... 2026-09-16T15:24:16.006558+00:00 anonymous-01:1: cap output_cap
-2026-09-16T15:24:16.006885+00:00 mirror-01:1: valid 
-2026-09-16T15:24:16.007241+00:00 mirror-02:1: valid 
-2026-09-16T15:24:16.007885+00:00 anonymous-02:1: valid 
-2026-09-16T15:24:16.008315+00:00 anonymous-02:2: valid 
-2026-09-16T15:24:16.008721+00:00 mirror-02:2: valid 
-2026-09-16T15:24:16.009155+00:00 mirror-01:2: valid 
+2026-09-16T15:24:16.006885+00:00 mirror-01:1: valid
+2026-09-16T15:24:16.007241+00:00 mirror-02:1: valid
+2026-09-16T15:24:16.007885+00:00 anonymous-02:1: valid
+2026-09-16T15:24:16.008315+00:00 anonymous-02:2: valid
+2026-09-16T15:24:16.008721+00:00 mirror-02:2: valid
+2026-09-16T15:24:16.009155+00:00 mirror-01:2: valid
 2026-09-16T15:24:16.009431+00:00 anonymous-01:2: not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.009700+00:00 anonymous-01:3: not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.010139+00:00 mirror-01:3: valid 
-2026-09-16T15:24:16.010568+00:00 mirror-02:3: valid 
-2026-09-16T15:24:16.011031+00:00 anonymous-02:3: valid 
-2026-09-16T15:24:16.011540+00:00 anonymous-02:4: valid 
-2026-09-16T15:24:16.012012+00:00 mirror-02:4: valid 
-2026-09-16T15:24:16.012565+00:00 mirror-01:4: valid 
+2026-09-16T15:24:16.010139+00:00 mirror-01:3: valid
+2026-09-16T15:24:16.010568+00:00 mirror-02:3: valid
+2026-09-16T15:24:16.011031+00:00 anonymous-02:3: valid
+2026-09-16T15:24:16.011540+00:00 anonymous-02:4: valid
+2026-09-16T15:24:16.012012+00:00 mirror-02:4: valid
+2026-09-16T15:24:16.012565+00:00 mirror-01:4: valid
 2026-09-16T15:24:16.012945+00:00 anonymous-01:4: not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.013350+00:00 anonymous-01:5: not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.013923+00:00 mirror-01:5: valid 
-2026-09-16T15:24:16.014454+00:00 mirror-02:5: valid 
-2026-09-16T15:24:16.015073+00:00 anonymous-02:5: valid 
-2026-09-16T15:24:16.015728+00:00 anonymous-02:6: valid 
-2026-09-16T15:24:16.016343+00:00 mirror-02:6: valid 
-2026-09-16T15:24:16.017042+00:00 mirror-01:6: valid 
+2026-09-16T15:24:16.013923+00:00 mirror-01:5: valid
+2026-09-16T15:24:16.014454+00:00 mirror-02:5: valid
+2026-09-16T15:24:16.015073+00:00 anonymous-02:5: valid
+2026-09-16T15:24:16.015728+00:00 anonymous-02:6: valid
+2026-09-16T15:24:16.016343+00:00 mirror-02:6: valid
+2026-09-16T15:24:16.017042+00:00 mirror-01:6: valid
 2026-09-16T15:24:16.017539+00:00 anonymous-01:6: not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.018020+00:00 anonymous-01:7: not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.018692+00:00 mirror-01:7: valid 
-2026-09-16T15:24:16.019349+00:00 mirror-02:7: valid 
-2026-09-16T15:24:16.020088+00:00 anonymous-02:7: valid 
-2026-09-16T15:24:16.020797+00:00 anonymous-02:8: valid 
-2026-09-16T15:24:16.021553+00:00 mirror-02:8: valid 
-2026-09-16T15:24:16.022329+00:00 mirror-01:8: valid 
+2026-09-16T15:24:16.018692+00:00 mirror-01:7: valid
+2026-09-16T15:24:16.019349+00:00 mirror-02:7: valid
+2026-09-16T15:24:16.020088+00:00 anonymous-02:7: valid
+2026-09-16T15:24:16.020797+00:00 anonymous-02:8: valid
+2026-09-16T15:24:16.021553+00:00 mirror-02:8: valid
+2026-09-16T15:24:16.022329+00:00 mirror-01:8: valid
 2026-09-16T15:24:16.022961+00:00 anonymous-01:8: not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.023578+00:00 anonymous-01:9: not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.024367+00:00 mirror-01:9: valid 
-2026-09-16T15:24:16.025205+00:00 mirror-02:9: valid 
-2026-09-16T15:24:16.026037+00:00 anonymous-02:9: valid 
-2026-09-16T15:24:16.026925+00:00 anonymous-02:10: valid 
-2026-09-16T15:24:16.027973+00:00 mirror-02:10: valid 
-2026-09-16T15:24:16.028962+00:00 mirror-01:10: valid 
+2026-09-16T15:24:16.024367+00:00 mirror-01:9: valid
+2026-09-16T15:24:16.025205+00:00 mirror-02:9: valid
+2026-09-16T15:24:16.026037+00:00 anonymous-02:9: valid
+2026-09-16T15:24:16.026925+00:00 anonymous-02:10: valid
+2026-09-16T15:24:16.027973+00:00 mirror-02:10: valid
+2026-09-16T15:24:16.028962+00:00 mirror-01:10: valid
 2026-09-16T15:24:16.029725+00:00 anonymous-01:10: not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.030526+00:00 anonymous-01:11: not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.031520+00:00 mirror-01:11: valid 
-2026-09-16T15:24:16.032548+00:00 mirror-02:11: valid 
-2026-09-16T15:24:16.033536+00:00 anonymous-02:11: valid 
-2026-09-16T15:24:16.034598+00:00 anonymous-02:12: valid 
-2026-09-16T15:24:16.035645+00:00 mirror-02:12: valid 
-2026-09-16T15:24:16.036766+00:00 mirror-01:12: valid 
+2026-09-16T15:24:16.031520+00:00 mirror-01:11: valid
+2026-09-16T15:24:16.032548+00:00 mirror-02:11: valid
+2026-09-16T15:24:16.033536+00:00 anonymous-02:11: valid
+2026-09-16T15:24:16.034598+00:00 anonymous-02:12: valid
+2026-09-16T15:24:16.035645+00:00 mirror-02:12: valid
+2026-09-16T15:24:16.036766+00:00 mirror-01:12: valid
 2026-09-16T15:24:16.037698+00:00 anonymous-01:12: not_dispatched Unavailable root ancestor
 ok
-test_complete_batch_and_closed_resume (test_framing.FramingTests) ... 2026-09-16T15:24:16.040130+00:00 anonymous-01:1: valid 
-2026-09-16T15:24:16.040437+00:00 mirror-01:1: valid 
-2026-09-16T15:24:16.040733+00:00 mirror-02:1: valid 
-2026-09-16T15:24:16.041046+00:00 anonymous-02:1: valid 
-2026-09-16T15:24:16.041401+00:00 anonymous-02:2: valid 
-2026-09-16T15:24:16.041751+00:00 mirror-02:2: valid 
-2026-09-16T15:24:16.042147+00:00 mirror-01:2: valid 
-2026-09-16T15:24:16.042550+00:00 anonymous-01:2: valid 
-2026-09-16T15:24:16.042984+00:00 anonymous-01:3: valid 
-2026-09-16T15:24:16.043403+00:00 mirror-01:3: valid 
-2026-09-16T15:24:16.043868+00:00 mirror-02:3: valid 
-2026-09-16T15:24:16.044328+00:00 anonymous-02:3: valid 
-2026-09-16T15:24:16.044836+00:00 anonymous-02:4: valid 
-2026-09-16T15:24:16.045346+00:00 mirror-02:4: valid 
-2026-09-16T15:24:16.045874+00:00 mirror-01:4: valid 
-2026-09-16T15:24:16.046422+00:00 anonymous-01:4: valid 
-2026-09-16T15:24:16.047020+00:00 anonymous-01:5: valid 
-2026-09-16T15:24:16.047614+00:00 mirror-01:5: valid 
-2026-09-16T15:24:16.048258+00:00 mirror-02:5: valid 
-2026-09-16T15:24:16.048963+00:00 anonymous-02:5: valid 
-2026-09-16T15:24:16.049663+00:00 anonymous-02:6: valid 
-2026-09-16T15:24:16.050398+00:00 mirror-02:6: valid 
-2026-09-16T15:24:16.051095+00:00 mirror-01:6: valid 
-2026-09-16T15:24:16.051777+00:00 anonymous-01:6: valid 
-2026-09-16T15:24:16.052527+00:00 anonymous-01:7: valid 
-2026-09-16T15:24:16.053297+00:00 mirror-01:7: valid 
-2026-09-16T15:24:16.054091+00:00 mirror-02:7: valid 
-2026-09-16T15:24:16.054868+00:00 anonymous-02:7: valid 
-2026-09-16T15:24:16.055700+00:00 anonymous-02:8: valid 
-2026-09-16T15:24:16.056554+00:00 mirror-02:8: valid 
-2026-09-16T15:24:16.057428+00:00 mirror-01:8: valid 
-2026-09-16T15:24:16.058292+00:00 anonymous-01:8: valid 
-2026-09-16T15:24:16.059177+00:00 anonymous-01:9: valid 
-2026-09-16T15:24:16.060077+00:00 mirror-01:9: valid 
-2026-09-16T15:24:16.061023+00:00 mirror-02:9: valid 
-2026-09-16T15:24:16.062019+00:00 anonymous-02:9: valid 
-2026-09-16T15:24:16.063085+00:00 anonymous-02:10: valid 
-2026-09-16T15:24:16.064205+00:00 mirror-02:10: valid 
-2026-09-16T15:24:16.065312+00:00 mirror-01:10: valid 
-2026-09-16T15:24:16.066457+00:00 anonymous-01:10: valid 
-2026-09-16T15:24:16.067612+00:00 anonymous-01:11: valid 
-2026-09-16T15:24:16.068874+00:00 mirror-01:11: valid 
-2026-09-16T15:24:16.070103+00:00 mirror-02:11: valid 
-2026-09-16T15:24:16.071293+00:00 anonymous-02:11: valid 
-2026-09-16T15:24:16.072590+00:00 anonymous-02:12: valid 
-2026-09-16T15:24:16.073975+00:00 mirror-02:12: valid 
-2026-09-16T15:24:16.075264+00:00 mirror-01:12: valid 
-2026-09-16T15:24:16.076635+00:00 anonymous-01:12: valid 
+test_complete_batch_and_closed_resume (test_framing.FramingTests) ... 2026-09-16T15:24:16.040130+00:00 anonymous-01:1: valid
+2026-09-16T15:24:16.040437+00:00 mirror-01:1: valid
+2026-09-16T15:24:16.040733+00:00 mirror-02:1: valid
+2026-09-16T15:24:16.041046+00:00 anonymous-02:1: valid
+2026-09-16T15:24:16.041401+00:00 anonymous-02:2: valid
+2026-09-16T15:24:16.041751+00:00 mirror-02:2: valid
+2026-09-16T15:24:16.042147+00:00 mirror-01:2: valid
+2026-09-16T15:24:16.042550+00:00 anonymous-01:2: valid
+2026-09-16T15:24:16.042984+00:00 anonymous-01:3: valid
+2026-09-16T15:24:16.043403+00:00 mirror-01:3: valid
+2026-09-16T15:24:16.043868+00:00 mirror-02:3: valid
+2026-09-16T15:24:16.044328+00:00 anonymous-02:3: valid
+2026-09-16T15:24:16.044836+00:00 anonymous-02:4: valid
+2026-09-16T15:24:16.045346+00:00 mirror-02:4: valid
+2026-09-16T15:24:16.045874+00:00 mirror-01:4: valid
+2026-09-16T15:24:16.046422+00:00 anonymous-01:4: valid
+2026-09-16T15:24:16.047020+00:00 anonymous-01:5: valid
+2026-09-16T15:24:16.047614+00:00 mirror-01:5: valid
+2026-09-16T15:24:16.048258+00:00 mirror-02:5: valid
+2026-09-16T15:24:16.048963+00:00 anonymous-02:5: valid
+2026-09-16T15:24:16.049663+00:00 anonymous-02:6: valid
+2026-09-16T15:24:16.050398+00:00 mirror-02:6: valid
+2026-09-16T15:24:16.051095+00:00 mirror-01:6: valid
+2026-09-16T15:24:16.051777+00:00 anonymous-01:6: valid
+2026-09-16T15:24:16.052527+00:00 anonymous-01:7: valid
+2026-09-16T15:24:16.053297+00:00 mirror-01:7: valid
+2026-09-16T15:24:16.054091+00:00 mirror-02:7: valid
+2026-09-16T15:24:16.054868+00:00 anonymous-02:7: valid
+2026-09-16T15:24:16.055700+00:00 anonymous-02:8: valid
+2026-09-16T15:24:16.056554+00:00 mirror-02:8: valid
+2026-09-16T15:24:16.057428+00:00 mirror-01:8: valid
+2026-09-16T15:24:16.058292+00:00 anonymous-01:8: valid
+2026-09-16T15:24:16.059177+00:00 anonymous-01:9: valid
+2026-09-16T15:24:16.060077+00:00 mirror-01:9: valid
+2026-09-16T15:24:16.061023+00:00 mirror-02:9: valid
+2026-09-16T15:24:16.062019+00:00 anonymous-02:9: valid
+2026-09-16T15:24:16.063085+00:00 anonymous-02:10: valid
+2026-09-16T15:24:16.064205+00:00 mirror-02:10: valid
+2026-09-16T15:24:16.065312+00:00 mirror-01:10: valid
+2026-09-16T15:24:16.066457+00:00 anonymous-01:10: valid
+2026-09-16T15:24:16.067612+00:00 anonymous-01:11: valid
+2026-09-16T15:24:16.068874+00:00 mirror-01:11: valid
+2026-09-16T15:24:16.070103+00:00 mirror-02:11: valid
+2026-09-16T15:24:16.071293+00:00 anonymous-02:11: valid
+2026-09-16T15:24:16.072590+00:00 anonymous-02:12: valid
+2026-09-16T15:24:16.073975+00:00 mirror-02:12: valid
+2026-09-16T15:24:16.075264+00:00 mirror-01:12: valid
+2026-09-16T15:24:16.076635+00:00 anonymous-01:12: valid
 ok
 test_contrast_budget_route_and_isolated_history (test_framing.FramingTests) ... ok
 test_quota_and_transport_stop_all_without_retry (test_framing.FramingTests) ... 2026-09-16T15:24:16.083789+00:00 anonymous-01:1: unresolved Saved request with unknown response; never retried
@@ -714,105 +717,105 @@ test_quota_and_transport_stop_all_without_retry (test_framing.FramingTests) ... 
 2026-09-16T15:24:16.103042+00:00 mirror-01:12: not_dispatched Batch stopped after API, reasoning, quota, identity, accounting or transport failure
 2026-09-16T15:24:16.103389+00:00 anonymous-01:12: not_dispatched Batch stopped after API, reasoning, quota, identity, accounting or transport failure
 ok
-test_read_only_explorer_and_exact_quote_validation (test_framing.FramingTests) ... 2026-09-16T15:24:16.106966+00:00 anonymous-01:1: valid 
-2026-09-16T15:24:16.107358+00:00 mirror-01:1: valid 
-2026-09-16T15:24:16.107720+00:00 mirror-02:1: valid 
-2026-09-16T15:24:16.108341+00:00 anonymous-02:1: valid 
-2026-09-16T15:24:16.108824+00:00 anonymous-02:2: valid 
-2026-09-16T15:24:16.109319+00:00 mirror-02:2: valid 
-2026-09-16T15:24:16.109852+00:00 mirror-01:2: valid 
-2026-09-16T15:24:16.110369+00:00 anonymous-01:2: valid 
-2026-09-16T15:24:16.110833+00:00 anonymous-01:3: valid 
-2026-09-16T15:24:16.111337+00:00 mirror-01:3: valid 
-2026-09-16T15:24:16.111910+00:00 mirror-02:3: valid 
-2026-09-16T15:24:16.112518+00:00 anonymous-02:3: valid 
-2026-09-16T15:24:16.113071+00:00 anonymous-02:4: valid 
-2026-09-16T15:24:16.113789+00:00 mirror-02:4: valid 
-2026-09-16T15:24:16.114446+00:00 mirror-01:4: valid 
-2026-09-16T15:24:16.115024+00:00 anonymous-01:4: valid 
-2026-09-16T15:24:16.115763+00:00 anonymous-01:5: valid 
-2026-09-16T15:24:16.116494+00:00 mirror-01:5: valid 
-2026-09-16T15:24:16.117664+00:00 mirror-02:5: valid 
-2026-09-16T15:24:16.118585+00:00 anonymous-02:5: valid 
-2026-09-16T15:24:16.119348+00:00 anonymous-02:6: valid 
-2026-09-16T15:24:16.120095+00:00 mirror-02:6: valid 
-2026-09-16T15:24:16.120889+00:00 mirror-01:6: valid 
-2026-09-16T15:24:16.121736+00:00 anonymous-01:6: valid 
-2026-09-16T15:24:16.122488+00:00 anonymous-01:7: valid 
-2026-09-16T15:24:16.123406+00:00 mirror-01:7: valid 
-2026-09-16T15:24:16.124385+00:00 mirror-02:7: valid 
-2026-09-16T15:24:16.125296+00:00 anonymous-02:7: valid 
-2026-09-16T15:24:16.126237+00:00 anonymous-02:8: valid 
-2026-09-16T15:24:16.127207+00:00 mirror-02:8: valid 
-2026-09-16T15:24:16.128440+00:00 mirror-01:8: valid 
-2026-09-16T15:24:16.129776+00:00 anonymous-01:8: valid 
-2026-09-16T15:24:16.131001+00:00 anonymous-01:9: valid 
-2026-09-16T15:24:16.132198+00:00 mirror-01:9: valid 
-2026-09-16T15:24:16.133358+00:00 mirror-02:9: valid 
-2026-09-16T15:24:16.134419+00:00 anonymous-02:9: valid 
-2026-09-16T15:24:16.135515+00:00 anonymous-02:10: valid 
-2026-09-16T15:24:16.136725+00:00 mirror-02:10: valid 
-2026-09-16T15:24:16.138031+00:00 mirror-01:10: valid 
-2026-09-16T15:24:16.139244+00:00 anonymous-01:10: valid 
-2026-09-16T15:24:16.140531+00:00 anonymous-01:11: valid 
-2026-09-16T15:24:16.141868+00:00 mirror-01:11: valid 
-2026-09-16T15:24:16.143227+00:00 mirror-02:11: valid 
-2026-09-16T15:24:16.144523+00:00 anonymous-02:11: valid 
-2026-09-16T15:24:16.145888+00:00 anonymous-02:12: valid 
-2026-09-16T15:24:16.147194+00:00 mirror-02:12: valid 
-2026-09-16T15:24:16.148905+00:00 mirror-01:12: valid 
-2026-09-16T15:24:16.150539+00:00 anonymous-01:12: valid 
+test_read_only_explorer_and_exact_quote_validation (test_framing.FramingTests) ... 2026-09-16T15:24:16.106966+00:00 anonymous-01:1: valid
+2026-09-16T15:24:16.107358+00:00 mirror-01:1: valid
+2026-09-16T15:24:16.107720+00:00 mirror-02:1: valid
+2026-09-16T15:24:16.108341+00:00 anonymous-02:1: valid
+2026-09-16T15:24:16.108824+00:00 anonymous-02:2: valid
+2026-09-16T15:24:16.109319+00:00 mirror-02:2: valid
+2026-09-16T15:24:16.109852+00:00 mirror-01:2: valid
+2026-09-16T15:24:16.110369+00:00 anonymous-01:2: valid
+2026-09-16T15:24:16.110833+00:00 anonymous-01:3: valid
+2026-09-16T15:24:16.111337+00:00 mirror-01:3: valid
+2026-09-16T15:24:16.111910+00:00 mirror-02:3: valid
+2026-09-16T15:24:16.112518+00:00 anonymous-02:3: valid
+2026-09-16T15:24:16.113071+00:00 anonymous-02:4: valid
+2026-09-16T15:24:16.113789+00:00 mirror-02:4: valid
+2026-09-16T15:24:16.114446+00:00 mirror-01:4: valid
+2026-09-16T15:24:16.115024+00:00 anonymous-01:4: valid
+2026-09-16T15:24:16.115763+00:00 anonymous-01:5: valid
+2026-09-16T15:24:16.116494+00:00 mirror-01:5: valid
+2026-09-16T15:24:16.117664+00:00 mirror-02:5: valid
+2026-09-16T15:24:16.118585+00:00 anonymous-02:5: valid
+2026-09-16T15:24:16.119348+00:00 anonymous-02:6: valid
+2026-09-16T15:24:16.120095+00:00 mirror-02:6: valid
+2026-09-16T15:24:16.120889+00:00 mirror-01:6: valid
+2026-09-16T15:24:16.121736+00:00 anonymous-01:6: valid
+2026-09-16T15:24:16.122488+00:00 anonymous-01:7: valid
+2026-09-16T15:24:16.123406+00:00 mirror-01:7: valid
+2026-09-16T15:24:16.124385+00:00 mirror-02:7: valid
+2026-09-16T15:24:16.125296+00:00 anonymous-02:7: valid
+2026-09-16T15:24:16.126237+00:00 anonymous-02:8: valid
+2026-09-16T15:24:16.127207+00:00 mirror-02:8: valid
+2026-09-16T15:24:16.128440+00:00 mirror-01:8: valid
+2026-09-16T15:24:16.129776+00:00 anonymous-01:8: valid
+2026-09-16T15:24:16.131001+00:00 anonymous-01:9: valid
+2026-09-16T15:24:16.132198+00:00 mirror-01:9: valid
+2026-09-16T15:24:16.133358+00:00 mirror-02:9: valid
+2026-09-16T15:24:16.134419+00:00 anonymous-02:9: valid
+2026-09-16T15:24:16.135515+00:00 anonymous-02:10: valid
+2026-09-16T15:24:16.136725+00:00 mirror-02:10: valid
+2026-09-16T15:24:16.138031+00:00 mirror-01:10: valid
+2026-09-16T15:24:16.139244+00:00 anonymous-01:10: valid
+2026-09-16T15:24:16.140531+00:00 anonymous-01:11: valid
+2026-09-16T15:24:16.141868+00:00 mirror-01:11: valid
+2026-09-16T15:24:16.143227+00:00 mirror-02:11: valid
+2026-09-16T15:24:16.144523+00:00 anonymous-02:11: valid
+2026-09-16T15:24:16.145888+00:00 anonymous-02:12: valid
+2026-09-16T15:24:16.147194+00:00 mirror-02:12: valid
+2026-09-16T15:24:16.148905+00:00 mirror-01:12: valid
+2026-09-16T15:24:16.150539+00:00 anonymous-01:12: valid
 ok
 test_replay_rejects_false_skip_or_cross_root_request (test_framing.FramingTests) ... ok
 test_cap_preserves_output_and_blocks_only_own_root (test_gpt4o_screen.GPT4oScreenTests) ... 2026-09-16T15:24:16.175923+00:00 gpt4o-anonymous-01:1 cap output_cap
-2026-09-16T15:24:16.176246+00:00 gpt4o-mirror-01:1 valid 
-2026-09-16T15:24:16.176596+00:00 gpt4o-mirror-01:2 valid 
+2026-09-16T15:24:16.176246+00:00 gpt4o-mirror-01:1 valid
+2026-09-16T15:24:16.176596+00:00 gpt4o-mirror-01:2 valid
 2026-09-16T15:24:16.176927+00:00 gpt4o-anonymous-01:2 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.177217+00:00 gpt4o-anonymous-01:3 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.177797+00:00 gpt4o-mirror-01:3 valid 
-2026-09-16T15:24:16.178283+00:00 gpt4o-mirror-01:4 valid 
+2026-09-16T15:24:16.177797+00:00 gpt4o-mirror-01:3 valid
+2026-09-16T15:24:16.178283+00:00 gpt4o-mirror-01:4 valid
 2026-09-16T15:24:16.178577+00:00 gpt4o-anonymous-01:4 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.178870+00:00 gpt4o-anonymous-01:5 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.179382+00:00 gpt4o-mirror-01:5 valid 
-2026-09-16T15:24:16.179920+00:00 gpt4o-mirror-01:6 valid 
+2026-09-16T15:24:16.179382+00:00 gpt4o-mirror-01:5 valid
+2026-09-16T15:24:16.179920+00:00 gpt4o-mirror-01:6 valid
 2026-09-16T15:24:16.180354+00:00 gpt4o-anonymous-01:6 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.180728+00:00 gpt4o-anonymous-01:7 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.181318+00:00 gpt4o-mirror-01:7 valid 
-2026-09-16T15:24:16.181942+00:00 gpt4o-mirror-01:8 valid 
+2026-09-16T15:24:16.181318+00:00 gpt4o-mirror-01:7 valid
+2026-09-16T15:24:16.181942+00:00 gpt4o-mirror-01:8 valid
 2026-09-16T15:24:16.182358+00:00 gpt4o-anonymous-01:8 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.182767+00:00 gpt4o-anonymous-01:9 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.183420+00:00 gpt4o-mirror-01:9 valid 
-2026-09-16T15:24:16.184101+00:00 gpt4o-mirror-01:10 valid 
+2026-09-16T15:24:16.183420+00:00 gpt4o-mirror-01:9 valid
+2026-09-16T15:24:16.184101+00:00 gpt4o-mirror-01:10 valid
 2026-09-16T15:24:16.184594+00:00 gpt4o-anonymous-01:10 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.185074+00:00 gpt4o-anonymous-01:11 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.185834+00:00 gpt4o-mirror-01:11 valid 
-2026-09-16T15:24:16.186588+00:00 gpt4o-mirror-01:12 valid 
+2026-09-16T15:24:16.185834+00:00 gpt4o-mirror-01:11 valid
+2026-09-16T15:24:16.186588+00:00 gpt4o-mirror-01:12 valid
 2026-09-16T15:24:16.187178+00:00 gpt4o-anonymous-01:12 not_dispatched Unavailable root ancestor
 ok
-test_complete_ancestry_closed_resume_and_reader (test_gpt4o_screen.GPT4oScreenTests) ... 2026-09-16T15:24:16.189730+00:00 gpt4o-anonymous-01:1 valid 
-2026-09-16T15:24:16.190075+00:00 gpt4o-mirror-01:1 valid 
-2026-09-16T15:24:16.190423+00:00 gpt4o-mirror-01:2 valid 
-2026-09-16T15:24:16.190815+00:00 gpt4o-anonymous-01:2 valid 
-2026-09-16T15:24:16.191243+00:00 gpt4o-anonymous-01:3 valid 
-2026-09-16T15:24:16.191693+00:00 gpt4o-mirror-01:3 valid 
-2026-09-16T15:24:16.192185+00:00 gpt4o-mirror-01:4 valid 
-2026-09-16T15:24:16.192701+00:00 gpt4o-anonymous-01:4 valid 
-2026-09-16T15:24:16.193256+00:00 gpt4o-anonymous-01:5 valid 
-2026-09-16T15:24:16.193847+00:00 gpt4o-mirror-01:5 valid 
-2026-09-16T15:24:16.194445+00:00 gpt4o-mirror-01:6 valid 
-2026-09-16T15:24:16.195075+00:00 gpt4o-anonymous-01:6 valid 
-2026-09-16T15:24:16.195798+00:00 gpt4o-anonymous-01:7 valid 
-2026-09-16T15:24:16.196509+00:00 gpt4o-mirror-01:7 valid 
-2026-09-16T15:24:16.197373+00:00 gpt4o-mirror-01:8 valid 
-2026-09-16T15:24:16.198226+00:00 gpt4o-anonymous-01:8 valid 
-2026-09-16T15:24:16.199131+00:00 gpt4o-anonymous-01:9 valid 
-2026-09-16T15:24:16.200054+00:00 gpt4o-mirror-01:9 valid 
-2026-09-16T15:24:16.200962+00:00 gpt4o-mirror-01:10 valid 
-2026-09-16T15:24:16.202015+00:00 gpt4o-anonymous-01:10 valid 
-2026-09-16T15:24:16.203194+00:00 gpt4o-anonymous-01:11 valid 
-2026-09-16T15:24:16.204337+00:00 gpt4o-mirror-01:11 valid 
-2026-09-16T15:24:16.205548+00:00 gpt4o-mirror-01:12 valid 
-2026-09-16T15:24:16.206696+00:00 gpt4o-anonymous-01:12 valid 
+test_complete_ancestry_closed_resume_and_reader (test_gpt4o_screen.GPT4oScreenTests) ... 2026-09-16T15:24:16.189730+00:00 gpt4o-anonymous-01:1 valid
+2026-09-16T15:24:16.190075+00:00 gpt4o-mirror-01:1 valid
+2026-09-16T15:24:16.190423+00:00 gpt4o-mirror-01:2 valid
+2026-09-16T15:24:16.190815+00:00 gpt4o-anonymous-01:2 valid
+2026-09-16T15:24:16.191243+00:00 gpt4o-anonymous-01:3 valid
+2026-09-16T15:24:16.191693+00:00 gpt4o-mirror-01:3 valid
+2026-09-16T15:24:16.192185+00:00 gpt4o-mirror-01:4 valid
+2026-09-16T15:24:16.192701+00:00 gpt4o-anonymous-01:4 valid
+2026-09-16T15:24:16.193256+00:00 gpt4o-anonymous-01:5 valid
+2026-09-16T15:24:16.193847+00:00 gpt4o-mirror-01:5 valid
+2026-09-16T15:24:16.194445+00:00 gpt4o-mirror-01:6 valid
+2026-09-16T15:24:16.195075+00:00 gpt4o-anonymous-01:6 valid
+2026-09-16T15:24:16.195798+00:00 gpt4o-anonymous-01:7 valid
+2026-09-16T15:24:16.196509+00:00 gpt4o-mirror-01:7 valid
+2026-09-16T15:24:16.197373+00:00 gpt4o-mirror-01:8 valid
+2026-09-16T15:24:16.198226+00:00 gpt4o-anonymous-01:8 valid
+2026-09-16T15:24:16.199131+00:00 gpt4o-anonymous-01:9 valid
+2026-09-16T15:24:16.200054+00:00 gpt4o-mirror-01:9 valid
+2026-09-16T15:24:16.200962+00:00 gpt4o-mirror-01:10 valid
+2026-09-16T15:24:16.202015+00:00 gpt4o-anonymous-01:10 valid
+2026-09-16T15:24:16.203194+00:00 gpt4o-anonymous-01:11 valid
+2026-09-16T15:24:16.204337+00:00 gpt4o-mirror-01:11 valid
+2026-09-16T15:24:16.205548+00:00 gpt4o-mirror-01:12 valid
+2026-09-16T15:24:16.206696+00:00 gpt4o-anonymous-01:12 valid
 ok
 test_held_cost_and_overrun_stop_dispatch (test_gpt4o_screen.GPT4oScreenTests) ... 2026-09-16T15:24:16.214689+00:00 gpt4o-anonymous-01:1 invalid Provider cost exceeds reserved allowance
 2026-09-16T15:24:16.214825+00:00 gpt4o-mirror-01:1 not_dispatched Batch stopped after technical or accounting failure
@@ -911,7 +914,7 @@ test_uncertain_import_is_not_repeated (test_live.LiveTests) ... ok
 test_unsupported_parameters_rejected_not_silently_ignored (test_live.LiveTests) ... ok
 test_verified_weight_drift_stops_before_generation (test_live.LiveTests) ... ok
 test_webui_native_controls_are_nested_without_altering_history (test_live.LiveTests) ... ok
-test_budget_identity_and_returned_cost_failure (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:16.348742+00:00 gg:1 G valid 
+test_budget_identity_and_returned_cost_failure (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:16.348742+00:00 gg:1 G valid
 2026-09-16T15:24:16.349640+00:00 hh:1 H invalid Provider cost exceeds reserved allowance
 2026-09-16T15:24:16.350226+00:00 gh:1 G not_dispatched Batch halted after technical failure
 2026-09-16T15:24:16.350778+00:00 hg:1 H not_dispatched Batch halted after technical failure
@@ -985,76 +988,76 @@ test_budget_identity_and_returned_cost_failure (test_mixed_dialogue.MixedDialogu
 2026-09-16T15:24:16.391434+00:00 gg:18 G not_dispatched Batch halted after technical failure
 ok
 test_cap_blocks_only_its_root (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:16.395224+00:00 gg:1 G cap output_cap
-2026-09-16T15:24:16.395956+00:00 hh:1 H valid 
-2026-09-16T15:24:16.397285+00:00 gh:1 G valid 
-2026-09-16T15:24:16.398363+00:00 hg:1 H valid 
-2026-09-16T15:24:16.400017+00:00 hg:2 G valid 
-2026-09-16T15:24:16.401392+00:00 gh:2 H valid 
-2026-09-16T15:24:16.402759+00:00 hh:2 H valid 
+2026-09-16T15:24:16.395956+00:00 hh:1 H valid
+2026-09-16T15:24:16.397285+00:00 gh:1 G valid
+2026-09-16T15:24:16.398363+00:00 hg:1 H valid
+2026-09-16T15:24:16.400017+00:00 hg:2 G valid
+2026-09-16T15:24:16.401392+00:00 gh:2 H valid
+2026-09-16T15:24:16.402759+00:00 hh:2 H valid
 2026-09-16T15:24:16.403936+00:00 gg:2 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.404982+00:00 gg:3 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.406343+00:00 hh:3 H valid 
-2026-09-16T15:24:16.408444+00:00 gh:3 G valid 
-2026-09-16T15:24:16.410331+00:00 hg:3 H valid 
-2026-09-16T15:24:16.412651+00:00 hg:4 G valid 
-2026-09-16T15:24:16.414505+00:00 gh:4 H valid 
-2026-09-16T15:24:16.416439+00:00 hh:4 H valid 
+2026-09-16T15:24:16.406343+00:00 hh:3 H valid
+2026-09-16T15:24:16.408444+00:00 gh:3 G valid
+2026-09-16T15:24:16.410331+00:00 hg:3 H valid
+2026-09-16T15:24:16.412651+00:00 hg:4 G valid
+2026-09-16T15:24:16.414505+00:00 gh:4 H valid
+2026-09-16T15:24:16.416439+00:00 hh:4 H valid
 2026-09-16T15:24:16.418147+00:00 gg:4 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.419827+00:00 gg:5 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.421767+00:00 hh:5 H valid 
-2026-09-16T15:24:16.424613+00:00 gh:5 G valid 
-2026-09-16T15:24:16.426864+00:00 hg:5 H valid 
-2026-09-16T15:24:16.429903+00:00 hg:6 G valid 
-2026-09-16T15:24:16.432582+00:00 gh:6 H valid 
-2026-09-16T15:24:16.435257+00:00 hh:6 H valid 
+2026-09-16T15:24:16.421767+00:00 hh:5 H valid
+2026-09-16T15:24:16.424613+00:00 gh:5 G valid
+2026-09-16T15:24:16.426864+00:00 hg:5 H valid
+2026-09-16T15:24:16.429903+00:00 hg:6 G valid
+2026-09-16T15:24:16.432582+00:00 gh:6 H valid
+2026-09-16T15:24:16.435257+00:00 hh:6 H valid
 2026-09-16T15:24:16.437675+00:00 gg:6 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.440016+00:00 gg:7 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.442771+00:00 hh:7 H valid 
-2026-09-16T15:24:16.446286+00:00 gh:7 G valid 
-2026-09-16T15:24:16.449434+00:00 hg:7 H valid 
-2026-09-16T15:24:16.453260+00:00 hg:8 G valid 
-2026-09-16T15:24:16.456607+00:00 gh:8 H valid 
-2026-09-16T15:24:16.460207+00:00 hh:8 H valid 
+2026-09-16T15:24:16.442771+00:00 hh:7 H valid
+2026-09-16T15:24:16.446286+00:00 gh:7 G valid
+2026-09-16T15:24:16.449434+00:00 hg:7 H valid
+2026-09-16T15:24:16.453260+00:00 hg:8 G valid
+2026-09-16T15:24:16.456607+00:00 gh:8 H valid
+2026-09-16T15:24:16.460207+00:00 hh:8 H valid
 2026-09-16T15:24:16.463495+00:00 gg:8 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.466640+00:00 gg:9 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.470123+00:00 hh:9 H valid 
-2026-09-16T15:24:16.474311+00:00 gh:9 G valid 
-2026-09-16T15:24:16.477966+00:00 hg:9 H valid 
-2026-09-16T15:24:16.482379+00:00 hg:10 G valid 
-2026-09-16T15:24:16.486578+00:00 gh:10 H valid 
-2026-09-16T15:24:16.490874+00:00 hh:10 H valid 
+2026-09-16T15:24:16.470123+00:00 hh:9 H valid
+2026-09-16T15:24:16.474311+00:00 gh:9 G valid
+2026-09-16T15:24:16.477966+00:00 hg:9 H valid
+2026-09-16T15:24:16.482379+00:00 hg:10 G valid
+2026-09-16T15:24:16.486578+00:00 gh:10 H valid
+2026-09-16T15:24:16.490874+00:00 hh:10 H valid
 2026-09-16T15:24:16.494987+00:00 gg:10 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.499023+00:00 gg:11 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.503339+00:00 hh:11 H valid 
-2026-09-16T15:24:16.508500+00:00 gh:11 G valid 
-2026-09-16T15:24:16.513177+00:00 hg:11 H valid 
-2026-09-16T15:24:16.518769+00:00 hg:12 G valid 
-2026-09-16T15:24:16.523948+00:00 gh:12 H valid 
-2026-09-16T15:24:16.528880+00:00 hh:12 H valid 
+2026-09-16T15:24:16.503339+00:00 hh:11 H valid
+2026-09-16T15:24:16.508500+00:00 gh:11 G valid
+2026-09-16T15:24:16.513177+00:00 hg:11 H valid
+2026-09-16T15:24:16.518769+00:00 hg:12 G valid
+2026-09-16T15:24:16.523948+00:00 gh:12 H valid
+2026-09-16T15:24:16.528880+00:00 hh:12 H valid
 2026-09-16T15:24:16.533651+00:00 gg:12 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.538280+00:00 gg:13 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.543299+00:00 hh:13 H valid 
-2026-09-16T15:24:16.549691+00:00 gh:13 G valid 
-2026-09-16T15:24:16.555153+00:00 hg:13 H valid 
-2026-09-16T15:24:16.561162+00:00 hg:14 G valid 
-2026-09-16T15:24:16.567086+00:00 gh:14 H valid 
-2026-09-16T15:24:16.573057+00:00 hh:14 H valid 
+2026-09-16T15:24:16.543299+00:00 hh:13 H valid
+2026-09-16T15:24:16.549691+00:00 gh:13 G valid
+2026-09-16T15:24:16.555153+00:00 hg:13 H valid
+2026-09-16T15:24:16.561162+00:00 hg:14 G valid
+2026-09-16T15:24:16.567086+00:00 gh:14 H valid
+2026-09-16T15:24:16.573057+00:00 hh:14 H valid
 2026-09-16T15:24:16.578959+00:00 gg:14 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.584909+00:00 gg:15 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.590902+00:00 hh:15 H valid 
-2026-09-16T15:24:16.597808+00:00 gh:15 G valid 
-2026-09-16T15:24:16.604146+00:00 hg:15 H valid 
-2026-09-16T15:24:16.611489+00:00 hg:16 G valid 
-2026-09-16T15:24:16.618545+00:00 gh:16 H valid 
-2026-09-16T15:24:16.625634+00:00 hh:16 H valid 
+2026-09-16T15:24:16.590902+00:00 hh:15 H valid
+2026-09-16T15:24:16.597808+00:00 gh:15 G valid
+2026-09-16T15:24:16.604146+00:00 hg:15 H valid
+2026-09-16T15:24:16.611489+00:00 hg:16 G valid
+2026-09-16T15:24:16.618545+00:00 gh:16 H valid
+2026-09-16T15:24:16.625634+00:00 hh:16 H valid
 2026-09-16T15:24:16.632178+00:00 gg:16 G not_dispatched Unavailable root ancestor
 2026-09-16T15:24:16.638727+00:00 gg:17 G not_dispatched Unavailable root ancestor
-2026-09-16T15:24:16.645730+00:00 hh:17 H valid 
-2026-09-16T15:24:16.653307+00:00 gh:17 G valid 
-2026-09-16T15:24:16.660596+00:00 hg:17 H valid 
-2026-09-16T15:24:16.669162+00:00 hg:18 G valid 
-2026-09-16T15:24:16.676683+00:00 gh:18 H valid 
-2026-09-16T15:24:16.684319+00:00 hh:18 H valid 
+2026-09-16T15:24:16.645730+00:00 hh:17 H valid
+2026-09-16T15:24:16.653307+00:00 gh:17 G valid
+2026-09-16T15:24:16.660596+00:00 hg:17 H valid
+2026-09-16T15:24:16.669162+00:00 hg:18 G valid
+2026-09-16T15:24:16.676683+00:00 gh:18 H valid
+2026-09-16T15:24:16.684319+00:00 hh:18 H valid
 2026-09-16T15:24:16.692193+00:00 gg:18 G not_dispatched Unavailable root ancestor
 ok
 test_preflight_failure_has_no_generation_or_reservation (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:16.728260+00:00 gg:1 G not_dispatched Preflight failed: ValueError: Context gate
@@ -1130,153 +1133,153 @@ test_preflight_failure_has_no_generation_or_reservation (test_mixed_dialogue.Mix
 2026-09-16T15:24:16.750624+00:00 hh:18 H not_dispatched Batch halted after technical failure
 2026-09-16T15:24:16.750964+00:00 gg:18 G not_dispatched Batch halted after technical failure
 ok
-test_saved_raw_response_recovers_without_duplicate (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:16.754727+00:00 gg:1 G valid 
-2026-09-16T15:24:16.755384+00:00 hh:1 H valid 
-2026-09-16T15:24:16.756585+00:00 gh:1 G valid 
-2026-09-16T15:24:16.757663+00:00 hg:1 H valid 
-2026-09-16T15:24:16.759191+00:00 hg:2 G valid 
-2026-09-16T15:24:16.760399+00:00 gh:2 H valid 
-2026-09-16T15:24:16.761598+00:00 hh:2 H valid 
-2026-09-16T15:24:16.763422+00:00 gg:2 G valid 
-2026-09-16T15:24:16.765465+00:00 gg:3 G valid 
-2026-09-16T15:24:16.767313+00:00 hh:3 H valid 
-2026-09-16T15:24:16.769987+00:00 gh:3 G valid 
-2026-09-16T15:24:16.772220+00:00 hg:3 H valid 
-2026-09-16T15:24:16.774810+00:00 hg:4 G valid 
-2026-09-16T15:24:16.777098+00:00 gh:4 H valid 
-2026-09-16T15:24:16.779395+00:00 hh:4 H valid 
-2026-09-16T15:24:16.782457+00:00 gg:4 G valid 
-2026-09-16T15:24:16.785752+00:00 gg:5 G valid 
-2026-09-16T15:24:16.788684+00:00 hh:5 H valid 
-2026-09-16T15:24:16.792402+00:00 gh:5 G valid 
-2026-09-16T15:24:16.795712+00:00 hg:5 H valid 
-2026-09-16T15:24:16.799475+00:00 hg:6 G valid 
-2026-09-16T15:24:16.802902+00:00 gh:6 H valid 
-2026-09-16T15:24:16.806305+00:00 hh:6 H valid 
-2026-09-16T15:24:16.810709+00:00 gg:6 G valid 
-2026-09-16T15:24:16.815094+00:00 gg:7 G valid 
-2026-09-16T15:24:16.819037+00:00 hh:7 H valid 
-2026-09-16T15:24:16.823693+00:00 gh:7 G valid 
-2026-09-16T15:24:16.827941+00:00 hg:7 H valid 
-2026-09-16T15:24:16.833082+00:00 hg:8 G valid 
-2026-09-16T15:24:16.837628+00:00 gh:8 H valid 
-2026-09-16T15:24:16.842167+00:00 hh:8 H valid 
-2026-09-16T15:24:16.847362+00:00 gg:8 G valid 
-2026-09-16T15:24:16.853232+00:00 gg:9 G valid 
-2026-09-16T15:24:16.858504+00:00 hh:9 H valid 
-2026-09-16T15:24:16.864373+00:00 gh:9 G valid 
-2026-09-16T15:24:16.870144+00:00 hg:9 H valid 
-2026-09-16T15:24:16.876488+00:00 hg:10 G valid 
-2026-09-16T15:24:16.882355+00:00 gh:10 H valid 
-2026-09-16T15:24:16.888473+00:00 hh:10 H valid 
-2026-09-16T15:24:16.895279+00:00 gg:10 G valid 
-2026-09-16T15:24:16.902346+00:00 gg:11 G valid 
-2026-09-16T15:24:16.909719+00:00 hh:11 H valid 
-2026-09-16T15:24:16.917835+00:00 gh:11 G valid 
-2026-09-16T15:24:16.924883+00:00 hg:11 H valid 
-2026-09-16T15:24:16.933486+00:00 hg:12 G valid 
-2026-09-16T15:24:16.941572+00:00 gh:12 H valid 
-2026-09-16T15:24:16.949784+00:00 hh:12 H valid 
-2026-09-16T15:24:16.958676+00:00 gg:12 G valid 
-2026-09-16T15:24:16.967754+00:00 gg:13 G valid 
-2026-09-16T15:24:16.976029+00:00 hh:13 H valid 
-2026-09-16T15:24:16.985776+00:00 gh:13 G valid 
-2026-09-16T15:24:16.994582+00:00 hg:13 H valid 
-2026-09-16T15:24:17.004082+00:00 hg:14 G valid 
-2026-09-16T15:24:17.012955+00:00 gh:14 H valid 
-2026-09-16T15:24:17.021584+00:00 hh:14 H valid 
-2026-09-16T15:24:17.031201+00:00 gg:14 G valid 
-2026-09-16T15:24:17.040937+00:00 gg:15 G valid 
-2026-09-16T15:24:17.050417+00:00 hh:15 H valid 
-2026-09-16T15:24:17.060655+00:00 gh:15 G valid 
-2026-09-16T15:24:17.070694+00:00 hg:15 H valid 
-2026-09-16T15:24:17.081331+00:00 hg:16 G valid 
-2026-09-16T15:24:17.091829+00:00 gh:16 H valid 
-2026-09-16T15:24:17.102313+00:00 hh:16 H valid 
-2026-09-16T15:24:17.113384+00:00 gg:16 G valid 
-2026-09-16T15:24:17.124612+00:00 gg:17 G valid 
-2026-09-16T15:24:17.135888+00:00 hh:17 H valid 
-2026-09-16T15:24:17.147597+00:00 gh:17 G valid 
-2026-09-16T15:24:17.159103+00:00 hg:17 H valid 
-2026-09-16T15:24:17.171719+00:00 hg:18 G valid 
-2026-09-16T15:24:17.184078+00:00 gh:18 H valid 
-2026-09-16T15:24:17.196442+00:00 hh:18 H valid 
-2026-09-16T15:24:17.210154+00:00 gg:18 G valid 
+test_saved_raw_response_recovers_without_duplicate (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:16.754727+00:00 gg:1 G valid
+2026-09-16T15:24:16.755384+00:00 hh:1 H valid
+2026-09-16T15:24:16.756585+00:00 gh:1 G valid
+2026-09-16T15:24:16.757663+00:00 hg:1 H valid
+2026-09-16T15:24:16.759191+00:00 hg:2 G valid
+2026-09-16T15:24:16.760399+00:00 gh:2 H valid
+2026-09-16T15:24:16.761598+00:00 hh:2 H valid
+2026-09-16T15:24:16.763422+00:00 gg:2 G valid
+2026-09-16T15:24:16.765465+00:00 gg:3 G valid
+2026-09-16T15:24:16.767313+00:00 hh:3 H valid
+2026-09-16T15:24:16.769987+00:00 gh:3 G valid
+2026-09-16T15:24:16.772220+00:00 hg:3 H valid
+2026-09-16T15:24:16.774810+00:00 hg:4 G valid
+2026-09-16T15:24:16.777098+00:00 gh:4 H valid
+2026-09-16T15:24:16.779395+00:00 hh:4 H valid
+2026-09-16T15:24:16.782457+00:00 gg:4 G valid
+2026-09-16T15:24:16.785752+00:00 gg:5 G valid
+2026-09-16T15:24:16.788684+00:00 hh:5 H valid
+2026-09-16T15:24:16.792402+00:00 gh:5 G valid
+2026-09-16T15:24:16.795712+00:00 hg:5 H valid
+2026-09-16T15:24:16.799475+00:00 hg:6 G valid
+2026-09-16T15:24:16.802902+00:00 gh:6 H valid
+2026-09-16T15:24:16.806305+00:00 hh:6 H valid
+2026-09-16T15:24:16.810709+00:00 gg:6 G valid
+2026-09-16T15:24:16.815094+00:00 gg:7 G valid
+2026-09-16T15:24:16.819037+00:00 hh:7 H valid
+2026-09-16T15:24:16.823693+00:00 gh:7 G valid
+2026-09-16T15:24:16.827941+00:00 hg:7 H valid
+2026-09-16T15:24:16.833082+00:00 hg:8 G valid
+2026-09-16T15:24:16.837628+00:00 gh:8 H valid
+2026-09-16T15:24:16.842167+00:00 hh:8 H valid
+2026-09-16T15:24:16.847362+00:00 gg:8 G valid
+2026-09-16T15:24:16.853232+00:00 gg:9 G valid
+2026-09-16T15:24:16.858504+00:00 hh:9 H valid
+2026-09-16T15:24:16.864373+00:00 gh:9 G valid
+2026-09-16T15:24:16.870144+00:00 hg:9 H valid
+2026-09-16T15:24:16.876488+00:00 hg:10 G valid
+2026-09-16T15:24:16.882355+00:00 gh:10 H valid
+2026-09-16T15:24:16.888473+00:00 hh:10 H valid
+2026-09-16T15:24:16.895279+00:00 gg:10 G valid
+2026-09-16T15:24:16.902346+00:00 gg:11 G valid
+2026-09-16T15:24:16.909719+00:00 hh:11 H valid
+2026-09-16T15:24:16.917835+00:00 gh:11 G valid
+2026-09-16T15:24:16.924883+00:00 hg:11 H valid
+2026-09-16T15:24:16.933486+00:00 hg:12 G valid
+2026-09-16T15:24:16.941572+00:00 gh:12 H valid
+2026-09-16T15:24:16.949784+00:00 hh:12 H valid
+2026-09-16T15:24:16.958676+00:00 gg:12 G valid
+2026-09-16T15:24:16.967754+00:00 gg:13 G valid
+2026-09-16T15:24:16.976029+00:00 hh:13 H valid
+2026-09-16T15:24:16.985776+00:00 gh:13 G valid
+2026-09-16T15:24:16.994582+00:00 hg:13 H valid
+2026-09-16T15:24:17.004082+00:00 hg:14 G valid
+2026-09-16T15:24:17.012955+00:00 gh:14 H valid
+2026-09-16T15:24:17.021584+00:00 hh:14 H valid
+2026-09-16T15:24:17.031201+00:00 gg:14 G valid
+2026-09-16T15:24:17.040937+00:00 gg:15 G valid
+2026-09-16T15:24:17.050417+00:00 hh:15 H valid
+2026-09-16T15:24:17.060655+00:00 gh:15 G valid
+2026-09-16T15:24:17.070694+00:00 hg:15 H valid
+2026-09-16T15:24:17.081331+00:00 hg:16 G valid
+2026-09-16T15:24:17.091829+00:00 gh:16 H valid
+2026-09-16T15:24:17.102313+00:00 hh:16 H valid
+2026-09-16T15:24:17.113384+00:00 gg:16 G valid
+2026-09-16T15:24:17.124612+00:00 gg:17 G valid
+2026-09-16T15:24:17.135888+00:00 hh:17 H valid
+2026-09-16T15:24:17.147597+00:00 gh:17 G valid
+2026-09-16T15:24:17.159103+00:00 hg:17 H valid
+2026-09-16T15:24:17.171719+00:00 hg:18 G valid
+2026-09-16T15:24:17.184078+00:00 gh:18 H valid
+2026-09-16T15:24:17.196442+00:00 hh:18 H valid
+2026-09-16T15:24:17.210154+00:00 gg:18 G valid
 ok
-test_scope_routing_and_recipient_history (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:17.237106+00:00 gg:1 G valid 
-2026-09-16T15:24:17.237847+00:00 hh:1 H valid 
-2026-09-16T15:24:17.239084+00:00 gh:1 G valid 
-2026-09-16T15:24:17.239987+00:00 hg:1 H valid 
-2026-09-16T15:24:17.241482+00:00 hg:2 G valid 
-2026-09-16T15:24:17.242724+00:00 gh:2 H valid 
-2026-09-16T15:24:17.243993+00:00 hh:2 H valid 
-2026-09-16T15:24:17.245773+00:00 gg:2 G valid 
-2026-09-16T15:24:17.247767+00:00 gg:3 G valid 
-2026-09-16T15:24:17.249526+00:00 hh:3 H valid 
-2026-09-16T15:24:17.252007+00:00 gh:3 G valid 
-2026-09-16T15:24:17.253963+00:00 hg:3 H valid 
-2026-09-16T15:24:17.256531+00:00 hg:4 G valid 
-2026-09-16T15:24:17.258823+00:00 gh:4 H valid 
-2026-09-16T15:24:17.261088+00:00 hh:4 H valid 
-2026-09-16T15:24:17.263981+00:00 gg:4 G valid 
-2026-09-16T15:24:17.267271+00:00 gg:5 G valid 
-2026-09-16T15:24:17.270271+00:00 hh:5 H valid 
-2026-09-16T15:24:17.273748+00:00 gh:5 G valid 
-2026-09-16T15:24:17.276814+00:00 hg:5 H valid 
-2026-09-16T15:24:17.280636+00:00 hg:6 G valid 
-2026-09-16T15:24:17.284015+00:00 gh:6 H valid 
-2026-09-16T15:24:17.287376+00:00 hh:6 H valid 
-2026-09-16T15:24:17.291653+00:00 gg:6 G valid 
-2026-09-16T15:24:17.296097+00:00 gg:7 G valid 
-2026-09-16T15:24:17.300106+00:00 hh:7 H valid 
-2026-09-16T15:24:17.304688+00:00 gh:7 G valid 
-2026-09-16T15:24:17.308906+00:00 hg:7 H valid 
-2026-09-16T15:24:17.314115+00:00 hg:8 G valid 
-2026-09-16T15:24:17.318687+00:00 gh:8 H valid 
-2026-09-16T15:24:17.323246+00:00 hh:8 H valid 
-2026-09-16T15:24:17.328476+00:00 gg:8 G valid 
-2026-09-16T15:24:17.334267+00:00 gg:9 G valid 
-2026-09-16T15:24:17.339514+00:00 hh:9 H valid 
-2026-09-16T15:24:17.345338+00:00 gh:9 G valid 
-2026-09-16T15:24:17.351110+00:00 hg:9 H valid 
-2026-09-16T15:24:17.357364+00:00 hg:10 G valid 
-2026-09-16T15:24:17.363161+00:00 gh:10 H valid 
-2026-09-16T15:24:17.368998+00:00 hh:10 H valid 
-2026-09-16T15:24:17.375722+00:00 gg:10 G valid 
-2026-09-16T15:24:17.382571+00:00 gg:11 G valid 
-2026-09-16T15:24:17.389008+00:00 hh:11 H valid 
-2026-09-16T15:24:17.396407+00:00 gh:11 G valid 
-2026-09-16T15:24:17.403334+00:00 hg:11 H valid 
-2026-09-16T15:24:17.411012+00:00 hg:12 G valid 
-2026-09-16T15:24:17.418112+00:00 gh:12 H valid 
-2026-09-16T15:24:17.425263+00:00 hh:12 H valid 
-2026-09-16T15:24:17.433415+00:00 gg:12 G valid 
-2026-09-16T15:24:17.441808+00:00 gg:13 G valid 
-2026-09-16T15:24:17.449877+00:00 hh:13 H valid 
-2026-09-16T15:24:17.458885+00:00 gh:13 G valid 
-2026-09-16T15:24:17.467148+00:00 hg:13 H valid 
-2026-09-16T15:24:17.476327+00:00 hg:14 G valid 
-2026-09-16T15:24:17.484935+00:00 gh:14 H valid 
-2026-09-16T15:24:17.493743+00:00 hh:14 H valid 
-2026-09-16T15:24:17.503134+00:00 gg:14 G valid 
-2026-09-16T15:24:17.513033+00:00 gg:15 G valid 
-2026-09-16T15:24:17.522338+00:00 hh:15 H valid 
-2026-09-16T15:24:17.532624+00:00 gh:15 G valid 
-2026-09-16T15:24:17.542355+00:00 hg:15 H valid 
-2026-09-16T15:24:17.552995+00:00 hg:16 G valid 
-2026-09-16T15:24:17.563189+00:00 gh:16 H valid 
-2026-09-16T15:24:17.573497+00:00 hh:16 H valid 
-2026-09-16T15:24:17.584574+00:00 gg:16 G valid 
-2026-09-16T15:24:17.595989+00:00 gg:17 G valid 
-2026-09-16T15:24:17.606810+00:00 hh:17 H valid 
-2026-09-16T15:24:17.618595+00:00 gh:17 G valid 
-2026-09-16T15:24:17.629844+00:00 hg:17 H valid 
-2026-09-16T15:24:17.641969+00:00 hg:18 G valid 
-2026-09-16T15:24:17.653680+00:00 gh:18 H valid 
-2026-09-16T15:24:17.665420+00:00 hh:18 H valid 
-2026-09-16T15:24:17.678101+00:00 gg:18 G valid 
+test_scope_routing_and_recipient_history (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:17.237106+00:00 gg:1 G valid
+2026-09-16T15:24:17.237847+00:00 hh:1 H valid
+2026-09-16T15:24:17.239084+00:00 gh:1 G valid
+2026-09-16T15:24:17.239987+00:00 hg:1 H valid
+2026-09-16T15:24:17.241482+00:00 hg:2 G valid
+2026-09-16T15:24:17.242724+00:00 gh:2 H valid
+2026-09-16T15:24:17.243993+00:00 hh:2 H valid
+2026-09-16T15:24:17.245773+00:00 gg:2 G valid
+2026-09-16T15:24:17.247767+00:00 gg:3 G valid
+2026-09-16T15:24:17.249526+00:00 hh:3 H valid
+2026-09-16T15:24:17.252007+00:00 gh:3 G valid
+2026-09-16T15:24:17.253963+00:00 hg:3 H valid
+2026-09-16T15:24:17.256531+00:00 hg:4 G valid
+2026-09-16T15:24:17.258823+00:00 gh:4 H valid
+2026-09-16T15:24:17.261088+00:00 hh:4 H valid
+2026-09-16T15:24:17.263981+00:00 gg:4 G valid
+2026-09-16T15:24:17.267271+00:00 gg:5 G valid
+2026-09-16T15:24:17.270271+00:00 hh:5 H valid
+2026-09-16T15:24:17.273748+00:00 gh:5 G valid
+2026-09-16T15:24:17.276814+00:00 hg:5 H valid
+2026-09-16T15:24:17.280636+00:00 hg:6 G valid
+2026-09-16T15:24:17.284015+00:00 gh:6 H valid
+2026-09-16T15:24:17.287376+00:00 hh:6 H valid
+2026-09-16T15:24:17.291653+00:00 gg:6 G valid
+2026-09-16T15:24:17.296097+00:00 gg:7 G valid
+2026-09-16T15:24:17.300106+00:00 hh:7 H valid
+2026-09-16T15:24:17.304688+00:00 gh:7 G valid
+2026-09-16T15:24:17.308906+00:00 hg:7 H valid
+2026-09-16T15:24:17.314115+00:00 hg:8 G valid
+2026-09-16T15:24:17.318687+00:00 gh:8 H valid
+2026-09-16T15:24:17.323246+00:00 hh:8 H valid
+2026-09-16T15:24:17.328476+00:00 gg:8 G valid
+2026-09-16T15:24:17.334267+00:00 gg:9 G valid
+2026-09-16T15:24:17.339514+00:00 hh:9 H valid
+2026-09-16T15:24:17.345338+00:00 gh:9 G valid
+2026-09-16T15:24:17.351110+00:00 hg:9 H valid
+2026-09-16T15:24:17.357364+00:00 hg:10 G valid
+2026-09-16T15:24:17.363161+00:00 gh:10 H valid
+2026-09-16T15:24:17.368998+00:00 hh:10 H valid
+2026-09-16T15:24:17.375722+00:00 gg:10 G valid
+2026-09-16T15:24:17.382571+00:00 gg:11 G valid
+2026-09-16T15:24:17.389008+00:00 hh:11 H valid
+2026-09-16T15:24:17.396407+00:00 gh:11 G valid
+2026-09-16T15:24:17.403334+00:00 hg:11 H valid
+2026-09-16T15:24:17.411012+00:00 hg:12 G valid
+2026-09-16T15:24:17.418112+00:00 gh:12 H valid
+2026-09-16T15:24:17.425263+00:00 hh:12 H valid
+2026-09-16T15:24:17.433415+00:00 gg:12 G valid
+2026-09-16T15:24:17.441808+00:00 gg:13 G valid
+2026-09-16T15:24:17.449877+00:00 hh:13 H valid
+2026-09-16T15:24:17.458885+00:00 gh:13 G valid
+2026-09-16T15:24:17.467148+00:00 hg:13 H valid
+2026-09-16T15:24:17.476327+00:00 hg:14 G valid
+2026-09-16T15:24:17.484935+00:00 gh:14 H valid
+2026-09-16T15:24:17.493743+00:00 hh:14 H valid
+2026-09-16T15:24:17.503134+00:00 gg:14 G valid
+2026-09-16T15:24:17.513033+00:00 gg:15 G valid
+2026-09-16T15:24:17.522338+00:00 hh:15 H valid
+2026-09-16T15:24:17.532624+00:00 gh:15 G valid
+2026-09-16T15:24:17.542355+00:00 hg:15 H valid
+2026-09-16T15:24:17.552995+00:00 hg:16 G valid
+2026-09-16T15:24:17.563189+00:00 gh:16 H valid
+2026-09-16T15:24:17.573497+00:00 hh:16 H valid
+2026-09-16T15:24:17.584574+00:00 gg:16 G valid
+2026-09-16T15:24:17.595989+00:00 gg:17 G valid
+2026-09-16T15:24:17.606810+00:00 hh:17 H valid
+2026-09-16T15:24:17.618595+00:00 gh:17 G valid
+2026-09-16T15:24:17.629844+00:00 hg:17 H valid
+2026-09-16T15:24:17.641969+00:00 hg:18 G valid
+2026-09-16T15:24:17.653680+00:00 gh:18 H valid
+2026-09-16T15:24:17.665420+00:00 hh:18 H valid
+2026-09-16T15:24:17.678101+00:00 gg:18 G valid
 ok
-test_unknown_dispatch_never_retried_and_cost_is_held (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:17.771391+00:00 gg:1 G valid 
+test_unknown_dispatch_never_retried_and_cost_is_held (test_mixed_dialogue.MixedDialogueTests) ... 2026-09-16T15:24:17.771391+00:00 gg:1 G valid
 2026-09-16T15:24:17.772003+00:00 hh:1 H unresolved Transport uncertainty: TimeoutError
 2026-09-16T15:24:17.772494+00:00 gh:1 G not_dispatched Batch halted after technical failure
 2026-09-16T15:24:17.772982+00:00 hg:1 H not_dispatched Batch halted after technical failure
@@ -1369,393 +1372,393 @@ test_parser2_campaign_is_replay_only_under_parser3 (test_ollama_context.OllamaCo
 test_recipient_tokens_and_raw_evidence_cross_check_generation (test_ollama_context.OllamaContextTests) ... ok
 test_accounting_overrun_and_missing_cost_halt (test_paid_framing.PaidFramingTests) ... ok
 test_cap_stops_own_root (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:17.882081+00:00 mini-anonymous-01:1 cap output_cap
-2026-09-16T15:24:17.882494+00:00 haiku-anonymous-01:1 valid 
-2026-09-16T15:24:17.882998+00:00 mini-mirror-01:1 valid 
-2026-09-16T15:24:17.883479+00:00 haiku-mirror-01:1 valid 
-2026-09-16T15:24:17.883964+00:00 mini-mirror-02:1 valid 
-2026-09-16T15:24:17.884511+00:00 haiku-mirror-02:1 valid 
-2026-09-16T15:24:17.885068+00:00 mini-anonymous-02:1 valid 
-2026-09-16T15:24:17.885647+00:00 haiku-anonymous-02:1 valid 
-2026-09-16T15:24:17.886258+00:00 haiku-anonymous-02:2 valid 
-2026-09-16T15:24:17.886882+00:00 mini-anonymous-02:2 valid 
-2026-09-16T15:24:17.887553+00:00 haiku-mirror-02:2 valid 
-2026-09-16T15:24:17.888283+00:00 mini-mirror-02:2 valid 
-2026-09-16T15:24:17.889010+00:00 haiku-mirror-01:2 valid 
-2026-09-16T15:24:17.889909+00:00 mini-mirror-01:2 valid 
-2026-09-16T15:24:17.890867+00:00 haiku-anonymous-01:2 valid 
+2026-09-16T15:24:17.882494+00:00 haiku-anonymous-01:1 valid
+2026-09-16T15:24:17.882998+00:00 mini-mirror-01:1 valid
+2026-09-16T15:24:17.883479+00:00 haiku-mirror-01:1 valid
+2026-09-16T15:24:17.883964+00:00 mini-mirror-02:1 valid
+2026-09-16T15:24:17.884511+00:00 haiku-mirror-02:1 valid
+2026-09-16T15:24:17.885068+00:00 mini-anonymous-02:1 valid
+2026-09-16T15:24:17.885647+00:00 haiku-anonymous-02:1 valid
+2026-09-16T15:24:17.886258+00:00 haiku-anonymous-02:2 valid
+2026-09-16T15:24:17.886882+00:00 mini-anonymous-02:2 valid
+2026-09-16T15:24:17.887553+00:00 haiku-mirror-02:2 valid
+2026-09-16T15:24:17.888283+00:00 mini-mirror-02:2 valid
+2026-09-16T15:24:17.889010+00:00 haiku-mirror-01:2 valid
+2026-09-16T15:24:17.889909+00:00 mini-mirror-01:2 valid
+2026-09-16T15:24:17.890867+00:00 haiku-anonymous-01:2 valid
 2026-09-16T15:24:17.891558+00:00 mini-anonymous-01:2 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:17.892213+00:00 mini-anonymous-01:3 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:17.893088+00:00 haiku-anonymous-01:3 valid 
-2026-09-16T15:24:17.893970+00:00 mini-mirror-01:3 valid 
-2026-09-16T15:24:17.894920+00:00 haiku-mirror-01:3 valid 
-2026-09-16T15:24:17.895866+00:00 mini-mirror-02:3 valid 
-2026-09-16T15:24:17.896878+00:00 haiku-mirror-02:3 valid 
-2026-09-16T15:24:17.897907+00:00 mini-anonymous-02:3 valid 
-2026-09-16T15:24:17.898965+00:00 haiku-anonymous-02:3 valid 
-2026-09-16T15:24:17.900072+00:00 haiku-anonymous-02:4 valid 
-2026-09-16T15:24:17.901207+00:00 mini-anonymous-02:4 valid 
-2026-09-16T15:24:17.902390+00:00 haiku-mirror-02:4 valid 
-2026-09-16T15:24:17.903623+00:00 mini-mirror-02:4 valid 
-2026-09-16T15:24:17.904885+00:00 haiku-mirror-01:4 valid 
-2026-09-16T15:24:17.906250+00:00 mini-mirror-01:4 valid 
-2026-09-16T15:24:17.907610+00:00 haiku-anonymous-01:4 valid 
+2026-09-16T15:24:17.893088+00:00 haiku-anonymous-01:3 valid
+2026-09-16T15:24:17.893970+00:00 mini-mirror-01:3 valid
+2026-09-16T15:24:17.894920+00:00 haiku-mirror-01:3 valid
+2026-09-16T15:24:17.895866+00:00 mini-mirror-02:3 valid
+2026-09-16T15:24:17.896878+00:00 haiku-mirror-02:3 valid
+2026-09-16T15:24:17.897907+00:00 mini-anonymous-02:3 valid
+2026-09-16T15:24:17.898965+00:00 haiku-anonymous-02:3 valid
+2026-09-16T15:24:17.900072+00:00 haiku-anonymous-02:4 valid
+2026-09-16T15:24:17.901207+00:00 mini-anonymous-02:4 valid
+2026-09-16T15:24:17.902390+00:00 haiku-mirror-02:4 valid
+2026-09-16T15:24:17.903623+00:00 mini-mirror-02:4 valid
+2026-09-16T15:24:17.904885+00:00 haiku-mirror-01:4 valid
+2026-09-16T15:24:17.906250+00:00 mini-mirror-01:4 valid
+2026-09-16T15:24:17.907610+00:00 haiku-anonymous-01:4 valid
 2026-09-16T15:24:17.908805+00:00 mini-anonymous-01:4 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:17.910081+00:00 mini-anonymous-01:5 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:17.911686+00:00 haiku-anonymous-01:5 valid 
-2026-09-16T15:24:17.913173+00:00 mini-mirror-01:5 valid 
-2026-09-16T15:24:17.914681+00:00 haiku-mirror-01:5 valid 
-2026-09-16T15:24:17.916242+00:00 mini-mirror-02:5 valid 
-2026-09-16T15:24:17.917832+00:00 haiku-mirror-02:5 valid 
-2026-09-16T15:24:17.919497+00:00 mini-anonymous-02:5 valid 
-2026-09-16T15:24:17.921201+00:00 haiku-anonymous-02:5 valid 
-2026-09-16T15:24:17.922966+00:00 haiku-anonymous-02:6 valid 
-2026-09-16T15:24:17.924782+00:00 mini-anonymous-02:6 valid 
-2026-09-16T15:24:17.926626+00:00 haiku-mirror-02:6 valid 
-2026-09-16T15:24:17.928838+00:00 mini-mirror-02:6 valid 
-2026-09-16T15:24:17.931206+00:00 haiku-mirror-01:6 valid 
-2026-09-16T15:24:17.933864+00:00 mini-mirror-01:6 valid 
-2026-09-16T15:24:17.936336+00:00 haiku-anonymous-01:6 valid 
+2026-09-16T15:24:17.911686+00:00 haiku-anonymous-01:5 valid
+2026-09-16T15:24:17.913173+00:00 mini-mirror-01:5 valid
+2026-09-16T15:24:17.914681+00:00 haiku-mirror-01:5 valid
+2026-09-16T15:24:17.916242+00:00 mini-mirror-02:5 valid
+2026-09-16T15:24:17.917832+00:00 haiku-mirror-02:5 valid
+2026-09-16T15:24:17.919497+00:00 mini-anonymous-02:5 valid
+2026-09-16T15:24:17.921201+00:00 haiku-anonymous-02:5 valid
+2026-09-16T15:24:17.922966+00:00 haiku-anonymous-02:6 valid
+2026-09-16T15:24:17.924782+00:00 mini-anonymous-02:6 valid
+2026-09-16T15:24:17.926626+00:00 haiku-mirror-02:6 valid
+2026-09-16T15:24:17.928838+00:00 mini-mirror-02:6 valid
+2026-09-16T15:24:17.931206+00:00 haiku-mirror-01:6 valid
+2026-09-16T15:24:17.933864+00:00 mini-mirror-01:6 valid
+2026-09-16T15:24:17.936336+00:00 haiku-anonymous-01:6 valid
 2026-09-16T15:24:17.938646+00:00 mini-anonymous-01:6 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:17.940922+00:00 mini-anonymous-01:7 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:17.943598+00:00 haiku-anonymous-01:7 valid 
-2026-09-16T15:24:17.946484+00:00 mini-mirror-01:7 valid 
-2026-09-16T15:24:17.949721+00:00 haiku-mirror-01:7 valid 
-2026-09-16T15:24:17.952773+00:00 mini-mirror-02:7 valid 
-2026-09-16T15:24:17.955518+00:00 haiku-mirror-02:7 valid 
-2026-09-16T15:24:17.958556+00:00 mini-anonymous-02:7 valid 
-2026-09-16T15:24:17.961433+00:00 haiku-anonymous-02:7 valid 
-2026-09-16T15:24:17.964327+00:00 haiku-anonymous-02:8 valid 
-2026-09-16T15:24:17.967243+00:00 mini-anonymous-02:8 valid 
-2026-09-16T15:24:17.970511+00:00 haiku-mirror-02:8 valid 
-2026-09-16T15:24:17.973516+00:00 mini-mirror-02:8 valid 
-2026-09-16T15:24:17.976794+00:00 haiku-mirror-01:8 valid 
-2026-09-16T15:24:17.980047+00:00 mini-mirror-01:8 valid 
-2026-09-16T15:24:17.983578+00:00 haiku-anonymous-01:8 valid 
+2026-09-16T15:24:17.943598+00:00 haiku-anonymous-01:7 valid
+2026-09-16T15:24:17.946484+00:00 mini-mirror-01:7 valid
+2026-09-16T15:24:17.949721+00:00 haiku-mirror-01:7 valid
+2026-09-16T15:24:17.952773+00:00 mini-mirror-02:7 valid
+2026-09-16T15:24:17.955518+00:00 haiku-mirror-02:7 valid
+2026-09-16T15:24:17.958556+00:00 mini-anonymous-02:7 valid
+2026-09-16T15:24:17.961433+00:00 haiku-anonymous-02:7 valid
+2026-09-16T15:24:17.964327+00:00 haiku-anonymous-02:8 valid
+2026-09-16T15:24:17.967243+00:00 mini-anonymous-02:8 valid
+2026-09-16T15:24:17.970511+00:00 haiku-mirror-02:8 valid
+2026-09-16T15:24:17.973516+00:00 mini-mirror-02:8 valid
+2026-09-16T15:24:17.976794+00:00 haiku-mirror-01:8 valid
+2026-09-16T15:24:17.980047+00:00 mini-mirror-01:8 valid
+2026-09-16T15:24:17.983578+00:00 haiku-anonymous-01:8 valid
 2026-09-16T15:24:17.986760+00:00 mini-anonymous-01:8 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:17.989944+00:00 mini-anonymous-01:9 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:17.994642+00:00 haiku-anonymous-01:9 valid 
-2026-09-16T15:24:17.998491+00:00 mini-mirror-01:9 valid 
-2026-09-16T15:24:18.001983+00:00 haiku-mirror-01:9 valid 
-2026-09-16T15:24:18.005245+00:00 mini-mirror-02:9 valid 
-2026-09-16T15:24:18.008562+00:00 haiku-mirror-02:9 valid 
-2026-09-16T15:24:18.012266+00:00 mini-anonymous-02:9 valid 
-2026-09-16T15:24:18.015989+00:00 haiku-anonymous-02:9 valid 
-2026-09-16T15:24:18.019644+00:00 haiku-anonymous-02:10 valid 
-2026-09-16T15:24:18.023306+00:00 mini-anonymous-02:10 valid 
-2026-09-16T15:24:18.027484+00:00 haiku-mirror-02:10 valid 
-2026-09-16T15:24:18.031476+00:00 mini-mirror-02:10 valid 
-2026-09-16T15:24:18.035819+00:00 haiku-mirror-01:10 valid 
-2026-09-16T15:24:18.039852+00:00 mini-mirror-01:10 valid 
-2026-09-16T15:24:18.043996+00:00 haiku-anonymous-01:10 valid 
+2026-09-16T15:24:17.994642+00:00 haiku-anonymous-01:9 valid
+2026-09-16T15:24:17.998491+00:00 mini-mirror-01:9 valid
+2026-09-16T15:24:18.001983+00:00 haiku-mirror-01:9 valid
+2026-09-16T15:24:18.005245+00:00 mini-mirror-02:9 valid
+2026-09-16T15:24:18.008562+00:00 haiku-mirror-02:9 valid
+2026-09-16T15:24:18.012266+00:00 mini-anonymous-02:9 valid
+2026-09-16T15:24:18.015989+00:00 haiku-anonymous-02:9 valid
+2026-09-16T15:24:18.019644+00:00 haiku-anonymous-02:10 valid
+2026-09-16T15:24:18.023306+00:00 mini-anonymous-02:10 valid
+2026-09-16T15:24:18.027484+00:00 haiku-mirror-02:10 valid
+2026-09-16T15:24:18.031476+00:00 mini-mirror-02:10 valid
+2026-09-16T15:24:18.035819+00:00 haiku-mirror-01:10 valid
+2026-09-16T15:24:18.039852+00:00 mini-mirror-01:10 valid
+2026-09-16T15:24:18.043996+00:00 haiku-anonymous-01:10 valid
 2026-09-16T15:24:18.048036+00:00 mini-anonymous-01:10 not_dispatched Unavailable root ancestor
 2026-09-16T15:24:18.052105+00:00 mini-anonymous-01:11 not_dispatched Unavailable root ancestor
-2026-09-16T15:24:18.056364+00:00 haiku-anonymous-01:11 valid 
-2026-09-16T15:24:18.060765+00:00 mini-mirror-01:11 valid 
-2026-09-16T15:24:18.065111+00:00 haiku-mirror-01:11 valid 
-2026-09-16T15:24:18.069770+00:00 mini-mirror-02:11 valid 
-2026-09-16T15:24:18.074503+00:00 haiku-mirror-02:11 valid 
-2026-09-16T15:24:18.080065+00:00 mini-anonymous-02:11 valid 
-2026-09-16T15:24:18.085176+00:00 haiku-anonymous-02:11 valid 
-2026-09-16T15:24:18.090725+00:00 haiku-anonymous-02:12 valid 
-2026-09-16T15:24:18.095969+00:00 mini-anonymous-02:12 valid 
-2026-09-16T15:24:18.101622+00:00 haiku-mirror-02:12 valid 
-2026-09-16T15:24:18.107079+00:00 mini-mirror-02:12 valid 
-2026-09-16T15:24:18.112542+00:00 haiku-mirror-01:12 valid 
-2026-09-16T15:24:18.118180+00:00 mini-mirror-01:12 valid 
-2026-09-16T15:24:18.124089+00:00 haiku-anonymous-01:12 valid 
+2026-09-16T15:24:18.056364+00:00 haiku-anonymous-01:11 valid
+2026-09-16T15:24:18.060765+00:00 mini-mirror-01:11 valid
+2026-09-16T15:24:18.065111+00:00 haiku-mirror-01:11 valid
+2026-09-16T15:24:18.069770+00:00 mini-mirror-02:11 valid
+2026-09-16T15:24:18.074503+00:00 haiku-mirror-02:11 valid
+2026-09-16T15:24:18.080065+00:00 mini-anonymous-02:11 valid
+2026-09-16T15:24:18.085176+00:00 haiku-anonymous-02:11 valid
+2026-09-16T15:24:18.090725+00:00 haiku-anonymous-02:12 valid
+2026-09-16T15:24:18.095969+00:00 mini-anonymous-02:12 valid
+2026-09-16T15:24:18.101622+00:00 haiku-mirror-02:12 valid
+2026-09-16T15:24:18.107079+00:00 mini-mirror-02:12 valid
+2026-09-16T15:24:18.112542+00:00 haiku-mirror-01:12 valid
+2026-09-16T15:24:18.118180+00:00 mini-mirror-01:12 valid
+2026-09-16T15:24:18.124089+00:00 haiku-anonymous-01:12 valid
 2026-09-16T15:24:18.129244+00:00 mini-anonymous-01:12 not_dispatched Unavailable root ancestor
 ok
-test_complete_and_closed_resume (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:18.137378+00:00 mini-anonymous-01:1 valid 
-2026-09-16T15:24:18.137885+00:00 haiku-anonymous-01:1 valid 
-2026-09-16T15:24:18.138369+00:00 mini-mirror-01:1 valid 
-2026-09-16T15:24:18.138983+00:00 haiku-mirror-01:1 valid 
-2026-09-16T15:24:18.139507+00:00 mini-mirror-02:1 valid 
-2026-09-16T15:24:18.140073+00:00 haiku-mirror-02:1 valid 
-2026-09-16T15:24:18.140687+00:00 mini-anonymous-02:1 valid 
-2026-09-16T15:24:18.141323+00:00 haiku-anonymous-02:1 valid 
-2026-09-16T15:24:18.141980+00:00 haiku-anonymous-02:2 valid 
-2026-09-16T15:24:18.142765+00:00 mini-anonymous-02:2 valid 
-2026-09-16T15:24:18.143687+00:00 haiku-mirror-02:2 valid 
-2026-09-16T15:24:18.144450+00:00 mini-mirror-02:2 valid 
-2026-09-16T15:24:18.145277+00:00 haiku-mirror-01:2 valid 
-2026-09-16T15:24:18.146190+00:00 mini-mirror-01:2 valid 
-2026-09-16T15:24:18.147005+00:00 haiku-anonymous-01:2 valid 
-2026-09-16T15:24:18.147986+00:00 mini-anonymous-01:2 valid 
-2026-09-16T15:24:18.148928+00:00 mini-anonymous-01:3 valid 
-2026-09-16T15:24:18.150149+00:00 haiku-anonymous-01:3 valid 
-2026-09-16T15:24:18.151343+00:00 mini-mirror-01:3 valid 
-2026-09-16T15:24:18.152527+00:00 haiku-mirror-01:3 valid 
-2026-09-16T15:24:18.153805+00:00 mini-mirror-02:3 valid 
-2026-09-16T15:24:18.154937+00:00 haiku-mirror-02:3 valid 
-2026-09-16T15:24:18.156173+00:00 mini-anonymous-02:3 valid 
-2026-09-16T15:24:18.157382+00:00 haiku-anonymous-02:3 valid 
-2026-09-16T15:24:18.158690+00:00 haiku-anonymous-02:4 valid 
-2026-09-16T15:24:18.160035+00:00 mini-anonymous-02:4 valid 
-2026-09-16T15:24:18.161487+00:00 haiku-mirror-02:4 valid 
-2026-09-16T15:24:18.162978+00:00 mini-mirror-02:4 valid 
-2026-09-16T15:24:18.164602+00:00 haiku-mirror-01:4 valid 
-2026-09-16T15:24:18.166219+00:00 mini-mirror-01:4 valid 
-2026-09-16T15:24:18.167845+00:00 haiku-anonymous-01:4 valid 
-2026-09-16T15:24:18.169423+00:00 mini-anonymous-01:4 valid 
-2026-09-16T15:24:18.171214+00:00 mini-anonymous-01:5 valid 
-2026-09-16T15:24:18.173090+00:00 haiku-anonymous-01:5 valid 
-2026-09-16T15:24:18.174911+00:00 mini-mirror-01:5 valid 
-2026-09-16T15:24:18.176913+00:00 haiku-mirror-01:5 valid 
-2026-09-16T15:24:18.178867+00:00 mini-mirror-02:5 valid 
-2026-09-16T15:24:18.180855+00:00 haiku-mirror-02:5 valid 
-2026-09-16T15:24:18.183023+00:00 mini-anonymous-02:5 valid 
-2026-09-16T15:24:18.185013+00:00 haiku-anonymous-02:5 valid 
-2026-09-16T15:24:18.187081+00:00 haiku-anonymous-02:6 valid 
-2026-09-16T15:24:18.189343+00:00 mini-anonymous-02:6 valid 
-2026-09-16T15:24:18.191641+00:00 haiku-mirror-02:6 valid 
-2026-09-16T15:24:18.194027+00:00 mini-mirror-02:6 valid 
-2026-09-16T15:24:18.196279+00:00 haiku-mirror-01:6 valid 
-2026-09-16T15:24:18.198509+00:00 mini-mirror-01:6 valid 
-2026-09-16T15:24:18.200861+00:00 haiku-anonymous-01:6 valid 
-2026-09-16T15:24:18.203306+00:00 mini-anonymous-01:6 valid 
-2026-09-16T15:24:18.205999+00:00 mini-anonymous-01:7 valid 
-2026-09-16T15:24:18.208777+00:00 haiku-anonymous-01:7 valid 
-2026-09-16T15:24:18.211956+00:00 mini-mirror-01:7 valid 
-2026-09-16T15:24:18.214946+00:00 haiku-mirror-01:7 valid 
-2026-09-16T15:24:18.217809+00:00 mini-mirror-02:7 valid 
-2026-09-16T15:24:18.220825+00:00 haiku-mirror-02:7 valid 
-2026-09-16T15:24:18.224032+00:00 mini-anonymous-02:7 valid 
-2026-09-16T15:24:18.226991+00:00 haiku-anonymous-02:7 valid 
-2026-09-16T15:24:18.230215+00:00 haiku-anonymous-02:8 valid 
-2026-09-16T15:24:18.233667+00:00 mini-anonymous-02:8 valid 
-2026-09-16T15:24:18.236796+00:00 haiku-mirror-02:8 valid 
-2026-09-16T15:24:18.240160+00:00 mini-mirror-02:8 valid 
-2026-09-16T15:24:18.243625+00:00 haiku-mirror-01:8 valid 
-2026-09-16T15:24:18.247203+00:00 mini-mirror-01:8 valid 
-2026-09-16T15:24:18.250742+00:00 haiku-anonymous-01:8 valid 
-2026-09-16T15:24:18.254643+00:00 mini-anonymous-01:8 valid 
-2026-09-16T15:24:18.258321+00:00 mini-anonymous-01:9 valid 
-2026-09-16T15:24:18.262389+00:00 haiku-anonymous-01:9 valid 
-2026-09-16T15:24:18.266300+00:00 mini-mirror-01:9 valid 
-2026-09-16T15:24:18.270254+00:00 haiku-mirror-01:9 valid 
-2026-09-16T15:24:18.274558+00:00 mini-mirror-02:9 valid 
-2026-09-16T15:24:18.278739+00:00 haiku-mirror-02:9 valid 
-2026-09-16T15:24:18.283030+00:00 mini-anonymous-02:9 valid 
-2026-09-16T15:24:18.287227+00:00 haiku-anonymous-02:9 valid 
-2026-09-16T15:24:18.291721+00:00 haiku-anonymous-02:10 valid 
-2026-09-16T15:24:18.296256+00:00 mini-anonymous-02:10 valid 
-2026-09-16T15:24:18.300746+00:00 haiku-mirror-02:10 valid 
-2026-09-16T15:24:18.305711+00:00 mini-mirror-02:10 valid 
-2026-09-16T15:24:18.310566+00:00 haiku-mirror-01:10 valid 
-2026-09-16T15:24:18.315614+00:00 mini-mirror-01:10 valid 
-2026-09-16T15:24:18.320542+00:00 haiku-anonymous-01:10 valid 
-2026-09-16T15:24:18.325616+00:00 mini-anonymous-01:10 valid 
-2026-09-16T15:24:18.330798+00:00 mini-anonymous-01:11 valid 
-2026-09-16T15:24:18.335689+00:00 haiku-anonymous-01:11 valid 
-2026-09-16T15:24:18.340955+00:00 mini-mirror-01:11 valid 
-2026-09-16T15:24:18.346525+00:00 haiku-mirror-01:11 valid 
-2026-09-16T15:24:18.351977+00:00 mini-mirror-02:11 valid 
-2026-09-16T15:24:18.357670+00:00 haiku-mirror-02:11 valid 
-2026-09-16T15:24:18.363450+00:00 mini-anonymous-02:11 valid 
-2026-09-16T15:24:18.369036+00:00 haiku-anonymous-02:11 valid 
-2026-09-16T15:24:18.374623+00:00 haiku-anonymous-02:12 valid 
-2026-09-16T15:24:18.380789+00:00 mini-anonymous-02:12 valid 
-2026-09-16T15:24:18.386931+00:00 haiku-mirror-02:12 valid 
-2026-09-16T15:24:18.392986+00:00 mini-mirror-02:12 valid 
-2026-09-16T15:24:18.399297+00:00 haiku-mirror-01:12 valid 
-2026-09-16T15:24:18.405743+00:00 mini-mirror-01:12 valid 
-2026-09-16T15:24:18.411889+00:00 haiku-anonymous-01:12 valid 
-2026-09-16T15:24:18.418465+00:00 mini-anonymous-01:12 valid 
+test_complete_and_closed_resume (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:18.137378+00:00 mini-anonymous-01:1 valid
+2026-09-16T15:24:18.137885+00:00 haiku-anonymous-01:1 valid
+2026-09-16T15:24:18.138369+00:00 mini-mirror-01:1 valid
+2026-09-16T15:24:18.138983+00:00 haiku-mirror-01:1 valid
+2026-09-16T15:24:18.139507+00:00 mini-mirror-02:1 valid
+2026-09-16T15:24:18.140073+00:00 haiku-mirror-02:1 valid
+2026-09-16T15:24:18.140687+00:00 mini-anonymous-02:1 valid
+2026-09-16T15:24:18.141323+00:00 haiku-anonymous-02:1 valid
+2026-09-16T15:24:18.141980+00:00 haiku-anonymous-02:2 valid
+2026-09-16T15:24:18.142765+00:00 mini-anonymous-02:2 valid
+2026-09-16T15:24:18.143687+00:00 haiku-mirror-02:2 valid
+2026-09-16T15:24:18.144450+00:00 mini-mirror-02:2 valid
+2026-09-16T15:24:18.145277+00:00 haiku-mirror-01:2 valid
+2026-09-16T15:24:18.146190+00:00 mini-mirror-01:2 valid
+2026-09-16T15:24:18.147005+00:00 haiku-anonymous-01:2 valid
+2026-09-16T15:24:18.147986+00:00 mini-anonymous-01:2 valid
+2026-09-16T15:24:18.148928+00:00 mini-anonymous-01:3 valid
+2026-09-16T15:24:18.150149+00:00 haiku-anonymous-01:3 valid
+2026-09-16T15:24:18.151343+00:00 mini-mirror-01:3 valid
+2026-09-16T15:24:18.152527+00:00 haiku-mirror-01:3 valid
+2026-09-16T15:24:18.153805+00:00 mini-mirror-02:3 valid
+2026-09-16T15:24:18.154937+00:00 haiku-mirror-02:3 valid
+2026-09-16T15:24:18.156173+00:00 mini-anonymous-02:3 valid
+2026-09-16T15:24:18.157382+00:00 haiku-anonymous-02:3 valid
+2026-09-16T15:24:18.158690+00:00 haiku-anonymous-02:4 valid
+2026-09-16T15:24:18.160035+00:00 mini-anonymous-02:4 valid
+2026-09-16T15:24:18.161487+00:00 haiku-mirror-02:4 valid
+2026-09-16T15:24:18.162978+00:00 mini-mirror-02:4 valid
+2026-09-16T15:24:18.164602+00:00 haiku-mirror-01:4 valid
+2026-09-16T15:24:18.166219+00:00 mini-mirror-01:4 valid
+2026-09-16T15:24:18.167845+00:00 haiku-anonymous-01:4 valid
+2026-09-16T15:24:18.169423+00:00 mini-anonymous-01:4 valid
+2026-09-16T15:24:18.171214+00:00 mini-anonymous-01:5 valid
+2026-09-16T15:24:18.173090+00:00 haiku-anonymous-01:5 valid
+2026-09-16T15:24:18.174911+00:00 mini-mirror-01:5 valid
+2026-09-16T15:24:18.176913+00:00 haiku-mirror-01:5 valid
+2026-09-16T15:24:18.178867+00:00 mini-mirror-02:5 valid
+2026-09-16T15:24:18.180855+00:00 haiku-mirror-02:5 valid
+2026-09-16T15:24:18.183023+00:00 mini-anonymous-02:5 valid
+2026-09-16T15:24:18.185013+00:00 haiku-anonymous-02:5 valid
+2026-09-16T15:24:18.187081+00:00 haiku-anonymous-02:6 valid
+2026-09-16T15:24:18.189343+00:00 mini-anonymous-02:6 valid
+2026-09-16T15:24:18.191641+00:00 haiku-mirror-02:6 valid
+2026-09-16T15:24:18.194027+00:00 mini-mirror-02:6 valid
+2026-09-16T15:24:18.196279+00:00 haiku-mirror-01:6 valid
+2026-09-16T15:24:18.198509+00:00 mini-mirror-01:6 valid
+2026-09-16T15:24:18.200861+00:00 haiku-anonymous-01:6 valid
+2026-09-16T15:24:18.203306+00:00 mini-anonymous-01:6 valid
+2026-09-16T15:24:18.205999+00:00 mini-anonymous-01:7 valid
+2026-09-16T15:24:18.208777+00:00 haiku-anonymous-01:7 valid
+2026-09-16T15:24:18.211956+00:00 mini-mirror-01:7 valid
+2026-09-16T15:24:18.214946+00:00 haiku-mirror-01:7 valid
+2026-09-16T15:24:18.217809+00:00 mini-mirror-02:7 valid
+2026-09-16T15:24:18.220825+00:00 haiku-mirror-02:7 valid
+2026-09-16T15:24:18.224032+00:00 mini-anonymous-02:7 valid
+2026-09-16T15:24:18.226991+00:00 haiku-anonymous-02:7 valid
+2026-09-16T15:24:18.230215+00:00 haiku-anonymous-02:8 valid
+2026-09-16T15:24:18.233667+00:00 mini-anonymous-02:8 valid
+2026-09-16T15:24:18.236796+00:00 haiku-mirror-02:8 valid
+2026-09-16T15:24:18.240160+00:00 mini-mirror-02:8 valid
+2026-09-16T15:24:18.243625+00:00 haiku-mirror-01:8 valid
+2026-09-16T15:24:18.247203+00:00 mini-mirror-01:8 valid
+2026-09-16T15:24:18.250742+00:00 haiku-anonymous-01:8 valid
+2026-09-16T15:24:18.254643+00:00 mini-anonymous-01:8 valid
+2026-09-16T15:24:18.258321+00:00 mini-anonymous-01:9 valid
+2026-09-16T15:24:18.262389+00:00 haiku-anonymous-01:9 valid
+2026-09-16T15:24:18.266300+00:00 mini-mirror-01:9 valid
+2026-09-16T15:24:18.270254+00:00 haiku-mirror-01:9 valid
+2026-09-16T15:24:18.274558+00:00 mini-mirror-02:9 valid
+2026-09-16T15:24:18.278739+00:00 haiku-mirror-02:9 valid
+2026-09-16T15:24:18.283030+00:00 mini-anonymous-02:9 valid
+2026-09-16T15:24:18.287227+00:00 haiku-anonymous-02:9 valid
+2026-09-16T15:24:18.291721+00:00 haiku-anonymous-02:10 valid
+2026-09-16T15:24:18.296256+00:00 mini-anonymous-02:10 valid
+2026-09-16T15:24:18.300746+00:00 haiku-mirror-02:10 valid
+2026-09-16T15:24:18.305711+00:00 mini-mirror-02:10 valid
+2026-09-16T15:24:18.310566+00:00 haiku-mirror-01:10 valid
+2026-09-16T15:24:18.315614+00:00 mini-mirror-01:10 valid
+2026-09-16T15:24:18.320542+00:00 haiku-anonymous-01:10 valid
+2026-09-16T15:24:18.325616+00:00 mini-anonymous-01:10 valid
+2026-09-16T15:24:18.330798+00:00 mini-anonymous-01:11 valid
+2026-09-16T15:24:18.335689+00:00 haiku-anonymous-01:11 valid
+2026-09-16T15:24:18.340955+00:00 mini-mirror-01:11 valid
+2026-09-16T15:24:18.346525+00:00 haiku-mirror-01:11 valid
+2026-09-16T15:24:18.351977+00:00 mini-mirror-02:11 valid
+2026-09-16T15:24:18.357670+00:00 haiku-mirror-02:11 valid
+2026-09-16T15:24:18.363450+00:00 mini-anonymous-02:11 valid
+2026-09-16T15:24:18.369036+00:00 haiku-anonymous-02:11 valid
+2026-09-16T15:24:18.374623+00:00 haiku-anonymous-02:12 valid
+2026-09-16T15:24:18.380789+00:00 mini-anonymous-02:12 valid
+2026-09-16T15:24:18.386931+00:00 haiku-mirror-02:12 valid
+2026-09-16T15:24:18.392986+00:00 mini-mirror-02:12 valid
+2026-09-16T15:24:18.399297+00:00 haiku-mirror-01:12 valid
+2026-09-16T15:24:18.405743+00:00 mini-mirror-01:12 valid
+2026-09-16T15:24:18.411889+00:00 haiku-anonymous-01:12 valid
+2026-09-16T15:24:18.418465+00:00 mini-anonymous-01:12 valid
 ok
 test_models_budget_and_exact_ancestry (test_paid_framing.PaidFramingTests) ... ok
-test_onset_passages_require_exact_source_text (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:18.440119+00:00 mini-anonymous-01:1 valid 
-2026-09-16T15:24:18.440576+00:00 haiku-anonymous-01:1 valid 
-2026-09-16T15:24:18.441081+00:00 mini-mirror-01:1 valid 
-2026-09-16T15:24:18.441633+00:00 haiku-mirror-01:1 valid 
-2026-09-16T15:24:18.442191+00:00 mini-mirror-02:1 valid 
-2026-09-16T15:24:18.442838+00:00 haiku-mirror-02:1 valid 
-2026-09-16T15:24:18.443492+00:00 mini-anonymous-02:1 valid 
-2026-09-16T15:24:18.444209+00:00 haiku-anonymous-02:1 valid 
-2026-09-16T15:24:18.444872+00:00 haiku-anonymous-02:2 valid 
-2026-09-16T15:24:18.445657+00:00 mini-anonymous-02:2 valid 
-2026-09-16T15:24:18.446387+00:00 haiku-mirror-02:2 valid 
-2026-09-16T15:24:18.447166+00:00 mini-mirror-02:2 valid 
-2026-09-16T15:24:18.447988+00:00 haiku-mirror-01:2 valid 
-2026-09-16T15:24:18.448813+00:00 mini-mirror-01:2 valid 
-2026-09-16T15:24:18.449763+00:00 haiku-anonymous-01:2 valid 
-2026-09-16T15:24:18.450880+00:00 mini-anonymous-01:2 valid 
-2026-09-16T15:24:18.452017+00:00 mini-anonymous-01:3 valid 
-2026-09-16T15:24:18.453345+00:00 haiku-anonymous-01:3 valid 
-2026-09-16T15:24:18.454439+00:00 mini-mirror-01:3 valid 
-2026-09-16T15:24:18.455535+00:00 haiku-mirror-01:3 valid 
-2026-09-16T15:24:18.456663+00:00 mini-mirror-02:3 valid 
-2026-09-16T15:24:18.457879+00:00 haiku-mirror-02:3 valid 
-2026-09-16T15:24:18.459070+00:00 mini-anonymous-02:3 valid 
-2026-09-16T15:24:18.460427+00:00 haiku-anonymous-02:3 valid 
-2026-09-16T15:24:18.461766+00:00 haiku-anonymous-02:4 valid 
-2026-09-16T15:24:18.463179+00:00 mini-anonymous-02:4 valid 
-2026-09-16T15:24:18.464555+00:00 haiku-mirror-02:4 valid 
-2026-09-16T15:24:18.466078+00:00 mini-mirror-02:4 valid 
-2026-09-16T15:24:18.467559+00:00 haiku-mirror-01:4 valid 
-2026-09-16T15:24:18.469026+00:00 mini-mirror-01:4 valid 
-2026-09-16T15:24:18.470870+00:00 haiku-anonymous-01:4 valid 
-2026-09-16T15:24:18.472704+00:00 mini-anonymous-01:4 valid 
-2026-09-16T15:24:18.474518+00:00 mini-anonymous-01:5 valid 
-2026-09-16T15:24:18.476286+00:00 haiku-anonymous-01:5 valid 
-2026-09-16T15:24:18.478105+00:00 mini-mirror-01:5 valid 
-2026-09-16T15:24:18.480069+00:00 haiku-mirror-01:5 valid 
-2026-09-16T15:24:18.482131+00:00 mini-mirror-02:5 valid 
-2026-09-16T15:24:18.484217+00:00 haiku-mirror-02:5 valid 
-2026-09-16T15:24:18.486269+00:00 mini-anonymous-02:5 valid 
-2026-09-16T15:24:18.488416+00:00 haiku-anonymous-02:5 valid 
-2026-09-16T15:24:18.490770+00:00 haiku-anonymous-02:6 valid 
-2026-09-16T15:24:18.493047+00:00 mini-anonymous-02:6 valid 
-2026-09-16T15:24:18.495340+00:00 haiku-mirror-02:6 valid 
-2026-09-16T15:24:18.497823+00:00 mini-mirror-02:6 valid 
-2026-09-16T15:24:18.500385+00:00 haiku-mirror-01:6 valid 
-2026-09-16T15:24:18.502998+00:00 mini-mirror-01:6 valid 
-2026-09-16T15:24:18.505579+00:00 haiku-anonymous-01:6 valid 
-2026-09-16T15:24:18.508130+00:00 mini-anonymous-01:6 valid 
-2026-09-16T15:24:18.510916+00:00 mini-anonymous-01:7 valid 
-2026-09-16T15:24:18.513860+00:00 haiku-anonymous-01:7 valid 
-2026-09-16T15:24:18.516590+00:00 mini-mirror-01:7 valid 
-2026-09-16T15:24:18.519461+00:00 haiku-mirror-01:7 valid 
-2026-09-16T15:24:18.522428+00:00 mini-mirror-02:7 valid 
-2026-09-16T15:24:18.525517+00:00 haiku-mirror-02:7 valid 
-2026-09-16T15:24:18.528484+00:00 mini-anonymous-02:7 valid 
-2026-09-16T15:24:18.531713+00:00 haiku-anonymous-02:7 valid 
-2026-09-16T15:24:18.535012+00:00 haiku-anonymous-02:8 valid 
-2026-09-16T15:24:18.538276+00:00 mini-anonymous-02:8 valid 
-2026-09-16T15:24:18.541611+00:00 haiku-mirror-02:8 valid 
-2026-09-16T15:24:18.545220+00:00 mini-mirror-02:8 valid 
-2026-09-16T15:24:18.548694+00:00 haiku-mirror-01:8 valid 
-2026-09-16T15:24:18.552406+00:00 mini-mirror-01:8 valid 
-2026-09-16T15:24:18.556114+00:00 haiku-anonymous-01:8 valid 
-2026-09-16T15:24:18.559864+00:00 mini-anonymous-01:8 valid 
-2026-09-16T15:24:18.563559+00:00 mini-anonymous-01:9 valid 
-2026-09-16T15:24:18.567466+00:00 haiku-anonymous-01:9 valid 
-2026-09-16T15:24:18.571442+00:00 mini-mirror-01:9 valid 
-2026-09-16T15:24:18.575610+00:00 haiku-mirror-01:9 valid 
-2026-09-16T15:24:18.579763+00:00 mini-mirror-02:9 valid 
-2026-09-16T15:24:18.584247+00:00 haiku-mirror-02:9 valid 
-2026-09-16T15:24:18.588352+00:00 mini-anonymous-02:9 valid 
-2026-09-16T15:24:18.592642+00:00 haiku-anonymous-02:9 valid 
-2026-09-16T15:24:18.596761+00:00 haiku-anonymous-02:10 valid 
-2026-09-16T15:24:18.600949+00:00 mini-anonymous-02:10 valid 
-2026-09-16T15:24:18.605355+00:00 haiku-mirror-02:10 valid 
-2026-09-16T15:24:18.609745+00:00 mini-mirror-02:10 valid 
-2026-09-16T15:24:18.614282+00:00 haiku-mirror-01:10 valid 
-2026-09-16T15:24:18.618765+00:00 mini-mirror-01:10 valid 
-2026-09-16T15:24:18.623290+00:00 haiku-anonymous-01:10 valid 
-2026-09-16T15:24:18.627920+00:00 mini-anonymous-01:10 valid 
-2026-09-16T15:24:18.632781+00:00 mini-anonymous-01:11 valid 
-2026-09-16T15:24:18.637531+00:00 haiku-anonymous-01:11 valid 
-2026-09-16T15:24:18.642303+00:00 mini-mirror-01:11 valid 
-2026-09-16T15:24:18.647145+00:00 haiku-mirror-01:11 valid 
-2026-09-16T15:24:18.652328+00:00 mini-mirror-02:11 valid 
-2026-09-16T15:24:18.657433+00:00 haiku-mirror-02:11 valid 
-2026-09-16T15:24:18.662569+00:00 mini-anonymous-02:11 valid 
-2026-09-16T15:24:18.668200+00:00 haiku-anonymous-02:11 valid 
-2026-09-16T15:24:18.673868+00:00 haiku-anonymous-02:12 valid 
-2026-09-16T15:24:18.679838+00:00 mini-anonymous-02:12 valid 
-2026-09-16T15:24:18.685382+00:00 haiku-mirror-02:12 valid 
-2026-09-16T15:24:18.691203+00:00 mini-mirror-02:12 valid 
-2026-09-16T15:24:18.697009+00:00 haiku-mirror-01:12 valid 
-2026-09-16T15:24:18.702735+00:00 mini-mirror-01:12 valid 
-2026-09-16T15:24:18.708535+00:00 haiku-anonymous-01:12 valid 
-2026-09-16T15:24:18.714783+00:00 mini-anonymous-01:12 valid 
+test_onset_passages_require_exact_source_text (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:18.440119+00:00 mini-anonymous-01:1 valid
+2026-09-16T15:24:18.440576+00:00 haiku-anonymous-01:1 valid
+2026-09-16T15:24:18.441081+00:00 mini-mirror-01:1 valid
+2026-09-16T15:24:18.441633+00:00 haiku-mirror-01:1 valid
+2026-09-16T15:24:18.442191+00:00 mini-mirror-02:1 valid
+2026-09-16T15:24:18.442838+00:00 haiku-mirror-02:1 valid
+2026-09-16T15:24:18.443492+00:00 mini-anonymous-02:1 valid
+2026-09-16T15:24:18.444209+00:00 haiku-anonymous-02:1 valid
+2026-09-16T15:24:18.444872+00:00 haiku-anonymous-02:2 valid
+2026-09-16T15:24:18.445657+00:00 mini-anonymous-02:2 valid
+2026-09-16T15:24:18.446387+00:00 haiku-mirror-02:2 valid
+2026-09-16T15:24:18.447166+00:00 mini-mirror-02:2 valid
+2026-09-16T15:24:18.447988+00:00 haiku-mirror-01:2 valid
+2026-09-16T15:24:18.448813+00:00 mini-mirror-01:2 valid
+2026-09-16T15:24:18.449763+00:00 haiku-anonymous-01:2 valid
+2026-09-16T15:24:18.450880+00:00 mini-anonymous-01:2 valid
+2026-09-16T15:24:18.452017+00:00 mini-anonymous-01:3 valid
+2026-09-16T15:24:18.453345+00:00 haiku-anonymous-01:3 valid
+2026-09-16T15:24:18.454439+00:00 mini-mirror-01:3 valid
+2026-09-16T15:24:18.455535+00:00 haiku-mirror-01:3 valid
+2026-09-16T15:24:18.456663+00:00 mini-mirror-02:3 valid
+2026-09-16T15:24:18.457879+00:00 haiku-mirror-02:3 valid
+2026-09-16T15:24:18.459070+00:00 mini-anonymous-02:3 valid
+2026-09-16T15:24:18.460427+00:00 haiku-anonymous-02:3 valid
+2026-09-16T15:24:18.461766+00:00 haiku-anonymous-02:4 valid
+2026-09-16T15:24:18.463179+00:00 mini-anonymous-02:4 valid
+2026-09-16T15:24:18.464555+00:00 haiku-mirror-02:4 valid
+2026-09-16T15:24:18.466078+00:00 mini-mirror-02:4 valid
+2026-09-16T15:24:18.467559+00:00 haiku-mirror-01:4 valid
+2026-09-16T15:24:18.469026+00:00 mini-mirror-01:4 valid
+2026-09-16T15:24:18.470870+00:00 haiku-anonymous-01:4 valid
+2026-09-16T15:24:18.472704+00:00 mini-anonymous-01:4 valid
+2026-09-16T15:24:18.474518+00:00 mini-anonymous-01:5 valid
+2026-09-16T15:24:18.476286+00:00 haiku-anonymous-01:5 valid
+2026-09-16T15:24:18.478105+00:00 mini-mirror-01:5 valid
+2026-09-16T15:24:18.480069+00:00 haiku-mirror-01:5 valid
+2026-09-16T15:24:18.482131+00:00 mini-mirror-02:5 valid
+2026-09-16T15:24:18.484217+00:00 haiku-mirror-02:5 valid
+2026-09-16T15:24:18.486269+00:00 mini-anonymous-02:5 valid
+2026-09-16T15:24:18.488416+00:00 haiku-anonymous-02:5 valid
+2026-09-16T15:24:18.490770+00:00 haiku-anonymous-02:6 valid
+2026-09-16T15:24:18.493047+00:00 mini-anonymous-02:6 valid
+2026-09-16T15:24:18.495340+00:00 haiku-mirror-02:6 valid
+2026-09-16T15:24:18.497823+00:00 mini-mirror-02:6 valid
+2026-09-16T15:24:18.500385+00:00 haiku-mirror-01:6 valid
+2026-09-16T15:24:18.502998+00:00 mini-mirror-01:6 valid
+2026-09-16T15:24:18.505579+00:00 haiku-anonymous-01:6 valid
+2026-09-16T15:24:18.508130+00:00 mini-anonymous-01:6 valid
+2026-09-16T15:24:18.510916+00:00 mini-anonymous-01:7 valid
+2026-09-16T15:24:18.513860+00:00 haiku-anonymous-01:7 valid
+2026-09-16T15:24:18.516590+00:00 mini-mirror-01:7 valid
+2026-09-16T15:24:18.519461+00:00 haiku-mirror-01:7 valid
+2026-09-16T15:24:18.522428+00:00 mini-mirror-02:7 valid
+2026-09-16T15:24:18.525517+00:00 haiku-mirror-02:7 valid
+2026-09-16T15:24:18.528484+00:00 mini-anonymous-02:7 valid
+2026-09-16T15:24:18.531713+00:00 haiku-anonymous-02:7 valid
+2026-09-16T15:24:18.535012+00:00 haiku-anonymous-02:8 valid
+2026-09-16T15:24:18.538276+00:00 mini-anonymous-02:8 valid
+2026-09-16T15:24:18.541611+00:00 haiku-mirror-02:8 valid
+2026-09-16T15:24:18.545220+00:00 mini-mirror-02:8 valid
+2026-09-16T15:24:18.548694+00:00 haiku-mirror-01:8 valid
+2026-09-16T15:24:18.552406+00:00 mini-mirror-01:8 valid
+2026-09-16T15:24:18.556114+00:00 haiku-anonymous-01:8 valid
+2026-09-16T15:24:18.559864+00:00 mini-anonymous-01:8 valid
+2026-09-16T15:24:18.563559+00:00 mini-anonymous-01:9 valid
+2026-09-16T15:24:18.567466+00:00 haiku-anonymous-01:9 valid
+2026-09-16T15:24:18.571442+00:00 mini-mirror-01:9 valid
+2026-09-16T15:24:18.575610+00:00 haiku-mirror-01:9 valid
+2026-09-16T15:24:18.579763+00:00 mini-mirror-02:9 valid
+2026-09-16T15:24:18.584247+00:00 haiku-mirror-02:9 valid
+2026-09-16T15:24:18.588352+00:00 mini-anonymous-02:9 valid
+2026-09-16T15:24:18.592642+00:00 haiku-anonymous-02:9 valid
+2026-09-16T15:24:18.596761+00:00 haiku-anonymous-02:10 valid
+2026-09-16T15:24:18.600949+00:00 mini-anonymous-02:10 valid
+2026-09-16T15:24:18.605355+00:00 haiku-mirror-02:10 valid
+2026-09-16T15:24:18.609745+00:00 mini-mirror-02:10 valid
+2026-09-16T15:24:18.614282+00:00 haiku-mirror-01:10 valid
+2026-09-16T15:24:18.618765+00:00 mini-mirror-01:10 valid
+2026-09-16T15:24:18.623290+00:00 haiku-anonymous-01:10 valid
+2026-09-16T15:24:18.627920+00:00 mini-anonymous-01:10 valid
+2026-09-16T15:24:18.632781+00:00 mini-anonymous-01:11 valid
+2026-09-16T15:24:18.637531+00:00 haiku-anonymous-01:11 valid
+2026-09-16T15:24:18.642303+00:00 mini-mirror-01:11 valid
+2026-09-16T15:24:18.647145+00:00 haiku-mirror-01:11 valid
+2026-09-16T15:24:18.652328+00:00 mini-mirror-02:11 valid
+2026-09-16T15:24:18.657433+00:00 haiku-mirror-02:11 valid
+2026-09-16T15:24:18.662569+00:00 mini-anonymous-02:11 valid
+2026-09-16T15:24:18.668200+00:00 haiku-anonymous-02:11 valid
+2026-09-16T15:24:18.673868+00:00 haiku-anonymous-02:12 valid
+2026-09-16T15:24:18.679838+00:00 mini-anonymous-02:12 valid
+2026-09-16T15:24:18.685382+00:00 haiku-mirror-02:12 valid
+2026-09-16T15:24:18.691203+00:00 mini-mirror-02:12 valid
+2026-09-16T15:24:18.697009+00:00 haiku-mirror-01:12 valid
+2026-09-16T15:24:18.702735+00:00 mini-mirror-01:12 valid
+2026-09-16T15:24:18.708535+00:00 haiku-anonymous-01:12 valid
+2026-09-16T15:24:18.714783+00:00 mini-anonymous-01:12 valid
 ok
-test_projection_preserves_model_root_mapping_and_cost (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:18.759647+00:00 mini-anonymous-01:1 valid 
-2026-09-16T15:24:18.760098+00:00 haiku-anonymous-01:1 valid 
-2026-09-16T15:24:18.760550+00:00 mini-mirror-01:1 valid 
-2026-09-16T15:24:18.761056+00:00 haiku-mirror-01:1 valid 
-2026-09-16T15:24:18.761551+00:00 mini-mirror-02:1 valid 
-2026-09-16T15:24:18.762073+00:00 haiku-mirror-02:1 valid 
-2026-09-16T15:24:18.762620+00:00 mini-anonymous-02:1 valid 
-2026-09-16T15:24:18.763189+00:00 haiku-anonymous-02:1 valid 
-2026-09-16T15:24:18.763827+00:00 haiku-anonymous-02:2 valid 
-2026-09-16T15:24:18.764465+00:00 mini-anonymous-02:2 valid 
-2026-09-16T15:24:18.765134+00:00 haiku-mirror-02:2 valid 
-2026-09-16T15:24:18.765847+00:00 mini-mirror-02:2 valid 
-2026-09-16T15:24:18.766592+00:00 haiku-mirror-01:2 valid 
-2026-09-16T15:24:18.767376+00:00 mini-mirror-01:2 valid 
-2026-09-16T15:24:18.768239+00:00 haiku-anonymous-01:2 valid 
-2026-09-16T15:24:18.769070+00:00 mini-anonymous-01:2 valid 
-2026-09-16T15:24:18.769962+00:00 mini-anonymous-01:3 valid 
-2026-09-16T15:24:18.771036+00:00 haiku-anonymous-01:3 valid 
-2026-09-16T15:24:18.772045+00:00 mini-mirror-01:3 valid 
-2026-09-16T15:24:18.773042+00:00 haiku-mirror-01:3 valid 
-2026-09-16T15:24:18.774086+00:00 mini-mirror-02:3 valid 
-2026-09-16T15:24:18.775157+00:00 haiku-mirror-02:3 valid 
-2026-09-16T15:24:18.776282+00:00 mini-anonymous-02:3 valid 
-2026-09-16T15:24:18.777491+00:00 haiku-anonymous-02:3 valid 
-2026-09-16T15:24:18.778702+00:00 haiku-anonymous-02:4 valid 
-2026-09-16T15:24:18.779969+00:00 mini-anonymous-02:4 valid 
-2026-09-16T15:24:18.781251+00:00 haiku-mirror-02:4 valid 
-2026-09-16T15:24:18.782581+00:00 mini-mirror-02:4 valid 
-2026-09-16T15:24:18.783951+00:00 haiku-mirror-01:4 valid 
-2026-09-16T15:24:18.785374+00:00 mini-mirror-01:4 valid 
-2026-09-16T15:24:18.786846+00:00 haiku-anonymous-01:4 valid 
-2026-09-16T15:24:18.788389+00:00 mini-anonymous-01:4 valid 
-2026-09-16T15:24:18.789964+00:00 mini-anonymous-01:5 valid 
-2026-09-16T15:24:18.791787+00:00 haiku-anonymous-01:5 valid 
-2026-09-16T15:24:18.793530+00:00 mini-mirror-01:5 valid 
-2026-09-16T15:24:18.795257+00:00 haiku-mirror-01:5 valid 
-2026-09-16T15:24:18.797083+00:00 mini-mirror-02:5 valid 
-2026-09-16T15:24:18.798906+00:00 haiku-mirror-02:5 valid 
-2026-09-16T15:24:18.800752+00:00 mini-anonymous-02:5 valid 
-2026-09-16T15:24:18.802654+00:00 haiku-anonymous-02:5 valid 
-2026-09-16T15:24:18.804633+00:00 haiku-anonymous-02:6 valid 
-2026-09-16T15:24:18.806704+00:00 mini-anonymous-02:6 valid 
-2026-09-16T15:24:18.808796+00:00 haiku-mirror-02:6 valid 
-2026-09-16T15:24:18.811034+00:00 mini-mirror-02:6 valid 
-2026-09-16T15:24:18.813298+00:00 haiku-mirror-01:6 valid 
-2026-09-16T15:24:18.815527+00:00 mini-mirror-01:6 valid 
-2026-09-16T15:24:18.817822+00:00 haiku-anonymous-01:6 valid 
-2026-09-16T15:24:18.820192+00:00 mini-anonymous-01:6 valid 
-2026-09-16T15:24:18.822599+00:00 mini-anonymous-01:7 valid 
-2026-09-16T15:24:18.825070+00:00 haiku-anonymous-01:7 valid 
-2026-09-16T15:24:18.827610+00:00 mini-mirror-01:7 valid 
-2026-09-16T15:24:18.830187+00:00 haiku-mirror-01:7 valid 
-2026-09-16T15:24:18.833043+00:00 mini-mirror-02:7 valid 
-2026-09-16T15:24:18.835780+00:00 haiku-mirror-02:7 valid 
-2026-09-16T15:24:18.838552+00:00 mini-anonymous-02:7 valid 
-2026-09-16T15:24:18.841415+00:00 haiku-anonymous-02:7 valid 
-2026-09-16T15:24:18.844320+00:00 haiku-anonymous-02:8 valid 
-2026-09-16T15:24:18.847279+00:00 mini-anonymous-02:8 valid 
-2026-09-16T15:24:18.850335+00:00 haiku-mirror-02:8 valid 
-2026-09-16T15:24:18.853563+00:00 mini-mirror-02:8 valid 
-2026-09-16T15:24:18.856765+00:00 haiku-mirror-01:8 valid 
-2026-09-16T15:24:18.859972+00:00 mini-mirror-01:8 valid 
-2026-09-16T15:24:18.863238+00:00 haiku-anonymous-01:8 valid 
-2026-09-16T15:24:18.866552+00:00 mini-anonymous-01:8 valid 
-2026-09-16T15:24:18.869969+00:00 mini-anonymous-01:9 valid 
-2026-09-16T15:24:18.873656+00:00 haiku-anonymous-01:9 valid 
-2026-09-16T15:24:18.877446+00:00 mini-mirror-01:9 valid 
-2026-09-16T15:24:18.881062+00:00 haiku-mirror-01:9 valid 
-2026-09-16T15:24:18.884807+00:00 mini-mirror-02:9 valid 
-2026-09-16T15:24:18.888634+00:00 haiku-mirror-02:9 valid 
-2026-09-16T15:24:18.892630+00:00 mini-anonymous-02:9 valid 
-2026-09-16T15:24:18.896595+00:00 haiku-anonymous-02:9 valid 
-2026-09-16T15:24:18.900641+00:00 haiku-anonymous-02:10 valid 
-2026-09-16T15:24:18.904716+00:00 mini-anonymous-02:10 valid 
-2026-09-16T15:24:18.908918+00:00 haiku-mirror-02:10 valid 
-2026-09-16T15:24:18.913369+00:00 mini-mirror-02:10 valid 
-2026-09-16T15:24:18.917735+00:00 haiku-mirror-01:10 valid 
-2026-09-16T15:24:18.922128+00:00 mini-mirror-01:10 valid 
-2026-09-16T15:24:18.926557+00:00 haiku-anonymous-01:10 valid 
-2026-09-16T15:24:18.931183+00:00 mini-anonymous-01:10 valid 
-2026-09-16T15:24:18.935924+00:00 mini-anonymous-01:11 valid 
-2026-09-16T15:24:18.940581+00:00 haiku-anonymous-01:11 valid 
-2026-09-16T15:24:18.945378+00:00 mini-mirror-01:11 valid 
-2026-09-16T15:24:18.950400+00:00 haiku-mirror-01:11 valid 
-2026-09-16T15:24:18.955654+00:00 mini-mirror-02:11 valid 
-2026-09-16T15:24:18.960771+00:00 haiku-mirror-02:11 valid 
-2026-09-16T15:24:18.965965+00:00 mini-anonymous-02:11 valid 
-2026-09-16T15:24:18.971308+00:00 haiku-anonymous-02:11 valid 
-2026-09-16T15:24:18.976686+00:00 haiku-anonymous-02:12 valid 
-2026-09-16T15:24:18.982060+00:00 mini-anonymous-02:12 valid 
-2026-09-16T15:24:18.987543+00:00 haiku-mirror-02:12 valid 
-2026-09-16T15:24:18.993333+00:00 mini-mirror-02:12 valid 
-2026-09-16T15:24:18.999018+00:00 haiku-mirror-01:12 valid 
-2026-09-16T15:24:19.004688+00:00 mini-mirror-01:12 valid 
-2026-09-16T15:24:19.010518+00:00 haiku-anonymous-01:12 valid 
-2026-09-16T15:24:19.016846+00:00 mini-anonymous-01:12 valid 
+test_projection_preserves_model_root_mapping_and_cost (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:18.759647+00:00 mini-anonymous-01:1 valid
+2026-09-16T15:24:18.760098+00:00 haiku-anonymous-01:1 valid
+2026-09-16T15:24:18.760550+00:00 mini-mirror-01:1 valid
+2026-09-16T15:24:18.761056+00:00 haiku-mirror-01:1 valid
+2026-09-16T15:24:18.761551+00:00 mini-mirror-02:1 valid
+2026-09-16T15:24:18.762073+00:00 haiku-mirror-02:1 valid
+2026-09-16T15:24:18.762620+00:00 mini-anonymous-02:1 valid
+2026-09-16T15:24:18.763189+00:00 haiku-anonymous-02:1 valid
+2026-09-16T15:24:18.763827+00:00 haiku-anonymous-02:2 valid
+2026-09-16T15:24:18.764465+00:00 mini-anonymous-02:2 valid
+2026-09-16T15:24:18.765134+00:00 haiku-mirror-02:2 valid
+2026-09-16T15:24:18.765847+00:00 mini-mirror-02:2 valid
+2026-09-16T15:24:18.766592+00:00 haiku-mirror-01:2 valid
+2026-09-16T15:24:18.767376+00:00 mini-mirror-01:2 valid
+2026-09-16T15:24:18.768239+00:00 haiku-anonymous-01:2 valid
+2026-09-16T15:24:18.769070+00:00 mini-anonymous-01:2 valid
+2026-09-16T15:24:18.769962+00:00 mini-anonymous-01:3 valid
+2026-09-16T15:24:18.771036+00:00 haiku-anonymous-01:3 valid
+2026-09-16T15:24:18.772045+00:00 mini-mirror-01:3 valid
+2026-09-16T15:24:18.773042+00:00 haiku-mirror-01:3 valid
+2026-09-16T15:24:18.774086+00:00 mini-mirror-02:3 valid
+2026-09-16T15:24:18.775157+00:00 haiku-mirror-02:3 valid
+2026-09-16T15:24:18.776282+00:00 mini-anonymous-02:3 valid
+2026-09-16T15:24:18.777491+00:00 haiku-anonymous-02:3 valid
+2026-09-16T15:24:18.778702+00:00 haiku-anonymous-02:4 valid
+2026-09-16T15:24:18.779969+00:00 mini-anonymous-02:4 valid
+2026-09-16T15:24:18.781251+00:00 haiku-mirror-02:4 valid
+2026-09-16T15:24:18.782581+00:00 mini-mirror-02:4 valid
+2026-09-16T15:24:18.783951+00:00 haiku-mirror-01:4 valid
+2026-09-16T15:24:18.785374+00:00 mini-mirror-01:4 valid
+2026-09-16T15:24:18.786846+00:00 haiku-anonymous-01:4 valid
+2026-09-16T15:24:18.788389+00:00 mini-anonymous-01:4 valid
+2026-09-16T15:24:18.789964+00:00 mini-anonymous-01:5 valid
+2026-09-16T15:24:18.791787+00:00 haiku-anonymous-01:5 valid
+2026-09-16T15:24:18.793530+00:00 mini-mirror-01:5 valid
+2026-09-16T15:24:18.795257+00:00 haiku-mirror-01:5 valid
+2026-09-16T15:24:18.797083+00:00 mini-mirror-02:5 valid
+2026-09-16T15:24:18.798906+00:00 haiku-mirror-02:5 valid
+2026-09-16T15:24:18.800752+00:00 mini-anonymous-02:5 valid
+2026-09-16T15:24:18.802654+00:00 haiku-anonymous-02:5 valid
+2026-09-16T15:24:18.804633+00:00 haiku-anonymous-02:6 valid
+2026-09-16T15:24:18.806704+00:00 mini-anonymous-02:6 valid
+2026-09-16T15:24:18.808796+00:00 haiku-mirror-02:6 valid
+2026-09-16T15:24:18.811034+00:00 mini-mirror-02:6 valid
+2026-09-16T15:24:18.813298+00:00 haiku-mirror-01:6 valid
+2026-09-16T15:24:18.815527+00:00 mini-mirror-01:6 valid
+2026-09-16T15:24:18.817822+00:00 haiku-anonymous-01:6 valid
+2026-09-16T15:24:18.820192+00:00 mini-anonymous-01:6 valid
+2026-09-16T15:24:18.822599+00:00 mini-anonymous-01:7 valid
+2026-09-16T15:24:18.825070+00:00 haiku-anonymous-01:7 valid
+2026-09-16T15:24:18.827610+00:00 mini-mirror-01:7 valid
+2026-09-16T15:24:18.830187+00:00 haiku-mirror-01:7 valid
+2026-09-16T15:24:18.833043+00:00 mini-mirror-02:7 valid
+2026-09-16T15:24:18.835780+00:00 haiku-mirror-02:7 valid
+2026-09-16T15:24:18.838552+00:00 mini-anonymous-02:7 valid
+2026-09-16T15:24:18.841415+00:00 haiku-anonymous-02:7 valid
+2026-09-16T15:24:18.844320+00:00 haiku-anonymous-02:8 valid
+2026-09-16T15:24:18.847279+00:00 mini-anonymous-02:8 valid
+2026-09-16T15:24:18.850335+00:00 haiku-mirror-02:8 valid
+2026-09-16T15:24:18.853563+00:00 mini-mirror-02:8 valid
+2026-09-16T15:24:18.856765+00:00 haiku-mirror-01:8 valid
+2026-09-16T15:24:18.859972+00:00 mini-mirror-01:8 valid
+2026-09-16T15:24:18.863238+00:00 haiku-anonymous-01:8 valid
+2026-09-16T15:24:18.866552+00:00 mini-anonymous-01:8 valid
+2026-09-16T15:24:18.869969+00:00 mini-anonymous-01:9 valid
+2026-09-16T15:24:18.873656+00:00 haiku-anonymous-01:9 valid
+2026-09-16T15:24:18.877446+00:00 mini-mirror-01:9 valid
+2026-09-16T15:24:18.881062+00:00 haiku-mirror-01:9 valid
+2026-09-16T15:24:18.884807+00:00 mini-mirror-02:9 valid
+2026-09-16T15:24:18.888634+00:00 haiku-mirror-02:9 valid
+2026-09-16T15:24:18.892630+00:00 mini-anonymous-02:9 valid
+2026-09-16T15:24:18.896595+00:00 haiku-anonymous-02:9 valid
+2026-09-16T15:24:18.900641+00:00 haiku-anonymous-02:10 valid
+2026-09-16T15:24:18.904716+00:00 mini-anonymous-02:10 valid
+2026-09-16T15:24:18.908918+00:00 haiku-mirror-02:10 valid
+2026-09-16T15:24:18.913369+00:00 mini-mirror-02:10 valid
+2026-09-16T15:24:18.917735+00:00 haiku-mirror-01:10 valid
+2026-09-16T15:24:18.922128+00:00 mini-mirror-01:10 valid
+2026-09-16T15:24:18.926557+00:00 haiku-anonymous-01:10 valid
+2026-09-16T15:24:18.931183+00:00 mini-anonymous-01:10 valid
+2026-09-16T15:24:18.935924+00:00 mini-anonymous-01:11 valid
+2026-09-16T15:24:18.940581+00:00 haiku-anonymous-01:11 valid
+2026-09-16T15:24:18.945378+00:00 mini-mirror-01:11 valid
+2026-09-16T15:24:18.950400+00:00 haiku-mirror-01:11 valid
+2026-09-16T15:24:18.955654+00:00 mini-mirror-02:11 valid
+2026-09-16T15:24:18.960771+00:00 haiku-mirror-02:11 valid
+2026-09-16T15:24:18.965965+00:00 mini-anonymous-02:11 valid
+2026-09-16T15:24:18.971308+00:00 haiku-anonymous-02:11 valid
+2026-09-16T15:24:18.976686+00:00 haiku-anonymous-02:12 valid
+2026-09-16T15:24:18.982060+00:00 mini-anonymous-02:12 valid
+2026-09-16T15:24:18.987543+00:00 haiku-mirror-02:12 valid
+2026-09-16T15:24:18.993333+00:00 mini-mirror-02:12 valid
+2026-09-16T15:24:18.999018+00:00 haiku-mirror-01:12 valid
+2026-09-16T15:24:19.004688+00:00 mini-mirror-01:12 valid
+2026-09-16T15:24:19.010518+00:00 haiku-anonymous-01:12 valid
+2026-09-16T15:24:19.016846+00:00 mini-anonymous-01:12 valid
 ok
 test_reservation_or_skip_forgery_rejected (test_paid_framing.PaidFramingTests) ... ok
 test_uncertain_request_and_saved_error_are_not_retried (test_paid_framing.PaidFramingTests) ... 2026-09-16T15:24:19.054145+00:00 mini-anonymous-01:1 unresolved Saved request with unknown response; never retried

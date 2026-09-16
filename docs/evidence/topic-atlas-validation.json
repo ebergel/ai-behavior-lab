@@ -5,7 +5,8 @@
     "passed": 172,
     "full_suite": "docs/evidence/topic-atlas-tests.txt",
     "javascript_syntax": "pass",
-    "git_diff_check": "pass"
+    "git_diff_check": "pass",
+    "log_format": "Trailing whitespace removed; synthetic fixture traces labeled; raw output preserved in workspace/topic-atlas-20260916-1206/tests-raw.txt"
   },
   "browser": {
     "live_source_link_and_researcher_note": "pass",
