@@ -1,6 +1,14 @@
 # Continuation milestone: transcript exploration
 
-## Latest completed milestone: topic atlas
+## Latest completed milestone: Conversation Finder
+
+The approved tag navigation layer is implemented. [Conversation Finder](CONVERSATION-FINDER.md) combines exact model IDs, developer/lab, weight access, regular participant count/composition, prompt disclosure and other recorded setup conditions. External model interventions have a separate role, event list and exact transcript links. Colored badges and the reader roster make identities legible across views. Named filter recipes retain revision history separately from research collections and annotation tables.
+
+The default inventory remains 472 records. Both Gemma–Haiku opening orders can be selected together; all 40 earlier external-Gemma runs retain two regular participants. Unknown historical history policies are not inferred from chat/completion mode. Three-participant and named-model-disclosure cells show zero; no new experiments are implied. All 184 Python and 10 JavaScript checks pass; browser validation and evidence preservation are recorded in the guide. No inference or scheduled continuation is active.
+
+Next useful research step remains a bounded reading cohort and opening-topic review, now selectable by explicit conditions. Repeated mixed pairings, matched-prefix interventions and trios still need their own design and freeze.
+
+## Previous completed milestone: topic atlas
 
 UI follow-up: the dictionary and variant tables now support ascending/descending column sorting. Topic names open deduplicated conversation lists; each count opens its exact evidence subset. Lists add search, sorting, experimental settings, matching-message links and page-preserving return from the reader. See [the navigation guide](TOPIC-ATLAS.md#sort-and-browse-matching-conversations). The analysis and annotation definitions remain unchanged.
 

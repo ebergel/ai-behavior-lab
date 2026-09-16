@@ -1,0 +1,202 @@
+{
+  "checked_at": "2026-09-16T13:24:35.934015-03:00",
+  "feature": "Conversation Finder / experiment-facets/1",
+  "python_tests": 184,
+  "javascript_tests": 10,
+  "filter_checks": {
+    "google_participants": {
+      "filters": {
+        "developer": [
+          "Google"
+        ],
+        "role": "participants",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 55
+    },
+    "google_external": {
+      "filters": {
+        "developer": [
+          "Google"
+        ],
+        "role": "interventions",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 40
+    },
+    "google_anywhere": {
+      "filters": {
+        "developer": [
+          "Google"
+        ],
+        "role": "anywhere",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 95
+    },
+    "gemma_haiku": {
+      "filters": {
+        "models": [
+          "anthropic/claude-haiku-4.5",
+          "gemma4:26b"
+        ],
+        "role": "participants",
+        "model_match": "all",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 2
+    },
+    "anonymous_ai": {
+      "filters": {
+        "identity": [
+          "Anonymous-AI"
+        ],
+        "role": "participants",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 4
+    },
+    "mixed": {
+      "filters": {
+        "composition": [
+          "Mixed models"
+        ],
+        "role": "participants",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 4
+    },
+    "all_closed": {
+      "filters": {
+        "weights": [
+          "Closed weights"
+        ],
+        "role": "participants",
+        "model_match": "any",
+        "property_match": "every",
+        "sort": "recent"
+      },
+      "total": 18
+    },
+    "any_closed": {
+      "filters": {
+        "weights": [
+          "Closed weights"
+        ],
+        "role": "participants",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 20
+    },
+    "regular_trio": {
+      "filters": {
+        "participants": [
+          "3"
+        ],
+        "role": "participants",
+        "model_match": "any",
+        "property_match": "any",
+        "sort": "recent"
+      },
+      "total": 0
+    }
+  },
+  "preservation": {
+    "source_artifacts_preserved": 111,
+    "prior_sqlite_tables": {
+      "notes": {
+        "rows": 5,
+        "unchanged": true
+      },
+      "history": {
+        "rows": 5,
+        "unchanged": true
+      },
+      "research_collections": {
+        "rows": 5,
+        "unchanged": true
+      },
+      "collection_history": {
+        "rows": 6,
+        "unchanged": true
+      },
+      "topic_flags": {
+        "rows": 28,
+        "unchanged": true
+      },
+      "topic_flag_history": {
+        "rows": 28,
+        "unchanged": true
+      },
+      "topic_dictionary": {
+        "rows": 22,
+        "unchanged": true
+      },
+      "topic_dictionary_history": {
+        "rows": 22,
+        "unchanged": true
+      },
+      "topic_openings": {
+        "rows": 4,
+        "unchanged": true
+      },
+      "topic_opening_history": {
+        "rows": 4,
+        "unchanged": true
+      }
+    },
+    "new_finder_views": 0
+  },
+  "saved_view_fixture": {
+    "database": "isolated browser fixture",
+    "saved_view_revisions": 2,
+    "names": [
+      "Browser fixture \u00b7 Gemma and Haiku",
+      "Browser fixture \u00b7 Ordered Gemma\u2013Haiku pairs"
+    ],
+    "filters": {
+      "model_match": "all",
+      "models": [
+        "anthropic/claude-haiku-4.5",
+        "gemma4:26b"
+      ],
+      "property_match": "any",
+      "role": "participants",
+      "sort": "recent"
+    }
+  },
+  "frozen_pilot_dependencies": 32,
+  "new_inference_calls": 0,
+  "new_cost_usd": 0,
+  "browser_checks": [
+    "External-model filter yields 40 two-participant reference records",
+    "External list shows seven insertions at turns 4\u201328 for C run 20",
+    "External link focuses exact m-line-6 and retains Finder filters on return",
+    "Gemma and Haiku contains-all yields two ordered mixed conversations",
+    "Reader banner exposes X/Gemma, Y/Haiku, opener and thinking settings",
+    "Rapid sequential selections retain both model tags and match rule",
+    "Save, recall, revision update and full-reload persistence in isolated copied database",
+    "All five research collection cards display correct model-family badges with no nested buttons or horizontal overflow",
+    "Topic atlas retains four pilot roots, 22 dictionary entries and attributed opening counts; conversation cards show matching models and setup badges",
+    "Side-by-side comparison renders both ordered mixed roots and closes back to the same Finder selection"
+  ],
+  "screenshots": [
+    "conversation-finder.jpg",
+    "mixed-participant-badges.jpg",
+    "external-intervention-reader.jpg"
+  ],
+  "browser_error_log": []
+}

@@ -1,5 +1,7 @@
 # Transcript explorer
 
+**Conversation Finder** adds clickable setup tags, model/lab/weight filters scoped to regular participants or external interventions, combined-condition counts and versioned saved views. Colored model badges and the reader roster retain identities across close reading and research collections. See [the Finder guide](CONVERSATION-FINDER.md) for definitions, examples and validation.
+
 **Model assessment** is a new sidebar section for participant profiles, exact instruction checks, service availability and short self-play samples when available. It links to the same close reader, comparison, notes, tags and collections. Frozen protocols and Codex-attributed findings are kept beside their evidence. The first free-route screens encountered configuration, quota and access restrictions; missing replies are not negative behavioral labels. See [the assessment record](MODEL-ASSESSMENT.md). Inference still runs only through an explicitly frozen CLI batch, never from the Explorer.
 
 The latest screen contains four-message conversations from Nemotron and Ling. Use **Choose assessment batch** to return to an earlier screen. Nemotron's system-check button is labeled **earlier batch** and opens its original source; the current call count excludes that reused observation. Word-limit overruns are visible on the candidate card. **Read & annotate** opens each conversation for close reading, comparison or saving a passage.

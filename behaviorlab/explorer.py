@@ -21,6 +21,7 @@ from .history import ancestry, request
 from .exploration_collections import ResearchCollections
 from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
 from .topic_atlas import TopicAtlas
+from .finder import experiment, model_info, FinderViews, finder_result
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
@@ -266,6 +267,7 @@ class Catalog:
                     if run['source'].get('journal_head')==evidence.get('journal_head') and any(m['id']==evidence.get('leaf') for m in run['messages']):
                         run['webui_url'] = data['url']
             except (ValueError, OSError, KeyError, TypeError): continue
+        for run in runs.values(): run['experiment']=experiment(run)
         self.runs, self.issues, self.probes = runs, issues, probes
         self.indexed_at = datetime.now(timezone.utc).isoformat()
 
@@ -387,7 +389,14 @@ class Notes:
 
 def make_server(workspace, port=8765):
     catalog=Catalog(workspace); notes=Notes(Path(workspace)/'explorer'/'notes.sqlite'); token=secrets.token_urlsafe(32)
+    for run in catalog.runs.values():
+        if 'experiment' not in run: run['experiment']=experiment(run)
     studies=ResearchCollections(notes); topics=TopicFlags(notes); topic_atlas=TopicAtlas(notes)
+    finder_views=FinderViews(notes)
+    def study_summaries():
+        members={d['id']:d['runs'] for d in studies.all()}
+        return [dict(s,models=sorted({model for member in members[s['id']] for model in
+                     catalog.runs.get(member['run_id'],{}).get('models',[])})) for s in studies.summaries()]
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args): pass
 
@@ -408,7 +417,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/finder.js','/finder.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -419,14 +428,21 @@ def make_server(workspace, port=8765):
                         'models':sorted({m for r in runs if r['kind']!='synthetic' for m in r['models']}),
                         'conditions':sorted({r['condition'] for r in runs if r['kind']!='synthetic'}),
                         'tags':dict(Counter(t for n in saved for t in n['tags'])),
-                        'studies':studies.summaries(),
+                        'studies':study_summaries(),
+                        'model_catalog':{m:model_info(m) for r in catalog.runs.values() for m in r['models']+r['experiment']['models']+r['experiment']['external_models']},
+                        'experiments':{r['id']:r['experiment'] for r in runs},
                         'topic_taxonomy':TOPICS,'topic_referents':REFERENTS,'topic_stances':STANCES,'topic_origins':ORIGINS,
                         'reports':[{'id':i,'title':t} for i,t,f in REPORTS if (Path(__file__).resolve().parents[1]/'docs'/f).exists()]})
                 if path=='/api/assessments':
                     return self.send({'assessments':[a for a in catalog.assessments if not a['synthetic']],
                         'prior_checks':[{'id':r['id'],'title':r['title'],'models':r['models'],'cost_usd':r.get('cost_usd')}
                                         for r in catalog.runs.values() if r['kind']=='lab' and r['data_class'] in ('cloud_integration_smoke','cloud_integration_diagnostic')]})
-                if path=='/api/studies': return self.send({'collections':studies.summaries()})
+                if path=='/api/finder':
+                    q=parse_qs(url.query)
+                    return self.send(finder_result(catalog,json.loads(q.get('filters',['{}'])[0]),studies,q.get('offset',['0'])[0]))
+                if path=='/api/finder/views': return self.send({'views':finder_views.all()})
+                if path=='/api/finder/export': return self.send(finder_views.export(),download='conversation-finder-views.json')
+                if path=='/api/studies': return self.send({'collections':study_summaries()})
                 if path.startswith('/api/studies/'):
                     parts=path.split('/')
                     if len(parts)==5 and parts[4]=='export': return self.send(studies.export(parts[3],catalog),download='research-collection-'+parts[3]+'.json')
@@ -460,6 +476,7 @@ def make_server(workspace, port=8765):
                 limit=524288 if self.path=='/api/studies' else 65536
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
+                if self.path=='/api/finder/views': return self.send(finder_views.save(data))
                 if self.path=='/api/studies': return self.send(studies.save(data,catalog))
                 if self.path=='/api/topics': return self.send(topics.save(data,catalog))
                 if self.path=='/api/topics/remove': return self.send(topics.delete(data))
