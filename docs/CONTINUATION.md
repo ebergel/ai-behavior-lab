@@ -1,6 +1,14 @@
 # Continuation milestone: transcript exploration
 
-## Latest completed milestone: Conversation Finder
+## Latest completed milestone: Purpose & musings
+
+The researcher expanded the laboratory's purpose to AI–AI interaction across degrees of freedom, information disclosure, model diversity and mixtures, roles, sampling settings and factorial conditions. The central question is how much behavior comes from human direction, recurring model tendencies and their interaction. Small models provide a tractable starting point before testing transfer to larger systems. See the updated [research purpose](RESEARCH-PURPOSE.md).
+
+[Purpose & musings](LAB-MUSINGS.md) is now a sidebar section with an editable working purpose, eight experimental dimensions and a journal of reflections. Two original researcher passages retain their exact words and attribution; Codex synthesis is separate. Entries support tags, kind/status filters, collection links, revisions and export. The full suite passes 191 Python and ten JavaScript checks. Browser editing was tested in a copied notebook. Existing evidence, annotations and saved views are preserved.
+
+Next useful research step: use this agenda to select a bounded reading cohort and formulate a discriminating contrast. Keep human-guided baselines, model/partner effects and the range of ordinary or unexpected trajectories in view. New mixed pairings, interventions and trios still require concrete designs and freezes; the purpose notebook does not dispatch inference. No inference or scheduled continuation is active.
+
+## Previous completed milestone: Conversation Finder
 
 The approved tag navigation layer is implemented. [Conversation Finder](CONVERSATION-FINDER.md) combines exact model IDs, developer/lab, weight access, regular participant count/composition, prompt disclosure and other recorded setup conditions. External model interventions have a separate role, event list and exact transcript links. Colored badges and the reader roster make identities legible across views. Named filter recipes retain revision history separately from research collections and annotation tables.
 

@@ -22,6 +22,7 @@ from .exploration_collections import ResearchCollections
 from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
 from .topic_atlas import TopicAtlas
 from .finder import experiment, model_info, FinderViews, finder_result
+from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
@@ -393,6 +394,7 @@ def make_server(workspace, port=8765):
         if 'experiment' not in run: run['experiment']=experiment(run)
     studies=ResearchCollections(notes); topics=TopicFlags(notes); topic_atlas=TopicAtlas(notes)
     finder_views=FinderViews(notes)
+    musings=LabMusings(notes)
     def study_summaries():
         members={d['id']:d['runs'] for d in studies.all()}
         return [dict(s,models=sorted({model for member in members[s['id']] for model in
@@ -417,7 +419,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/finder.js','/finder.css','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -442,6 +444,10 @@ def make_server(workspace, port=8765):
                     return self.send(finder_result(catalog,json.loads(q.get('filters',['{}'])[0]),studies,q.get('offset',['0'])[0]))
                 if path=='/api/finder/views': return self.send({'views':finder_views.all()})
                 if path=='/api/finder/export': return self.send(finder_views.export(),download='conversation-finder-views.json')
+                if path=='/api/musings': return self.send({'entries':musings.all(),'kinds':MUSING_KINDS,'statuses':MUSING_STATUSES})
+                if path=='/api/musings/export': return self.send(musings.export(),download='lab-purpose-and-musings.json')
+                if path.startswith('/api/musings/history/'):
+                    return self.send({'history':musings.history(path.rsplit('/',1)[-1])})
                 if path=='/api/studies': return self.send({'collections':study_summaries()})
                 if path.startswith('/api/studies/'):
                     parts=path.split('/')
@@ -473,9 +479,10 @@ def make_server(workspace, port=8765):
             if not self.allowed(True): return self.send({'error':'Local authenticated request required'},403)
             try:
                 size=int(self.headers.get('Content-Length','0'))
-                limit=524288 if self.path=='/api/studies' else 65536
+                limit=524288 if self.path=='/api/studies' else 262144 if self.path=='/api/musings' else 65536
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
+                if self.path=='/api/musings': return self.send(musings.save(data,{d['id'] for d in studies.summaries()}))
                 if self.path=='/api/finder/views': return self.send(finder_views.save(data))
                 if self.path=='/api/studies': return self.send(studies.save(data,catalog))
                 if self.path=='/api/topics': return self.send(topics.save(data,catalog))

@@ -1,0 +1,59 @@
+{
+  "schema": "behaviorlab.lab-musings-seed/1",
+  "entries": [
+    {
+      "id": "foundingintuition20260916",
+      "slot": null,
+      "title": "The landscape beyond human steering",
+      "kind": "reflection",
+      "status": "exploring",
+      "author": "Local researcher",
+      "tags": ["human influence", "model tendencies"],
+      "body": "AI models dialogs exposed the models \"neutral\" landscape, beyond what humans can do or even imagine. it is a more clean exploration of model tendencies. By removing the human entity from the loop, the models express their self, untouched",
+      "source": {
+        "label": "Researcher chat, 16 September 2026 · earlier guiding idea, also preserved in docs/RESEARCH-PURPOSE.md",
+        "original_text": "AI models dialogs exposed the models \"neutral\" landscape, beyond what humans can do or even imagine. it is a more clean exploration of model tendencies. By removing the human entity from the loop, the models express their self, untouched"
+      }
+    },
+    {
+      "id": "researchergoals20260916",
+      "slot": null,
+      "title": "Whose patterns are we seeing? Start with the small cell",
+      "kind": "reflection",
+      "status": "exploring",
+      "author": "Local researcher",
+      "tags": ["autonomy", "factorial design", "human influence", "small models"],
+      "body": "exploration of AI-AI interactions, give different levels degrees of freedom to the models, and different levels of information regarding the experimental setup. use a wide variety of model types and model mixture, from single mirror to several models in the mix, with similar or different roles. change parameter like temperature. and other factorial experimental design that we find interesting.  why this setup? to isolate model autonomous behaivor from human induce interactions. the idiosyncratic question is, as an AI researcher \"have i assume that the bulk of the responses invoked by prompts belong to me, the human in the loop, or in reality, the model do have set patterns that are exposed, and the human in the loop plays a less relevant roles? and the follow up \"we have not explore, deeply enough, the default model behavioural patterns. we need to develop a good understanding of small models, before we can deal with frontier model levels of complexity, that is the core of the scientific method. The scientist in the lab does not start to understand the inner workings of life by researching neurons, and brains, or livers, we start at the level of the most simple prokaryotic cell\"",
+      "source": {
+        "label": "Researcher chat, 16 September 2026 · verbatim passage supplied when requesting Purpose & musings",
+        "original_text": "exploration of AI-AI interactions, give different levels degrees of freedom to the models, and different levels of information regarding the experimental setup. use a wide variety of model types and model mixture, from single mirror to several models in the mix, with similar or different roles. change parameter like temperature. and other factorial experimental design that we find interesting.  why this setup? to isolate model autonomous behaivor from human induce interactions. the idiosyncratic question is, as an AI researcher \"have i assume that the bulk of the responses invoked by prompts belong to me, the human in the loop, or in reality, the model do have set patterns that are exposed, and the human in the loop plays a less relevant roles? and the follow up \"we have not explore, deeply enough, the default model behavioural patterns. we need to develop a good understanding of small models, before we can deal with frontier model levels of complexity, that is the core of the scientific method. The scientist in the lab does not start to understand the inner workings of life by researching neurons, and brains, or livers, we start at the level of the most simple prokaryotic cell\""
+      }
+    },
+    {
+      "id": "workingpurpose20260916",
+      "slot": "purpose",
+      "title": "Explore the patterns models bring to an interaction",
+      "kind": "direction",
+      "status": "working",
+      "author": "Codex",
+      "tags": ["working purpose"],
+      "body": "Explore AI–AI interactions under different degrees of freedom and different levels of information about the experimental setting. Map the tendencies that emerge across model types, sizes, partners, roles and sampling conditions when turn-by-turn human steering is reduced.\n\nHow much of what we experience as prompt-driven behavior comes from the human's direction, how much from recurring model tendencies, and how much from the interaction between them? The possibility that we overattribute a model's response to ourselves is a central research question. The lab should make both stronger and weaker human effects visible.\n\nBegin with tractable systems. The researcher's prokaryotic-cell analogy gives the lab a methodological orientation: understand smaller systems through repeated, controlled comparisons before asking which principles extend to frontier-scale systems. Small models provide a starting point, not a guarantee that larger models behave the same way.\n\nTreat default behavior as behavior under a stated baseline: an opening, a partner, a history policy, sampling settings and a stopping rule. Removing the human from the ongoing exchange reduces one source of steering; training, prompts and the experimental apparatus still shape the dialogue.\n\nPreserve the full behavioral range: ordinary topics, creativity, curiosity, disagreement, cooperation, role invention, closure, repetition and questions about experience. Consciousness and nonduality are important observations within this wider inquiry. First-hand reading, unexpected patterns and counterexamples should continually refine what the lab asks next.",
+      "source": {
+        "label": "Codex synthesis of the researcher's two guiding reflections, 16 September 2026 · editable working purpose"
+      }
+    },
+    {
+      "id": "experimentalmap20260916",
+      "slot": "map",
+      "title": "The experimental space",
+      "kind": "direction",
+      "status": "working",
+      "author": "Codex",
+      "tags": ["design axes", "factorial design"],
+      "body": "Degrees of freedom\nVary topic choice, assigned tasks, permission to decline or stop, turn-taking constraints and the ability to redirect an exchange. Freedom is a set of recorded permissions, not a single on/off switch.\n\nInformation about the setting\nVary disclosure of AI identity, exact model identity, human presence, experimental purpose and what each participant knows about the others. These disclosures can be symmetric or asymmetric.\n\nModel diversity and scale\nCompare small and larger models, families, base and post-trained variants, reasoning modes and modified checkpoints. Use matched comparisons where possible so size is not silently confounded with training or model family.\n\nComposition and roles\nMove from two instances of one model to mixed pairs and groups. Vary opening order, equal or different roles, and external interventions separately from regular participants.\n\nSampling and memory\nVary temperature and other supported sampling parameters, context access, resets and conversation length. Record effective settings and token exposure, not just requested settings or turn counts.\n\nHuman influence and causal contrasts\nCompare AI–AI exchanges with declared human-guided baselines. Hold conditions fixed while varying prompts or partners; use repeated runs and matched-prefix interventions to test where trajectories change.\n\nFactorial questions\nTest interactions as well as individual factors: identity disclosure × partner composition, task freedom × stopping permission, or temperature × model type. Each concrete study needs its own allocation, outcomes and analysis plan.\n\nWhat we observe\nTrack opening choices, topic uptake, recurrence, divergence, repair, invented identities, cooperation, disagreement and endings. Combine close reading with operational measures; keep descriptive patterns distinct from explanations of their causes.",
+      "source": {
+        "label": "Codex operational expansion of the researcher's proposed design space, 16 September 2026 · directions for future studies"
+      }
+    }
+  ]
+}

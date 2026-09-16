@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-09-16T14:14:02.539953-03:00",
+  "feature": "Purpose & musings / behaviorlab.lab-musings/1",
+  "python_tests": 191,
+  "javascript_tests": 10,
+  "browser_checks": [
+    "Working purpose and eight experimental dimensions visible",
+    "Original researcher quote and attribution preserved",
+    "Add reflection with kind, tags and collection link in copied notebook",
+    "Edit body and status with revision history",
+    "Combined title/body/tag search, kind and status filters",
+    "Full page reload preserves saved revision",
+    "Literal HTML and Unicode remain visible text",
+    "Linked collection opens correct research collection",
+    "Working purpose edit preserves original author and shows new editor/status",
+    "No horizontal overflow at desktop width",
+    "No browser application error logs",
+    "Original-reflection navigation clears stale journal filters"
+  ],
+  "browser_write_scope": "workspace/purpose-20260916-1403/browser-fixture, isolated copy",
+  "unchanged_prior_tables": {
+    "notes": 5,
+    "history": 5,
+    "research_collections": 5,
+    "collection_history": 6,
+    "topic_flags": 28,
+    "topic_flag_history": 28,
+    "topic_dictionary": 22,
+    "topic_dictionary_history": 22,
+    "topic_openings": 4,
+    "topic_opening_history": 4,
+    "finder_views": 0,
+    "finder_view_history": 0
+  },
+  "seed_entries": 4,
+  "seed_history_entries": 4,
+  "seed_authorship": {
+    "Local researcher": 2,
+    "Codex": 2
+  },
+  "prior_artifacts_unchanged": 111,
+  "frozen_pilot_dependencies_verified": 32,
+  "pilot_journal_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+  "new_inference_calls": 0,
+  "new_cost_usd": "0",
+  "automation_created": false
+}
