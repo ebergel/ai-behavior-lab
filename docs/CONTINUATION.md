@@ -1,5 +1,7 @@
 # Continuation milestone: transcript exploration
 
+Private GitHub publication completed 16 September 2026: [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab), independent of the earlier reference repository. `origin/main` tracks the private remote. See [repository scope](REPOSITORY.md): project history is uploaded; the local `workspace/` evidence store and notebook require a separate backup. No public release or automatic synchronization is configured. The next research milestone below is unchanged.
+
 ## Latest completed milestone: topic tags in Conversation Finder
 
 **Topics** is now the first Finder facet, above **Models**. Dictionary tags combine with model, role, cohort and setup conditions, using the atlas's four evidence modes: any turn, first six, repeated phrase matches and current reviewed initial choices. Results link directly to supporting messages. Topic and evidence selections survive saved views, bookmarks, pagination and transcript return. See the [Finder topic guide](CONVERSATION-FINDER.md#topic-tags-above-models).

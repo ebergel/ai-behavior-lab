@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-16T15:41:37.622236-03:00",
+  "repository": "https://github.com/ebergel/ai-behavior-lab",
+  "owner": "ebergel",
+  "visibility": "PRIVATE",
+  "is_fork": false,
+  "default_branch": "main",
+  "verified_initial_commit": "f9d4cfa26ef1f169a7d37462c16fb4dddd63322d",
+  "initial_uploaded_files": 285,
+  "uploaded_workspace_paths": [],
+  "tests": {
+    "python": 202,
+    "javascript": 14
+  },
+  "preflight": {
+    "historical_blobs": 478,
+    "historical_commits": 33,
+    "possible_hits": 2,
+    "reviewed_test_fixtures": 2,
+    "unresolved_hits": 0,
+    "method": "Heuristic provider-token, private-key, credential-assignment and URL-userinfo patterns; sensitive filename and blob-size review. Not an exhaustive security guarantee."
+  },
+  "scope": "Tracked app, tooling, designs, reports, compact validation, screenshots and session history. Local workspace evidence and notebook excluded.",
+  "evidence_directory": "workspace/github-publication-20260916-1538"
+}
