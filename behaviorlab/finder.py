@@ -1,6 +1,6 @@
 """Read-only experiment facets and separately versioned navigation views.
 
-Facets describe recorded setup, never claims made inside generated dialogue.
+Setup facets describe recorded conditions. Topic facets reuse the separate atlas.
 The versioned alias catalogue does not replace exact model IDs or source bytes.
 """
 from collections import Counter
@@ -99,7 +99,7 @@ def experiment(run):
 
 
 FACETS = ('models','developer','weights','participants','composition','identity','external','external_style','history','task','exit','human')
-SCALARS = ('role','model_match','property_match','cohort','q','sort')
+SCALARS = ('role','model_match','property_match','cohort','q','sort','topic_mode')
 VOCABULARY = {'participants':('1','2','3',UNKNOWN),
               'composition':('Single participant','Same model','Mixed models',UNKNOWN),
               'identity':('Anonymous-Full','Anonymous-AI','Mirror','Named models',UNKNOWN),
@@ -111,14 +111,15 @@ VOCABULARY = {'participants':('1','2','3',UNKNOWN),
 
 def clean_filters(data):
     require(isinstance(data,dict), 'Expected finder filters')
-    require(not set(data)-set(FACETS)-set(SCALARS), 'Unknown finder filter')
+    require(not set(data)-set(FACETS)-set(SCALARS)-{'topics'}, 'Unknown finder filter')
     result = {}
-    for key in FACETS:
+    for key in ('topics',)+FACETS:
         v=data.get(key,[])
         require(isinstance(v,list) and len(v)<=100 and all(isinstance(s,str) and len(s)<=300 for s in v),'Invalid facet '+key)
         if v: result[key]=sorted(set(v))
     for key,default,allowed in [('role','participants',('participants','interventions','anywhere')),
                                ('model_match','any',('any','all')),('property_match','any',('any','every')),
+                               ('topic_mode','any',('any','early','repeated','initial')),
                                ('sort','recent',('recent','name','length'))]:
         v=data.get(key,default);require(v in allowed,'Invalid finder '+key);result[key]=v
     for key in ('cohort','q'):
@@ -146,8 +147,14 @@ def matches(exp, filters, omit=None):
     return True
 
 
-def finder_result(catalog, filters, studies, offset=0):
+def finder_result(catalog, filters, studies, offset=0, topic_atlas=None):
     filters=clean_filters(filters)
+    require(topic_atlas is not None or not filters.get('topics'),'Topic atlas unavailable')
+    topic_index=topic_atlas.finder_index(catalog,filters['topic_mode']) if topic_atlas else {'dictionary':[],'by_run':{},'eligible_records':0,'dictionary_sha256':None}
+    definitions={d['id']:d for d in topic_index['dictionary']}
+    topic_hits=topic_index['by_run']
+    def topic_matches(run):
+        return not filters.get('topics') or bool(set(filters['topics']).intersection(topic_hits.get(run['id'],{})))
     cohort=filters.get('cohort');allowed=None
     if cohort:
         allowed={m['run_id'] for m in studies.get(cohort)['runs']}
@@ -155,14 +162,18 @@ def finder_result(catalog, filters, studies, offset=0):
     candidates=[r for r in catalog.runs.values() if r['kind']!='synthetic' and not r.get('unstarted_assessment')
                 and (allowed is None or r['id'] in allowed)
                 and (not q or q in r['_search'] or q in r['_metadata_search'])]
-    selected=[r for r in candidates if matches(r['experiment'],filters)]
+    selected=[r for r in candidates if topic_matches(r) and matches(r['experiment'],filters)]
     selected.sort(key=lambda r: (r['title'],r['id']) if filters['sort']=='name' else
                   (-r['words'],r['id']) if filters['sort']=='length' else (str(r.get('date') or ''),r['id']),reverse=filters['sort']=='recent')
-    facets={}
+    topic_counts=Counter({d:0 for d in definitions})
+    for r in candidates:
+        if matches(r['experiment'],filters):topic_counts.update(topic_hits.get(r['id'],{}).keys())
+    for v in filters.get('topics',[]):topic_counts.setdefault(v,0)
+    facets={'topics':dict(topic_counts)}
     for key in FACETS:
         counts=Counter({v:0 for v in VOCABULARY.get(key,())})
         for r in candidates:
-            if matches(r['experiment'],filters,omit=key):
+            if topic_matches(r) and matches(r['experiment'],filters,omit=key):
                 for v in facet_values(r['experiment'],key,filters['role']):
                     # Counts show the result if this group were replaced with
                     # this single value. Thus Every excludes mixed properties.
@@ -172,7 +183,11 @@ def finder_result(catalog, filters, studies, offset=0):
         facets[key]=dict(sorted(counts.items()))
     offset=max(0,int(offset))
     return {'version':VERSION,'filters':filters,'total':len(selected),'offset':offset,'cohort_total':len(candidates),
-            'facets':facets,'runs':[catalog.public(r) for r in selected[offset:offset+40]],
+            'facets':facets,'runs':[dict(catalog.public(r),topic_matches=[
+                dict(topic_hits[r['id']][t],topic_id=t,title=definitions[t]['title'])
+                for t in filters.get('topics',[]) if t in topic_hits.get(r['id'],{})]) for r in selected[offset:offset+40]],
+            'topic_dictionary':topic_index['dictionary'],'topic_dictionary_sha256':topic_index['dictionary_sha256'],
+            'topic_eligible_records':sum(r['id'] in topic_hits for r in candidates),
             'count_basis':'Counts replace the choices in that group; other groups, role, match rules, cohort and search remain applied.'}
 
 

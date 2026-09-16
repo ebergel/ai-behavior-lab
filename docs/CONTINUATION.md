@@ -1,6 +1,12 @@
 # Continuation milestone: transcript exploration
 
-## Latest completed milestone: Topic atlas selection and prominence
+## Latest completed milestone: topic tags in Conversation Finder
+
+**Topics** is now the first Finder facet, above **Models**. Dictionary tags combine with model, role, cohort and setup conditions, using the atlas's four evidence modes: any turn, first six, repeated phrase matches and current reviewed initial choices. Results link directly to supporting messages. Topic and evidence selections survive saved views, bookmarks, pagination and transcript return. See the [Finder topic guide](CONVERSATION-FINDER.md#topic-tags-above-models).
+
+202 Python and 14 JavaScript checks pass. Live counts agree with Topic atlas; browser checks and preservation are recorded in [the validation](evidence/finder-topics-validation.json). All existing notebook, dictionary, review and collection rows remain unchanged. No inference or spending occurred. The prospective opening/partner runner remains the next research milestone below.
+
+## Previous completed milestone: Topic atlas selection and prominence
 
 The researcher prioritized Topic atlas navigation before new experiments. The atlas is now directly below All transcripts in the sidebar. A persistent **Selected topic** picker works in dictionary and conversation views. Topic names and related-topic buttons select the entry panel; a checkmark identifies the selected row. Counts still open their exact conversation subsets, and **View matching conversations** explicitly opens all literal matches for the selected entry. Cohort/model filters, sorting and transcript-return URLs retain their meaning. Narrow layouts put the selected definition before the frequency table.
 

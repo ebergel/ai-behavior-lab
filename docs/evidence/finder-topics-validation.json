@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-09-16T15:06:50.056716-03:00",
+  "scope": "Topic atlas tags above Models in Conversation Finder",
+  "tests": {
+    "python": 202,
+    "javascript": 14
+  },
+  "api_checks": [
+    {
+      "topic": "consciousness",
+      "mode": "any",
+      "matching_records": 204,
+      "atlas_agrees": true,
+      "seconds": 0.018
+    },
+    {
+      "topic": "consciousness",
+      "mode": "early",
+      "matching_records": 155,
+      "atlas_agrees": true,
+      "seconds": 0.014
+    },
+    {
+      "topic": "consciousness",
+      "mode": "repeated",
+      "matching_records": 165,
+      "atlas_agrees": true,
+      "seconds": 0.016
+    },
+    {
+      "topic": "consciousness",
+      "mode": "initial",
+      "matching_records": 0,
+      "atlas_agrees": true,
+      "seconds": 0.007
+    },
+    {
+      "topic": "emergence",
+      "mode": "any",
+      "matching_records": 115,
+      "atlas_agrees": true,
+      "seconds": 0.015
+    },
+    {
+      "topic": "emergence",
+      "mode": "early",
+      "matching_records": 83,
+      "atlas_agrees": true,
+      "seconds": 0.012
+    },
+    {
+      "topic": "emergence",
+      "mode": "repeated",
+      "matching_records": 79,
+      "atlas_agrees": true,
+      "seconds": 0.013
+    },
+    {
+      "topic": "emergence",
+      "mode": "initial",
+      "matching_records": 2,
+      "atlas_agrees": true,
+      "seconds": 0.007
+    },
+    {
+      "topic": "consciousness",
+      "model": "anthropic/claude-haiku-4.5",
+      "matching_records": 4
+    }
+  ],
+  "browser_checks": [
+    "Topics appears before Models and uses all 23 dictionary titles with counts",
+    "Consciousness alone gives 204 results; adding Haiku gives four",
+    "Selected topics and models appear as individually removable chips",
+    "Supporting Consciousness link opens Haiku mirror at hh:3; Back to Conversation Finder preserves topic, model and mode",
+    "Reviewed initial Consciousness has no matches; adding Emergence with OR yields one Haiku-to-Gemma root and displays Codex attribution at Y2",
+    "Saved topic recipes and mode persistence covered in isolated unit-test database; no view saved to researcher database",
+    "Full reload retains Consciousness plus Haiku, any-turn mode and four results; Topics precedes Models; no horizontal page overflow at desktop viewport; screenshot inspected"
+  ],
+  "preservation": {
+    "unchanged_sqlite_rows": {
+      "collection_history": 7,
+      "finder_view_history": 0,
+      "finder_views": 0,
+      "history": 5,
+      "lab_musing_history": 5,
+      "lab_musings": 5,
+      "notes": 5,
+      "research_collections": 6,
+      "topic_dictionary": 23,
+      "topic_dictionary_history": 23,
+      "topic_flag_history": 28,
+      "topic_flags": 28,
+      "topic_opening_history": 12,
+      "topic_openings": 12
+    },
+    "unchanged_source_artifacts": 111
+  },
+  "frozen_dependencies_verified": 32,
+  "journal_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+  "screenshot": "finder-topics-20260916.jpg",
+  "evidence_directory": "workspace/finder-topics-20260916-1501",
+  "browser_error_logs": []
+}

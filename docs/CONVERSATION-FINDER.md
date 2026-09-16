@@ -1,6 +1,6 @@
 # Conversation Finder and model identity
 
-Implemented 16 September 2026. Open **Conversation Finder** in the Explorer sidebar. Choose setup tags, then read matching conversations with their participants and conditions in view. Model badges use consistent family colors across the library, reader, comparisons, collections, notebook, topic results and assessments. Short labels retain Base/Instruct/Think/modified variants and local/hosted distinctions; hover or open **Setup details** for exact IDs and recorded digests. Color supplements the written label.
+Implemented 16 September 2026. Open **Conversation Finder** in the Explorer sidebar. Choose topic and setup tags, then read matching conversations with their participants and conditions in view. Model badges use consistent family colors across the library, reader, comparisons, collections, notebook, topic results and assessments. Short labels retain Base/Instruct/Think/modified variants and local/hosted distinctions; hover or open **Setup details** for exact IDs and recorded digests. Color supplements the written label.
 
 ## Selecting conversations
 
@@ -20,9 +20,28 @@ Groups combine with AND. Values within a group combine with OR, subject to the e
 
 Facet counts answer: “How many records match if this group is replaced with this one value, retaining the other conditions?” They are not sums or predicted increments when adding another choice. The total above the results is the combined selection. Recognized but unobserved configurations, such as three regular participants and named-model disclosure, show zero.
 
-Search covers saved visible text and inventory metadata. Sort by date, title or word count. Reader and comparison return links retain the Finder recipe and page. A model badge opens a matching selection; within the Finder it preserves other setup conditions, and from a research collection it retains that cohort. Topic-atlas navigation retains its own topic/match selection; the Finder filters setup, not dictionary topics or semantic flags.
+Search covers saved visible text and inventory metadata. Sort by date, title or word count. Reader and comparison return links retain the Finder recipe and page. A model badge opens a matching selection; within the Finder it preserves other setup conditions, and from a research collection it retains that cohort. Topic atlas remains the home for definitions, variants and frequency analysis. Finder now combines those dictionary topics with setup filters; personal topic flags remain a separate annotation layer.
 
 **Save view** stores a named filter recipe with authorship and immutable revision history. Updates require the current revision. Views remain dynamic as evidence grows; they do not freeze a scientific cohort. Export includes view history and the reviewed model catalogue. Research collections remain the place to save specific reading sets and findings.
+
+## Topic tags above Models
+
+The **Topics** group is the first facet, above **Models**. It uses the current versioned Topic atlas dictionary, including newly added entries. Select one or more tags; topics combine with OR, then combine with model and setup groups using AND. Counts retain the other selected conditions and replace the topic group with the counted entry. Zero-count entries remain available.
+
+**Topic evidence** chooses the same interpretation as the atlas:
+
+| Mode | Included conversations |
+|---|---|
+| Any turn · phrase matches | A literal variant appears in at least one participant reply. |
+| First 6 · phrase matches | A variant appears within the first six participant positions. |
+| Repeated · phrase matches | A variant appears in at least two distinct messages. Repetition inside one message is insufficient. |
+| Initial choice · reviewed | A current, attributed opening review selects the topic. Source/dictionary-stale reviews and unreviewed openings do not qualify. A reviewed choice can qualify without any literal match. |
+
+Topic matching uses the atlas's eligible corpus (at least six participant positions); unfiltered Finder still includes shorter technical checks. Prompts, reasoning traces and external intervention text do not supply dictionary matches. Topics apply across the conversation even when the model filter targets an external role. This does not attribute the topic to the selected model. A literal match is not a semantic classification or a claim of experience; absence of a match is not evidence of conceptual absence.
+
+Selected topics appear on result cards with a supporting message link and excerpt. Reviewed initial topics show the review author. These links preserve the Finder selection when returning from the reader. **Save view**, URL bookmarks, search, cohort selection and pagination retain topics and evidence mode. Saved views remain dynamic when the dictionary or reviews change; source content and annotation history stay untouched. **Open Topic atlas** opens the selected topic (the first selected ID if several are selected) in the current reading cohort; other Finder conditions are not transferred to the atlas.
+
+Validation added 16 September: 202 Python tests and 14 JavaScript checks pass. Live API comparisons agree with atlas counts for Consciousness and Emergence across all four modes. See [the topic-filter validation](evidence/finder-topics-validation.json). Earlier verification below records the original Finder milestone.
 
 ## Meaning and provenance
 

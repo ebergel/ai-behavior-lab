@@ -4,6 +4,8 @@
 
 Open **Topic atlas**, directly below **All transcripts** in the Explorer sidebar. The default reading cohort is the latest research collection. Use the **Selected topic** picker in either view. In the dictionary, clicking a topic name changes the entry panel in place; definitions, literal variants, frequencies, proposing participants and later first mentions follow that selection. The active row has a checkmark. Related-topic buttons also select dictionary entries. On narrow layouts the entry appears before the frequency table. Cohort and model filters preserve whole conversations; filtering for Gemma includes its partners' replies. Source links open the transcript with its prompt, settings and personal notes. Review cards and matching excerpts have pagination. **Refresh evidence** reindexes saved sources. Dictionary edits recompute matches; review edits update the attributed counts. This is an interactive ongoing analysis, with no scheduled process or model judge.
 
+Topic tags are also available at the top of **Conversation Finder**, above Models. Use that view to combine topic evidence with model identities and experimental setup. Its four evidence modes reuse the atlas rules and counts; personal flags remain separate. See the [Finder topic guide](CONVERSATION-FINDER.md#topic-tags-above-models).
+
 ### Sort and browse matching conversations
 
 Click any **Dictionary & frequency** column heading to sort; click again to reverse direction. Numeric columns start highest first, and topic names start A–Z. The arrow and accessible column state identify the active sort. The **Literal variants** table also sorts by phrase, occurrence count, message count or record count.

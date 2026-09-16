@@ -444,7 +444,7 @@ def make_server(workspace, port=8765):
                                         for r in catalog.runs.values() if r['kind']=='lab' and r['data_class'] in ('cloud_integration_smoke','cloud_integration_diagnostic')]})
                 if path=='/api/finder':
                     q=parse_qs(url.query)
-                    return self.send(finder_result(catalog,json.loads(q.get('filters',['{}'])[0]),studies,q.get('offset',['0'])[0]))
+                    return self.send(finder_result(catalog,json.loads(q.get('filters',['{}'])[0]),studies,q.get('offset',['0'])[0],topic_atlas=topic_atlas))
                 if path=='/api/finder/views': return self.send({'views':finder_views.all()})
                 if path=='/api/finder/export': return self.send(finder_views.export(),download='conversation-finder-views.json')
                 if path in ('/api/workbench','/api/workbench/export'):

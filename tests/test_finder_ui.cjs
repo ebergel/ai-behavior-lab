@@ -30,3 +30,20 @@ test('rapid tag and match-rule changes use the pending selection and invalidate 
  assert.deepEqual(JSON.parse(routes[1].finder),{models:['Gemma','Haiku'],model_match:'all'});
  assert.equal(context.state.request,12);
 });
+test('topic selection combines with model tags and round trips evidence mode and page',()=>{
+ const f={topics:['consciousness'],topic_mode:'initial',models:['exact/id'],cohort:'study',q:'context'};
+ const toggled=plain(context.finderToggle(f,'topics','emergence'));
+ assert.deepEqual(toggled.topics,['consciousness','emergence']);assert.deepEqual(toggled.models,f.models);
+ const p=new URLSearchParams(context.finderParams(toggled,40));
+ assert.deepEqual(JSON.parse(p.get('finder')),toggled);assert.equal(p.get('offset'),'40');
+});
+test('topic facet appears first, uses dictionary titles, retains zero tags and labels evidence',()=>{
+ context.state.finderResult={topic_dictionary:[{id:'consciousness',title:'Consciousness'},{id:'history',title:'History'}]};
+ context.option=(id,label,value)=>`<option value="${id}" ${id===value?'selected':''}>${label}</option>`;
+ context.icon=()=>'';
+ assert.equal(vm.runInContext('Object.keys(finderLabels)[0]',context),'topics');
+ const html=context.finderFacet('topics',{consciousness:3,history:0},{topics:['consciousness'],topic_mode:'initial'});
+ assert.match(html,/Current attributed opening reviews/);assert.match(html,/Topic: Consciousness/);
+ assert.match(html,/aria-pressed="true"/);assert.match(html,/History/);assert.match(html,/facet-count">0/);
+ assert.match(html,/value="initial" selected/);
+});

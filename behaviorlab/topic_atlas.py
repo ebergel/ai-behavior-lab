@@ -285,6 +285,38 @@ class TopicAtlas:
         if len(self.cache)>12:self.cache.clear()
         self.cache[key]=result;return result
 
+    def finder_index(self, catalog, mode='any'):
+        """Reuse atlas eligibility, scans and current reviews for Finder facets.
+
+        The index is conversation-wide; the Finder's model-role selection never
+        changes whose language is scanned. Only selected evidence is returned.
+        """
+        require(mode in ('any','early','repeated','initial'),'Unknown topic evidence mode')
+        dictionary=self.dictionary()
+        runs=[r for r in catalog.runs.values() if eligible(r)]
+        by_run={r['id']:{} for r in runs}
+        if mode=='initial':
+            for review in self.reviews(catalog):
+                choice=review.get('choice')
+                if (review['run_id'] in by_run and review['source_current'] and review['dictionary_current']
+                        and review['status']=='selected' and choice):
+                    p=choice['proposal']
+                    by_run[review['run_id']][choice['topic_id']]={
+                        'message_id':p['message_id'],'turn':p['turn'],'speaker':p['speaker'],
+                        'excerpt':p['quote'],'author':review['author'],'revision':review['revision']}
+        else:
+            if getattr(self,'scan_index',None)!=getattr(catalog,'indexed_at',None):
+                self.scan_cache.clear();self.scan_index=getattr(catalog,'indexed_at',None)
+            _,hits,_,_,_=self.scan(runs,dictionary)
+            for run_id,topics in hits.items():
+                for topic,occurrences in topics.items():
+                    selected=[o for o in occurrences if mode!='early' or o['turn']<=WINDOW]
+                    if not selected or mode=='repeated' and len({o['message_id'] for o in selected})<2:continue
+                    first=min(selected,key=lambda o:(o['turn'],o['message_id']))
+                    by_run[run_id][topic]={k:first[k] for k in ('message_id','turn','speaker','excerpt','status')}
+        return {'dictionary':dictionary,'dictionary_sha256':fingerprint(dictionary),
+                'eligible_records':len(runs),'by_run':by_run}
+
     def export(self,catalog,studies,scope='all',topic='emergence',model=''):
         result=self.analyze(catalog,studies,scope,topic,model)
         with self.notes.connect() as db:

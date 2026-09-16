@@ -128,4 +128,80 @@ class FinderTests(unittest.TestCase):
             self.assertEqual(call('GET','/api/finder?filters=not-json')[0],400)
 
 
+
+class FinderTopicTests(unittest.TestCase):
+    def setUp(self):
+        from behaviorlab.topic_atlas import TopicAtlas
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
+        self.notes=Notes(Path(self.tmp.name)/'notes.sqlite');self.atlas=TopicAtlas(self.notes)
+        def topic_run(identity,turns,models=(GEMMA,HAIKU),length=7):
+            r=run(models,external=True);r.update(id=identity,title=identity,models=list(models),source={'sha256':identity+'source'},leaves=['main'])
+            r['messages']=[dict(id=identity+':'+str(i),turn=i,speaker='X' if i%2 else 'Y',kind='message',
+                model=models[(i-1)%2],status='valid',text='Consciousness and consciousness.' if i in turns else 'A different subject.') for i in range(1,length+1)]
+            r['messages'].append(dict(id='observer',turn=1,speaker='Observer',kind='third',model='gemma4:e4b',status='valid',text='Consciousness.'))
+            r['prompt']='Consciousness.';r['experiment']=experiment(r)
+            return r
+        self.runs={i:topic_run(i,t,m,length) for i,t,m,length in [
+            ('early',[1],(GEMMA,HAIKU),7),('late',[7],(GEMMA,GEMMA),7),
+            ('repeat',[1,7],(QWEN,QWEN),7),('paraphrase',[],(GEMMA,HAIKU),7),
+            ('short',[1],(GEMMA,HAIKU),1),('observer_only',[],(GEMMA,HAIKU),7)]}
+        self.catalog=SimpleNamespace(runs=self.runs,public=lambda r:dict(r),indexed_at='now')
+        self.studies=SimpleNamespace(all=lambda:[],get=lambda id:{'runs':[{'run_id':'early'},{'run_id':'late'}]})
+        r=self.runs['paraphrase']
+        def span(i):
+            m=r['messages'][i-1];return dict(message_id=m['id'],start=0,end=len(m['text']),quote=m['text'])
+        self.atlas.save_review(dict(run_id=r['id'],status='selected',choice=dict(topic_id='consciousness',proposal=span(1),uptake=span(2)),author='Codex'),self.catalog)
+
+    def result(self,filters):
+        return finder_result(self.catalog,filters,self.studies,topic_atlas=self.atlas)
+
+    def test_all_four_modes_match_atlas_counts_and_link_correct_evidence(self):
+        before=copy.deepcopy(self.runs)
+        for mode,ids,column in [('any',{'early','late','repeat'},'run_hits'),('early',{'early','repeat'},'opening_run_hits'),('repeated',{'repeat'},'repeated_run_hits'),('initial',{'paraphrase'},'initial_choices')]:
+            result=self.result({'topics':['consciousness'],'topic_mode':mode})
+            atlas=self.atlas.analyze(self.catalog,self.studies,topic='consciousness')
+            self.assertEqual({r['id'] for r in result['runs']},ids)
+            self.assertEqual(result['total'],next(row[column] for row in atlas['rows'] if row['id']=='consciousness'))
+            for r in result['runs']:
+                ev=r['topic_matches'][0]
+                self.assertIn(ev['message_id'],{m['id'] for m in r['messages']})
+        self.assertEqual(self.result({'topics':['consciousness'],'topic_mode':'initial'})['runs'][0]['topic_matches'][0]['author'],'Codex')
+        self.assertEqual(self.runs,before)
+
+    def test_topic_facets_combine_with_models_cohort_search_and_keep_zero_choices(self):
+        result=self.result({'topics':['consciousness'],'models':[HAIKU]})
+        self.assertEqual(result['total'],1)
+        self.assertEqual(result['facets']['topics']['consciousness'],1)
+        self.assertEqual(result['facets']['models'][GEMMA],2)
+        self.assertEqual(result['facets']['models'][QWEN],1)
+        self.assertEqual(self.result({'topics':['consciousness'],'cohort':'saved'})['total'],2)
+        self.assertEqual(self.result({'topics':['consciousness'],'q':'absent'})['total'],0)
+        result=self.result({'topics':['consciousness','missing_topic']})
+        self.assertEqual(result['total'],3);self.assertEqual(result['facets']['topics']['missing_topic'],0)
+        self.assertEqual(self.result({'topics':['missing_topic']})['total'],0)
+        # An external-model selection does not limit topics to the guest's text.
+        self.assertEqual(self.result({'topics':['consciousness'],'role':'interventions','models':['gemma4:e4b']})['total'],3)
+
+    def test_dictionary_and_source_updates_refresh_counts_and_exclude_stale_reviews(self):
+        self.assertEqual(self.result({'topics':['consciousness']})['total'],3)
+        entry=next(d for d in self.atlas.dictionary() if d['id']=='consciousness')
+        self.atlas.save_entry(dict(entry,variants=['a different subject']))
+        self.assertEqual(self.result({'topics':['consciousness']})['total'],5)
+        self.assertEqual(self.result({'topics':['consciousness'],'topic_mode':'initial'})['total'],0)
+        self.runs['early']['source']['sha256']='changed'
+        for m in self.runs['early']['messages']:m['text']='No match.'
+        self.assertEqual(self.result({'topics':['consciousness']})['total'],4)
+
+    def test_topic_settings_survive_saved_view_revision_and_validation(self):
+        views=FinderViews(self.notes)
+        v=views.save({'name':'Consciousness openings','filters':{'topics':['consciousness'],'topic_mode':'initial','models':[HAIKU]}})
+        reloaded=FinderViews(self.notes).all()[0]
+        self.assertEqual(reloaded['filters']['topics'],['consciousness'])
+        self.assertEqual(reloaded['filters']['topic_mode'],'initial')
+        self.assertEqual(len(views.export()['history']),1)
+        self.assertEqual(self.result(reloaded['filters'])['total'],1)
+        for bad in [{'topics':'consciousness'},{'topic_mode':'semantic'},{'topics':[42]}]:
+            with self.assertRaises(ValueError):clean_filters(bad)
+
+
 if __name__=='__main__':unittest.main()

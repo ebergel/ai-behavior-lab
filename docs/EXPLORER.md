@@ -47,6 +47,8 @@ A useful first route is to search **understanding**, select a model, switch to t
 
 Search is literal and case-insensitive, over visible message text and run/model/condition metadata. It does not search prompts or hidden reasoning, infer synonyms, or assign semantic topics. “Nonduality” and “non-duality” are different search strings. Recorded reasoning can be opened within the reader when the source contains it. An absent historical trace is not treated as a recorded empty trace.
 
+Conversation Finder includes **Topics** above **Models**, combining atlas dictionary tags with experimental conditions. Its evidence selector distinguishes literal matches from current reviewed initial choices, and result cards link supporting passages. Topic selections persist in saved views and reader return links.
+
 ## Topic atlas navigation
 
 **Topic atlas** is directly below **All transcripts** in the sidebar. Its **Selected topic** picker switches between dictionary entries or conversation lists while retaining the current reading cohort. Topic names and related-topic buttons select the definition panel; numerical counts open the corresponding conversation subset. **View matching conversations** opens all phrase matches for the selected topic. See the [topic atlas guide](TOPIC-ATLAS.md) for sorting, exact passage links and the distinction between literal matches and reviewed initial topics.
