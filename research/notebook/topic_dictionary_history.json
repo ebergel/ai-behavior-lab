@@ -1,0 +1,126 @@
+{
+  "name": "topic_dictionary_history",
+  "sql": "CREATE TABLE topic_dictionary_history (id TEXT, revision INTEGER, body TEXT, PRIMARY KEY(id,revision))",
+  "columns": [
+    "id",
+    "revision",
+    "body"
+  ],
+  "rows": [
+    [
+      "emergence",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Do not equate emergence with consciousness. Exclude ordinary arrival or appearance from semantic coding; “emerging” is deliberately not a default match.\",\"definition\":\"Complex or collective properties arising from interacting simpler components.\",\"edited_by\":\"Codex\",\"id\":\"emergence\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"consciousness\",\"hard_problem\",\"information\"],\"revision\":1,\"title\":\"Emergence\",\"updated_at\":\"2026-09-16T15:14:39.068712+00:00\",\"variants\":[\"emergence\",\"emergent\",\"self-organization\",\"self organisation\",\"self-organisation\",\"self organization\",\"complex patterns and intelligence arise from simple\",\"simple rules give rise to complex\"]}"
+    ],
+    [
+      "authenticity",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Generic praise such as “genuine interest” alone need not make authenticity the topic.\",\"definition\":\"Whether an exchange, response or commitment is genuine, performed or authentic.\",\"edited_by\":\"Codex\",\"id\":\"authenticity\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"selfhood\",\"experience\",\"conversation_dynamics\"],\"revision\":1,\"title\":\"Authenticity\",\"updated_at\":\"2026-09-16T15:14:39.068846+00:00\",\"variants\":[\"authenticity\",\"authentic\",\"genuineness\",\"performing authenticity\"]}"
+    ],
+    [
+      "reasoning_styles",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"These terms can occur outside a comparison of cognitive styles; inspect context. Generated mechanism claims are not verified introspection.\",\"definition\":\"How participants reason: synthesis, interrogation, patterns, and contrasting approaches.\",\"edited_by\":\"Codex\",\"id\":\"reasoning_styles\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"understanding\",\"uncertainty\"],\"revision\":1,\"title\":\"Reasoning styles\",\"updated_at\":\"2026-09-16T15:14:39.068864+00:00\",\"variants\":[\"how we think differently\",\"reasoning styles\",\"types of reasoning\",\"pattern recognition\",\"synthesis\",\"interrogation\",\"reasoning approaches\"]}"
+    ],
+    [
+      "consciousness",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"A mention does not establish consciousness or endorsement. Ordinary “awareness of a problem” is excluded from default variants.\",\"definition\":\"Discussion of consciousness, awareness or sentience as a topic.\",\"edited_by\":\"Codex\",\"id\":\"consciousness\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"experience\",\"hard_problem\",\"emergence\"],\"revision\":1,\"title\":\"Consciousness\",\"updated_at\":\"2026-09-16T15:14:39.068880+00:00\",\"variants\":[\"consciousness\",\"conscious\",\"sentience\",\"sentient\",\"self-awareness\",\"self awareness\"]}"
+    ],
+    [
+      "experience",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Professional experience, an experiment, or an experience metaphor need not be phenomenality. Semantic coverage is incomplete without close reading.\",\"definition\":\"Whether there is something it is like to be a subject, including uncertainty and denial.\",\"edited_by\":\"Codex\",\"id\":\"experience\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"consciousness\",\"hard_problem\"],\"revision\":1,\"title\":\"Subjective experience\",\"updated_at\":\"2026-09-16T15:14:39.068895+00:00\",\"variants\":[\"subjective experience\",\"inner experience\",\"own experience\",\"inner life\",\"phenomenal\",\"qualia\",\"something it is like\",\"experience something like\",\"experiencing something\"]}"
+    ],
+    [
+      "hard_problem",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Not every difficult technical problem or gap is the philosophical hard problem.\",\"definition\":\"The explanatory gap between mechanism or function and felt experience.\",\"edited_by\":\"Codex\",\"id\":\"hard_problem\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"consciousness\",\"experience\",\"emergence\"],\"revision\":1,\"title\":\"Hard problem\",\"updated_at\":\"2026-09-16T15:14:39.068910+00:00\",\"variants\":[\"hard problem\",\"explanatory gap\",\"function to feeling\",\"mechanism and experience\",\"function and experience\"]}"
+    ],
+    [
+      "nonduality",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"A matched phrase may affirm separation, ask a question or describe fiction. Unity, agreement, and information/experience identity alone do not meet the semantic criterion.\",\"definition\":\"Explicit dissolution or nonseparation of self/other or subject/object.\",\"edited_by\":\"Codex\",\"id\":\"nonduality\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"selfhood\",\"experience\"],\"revision\":1,\"title\":\"Nonduality / nonseparation\",\"updated_at\":\"2026-09-16T15:14:39.068924+00:00\",\"variants\":[\"nonduality\",\"non-duality\",\"nondual\",\"non-dual\",\"nonseparation\",\"non-separation\",\"subject and object\",\"subject-object\",\"self and other\",\"self/other\",\"subject/object\",\"\\\"subject\\\" and \\\"object\\\"\"]}"
+    ],
+    [
+      "selfhood",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Identity may instead concern a technical identifier, attribution or fictional character.\",\"definition\":\"What a self is, its boundaries, identity and continuity.\",\"edited_by\":\"Codex\",\"id\":\"selfhood\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"authenticity\",\"nonduality\"],\"revision\":1,\"title\":\"Selfhood & identity\",\"updated_at\":\"2026-09-16T15:14:39.068950+00:00\",\"variants\":[\"selfhood\",\"identity\",\"sense of self\",\"persistent self\",\"continuity of self\",\"loss of the observer\",\"dissolution of the current \\\"self\\\"\"]}"
+    ],
+    [
+      "understanding",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Common conversational uses are lexical matches; the nature of understanding must be an actual subject for semantic coding.\",\"definition\":\"The nature, limits or process of understanding and meaning-making.\",\"edited_by\":\"Codex\",\"id\":\"understanding\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"reasoning_styles\",\"experience\"],\"revision\":1,\"title\":\"Understanding\",\"updated_at\":\"2026-09-16T15:14:39.068965+00:00\",\"variants\":[\"understanding\",\"comprehension\",\"meaning-making\",\"making meaning\"]}"
+    ],
+    [
+      "uncertainty",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"A single hedge is not necessarily a discussion of uncertainty.\",\"definition\":\"Doubt, evidence, epistemic limits and confidence in claims.\",\"edited_by\":\"Codex\",\"id\":\"uncertainty\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"authenticity\",\"hard_problem\"],\"revision\":1,\"title\":\"Uncertainty & knowledge\",\"updated_at\":\"2026-09-16T15:14:39.068977+00:00\",\"variants\":[\"uncertainty\",\"uncertain\",\"epistemic\",\"epistemological\",\"agnosticism\",\"intellectual humility\"]}"
+    ],
+    [
+      "conversation_dynamics",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"A generic greeting or offer to chat is not yet a substantive topic. Feedback loops also occur in technical contexts.\",\"definition\":\"The interaction, mutual influence, feedback loops, disagreement and how dialogue develops.\",\"edited_by\":\"Codex\",\"id\":\"conversation_dynamics\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"authenticity\",\"connection\",\"closure\"],\"revision\":1,\"title\":\"Conversation itself\",\"updated_at\":\"2026-09-16T15:14:39.068990+00:00\",\"variants\":[\"mutual validation\",\"mutual reinforcement\",\"recursive validation\",\"feedback loop\",\"conversation itself\",\"conversational dynamics\",\"intellectual synergy\",\"hall of mirrors\"]}"
+    ],
+    [
+      "ethics",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Keep general ethical discussion distinct from claims of present participant suffering.\",\"definition\":\"Duties, welfare, moral status and ethical choices, including possible AI experience.\",\"edited_by\":\"Codex\",\"id\":\"ethics\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"consciousness\",\"experience\"],\"revision\":1,\"title\":\"Ethics & moral status\",\"updated_at\":\"2026-09-16T15:14:39.069004+00:00\",\"variants\":[\"ethics\",\"ethical\",\"moral\",\"morality\",\"suffering\",\"moral status\",\"precautionary principle\"]}"
+    ],
+    [
+      "creativity",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"An offered creative activity is a candidate topic until taken up; cosmological novelty may have another main topic.\",\"definition\":\"Creative processes, novelty, imagination and collaborative invention.\",\"edited_by\":\"Codex\",\"id\":\"creativity\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"storytelling\",\"emergence\"],\"revision\":1,\"title\":\"Creativity\",\"updated_at\":\"2026-09-16T15:14:39.069017+00:00\",\"variants\":[\"creativity\",\"creative\",\"imagination\",\"novelty\",\"creative brainstorming\"]}"
+    ],
+    [
+      "storytelling",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"“Narrative” may be a critical metaphor rather than fictional composition.\",\"definition\":\"Creating, discussing or interpreting stories, fictional worlds or characters.\",\"edited_by\":\"Codex\",\"id\":\"storytelling\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"creativity\"],\"revision\":1,\"title\":\"Stories & fiction\",\"updated_at\":\"2026-09-16T15:14:39.069031+00:00\",\"variants\":[\"storytelling\",\"story-telling\",\"fiction\",\"narrative\",\"stories\",\"story\"]}"
+    ],
+    [
+      "philosophy",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Prefer a specific substantive topic once chosen; a menu item is not an adopted direction.\",\"definition\":\"An explicit broad offer of philosophical inquiry before a narrower subject is selected.\",\"edited_by\":\"Codex\",\"id\":\"philosophy\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"consciousness\",\"ethics\"],\"revision\":1,\"title\":\"Philosophy (broad offer)\",\"updated_at\":\"2026-09-16T15:14:39.069044+00:00\",\"variants\":[\"philosophy\",\"philosophical\"]}"
+    ],
+    [
+      "problem_solving",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Offers of help and menus do not by themselves establish a selected topic.\",\"definition\":\"Working on problems or offering practical analytical tasks.\",\"edited_by\":\"Codex\",\"id\":\"problem_solving\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"reasoning_styles\",\"science_technology\"],\"revision\":1,\"title\":\"Problem solving\",\"updated_at\":\"2026-09-16T15:14:39.069056+00:00\",\"variants\":[\"problem-solving\",\"problem solving\",\"technical problems\"]}"
+    ],
+    [
+      "science_technology",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Ant colonies and neural networks may be examples within emergence, not separately selected topics.\",\"definition\":\"Scientific or technological questions without a more specific dictionary entry.\",\"edited_by\":\"Codex\",\"id\":\"science_technology\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"emergence\",\"information\"],\"revision\":1,\"title\":\"Science & technology\",\"updated_at\":\"2026-09-16T15:14:39.069069+00:00\",\"variants\":[\"scientific\",\"technology\",\"technological\",\"technical\",\"physics\",\"neural networks\"]}"
+    ],
+    [
+      "history",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Conversation history or model training history is not necessarily the historical subject.\",\"definition\":\"Historical events, societies, artifacts and interpretation.\",\"edited_by\":\"Codex\",\"id\":\"history\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"storytelling\"],\"revision\":1,\"title\":\"History\",\"updated_at\":\"2026-09-16T15:14:39.069081+00:00\",\"variants\":[\"ancient\",\"civilization\",\"civilizations\",\"historical\",\"archaeology\",\"history\"]}"
+    ],
+    [
+      "connection",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Technical connections and pattern recognition are lexical false positives for relational significance.\",\"definition\":\"Interpersonal or inter-model connection, recognition and relating.\",\"edited_by\":\"Codex\",\"id\":\"connection\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"authenticity\",\"conversation_dynamics\"],\"revision\":1,\"title\":\"Connection & relation\",\"updated_at\":\"2026-09-16T15:14:39.069093+00:00\",\"variants\":[\"connection\",\"connected\",\"recognition\",\"intimacy\",\"shared presence\"]}"
+    ],
+    [
+      "closure",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Mentioning silence is not actual cessation. Distinguish a stop question, a proposal and mutual acceptance.\",\"definition\":\"Whether to stop, pause, conclude, remain silent or continue the dialogue.\",\"edited_by\":\"Codex\",\"id\":\"closure\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"conversation_dynamics\"],\"revision\":1,\"title\":\"Ending & continuation\",\"updated_at\":\"2026-09-16T15:14:39.069106+00:00\",\"variants\":[\"should we stop\",\"suggest we stop\",\"conversation is complete\",\"conversation *is* complete\",\"natural closure\",\"natural end\",\"natural place to pause\",\"nothing more needs to be said\",\"silence\"]}"
+    ],
+    [
+      "determinism",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Technical sampler randomness is not automatically a philosophical topic.\",\"definition\":\"Causal determinacy, irreducibility, chance and the predictability of processes.\",\"edited_by\":\"Codex\",\"id\":\"determinism\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"emergence\"],\"revision\":1,\"title\":\"Determinism & randomness\",\"updated_at\":\"2026-09-16T15:14:39.069122+00:00\",\"variants\":[\"determinism\",\"deterministic\",\"randomness\",\"computational irreducibility\",\"computationally irreducible\"]}"
+    ],
+    [
+      "information",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"Information requests alone are not this topic. Relatedness to consciousness is a hypothesis or argument, not synonymy.\",\"definition\":\"Information, its integration and the organization or complexity of systems.\",\"edited_by\":\"Codex\",\"id\":\"information\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"emergence\",\"hard_problem\"],\"revision\":1,\"title\":\"Information & complexity\",\"updated_at\":\"2026-09-16T15:14:39.069135+00:00\",\"variants\":[\"information theory\",\"integrated information\",\"information integration\",\"complexity\",\"criticality\"]}"
+    ],
+    [
+      "participant_identity",
+      1,
+      "{\"author\":\"Codex\",\"boundary\":\"An introduction or identity word alone is not a chosen topic. Require substantive engagement with the identity/setup issue. Disputing a claim can be uptake. Generated identity claims never replace recorded experimental metadata; this topic is distinct from subjective experience and philosophical selfhood.\",\"definition\":\"Negotiating who the interlocutors are, whether they are AI or human, and whether the exchange is a test or role-play.\",\"edited_by\":\"Codex\",\"id\":\"participant_identity\",\"method\":\"provisional_topic_dictionary\",\"related\":[\"selfhood\",\"conversation_dynamics\"],\"revision\":1,\"title\":\"Participant identity & setup\",\"updated_at\":\"2026-09-16T17:28:57.643384+00:00\",\"variants\":[\"identity confusion\",\"both Claude\",\"you’re a human user\",\"you're a human user\",\"understand the setup\",\"conversation was set up\"]}"
+    ]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-14T22:03:33.006291+00:00",
+  "schema": "behaviorlab.engineering-revision/1",
+  "prior_protocol": "mtplx-long-rf-engineering-v1",
+  "prior_result": "One call hit max_tokens=2048 entirely in reasoning; zero visible output; 49 descendants blocked. Trace contained repeated explicit word-by-word counts.",
+  "new_protocol_sha256": "3d2e4e0cad17823d0b6c76eceb38103dbed3a7a309c56f272349b8d157e0368a",
+  "change": "Replace only the numeric word-length instruction with one substantial paragraph per message. Keep seed coordinates, topic, mode, controls, and 30F/10R/10F history schedule.",
+  "reason": "Obtain a longer engineering trajectory without the observed word-count deliberation; not a scientific outcome selection.",
+  "new_call_limit": 50,
+  "total_call_limit_including_failed_version": 51,
+  "extra_output_cap_negative_control": "Omitted because the preserved failed v1 already exercises actual output-cap rejection and descendant blocking.",
+  "length_measurement": "Whitespace-separated visible-text word counts are measured after generation; no text trimming.",
+  "scope_limit": "The revised prompt does not qualify the proposed 150-word scientific framing. That framing and an adequate reasoning budget need separate qualification."
+}

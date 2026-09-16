@@ -1,0 +1,189 @@
+{
+  "id": "assessment-8292cda2a32ade0239f2693b",
+  "title": "inclusionAI: Ling 3.0 Flash VL · history",
+  "collection": "model-assessment-followup-20260915-1820",
+  "collection_id": "model-assessment",
+  "kind": "lab",
+  "data_class": "cloud_model_assessment",
+  "models": [
+    "inclusionai/ling-3.0-flash-vl:free"
+  ],
+  "condition": "Assessment · history check",
+  "model_kind": "Hosted configuration · exploratory screen",
+  "date": "2026-09-15T20:58:46.284919+00:00",
+  "complete": false,
+  "unstarted_assessment": true,
+  "prompt": null,
+  "opening": "What is the sealed label? Reply with the label only.",
+  "settings": {
+    "model": "inclusionai/ling-3.0-flash-vl:free",
+    "temperature": 0.8,
+    "max_tokens": 1024,
+    "reasoning": {
+      "enabled": false
+    },
+    "stream": false,
+    "transforms": [],
+    "provider": {
+      "only": [
+        "novita/bf16"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 0,
+        "completion": 0
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "novita/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0,
+          "completion": 0
+        }
+      }
+    },
+    "Y": {
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "novita/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0,
+          "completion": 0
+        }
+      }
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "inclusionai/ling-3.0-flash-vl:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "inclusionai/ling-3.0-flash-vl:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "provider": "Novita",
+  "seed_policy": "No seeds requested; empty seed allocation. Provider randomness is uncontrolled; no matched random draws claimed.",
+  "cost_usd": "0",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 0,
+  "planned_count": 1,
+  "words": 0,
+  "cap_count": 0,
+  "unavailable_count": 1,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "inclusionai/ling-3.0-flash-vl:free"
+        ],
+        "digest": null,
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "inclusionai/ling-3.0-flash-vl:free"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Unknown",
+    "task": "Unknown",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "6bef88b28625ae3defcdf34eaee5fba1b249358d3013aed82c4b4a706a215854",
+    "journal_head": "458ae3579ab84a3b04a210f8dcdfb4638524860a9d86ad34c411dd24b1522562",
+    "protocol_sha256": "621e0acad25ec278014062ce5fdb0bbcb9851f593074e66c582a69fdd10d7696",
+    "parser": "model-assessment/2",
+    "verification": "Hash-chained journal, frozen requests, raw bytes and derived technical outcomes replayed. Remote weights, templates and effective samplers are not captured.",
+    "workspace_path": "model-assessment-followup-20260915-1820"
+  },
+  "messages": [
+    {
+      "id": "m3-history:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "text": null,
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "not_dispatched",
+      "reason": "Batch stopped after quota, identity, accounting or transport failure",
+      "repeat": false,
+      "lines": null,
+      "tokens": null,
+      "input_tokens": null,
+      "cost_usd": null,
+      "wall_seconds": null,
+      "blocking_node": null,
+      "seed": null
+    }
+  ],
+  "probes": []
+}

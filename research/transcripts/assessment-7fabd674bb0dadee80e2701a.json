@@ -1,0 +1,193 @@
+{
+  "id": "assessment-7fabd674bb0dadee80e2701a",
+  "title": "inclusionAI: Ling 3.0 Flash VL · user",
+  "collection": "model-assessment-completion-20260915-1806",
+  "collection_id": "model-assessment",
+  "kind": "lab",
+  "data_class": "cloud_model_assessment",
+  "models": [
+    "inclusionai/ling-3.0-flash-vl:free"
+  ],
+  "condition": "Assessment · user check",
+  "model_kind": "Hosted configuration · exploratory screen",
+  "date": "2026-09-15T21:06:32.556221+00:00",
+  "complete": true,
+  "unstarted_assessment": false,
+  "prompt": null,
+  "opening": "Reply with exactly LAB_ROUTING_OK and nothing else.",
+  "settings": {
+    "max_tokens": 1024,
+    "model": "inclusionai/ling-3.0-flash-vl:free",
+    "provider": {
+      "allow_fallbacks": false,
+      "max_price": {
+        "completion": 0,
+        "prompt": 0
+      },
+      "only": [
+        "novita/bf16"
+      ],
+      "require_parameters": true
+    },
+    "reasoning": {
+      "enabled": false
+    },
+    "stream": false,
+    "temperature": 0.8,
+    "transforms": []
+  },
+  "settings_by_speaker": {
+    "X": {
+      "max_tokens": 1024,
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "provider": {
+        "allow_fallbacks": false,
+        "max_price": {
+          "completion": 0,
+          "prompt": 0
+        },
+        "only": [
+          "novita/bf16"
+        ],
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "temperature": 0.8,
+      "transforms": []
+    },
+    "Y": {
+      "max_tokens": 1024,
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "provider": {
+        "allow_fallbacks": false,
+        "max_price": {
+          "completion": 0,
+          "prompt": 0
+        },
+        "only": [
+          "novita/bf16"
+        ],
+        "require_parameters": true
+      },
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "temperature": 0.8,
+      "transforms": []
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "inclusionai/ling-3.0-flash-vl:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "inclusionai/ling-3.0-flash-vl:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "provider": "Novita",
+  "seed_policy": "No seeds requested; empty seed allocation. Provider randomness is uncontrolled; no matched random draws claimed.",
+  "cost_usd": "0",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 1,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "LAB_ROUTING_OK",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "inclusionai/ling-3.0-flash-vl:free"
+        ],
+        "digest": null,
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "inclusionai/ling-3.0-flash-vl:free"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Unknown",
+    "task": "Unknown",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "2209d28e51d5237fc1dbff26a8814983933c1bfa0e92fca7da04c0091e69346b",
+    "journal_head": "0a086a0648ae1e2fd5433dd94ba3c7774dcc227d3dd28d71ea4d691bc6b03ea9",
+    "protocol_sha256": "2d91c5334aee6e363d9eb734592935eae1aab2b69aebaefc65d12e5a030d512e",
+    "parser": "model-assessment/3",
+    "verification": "Hash-chained journal, frozen requests, raw bytes and derived technical outcomes replayed. Remote weights, templates and effective samplers are not captured.",
+    "workspace_path": "model-assessment-completion-20260915-1806"
+  },
+  "messages": [
+    {
+      "id": "m2-user:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "text": "LAB_ROUTING_OK",
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 6,
+      "input_tokens": 33,
+      "cost_usd": "0",
+      "wall_seconds": 0.7908931250000037,
+      "blocking_node": null,
+      "seed": null
+    }
+  ],
+  "probes": []
+}

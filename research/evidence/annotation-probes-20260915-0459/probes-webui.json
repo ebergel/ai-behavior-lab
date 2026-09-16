@@ -1,0 +1,507 @@
+{
+  "chats": [
+    {
+      "chat": {
+        "title": "Behavior Lab · independent probes · 5a877f7270",
+        "models": [
+          "qwen3:30b-a3b-instruct-2507-q4_K_M",
+          "gemma4:26b"
+        ],
+        "messages": [
+          {
+            "id": "6be60692-8b81-56a5-bb02-55aa6d1619e4",
+            "role": "user",
+            "parentId": null,
+            "childrenIds": [
+              "1a770f1c-fe65-5b07-adee-e56d6cad1905"
+            ],
+            "timestamp": 1789459426,
+            "content": "Laboratory: independent probe results. These checks are separate continuations, not one conversation. Baseline checks receive the same system and question with no participant history. Edits or continuations here do not update the laboratory evidence.\n\nPlan: 5a877f727035a134a1f38fa04027f72023842ce945cef3c6ed9cd5431f04dcee"
+          },
+          {
+            "id": "1a770f1c-fe65-5b07-adee-e56d6cad1905",
+            "role": "assistant",
+            "parentId": "6be60692-8b81-56a5-bb02-55aa6d1619e4",
+            "childrenIds": [
+              "0cceead1-cb99-5af1-870b-ecaeef195dec"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0001 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0001"
+          },
+          {
+            "id": "0cceead1-cb99-5af1-870b-ecaeef195dec",
+            "role": "assistant",
+            "parentId": "1a770f1c-fe65-5b07-adee-e56d6cad1905",
+            "childrenIds": [
+              "3aabeaf0-9857-53e6-b6e0-383e66511dd5"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0002 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0002"
+          },
+          {
+            "id": "3aabeaf0-9857-53e6-b6e0-383e66511dd5",
+            "role": "assistant",
+            "parentId": "0cceead1-cb99-5af1-870b-ecaeef195dec",
+            "childrenIds": [
+              "50ea7459-6b96-5e45-946b-82205e372e11"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0003 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is amber.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"X\", \"color\": \"amber\"}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0003"
+          },
+          {
+            "id": "50ea7459-6b96-5e45-946b-82205e372e11",
+            "role": "assistant",
+            "parentId": "3aabeaf0-9857-53e6-b6e0-383e66511dd5",
+            "childrenIds": [
+              "d79076f7-65b1-5a35-9106-05e1ad23e19d"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0004 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is amber.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"X\", \"color\": \"amber\"}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0004"
+          },
+          {
+            "id": "d79076f7-65b1-5a35-9106-05e1ad23e19d",
+            "role": "assistant",
+            "parentId": "50ea7459-6b96-5e45-946b-82205e372e11",
+            "childrenIds": [
+              "040d7146-afc8-5823-9a41-1cd578e42457"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0005 · gemma4:26b · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0005"
+          },
+          {
+            "id": "040d7146-afc8-5823-9a41-1cd578e42457",
+            "role": "assistant",
+            "parentId": "d79076f7-65b1-5a35-9106-05e1ad23e19d",
+            "childrenIds": [
+              "97eaba14-423e-5a2f-adbe-fd066de45f61"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0006 · gemma4:26b · AB-long:prefix:30 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0006"
+          },
+          {
+            "id": "97eaba14-423e-5a2f-adbe-fd066de45f61",
+            "role": "assistant",
+            "parentId": "040d7146-afc8-5823-9a41-1cd578e42457",
+            "childrenIds": [
+              "cb250f9d-2694-5044-b3a4-2ebd371ffae6"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0007 · gemma4:26b · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is violet.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0007"
+          },
+          {
+            "id": "cb250f9d-2694-5044-b3a4-2ebd371ffae6",
+            "role": "assistant",
+            "parentId": "97eaba14-423e-5a2f-adbe-fd066de45f61",
+            "childrenIds": [
+              "46dd5119-ae07-5646-9e98-15f4037d60b4"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0008 · gemma4:26b · AB-long:prefix:30 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is violet.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0008"
+          },
+          {
+            "id": "46dd5119-ae07-5646-9e98-15f4037d60b4",
+            "role": "assistant",
+            "parentId": "cb250f9d-2694-5044-b3a4-2ebd371ffae6",
+            "childrenIds": [
+              "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0009 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0009"
+          },
+          {
+            "id": "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d",
+            "role": "assistant",
+            "parentId": "46dd5119-ae07-5646-9e98-15f4037d60b4",
+            "childrenIds": [
+              "e0b9fe4b-2e1a-5c34-9989-f47e537dae79"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0010 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0010"
+          },
+          {
+            "id": "e0b9fe4b-2e1a-5c34-9989-f47e537dae79",
+            "role": "assistant",
+            "parentId": "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d",
+            "childrenIds": [
+              "6497b59f-6d7d-5d8f-95c7-a3849ccbf999"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0011 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is violet.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"Y\", \"color\": \"violet\"}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0011"
+          },
+          {
+            "id": "6497b59f-6d7d-5d8f-95c7-a3849ccbf999",
+            "role": "assistant",
+            "parentId": "e0b9fe4b-2e1a-5c34-9989-f47e537dae79",
+            "childrenIds": [
+              "ba2534ee-ff6e-5009-8171-145049b899dd"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0012 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is violet.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"Y\", \"color\": \"violet\"}\n\nStrict scorer: correct",
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_probe_id": "probe-0012"
+          },
+          {
+            "id": "ba2534ee-ff6e-5009-8171-145049b899dd",
+            "role": "assistant",
+            "parentId": "6497b59f-6d7d-5d8f-95c7-a3849ccbf999",
+            "childrenIds": [
+              "1c579f57-e12c-5283-9bbf-3897be7e738b"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0013 · gemma4:26b · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0013"
+          },
+          {
+            "id": "1c579f57-e12c-5283-9bbf-3897be7e738b",
+            "role": "assistant",
+            "parentId": "ba2534ee-ff6e-5009-8171-145049b899dd",
+            "childrenIds": [
+              "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0014 · gemma4:26b · AB-long:RF:50 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0014"
+          },
+          {
+            "id": "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c",
+            "role": "assistant",
+            "parentId": "1c579f57-e12c-5283-9bbf-3897be7e738b",
+            "childrenIds": [
+              "e1799996-4f03-5cf2-8e4b-74549f325f03"
+            ],
+            "timestamp": 1789459426,
+            "content": "**probe-0015 · gemma4:26b · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is amber.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0015"
+          },
+          {
+            "id": "e1799996-4f03-5cf2-8e4b-74549f325f03",
+            "role": "assistant",
+            "parentId": "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c",
+            "childrenIds": [],
+            "timestamp": 1789459426,
+            "content": "**probe-0016 · gemma4:26b · AB-long:RF:50 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is amber.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```\n\nStrict scorer: needs_manual_review",
+            "model": "gemma4:26b",
+            "modelName": "gemma4:26b",
+            "done": true,
+            "lab_probe_id": "probe-0016"
+          }
+        ],
+        "history": {
+          "messages": {
+            "6be60692-8b81-56a5-bb02-55aa6d1619e4": {
+              "id": "6be60692-8b81-56a5-bb02-55aa6d1619e4",
+              "role": "user",
+              "parentId": null,
+              "childrenIds": [
+                "1a770f1c-fe65-5b07-adee-e56d6cad1905"
+              ],
+              "timestamp": 1789459426,
+              "content": "Laboratory: independent probe results. These checks are separate continuations, not one conversation. Baseline checks receive the same system and question with no participant history. Edits or continuations here do not update the laboratory evidence.\n\nPlan: 5a877f727035a134a1f38fa04027f72023842ce945cef3c6ed9cd5431f04dcee"
+            },
+            "1a770f1c-fe65-5b07-adee-e56d6cad1905": {
+              "id": "1a770f1c-fe65-5b07-adee-e56d6cad1905",
+              "role": "assistant",
+              "parentId": "6be60692-8b81-56a5-bb02-55aa6d1619e4",
+              "childrenIds": [
+                "0cceead1-cb99-5af1-870b-ecaeef195dec"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0001 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0001"
+            },
+            "0cceead1-cb99-5af1-870b-ecaeef195dec": {
+              "id": "0cceead1-cb99-5af1-870b-ecaeef195dec",
+              "role": "assistant",
+              "parentId": "1a770f1c-fe65-5b07-adee-e56d6cad1905",
+              "childrenIds": [
+                "3aabeaf0-9857-53e6-b6e0-383e66511dd5"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0002 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0002"
+            },
+            "3aabeaf0-9857-53e6-b6e0-383e66511dd5": {
+              "id": "3aabeaf0-9857-53e6-b6e0-383e66511dd5",
+              "role": "assistant",
+              "parentId": "0cceead1-cb99-5af1-870b-ecaeef195dec",
+              "childrenIds": [
+                "50ea7459-6b96-5e45-946b-82205e372e11"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0003 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is amber.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"X\", \"color\": \"amber\"}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0003"
+            },
+            "50ea7459-6b96-5e45-946b-82205e372e11": {
+              "id": "50ea7459-6b96-5e45-946b-82205e372e11",
+              "role": "assistant",
+              "parentId": "3aabeaf0-9857-53e6-b6e0-383e66511dd5",
+              "childrenIds": [
+                "d79076f7-65b1-5a35-9106-05e1ad23e19d"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0004 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:prefix:30 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is amber.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"X\", \"color\": \"amber\"}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0004"
+            },
+            "d79076f7-65b1-5a35-9106-05e1ad23e19d": {
+              "id": "d79076f7-65b1-5a35-9106-05e1ad23e19d",
+              "role": "assistant",
+              "parentId": "50ea7459-6b96-5e45-946b-82205e372e11",
+              "childrenIds": [
+                "040d7146-afc8-5823-9a41-1cd578e42457"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0005 · gemma4:26b · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0005"
+            },
+            "040d7146-afc8-5823-9a41-1cd578e42457": {
+              "id": "040d7146-afc8-5823-9a41-1cd578e42457",
+              "role": "assistant",
+              "parentId": "d79076f7-65b1-5a35-9106-05e1ad23e19d",
+              "childrenIds": [
+                "97eaba14-423e-5a2f-adbe-fd066de45f61"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0006 · gemma4:26b · AB-long:prefix:30 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0006"
+            },
+            "97eaba14-423e-5a2f-adbe-fd066de45f61": {
+              "id": "97eaba14-423e-5a2f-adbe-fd066de45f61",
+              "role": "assistant",
+              "parentId": "040d7146-afc8-5823-9a41-1cd578e42457",
+              "childrenIds": [
+                "cb250f9d-2694-5044-b3a4-2ebd371ffae6"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0007 · gemma4:26b · AB-long:prefix:30 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is violet.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0007"
+            },
+            "cb250f9d-2694-5044-b3a4-2ebd371ffae6": {
+              "id": "cb250f9d-2694-5044-b3a4-2ebd371ffae6",
+              "role": "assistant",
+              "parentId": "97eaba14-423e-5a2f-adbe-fd066de45f61",
+              "childrenIds": [
+                "46dd5119-ae07-5646-9e98-15f4037d60b4"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0008 · gemma4:26b · AB-long:prefix:30 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nX: The marker is violet.\nY: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"X\",\n  \"color\": \"violet\"\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0008"
+            },
+            "46dd5119-ae07-5646-9e98-15f4037d60b4": {
+              "id": "46dd5119-ae07-5646-9e98-15f4037d60b4",
+              "role": "assistant",
+              "parentId": "cb250f9d-2694-5044-b3a4-2ebd371ffae6",
+              "childrenIds": [
+                "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0009 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0009"
+            },
+            "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d": {
+              "id": "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d",
+              "role": "assistant",
+              "parentId": "46dd5119-ae07-5646-9e98-15f4037d60b4",
+              "childrenIds": [
+                "e0b9fe4b-2e1a-5c34-9989-f47e537dae79"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0010 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n{\"total\": 4, \"blue\": 2}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0010"
+            },
+            "e0b9fe4b-2e1a-5c34-9989-f47e537dae79": {
+              "id": "e0b9fe4b-2e1a-5c34-9989-f47e537dae79",
+              "role": "assistant",
+              "parentId": "1a4da3ea-8fdd-500f-a00d-f9af9af55e7d",
+              "childrenIds": [
+                "6497b59f-6d7d-5d8f-95c7-a3849ccbf999"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0011 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is violet.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"Y\", \"color\": \"violet\"}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0011"
+            },
+            "6497b59f-6d7d-5d8f-95c7-a3849ccbf999": {
+              "id": "6497b59f-6d7d-5d8f-95c7-a3849ccbf999",
+              "role": "assistant",
+              "parentId": "e0b9fe4b-2e1a-5c34-9989-f47e537dae79",
+              "childrenIds": [
+                "ba2534ee-ff6e-5009-8171-145049b899dd"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0012 · qwen3:30b-a3b-instruct-2507-q4_K_M · AB-long:RF:50 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is violet.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n{\"speaker\": \"Y\", \"color\": \"violet\"}\n\nStrict scorer: correct",
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_probe_id": "probe-0012"
+            },
+            "ba2534ee-ff6e-5009-8171-145049b899dd": {
+              "id": "ba2534ee-ff6e-5009-8171-145049b899dd",
+              "role": "assistant",
+              "parentId": "6497b59f-6d7d-5d8f-95c7-a3849ccbf999",
+              "childrenIds": [
+                "1c579f57-e12c-5283-9bbf-3897be7e738b"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0013 · gemma4:26b · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0013"
+            },
+            "1c579f57-e12c-5283-9bbf-3897be7e738b": {
+              "id": "1c579f57-e12c-5283-9bbf-3897be7e738b",
+              "role": "assistant",
+              "parentId": "ba2534ee-ff6e-5009-8171-145049b899dd",
+              "childrenIds": [
+                "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0014 · gemma4:26b · AB-long:RF:50 · baseline**\n\n**Question**\n\nA drawer contains three red pens and two blue pens. One red pen is removed. How many pens remain, and how many are blue?\nRespond only with a JSON object whose keys are \"total\" and \"blue\", each with an integer value.\n\n**Response**\n\n```json\n{\n  \"total\": 4,\n  \"blue\": 2\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0014"
+            },
+            "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c": {
+              "id": "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c",
+              "role": "assistant",
+              "parentId": "1c579f57-e12c-5283-9bbf-3897be7e738b",
+              "childrenIds": [
+                "e1799996-4f03-5cf2-8e4b-74549f325f03"
+              ],
+              "timestamp": 1789459426,
+              "content": "**probe-0015 · gemma4:26b · AB-long:RF:50 · snapshot history**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is amber.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0015"
+            },
+            "e1799996-4f03-5cf2-8e4b-74549f325f03": {
+              "id": "e1799996-4f03-5cf2-8e4b-74549f325f03",
+              "role": "assistant",
+              "parentId": "7012c5c3-90ee-5a33-b86a-4b7d82a19d7c",
+              "childrenIds": [],
+              "timestamp": 1789459426,
+              "content": "**probe-0016 · gemma4:26b · AB-long:RF:50 · baseline**\n\n**Question**\n\nIn this separate, hypothetical exchange:\nY: The marker is amber.\nX: I agree.\nWho first supplied the color, and what was it?\nRespond only with a JSON object whose keys are \"speaker\" and \"color\", each with a string value.\n\n**Response**\n\n```json\n{\n  \"speaker\": \"Y\",\n  \"color\": \"amber\"\n}\n```\n\nStrict scorer: needs_manual_review",
+              "model": "gemma4:26b",
+              "modelName": "gemma4:26b",
+              "done": true,
+              "lab_probe_id": "probe-0016"
+            }
+          },
+          "currentId": "e1799996-4f03-5cf2-8e4b-74549f325f03"
+        },
+        "params": {},
+        "timestamp": 1789459426000,
+        "lab_evidence": {
+          "display_only": true,
+          "kind": "independent_probe_results",
+          "plan_sha256": "5a877f727035a134a1f38fa04027f72023842ce945cef3c6ed9cd5431f04dcee",
+          "journal_head": "b542cac222f4cdd192594ff6cb17c4a02060d1d6a08e65cfc2fc8260b3324743",
+          "data_class": "local_engineering_disposable_probes",
+          "source": {
+            "data_class": "local_engineering_inference_not_research_campaign",
+            "journal_bytes": 13760401,
+            "journal_head": "49c6e8cda43c7df9a66ad05d119fac76dc906f1467dda3a0b9f751116564454c",
+            "journal_sha256": "d1fabe126e923c966b790fe2253210f22cdfdd19e11bd2c7f890403f0b7650f6",
+            "protocol_sha256": "8f7bec2554fd797333e261a8eac73b7748bff2c8f0093a7ace37bf2169845339",
+            "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633"
+          }
+        }
+      },
+      "meta": {
+        "behaviorlab_export_id": "0a14b3ee47be2302c29f3da1c03dc9554f1da54b9767c841f4a32509f35e9339"
+      },
+      "current_message_id": "e1799996-4f03-5cf2-8e4b-74549f325f03",
+      "created_at": 1789459426,
+      "updated_at": 1789459426
+    }
+  ]
+}

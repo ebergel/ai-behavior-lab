@@ -1,0 +1,111 @@
+{
+  "google_participants": {
+    "filters": {
+      "developer": [
+        "Google"
+      ],
+      "role": "participants",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 55
+  },
+  "google_external": {
+    "filters": {
+      "developer": [
+        "Google"
+      ],
+      "role": "interventions",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 40
+  },
+  "google_anywhere": {
+    "filters": {
+      "developer": [
+        "Google"
+      ],
+      "role": "anywhere",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 95
+  },
+  "gemma_haiku": {
+    "filters": {
+      "models": [
+        "anthropic/claude-haiku-4.5",
+        "gemma4:26b"
+      ],
+      "role": "participants",
+      "model_match": "all",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 2
+  },
+  "anonymous_ai": {
+    "filters": {
+      "identity": [
+        "Anonymous-AI"
+      ],
+      "role": "participants",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 4
+  },
+  "mixed": {
+    "filters": {
+      "composition": [
+        "Mixed models"
+      ],
+      "role": "participants",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 4
+  },
+  "all_closed": {
+    "filters": {
+      "weights": [
+        "Closed weights"
+      ],
+      "role": "participants",
+      "model_match": "any",
+      "property_match": "every",
+      "sort": "recent"
+    },
+    "total": 18
+  },
+  "any_closed": {
+    "filters": {
+      "weights": [
+        "Closed weights"
+      ],
+      "role": "participants",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 20
+  },
+  "regular_trio": {
+    "filters": {
+      "participants": [
+        "3"
+      ],
+      "role": "participants",
+      "model_match": "any",
+      "property_match": "any",
+      "sort": "recent"
+    },
+    "total": 0
+  }
+}

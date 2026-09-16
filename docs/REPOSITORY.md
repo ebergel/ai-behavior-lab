@@ -4,11 +4,11 @@ The laboratory's standalone development repository is **[ebergel/ai-behavior-lab
 
 ## What is versioned
 
-The repository tracks the application and inference tooling, tests and synthetic examples, experimental designs, methodological documents, written reports, compact validation artifacts, app screenshots, and timestamped session records. Existing local commit history is retained. Machine-specific historical configurations retain their original provenance; they are not portable runtime qualification.
+The repository tracks the application and inference tooling, tests and synthetic examples, experimental designs, methodological documents, written reports, compact validation artifacts, app screenshots, timestamped session records, and the self-contained [research snapshot](../research/README.md). Existing local commit history is retained. Machine-specific historical configurations retain their original provenance; they are not portable runtime qualification.
 
-`workspace/` is deliberately excluded. It contains full imported and generated evidence, raw requests/responses, model-access credentials, temporary diagnostics, and `explorer/notes.sqlite` with the current notebook, collections, dictionary revisions, opening reviews and musings. Environment files are ignored except `.env.example`.
+`research/` includes byte-for-byte original evidence, readable transcripts, and all fourteen notebook tables with their revision histories. A checksum manifest and offline restore command recreate the populated lab from a clone. Transcripts are core versioned research entities. See [data scope, restoration and updates](RESEARCH-DATA.md).
 
-A Git push backs up tracked project files and history. It is **not a full backup of the research workspace**. A fresh clone can run the software and synthetic tests, but does not contain the populated research library or live notebook. Those require a separately prepared evidence/notebook backup and restore. Do not copy the whole workspace to Git: its private credential material must remain local. Reference data can also be imported using the instructions in the README.
+The live `workspace/` remains ignored because it also contains credentials, indexes, caches, vendor code and disposable diagnostics. Environment files are ignored except `.env.example`. Git contains the explicitly exported research snapshot, not an automatically synchronized live database. Later notes and runs require a new snapshot and commit. Credentials are never part of the snapshot.
 
 ## Working with the remote
 
@@ -16,6 +16,7 @@ A Git push backs up tracked project files and history. It is **not a full backup
 git clone https://github.com/ebergel/ai-behavior-lab.git
 cd ai-behavior-lab
 python3 -m unittest discover -s tests -v
+python3 -m behaviorlab.research_bundle restore --bundle research --destination workspace
 python3 -m behaviorlab explore --workspace workspace --port 8765
 ```
 

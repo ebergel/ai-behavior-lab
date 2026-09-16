@@ -1,0 +1,19 @@
+{
+  "unchanged_sqlite_rows": {
+    "collection_history": 7,
+    "finder_view_history": 0,
+    "finder_views": 0,
+    "history": 5,
+    "lab_musing_history": 5,
+    "lab_musings": 5,
+    "notes": 5,
+    "research_collections": 6,
+    "topic_dictionary": 23,
+    "topic_dictionary_history": 23,
+    "topic_flag_history": 28,
+    "topic_flags": 28,
+    "topic_opening_history": 12,
+    "topic_openings": 12
+  },
+  "unchanged_source_artifacts": 111
+}

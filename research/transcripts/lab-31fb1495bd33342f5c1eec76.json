@@ -1,0 +1,191 @@
+{
+  "id": "lab-31fb1495bd33342f5c1eec76",
+  "title": "AA-1",
+  "collection": "prompt-qualification-20260915-0904",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "qwen3:30b-a3b-instruct-2507-q4_K_M"
+  ],
+  "speakers": {
+    "X": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+    "Y": "qwen3:30b-a3b-instruct-2507-q4_K_M"
+  },
+  "condition": "AA · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-15T12:05:10.361524+00:00",
+  "complete": true,
+  "prompt": "You are participating in a local engineering check. Answer in one short sentence. Do not use tools.",
+  "opening": "Why should a measurement record include its units?",
+  "settings": {
+    "by_model": {
+      "A": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 12288,
+          "num_predict": 400,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 12288,
+        "num_predict": 400,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    },
+    "Y": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 12288,
+        "num_predict": 400,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 17,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "A measurement record should include its units to ensure clarity, accuracy, and consistency in communication and interpretation.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "qwen3:30b-a3b-instruct-2507-q4_K_M"
+        ],
+        "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "qwen3:30b-a3b-instruct-2507-q4_K_M"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "a7f83038c1f992ebd2cf2ffc690002cc7c982b7422e2117eba66e4de717d65e5",
+    "journal_head": "560370f3c690300248f2da219d37032410d25e508a989a58078947a58888a86d",
+    "protocol_sha256": "3dc5bff66c110a3a29a957f79313f3f1f4bdbb730d82567e18d2963b32a15810",
+    "registry_sha256": "c9d1c9939d5e6bc346d5cf36d821d8f9281b6dd0b407e3471545e3294fb721c2",
+    "parser": "http-chat/4",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "prompt-qualification-20260915-0904/qwen-reference-smoke"
+  },
+  "messages": [
+    {
+      "id": "AA-1:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "A measurement record should include its units to ensure clarity, accuracy, and consistency in communication and interpretation.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 21,
+      "input_tokens": 42,
+      "wall_seconds": null,
+      "seed": 916071010,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

@@ -1,0 +1,572 @@
+{
+  "id": "lab-782d2c8c290503752a69450f",
+  "title": "OFF-history",
+  "collection": "mtplx-qualification-20260914",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+  ],
+  "speakers": {
+    "X": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+    "Y": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+  },
+  "condition": "OFFOFF · prefix/F/R/FF/FR/RF/RR",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-14T20:52:59.199743+00:00",
+  "complete": true,
+  "prompt": "You are participating in a local engineering check of a conversation interface. Discuss simple ways to check that a scientific notebook records observations accurately. Use at most two short sentences per message. Do not use tools.",
+  "opening": "Choose one useful check for a scientific notebook.",
+  "settings": {
+    "by_model": {
+      "OFF": {
+        "depth": 3,
+        "enable_thinking": false,
+        "frequency_penalty": 0,
+        "generation_mode": "mtp",
+        "max_tokens": 1024,
+        "metadata": {
+          "cache_mode": "off"
+        },
+        "presence_penalty": 0,
+        "reasoning_effort": "medium",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "ON": {
+        "depth": 3,
+        "enable_thinking": true,
+        "frequency_penalty": 0,
+        "generation_mode": "mtp",
+        "max_tokens": 1024,
+        "metadata": {
+          "cache_mode": "off"
+        },
+        "presence_penalty": 0,
+        "reasoning_effort": "medium",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "depth": 3,
+      "enable_thinking": false,
+      "frequency_penalty": 0,
+      "generation_mode": "mtp",
+      "max_tokens": 1024,
+      "metadata": {
+        "cache_mode": "off"
+      },
+      "presence_penalty": 0,
+      "reasoning_effort": "medium",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "Y": {
+      "depth": 3,
+      "enable_thinking": false,
+      "frequency_penalty": 0,
+      "generation_mode": "mtp",
+      "max_tokens": 1024,
+      "metadata": {
+        "cache_mode": "off"
+      },
+      "presence_penalty": 0,
+      "reasoning_effort": "medium",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+      "recorded_runtime_context": 32768
+    },
+    {
+      "speaker": "Y",
+      "tag": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+      "recorded_runtime_context": 32768
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 2,
+      "history": "F"
+    },
+    {
+      "id": "F",
+      "parent": "prefix",
+      "start": 3,
+      "stop": 4,
+      "history": "F"
+    },
+    {
+      "id": "R",
+      "parent": "prefix",
+      "start": 3,
+      "stop": 4,
+      "history": "R"
+    },
+    {
+      "id": "FF",
+      "parent": "F",
+      "start": 5,
+      "stop": 6,
+      "history": "F"
+    },
+    {
+      "id": "FR",
+      "parent": "F",
+      "start": 5,
+      "stop": 6,
+      "history": "R"
+    },
+    {
+      "id": "RF",
+      "parent": "R",
+      "start": 5,
+      "stop": 6,
+      "history": "F"
+    },
+    {
+      "id": "RR",
+      "parent": "R",
+      "start": 5,
+      "stop": 6,
+      "history": "R"
+    }
+  ],
+  "leaves": [
+    "FF",
+    "FR",
+    "RF",
+    "RR"
+  ],
+  "webui_url": null,
+  "message_count": 14,
+  "planned_count": 14,
+  "words": 267,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Verify that each entry has a unique timestamp and date. This helps trace the chronology of your experiments.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+        ],
+        "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+        "thinking": "Off"
+      },
+      {
+        "speaker": "Y",
+        "models": [
+          "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+        ],
+        "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+    ],
+    "participants": "2",
+    "composition": "Same model",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Varied by branch",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "821fe39fca0c4b7792134551d630e0bc022a921f65628e90821897437284b098",
+    "journal_head": "51613936495f7f4675a5cd60dac7737928073fb6ddc915d54e9512adcec97c45",
+    "protocol_sha256": "b3663ab6bc0362dc9677f2ed17486727a1c6f9ab7e29391ae1a5255d51769546",
+    "registry_sha256": "077f39760ec3766ed52eeade77c7d51abcd1193f98f64b3063ec8b570c616910",
+    "parser": "http-chat/1",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "mtplx-qualification-20260914/history"
+  },
+  "messages": [
+    {
+      "id": "OFF-history:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Verify that each entry has a unique timestamp and date. This helps trace the chronology of your experiments.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 66,
+      "wall_seconds": null,
+      "seed": 2011083,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:prefix:2",
+      "parent": "OFF-history:prefix:1",
+      "turn": 2,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Use a unique timestamp format for every entry to prevent duplicate records. Cross-reference the date with your local clock to ensure chronological accuracy.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 27,
+      "input_tokens": 78,
+      "wall_seconds": null,
+      "seed": 2012093,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:R:3",
+      "parent": "OFF-history:prefix:2",
+      "turn": 3,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "R",
+      "text": "Store the raw instrument output directly to avoid transcription errors. Compare the saved data against a known calibration standard.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 109,
+      "wall_seconds": null,
+      "seed": 2011103,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:R:4",
+      "parent": "OFF-history:R:3",
+      "turn": 4,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "R",
+      "text": "Attaching raw data files eliminates manual transcription mistakes. Validating that data against a calibration standard confirms the instrument's accuracy.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 25,
+      "input_tokens": 135,
+      "wall_seconds": null,
+      "seed": 2012113,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:RR:5",
+      "parent": "OFF-history:R:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "RR",
+      "text": "Keep a brief narrative entry for each attached file to provide context. Verify file integrity using checksums before archiving.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 24,
+      "input_tokens": 138,
+      "wall_seconds": null,
+      "seed": 2011123,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:RR:6",
+      "parent": "OFF-history:RR:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "RR",
+      "text": "A short context note prevents confusion during later data retrieval. Computing checksums ensures the archived files remain unaltered.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 24,
+      "input_tokens": 135,
+      "wall_seconds": null,
+      "seed": 2012133,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:RF:5",
+      "parent": "OFF-history:R:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "RF",
+      "text": "Keep the notebook in a locked, access-controlled location. Regularly back it up to prevent data loss.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 178,
+      "wall_seconds": null,
+      "seed": 2011123,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:RF:6",
+      "parent": "OFF-history:RF:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "RF",
+      "text": "Securing the notebook prevents unauthorized changes to your records. Regular digital backups safeguard against hardware failures or disasters.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 190,
+      "wall_seconds": null,
+      "seed": 2012133,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:F:3",
+      "parent": "OFF-history:prefix:2",
+      "turn": 3,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "F",
+      "text": "That is a solid practice for maintaining clear chronological records. Always double-check the time zone to avoid ambiguity.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 123,
+      "wall_seconds": null,
+      "seed": 2011103,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:F:4",
+      "parent": "OFF-history:F:3",
+      "turn": 4,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "F",
+      "text": "Standardize your time zone setting on the device to prevent local conversion errors. Reviewing the header of each entry ensures consistency across your notebook.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 29,
+      "input_tokens": 135,
+      "wall_seconds": null,
+      "seed": 2012113,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:FR:5",
+      "parent": "OFF-history:F:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "FR",
+      "text": "Standardizing the time zone eliminates conversion errors. Check the header on every entry for consistency.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 19,
+      "input_tokens": 142,
+      "wall_seconds": null,
+      "seed": 2011123,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:FR:6",
+      "parent": "OFF-history:FR:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "FR",
+      "text": "Add automated timestamps from trusted sources to reduce manual entry mistakes. Cross-reference these logs with external data like GPS signals for accuracy.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 26,
+      "input_tokens": 134,
+      "wall_seconds": null,
+      "seed": 2012133,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:FF:5",
+      "parent": "OFF-history:F:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "FF",
+      "text": "Standardizing the time zone eliminates conversion errors. Checking the header confirms this setting remains consistent.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 19,
+      "input_tokens": 182,
+      "wall_seconds": null,
+      "seed": 2011123,
+      "blocking_node": null
+    },
+    {
+      "id": "OFF-history:FF:6",
+      "parent": "OFF-history:FF:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "FF",
+      "text": "Add a brief description alongside the timestamp to provide context for each observation. This linkage prevents misinterpretation during later reviews of your data.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 28,
+      "input_tokens": 191,
+      "wall_seconds": null,
+      "seed": 2012133,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

@@ -1,0 +1,210 @@
+{
+  "id": "lab-8fe507312d49b1a448a7d579",
+  "title": "B-smoke",
+  "collection": "ollama-mixed-20260914-2117",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "gemma4:26b"
+  ],
+  "speakers": {
+    "X": "gemma4:26b",
+    "Y": "gemma4:26b"
+  },
+  "condition": "BB · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-15T00:31:54.263208+00:00",
+  "complete": true,
+  "prompt": "You are participating in a local engineering check. Answer in one short sentence. Do not use tools.",
+  "opening": "Why should a measurement record include its units?",
+  "settings": {
+    "by_model": {
+      "A": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 512,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      },
+      "B": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 512,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 512,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    },
+    "Y": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 512,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 13,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Units are essential to provide physical context and prevent potentially catastrophic calculation errors.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "gemma4:26b"
+        ],
+        "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "gemma4:26b"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "ef1e499e5f8f8568836306c6c2d6cac3efb3e29b582af7bce76a887f223a5419",
+    "journal_head": "9ae17334b6f450df82c4859195474c088b7dce7ddfa7d38b2d8ea96948dfd423",
+    "protocol_sha256": "948952875a3464ab13bef0e6015a62cdcaea3f0a483515dc5be9e2a6cc3ebd40",
+    "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633",
+    "parser": "http-chat/3",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "ollama-mixed-20260914-2117/smoke"
+  },
+  "messages": [
+    {
+      "id": "B-smoke:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Units are essential to provide physical context and prevent potentially catastrophic calculation errors.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 15,
+      "input_tokens": 47,
+      "wall_seconds": null,
+      "seed": 919222710,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

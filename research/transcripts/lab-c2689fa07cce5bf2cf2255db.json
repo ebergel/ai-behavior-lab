@@ -1,0 +1,210 @@
+{
+  "id": "lab-c2689fa07cce5bf2cf2255db",
+  "title": "smoke-A",
+  "collection": "capacity-preparation-20260915-1148",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "qwen3:30b-a3b-instruct-2507-q4_K_M"
+  ],
+  "speakers": {
+    "X": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+    "Y": "qwen3:30b-a3b-instruct-2507-q4_K_M"
+  },
+  "condition": "AA · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-15T14:49:57.039035+00:00",
+  "complete": true,
+  "prompt": "This is a local engineering capacity check. Reply briefly.",
+  "opening": "Write one sentence about arranging notebooks on a shelf.",
+  "settings": {
+    "by_model": {
+      "A": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 2048,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      },
+      "B": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 2048,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 2048,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    },
+    "Y": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 2048,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 21,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Arrange notebooks by size, starting with the largest at the bottom and smallest at the top for a neat, stable stack.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "qwen3:30b-a3b-instruct-2507-q4_K_M"
+        ],
+        "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "qwen3:30b-a3b-instruct-2507-q4_K_M"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "68139c805a3c0f085940395d802d0983e494cbdebd213b262c7fe60b0ed7efce",
+    "journal_head": "2eb46e40026e62998043e6b224294ea28f7084ee2cdef0c16eb0a3daa8f21ad6",
+    "protocol_sha256": "3562a54c9d2c767bf1d7d16f76a8f78662b3c4653d0edc6e7a4a56df88d18392",
+    "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633",
+    "parser": "http-chat/4",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "capacity-preparation-20260915-1148/smoke-A"
+  },
+  "messages": [
+    {
+      "id": "smoke-A:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Arrange notebooks by size, starting with the largest at the bottom and smallest at the top for a neat, stable stack.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 25,
+      "input_tokens": 34,
+      "wall_seconds": null,
+      "seed": 101011010,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

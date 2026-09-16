@@ -1,0 +1,2 @@
+# Research checksums cover exact bytes, including historical line endings.
+research/** -text

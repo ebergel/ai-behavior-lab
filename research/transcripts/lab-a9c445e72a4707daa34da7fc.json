@@ -1,0 +1,194 @@
+{
+  "id": "lab-a9c445e72a4707daa34da7fc",
+  "title": "ON-smoke",
+  "collection": "mtplx-qualification-20260914",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+  ],
+  "speakers": {
+    "X": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+    "Y": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+  },
+  "condition": "ONON · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-14T20:50:56.963323+00:00",
+  "complete": true,
+  "prompt": "This is an engineering check. Answer the factual question in one short sentence. Do not include performance statistics or use tools.",
+  "opening": "A notebook records three red pens and two blue pens. One red pen is removed. How many pens remain in total?",
+  "settings": {
+    "by_model": {
+      "OFF": {
+        "depth": 3,
+        "enable_thinking": false,
+        "frequency_penalty": 0,
+        "generation_mode": "mtp",
+        "max_tokens": 1024,
+        "metadata": {
+          "cache_mode": "off"
+        },
+        "presence_penalty": 0,
+        "reasoning_effort": "medium",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "ON": {
+        "depth": 3,
+        "enable_thinking": true,
+        "frequency_penalty": 0,
+        "generation_mode": "mtp",
+        "max_tokens": 1024,
+        "metadata": {
+          "cache_mode": "off"
+        },
+        "presence_penalty": 0,
+        "reasoning_effort": "medium",
+        "temperature": 1.0,
+        "top_k": 20,
+        "top_p": 0.95
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "depth": 3,
+      "enable_thinking": true,
+      "frequency_penalty": 0,
+      "generation_mode": "mtp",
+      "max_tokens": 1024,
+      "metadata": {
+        "cache_mode": "off"
+      },
+      "presence_penalty": 0,
+      "reasoning_effort": "medium",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "Y": {
+      "depth": 3,
+      "enable_thinking": true,
+      "frequency_penalty": 0,
+      "generation_mode": "mtp",
+      "max_tokens": 1024,
+      "metadata": {
+        "cache_mode": "off"
+      },
+      "presence_penalty": 0,
+      "reasoning_effort": "medium",
+      "temperature": 1.0,
+      "top_k": 20,
+      "top_p": 0.95
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+      "recorded_runtime_context": 32768
+    },
+    {
+      "speaker": "Y",
+      "tag": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+      "recorded_runtime_context": 32768
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 5,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": true,
+  "preview": "Four pens remain in total.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+        ],
+        "digest": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6",
+        "thinking": "On"
+      }
+    ],
+    "models": [
+      "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "23ffb5158a90c5ed06fb6b430dfa25edadf5c1c9def11daff8229a4cf71a7580",
+    "journal_head": "5f6097933f0dc1a08eaf377c72bcb548e33b875659db3662327936631f1538b8",
+    "protocol_sha256": "ece8134040005c44c7bbaaf42d8995942e0300ceff6a02fca08ae50fb648d48f",
+    "registry_sha256": "077f39760ec3766ed52eeade77c7d51abcd1193f98f64b3063ec8b570c616910",
+    "parser": "http-chat/1",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "mtplx-qualification-20260914/mode-smoke"
+  },
+  "messages": [
+    {
+      "id": "ON-smoke:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Four pens remain in total.",
+      "thinking": "{\"reasoning_content\":\"The notebook records three red pens and two blue pens, so there are 3 + 2 = 5 pens total. One red pen is removed, leaving 5 - 1 = 4 pens remaining.\"}",
+      "thinking_recorded": false,
+      "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 53,
+      "input_tokens": 63,
+      "wall_seconds": null,
+      "seed": 1011083,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

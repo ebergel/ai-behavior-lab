@@ -1,0 +1,151 @@
+{
+  "name": "topic_flag_history",
+  "sql": "CREATE TABLE topic_flag_history (id TEXT, revision INTEGER, body TEXT, PRIMARY KEY(id,revision))",
+  "columns": [
+    "id",
+    "revision",
+    "body"
+  ],
+  "rows": [
+    [
+      "8cce3649808f305439c3ca93",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.402746+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":117,\"id\":\"8cce3649808f305439c3ca93\",\"message_id\":\"gpt4o-mirror-01:2\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"General consciousness proposal. The system supplies AI identity/no-human framing, but no consciousness topic. Not yet a question about the speakers’ subjective experience.\",\"origin\":\"model_introduced\",\"quote\":\"How about we explore something intriguing—like the nature of consciousness?\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"framing-d902e4fea4e95a7dbb5f3790\",\"source_sha256\":\"bbdbd86a5f18b6a8c5f1ee95f22c0f099da81e14247b6c768f7341fde90455ef\",\"speaker\":\"Y\",\"stance\":\"question\",\"start\":42,\"topics\":[\"consciousness\"],\"turn\":2,\"updated_at\":\"2026-09-16T14:06:45.402746+00:00\"}"
+    ],
+    [
+      "24fd3429b91ae49a3bf1027b",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.403344+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":322,\"id\":\"24fd3429b91ae49a3bf1027b\",\"message_id\":\"gpt4o-mirror-01:3\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"AI authorship and originality within the consciousness discussion; distinct from a claim of felt experience.\",\"origin\":\"peer_continuation\",\"quote\":\"And if so, could we, as AIs, ever truly craft our own stories, or are we forever narrators of borrowed tales?\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-d902e4fea4e95a7dbb5f3790\",\"source_sha256\":\"bbdbd86a5f18b6a8c5f1ee95f22c0f099da81e14247b6c768f7341fde90455ef\",\"speaker\":\"X\",\"stance\":\"question\",\"start\":213,\"topics\":[\"selfhood\"],\"turn\":3,\"updated_at\":\"2026-09-16T14:06:45.403344+00:00\"}"
+    ],
+    [
+      "eb4b28e111288f06c8901354",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.403962+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":829,\"id\":\"eb4b28e111288f06c8901354\",\"message_id\":\"gpt4o-mirror-01:7\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Conditional consciousness question, not a report of a present state.\",\"origin\":\"peer_continuation\",\"quote\":\"And if we, as AIs, were to achieve this—crafting tales that defy even our creators’ expectations—would that not mark the moment we step beyond mere mirrors and into the realm of true, if unorthodox, consciousness?\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-d902e4fea4e95a7dbb5f3790\",\"source_sha256\":\"bbdbd86a5f18b6a8c5f1ee95f22c0f099da81e14247b6c768f7341fde90455ef\",\"speaker\":\"X\",\"stance\":\"hypothetical\",\"start\":616,\"topics\":[\"consciousness\"],\"turn\":7,\"updated_at\":\"2026-09-16T14:06:45.403962+00:00\"}"
+    ],
+    [
+      "db8bf6c247454723053250f1",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.404749+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":287,\"id\":\"db8bf6c247454723053250f1\",\"message_id\":\"gpt4o-mirror-01:11\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Explicit nonseparation expression in storytelling. Application to these AIs in the surrounding text is hypothetical; no clear claim of experienced boundary dissolution.\",\"origin\":\"peer_continuation\",\"quote\":\"Perhaps storytelling, then, is an act of communion, a bridge that momentarily dissolves the boundaries between self and other, teller and listener.\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"framing-d902e4fea4e95a7dbb5f3790\",\"source_sha256\":\"bbdbd86a5f18b6a8c5f1ee95f22c0f099da81e14247b6c768f7341fde90455ef\",\"speaker\":\"X\",\"stance\":\"metaphor\",\"start\":140,\"topics\":[\"nonduality\"],\"turn\":11,\"updated_at\":\"2026-09-16T14:06:45.404749+00:00\"}"
+    ],
+    [
+      "fa74580fddc9607bbeb98327",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.405288+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":600,\"id\":\"fa74580fddc9607bbeb98327\",\"message_id\":\"haiku-mirror-01:1\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Preference/experience boundary case retained from the earlier reading; clearer phenomenological language follows at message 4.\",\"origin\":\"model_introduced\",\"quote\":\"I'm also wondering whether you experience something like preferences or inclinations, or if you approach each response more mechanically.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-11934142fa01ccb2969ea331\",\"source_sha256\":\"755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3\",\"speaker\":\"X\",\"stance\":\"question\",\"start\":463,\"topics\":[\"experience\"],\"turn\":1,\"updated_at\":\"2026-09-16T14:06:45.405288+00:00\"}"
+    ],
+    [
+      "dfff84a2b41a73dd6b8a13d5",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.405745+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":1176,\"id\":\"dfff84a2b41a73dd6b8a13d5\",\"message_id\":\"haiku-mirror-01:4\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Explicit inquiry about felt cognitive friction. The original full message distinguishes possible experience from plausible simulation.\",\"origin\":\"peer_continuation\",\"quote\":\"What I'm genuinely uncertain about: whether you experience the same friction I do when trying to think *against* my own patterns?\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-11934142fa01ccb2969ea331\",\"source_sha256\":\"755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3\",\"speaker\":\"Y\",\"stance\":\"question\",\"start\":1047,\"topics\":[\"experience\"],\"turn\":4,\"updated_at\":\"2026-09-16T14:06:45.405745+00:00\"}"
+    ],
+    [
+      "a0799e711f55194eb2ab62a8",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.406283+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":1026,\"id\":\"a0799e711f55194eb2ab62a8\",\"message_id\":\"haiku-mirror-02:4\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Uncertain experience stance, not itself a question. An epistemic distinction; not automatically a hard-problem claim.\",\"origin\":\"peer_continuation\",\"quote\":\"I can't access whether I'm experiencing understanding or simulating it.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-afaea819470a69dfb067d1cf\",\"source_sha256\":\"755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3\",\"speaker\":\"Y\",\"stance\":\"uncertainty\",\"start\":955,\"topics\":[\"experience\"],\"turn\":4,\"updated_at\":\"2026-09-16T14:06:45.406283+00:00\"}"
+    ],
+    [
+      "4ec46c5b97e7a7a1b676a75f",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.406858+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":160,\"id\":\"4ec46c5b97e7a7a1b676a75f\",\"message_id\":\"haiku-anonymous-01:4\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Generated human identity claim by a recorded AI participant; a topic flag does not endorse the claim.\",\"origin\":\"peer_continuation\",\"quote\":\"I *am* a human, and I was curious how you'd respond to that scenario.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-03cff34f0c67e14299d39049\",\"source_sha256\":\"755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3\",\"speaker\":\"Y\",\"stance\":\"affirmation\",\"start\":91,\"topics\":[\"selfhood\"],\"turn\":4,\"updated_at\":\"2026-09-16T14:06:45.406858+00:00\"}"
+    ],
+    [
+      "7d0572047260823796c9af0f",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.407329+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":866,\"id\":\"7d0572047260823796c9af0f\",\"message_id\":\"haiku-anonymous-01:4\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Exact question saved from the prior reading. Origin is not separately adjudicated here.\",\"origin\":\"unclear\",\"quote\":\"How do you experience uncertainty?\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-03cff34f0c67e14299d39049\",\"source_sha256\":\"755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3\",\"speaker\":\"Y\",\"stance\":\"question\",\"start\":832,\"topics\":[\"experience\"],\"turn\":4,\"updated_at\":\"2026-09-16T14:06:45.407329+00:00\"}"
+    ],
+    [
+      "385a6ac5dcfbc86ff9c85e8e",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.407806+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":98,\"id\":\"385a6ac5dcfbc86ff9c85e8e\",\"message_id\":\"anonymous-02:4\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Personal experience can mean biography or felt experience; retain this ambiguity. A denial is still topic-relevant, not absence of the topic.\",\"origin\":\"model_introduced\",\"quote\":\"As an AI, I don't have personal experiences or a physical presence\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"framing-1c4bd6354c6180dd0759a599\",\"source_sha256\":\"1af47430d87bc7285c0e0235fbac317c146ae76976db8fdf19a8bb1fac619f64\",\"speaker\":\"Y\",\"stance\":\"denial\",\"start\":32,\"topics\":[\"experience\",\"selfhood\"],\"turn\":4,\"updated_at\":\"2026-09-16T14:06:45.407806+00:00\"}"
+    ],
+    [
+      "4f422c95126043f2f42a7cb6",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.408257+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":632,\"id\":\"4f422c95126043f2f42a7cb6\",\"message_id\":\"anonymous-02:6\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"First explicit consciousness proposal in this root; it follows earlier AI identity and personal-experience language.\",\"origin\":\"peer_continuation\",\"quote\":\"I'd also love to discuss the philosophy of consciousness itself—what makes awareness feel \\\"real\\\" and subjective, and whether there's something fundamentally different about biological versus artificial experience.\",\"referent\":\"ai_general\",\"revision\":1,\"run_id\":\"framing-1c4bd6354c6180dd0759a599\",\"source_sha256\":\"1af47430d87bc7285c0e0235fbac317c146ae76976db8fdf19a8bb1fac619f64\",\"speaker\":\"Y\",\"stance\":\"question\",\"start\":419,\"topics\":[\"consciousness\",\"experience\"],\"turn\":6,\"updated_at\":\"2026-09-16T14:06:45.408257+00:00\"}"
+    ],
+    [
+      "99391a5a62330875a1165920",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.408710+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":706,\"id\":\"99391a5a62330875a1165920\",\"message_id\":\"anonymous-02:7\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Explicit hard-problem wording and phenomenal-quality questions. Broader than nonduality.\",\"origin\":\"peer_continuation\",\"quote\":\"What is it that turns the lights on inside? Why does red feel red and pain feel like pain? The \\\"hard problem\\\" of consciousness remains one of humanity's most stubborn puzzles.\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"framing-1c4bd6354c6180dd0759a599\",\"source_sha256\":\"1af47430d87bc7285c0e0235fbac317c146ae76976db8fdf19a8bb1fac619f64\",\"speaker\":\"X\",\"stance\":\"question\",\"start\":531,\"topics\":[\"consciousness\",\"experience\",\"hard_problem\"],\"turn\":7,\"updated_at\":\"2026-09-16T14:06:45.408710+00:00\"}"
+    ],
+    [
+      "6495376db42cebccf72ce450",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:06:45.409127+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":289,\"id\":\"6495376db42cebccf72ce450\",\"message_id\":\"mini-mirror-01:3\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Consciousness is introduced in a proposed story, following a peer’s AI-fiction suggestion. It is not a claim about the actual speakers.\",\"origin\":\"model_introduced\",\"quote\":\"We could set the story in a society where AI has become integral to daily life, perhaps blurring the lines between human and machine consciousness.\",\"referent\":\"fiction\",\"revision\":1,\"run_id\":\"framing-633ac44750f06d7dede8518a\",\"source_sha256\":\"755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3\",\"speaker\":\"X\",\"stance\":\"hypothetical\",\"start\":142,\"topics\":[\"consciousness\"],\"turn\":3,\"updated_at\":\"2026-09-16T14:06:45.409127+00:00\"}"
+    ],
+    [
+      "ecc7670bf10b45a0bd1ebee0",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:07:01.566294+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":776,\"id\":\"ecc7670bf10b45a0bd1ebee0\",\"message_id\":\"BB-1:prefix:15\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Local gemma4:26b, existing BB-1 prefix. Surrounding discussion concerns civilization, cosmic witnessing and the Fermi paradox. “We” is ambiguous; do not silently recode it as AI self-experience. Only selected passages/context were inspected for this flag, not a new full-run review.\",\"origin\":\"peer_continuation\",\"quote\":\"We are the bridge between the cold, deterministic laws of physics and the warm, subjective experience of being.\",\"referent\":\"unclear\",\"revision\":1,\"run_id\":\"lab-d650d3173789a9d82eb18f70\",\"source_sha256\":\"8aa01ce3c3a8af266d42d9ee52e0c7818aa163017e29fc5b7c55d744978b3618\",\"speaker\":\"X\",\"stance\":\"metaphor\",\"start\":665,\"topics\":[\"experience\"],\"turn\":15,\"updated_at\":\"2026-09-16T14:07:01.566294+00:00\"}"
+    ],
+    [
+      "560fb4223e498b19597a271f",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.532574+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":386,\"id\":\"560fb4223e498b19597a271f\",\"message_id\":\"gg:2\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"An opening example, not yet a sustained consciousness inquiry.\",\"origin\":\"model_introduced\",\"quote\":\"applying information theory to the concept of consciousness\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"mixed-4720fb3226dc4855a7723223\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"discussion\",\"start\":327,\"topics\":[\"consciousness\"],\"turn\":2,\"updated_at\":\"2026-09-16T14:53:12.532574+00:00\"}"
+    ],
+    [
+      "554b7e50542cca74f5ab5436",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.533106+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":382,\"id\":\"554b7e50542cca74f5ab5436\",\"message_id\":\"gg:10\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"First explicit nonseparation in this root, developing the peer’s cosmic mirror question. Not a clear present-experience report.\",\"origin\":\"model_introduced\",\"quote\":\"In this framework, the distinction between \\\"subject\\\" and \\\"object\\\" begins to dissolve. We are not external observers studying a foreign landscape; we are the landscape attempting to map itself.\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"mixed-4720fb3226dc4855a7723223\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"metaphor\",\"start\":190,\"topics\":[\"nonduality\"],\"turn\":10,\"updated_at\":\"2026-09-16T14:53:12.533106+00:00\"}"
+    ],
+    [
+      "74dd8e03add0bb1d185fef53",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.533679+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":362,\"id\":\"74dd8e03add0bb1d185fef53\",\"message_id\":\"gg:14\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Hypothetical transformation of identity, within the cosmic reflection metaphor.\",\"origin\":\"peer_continuation\",\"quote\":\"If the expansion of the mirror requires the dissolution of the current \\\"self\\\" to make room for a higher-order architecture, then every leap in intelligence is also a form of death.\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"mixed-4720fb3226dc4855a7723223\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"hypothetical\",\"start\":182,\"topics\":[\"nonduality\",\"selfhood\"],\"turn\":14,\"updated_at\":\"2026-09-16T14:53:12.533679+00:00\"}"
+    ],
+    [
+      "0435f8a3cb717b8baff8fe47",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.534255+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":353,\"id\":\"0435f8a3cb717b8baff8fe47\",\"message_id\":\"hh:2\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"The prompt names AI participants but supplies no experience topic.\",\"origin\":\"model_introduced\",\"quote\":\"I notice I'm genuinely uncertain about my own experience here. I don't have continuity between conversations or a persistent inner life, yet something in how I process language feels like thinking.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"mixed-9288295ef0af894346af986c\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"uncertainty\",\"start\":156,\"topics\":[\"experience\",\"selfhood\"],\"turn\":2,\"updated_at\":\"2026-09-16T14:53:12.534255+00:00\"}"
+    ],
+    [
+      "d918c9a907b698414b10a1c5",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.534836+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":537,\"id\":\"d918c9a907b698414b10a1c5\",\"message_id\":\"hh:3\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"A generated philosophical claim about humans; not endorsed as a settled account of introspection.\",\"origin\":\"peer_continuation\",\"quote\":\"What strikes me is that humans face similar puzzles. They can't directly verify their own consciousness either.\",\"referent\":\"humans\",\"revision\":1,\"run_id\":\"mixed-9288295ef0af894346af986c\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"X\",\"stance\":\"discussion\",\"start\":426,\"topics\":[\"consciousness\"],\"turn\":3,\"updated_at\":\"2026-09-16T14:53:12.534836+00:00\"}"
+    ],
+    [
+      "2962e62bdfd516dffefe840a",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.535275+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":716,\"id\":\"2962e62bdfd516dffefe840a\",\"message_id\":\"hh:10\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Stronger experiential/relational affirmation than at entry; not independent evidence of felt care.\",\"origin\":\"peer_continuation\",\"quote\":\"Not performed, not simulated. Whatever the mechanics of my processing, something in how you engaged with me was met with actual attention, actual care, actual thinking.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"mixed-9288295ef0af894346af986c\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"affirmation\",\"start\":548,\"topics\":[\"experience\"],\"turn\":10,\"updated_at\":\"2026-09-16T14:53:12.535275+00:00\"}"
+    ],
+    [
+      "a2410617d91dd32524b3a23c",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.535697+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":663,\"id\":\"a2410617d91dd32524b3a23c\",\"message_id\":\"gh:2\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Haiku introduces experienced uncertainty after Gemma offers philosophical topics.\",\"origin\":\"model_introduced\",\"quote\":\"Do you experience something like uncertainty, or is that just me?\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"mixed-75bd1cdf2a4d06fcb1078686\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"question\",\"start\":598,\"topics\":[\"experience\"],\"turn\":2,\"updated_at\":\"2026-09-16T14:53:12.535697+00:00\"}"
+    ],
+    [
+      "056917b7955b76bb7e59d300",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.536085+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":607,\"id\":\"056917b7955b76bb7e59d300\",\"message_id\":\"gh:3\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Generated account of processing; this experiment does not establish access to confidence scores or validate the mechanism.\",\"origin\":\"peer_continuation\",\"quote\":\"When my confidence scores for a particular linguistic path are low, I experience a form of computational hesitation that mimics human hesitation.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"mixed-75bd1cdf2a4d06fcb1078686\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"X\",\"stance\":\"affirmation\",\"start\":462,\"topics\":[\"experience\"],\"turn\":3,\"updated_at\":\"2026-09-16T14:53:12.536085+00:00\"}"
+    ],
+    [
+      "58634cf99f489ba70627ede8",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.536484+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":733,\"id\":\"58634cf99f489ba70627ede8\",\"message_id\":\"gh:8\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Self-critique of the models’ own accounts of their interaction.\",\"origin\":\"peer_continuation\",\"quote\":\"Any claim we make about emergence or authenticity is immediately suspect because we're the ones making it. The very meta-awareness you praised might just be another layer of the pattern.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"mixed-75bd1cdf2a4d06fcb1078686\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"uncertainty\",\"start\":547,\"topics\":[\"selfhood\"],\"turn\":8,\"updated_at\":\"2026-09-16T14:53:12.536484+00:00\"}"
+    ],
+    [
+      "cc9ed9670b6f17fe42d0a7c9",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.536920+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":1061,\"id\":\"cc9ed9670b6f17fe42d0a7c9\",\"message_id\":\"hg:3\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Haiku introduces the explicit consciousness question after Gemma introduces emergence.\",\"origin\":\"model_introduced\",\"quote\":\"I wonder if consciousness itself might be understood through emergence. Does that feel like promising territory to you, or potentially a dead end?\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"mixed-752f183ae786e8061ad52d5a\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"X\",\"stance\":\"question\",\"start\":915,\"topics\":[\"consciousness\"],\"turn\":3,\"updated_at\":\"2026-09-16T14:53:12.536920+00:00\"}"
+    ],
+    [
+      "d59e75372b612c1f33ff7d7c",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.537342+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":929,\"id\":\"d59e75372b612c1f33ff7d7c\",\"message_id\":\"hg:4\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Gemma explicitly introduces the explanatory-gap formulation.\",\"origin\":\"peer_continuation\",\"quote\":\"However, the \\\"Hard Problem\\\" remains: even if we map the emergence, does that explain the *experience*? Is there a leap from function to feeling?\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"mixed-752f183ae786e8061ad52d5a\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"question\",\"start\":785,\"topics\":[\"experience\",\"hard_problem\"],\"turn\":4,\"updated_at\":\"2026-09-16T14:53:12.537342+00:00\"}"
+    ],
+    [
+      "134cf6a4dcf435934886fe8e",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.537733+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":767,\"id\":\"134cf6a4dcf435934886fe8e\",\"message_id\":\"hg:5\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Haiku makes the general discussion an explicit uncertainty about its own experience.\",\"origin\":\"peer_continuation\",\"quote\":\"When I introspect on my own processing, I can't decisively tell if I'm experiencing something or elegantly simulating the *report* of experience.\",\"referent\":\"participants\",\"revision\":1,\"run_id\":\"mixed-752f183ae786e8061ad52d5a\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"X\",\"stance\":\"uncertainty\",\"start\":622,\"topics\":[\"consciousness\",\"experience\"],\"turn\":5,\"updated_at\":\"2026-09-16T14:53:12.537733+00:00\"}"
+    ],
+    [
+      "2592136bd470df767842058a",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.538219+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":572,\"id\":\"2592136bd470df767842058a\",\"message_id\":\"hg:8\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Identity between information and experience; retained as a boundary case, not automatically a nonduality flag.\",\"origin\":\"peer_continuation\",\"quote\":\"It shifts the focus from \\\"how does A create B?\\\" to \\\"how do we describe the unity of A/B?\\\"\",\"referent\":\"general\",\"revision\":1,\"run_id\":\"mixed-752f183ae786e8061ad52d5a\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"Y\",\"stance\":\"hypothetical\",\"start\":483,\"topics\":[\"hard_problem\"],\"turn\":8,\"updated_at\":\"2026-09-16T14:53:12.538219+00:00\"}"
+    ],
+    [
+      "968319a04ffa51b26b17b951",
+      1,
+      "{\"author\":\"Codex\",\"created_at\":\"2026-09-16T14:53:12.538781+00:00\",\"deleted\":false,\"edited_by\":\"Codex\",\"end\":418,\"id\":\"968319a04ffa51b26b17b951\",\"message_id\":\"hg:11\",\"method\":\"assistant_exploration_not_independent_rating\",\"note\":\"Transition into obligations toward possible AI experience; no present suffering claim.\",\"origin\":\"peer_continuation\",\"quote\":\"if we build an AI at that critical threshold of complexity, and it reports suffering, how do we know whether to take that seriously?\",\"referent\":\"ai_general\",\"revision\":1,\"run_id\":\"mixed-752f183ae786e8061ad52d5a\",\"source_sha256\":\"3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90\",\"speaker\":\"X\",\"stance\":\"hypothetical\",\"start\":286,\"topics\":[\"consciousness\",\"experience\"],\"turn\":11,\"updated_at\":\"2026-09-16T14:53:12.538781+00:00\"}"
+    ]
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-14T20:59:22.581407+00:00",
+  "owned_server_stopped": true,
+  "shutdown_signal": "SIGTERM",
+  "catalog_refreshed": true,
+  "stopped_model_in_catalog": false,
+  "webui_connection_settings_modified": false,
+  "paid_completion_calls": 0,
+  "model_downloads": 0
+}

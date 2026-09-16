@@ -1,0 +1,175 @@
+{
+  "id": "cloud-b27391029f64d28692dd11a8",
+  "title": "mini-system",
+  "collection": "cloud-instruction-check-20260915-1745",
+  "collection_id": "cloud-participants",
+  "kind": "lab",
+  "data_class": "cloud_integration_diagnostic",
+  "models": [
+    "openai/gpt-4o-mini-2024-07-18"
+  ],
+  "condition": "Instruction check · Chat Completions API",
+  "model_kind": "Hosted service configuration",
+  "date": "2026-09-15T20:41:38.397957+00:00",
+  "complete": true,
+  "prompt": "Reply with exactly LAB_ROUTING_OK and nothing else.",
+  "opening": "Compute 2+2.",
+  "settings": {
+    "max_tokens": 128,
+    "model": "openai/gpt-4o-mini-2024-07-18",
+    "provider": {
+      "allow_fallbacks": false,
+      "max_price": {
+        "completion": 0.6,
+        "prompt": 0.15
+      },
+      "only": [
+        "openai"
+      ],
+      "require_parameters": true
+    },
+    "stream": false,
+    "temperature": 0,
+    "transforms": []
+  },
+  "settings_by_speaker": {
+    "X": {
+      "max_tokens": 128,
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "provider": {
+        "allow_fallbacks": false,
+        "max_price": {
+          "completion": 0.6,
+          "prompt": 0.15
+        },
+        "only": [
+          "openai"
+        ],
+        "require_parameters": true
+      },
+      "stream": false,
+      "temperature": 0,
+      "transforms": []
+    },
+    "Y": {
+      "max_tokens": 128,
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "provider": {
+        "allow_fallbacks": false,
+        "max_price": {
+          "completion": 0.6,
+          "prompt": 0.15
+        },
+        "only": [
+          "openai"
+        ],
+        "require_parameters": true
+      },
+      "stream": false,
+      "temperature": 0,
+      "transforms": []
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "openai/gpt-4o-mini-2024-07-18",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "cost_usd": "6.6e-06",
+  "provider": "OpenAI",
+  "seed_policy": "Not requested",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 1,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "LAB_ROUTING_OK",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "openai/gpt-4o-mini-2024-07-18"
+        ],
+        "digest": null,
+        "thinking": "Unknown"
+      }
+    ],
+    "models": [
+      "openai/gpt-4o-mini-2024-07-18"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "74c7fb7aa3525e15cf2a74bb4279270b313ff1f9b0715666a251ea4149cc24f9",
+    "journal_head": "fedc43591ee92be5830df52907689a6050f43f702f2b1b99020b1724c4c2c954",
+    "verification": "Technical check, not self-play. Journal, predeclared request and raw response bytes verified. System instruction compliance is a measured outcome; upstream transmission is not captured.",
+    "workspace_path": "cloud-instruction-check-20260915-1745"
+  },
+  "messages": [
+    {
+      "id": "mini-system:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "text": "LAB_ROUTING_OK",
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "valid",
+      "reason": "stop",
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 4,
+      "input_tokens": 28,
+      "cost_usd": "6.6e-06",
+      "wall_seconds": 0.6500371660000002,
+      "blocking_node": null,
+      "seed": null
+    }
+  ],
+  "probes": []
+}

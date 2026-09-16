@@ -1,0 +1,10 @@
+{
+  "name": "finder_views",
+  "sql": "CREATE TABLE finder_views (id TEXT PRIMARY KEY, revision INTEGER, body TEXT)",
+  "columns": [
+    "id",
+    "revision",
+    "body"
+  ],
+  "rows": []
+}

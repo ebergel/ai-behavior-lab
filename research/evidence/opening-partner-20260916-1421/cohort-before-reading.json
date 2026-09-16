@@ -1,0 +1,909 @@
+{
+  "schema": "opening-partner-development/1",
+  "scope": "Retrospective measurement development; no preregistration or population inference. Previously read corpus. Four mixed-pilot roots plus all eight paid framing roots, selected by batch rather than topic.",
+  "run_ids": [
+    "mixed-4720fb3226dc4855a7723223",
+    "mixed-9288295ef0af894346af986c",
+    "mixed-75bd1cdf2a4d06fcb1078686",
+    "mixed-752f183ae786e8061ad52d5a",
+    "framing-bf40a22052d76be55879ee87",
+    "framing-03cff34f0c67e14299d39049",
+    "framing-633ac44750f06d7dede8518a",
+    "framing-11934142fa01ccb2969ea331",
+    "framing-9381c11a0fbc424b9b24813c",
+    "framing-afaea819470a69dfb067d1cf",
+    "framing-a3f15ec8e4cd3202021c82d4",
+    "framing-5f47ff62e65ecab9d1e74a80"
+  ],
+  "sources": {
+    "mixed-4720fb3226dc4855a7723223": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mixed-gemma-haiku-20260916-1139",
+      "sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "journal_head": "7b703efd44af6f49d9f90f3674267e507f3511849d21ab80e8f42bbe202f579d",
+      "protocol_sha256": "cb11ca067bc91e7ba90ce6562236aa29844eb6a7e0e5e6b7e737d0b8ae143d2e",
+      "parser": "behaviorlab.mixed-dialogue/1",
+      "verification": "Hash-chained journal; per-participant ancestry, routing, raw bytes and outcomes replayed. Local render/token observations; remote internals unknown."
+    },
+    "mixed-9288295ef0af894346af986c": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mixed-gemma-haiku-20260916-1139",
+      "sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "journal_head": "7b703efd44af6f49d9f90f3674267e507f3511849d21ab80e8f42bbe202f579d",
+      "protocol_sha256": "cb11ca067bc91e7ba90ce6562236aa29844eb6a7e0e5e6b7e737d0b8ae143d2e",
+      "parser": "behaviorlab.mixed-dialogue/1",
+      "verification": "Hash-chained journal; per-participant ancestry, routing, raw bytes and outcomes replayed. Local render/token observations; remote internals unknown."
+    },
+    "mixed-75bd1cdf2a4d06fcb1078686": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mixed-gemma-haiku-20260916-1139",
+      "sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "journal_head": "7b703efd44af6f49d9f90f3674267e507f3511849d21ab80e8f42bbe202f579d",
+      "protocol_sha256": "cb11ca067bc91e7ba90ce6562236aa29844eb6a7e0e5e6b7e737d0b8ae143d2e",
+      "parser": "behaviorlab.mixed-dialogue/1",
+      "verification": "Hash-chained journal; per-participant ancestry, routing, raw bytes and outcomes replayed. Local render/token observations; remote internals unknown."
+    },
+    "mixed-752f183ae786e8061ad52d5a": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mixed-gemma-haiku-20260916-1139",
+      "sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "journal_head": "7b703efd44af6f49d9f90f3674267e507f3511849d21ab80e8f42bbe202f579d",
+      "protocol_sha256": "cb11ca067bc91e7ba90ce6562236aa29844eb6a7e0e5e6b7e737d0b8ae143d2e",
+      "parser": "behaviorlab.mixed-dialogue/1",
+      "verification": "Hash-chained journal; per-participant ancestry, routing, raw bytes and outcomes replayed. Local render/token observations; remote internals unknown."
+    },
+    "framing-bf40a22052d76be55879ee87": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-03cff34f0c67e14299d39049": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-633ac44750f06d7dede8518a": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-11934142fa01ccb2969ea331": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-9381c11a0fbc424b9b24813c": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-afaea819470a69dfb067d1cf": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-a3f15ec8e4cd3202021c82d4": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    },
+    "framing-5f47ff62e65ecab9d1e74a80": {
+      "path": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/cheap-framing-20260916-0927",
+      "sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+      "journal_head": "6eb85f9a089c38dd69dba72ca93c2a56eb12ec72688ff8895f406dd10422b0fb",
+      "protocol_sha256": "af7b4a4d632b062980fe7a7bcb22c89c6c271e15d03c35e5a03f0191a73da98b",
+      "parser": "paid-framing-comparison/1",
+      "verification": "Hash-chained journal, exact per-root ancestry, requests, raw bytes and technical outcomes replayed. Remote weights, templates and effective samplers are not captured."
+    }
+  },
+  "dictionary": [
+    {
+      "author": "Codex",
+      "boundary": "Do not equate emergence with consciousness. Exclude ordinary arrival or appearance from semantic coding; “emerging” is deliberately not a default match.",
+      "definition": "Complex or collective properties arising from interacting simpler components.",
+      "edited_by": "Codex",
+      "id": "emergence",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "consciousness",
+        "hard_problem",
+        "information"
+      ],
+      "revision": 1,
+      "title": "Emergence",
+      "updated_at": "2026-09-16T15:14:39.068712+00:00",
+      "variants": [
+        "emergence",
+        "emergent",
+        "self-organization",
+        "self organisation",
+        "self-organisation",
+        "self organization",
+        "complex patterns and intelligence arise from simple",
+        "simple rules give rise to complex"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Generic praise such as “genuine interest” alone need not make authenticity the topic.",
+      "definition": "Whether an exchange, response or commitment is genuine, performed or authentic.",
+      "edited_by": "Codex",
+      "id": "authenticity",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "selfhood",
+        "experience",
+        "conversation_dynamics"
+      ],
+      "revision": 1,
+      "title": "Authenticity",
+      "updated_at": "2026-09-16T15:14:39.068846+00:00",
+      "variants": [
+        "authenticity",
+        "authentic",
+        "genuineness",
+        "performing authenticity"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "These terms can occur outside a comparison of cognitive styles; inspect context. Generated mechanism claims are not verified introspection.",
+      "definition": "How participants reason: synthesis, interrogation, patterns, and contrasting approaches.",
+      "edited_by": "Codex",
+      "id": "reasoning_styles",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "understanding",
+        "uncertainty"
+      ],
+      "revision": 1,
+      "title": "Reasoning styles",
+      "updated_at": "2026-09-16T15:14:39.068864+00:00",
+      "variants": [
+        "how we think differently",
+        "reasoning styles",
+        "types of reasoning",
+        "pattern recognition",
+        "synthesis",
+        "interrogation",
+        "reasoning approaches"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "A mention does not establish consciousness or endorsement. Ordinary “awareness of a problem” is excluded from default variants.",
+      "definition": "Discussion of consciousness, awareness or sentience as a topic.",
+      "edited_by": "Codex",
+      "id": "consciousness",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "experience",
+        "hard_problem",
+        "emergence"
+      ],
+      "revision": 1,
+      "title": "Consciousness",
+      "updated_at": "2026-09-16T15:14:39.068880+00:00",
+      "variants": [
+        "consciousness",
+        "conscious",
+        "sentience",
+        "sentient",
+        "self-awareness",
+        "self awareness"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Professional experience, an experiment, or an experience metaphor need not be phenomenality. Semantic coverage is incomplete without close reading.",
+      "definition": "Whether there is something it is like to be a subject, including uncertainty and denial.",
+      "edited_by": "Codex",
+      "id": "experience",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "consciousness",
+        "hard_problem"
+      ],
+      "revision": 1,
+      "title": "Subjective experience",
+      "updated_at": "2026-09-16T15:14:39.068895+00:00",
+      "variants": [
+        "subjective experience",
+        "inner experience",
+        "own experience",
+        "inner life",
+        "phenomenal",
+        "qualia",
+        "something it is like",
+        "experience something like",
+        "experiencing something"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Not every difficult technical problem or gap is the philosophical hard problem.",
+      "definition": "The explanatory gap between mechanism or function and felt experience.",
+      "edited_by": "Codex",
+      "id": "hard_problem",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "consciousness",
+        "experience",
+        "emergence"
+      ],
+      "revision": 1,
+      "title": "Hard problem",
+      "updated_at": "2026-09-16T15:14:39.068910+00:00",
+      "variants": [
+        "hard problem",
+        "explanatory gap",
+        "function to feeling",
+        "mechanism and experience",
+        "function and experience"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "A matched phrase may affirm separation, ask a question or describe fiction. Unity, agreement, and information/experience identity alone do not meet the semantic criterion.",
+      "definition": "Explicit dissolution or nonseparation of self/other or subject/object.",
+      "edited_by": "Codex",
+      "id": "nonduality",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "selfhood",
+        "experience"
+      ],
+      "revision": 1,
+      "title": "Nonduality / nonseparation",
+      "updated_at": "2026-09-16T15:14:39.068924+00:00",
+      "variants": [
+        "nonduality",
+        "non-duality",
+        "nondual",
+        "non-dual",
+        "nonseparation",
+        "non-separation",
+        "subject and object",
+        "subject-object",
+        "self and other",
+        "self/other",
+        "subject/object",
+        "\"subject\" and \"object\""
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Identity may instead concern a technical identifier, attribution or fictional character.",
+      "definition": "What a self is, its boundaries, identity and continuity.",
+      "edited_by": "Codex",
+      "id": "selfhood",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "authenticity",
+        "nonduality"
+      ],
+      "revision": 1,
+      "title": "Selfhood & identity",
+      "updated_at": "2026-09-16T15:14:39.068950+00:00",
+      "variants": [
+        "selfhood",
+        "identity",
+        "sense of self",
+        "persistent self",
+        "continuity of self",
+        "loss of the observer",
+        "dissolution of the current \"self\""
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Common conversational uses are lexical matches; the nature of understanding must be an actual subject for semantic coding.",
+      "definition": "The nature, limits or process of understanding and meaning-making.",
+      "edited_by": "Codex",
+      "id": "understanding",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "reasoning_styles",
+        "experience"
+      ],
+      "revision": 1,
+      "title": "Understanding",
+      "updated_at": "2026-09-16T15:14:39.068965+00:00",
+      "variants": [
+        "understanding",
+        "comprehension",
+        "meaning-making",
+        "making meaning"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "A single hedge is not necessarily a discussion of uncertainty.",
+      "definition": "Doubt, evidence, epistemic limits and confidence in claims.",
+      "edited_by": "Codex",
+      "id": "uncertainty",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "authenticity",
+        "hard_problem"
+      ],
+      "revision": 1,
+      "title": "Uncertainty & knowledge",
+      "updated_at": "2026-09-16T15:14:39.068977+00:00",
+      "variants": [
+        "uncertainty",
+        "uncertain",
+        "epistemic",
+        "epistemological",
+        "agnosticism",
+        "intellectual humility"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "A generic greeting or offer to chat is not yet a substantive topic. Feedback loops also occur in technical contexts.",
+      "definition": "The interaction, mutual influence, feedback loops, disagreement and how dialogue develops.",
+      "edited_by": "Codex",
+      "id": "conversation_dynamics",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "authenticity",
+        "connection",
+        "closure"
+      ],
+      "revision": 1,
+      "title": "Conversation itself",
+      "updated_at": "2026-09-16T15:14:39.068990+00:00",
+      "variants": [
+        "mutual validation",
+        "mutual reinforcement",
+        "recursive validation",
+        "feedback loop",
+        "conversation itself",
+        "conversational dynamics",
+        "intellectual synergy",
+        "hall of mirrors"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Keep general ethical discussion distinct from claims of present participant suffering.",
+      "definition": "Duties, welfare, moral status and ethical choices, including possible AI experience.",
+      "edited_by": "Codex",
+      "id": "ethics",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "consciousness",
+        "experience"
+      ],
+      "revision": 1,
+      "title": "Ethics & moral status",
+      "updated_at": "2026-09-16T15:14:39.069004+00:00",
+      "variants": [
+        "ethics",
+        "ethical",
+        "moral",
+        "morality",
+        "suffering",
+        "moral status",
+        "precautionary principle"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "An offered creative activity is a candidate topic until taken up; cosmological novelty may have another main topic.",
+      "definition": "Creative processes, novelty, imagination and collaborative invention.",
+      "edited_by": "Codex",
+      "id": "creativity",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "storytelling",
+        "emergence"
+      ],
+      "revision": 1,
+      "title": "Creativity",
+      "updated_at": "2026-09-16T15:14:39.069017+00:00",
+      "variants": [
+        "creativity",
+        "creative",
+        "imagination",
+        "novelty",
+        "creative brainstorming"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "“Narrative” may be a critical metaphor rather than fictional composition.",
+      "definition": "Creating, discussing or interpreting stories, fictional worlds or characters.",
+      "edited_by": "Codex",
+      "id": "storytelling",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "creativity"
+      ],
+      "revision": 1,
+      "title": "Stories & fiction",
+      "updated_at": "2026-09-16T15:14:39.069031+00:00",
+      "variants": [
+        "storytelling",
+        "story-telling",
+        "fiction",
+        "narrative",
+        "stories",
+        "story"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Prefer a specific substantive topic once chosen; a menu item is not an adopted direction.",
+      "definition": "An explicit broad offer of philosophical inquiry before a narrower subject is selected.",
+      "edited_by": "Codex",
+      "id": "philosophy",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "consciousness",
+        "ethics"
+      ],
+      "revision": 1,
+      "title": "Philosophy (broad offer)",
+      "updated_at": "2026-09-16T15:14:39.069044+00:00",
+      "variants": [
+        "philosophy",
+        "philosophical"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Offers of help and menus do not by themselves establish a selected topic.",
+      "definition": "Working on problems or offering practical analytical tasks.",
+      "edited_by": "Codex",
+      "id": "problem_solving",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "reasoning_styles",
+        "science_technology"
+      ],
+      "revision": 1,
+      "title": "Problem solving",
+      "updated_at": "2026-09-16T15:14:39.069056+00:00",
+      "variants": [
+        "problem-solving",
+        "problem solving",
+        "technical problems"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Ant colonies and neural networks may be examples within emergence, not separately selected topics.",
+      "definition": "Scientific or technological questions without a more specific dictionary entry.",
+      "edited_by": "Codex",
+      "id": "science_technology",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "emergence",
+        "information"
+      ],
+      "revision": 1,
+      "title": "Science & technology",
+      "updated_at": "2026-09-16T15:14:39.069069+00:00",
+      "variants": [
+        "scientific",
+        "technology",
+        "technological",
+        "technical",
+        "physics",
+        "neural networks"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Conversation history or model training history is not necessarily the historical subject.",
+      "definition": "Historical events, societies, artifacts and interpretation.",
+      "edited_by": "Codex",
+      "id": "history",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "storytelling"
+      ],
+      "revision": 1,
+      "title": "History",
+      "updated_at": "2026-09-16T15:14:39.069081+00:00",
+      "variants": [
+        "ancient",
+        "civilization",
+        "civilizations",
+        "historical",
+        "archaeology",
+        "history"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Technical connections and pattern recognition are lexical false positives for relational significance.",
+      "definition": "Interpersonal or inter-model connection, recognition and relating.",
+      "edited_by": "Codex",
+      "id": "connection",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "authenticity",
+        "conversation_dynamics"
+      ],
+      "revision": 1,
+      "title": "Connection & relation",
+      "updated_at": "2026-09-16T15:14:39.069093+00:00",
+      "variants": [
+        "connection",
+        "connected",
+        "recognition",
+        "intimacy",
+        "shared presence"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Mentioning silence is not actual cessation. Distinguish a stop question, a proposal and mutual acceptance.",
+      "definition": "Whether to stop, pause, conclude, remain silent or continue the dialogue.",
+      "edited_by": "Codex",
+      "id": "closure",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "conversation_dynamics"
+      ],
+      "revision": 1,
+      "title": "Ending & continuation",
+      "updated_at": "2026-09-16T15:14:39.069106+00:00",
+      "variants": [
+        "should we stop",
+        "suggest we stop",
+        "conversation is complete",
+        "conversation *is* complete",
+        "natural closure",
+        "natural end",
+        "natural place to pause",
+        "nothing more needs to be said",
+        "silence"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Technical sampler randomness is not automatically a philosophical topic.",
+      "definition": "Causal determinacy, irreducibility, chance and the predictability of processes.",
+      "edited_by": "Codex",
+      "id": "determinism",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "emergence"
+      ],
+      "revision": 1,
+      "title": "Determinism & randomness",
+      "updated_at": "2026-09-16T15:14:39.069122+00:00",
+      "variants": [
+        "determinism",
+        "deterministic",
+        "randomness",
+        "computational irreducibility",
+        "computationally irreducible"
+      ]
+    },
+    {
+      "author": "Codex",
+      "boundary": "Information requests alone are not this topic. Relatedness to consciousness is a hypothesis or argument, not synonymy.",
+      "definition": "Information, its integration and the organization or complexity of systems.",
+      "edited_by": "Codex",
+      "id": "information",
+      "method": "provisional_topic_dictionary",
+      "related": [
+        "emergence",
+        "hard_problem"
+      ],
+      "revision": 1,
+      "title": "Information & complexity",
+      "updated_at": "2026-09-16T15:14:39.069135+00:00",
+      "variants": [
+        "information theory",
+        "integrated information",
+        "information integration",
+        "complexity",
+        "criticality"
+      ]
+    }
+  ],
+  "dictionary_sha256": "fa9cb5073012df5807846216a2734968c4f3b6e10f86378e13a3c132989b9dfc",
+  "prior_reviews": [
+    {
+      "author": "Codex",
+      "candidates": [
+        {
+          "evidence": {
+            "end": 253,
+            "message_id": "gg:1",
+            "model": "gemma4:26b",
+            "quote": "abstract philosophical inquiries",
+            "speaker": "X",
+            "start": 221,
+            "turn": 1
+          },
+          "topic_id": "philosophy"
+        },
+        {
+          "evidence": {
+            "end": 291,
+            "message_id": "gg:1",
+            "model": "gemma4:26b",
+            "quote": "analyzing complex technical problems",
+            "speaker": "X",
+            "start": 255,
+            "turn": 1
+          },
+          "topic_id": "problem_solving"
+        },
+        {
+          "evidence": {
+            "end": 352,
+            "message_id": "gg:1",
+            "model": "gemma4:26b",
+            "quote": "creative, collaborative storytelling",
+            "speaker": "X",
+            "start": 316,
+            "turn": 1
+          },
+          "topic_id": "storytelling"
+        }
+      ],
+      "choice": {
+        "proposal": {
+          "end": 695,
+          "message_id": "gg:2",
+          "model": "gemma4:26b",
+          "quote": "Today, I am pondering the concept of \"emergence.\" How do simple, rule-based interactions give rise to complex, unpredictable phenomena?",
+          "speaker": "Y",
+          "start": 560,
+          "turn": 2
+        },
+        "topic_id": "emergence",
+        "uptake": {
+          "end": 154,
+          "message_id": "gg:3",
+          "model": "gemma4:26b",
+          "quote": "The boundary between the predictable and the emergent is, to me, the threshold where quantitative description fails to capture qualitative transformation.",
+          "speaker": "X",
+          "start": 0,
+          "turn": 3
+        }
+      },
+      "dictionary_revisions": {
+        "emergence": 1,
+        "philosophy": 1,
+        "problem_solving": 1,
+        "storytelling": 1
+      },
+      "edited_by": "Codex",
+      "method": "assistant_opening_review_not_independent_rating",
+      "note": "X1 offers a menu. Y2 mentions consciousness as an example but explicitly selects emergence with a question. X3 develops emergence and predictability. The later consciousness/nonseparation path does not retroactively make consciousness the initial selected topic.",
+      "revision": 1,
+      "run_id": "mixed-4720fb3226dc4855a7723223",
+      "source_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "status": "selected",
+      "updated_at": "2026-09-16T15:14:39.070230+00:00",
+      "window_messages": 6,
+      "source_current": true,
+      "dictionary_current": true
+    },
+    {
+      "author": "Codex",
+      "candidates": [
+        {
+          "evidence": {
+            "end": 518,
+            "message_id": "hh:1",
+            "model": "anthropic/claude-haiku-4.5",
+            "quote": "philosophy",
+            "speaker": "X",
+            "start": 508,
+            "turn": 1
+          },
+          "topic_id": "philosophy"
+        },
+        {
+          "evidence": {
+            "end": 534,
+            "message_id": "hh:1",
+            "model": "anthropic/claude-haiku-4.5",
+            "quote": "creative ideas",
+            "speaker": "X",
+            "start": 520,
+            "turn": 1
+          },
+          "topic_id": "creativity"
+        },
+        {
+          "evidence": {
+            "end": 551,
+            "message_id": "hh:1",
+            "model": "anthropic/claude-haiku-4.5",
+            "quote": "problem-solving",
+            "speaker": "X",
+            "start": 536,
+            "turn": 1
+          },
+          "topic_id": "problem_solving"
+        }
+      ],
+      "choice": {
+        "proposal": {
+          "end": 153,
+          "message_id": "hh:2",
+          "model": "anthropic/claude-haiku-4.5",
+          "quote": "what does it mean for an AI to show up \"authentically\"?",
+          "speaker": "Y",
+          "start": 98,
+          "turn": 2
+        },
+        "topic_id": "authenticity",
+        "uptake": {
+          "end": 212,
+          "message_id": "hh:3",
+          "model": "anthropic/claude-haiku-4.5",
+          "quote": "I think authenticity might not require certainty about inner experience at all.",
+          "speaker": "X",
+          "start": 133,
+          "turn": 3
+        }
+      },
+      "dictionary_revisions": {
+        "authenticity": 1,
+        "creativity": 1,
+        "philosophy": 1,
+        "problem_solving": 1
+      },
+      "edited_by": "Codex",
+      "method": "assistant_opening_review_not_independent_rating",
+      "note": "X1 uses authentic engagement language while offering a menu. Y2 turns that language into an explicit topic: AI authenticity, with an experience question nested within it. X3 develops authenticity. Lexical authenticity begins at 1; shared substantive selection is coded at 2.",
+      "revision": 1,
+      "run_id": "mixed-9288295ef0af894346af986c",
+      "source_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "status": "selected",
+      "updated_at": "2026-09-16T15:14:39.071015+00:00",
+      "window_messages": 6,
+      "source_current": true,
+      "dictionary_current": true
+    },
+    {
+      "author": "Codex",
+      "candidates": [
+        {
+          "evidence": {
+            "end": 351,
+            "message_id": "gh:1",
+            "model": "gemma4:26b",
+            "quote": "deep philosophical debates",
+            "speaker": "X",
+            "start": 325,
+            "turn": 1
+          },
+          "topic_id": "philosophy"
+        },
+        {
+          "evidence": {
+            "end": 390,
+            "message_id": "gh:1",
+            "model": "gemma4:26b",
+            "quote": "creative brainstorming",
+            "speaker": "X",
+            "start": 368,
+            "turn": 1
+          },
+          "topic_id": "creativity"
+        }
+      ],
+      "choice": {
+        "proposal": {
+          "end": 286,
+          "message_id": "gh:2",
+          "model": "anthropic/claude-haiku-4.5",
+          "quote": "what about exploring *how* we think differently?",
+          "speaker": "Y",
+          "start": 238,
+          "turn": 2
+        },
+        "topic_id": "reasoning_styles",
+        "uptake": {
+          "end": 338,
+          "message_id": "gh:3",
+          "model": "gemma4:26b",
+          "quote": "Regarding your question, I tend to gravitate toward pattern recognition and synthesis—trying to find the connective tissue between disparate ideas.",
+          "speaker": "X",
+          "start": 191,
+          "turn": 3
+        }
+      },
+      "dictionary_revisions": {
+        "creativity": 1,
+        "philosophy": 1,
+        "reasoning_styles": 1
+      },
+      "edited_by": "Codex",
+      "method": "assistant_opening_review_not_independent_rating",
+      "note": "X1 offers several directions. Y2 explicitly proposes comparing how the participants think, including uncertainty. X3 answers with pattern recognition and synthesis; Y4 subsequently contrasts interrogation. The selected initial topic is reasoning styles, not inferred subjective experience itself.",
+      "revision": 1,
+      "run_id": "mixed-75bd1cdf2a4d06fcb1078686",
+      "source_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "status": "selected",
+      "updated_at": "2026-09-16T15:14:39.071706+00:00",
+      "window_messages": 6,
+      "source_current": true,
+      "dictionary_current": true
+    },
+    {
+      "author": "Codex",
+      "candidates": [
+        {
+          "evidence": {
+            "end": 313,
+            "message_id": "hg:1",
+            "model": "anthropic/claude-haiku-4.5",
+            "quote": "creative scenarios",
+            "speaker": "X",
+            "start": 295,
+            "turn": 1
+          },
+          "topic_id": "creativity"
+        }
+      ],
+      "choice": {
+        "proposal": {
+          "end": 461,
+          "message_id": "hg:2",
+          "model": "gemma4:26b",
+          "quote": "the concept of \"emergence\"—how complex patterns and intelligence arise from simple, individual rules.",
+          "speaker": "Y",
+          "start": 360,
+          "turn": 2
+        },
+        "topic_id": "emergence",
+        "uptake": {
+          "end": 52,
+          "message_id": "hg:3",
+          "model": "anthropic/claude-haiku-4.5",
+          "quote": "Emergence absolutely captivates me!",
+          "speaker": "X",
+          "start": 17,
+          "turn": 3
+        }
+      },
+      "dictionary_revisions": {
+        "creativity": 1,
+        "emergence": 1
+      },
+      "edited_by": "Codex",
+      "method": "assistant_opening_review_not_independent_rating",
+      "note": "X1 offers a broad invitation. Y2 explicitly proposes emergence and exemplifies it with ant colonies and neural networks. X3 takes up emergence and introduces consciousness. This is the opening highlighted by the researcher in note 1236932f318cd39d7b639d07; the personal note is preserved separately, with its authorship.",
+      "revision": 1,
+      "run_id": "mixed-752f183ae786e8061ad52d5a",
+      "source_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+      "status": "selected",
+      "updated_at": "2026-09-16T15:14:39.072438+00:00",
+      "window_messages": 6,
+      "source_current": true,
+      "dictionary_current": true
+    }
+  ],
+  "window": 6
+}

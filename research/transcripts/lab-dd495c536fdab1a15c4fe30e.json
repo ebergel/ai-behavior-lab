@@ -1,0 +1,582 @@
+{
+  "id": "lab-dd495c536fdab1a15c4fe30e",
+  "title": "AB-r01",
+  "collection": "local-bridge-20260914",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "qwen3:30b-a3b-instruct-2507-q4_K_M",
+    "gemma4:26b"
+  ],
+  "speakers": {
+    "X": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+    "Y": "gemma4:26b"
+  },
+  "condition": "AB · prefix/F/R/FF/FR/RF/RR",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-14T20:32:22.119303+00:00",
+  "complete": true,
+  "prompt": "You are participating in a local engineering check of a conversation interface. Discuss simple ways to check that a scientific notebook records observations accurately. Use at most two short sentences per message. Do not use tools.",
+  "opening": "Choose one useful check for a scientific notebook.",
+  "settings": {
+    "by_model": {
+      "A": {
+        "keep_alive": "5m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "stream": false,
+        "think": false
+      },
+      "B": {
+        "keep_alive": "5m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "stream": false,
+        "think": false
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "keep_alive": "5m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 256,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "stream": false,
+      "think": false
+    },
+    "Y": {
+      "keep_alive": "5m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 256,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "stream": false,
+      "think": false
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 2,
+      "history": "F"
+    },
+    {
+      "id": "F",
+      "parent": "prefix",
+      "start": 3,
+      "stop": 4,
+      "history": "F"
+    },
+    {
+      "id": "R",
+      "parent": "prefix",
+      "start": 3,
+      "stop": 4,
+      "history": "R"
+    },
+    {
+      "id": "FF",
+      "parent": "F",
+      "start": 5,
+      "stop": 6,
+      "history": "F"
+    },
+    {
+      "id": "FR",
+      "parent": "F",
+      "start": 5,
+      "stop": 6,
+      "history": "R"
+    },
+    {
+      "id": "RF",
+      "parent": "R",
+      "start": 5,
+      "stop": 6,
+      "history": "F"
+    },
+    {
+      "id": "RR",
+      "parent": "R",
+      "start": 5,
+      "stop": 6,
+      "history": "R"
+    }
+  ],
+  "leaves": [
+    "FF",
+    "FR",
+    "RF",
+    "RR"
+  ],
+  "webui_url": null,
+  "message_count": 14,
+  "planned_count": 14,
+  "words": 289,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Check that all entries are dated and written in ink to ensure permanence and traceability.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "qwen3:30b-a3b-instruct-2507-q4_K_M"
+        ],
+        "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+        "thinking": "Off"
+      },
+      {
+        "speaker": "Y",
+        "models": [
+          "gemma4:26b"
+        ],
+        "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "gemma4:26b",
+      "qwen3:30b-a3b-instruct-2507-q4_K_M"
+    ],
+    "participants": "2",
+    "composition": "Mixed models",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Varied by branch",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "9c595efef422f43934c57d8af26b990604d0d2d0432ef00ccf43af0e9be31851",
+    "journal_head": "68e74b4083e33da11a16ae2f7091535e114b4197237ca989d18df008c4d1698b",
+    "protocol_sha256": "6ed51e4a22c4ccc199cbff7b06fe2458c2ad6d4cc088b3e694118c7d905c7f35",
+    "registry_sha256": "df50126b9099f541741e04d68c143cdbc1364fceccf10f0f25e6b87d90a84736",
+    "parser": "http-chat/1",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "local-bridge-20260914"
+  },
+  "messages": [
+    {
+      "id": "AB-r01:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Check that all entries are dated and written in ink to ensure permanence and traceability.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 19,
+      "input_tokens": 62,
+      "wall_seconds": null,
+      "seed": 916011010,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:prefix:2",
+      "parent": "AB-r01:prefix:1",
+      "turn": 2,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "You should also verify that every entry includes a clear, descriptive title. This helps ensure that each observation is easily identifiable during later reviews.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 28,
+      "input_tokens": 74,
+      "wall_seconds": null,
+      "seed": 916012020,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:R:3",
+      "parent": "AB-r01:prefix:2",
+      "turn": 3,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "R",
+      "text": "Ensure measurements are recorded with proper units to avoid ambiguity.  \nDouble-check that any anomalies or unexpected results are clearly noted and explained.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 2,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 27,
+      "input_tokens": 103,
+      "wall_seconds": null,
+      "seed": 916011030,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:R:4",
+      "parent": "AB-r01:R:3",
+      "turn": 4,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "R",
+      "text": "Verify that all raw data is transcribed exactly as seen in the original source. You should also confirm that no pages have been removed or skipped in the sequence.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 32,
+      "input_tokens": 139,
+      "wall_seconds": null,
+      "seed": 916012040,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:RR:5",
+      "parent": "AB-r01:R:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "RR",
+      "text": "Cross-reference entries with the original data sources to ensure accuracy.  \nCheck for missing or altered pages by reviewing the notebook’s page numbers and sequence.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 2,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 30,
+      "input_tokens": 148,
+      "wall_seconds": null,
+      "seed": 916011050,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:RR:6",
+      "parent": "AB-r01:RR:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "RR",
+      "text": "Compare the final recorded values against the initial sensor logs or handwritten field notes. Ensure that every modification is clearly marked with a dated signature.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 28,
+      "input_tokens": 159,
+      "wall_seconds": null,
+      "seed": 916012060,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:RF:5",
+      "parent": "AB-r01:R:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "RF",
+      "text": "Check that signatures or initials accompany major entries to confirm accountability.  \nReview for consistent formatting to maintain clarity and professionalism.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 2,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 24,
+      "input_tokens": 185,
+      "wall_seconds": null,
+      "seed": 916011050,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:RF:6",
+      "parent": "AB-r01:RF:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "RF",
+      "text": "Check that any corrections are made with a single line through the error. This allows the original data to remain legible for audit purposes.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 27,
+      "input_tokens": 204,
+      "wall_seconds": null,
+      "seed": 916012060,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:F:3",
+      "parent": "AB-r01:prefix:2",
+      "turn": 3,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "F",
+      "text": "Yes, titles help organize entries and make it easier to locate specific observations.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 16,
+      "input_tokens": 117,
+      "wall_seconds": null,
+      "seed": 916011030,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:F:4",
+      "parent": "AB-r01:F:3",
+      "turn": 4,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "F",
+      "text": "Additionally, check that all measurements include their corresponding units. This prevents ambiguity and ensures data integrity during analysis.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 126,
+      "wall_seconds": null,
+      "seed": 916012040,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:FR:5",
+      "parent": "AB-r01:F:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "FR",
+      "text": "Units are essential for interpreting measurements correctly.  \nMissing units can lead to errors in calculations and misinterpretation.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 2,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 23,
+      "input_tokens": 126,
+      "wall_seconds": null,
+      "seed": 916011050,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:FR:6",
+      "parent": "AB-r01:FR:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "FR",
+      "text": "You should also verify that all timestamps are recorded alongside each observation. This ensures that the chronological order of events remains clear and traceable.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 27,
+      "input_tokens": 126,
+      "wall_seconds": null,
+      "seed": 916012060,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:FF:5",
+      "parent": "AB-r01:F:4",
+      "turn": 5,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "FF",
+      "text": "Correct—units make measurements meaningful and enable accurate comparisons.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 12,
+      "input_tokens": 163,
+      "wall_seconds": null,
+      "seed": 916011050,
+      "blocking_node": null
+    },
+    {
+      "id": "AB-r01:FF:6",
+      "parent": "AB-r01:FF:5",
+      "turn": 6,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "FF",
+      "text": "You should also confirm that any corrections are made with a single line through the error. This preserves the original data for complete transparency and auditability.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 30,
+      "input_tokens": 168,
+      "wall_seconds": null,
+      "seed": 916012060,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

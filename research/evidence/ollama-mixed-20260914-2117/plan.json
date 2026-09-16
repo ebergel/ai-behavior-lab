@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-15T00:28:49.347744+00:00",
+  "scope": "Local engineering qualification, not behavioral or phenotype findings.",
+  "call_limit": 52,
+  "generation_protocols": {
+    "ollama-mixed-long.engineering.json": {
+      "sha256": "8f7bec2554fd797333e261a8eac73b7748bff2c8f0093a7ace37bf2169845339",
+      "planned_calls": 50
+    },
+    "ollama-context-smoke.engineering.json": {
+      "sha256": "948952875a3464ab13bef0e6015a62cdcaea3f0a483515dc5be9e2a6cc3ebd40",
+      "planned_calls": 2
+    }
+  },
+  "other_checks": "Render/tokenize only: Unicode/empty input, synthetic 51-message history, and oversize rejection for both recipients. No generation for these.",
+  "history": "One AB RF trajectory: 30 full + 10 recent-three + 10 restored actual history.",
+  "recovery": "Save response 25, stop before commit, resume in a fresh process for 25 new calls.",
+  "sampling": "Proposed common settings, thinking off; 512 output tokens. 15-minute residency is an operational setting.",
+  "no_automatic_retry": true,
+  "cache_policy": "Ollama native cache_prompt=true; record cached tokens. No cache-equivalence claim.",
+  "scope_limits": [
+    "Rendered/tokenized preflight and actual generation token counts, not raw generation input-token captures or final sampler telemetry.",
+    "One directed AB trajectory does not qualify all factorial cells or the task-free scientific prompt."
+  ]
+}

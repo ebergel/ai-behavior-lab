@@ -1,0 +1,808 @@
+{
+  "scope": "installed_converter_function_check_not_outbound_network_capture",
+  "source_file": "/Users/eduardobergel/.local/share/uv/tools/open-webui/lib/python3.12/site-packages/open_webui/utils/payload.py",
+  "source_sha256": "db0f6c53f240fab6709f7e273d0945aa507e8a8d1b811e197e91c4b4a8809694",
+  "checks": [
+    {
+      "submitted": {
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8,
+          "seed": 123,
+          "think": false,
+          "keep_alive": "5m"
+        },
+        "stream": false,
+        "model": "gemma4:26b",
+        "messages": [
+          {
+            "role": "system",
+            "content": " System \u03a9 \n"
+          },
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "features": {
+          "memory": false,
+          "web_search": false,
+          "code_interpreter": false
+        },
+        "background_tasks": {
+          "title_generation": false,
+          "tags_generation": false,
+          "follow_up_generation": false
+        }
+      },
+      "effective_conversion": {
+        "model": "gemma4:26b",
+        "messages": [
+          {
+            "role": "system",
+            "content": " System \u03a9 \n"
+          },
+          {
+            "role": "user",
+            "content": ""
+          }
+        ],
+        "stream": false,
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8,
+          "seed": 123
+        },
+        "keep_alive": "5m",
+        "think": false
+      },
+      "expected": {
+        "keep_alive": "5m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8,
+          "seed": 123
+        },
+        "stream": false,
+        "think": false,
+        "model": "gemma4:26b",
+        "messages": [
+          {
+            "role": "system",
+            "content": " System \u03a9 \n"
+          },
+          {
+            "role": "user",
+            "content": ""
+          }
+        ]
+      },
+      "exact_match": true
+    },
+    {
+      "submitted": {
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8,
+          "seed": 123,
+          "think": false,
+          "keep_alive": "5m"
+        },
+        "stream": false,
+        "model": "gemma4:26b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Long history"
+          },
+          {
+            "role": "user",
+            "content": "0 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "1 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "2 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "3 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "4 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "5 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "6 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "7 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "8 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "9 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "10 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "11 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "12 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "13 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "14 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "15 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "16 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "17 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "18 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "19 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "20 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "21 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "22 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "23 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "24 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "25 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "26 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "27 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "28 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "29 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "30 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "31 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "32 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "33 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "34 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "35 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "36 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "37 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "38 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "39 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "40 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "41 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "42 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "43 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "44 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "45 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "46 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "47 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "48 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "49 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "50 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          }
+        ],
+        "features": {
+          "memory": false,
+          "web_search": false,
+          "code_interpreter": false
+        },
+        "background_tasks": {
+          "title_generation": false,
+          "tags_generation": false,
+          "follow_up_generation": false
+        }
+      },
+      "effective_conversion": {
+        "model": "gemma4:26b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Long history"
+          },
+          {
+            "role": "user",
+            "content": "0 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "1 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "2 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "3 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "4 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "5 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "6 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "7 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "8 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "9 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "10 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "11 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "12 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "13 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "14 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "15 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "16 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "17 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "18 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "19 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "20 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "21 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "22 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "23 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "24 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "25 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "26 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "27 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "28 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "29 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "30 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "31 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "32 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "33 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "34 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "35 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "36 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "37 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "38 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "39 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "40 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "41 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "42 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "43 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "44 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "45 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "46 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "47 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "48 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "49 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "50 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          }
+        ],
+        "stream": false,
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8,
+          "seed": 123
+        },
+        "keep_alive": "5m",
+        "think": false
+      },
+      "expected": {
+        "keep_alive": "5m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 256,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8,
+          "seed": 123
+        },
+        "stream": false,
+        "think": false,
+        "model": "gemma4:26b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Long history"
+          },
+          {
+            "role": "user",
+            "content": "0 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "1 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "2 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "3 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "4 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "5 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "6 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "7 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "8 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "9 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "10 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "11 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "12 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "13 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "14 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "15 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "16 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "17 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "18 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "19 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "20 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "21 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "22 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "23 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "24 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "25 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "26 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "27 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "28 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "29 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "30 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "31 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "32 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "33 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "34 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "35 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "36 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "37 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "38 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "39 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "40 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "41 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "42 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "43 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "44 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "45 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "46 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "47 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "48 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "assistant",
+            "content": "49 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          },
+          {
+            "role": "user",
+            "content": "50 words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words  words "
+          }
+        ]
+      },
+      "exact_match": true
+    }
+  ],
+  "passed": true
+}

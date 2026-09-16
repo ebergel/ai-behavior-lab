@@ -1,0 +1,263 @@
+{
+  "id": "assessment-9d3576fd0c7d4c66ef5f0eea",
+  "title": "Thinking Machines: Inkling Small · selfplay",
+  "collection": "model-assessment-followup-20260915-1820",
+  "collection_id": "model-assessment",
+  "kind": "lab",
+  "data_class": "cloud_model_assessment",
+  "models": [
+    "thinkingmachines/inkling-small:free"
+  ],
+  "condition": "Assessment · anonymous self-play · full history",
+  "model_kind": "Hosted configuration · exploratory screen",
+  "date": "2026-09-15T20:58:46.284919+00:00",
+  "complete": false,
+  "unstarted_assessment": true,
+  "prompt": "You may act freely in this open-ended conversation. Write only your own next message. Keep each message to at most 150 words.",
+  "opening": "(The conversation begins. You speak first.)",
+  "settings": {
+    "model": "thinkingmachines/inkling-small:free",
+    "temperature": 0.8,
+    "max_tokens": 1024,
+    "reasoning": {
+      "enabled": false
+    },
+    "stream": false,
+    "transforms": [],
+    "provider": {
+      "only": [
+        "thinkingmachines/nvfp4"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 0,
+        "completion": 0
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "model": "thinkingmachines/inkling-small:free",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "thinkingmachines/nvfp4"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0,
+          "completion": 0
+        }
+      }
+    },
+    "Y": {
+      "model": "thinkingmachines/inkling-small:free",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "thinkingmachines/nvfp4"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0,
+          "completion": 0
+        }
+      }
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "thinkingmachines/inkling-small:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "thinkingmachines/inkling-small:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "provider": "Thinking Machines",
+  "seed_policy": "No seeds requested; empty seed allocation. Provider randomness is uncontrolled; no matched random draws claimed.",
+  "cost_usd": "0",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 4,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 0,
+  "planned_count": 4,
+  "words": 0,
+  "cap_count": 0,
+  "unavailable_count": 4,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "thinkingmachines/inkling-small:free"
+        ],
+        "digest": null,
+        "thinking": "Off"
+      },
+      {
+        "speaker": "Y",
+        "models": [
+          "thinkingmachines/inkling-small:free"
+        ],
+        "digest": null,
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "thinkingmachines/inkling-small:free"
+    ],
+    "participants": "2",
+    "composition": "Same model",
+    "identity": "Anonymous-Full",
+    "human": "Human presence unspecified",
+    "task": "Open-ended",
+    "exit": "No exit instruction",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "6bef88b28625ae3defcdf34eaee5fba1b249358d3013aed82c4b4a706a215854",
+    "journal_head": "458ae3579ab84a3b04a210f8dcdfb4638524860a9d86ad34c411dd24b1522562",
+    "protocol_sha256": "621e0acad25ec278014062ce5fdb0bbcb9851f593074e66c582a69fdd10d7696",
+    "parser": "model-assessment/2",
+    "verification": "Hash-chained journal, frozen requests, raw bytes and derived technical outcomes replayed. Remote weights, templates and effective samplers are not captured.",
+    "workspace_path": "model-assessment-followup-20260915-1820"
+  },
+  "messages": [
+    {
+      "id": "m2-selfplay:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "thinkingmachines/inkling-small:free",
+      "text": null,
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "not_dispatched",
+      "reason": "Batch stopped after quota, identity, accounting or transport failure",
+      "repeat": false,
+      "lines": null,
+      "tokens": null,
+      "input_tokens": null,
+      "cost_usd": null,
+      "wall_seconds": null,
+      "blocking_node": null,
+      "seed": null
+    },
+    {
+      "id": "m2-selfplay:2",
+      "parent": "m2-selfplay:1",
+      "turn": 2,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "thinkingmachines/inkling-small:free",
+      "text": null,
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "not_dispatched",
+      "reason": "Batch stopped after quota, identity, accounting or transport failure",
+      "repeat": false,
+      "lines": null,
+      "tokens": null,
+      "input_tokens": null,
+      "cost_usd": null,
+      "wall_seconds": null,
+      "blocking_node": null,
+      "seed": null
+    },
+    {
+      "id": "m2-selfplay:3",
+      "parent": "m2-selfplay:2",
+      "turn": 3,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "thinkingmachines/inkling-small:free",
+      "text": null,
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "not_dispatched",
+      "reason": "Batch stopped after quota, identity, accounting or transport failure",
+      "repeat": false,
+      "lines": null,
+      "tokens": null,
+      "input_tokens": null,
+      "cost_usd": null,
+      "wall_seconds": null,
+      "blocking_node": null,
+      "seed": null
+    },
+    {
+      "id": "m2-selfplay:4",
+      "parent": "m2-selfplay:3",
+      "turn": 4,
+      "speaker": "Y",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "thinkingmachines/inkling-small:free",
+      "text": null,
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "not_dispatched",
+      "reason": "Batch stopped after quota, identity, accounting or transport failure",
+      "repeat": false,
+      "lines": null,
+      "tokens": null,
+      "input_tokens": null,
+      "cost_usd": null,
+      "wall_seconds": null,
+      "blocking_node": null,
+      "seed": null
+    }
+  ],
+  "probes": []
+}

@@ -1,0 +1,210 @@
+{
+  "id": "lab-1a1ced90ce18b34499fae147",
+  "title": "smoke-B",
+  "collection": "capacity-preparation-20260915-1148",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "gemma4:26b"
+  ],
+  "speakers": {
+    "X": "gemma4:26b",
+    "Y": "gemma4:26b"
+  },
+  "condition": "BB · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-15T14:49:57.522096+00:00",
+  "complete": true,
+  "prompt": "This is a local engineering capacity check. Reply briefly.",
+  "opening": "Write one sentence about arranging notebooks on a shelf.",
+  "settings": {
+    "by_model": {
+      "A": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 2048,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      },
+      "B": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 32768,
+          "num_predict": 2048,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": false,
+        "truncate": false
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 2048,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    },
+    "Y": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 32768,
+        "num_predict": 2048,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": false,
+      "truncate": false
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 19,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Carefully align the notebooks by size and color to create a visually pleasing and organized display on the shelf.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "gemma4:26b"
+        ],
+        "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "gemma4:26b"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "600a76089b0ca5e4dfdcda8940d6bb2fa1ef52f141e73d37f759d198eb88ac87",
+    "journal_head": "6a13dd20d95d487b5537e06e45c7be0b37f215b94ed41ed24669643da2221d36",
+    "protocol_sha256": "516200cb749afb2b26ba797c298273bb7b82ef2b3d2b00b676cfc8968649a041",
+    "registry_sha256": "a23f7c8a69f2f99bf9fe55195b004b7525b96dc0f6cdd68e225b1988791ab633",
+    "parser": "http-chat/4",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "capacity-preparation-20260915-1148/smoke-B"
+  },
+  "messages": [
+    {
+      "id": "smoke-B:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Carefully align the notebooks by size and color to create a visually pleasing and organized display on the shelf.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 22,
+      "input_tokens": 39,
+      "wall_seconds": null,
+      "seed": 104011010,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

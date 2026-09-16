@@ -1,0 +1,16 @@
+[
+  {
+    "model": "A",
+    "earlier_text": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+    "observed_text": "stop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8\nrepeat_penalty                 1",
+    "equal_values": true,
+    "structured_sha256": "fd828a27358a18f511ca3bc86e153d19734f362172aab884583a27f8dda22458"
+  },
+  {
+    "model": "B",
+    "earlier_text": "top_k                          64\ntop_p                          0.95\ntemperature                    1",
+    "observed_text": "temperature                    1\ntop_k                          64\ntop_p                          0.95",
+    "equal_values": true,
+    "structured_sha256": "d0703e436909bca527569e55b5c9a30e4639ae8ad2470a52bc782b48df4a4411"
+  }
+]

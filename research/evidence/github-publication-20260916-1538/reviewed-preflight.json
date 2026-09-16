@@ -1,0 +1,57 @@
+{
+  "scope": "all reachable Git blobs; heuristic patterns, not a guarantee of credential absence",
+  "reachable_blobs": 478,
+  "commits": 33,
+  "tracked_files": 284,
+  "tracked_workspace_files": [],
+  "possible_secret_hits": [
+    {
+      "rule": "embedded_url_password",
+      "path": "tests/test_live.py",
+      "blob": "93141d8a20ebdd8ca13491f2f93282be93709be0",
+      "review": "Endpoint-rejection fixture at example.com in tests/test_live.py; no production credential."
+    },
+    {
+      "rule": "embedded_url_password",
+      "path": "tests/test_live.py",
+      "blob": "78254e55e642efd1dc60a047895dab8a718565c4",
+      "review": "Endpoint-rejection fixture at example.com in tests/test_live.py; no production credential."
+    }
+  ],
+  "sensitive_filename_candidates": [],
+  "largest_blobs": [
+    [
+      221567,
+      "docs/evidence/mtplx-long-validation.json"
+    ],
+    [
+      220926,
+      "docs/evidence/mtplx-long-validation.json"
+    ],
+    [
+      218754,
+      "docs/figures/ollama-mixed-qualification.png"
+    ],
+    [
+      202428,
+      "docs/evidence/topic-atlas-tests.txt"
+    ],
+    [
+      201865,
+      "docs/evidence/topic-atlas-tests.txt"
+    ],
+    [
+      196645,
+      "docs/evidence/mtplx-long-trajectory.png"
+    ],
+    [
+      196037,
+      "docs/assets/prompt-qualification-lengths.png"
+    ],
+    [
+      194576,
+      "docs/evidence/external-intervention-reader.jpg"
+    ]
+  ],
+  "unresolved_hits": 0
+}

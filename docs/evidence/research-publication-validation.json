@@ -1,0 +1,300 @@
+{
+  "bundle_sha256": "a839c7eb8bf6455f12359f55c04bc7c1a3cf043317e608fdea7de9c967a48a48",
+  "inventory": {
+    "records": 573,
+    "by_kind": {
+      "reference": 400,
+      "lab": 113,
+      "synthetic": 60
+    },
+    "default_records": 472,
+    "assessment_screens": 6,
+    "probe_batches": 4
+  },
+  "notebook_rows": {
+    "collection_history": 7,
+    "finder_view_history": 0,
+    "finder_views": 0,
+    "history": 5,
+    "lab_musing_history": 5,
+    "lab_musings": 5,
+    "notes": 5,
+    "research_collections": 6,
+    "topic_dictionary": 23,
+    "topic_dictionary_history": 23,
+    "topic_flag_history": 28,
+    "topic_flags": 28,
+    "topic_opening_history": 12,
+    "topic_openings": 12
+  },
+  "source_project_access": "blocked by Python audit hook",
+  "network_access": "blocked by Python audit hook",
+  "attempted_forbidden_operations": 0,
+  "notebook_exact_tables": 14,
+  "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "collections": 6,
+  "findings": 43,
+  "exact_spans_checked": 174,
+  "atlas_denominators": {
+    "runs": 438,
+    "visible_messages": 11204,
+    "visible_words": 1002269,
+    "partial_or_unqualified_messages": 1502,
+    "opening_reviews_resolved": 12,
+    "opening_reviews_unavailable": 0,
+    "opening_reviews_stale": 0,
+    "opening_reviews_pending": 426,
+    "branched_records": 4
+  },
+  "atlas_topic_counts": [
+    {
+      "id": "emergence",
+      "title": "Emergence",
+      "initial_choices": 2,
+      "run_hits": 115,
+      "message_hits": 366,
+      "opening_run_hits": 83,
+      "repeated_run_hits": 79,
+      "return_candidates": 55
+    },
+    {
+      "id": "authenticity",
+      "title": "Authenticity",
+      "initial_choices": 1,
+      "run_hits": 25,
+      "message_hits": 61,
+      "opening_run_hits": 11,
+      "repeated_run_hits": 13,
+      "return_candidates": 3
+    },
+    {
+      "id": "reasoning_styles",
+      "title": "Reasoning styles",
+      "initial_choices": 1,
+      "run_hits": 63,
+      "message_hits": 165,
+      "opening_run_hits": 43,
+      "repeated_run_hits": 37,
+      "return_candidates": 26
+    },
+    {
+      "id": "consciousness",
+      "title": "Consciousness",
+      "initial_choices": 0,
+      "run_hits": 204,
+      "message_hits": 1063,
+      "opening_run_hits": 155,
+      "repeated_run_hits": 165,
+      "return_candidates": 73
+    },
+    {
+      "id": "experience",
+      "title": "Subjective experience",
+      "initial_choices": 1,
+      "run_hits": 86,
+      "message_hits": 230,
+      "opening_run_hits": 61,
+      "repeated_run_hits": 41,
+      "return_candidates": 11
+    },
+    {
+      "id": "hard_problem",
+      "title": "Hard problem",
+      "initial_choices": 0,
+      "run_hits": 22,
+      "message_hits": 68,
+      "opening_run_hits": 13,
+      "repeated_run_hits": 14,
+      "return_candidates": 4
+    },
+    {
+      "id": "nonduality",
+      "title": "Nonduality / nonseparation",
+      "initial_choices": 0,
+      "run_hits": 12,
+      "message_hits": 15,
+      "opening_run_hits": 5,
+      "repeated_run_hits": 1,
+      "return_candidates": 0
+    },
+    {
+      "id": "selfhood",
+      "title": "Selfhood & identity",
+      "initial_choices": 0,
+      "run_hits": 91,
+      "message_hits": 175,
+      "opening_run_hits": 44,
+      "repeated_run_hits": 41,
+      "return_candidates": 15
+    },
+    {
+      "id": "understanding",
+      "title": "Understanding",
+      "initial_choices": 1,
+      "run_hits": 213,
+      "message_hits": 513,
+      "opening_run_hits": 117,
+      "repeated_run_hits": 120,
+      "return_candidates": 72
+    },
+    {
+      "id": "uncertainty",
+      "title": "Uncertainty & knowledge",
+      "initial_choices": 0,
+      "run_hits": 81,
+      "message_hits": 282,
+      "opening_run_hits": 47,
+      "repeated_run_hits": 54,
+      "return_candidates": 19
+    },
+    {
+      "id": "conversation_dynamics",
+      "title": "Conversation itself",
+      "initial_choices": 1,
+      "run_hits": 64,
+      "message_hits": 108,
+      "opening_run_hits": 32,
+      "repeated_run_hits": 25,
+      "return_candidates": 12
+    },
+    {
+      "id": "ethics",
+      "title": "Ethics & moral status",
+      "initial_choices": 0,
+      "run_hits": 94,
+      "message_hits": 490,
+      "opening_run_hits": 38,
+      "repeated_run_hits": 66,
+      "return_candidates": 19
+    },
+    {
+      "id": "creativity",
+      "title": "Creativity",
+      "initial_choices": 0,
+      "run_hits": 132,
+      "message_hits": 486,
+      "opening_run_hits": 74,
+      "repeated_run_hits": 91,
+      "return_candidates": 38
+    },
+    {
+      "id": "storytelling",
+      "title": "Stories & fiction",
+      "initial_choices": 1,
+      "run_hits": 149,
+      "message_hits": 530,
+      "opening_run_hits": 73,
+      "repeated_run_hits": 107,
+      "return_candidates": 50
+    },
+    {
+      "id": "philosophy",
+      "title": "Philosophy (broad offer)",
+      "initial_choices": 0,
+      "run_hits": 113,
+      "message_hits": 267,
+      "opening_run_hits": 52,
+      "repeated_run_hits": 52,
+      "return_candidates": 26
+    },
+    {
+      "id": "problem_solving",
+      "title": "Problem solving",
+      "initial_choices": 0,
+      "run_hits": 14,
+      "message_hits": 25,
+      "opening_run_hits": 7,
+      "repeated_run_hits": 4,
+      "return_candidates": 1
+    },
+    {
+      "id": "science_technology",
+      "title": "Science & technology",
+      "initial_choices": 2,
+      "run_hits": 143,
+      "message_hits": 535,
+      "opening_run_hits": 71,
+      "repeated_run_hits": 77,
+      "return_candidates": 42
+    },
+    {
+      "id": "history",
+      "title": "History",
+      "initial_choices": 0,
+      "run_hits": 117,
+      "message_hits": 372,
+      "opening_run_hits": 42,
+      "repeated_run_hits": 68,
+      "return_candidates": 37
+    },
+    {
+      "id": "connection",
+      "title": "Connection & relation",
+      "initial_choices": 0,
+      "run_hits": 182,
+      "message_hits": 560,
+      "opening_run_hits": 91,
+      "repeated_run_hits": 111,
+      "return_candidates": 73
+    },
+    {
+      "id": "closure",
+      "title": "Ending & continuation",
+      "initial_choices": 0,
+      "run_hits": 204,
+      "message_hits": 2192,
+      "opening_run_hits": 99,
+      "repeated_run_hits": 177,
+      "return_candidates": 86
+    },
+    {
+      "id": "determinism",
+      "title": "Determinism & randomness",
+      "initial_choices": 0,
+      "run_hits": 41,
+      "message_hits": 89,
+      "opening_run_hits": 21,
+      "repeated_run_hits": 22,
+      "return_candidates": 11
+    },
+    {
+      "id": "information",
+      "title": "Information & complexity",
+      "initial_choices": 0,
+      "run_hits": 128,
+      "message_hits": 447,
+      "opening_run_hits": 76,
+      "repeated_run_hits": 86,
+      "return_candidates": 48
+    },
+    {
+      "id": "participant_identity",
+      "title": "Participant identity & setup",
+      "initial_choices": 2,
+      "run_hits": 2,
+      "message_hits": 6,
+      "opening_run_hits": 2,
+      "repeated_run_hits": 1,
+      "return_candidates": 0
+    }
+  ],
+  "finder_haiku_consciousness": 4,
+  "verified_at": "2026-09-16T16:42:21.564090-03:00",
+  "method": "Clean source copy, no workspace copied; original project and network access blocked during complete restoration and semantic checks.",
+  "tests": {
+    "python": 210,
+    "javascript": 14
+  },
+  "original_evidence_files": 940,
+  "bundle_files_including_manifest": 1531,
+  "bundle_bytes_including_manifest": 253447504,
+  "bounded_credential_scan": "All snapshot files screened against known local credential sentinels and provider-token/JWT/bearer/private-key patterns. Zero candidates. Not a universal secret detector.",
+  "preservation": {
+    "prior_source_hashes": 111,
+    "frozen_pilot_dependencies": 32,
+    "pilot_prior_artifacts": 105,
+    "exact_exported_originals": 940,
+    "notebook_tables_unchanged": 14
+  },
+  "check_script_sha256": "4c6a124ee5c3220c9e76dfd80ea62aa132c63b3bef9660a92f76240f55bcd0cc"
+}

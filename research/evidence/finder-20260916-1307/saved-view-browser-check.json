@@ -1,0 +1,18 @@
+{
+  "database": "isolated browser fixture",
+  "saved_view_revisions": 2,
+  "names": [
+    "Browser fixture \u00b7 Gemma and Haiku",
+    "Browser fixture \u00b7 Ordered Gemma\u2013Haiku pairs"
+  ],
+  "filters": {
+    "model_match": "all",
+    "models": [
+      "anthropic/claude-haiku-4.5",
+      "gemma4:26b"
+    ],
+    "property_match": "any",
+    "role": "participants",
+    "sort": "recent"
+  }
+}

@@ -4,6 +4,9 @@ cd -- "${0:A:h}" || exit 1
 if /usr/bin/curl --silent --fail --max-time 2 http://127.0.0.1:8765/api/bootstrap > /dev/null; then
   /usr/bin/open http://127.0.0.1:8765
 else
+  if [[ ! -e workspace && ! -L workspace && -f research/manifest.json ]]; then
+    python3 -m behaviorlab.research_bundle restore --bundle research --destination workspace || exit 1
+  fi
   (
     for attempt in {1..90}; do
       sleep 1

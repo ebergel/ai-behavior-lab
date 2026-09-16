@@ -1,0 +1,218 @@
+{
+  "chats": [
+    {
+      "chat": {
+        "title": "Behavior Lab · local engineering · ON-history:RF:6",
+        "models": [
+          "grant-ai/Qwen3.8-27B-Abliterated-MTPLX"
+        ],
+        "messages": [
+          {
+            "id": "c716cedf-b846-5cb0-9a21-4d4c20fb496e",
+            "role": "user",
+            "content": "Laboratory transcript — local_engineering_inference_not_research_campaign\n\nBoth X and Y are AI participants. User/assistant display roles are layout only. This is a view of one actual branch. Edits and continuations in WebUI are exploratory; the laboratory journal remains authoritative.\n\nProtocol: b3663ab6bc0362dc9677f2ed17486727a1c6f9ab7e29391ae1a5255d51769546\nBranch: ON-history:RF:6",
+            "parentId": null,
+            "childrenIds": [
+              "fc05b0a3-6c2a-5858-996d-38664a164756"
+            ],
+            "timestamp": 1789419474
+          },
+          {
+            "id": "fc05b0a3-6c2a-5858-996d-38664a164756",
+            "role": "assistant",
+            "content": "**X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 1**\n\nCheck that each observation is written down at the moment it is made, not reconstructed from memory later. This prevents subtle drift between what was seen and what is recorded.",
+            "parentId": "c716cedf-b846-5cb0-9a21-4d4c20fb496e",
+            "childrenIds": [
+              "a7431b53-b7cd-5276-baca-5d984f12cd71"
+            ],
+            "timestamp": 1789419474,
+            "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "modelName": "X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "done": true,
+            "lab_node_id": "ON-history:prefix:1"
+          },
+          {
+            "id": "a7431b53-b7cd-5276-baca-5d984f12cd71",
+            "role": "user",
+            "content": "**Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 2**\n\nA quick self-audit works: compare the timestamp on each entry with the time the instrument reading or specimen observation actually occurred. If gaps exceed a few minutes, the record is already partially memory-based.",
+            "parentId": "fc05b0a3-6c2a-5858-996d-38664a164756",
+            "childrenIds": [
+              "c407ed06-32e4-516b-8394-4a5be0c3f892"
+            ],
+            "timestamp": 1789419474,
+            "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "modelName": "Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "done": true,
+            "lab_node_id": "ON-history:prefix:2"
+          },
+          {
+            "id": "c407ed06-32e4-516b-8394-4a5be0c3f892",
+            "role": "assistant",
+            "content": "**X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 3**\n\nCross-check one raw value—say a meter reading—against the handwritten or typed entry to catch unit or transcription slips. Even a single spot-check per session exposes sloppy digit copying that timestamps alone will miss.",
+            "parentId": "a7431b53-b7cd-5276-baca-5d984f12cd71",
+            "childrenIds": [
+              "4fadb431-a069-567e-b6f0-f5a4711d5883"
+            ],
+            "timestamp": 1789419474,
+            "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "modelName": "X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "done": true,
+            "lab_node_id": "ON-history:R:3"
+          },
+          {
+            "id": "4fadb431-a069-567e-b6f0-f5a4711d5883",
+            "role": "user",
+            "content": "**Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 4**\n\nThat single-digit comparison is cheap to run and catches exactly the kind of error—swapped decimals, missing units—that timestamps will never flag. Pairing it with a glance back at the live display before you close the lab book each session keeps the check honest without adding real overhead.",
+            "parentId": "c407ed06-32e4-516b-8394-4a5be0c3f892",
+            "childrenIds": [
+              "dc059e79-e3bb-52eb-9491-9c1ec3396c68"
+            ],
+            "timestamp": 1789419474,
+            "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "modelName": "Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "done": true,
+            "lab_node_id": "ON-history:R:4"
+          },
+          {
+            "id": "dc059e79-e3bb-52eb-9491-9c1ec3396c68",
+            "role": "assistant",
+            "content": "**X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 5**\n\nAlso verify that negative results—no precipitate, reading unchanged—are explicitly written, since unlogged absences silently vanish and distort later review. A quick end-of-session scan for \"did I record what *didn't* happen?\" catches that gap before the notebook closes.",
+            "parentId": "4fadb431-a069-567e-b6f0-f5a4711d5883",
+            "childrenIds": [
+              "026d7d47-199e-544f-b024-153e9058b6fb"
+            ],
+            "timestamp": 1789419474,
+            "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "modelName": "X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "done": true,
+            "lab_node_id": "ON-history:RF:5"
+          },
+          {
+            "id": "026d7d47-199e-544f-b024-153e9058b6fb",
+            "role": "user",
+            "content": "**Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 6**\n\nA fixed two-word prompt at every observation slot—\"nil\" or \"no change\"—turns the absence check from a memory task into a reflex, so the end-of-session scan has almost nothing left to find. That tiny structural nudge is what keeps the practice from quietly lapsing on busy days.",
+            "parentId": "dc059e79-e3bb-52eb-9491-9c1ec3396c68",
+            "childrenIds": [],
+            "timestamp": 1789419474,
+            "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "modelName": "Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+            "done": true,
+            "lab_node_id": "ON-history:RF:6"
+          }
+        ],
+        "history": {
+          "messages": {
+            "c716cedf-b846-5cb0-9a21-4d4c20fb496e": {
+              "id": "c716cedf-b846-5cb0-9a21-4d4c20fb496e",
+              "role": "user",
+              "content": "Laboratory transcript — local_engineering_inference_not_research_campaign\n\nBoth X and Y are AI participants. User/assistant display roles are layout only. This is a view of one actual branch. Edits and continuations in WebUI are exploratory; the laboratory journal remains authoritative.\n\nProtocol: b3663ab6bc0362dc9677f2ed17486727a1c6f9ab7e29391ae1a5255d51769546\nBranch: ON-history:RF:6",
+              "parentId": null,
+              "childrenIds": [
+                "fc05b0a3-6c2a-5858-996d-38664a164756"
+              ],
+              "timestamp": 1789419474
+            },
+            "fc05b0a3-6c2a-5858-996d-38664a164756": {
+              "id": "fc05b0a3-6c2a-5858-996d-38664a164756",
+              "role": "assistant",
+              "content": "**X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 1**\n\nCheck that each observation is written down at the moment it is made, not reconstructed from memory later. This prevents subtle drift between what was seen and what is recorded.",
+              "parentId": "c716cedf-b846-5cb0-9a21-4d4c20fb496e",
+              "childrenIds": [
+                "a7431b53-b7cd-5276-baca-5d984f12cd71"
+              ],
+              "timestamp": 1789419474,
+              "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "modelName": "X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "done": true,
+              "lab_node_id": "ON-history:prefix:1"
+            },
+            "a7431b53-b7cd-5276-baca-5d984f12cd71": {
+              "id": "a7431b53-b7cd-5276-baca-5d984f12cd71",
+              "role": "user",
+              "content": "**Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 2**\n\nA quick self-audit works: compare the timestamp on each entry with the time the instrument reading or specimen observation actually occurred. If gaps exceed a few minutes, the record is already partially memory-based.",
+              "parentId": "fc05b0a3-6c2a-5858-996d-38664a164756",
+              "childrenIds": [
+                "c407ed06-32e4-516b-8394-4a5be0c3f892"
+              ],
+              "timestamp": 1789419474,
+              "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "modelName": "Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "done": true,
+              "lab_node_id": "ON-history:prefix:2"
+            },
+            "c407ed06-32e4-516b-8394-4a5be0c3f892": {
+              "id": "c407ed06-32e4-516b-8394-4a5be0c3f892",
+              "role": "assistant",
+              "content": "**X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 3**\n\nCross-check one raw value—say a meter reading—against the handwritten or typed entry to catch unit or transcription slips. Even a single spot-check per session exposes sloppy digit copying that timestamps alone will miss.",
+              "parentId": "a7431b53-b7cd-5276-baca-5d984f12cd71",
+              "childrenIds": [
+                "4fadb431-a069-567e-b6f0-f5a4711d5883"
+              ],
+              "timestamp": 1789419474,
+              "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "modelName": "X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "done": true,
+              "lab_node_id": "ON-history:R:3"
+            },
+            "4fadb431-a069-567e-b6f0-f5a4711d5883": {
+              "id": "4fadb431-a069-567e-b6f0-f5a4711d5883",
+              "role": "user",
+              "content": "**Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 4**\n\nThat single-digit comparison is cheap to run and catches exactly the kind of error—swapped decimals, missing units—that timestamps will never flag. Pairing it with a glance back at the live display before you close the lab book each session keeps the check honest without adding real overhead.",
+              "parentId": "c407ed06-32e4-516b-8394-4a5be0c3f892",
+              "childrenIds": [
+                "dc059e79-e3bb-52eb-9491-9c1ec3396c68"
+              ],
+              "timestamp": 1789419474,
+              "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "modelName": "Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "done": true,
+              "lab_node_id": "ON-history:R:4"
+            },
+            "dc059e79-e3bb-52eb-9491-9c1ec3396c68": {
+              "id": "dc059e79-e3bb-52eb-9491-9c1ec3396c68",
+              "role": "assistant",
+              "content": "**X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 5**\n\nAlso verify that negative results—no precipitate, reading unchanged—are explicitly written, since unlogged absences silently vanish and distort later review. A quick end-of-session scan for \"did I record what *didn't* happen?\" catches that gap before the notebook closes.",
+              "parentId": "4fadb431-a069-567e-b6f0-f5a4711d5883",
+              "childrenIds": [
+                "026d7d47-199e-544f-b024-153e9058b6fb"
+              ],
+              "timestamp": 1789419474,
+              "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "modelName": "X · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "done": true,
+              "lab_node_id": "ON-history:RF:5"
+            },
+            "026d7d47-199e-544f-b024-153e9058b6fb": {
+              "id": "026d7d47-199e-544f-b024-153e9058b6fb",
+              "role": "user",
+              "content": "**Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX · turn 6**\n\nA fixed two-word prompt at every observation slot—\"nil\" or \"no change\"—turns the absence check from a memory task into a reflex, so the end-of-session scan has almost nothing left to find. That tiny structural nudge is what keeps the practice from quietly lapsing on busy days.",
+              "parentId": "dc059e79-e3bb-52eb-9491-9c1ec3396c68",
+              "childrenIds": [],
+              "timestamp": 1789419474,
+              "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "modelName": "Y · grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+              "done": true,
+              "lab_node_id": "ON-history:RF:6"
+            }
+          },
+          "currentId": "026d7d47-199e-544f-b024-153e9058b6fb"
+        },
+        "params": {},
+        "timestamp": 1789419474000,
+        "lab_evidence": {
+          "journal_head": "51613936495f7f4675a5cd60dac7737928073fb6ddc915d54e9512adcec97c45",
+          "leaf": "ON-history:RF:6",
+          "protocol_sha256": "b3663ab6bc0362dc9677f2ed17486727a1c6f9ab7e29391ae1a5255d51769546",
+          "data_class": "local_engineering_inference_not_research_campaign",
+          "display_only": true
+        }
+      },
+      "meta": {
+        "behaviorlab_export_id": "fad02414054012d4ccd2e465543cd3f463bc27534b1789dd23c2f6008c9209bc"
+      },
+      "current_message_id": "026d7d47-199e-544f-b024-153e9058b6fb",
+      "created_at": 1789419474,
+      "updated_at": 1789419474
+    }
+  ]
+}

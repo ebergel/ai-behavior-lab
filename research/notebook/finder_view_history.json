@@ -1,0 +1,10 @@
+{
+  "name": "finder_view_history",
+  "sql": "CREATE TABLE finder_view_history (id TEXT, revision INTEGER, body TEXT, PRIMARY KEY(id,revision))",
+  "columns": [
+    "id",
+    "revision",
+    "body"
+  ],
+  "rows": []
+}

@@ -1,0 +1,1674 @@
+{
+  "ok": true,
+  "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+  "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+  "vision": {
+    "enabled": true,
+    "formats": [
+      "png",
+      "jpeg",
+      "webp"
+    ]
+  },
+  "generation_mode": "mtp",
+  "default_generation_mode": "mtp",
+  "runtime_mode": "Sustained MTP",
+  "parent_runtime_released_for_aime": false,
+  "fan_mode": "default",
+  "fan_boost_active": false,
+  "smart_fan_active_count": 0,
+  "smart_fan_last_transition_at": null,
+  "smart_fan_last_error": null,
+  "smart_fan_target_verified": false,
+  "smart_fan_actual_ramp_verified": false,
+  "smart_fan_ramp_latency_s": null,
+  "smart_fan_actual_ramp_latency_s": null,
+  "startup": {
+    "launch_id": "behaviorlab-mtplx-qualification-20260914",
+    "pid": 13922,
+    "app_parent_pid": null,
+    "started_at": 1789418714.7581491,
+    "model_id": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+    "api_key_required": false,
+    "api_key_source": "none",
+    "paged_kv_quantization": "off",
+    "backend": {
+      "backend_id": "qwen3_next",
+      "architecture_id": "qwen3-next-mtp",
+      "model_family": "qwen",
+      "display_name": "Qwen native MTP",
+      "artifact_layout": "single_mlx_folder_native_mtp",
+      "runtime_capabilities": [
+        "target_logits",
+        "native_draft_head",
+        "exact_speculative_sampling",
+        "sessionbank_committed_mtp_history",
+        "native_adaptive_depth_policy",
+        "async_session_postcommit"
+      ],
+      "sampler_defaults": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20
+      },
+      "reasoning_codec": {
+        "supported": true,
+        "parser": "qwen3",
+        "display_name": "Qwen think tags",
+        "modes": [
+          "auto",
+          "on",
+          "off"
+        ],
+        "default_mode": "auto",
+        "default": "auto",
+        "history_policy": "preserve_when_enabled",
+        "effort_levels": [
+          "xhigh",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      },
+      "draft_semantics": {
+        "supported": true,
+        "request_field": "depth",
+        "display_label": "Draft depth",
+        "default": 3,
+        "minimum": 1,
+        "maximum": 3,
+        "unit": "depth",
+        "value_labels": [
+          "D1",
+          "D2",
+          "D3"
+        ]
+      },
+      "uses_external_assistant": false,
+      "uses_draft_lm_head": true,
+      "hidden_variant": "post_norm",
+      "mtp_history_policy": "committed",
+      "target_distribution_modes": [
+        "backend_default"
+      ],
+      "default_target_distribution_mode": "backend_default",
+      "target_distribution_policy": {
+        "modes": [
+          "backend_default"
+        ],
+        "default_mode": "backend_default",
+        "default_window_size": null,
+        "exact": true,
+        "mode_metadata": [],
+        "status": "backend_default",
+        "telemetry_fields": [],
+        "notes": []
+      },
+      "tune_policy": {
+        "supported": true,
+        "supported_families": [
+          "qwen3_5",
+          "qwen3_6",
+          "qwen3_8",
+          "gemma4"
+        ],
+        "control_field": "depth",
+        "candidates": [
+          "AR",
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "unsupported_reason": null
+      },
+      "kv_quant_policy": {
+        "supported": true,
+        "modes": [
+          "off",
+          "q8",
+          "q4"
+        ],
+        "restart_required": true,
+        "proof_level": "unit_and_runtime_cache_validated",
+        "disabled_reason": null
+      },
+      "context_window_policy": {
+        "supported": true,
+        "minimum": 4096,
+        "maximum": 262144,
+        "default": 262144,
+        "step": 1024,
+        "source": "qwen3_next_config",
+        "unit": "tokens"
+      },
+      "default_max_response_tokens": null,
+      "default_tool_prompt_mode": "hybrid",
+      "required_tool_prompt_mode": null,
+      "required_chat_template_profile": null,
+      "allows_chat_template_path": true,
+      "validation_status": "qa_verified",
+      "app_ui_policy": "descriptor_owned",
+      "status": "qa_verified",
+      "profile_policy": "profile-owned",
+      "notes": []
+    },
+    "model_controls": {
+      "schema_version": 1,
+      "model_ref": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+      "model_family": "qwen3_8",
+      "backend_id": "qwen3_next",
+      "architecture_id": "qwen3-next-mtp",
+      "support_level": "qa_verified",
+      "display_name": "Qwen native MTP",
+      "draft_control": {
+        "supported": true,
+        "request_field": "depth",
+        "display_label": "Draft depth",
+        "default": 3,
+        "minimum": 1,
+        "maximum": 3,
+        "unit": "depth",
+        "value_labels": [
+          "D1",
+          "D2",
+          "D3"
+        ]
+      },
+      "sampling": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "family_default_reason": "Qwen3.8 official thinking sampler"
+      },
+      "reasoning": {
+        "supported": true,
+        "parser": "qwen3",
+        "display_name": "Qwen think tags",
+        "modes": [
+          "auto",
+          "on",
+          "off"
+        ],
+        "default_mode": "auto",
+        "default": "auto",
+        "history_policy": "preserve_when_enabled",
+        "effort_levels": [
+          "xhigh",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      },
+      "tune": {
+        "supported": true,
+        "supported_families": [
+          "qwen3_5",
+          "qwen3_6",
+          "qwen3_8",
+          "gemma4"
+        ],
+        "control_field": "depth",
+        "candidates": [
+          "AR",
+          "D1",
+          "D2",
+          "D3"
+        ],
+        "unsupported_reason": null
+      },
+      "kv_quant": {
+        "supported": true,
+        "modes": [
+          "off",
+          "q8",
+          "q4"
+        ],
+        "restart_required": true,
+        "proof_level": "unit_and_runtime_cache_validated",
+        "disabled_reason": null
+      },
+      "context_window": {
+        "supported": true,
+        "minimum": 4096,
+        "maximum": 262144,
+        "default": 262144,
+        "step": 1024,
+        "source": "runtime",
+        "unit": "tokens"
+      }
+    },
+    "warmup": {
+      "enabled": false,
+      "ran": false,
+      "tokens": 0,
+      "elapsed_s": 0.0,
+      "error": null
+    },
+    "tool_prompt_mode": "native",
+    "tool_contract_active": false,
+    "tool_contract_policy_version": "native_template_tools:agent_tail:v7",
+    "chat_template_profile": "tokenizer",
+    "chat_template_source": "tokenizer",
+    "chat_template_path": null,
+    "chat_template_hash": "c3cf9e34abf4f9e3"
+  },
+  "thermal": {
+    "max_requested": false,
+    "max_verified": false,
+    "actual_ramp_verified": false,
+    "smart": {
+      "active": false,
+      "active_count": 0,
+      "active_requests": [],
+      "commanded_max": false,
+      "target_verified": false,
+      "actual_ramp_verified": false,
+      "ramp_latency_s": null,
+      "actual_ramp_latency_s": null,
+      "ramp_attempts": 0,
+      "last_transition_at": null,
+      "last_error": null,
+      "last_result": null,
+      "restore_verified": true,
+      "restore_failures": 0,
+      "stale_leases_reconciled": 0,
+      "soak_release_temp_c": 75.0,
+      "soak_hold_cap_s": 180.0,
+      "soak_holding": false,
+      "soak_holds": 0,
+      "soak_last_temp_c": null,
+      "soak_last_sensor": null,
+      "soak_release_reason": null
+    },
+    "fan_summary": null,
+    "verified_at": null,
+    "verified": null
+  },
+  "available_generation_modes": [
+    "mtp",
+    "ar"
+  ],
+  "load_mtp": true,
+  "mtp_enabled": true,
+  "depth": 3,
+  "profile": {
+    "name": "sustained",
+    "runtime_profile": "native_mtp_sustained",
+    "summary": "Sustained Mode: explicit long-context native-MTP path with chunked contiguous prefill, final-token logits, and repaged decode KV.",
+    "env": {
+      "MTPLX_BATCH_TARGET_ARRAYS": "1",
+      "MTPLX_CLEAR_CACHE_EVERY": "auto",
+      "MTPLX_CLEAR_CACHE_EVERY_CONTEXT_THRESHOLD": "16384",
+      "MTPLX_CLEAR_CACHE_EVERY_LONG_CONTEXT": "1024",
+      "MTPLX_DEFER_VERIFY_HIDDEN_EVAL": "1",
+      "MTPLX_DROP_EVENTS": "1",
+      "MTPLX_DYNAMIC_PAGED_KV": "1",
+      "MTPLX_LAZY_MTP_HISTORY_APPEND": "1",
+      "MTPLX_LAZY_TARGET_DISTRIBUTIONS": "1",
+      "MTPLX_LAZY_VERIFY_LOGITS": "1",
+      "MTPLX_LONG_CONTEXT_MTP_DEPTH": "3",
+      "MTPLX_LONG_CONTEXT_MTP_DEPTH_POLICY": "off",
+      "MTPLX_LONG_CONTEXT_MTP_DEPTH_THRESHOLD": "98304",
+      "MTPLX_MTP_HISTORY_LAST_WINDOW": "8192",
+      "MTPLX_MTP_HISTORY_LAST_WINDOW_THRESHOLD": "16384",
+      "MTPLX_MTP_HISTORY_POLICY": "committed",
+      "MTPLX_PREFILL_CHUNK_CACHE_CLEANUP": "1",
+      "MTPLX_PREFILL_CHUNK_CACHE_CLEANUP_EVERY": "auto",
+      "MTPLX_PREFILL_CHUNK_SIZE": "auto",
+      "MTPLX_PREFILL_CHUNK_SIZE_DENSE": "2048",
+      "MTPLX_PREFILL_CHUNK_SIZE_REPAGE": "2048",
+      "MTPLX_PREFILL_EXTERNAL_EMIT_LOGITS": "0",
+      "MTPLX_PREFILL_OMLX_EXTERNAL": "1",
+      "MTPLX_SKIP_VERIFY_SNAPSHOT": "1",
+      "MTPLX_SUSTAINED_DENSE_DECODE_MAX_CONTEXT": "131072",
+      "MTPLX_SUSTAINED_PREFILL": "1",
+      "MTPLX_SUSTAINED_PREFILL_LAYOUT": "auto",
+      "MTPLX_TARGET_EMIT_FULL_PREFILL_LOGITS": "0",
+      "MTPLX_VERIFY_HIDDEN_MODE": "logits_first_committed_slice",
+      "MTPLX_VLLM_METAL_PAGED_ATTN": "1",
+      "MTPLX_VLLM_METAL_PAGED_ATTN_IMPL": "mlx_vector_paged",
+      "MTPLX_VLLM_METAL_PAGED_BLOCK_SIZE": "16",
+      "MTPLX_VLLM_METAL_PAGED_PARTITIONED_ATTN": "1",
+      "MTPLX_VLLM_METAL_PAGED_PARTITION_SIZE": "512",
+      "MTPLX_VLLM_METAL_PAGED_PARTITION_THRESHOLD": "2048",
+      "MTPLX_VLLM_METAL_PAGED_TURBOQUANT": "0"
+    },
+    "sampler": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20
+    },
+    "model_id": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+    "benchmark_ids": [],
+    "caveats": [
+      "Default product path for long-context coding and agent use.",
+      "Targets long-context memory safety while preserving most Burst TPS.",
+      "Does not include v0.2 decode-state eval scheduling flags.",
+      "Runs on stock PyPI MLX; no custom MLX fork or build is required."
+    ],
+    "draft_lm_head": {
+      "bits": 4,
+      "group_size": 64,
+      "mode": "affine"
+    },
+    "draft_sampler": null,
+    "qa_only": false,
+    "fan_control_allowed": false,
+    "clock_anchor_allowed": false,
+    "product_claim_eligible": true,
+    "profile_default_model_id": "Youssofal/Qwen3.8-27B-MTPLX-Optimized-Speed",
+    "profile_default_sampler": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20
+    }
+  },
+  "adaptive": {
+    "policy": "none"
+  },
+  "proposal_cache": {
+    "online_correction_cache": false,
+    "online_correction_cache_min_depth": 1,
+    "online_correction_cache_key": "local_prefix",
+    "prompt_correction_cache": false,
+    "prompt_correction_cache_min_depth": 2
+  },
+  "online_hidden": {
+    "alpha": 0.0,
+    "decay": 0.8,
+    "warmup": 1,
+    "max_feed_depth": null,
+    "key": "global"
+  },
+  "verify_core": "linear-gdn-from-conv-tape",
+  "verify_strategy": "capture_commit",
+  "reasoning": "on",
+  "enable_thinking": true,
+  "preserve_thinking": "off",
+  "preserve_thinking_effective": false,
+  "reasoning_history_mode": "strip",
+  "strip_assistant_reasoning_history": true,
+  "context_window": 32768,
+  "max_response_tokens": 1024,
+  "api_key_required": false,
+  "api_key_source": "none",
+  "paged_kv_quantization": "off",
+  "paged_kv_quantization_detail": {
+    "mode": "off"
+  },
+  "kernel_selfcheck": {
+    "ran": false
+  },
+  "rate_limit_per_minute": 0,
+  "stream_interval": 1,
+  "warmup": {
+    "enabled": false,
+    "ran": false,
+    "tokens": 0,
+    "elapsed_s": 0.0,
+    "error": null
+  },
+  "foreground_active": 0,
+  "dashboard_active_requests": 0,
+  "active_requests": 0,
+  "scheduler": {
+    "config": {
+      "mode": "serial",
+      "preset": "latency",
+      "max_active_requests": 1,
+      "decode_batch_max": 1,
+      "batch_wait_ms": 0.0,
+      "prefill_chunk_tokens": 1024,
+      "experimental_mtp_cohorts": false
+    },
+    "mode": "serial",
+    "preset": "latency",
+    "scheduler_policy": "solo_mtp_oracle",
+    "active_lane": "solo_mtp",
+    "active_requests": 0,
+    "mtp_available": true,
+    "mtp_disabled_reason": null,
+    "mtp_batch_numerics": null,
+    "mtp_batch_route_id": null,
+    "mtp_batch_config_fingerprint": null,
+    "mtp_batch_construction_receipt": {},
+    "mtp_batch_installed_widths": [],
+    "mtp_batch_width_routes": {},
+    "path": "path_a",
+    "path_a": {
+      "solo_mtp_protected": true,
+      "concurrent_strategy": "cooperative_ar_batch",
+      "batched_mtp_required_for_v1": false
+    },
+    "path_b": {
+      "experimental_mtp_cohorts": false,
+      "default_enabled": false
+    },
+    "telemetry": {
+      "foreground_pending": 0,
+      "idle_pending": 0,
+      "persistence_pending": 0,
+      "persistence_coalesced": 0,
+      "active_kind": null,
+      "active_sequence": null,
+      "active_batch_key": null,
+      "active_run_s": null,
+      "active_queue_wait_s": null,
+      "started": 69,
+      "completed": 69,
+      "cancelled_before_start": 0,
+      "request_cancelled": 0,
+      "completed_by_kind": {
+        "foreground": 52,
+        "idle_postcommit": 17
+      },
+      "started_by_batch_key": {
+        "startup.load": 1,
+        "startup.draft_head": 1,
+        "startup.draft_head_identity": 1,
+        "startup.chat_template_profile": 1,
+        "startup.template_hash": 1,
+        "chat.nonstream": 47,
+        "postcommit": 17
+      },
+      "batch_histogram": {
+        "1": 52
+      },
+      "queue_wait_s": {
+        "count": 69,
+        "latest": 0.3101134579628706,
+        "min": 7.2919647209346294e-06,
+        "max": 0.3148444579564966,
+        "mean": 0.08190426140250909,
+        "p50": 1.6625039279460907e-05,
+        "p95": 0.3100511834025383
+      },
+      "run_duration_s": {
+        "count": 69,
+        "latest": 0.006063250009901822,
+        "min": 1.029099803417921e-05,
+        "max": 12.05191866698442,
+        "mean": 3.2948699281314737,
+        "p50": 1.3701949170208536,
+        "p95": 8.330377958191091
+      },
+      "cancellation_latency_s": {
+        "count": 0,
+        "latest": null,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "owner_thread_id": 6140342272,
+      "shutdown": false
+    },
+    "ar_batch": {
+      "pending": 0,
+      "active": 0,
+      "pump_scheduled": false,
+      "last_batch_size": 0,
+      "last_error": null
+    },
+    "mtp_batch": {}
+  },
+  "session_bank": {
+    "max_entries": 48,
+    "max_bytes": 36364298471,
+    "per_session_max_bytes": 24242865647,
+    "idle_ttl_s": 3600.0,
+    "entries": 22,
+    "total_nbytes": 5898289152,
+    "last_miss_reason": null,
+    "last_restore_source": "ram",
+    "last_ssd_restore_s": 0.0,
+    "last_prefix_diagnostic": {
+      "prompt_len": 69,
+      "session_id": "anon-16e6af56b8346e88",
+      "stored_prefix_len": 69,
+      "common_prefix_tokens": 69,
+      "nearest_boundary_tokens": 69,
+      "new_prefill_tokens": 0,
+      "miss_reason": null,
+      "restore_kind": "exact_prefix"
+    },
+    "active_pin_ttl_s": 600.0,
+    "active_sessions": [
+      "anon-0f39b88d6d122af5",
+      "anon-16e6af56b8346e88",
+      "anon-27f3204bdfb136ec",
+      "anon-38e2451a1ab5b388",
+      "anon-3a8b4bd6b2b15658",
+      "anon-4426e3ccf780591d",
+      "anon-459bd3e172733bbf",
+      "anon-45c98dcc8ef9bf2b",
+      "anon-5aa5ace35d50510f",
+      "anon-67f51d9ad78c27bf",
+      "anon-6b876e18d6e23dbd",
+      "anon-8d94b8208e95e312",
+      "anon-a123cd1724d70c0a",
+      "anon-bce65c79d5182b6a",
+      "anon-c4f7b2a210d6abc9",
+      "anon-dfc841b87ca5027a",
+      "anon-f73d2efebbeb4cce"
+    ],
+    "recent_evictions": [
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-bce65c79d5182b6a",
+        "prefix_len": 128,
+        "token_hash": "00b82728d1e26a2764ec6968bbab6a489b5d676e76d25996641dc6c96d4112f8",
+        "nbytes": 317314048,
+        "last_access_s": 1789419401.179716,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-c4f7b2a210d6abc9",
+        "prefix_len": 97,
+        "token_hash": "844006a9a42854445eecf69a8a0a033f72dadded129b8b5b6f60fb3cbaa91fe9",
+        "nbytes": 315155456,
+        "last_access_s": 1789419424.042668,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-3a8b4bd6b2b15658",
+        "prefix_len": 234,
+        "token_hash": "b7236912ed41bcf562a06a5f24f3199afd7aabf95d5cfe59ff71105a79a51ce9",
+        "nbytes": 324695040,
+        "last_access_s": 1789419433.6344588,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-459bd3e172733bbf",
+        "prefix_len": 193,
+        "token_hash": "378e9d734d70e32b146cd34af8310c8d34213a5437f2ab8eb4a066b6b8432473",
+        "nbytes": 321840128,
+        "last_access_s": 1789419479.0536058,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-45c98dcc8ef9bf2b",
+        "prefix_len": 247,
+        "token_hash": "3e2517882e374892289492ba8c6129a4fe1434543694e3a3a1adf270695677ac",
+        "nbytes": 325600256,
+        "last_access_s": 1789419485.4032278,
+        "session_active": true
+      }
+    ],
+    "cold_tier": {
+      "enabled": false
+    },
+    "prefixes": [
+      {
+        "session_id": "anon-5aa5ace35d50510f",
+        "prefix_len": 69,
+        "token_hash": "186a254117dbf20c3c44a0e777aa582382198c3c3ef806472186b5abeaa39176",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=0;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 313205760,
+        "created_at_s": 1789419499.796563,
+        "last_access_s": 1789419499.796563,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 69,
+        "mtp_snapshot_epoch": 69,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          68
+        ]
+      },
+      {
+        "session_id": "anon-67f51d9ad78c27bf",
+        "prefix_len": 69,
+        "token_hash": "66deddfb47548a7f2c021d36de9a1a6c6a18006c3b8daaafd7d5bc673b155ce6",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 313205760,
+        "created_at_s": 1789419498.341509,
+        "last_access_s": 1789419498.341509,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 69,
+        "mtp_snapshot_epoch": 69,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          68
+        ]
+      },
+      {
+        "session_id": "anon-5aa5ace35d50510f",
+        "prefix_len": 72,
+        "token_hash": "16c1423d7df29341e94c863dea030ef642b2c0907564a21eac1eafbbc759404b",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=0;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 159460352,
+        "created_at_s": 1789419499.478414,
+        "last_access_s": 1789419499.478415,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 72,
+        "mtp_snapshot_epoch": 72,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-67f51d9ad78c27bf",
+        "prefix_len": 116,
+        "token_hash": "b963d10ca6421482cb61ddd3524bc857fb9fbbc30fa6e4f6db347140fa8e0555",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 162524160,
+        "created_at_s": 1789419497.6146612,
+        "last_access_s": 1789419497.614662,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 116,
+        "mtp_snapshot_epoch": 116,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-dfc841b87ca5027a",
+        "prefix_len": 174,
+        "token_hash": "4663452c6b5c0fdce3db69f102e84ba00ff3e3066a2e5b7d4773ab0b58142d3b",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 320517120,
+        "created_at_s": 1789419400.9595451,
+        "last_access_s": 1789419400.9595451,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 174,
+        "mtp_snapshot_epoch": 174,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          173
+        ]
+      },
+      {
+        "session_id": "anon-c4f7b2a210d6abc9",
+        "prefix_len": 222,
+        "token_hash": "a927a134f5436288d65694c1e75710546465eea27bf20fce05bb24eda45bc71e",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 169905152,
+        "created_at_s": 1789419388.302662,
+        "last_access_s": 1789419388.3026628,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 222,
+        "mtp_snapshot_epoch": 222,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-bce65c79d5182b6a",
+        "prefix_len": 229,
+        "token_hash": "096642a2f0333aadef67568c1d8b45ede3f09e9fbcf3aa96c39d831556ce34b1",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 170392576,
+        "created_at_s": 1789419393.5828822,
+        "last_access_s": 1789419393.5828822,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 229,
+        "mtp_snapshot_epoch": 229,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-38e2451a1ab5b388",
+        "prefix_len": 250,
+        "token_hash": "644c678b45071b9eaa1a4d636fbd4126a859afb16e636a59125136fa6719a835",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 325809152,
+        "created_at_s": 1789419417.271296,
+        "last_access_s": 1789419417.271296,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 250,
+        "mtp_snapshot_epoch": 250,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          249
+        ]
+      },
+      {
+        "session_id": "anon-4426e3ccf780591d",
+        "prefix_len": 261,
+        "token_hash": "1592ee849ecbf4085456b9219364172a9af786378fce7fc96924db36218086cd",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 480529408,
+        "created_at_s": 1789419423.962262,
+        "last_access_s": 1789419423.962262,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 261,
+        "mtp_snapshot_epoch": 261,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          256,
+          260
+        ]
+      },
+      {
+        "session_id": "anon-0f39b88d6d122af5",
+        "prefix_len": 261,
+        "token_hash": "5b5a5a27b0cb1b9d034559e2dc630165105d1ebe6b21d89cb47d3587e8a22508",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 480529408,
+        "created_at_s": 1789419469.442228,
+        "last_access_s": 1789419469.442228,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 261,
+        "mtp_snapshot_epoch": 261,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          256,
+          260
+        ]
+      },
+      {
+        "session_id": "anon-dfc841b87ca5027a",
+        "prefix_len": 293,
+        "token_hash": "b13a8cb7098861381e5e8656b3b7929904e0f42e238e38eb61127d5700a5662b",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 174849024,
+        "created_at_s": 1789419399.9449668,
+        "last_access_s": 1789419399.9449668,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 293,
+        "mtp_snapshot_epoch": 293,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-459bd3e172733bbf",
+        "prefix_len": 323,
+        "token_hash": "510661c16075bdeca6f8c10bab438ca1f09008d00ccaf8fb7cf719e0e7997d06",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 176937984,
+        "created_at_s": 1789419447.001827,
+        "last_access_s": 1789419447.0018282,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 323,
+        "mtp_snapshot_epoch": 323,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-4426e3ccf780591d",
+        "prefix_len": 378,
+        "token_hash": "0377b91e7ab402d9f8b849b167b7abaac157b719818e4eac2586e33c093728b3",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 180767744,
+        "created_at_s": 1789419422.6965299,
+        "last_access_s": 1789419422.6965299,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 378,
+        "mtp_snapshot_epoch": 378,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-45c98dcc8ef9bf2b",
+        "prefix_len": 398,
+        "token_hash": "85532b541c32e333ba59bfb88197ae708014156e86b3113719f85038735486db",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 182160384,
+        "created_at_s": 1789419454.811009,
+        "last_access_s": 1789419454.8110101,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 398,
+        "mtp_snapshot_epoch": 398,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-38e2451a1ab5b388",
+        "prefix_len": 409,
+        "token_hash": "aafbfad3670f77cc2613868edac5f6ae24f2326bee1df2225709d15da6852a11",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 182926336,
+        "created_at_s": 1789419416.0619562,
+        "last_access_s": 1789419416.0619571,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 409,
+        "mtp_snapshot_epoch": 409,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-6b876e18d6e23dbd",
+        "prefix_len": 418,
+        "token_hash": "0e9706ce5ce421ab785b4e5f0e8893a5e245e9fc42bae9e23a9d0d530fbb5c59",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 337507328,
+        "created_at_s": 1789419483.984278,
+        "last_access_s": 1789419483.984278,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 418,
+        "mtp_snapshot_epoch": 418,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          192
+        ]
+      },
+      {
+        "session_id": "anon-3a8b4bd6b2b15658",
+        "prefix_len": 428,
+        "token_hash": "92b7045fab410cd3bdbf339f158c49350cd2d1503b807470c9a5b52b0b5ff5c9",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 338203648,
+        "created_at_s": 1789419408.285938,
+        "last_access_s": 1789419408.285938,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 428,
+        "mtp_snapshot_epoch": 428,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          127
+        ]
+      },
+      {
+        "session_id": "anon-f73d2efebbeb4cce",
+        "prefix_len": 516,
+        "token_hash": "0313a2b9b592f46860f109b0a5dd69d7e39f107e060396022e812d042c6d98cc",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 190376960,
+        "created_at_s": 1789419477.704694,
+        "last_access_s": 1789419477.704694,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 516,
+        "mtp_snapshot_epoch": 516,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      },
+      {
+        "session_id": "anon-a123cd1724d70c0a",
+        "prefix_len": 539,
+        "token_hash": "ed0d40feb23b25ce4f155d6e13a5e19d1e5e16fe35b15dd237c4614ee8e4dd40",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 345932800,
+        "created_at_s": 1789419492.1982012,
+        "last_access_s": 1789419492.1982012,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 539,
+        "mtp_snapshot_epoch": 539,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          246
+        ]
+      },
+      {
+        "session_id": "anon-27f3204bdfb136ec",
+        "prefix_len": 543,
+        "token_hash": "ddf6c7750c528119f0d1250e834e517dbc7e0eef068231e28f7e04453a21e9a4",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 346211328,
+        "created_at_s": 1789419432.23386,
+        "last_access_s": 1789419432.23386,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 543,
+        "mtp_snapshot_epoch": 543,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          96
+        ]
+      },
+      {
+        "session_id": "anon-8d94b8208e95e312",
+        "prefix_len": 546,
+        "token_hash": "a132d4ee7028d0ba3854b9639450930945642c64e907f92e9a2a7917cd458dd5",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 346420224,
+        "created_at_s": 1789419440.255997,
+        "last_access_s": 1789419440.255997,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 546,
+        "mtp_snapshot_epoch": 546,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": [
+          233
+        ]
+      },
+      {
+        "session_id": "anon-0f39b88d6d122af5",
+        "prefix_len": 653,
+        "token_hash": "a89fb2c34491081157ae527f8cd92c32bfcdcd1449348795599a383b9a6335c6",
+        "model_path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+        "mtp_enabled": true,
+        "hidden_variant": "post_norm",
+        "template_hash": "c3cf9e34abf4f9e3",
+        "mtp_history_policy": "committed",
+        "draft_head_identity": "c8c44c615ec51a9a",
+        "policy_fingerprint": "template=c3cf9e34abf4f9e3;thinking=1;strip_reasoning=1;openai_bridge=omlx_style:preserve_history:parse_at_completion:tool_digest:v4;tool_prompt_mode=native;tool_contract=none;tool_choice=auto;no_tools_contract=0;post_tool_answer_contract=0;read_only_force_answer_contract=0;pi_convergence_contract=0;simple_chat_contract=0;opencode_prompt_contract=none;generation_mode=mtp;depth=3;hidden_variant=post_norm;mtp_history_policy=committed;draft_head=c8c44c615ec51a9a;adaptive={\"policy\":\"none\"};proposal_cache={\"online_correction_cache\":false,\"online_correction_cache_key\":\"local_prefix\",\"online_correction_cache_min_depth\":1,\"prompt_correction_cache\":false,\"prompt_correction_cache_min_depth\":2};online_hidden={\"alpha\":0.0,\"decay\":0.8,\"key\":\"global\",\"max_feed_depth\":null,\"warmup\":1}",
+        "hits": 0,
+        "nbytes": 199916544,
+        "created_at_s": 1789419468.176911,
+        "last_access_s": 1789419468.176911,
+        "has_live_ref": false,
+        "has_mtp_history_live_ref": false,
+        "live_ref_only": false,
+        "snapshot_epoch": 653,
+        "mtp_snapshot_epoch": 653,
+        "lazy_kv": true,
+        "has_recurrent": true,
+        "gdn_boundaries": []
+      }
+    ],
+    "eviction_log": [
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-bce65c79d5182b6a",
+        "prefix_len": 128,
+        "token_hash": "00b82728d1e26a2764ec6968bbab6a489b5d676e76d25996641dc6c96d4112f8",
+        "nbytes": 317314048,
+        "last_access_s": 1789419401.179716,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-c4f7b2a210d6abc9",
+        "prefix_len": 97,
+        "token_hash": "844006a9a42854445eecf69a8a0a033f72dadded129b8b5b6f60fb3cbaa91fe9",
+        "nbytes": 315155456,
+        "last_access_s": 1789419424.042668,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-3a8b4bd6b2b15658",
+        "prefix_len": 234,
+        "token_hash": "b7236912ed41bcf562a06a5f24f3199afd7aabf95d5cfe59ff71105a79a51ce9",
+        "nbytes": 324695040,
+        "last_access_s": 1789419433.6344588,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-459bd3e172733bbf",
+        "prefix_len": 193,
+        "token_hash": "378e9d734d70e32b146cd34af8310c8d34213a5437f2ab8eb4a066b6b8432473",
+        "nbytes": 321840128,
+        "last_access_s": 1789419479.0536058,
+        "session_active": true
+      },
+      {
+        "reason": "superseded_by_longer_prefix",
+        "session_id": "anon-45c98dcc8ef9bf2b",
+        "prefix_len": 247,
+        "token_hash": "3e2517882e374892289492ba8c6129a4fe1434543694e3a3a1adf270695677ac",
+        "nbytes": 325600256,
+        "last_access_s": 1789419485.4032278,
+        "session_active": true
+      }
+    ]
+  },
+  "ssd_session_cache": {
+    "enabled": false
+  },
+  "last_request_started_at": 1789419499.792804,
+  "requests_completed": 47,
+  "requests_cancelled": 0,
+  "last_request_at": 1789419499.479451,
+  "idle_seconds": 45.60698413848877,
+  "reasoning_parser": "qwen3",
+  "load_time_s": 3.0715146249858662,
+  "draft_lm_head": {
+    "original": {
+      "bits": 8,
+      "group_size": 64,
+      "mode": "affine",
+      "weight_shape": [
+        248320,
+        1280
+      ],
+      "scales_shape": [
+        248320,
+        80
+      ]
+    },
+    "draft_only": {
+      "bits": 4,
+      "group_size": 64,
+      "mode": "affine",
+      "weight_shape": [
+        248320,
+        640
+      ],
+      "scales_shape": [
+        248320,
+        80
+      ]
+    },
+    "elapsed_s": 0.15971762500703335
+  },
+  "draft_sampler": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0
+  },
+  "draft_head_identity": "c8c44c615ec51a9a",
+  "tokenizer_template_hash": "c3cf9e34abf4f9e3",
+  "fast_path_env": {
+    "MTPLX_LAZY_VERIFY_LOGITS": {
+      "expected": "1",
+      "observed": "1",
+      "ok": true
+    },
+    "MTPLX_BATCH_TARGET_ARRAYS": {
+      "expected": "1",
+      "observed": "1",
+      "ok": true
+    },
+    "MTPLX_LAZY_TARGET_DISTRIBUTIONS": {
+      "expected": "1",
+      "observed": "1",
+      "ok": true
+    },
+    "MTPLX_LAZY_MTP_HISTORY_APPEND": {
+      "expected": "1",
+      "observed": "1",
+      "ok": true
+    },
+    "MTPLX_DROP_EVENTS": {
+      "expected": "1",
+      "observed": "1",
+      "ok": true
+    },
+    "MTPLX_SKIP_VERIFY_SNAPSHOT": {
+      "expected": "1",
+      "observed": "1",
+      "ok": true
+    }
+  },
+  "profile_env": {
+    "MTPLX_BATCH_TARGET_ARRAYS": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_CLEAR_CACHE_EVERY": {
+      "expected": "auto",
+      "observed": "auto",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_CLEAR_CACHE_EVERY_CONTEXT_THRESHOLD": {
+      "expected": "16384",
+      "observed": "16384",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_CLEAR_CACHE_EVERY_LONG_CONTEXT": {
+      "expected": "1024",
+      "observed": "1024",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_DEFER_VERIFY_HIDDEN_EVAL": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_DROP_EVENTS": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_DYNAMIC_PAGED_KV": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_LAZY_MTP_HISTORY_APPEND": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_LAZY_TARGET_DISTRIBUTIONS": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_LAZY_VERIFY_LOGITS": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_LONG_CONTEXT_MTP_DEPTH": {
+      "expected": "3",
+      "observed": "3",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_LONG_CONTEXT_MTP_DEPTH_POLICY": {
+      "expected": "off",
+      "observed": "off",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_LONG_CONTEXT_MTP_DEPTH_THRESHOLD": {
+      "expected": "98304",
+      "observed": "98304",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_MTP_HISTORY_LAST_WINDOW": {
+      "expected": "8192",
+      "observed": "8192",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_MTP_HISTORY_LAST_WINDOW_THRESHOLD": {
+      "expected": "16384",
+      "observed": "16384",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_MTP_HISTORY_POLICY": {
+      "expected": "committed",
+      "observed": "committed",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_CHUNK_CACHE_CLEANUP": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_CHUNK_CACHE_CLEANUP_EVERY": {
+      "expected": "auto",
+      "observed": "auto",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_CHUNK_SIZE": {
+      "expected": "auto",
+      "observed": "auto",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_CHUNK_SIZE_DENSE": {
+      "expected": "2048",
+      "observed": "2048",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_CHUNK_SIZE_REPAGE": {
+      "expected": "2048",
+      "observed": "2048",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_EXTERNAL_EMIT_LOGITS": {
+      "expected": "0",
+      "observed": "0",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_PREFILL_OMLX_EXTERNAL": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_SKIP_VERIFY_SNAPSHOT": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_SUSTAINED_DENSE_DECODE_MAX_CONTEXT": {
+      "expected": "131072",
+      "observed": "131072",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_SUSTAINED_PREFILL": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_SUSTAINED_PREFILL_LAYOUT": {
+      "expected": "auto",
+      "observed": "auto",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_TARGET_EMIT_FULL_PREFILL_LOGITS": {
+      "expected": "0",
+      "observed": "0",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VERIFY_HIDDEN_MODE": {
+      "expected": "logits_first_committed_slice",
+      "observed": "logits_first_committed_slice",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_ATTN": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_ATTN_IMPL": {
+      "expected": "mlx_vector_paged",
+      "observed": "mlx_vector_paged",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_BLOCK_SIZE": {
+      "expected": "16",
+      "observed": "16",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_PARTITIONED_ATTN": {
+      "expected": "1",
+      "observed": "1",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_PARTITION_SIZE": {
+      "expected": "512",
+      "observed": "512",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_PARTITION_THRESHOLD": {
+      "expected": "2048",
+      "observed": "2048",
+      "override_allowed": false,
+      "overridden": false,
+      "ok": true
+    },
+    "MTPLX_VLLM_METAL_PAGED_TURBOQUANT": {
+      "expected": "0",
+      "observed": "0",
+      "override_allowed": true,
+      "overridden": false,
+      "ok": true
+    }
+  },
+  "diagnostic_env_ablation": false,
+  "mtp_history_materialize_every": null,
+  "clear_cache_every": "auto",
+  "trunk_cache_materialize_every": null,
+  "state_rebase_every": null,
+  "state_root_eval": null,
+  "state_root_eval_include_mtp": null,
+  "state_root_eval_include_live": null,
+  "target_layer_eval_every": null,
+  "target_layer_eval_schedule": null,
+  "target_layer_eval_context_threshold": null,
+  "target_layer_eval_max_q": null,
+  "defer_verify_hidden_eval": "1",
+  "late_depth_switch_after_tokens": null,
+  "late_depth_before": null,
+  "late_depth_after": null,
+  "long_context_mtp_depth_policy": "off",
+  "long_context_mtp_depth_threshold": "98304",
+  "long_context_mtp_depth": "3",
+  "opencode_short_context_depth_policy": {
+    "active": false,
+    "reason": "disabled_depth_preservation",
+    "default_depth": 3
+  },
+  "opencode_short_context_depth2_tokens": null,
+  "mtp_position_mode": null,
+  "mtp_position_cap": null,
+  "mtp_position_period": null,
+  "mtp_position_base": null,
+  "split_verify_eval": null,
+  "split_full_attn": null,
+  "split_full_attn_chunk_size": null,
+  "split_full_attn_threshold": null,
+  "sdpa_2pass": null,
+  "sdpa_2pass_threshold": null,
+  "sdpa_2pass_max_q": null,
+  "blockwise_attn": null,
+  "blockwise_attn_threshold": null,
+  "dirty_detach_components": null,
+  "dirty_detach_mode": null,
+  "dirty_detach_gdn_every": null,
+  "dirty_detach_conv_every": null,
+  "dirty_detach_attn_every": null,
+  "capture_commit_detach_components": null,
+  "capture_commit_detach_mode": null,
+  "capture_commit_detach_gdn_every": null,
+  "capture_commit_detach_conv_every": null,
+  "owned_recurrent_state": null,
+  "owned_recurrent_state_mode": null,
+  "owned_attn_kv": null,
+  "owned_attn_kv_mode": null,
+  "owned_attn_kv_step": null,
+  "owned_attn_kv_block_size": null,
+  "vllm_metal_paged_attn": "1",
+  "vllm_metal_paged_block_size": "16",
+  "vllm_metal_paged_num_blocks": null,
+  "vllm_metal_paged_sliding_window": null,
+  "vllm_metal_paged_partitioned_attn": "1",
+  "vllm_metal_paged_partition_threshold": "2048",
+  "vllm_metal_paged_partition_size": "512",
+  "vllm_metal_paged_mtp_attn": null,
+  "vllm_metal_paged_mtp_block_size": null,
+  "vllm_metal_paged_mtp_num_blocks": null,
+  "vllm_metal_paged_turboquant": "0",
+  "vllm_metal_paged_turboquant_k_quant": null,
+  "vllm_metal_paged_turboquant_v_quant": null,
+  "vllm_metal_paged_kv_quant": "off",
+  "native_mlp_rowwise": null,
+  "native_mlp_min_m": null,
+  "native_mlp_max_m": null,
+  "native_mlp_context_threshold": null,
+  "mlp_call_variant": null,
+  "mlp_variant_stats": {
+    "enabled": false,
+    "variant": "stock",
+    "variant_calls": 0,
+    "native_calls": 0,
+    "fallback_calls": 0,
+    "min_m": 2,
+    "max_m": 6,
+    "context_threshold": 0,
+    "current_context_tokens": 4
+  },
+  "native_gdn_tail": null,
+  "native_gdn_tail_simdgroups": null,
+  "live_output_detach": null,
+  "live_output_detach_mode": null,
+  "aime_process_isolation": null,
+  "degradation": {
+    "compiled_verify": {
+      "mode": "off",
+      "permanent_eager": false,
+      "reason": "unknown",
+      "flip_count": 0,
+      "transient_exception_count": 0
+    },
+    "profile_env_overridden": [],
+    "nax": {
+      "env_enabled": false,
+      "available": false,
+      "counters": {},
+      "bail_counters": {
+        "gqa_packed_bail_counts": {},
+        "gqa_packed_route_bail_counts": {}
+      }
+    }
+  },
+  "metal_memory_caps": {
+    "applied": true,
+    "total_ram_bytes": 103079215104,
+    "total_ram_source": "sysctl_hw_memsize",
+    "memory_limit_api": "mx.set_memory_limit",
+    "memory_limit_bytes": 77309411328,
+    "wired_limit_api": "mx.set_wired_limit",
+    "wired_limit_bytes": 61847529062
+  },
+  "mlx_cache_limit": {
+    "requested": null,
+    "configured": true,
+    "source": "ram_tier_default",
+    "limit_bytes": 6442450944,
+    "previous_limit_bytes": 97925254348
+  },
+  "mlx_runtime": {
+    "ok": true,
+    "path": "/opt/homebrew/var/mtplx/venv-2.8.3/lib/python3.13/site-packages/mlx/core.cpython-313-darwin.so",
+    "version": "0.32.1",
+    "stock_pypi_layout": true
+  },
+  "chip": "Apple M3 Ultra",
+  "machine_model": "Mac15,14",
+  "unified_memory_bytes": 103079215104
+}

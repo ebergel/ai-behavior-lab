@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-14T22:23:58.055818+00:00",
+  "schema": "behaviorlab.engineering-revision/1",
+  "prior_protocol": "mtplx-long-rf-budget-engineering-v4",
+  "prior_result": "Stopped safely after four received and committed responses. Their dispatch captures said max_tokens=8192, while final statistics showed effective_max_tokens=2048 and server_cap_applied=true. The old parser missed this; these responses do not qualify the requested condition. Original journal remains unmodified.",
+  "new_protocol_sha256": "92040344a452c04438d2930a896ca22c1ab5f753b5f56b93e37b4a0e840fcccc",
+  "new_registry_sha256": "7b48beba0fe8e093e7284c387c8e71c6bb2cbcfaf07cec7040fb222732d521fd",
+  "change": "Restart owned server with hard cap 8192 and pin that cap in the new registry. Keep the v4 request parameters and v3 prompt/seed schedule.",
+  "parser_change": "http-chat/2 checks final effective limits/sampler, plus existing input/capture checks. http-chat/1 remains for historical replay only, with new inference blocked.",
+  "preflight_change": "Reject request output allowances exceeding the pinned server cap before tokenization/generation.",
+  "client_http_timeout_seconds": 300,
+  "new_call_limit": 50,
+  "total_call_limit_including_all_prior_versions": 70,
+  "prior_calls": 20,
+  "context_policy": "Rendered input plus 8192 output reserve must fit 32768. No truncation or silent budget change.",
+  "limits": "The v4 record mistakenly treated the server cap as a default. This addendum corrects that interpretation without rewriting its record. Dispatch capture is not, by itself, evidence of final generator limits."
+}

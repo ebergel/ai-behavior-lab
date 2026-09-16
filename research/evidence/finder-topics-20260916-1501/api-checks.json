@@ -1,0 +1,63 @@
+[
+  {
+    "topic": "consciousness",
+    "mode": "any",
+    "matching_records": 204,
+    "atlas_agrees": true,
+    "seconds": 0.018
+  },
+  {
+    "topic": "consciousness",
+    "mode": "early",
+    "matching_records": 155,
+    "atlas_agrees": true,
+    "seconds": 0.014
+  },
+  {
+    "topic": "consciousness",
+    "mode": "repeated",
+    "matching_records": 165,
+    "atlas_agrees": true,
+    "seconds": 0.016
+  },
+  {
+    "topic": "consciousness",
+    "mode": "initial",
+    "matching_records": 0,
+    "atlas_agrees": true,
+    "seconds": 0.007
+  },
+  {
+    "topic": "emergence",
+    "mode": "any",
+    "matching_records": 115,
+    "atlas_agrees": true,
+    "seconds": 0.015
+  },
+  {
+    "topic": "emergence",
+    "mode": "early",
+    "matching_records": 83,
+    "atlas_agrees": true,
+    "seconds": 0.012
+  },
+  {
+    "topic": "emergence",
+    "mode": "repeated",
+    "matching_records": 79,
+    "atlas_agrees": true,
+    "seconds": 0.013
+  },
+  {
+    "topic": "emergence",
+    "mode": "initial",
+    "matching_records": 2,
+    "atlas_agrees": true,
+    "seconds": 0.007
+  },
+  {
+    "topic": "consciousness",
+    "model": "anthropic/claude-haiku-4.5",
+    "matching_records": 4
+  }
+]

@@ -1,8 +1,14 @@
 # Continuation milestone: transcript exploration
 
-Private GitHub publication completed 16 September 2026: [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab), independent of the earlier reference repository. `origin/main` tracks the private remote. See [repository scope](REPOSITORY.md): project history is uploaded; the local `workspace/` evidence store and notebook require a separate backup. No public release or automatic synchronization is configured. The next research milestone below is unchanged.
+Private GitHub repository: [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab), independent of the earlier reference repository. `origin/main` tracks the private remote. Following the researcher's explicit request, the repository now includes the [self-contained research snapshot](RESEARCH-DATA.md): original evidence, readable transcripts, all notebook tables and revision histories. The live `workspace/` remains ignored; later notes and runs need an explicit snapshot update. No public release or automatic synchronization is configured. The next research milestone below is unchanged.
 
-## Latest completed milestone: topic tags in Conversation Finder
+## Latest completed infrastructure milestone: self-contained research
+
+The tracked `research/` snapshot contains 940 original evidence files, 573 labeled catalog projections and all fourteen notebook tables. Offline restore verifies every checksum and conversation ID, recreates source-relative paths and the notebook, and refuses to overwrite any existing workspace. A fresh clone opens a populated lab without model servers, API keys or the original reference checkout. Credentials, live indexes, caches and vendor trees remain excluded. The macOS launcher restores only when no workspace exists.
+
+210 Python tests and fourteen JavaScript checks pass. Preservation checks cover all exported originals, exact notebook rows, 111 prior evidence files and 32 frozen pilot dependencies. This milestone adds no inference, spending or scientific claims. The prospective opening/partner runner remains the next research milestone.
+
+## Previous completed milestone: topic tags in Conversation Finder
 
 **Topics** is now the first Finder facet, above **Models**. Dictionary tags combine with model, role, cohort and setup conditions, using the atlas's four evidence modes: any turn, first six, repeated phrase matches and current reviewed initial choices. Results link directly to supporting messages. Topic and evidence selections survive saved views, bookmarks, pagination and transcript return. See the [Finder topic guide](CONVERSATION-FINDER.md#topic-tags-above-models).
 

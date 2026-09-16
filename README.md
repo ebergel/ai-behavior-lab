@@ -32,13 +32,15 @@ The [trajectory-outcomes report](docs/PILOT-OUTCOMES-V0.2.md), [failed capacity 
 
 ## Open the transcript explorer
 
-Double-click **Open Explorer.command**, or run:
+The private repository includes the original transcripts and a complete research notebook snapshot. Double-click **Open Explorer.command** on macOS to restore a fresh clone and open the populated lab, or run:
 
 ```sh
+# First use in a fresh clone only; existing workspaces are never overwritten.
+python3 -m behaviorlab.research_bundle restore --bundle research --destination workspace
 python3 -m behaviorlab explore --workspace workspace --port 8765
 ```
 
-Open **http://127.0.0.1:8765**. A fresh clone contains the app and reports; full transcripts and the notebook must be imported or restored separately from the local evidence store. No model server is needed to read the saved evidence. The notebook persists in `workspace/explorer/notes.sqlite`; it can be exported from the app. See the [guide](docs/EXPLORER.md) for passage tagging, comparisons, source discovery and limitations.
+Open **http://127.0.0.1:8765**. No model server, API key, or separate reference checkout is needed to read the saved evidence. The [research snapshot](research/README.md) includes 472 default library records, 6 saved research collections, 23 topic definitions, 12 opening reviews, 28 topic flags, 5 personal notes and 5 musings, with all stored revision histories. Synthetic and unstarted records are also preserved with their original labels. The live notebook persists in `workspace/explorer/notes.sqlite`. [Research data and restoration](docs/RESEARCH-DATA.md) explains provenance, offline verification and future snapshot updates; the [Explorer guide](docs/EXPLORER.md) covers passage tagging, comparisons and limitations.
 
 
 ## Try the instrument

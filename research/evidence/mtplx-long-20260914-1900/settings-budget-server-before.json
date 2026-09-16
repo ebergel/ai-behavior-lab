@@ -1,0 +1,223 @@
+{
+  "ok": true,
+  "reasoning": "on",
+  "enable_thinking": true,
+  "preserve_thinking": "off",
+  "preserve_thinking_effective": false,
+  "reasoning_history_mode": "strip",
+  "reasoning_parser": "qwen3",
+  "generation_mode": "mtp",
+  "depth": 3,
+  "model": "grant-ai/Qwen3.8-27B-Abliterated-MTPLX",
+  "metal_memory_caps": {
+    "applied": true,
+    "total_ram_bytes": 103079215104,
+    "total_ram_source": "sysctl_hw_memsize",
+    "memory_limit_api": "mx.set_memory_limit",
+    "memory_limit_bytes": 77309411328,
+    "wired_limit_api": "mx.set_wired_limit",
+    "wired_limit_bytes": 61847529062
+  },
+  "tool_prompt_mode": "native",
+  "tool_contract_active": false,
+  "tool_contract_policy_version": "native_template_tools:agent_tail:v7",
+  "chat_template_profile": "tokenizer",
+  "chat_template_hash": "c3cf9e34abf4f9e3",
+  "depth_max": 3,
+  "draft_control": {
+    "supported": true,
+    "request_field": "depth",
+    "display_label": "Draft depth",
+    "default": 3,
+    "minimum": 1,
+    "maximum": 3,
+    "unit": "depth",
+    "value_labels": [
+      "D1",
+      "D2",
+      "D3"
+    ]
+  },
+  "backend_id": "qwen3_next",
+  "architecture_id": "qwen3-next-mtp",
+  "model_family": "qwen3_8",
+  "support_level": "qa_verified",
+  "model_controls": {
+    "schema_version": 1,
+    "model_ref": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+    "model_family": "qwen3_8",
+    "backend_id": "qwen3_next",
+    "architecture_id": "qwen3-next-mtp",
+    "support_level": "qa_verified",
+    "display_name": "Qwen native MTP",
+    "draft_control": {
+      "supported": true,
+      "request_field": "depth",
+      "display_label": "Draft depth",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 3,
+      "unit": "depth",
+      "value_labels": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    "sampling": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "family_default_reason": "Qwen3.8 official thinking sampler"
+    },
+    "reasoning": {
+      "supported": true,
+      "parser": "qwen3",
+      "display_name": "Qwen think tags",
+      "modes": [
+        "auto",
+        "on",
+        "off"
+      ],
+      "default_mode": "auto",
+      "default": "auto",
+      "history_policy": "preserve_when_enabled",
+      "effort_levels": [
+        "xhigh",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    },
+    "tune": {
+      "supported": true,
+      "supported_families": [
+        "qwen3_5",
+        "qwen3_6",
+        "qwen3_8",
+        "gemma4"
+      ],
+      "control_field": "depth",
+      "candidates": [
+        "AR",
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "unsupported_reason": null
+    },
+    "kv_quant": {
+      "supported": true,
+      "modes": [
+        "off",
+        "q8",
+        "q4"
+      ],
+      "restart_required": true,
+      "proof_level": "unit_and_runtime_cache_validated",
+      "disabled_reason": null
+    },
+    "context_window": {
+      "supported": true,
+      "minimum": 4096,
+      "maximum": 262144,
+      "default": 262144,
+      "step": 1024,
+      "source": "runtime",
+      "unit": "tokens"
+    }
+  },
+  "reasoning_policy": {
+    "supported": true,
+    "parser": "qwen3",
+    "display_name": "Qwen think tags",
+    "modes": [
+      "auto",
+      "on",
+      "off"
+    ],
+    "default_mode": "auto",
+    "default": "auto",
+    "history_policy": "preserve_when_enabled",
+    "effort_levels": [
+      "xhigh",
+      "medium",
+      "low"
+    ],
+    "default_effort": "medium"
+  },
+  "kv_quant_policy": {
+    "supported": true,
+    "modes": [
+      "off",
+      "q8",
+      "q4"
+    ],
+    "restart_required": true,
+    "proof_level": "unit_and_runtime_cache_validated",
+    "disabled_reason": null
+  },
+  "tune_policy": {
+    "supported": true,
+    "supported_families": [
+      "qwen3_5",
+      "qwen3_6",
+      "qwen3_8",
+      "gemma4"
+    ],
+    "control_field": "depth",
+    "candidates": [
+      "AR",
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "unsupported_reason": null
+  },
+  "context_window_policy": {
+    "supported": true,
+    "minimum": 4096,
+    "maximum": 262144,
+    "default": 262144,
+    "step": 1024,
+    "source": "runtime",
+    "unit": "tokens"
+  },
+  "sampling_defaults": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "family_default_reason": "Qwen3.8 official thinking sampler"
+  },
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "max_response_tokens": 8192,
+  "stream_interval": 1,
+  "api_key_required": false,
+  "api_key_source": "none",
+  "reasoning_effort": "medium",
+  "draft_temperature": 1.0,
+  "draft_top_p": 0.95,
+  "draft_top_k": 20,
+  "prefill_chunk_tokens": 2048,
+  "ssd_session_cache": "off",
+  "ssd_session_cache_dir": "~/.mtplx/session-bank",
+  "ssd_session_cache_max_size": "100GB",
+  "ssd_session_cache_min_prefix_tokens": 512,
+  "paged_kv_quantization": "off",
+  "restart_required_settings": [
+    "model",
+    "backend_id",
+    "context_window",
+    "paged_kv_quantization",
+    "ssd_session_cache"
+  ],
+  "ram_session_cache_policy": "target-default",
+  "ram_session_block_prefix_restore": true,
+  "ram_session_cache_max_entries": 4,
+  "ram_session_cache_max_size": "8G",
+  "ram_session_cache_per_session_max_size": "4G"
+}

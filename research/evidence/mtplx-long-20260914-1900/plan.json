@@ -1,0 +1,29 @@
+{
+  "schema": "behaviorlab.long-engineering-plan/1",
+  "created_at": "2026-09-14T19:00:26.963101-03:00",
+  "base": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory/workspace/mtplx-long-20260914-1900",
+  "launch_id": "behaviorlab-mtplx-long-20260914-1900",
+  "protocol_sha256": "5cdcd7827105baca0a83ba8718290af4d787a43e294fddd842513363d933ee5a",
+  "registry_sha256": "1af861a60af88dc3841edd030528d5e28c8d7789a4417093f07c2a0b8c135e64",
+  "data_class": "local_engineering_not_behavioral_experiment",
+  "main_generation_limit": 50,
+  "cap_negative_control_generation_limit": 1,
+  "history_schedule": "1-30 F; 31-40 latest three; 41-50 restored actual ancestry",
+  "recovery_check": "Inject a runner interruption after response_saved at turn 25, before turn commit. Resume in a new process; verify response 25 is reused and only 25 new calls occur.",
+  "failure_policy": "Retain every request/response/error; no automatic retry or protocol changes after an invalid turn. No scientific root is generated.",
+  "guards": [
+    "Every actual input plus 2048-token output reserve must fit 32768 tokens.",
+    "Exercise an oversized constructed input through the real local tokenizer without sending it to generation."
+  ],
+  "success_criteria": [
+    "50 committed main turns with exact captured token IDs and requested controls.",
+    "No implicit trace retention, cache hits, telemetry footer, or output-cap hit in the main trajectory.",
+    "Resume and offline replay preserve saved evidence."
+  ],
+  "limits": [
+    "One model artifact, reasoning on; no original-pair mixed-model qualification.",
+    "One RF trajectory; this does not run all four factorial branches.",
+    "Word lengths are measured, not truncated.",
+    "No conclusion about spontaneous experience or nonduality."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-14T22:07:01.830194+00:00",
+  "schema": "behaviorlab.engineering-revision/1",
+  "prior_protocol": "mtplx-long-rf-paragraph-engineering-v2",
+  "prior_result": "Two committed replies of 399 and 592 whitespace-separated words; turn 3 hit 2048 tokens (1353 reasoning, partial visible answer), blocking 47 descendants.",
+  "new_protocol_sha256": "66a0f56f11f48abe28cbe7215c1de649e11fda7536af0bb30ecd651ee78b1985",
+  "change": "Replace length instruction with Reply in three or four concise sentences. Keep seed coordinates, topic, reasoning on/medium, all generation controls, and 30F/10R/10F history schedule.",
+  "reason": "Constrain engineering response size without expensive exact word counting; evaluate the original numeric-word framing separately.",
+  "new_call_limit": 50,
+  "total_call_limit_including_failed_versions": 54,
+  "selection_scope": "Engineering development, with all failed versions retained; these are not preregistered behavioral outcomes.",
+  "limits": [
+    "Sentence and word counts are descriptive; no model text is trimmed.",
+    "Neither failed version is replaced or retried as though it succeeded.",
+    "A passed concise-sentence trial would not qualify the numeric word-range condition."
+  ]
+}

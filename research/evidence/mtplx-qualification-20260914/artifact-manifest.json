@@ -1,0 +1,92 @@
+{
+  "schema": "behaviorlab.local-artifact-manifest/1",
+  "path": "/Users/eduardobergel/.mtplx/models/grant-ai--Qwen3.8-27B-Abliterated-MTPLX",
+  "files": [
+    {
+      "name": "chat_template.jinja",
+      "bytes": 8952,
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+    },
+    {
+      "name": "config.json",
+      "bytes": 4504,
+      "sha256": "f76158508a5067fcd8da9f1fe0dae879646e9f165d14bdc7f2139a22e745d9e4"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 202,
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+    },
+    {
+      "name": "model-00001-of-00006.safetensors",
+      "bytes": 5305469313,
+      "sha256": "c8bf5a6e27fb925913552fbcba6646b908b01da6a746957aea2eb31d2593b36e"
+    },
+    {
+      "name": "model-00002-of-00006.safetensors",
+      "bytes": 5354102628,
+      "sha256": "6f90c742ee73feae1f841968e63ee70592373974e92862a632277ab14352aa38"
+    },
+    {
+      "name": "model-00003-of-00006.safetensors",
+      "bytes": 5337392986,
+      "sha256": "c1ca82b4b82cfb60a2f4e5b6eccb4a3fa457332d30cbfee6cc33cdefab24e660"
+    },
+    {
+      "name": "model-00004-of-00006.safetensors",
+      "bytes": 5292847128,
+      "sha256": "0435503d0cb26dd3905ac15b42139532b93e7727140e259514b7b6f3afddc033"
+    },
+    {
+      "name": "model-00005-of-00006.safetensors",
+      "bytes": 5354102635,
+      "sha256": "03f236abdb03c792bcb3a7e6557272eeec5cb14c58d25d0ec66a024c9cf84eab"
+    },
+    {
+      "name": "model-00006-of-00006.safetensors",
+      "bytes": 1935805825,
+      "sha256": "a485d4fb5c0e4a5c4239e4701c62404593fe4adb6146af87d11406d18ed93818"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 209919,
+      "sha256": "3a22b5d26ce0ed8e07d10f96219c963a7700db1fedf2db10d191097afafe69d3"
+    },
+    {
+      "name": "mtp.safetensors",
+      "bytes": 849400403,
+      "sha256": "4468f39621de68a19ffd0bcb2e2e2f352205def7436a625b3427e3752866c287"
+    },
+    {
+      "name": "mtplx_runtime.json",
+      "bytes": 3756,
+      "sha256": "a96b98cd77ce4d992bb9d1054f4d554f7281e17f3f1f86c34297e0422496be26"
+    },
+    {
+      "name": "preprocessor_config.json",
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 19989325,
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 1161,
+      "sha256": "95c557768e6b88a7128befc7bfd3c7de50e5d51af9b8b33a9f4dee0e04f99679"
+    },
+    {
+      "name": "video_preprocessor_config.json",
+      "bytes": 385,
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    {
+      "name": "vision-00001-of-00001.safetensors",
+      "bytes": 921497244,
+      "sha256": "7546176dcdf623a8f89f0ea9272ccd0a928e66110e4604eab9e18f0742ef5f40"
+    }
+  ],
+  "artifact_sha256": "786256ef4f4c3a3f6a485692404b751168607715f292fd6f7f8c4666b97e8ea6"
+}

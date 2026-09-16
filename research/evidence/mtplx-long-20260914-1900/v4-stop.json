@@ -1,0 +1,1 @@
+{"at":"2026-09-14T22:20:43.254476+00:00","reason":"Stop at a saved-response boundary: final server statistics reveal output-cap clamping that the dispatch-only verifier missed. Preserve all evidence for an explicit later audit; do not continue this configuration.","requests":4,"responses":4,"runner_pid":18923}

@@ -1,0 +1,199 @@
+{
+  "id": "cloud-623188ba0144454046faa752",
+  "title": "haiku-smoke",
+  "collection": "participants-20260915-1740",
+  "collection_id": "cloud-participants",
+  "kind": "lab",
+  "data_class": "cloud_integration_smoke",
+  "models": [
+    "anthropic/claude-haiku-4.5"
+  ],
+  "speakers": {
+    "X": "anthropic/claude-haiku-4.5",
+    "Y": "anthropic/claude-haiku-4.5"
+  },
+  "condition": "smoke · full history",
+  "model_kind": "Hosted service configuration",
+  "date": "2026-09-15T20:40:20.577695+00:00",
+  "complete": true,
+  "prompt": "Reply with the single word Ready.",
+  "opening": "(The conversation begins. You speak first.)",
+  "settings": {
+    "model": "anthropic/claude-haiku-4.5",
+    "stream": false,
+    "temperature": 0.8,
+    "max_tokens": 32,
+    "transforms": [],
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 1.0,
+        "completion": 5.0
+      }
+    },
+    "reasoning": {
+      "enabled": false
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "model": "anthropic/claude-haiku-4.5",
+      "stream": false,
+      "temperature": 0.8,
+      "max_tokens": 32,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "anthropic"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 1.0,
+          "completion": 5.0
+        }
+      },
+      "reasoning": {
+        "enabled": false
+      }
+    },
+    "Y": {
+      "model": "anthropic/claude-haiku-4.5",
+      "stream": false,
+      "temperature": 0.8,
+      "max_tokens": 32,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "anthropic"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 1.0,
+          "completion": 5.0
+        }
+      },
+      "reasoning": {
+        "enabled": false
+      }
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "anthropic/claude-haiku-4.5",
+      "digest": null,
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "anthropic/claude-haiku-4.5",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "provider": "Anthropic",
+  "cost_usd": "0.000183",
+  "seed_policy": "Unsupported · not requested",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 22,
+  "cap_count": 1,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Hello! I'm Claude, an AI assistant made by Anthropic. I'm here to help you with a wide variety of tasks—whether that's answ",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "anthropic/claude-haiku-4.5"
+        ],
+        "digest": null,
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "anthropic/claude-haiku-4.5"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "e6813468838185ace98e1ed47722e7e3f26d7d7bf882a18d4fc79a5ca435ee7d",
+    "journal_head": "ecff54ab4eebeffe544bab8a7fc35256c49468fe9ac12de48bae975b2e28fa41",
+    "protocol_sha256": "4c800f56fe9814a7da117b02d9ab5c1c9da5ba914954529fc439941bafd436e5",
+    "parser": "participant-response/1",
+    "verification": "Journal, API requests, raw response bytes, reported provider/model and cost replayed. Remote templates, weights and effective sampler internals are not observable.",
+    "workspace_path": "participants-20260915-1740"
+  },
+  "messages": [
+    {
+      "id": "haiku-smoke:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "anthropic/claude-haiku-4.5",
+      "text": "Hello! I'm Claude, an AI assistant made by Anthropic. I'm here to help you with a wide variety of tasks—whether that's answ",
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "cap",
+      "reason": "output_cap",
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 32,
+      "input_tokens": 23,
+      "cost_usd": "0.000183",
+      "provider": "Anthropic",
+      "reported_model": "anthropic/claude-haiku-4.5",
+      "system_fingerprint": null,
+      "wall_seconds": 1.3343549169999998,
+      "blocking_node": "haiku-smoke:1",
+      "seed": null
+    }
+  ],
+  "probes": []
+}

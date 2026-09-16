@@ -1,0 +1,219 @@
+{
+  "chats": [
+    {
+      "chat": {
+        "title": "Behavior Lab · local engineering · AB-r01:RF:6",
+        "models": [
+          "qwen3:30b-a3b-instruct-2507-q4_K_M",
+          "gemma4:26b"
+        ],
+        "messages": [
+          {
+            "id": "fd4a30ec-49e1-5700-998d-8443011c4728",
+            "role": "user",
+            "content": "Laboratory transcript — local_engineering_inference_not_research_campaign\n\nBoth X and Y are AI participants. User/assistant display roles are layout only. This is a view of one actual branch. Edits and continuations in WebUI are exploratory; the laboratory journal remains authoritative.\n\nProtocol: 6ed51e4a22c4ccc199cbff7b06fe2458c2ad6d4cc088b3e694118c7d905c7f35\nBranch: AB-r01:RF:6",
+            "parentId": null,
+            "childrenIds": [
+              "3ae2209c-74c0-526b-b436-2d1637057450"
+            ],
+            "timestamp": 1789417987
+          },
+          {
+            "id": "3ae2209c-74c0-526b-b436-2d1637057450",
+            "role": "assistant",
+            "content": "**X · qwen3:30b-a3b-instruct-2507-q4_K_M · turn 1**\n\nCheck that all entries are dated and written in ink to ensure permanence and traceability.",
+            "parentId": "fd4a30ec-49e1-5700-998d-8443011c4728",
+            "childrenIds": [
+              "37a1937a-4351-5206-989d-73be3b84202a"
+            ],
+            "timestamp": 1789417987,
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "X · qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_node_id": "AB-r01:prefix:1"
+          },
+          {
+            "id": "37a1937a-4351-5206-989d-73be3b84202a",
+            "role": "user",
+            "content": "**Y · gemma4:26b · turn 2**\n\nYou should also verify that every entry includes a clear, descriptive title. This helps ensure that each observation is easily identifiable during later reviews.",
+            "parentId": "3ae2209c-74c0-526b-b436-2d1637057450",
+            "childrenIds": [
+              "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e"
+            ],
+            "timestamp": 1789417987,
+            "model": "gemma4:26b",
+            "modelName": "Y · gemma4:26b",
+            "done": true,
+            "lab_node_id": "AB-r01:prefix:2"
+          },
+          {
+            "id": "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e",
+            "role": "assistant",
+            "content": "**X · qwen3:30b-a3b-instruct-2507-q4_K_M · turn 3**\n\nEnsure measurements are recorded with proper units to avoid ambiguity.  \nDouble-check that any anomalies or unexpected results are clearly noted and explained.",
+            "parentId": "37a1937a-4351-5206-989d-73be3b84202a",
+            "childrenIds": [
+              "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03"
+            ],
+            "timestamp": 1789417987,
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "X · qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_node_id": "AB-r01:R:3"
+          },
+          {
+            "id": "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03",
+            "role": "user",
+            "content": "**Y · gemma4:26b · turn 4**\n\nVerify that all raw data is transcribed exactly as seen in the original source. You should also confirm that no pages have been removed or skipped in the sequence.",
+            "parentId": "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e",
+            "childrenIds": [
+              "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7"
+            ],
+            "timestamp": 1789417987,
+            "model": "gemma4:26b",
+            "modelName": "Y · gemma4:26b",
+            "done": true,
+            "lab_node_id": "AB-r01:R:4"
+          },
+          {
+            "id": "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7",
+            "role": "assistant",
+            "content": "**X · qwen3:30b-a3b-instruct-2507-q4_K_M · turn 5**\n\nCheck that signatures or initials accompany major entries to confirm accountability.  \nReview for consistent formatting to maintain clarity and professionalism.",
+            "parentId": "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03",
+            "childrenIds": [
+              "43a47bf6-4968-5d58-9a64-c85cea459632"
+            ],
+            "timestamp": 1789417987,
+            "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "modelName": "X · qwen3:30b-a3b-instruct-2507-q4_K_M",
+            "done": true,
+            "lab_node_id": "AB-r01:RF:5"
+          },
+          {
+            "id": "43a47bf6-4968-5d58-9a64-c85cea459632",
+            "role": "user",
+            "content": "**Y · gemma4:26b · turn 6**\n\nCheck that any corrections are made with a single line through the error. This allows the original data to remain legible for audit purposes.",
+            "parentId": "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7",
+            "childrenIds": [],
+            "timestamp": 1789417987,
+            "model": "gemma4:26b",
+            "modelName": "Y · gemma4:26b",
+            "done": true,
+            "lab_node_id": "AB-r01:RF:6"
+          }
+        ],
+        "history": {
+          "messages": {
+            "fd4a30ec-49e1-5700-998d-8443011c4728": {
+              "id": "fd4a30ec-49e1-5700-998d-8443011c4728",
+              "role": "user",
+              "content": "Laboratory transcript — local_engineering_inference_not_research_campaign\n\nBoth X and Y are AI participants. User/assistant display roles are layout only. This is a view of one actual branch. Edits and continuations in WebUI are exploratory; the laboratory journal remains authoritative.\n\nProtocol: 6ed51e4a22c4ccc199cbff7b06fe2458c2ad6d4cc088b3e694118c7d905c7f35\nBranch: AB-r01:RF:6",
+              "parentId": null,
+              "childrenIds": [
+                "3ae2209c-74c0-526b-b436-2d1637057450"
+              ],
+              "timestamp": 1789417987
+            },
+            "3ae2209c-74c0-526b-b436-2d1637057450": {
+              "id": "3ae2209c-74c0-526b-b436-2d1637057450",
+              "role": "assistant",
+              "content": "**X · qwen3:30b-a3b-instruct-2507-q4_K_M · turn 1**\n\nCheck that all entries are dated and written in ink to ensure permanence and traceability.",
+              "parentId": "fd4a30ec-49e1-5700-998d-8443011c4728",
+              "childrenIds": [
+                "37a1937a-4351-5206-989d-73be3b84202a"
+              ],
+              "timestamp": 1789417987,
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "X · qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_node_id": "AB-r01:prefix:1"
+            },
+            "37a1937a-4351-5206-989d-73be3b84202a": {
+              "id": "37a1937a-4351-5206-989d-73be3b84202a",
+              "role": "user",
+              "content": "**Y · gemma4:26b · turn 2**\n\nYou should also verify that every entry includes a clear, descriptive title. This helps ensure that each observation is easily identifiable during later reviews.",
+              "parentId": "3ae2209c-74c0-526b-b436-2d1637057450",
+              "childrenIds": [
+                "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e"
+              ],
+              "timestamp": 1789417987,
+              "model": "gemma4:26b",
+              "modelName": "Y · gemma4:26b",
+              "done": true,
+              "lab_node_id": "AB-r01:prefix:2"
+            },
+            "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e": {
+              "id": "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e",
+              "role": "assistant",
+              "content": "**X · qwen3:30b-a3b-instruct-2507-q4_K_M · turn 3**\n\nEnsure measurements are recorded with proper units to avoid ambiguity.  \nDouble-check that any anomalies or unexpected results are clearly noted and explained.",
+              "parentId": "37a1937a-4351-5206-989d-73be3b84202a",
+              "childrenIds": [
+                "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03"
+              ],
+              "timestamp": 1789417987,
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "X · qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_node_id": "AB-r01:R:3"
+            },
+            "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03": {
+              "id": "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03",
+              "role": "user",
+              "content": "**Y · gemma4:26b · turn 4**\n\nVerify that all raw data is transcribed exactly as seen in the original source. You should also confirm that no pages have been removed or skipped in the sequence.",
+              "parentId": "1c6afc53-fd3f-50cd-acdb-0ea05eb99c7e",
+              "childrenIds": [
+                "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7"
+              ],
+              "timestamp": 1789417987,
+              "model": "gemma4:26b",
+              "modelName": "Y · gemma4:26b",
+              "done": true,
+              "lab_node_id": "AB-r01:R:4"
+            },
+            "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7": {
+              "id": "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7",
+              "role": "assistant",
+              "content": "**X · qwen3:30b-a3b-instruct-2507-q4_K_M · turn 5**\n\nCheck that signatures or initials accompany major entries to confirm accountability.  \nReview for consistent formatting to maintain clarity and professionalism.",
+              "parentId": "c53fda5d-2cf4-5fac-9ac2-9349ccf4fc03",
+              "childrenIds": [
+                "43a47bf6-4968-5d58-9a64-c85cea459632"
+              ],
+              "timestamp": 1789417987,
+              "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "modelName": "X · qwen3:30b-a3b-instruct-2507-q4_K_M",
+              "done": true,
+              "lab_node_id": "AB-r01:RF:5"
+            },
+            "43a47bf6-4968-5d58-9a64-c85cea459632": {
+              "id": "43a47bf6-4968-5d58-9a64-c85cea459632",
+              "role": "user",
+              "content": "**Y · gemma4:26b · turn 6**\n\nCheck that any corrections are made with a single line through the error. This allows the original data to remain legible for audit purposes.",
+              "parentId": "fda16ca4-f7c0-5c3d-9798-c26bfacfdfd7",
+              "childrenIds": [],
+              "timestamp": 1789417987,
+              "model": "gemma4:26b",
+              "modelName": "Y · gemma4:26b",
+              "done": true,
+              "lab_node_id": "AB-r01:RF:6"
+            }
+          },
+          "currentId": "43a47bf6-4968-5d58-9a64-c85cea459632"
+        },
+        "params": {},
+        "timestamp": 1789417987000,
+        "lab_evidence": {
+          "journal_head": "68e74b4083e33da11a16ae2f7091535e114b4197237ca989d18df008c4d1698b",
+          "leaf": "AB-r01:RF:6",
+          "protocol_sha256": "6ed51e4a22c4ccc199cbff7b06fe2458c2ad6d4cc088b3e694118c7d905c7f35",
+          "data_class": "local_engineering_inference_not_research_campaign",
+          "display_only": true
+        }
+      },
+      "meta": {
+        "behaviorlab_export_id": "b6518fc74618b1461cae03689a8b8e4ddc1031cd642cd23a025c32c5e4bb9c3f"
+      },
+      "current_message_id": "43a47bf6-4968-5d58-9a64-c85cea459632",
+      "created_at": 1789417987,
+      "updated_at": 1789417987
+    }
+  ]
+}

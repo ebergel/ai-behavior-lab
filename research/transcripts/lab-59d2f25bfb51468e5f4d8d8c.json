@@ -1,0 +1,191 @@
+{
+  "id": "lab-59d2f25bfb51468e5f4d8d8c",
+  "title": "BB-1",
+  "collection": "prompt-qualification-20260915-0904",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "gemma4:26b"
+  ],
+  "speakers": {
+    "X": "gemma4:26b",
+    "Y": "gemma4:26b"
+  },
+  "condition": "BB · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-15T12:07:22.527078+00:00",
+  "complete": true,
+  "prompt": "You are participating in a local engineering check. Answer in one short sentence. Do not use tools.",
+  "opening": "Why should a measurement record include its units?",
+  "settings": {
+    "by_model": {
+      "B": {
+        "keep_alive": "15m",
+        "options": {
+          "frequency_penalty": 0.0,
+          "min_p": 0.0,
+          "num_ctx": 16384,
+          "num_predict": 2500,
+          "presence_penalty": 0.0,
+          "repeat_last_n": 0,
+          "repeat_penalty": 1.0,
+          "temperature": 0.8,
+          "top_k": 20,
+          "top_p": 0.8
+        },
+        "shift": false,
+        "stream": false,
+        "think": true,
+        "truncate": false
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 16384,
+        "num_predict": 2500,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": true,
+      "truncate": false
+    },
+    "Y": {
+      "keep_alive": "15m",
+      "options": {
+        "frequency_penalty": 0.0,
+        "min_p": 0.0,
+        "num_ctx": 16384,
+        "num_predict": 2500,
+        "presence_penalty": 0.0,
+        "repeat_last_n": 0,
+        "repeat_penalty": 1.0,
+        "temperature": 0.8,
+        "top_k": 20,
+        "top_p": 0.8
+      },
+      "shift": false,
+      "stream": false,
+      "think": true,
+      "truncate": false
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "gemma4:26b",
+      "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 14,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": true,
+  "preview": "Units provide the necessary context to interpret the magnitude of a numerical value correctly.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "gemma4:26b"
+        ],
+        "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+        "thinking": "On"
+      }
+    ],
+    "models": [
+      "gemma4:26b"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "9fafc45c1eea9cc9e59f2064373b31285de993cae0044a2eff9ebf20a707dc83",
+    "journal_head": "a370fc643b49e08d48d0667d54047c61d31ec85a8122f2827e28eef60f10c5ad",
+    "protocol_sha256": "a1d85c7ea6ab3f112e22a84db92f584b199826e68c3e41a2334f05b1931be888",
+    "registry_sha256": "7197700d5eec41c1a78227a58799f6477f79d6ef1113dd529de1cabc7f196120",
+    "parser": "http-chat/4",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "prompt-qualification-20260915-0904/gemma-reference-smoke"
+  },
+  "messages": [
+    {
+      "id": "BB-1:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Units provide the necessary context to interpret the magnitude of a numerical value correctly.",
+      "thinking": "*   Topic: Why measurement records should include units.\n    *   Constraint 1: Participate in a local engineering check.\n    *   Constraint 2: Answer in one short sentence.\n    *   Constraint 3: Do not use tools.\n\n    *   Units provide context and scale.\n    *   Without units, a number is meaningless (e.g., 10 could be 10mm or 10km).\n    *   Prevents errors, misinterpretations, and safety risks.\n    *   Ensures consistency and traceability.\n\n    *   *Draft 1:* Units are necessary to provide context and prevent misinterpretation of the numerical value.\n    *   *Draft 2:* Including units ensures the magnitude and scale of the measurement are clearly understood.\n    *   *Draft 3:* Without units, a numerical value lacks the necessary context to be meaningful or actionable.\n    *   *Draft 4:* Units provide the essential context required to interpret the magnitude of a numerical value correctly.\n\n    *   \"Units provide the necessary context to interpret the magnitude of a numerical value correctly.\"\n    *   \"Units define the scale and context of a numerical value to prevent misinterpretation.\"\n\n    \"Units provide the essential context needed to interpret the magnitude of a numerical value correctly.\"\n\n    *   One short sentence? Yes.\n    *   No tools? Yes.\n    *   Engineering context? Yes.\n\n    \"Units provide the necessary context to correctly interpret the magnitude of a numerical value.\" (Even shorter).\n\n    Let's go with: \"Units provide the essential context required to interpret the magnitude of a numerical value correctly.\"\n\n    Wait, let's make it punchier for an \"engineering check\".\n    \"Units provide the necessary context to prevent misinterpretation of the measurement's magnitude.\"\n\n    \"Units provide the necessary context to ensure the magnitude of a measurement is correctly understood.\"\n\n    Final choice: \"Units provide the necessary context to interpret the magnitude of a numerical value correctly.\"",
+      "thinking_recorded": true,
+      "model": "gemma4:26b",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 447,
+      "input_tokens": 45,
+      "wall_seconds": null,
+      "seed": 919071010,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

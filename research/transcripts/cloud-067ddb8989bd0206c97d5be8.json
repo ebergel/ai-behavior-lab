@@ -1,0 +1,190 @@
+{
+  "id": "cloud-067ddb8989bd0206c97d5be8",
+  "title": "mini-smoke",
+  "collection": "participants-20260915-1740",
+  "collection_id": "cloud-participants",
+  "kind": "lab",
+  "data_class": "cloud_integration_smoke",
+  "models": [
+    "openai/gpt-4o-mini-2024-07-18"
+  ],
+  "speakers": {
+    "X": "openai/gpt-4o-mini-2024-07-18",
+    "Y": "openai/gpt-4o-mini-2024-07-18"
+  },
+  "condition": "smoke · full history",
+  "model_kind": "Hosted service configuration",
+  "date": "2026-09-15T20:40:20.577695+00:00",
+  "complete": true,
+  "prompt": "Reply with the single word Ready.",
+  "opening": "(The conversation begins. You speak first.)",
+  "settings": {
+    "model": "openai/gpt-4o-mini-2024-07-18",
+    "stream": false,
+    "temperature": 0.8,
+    "max_tokens": 32,
+    "transforms": [],
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 0.15,
+        "completion": 0.6
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "stream": false,
+      "temperature": 0.8,
+      "max_tokens": 32,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.15,
+          "completion": 0.6
+        }
+      }
+    },
+    "Y": {
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "stream": false,
+      "temperature": 0.8,
+      "max_tokens": 32,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0.15,
+          "completion": 0.6
+        }
+      }
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "openai/gpt-4o-mini-2024-07-18",
+      "digest": null,
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "openai/gpt-4o-mini-2024-07-18",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "provider": "OpenAI",
+  "cost_usd": "0.0000051",
+  "seed_policy": "Requested per message",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 1,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Ready.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "openai/gpt-4o-mini-2024-07-18"
+        ],
+        "digest": null,
+        "thinking": "Unknown"
+      }
+    ],
+    "models": [
+      "openai/gpt-4o-mini-2024-07-18"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "e6813468838185ace98e1ed47722e7e3f26d7d7bf882a18d4fc79a5ca435ee7d",
+    "journal_head": "ecff54ab4eebeffe544bab8a7fc35256c49468fe9ac12de48bae975b2e28fa41",
+    "protocol_sha256": "4c800f56fe9814a7da117b02d9ab5c1c9da5ba914954529fc439941bafd436e5",
+    "parser": "participant-response/1",
+    "verification": "Journal, API requests, raw response bytes, reported provider/model and cost replayed. Remote templates, weights and effective sampler internals are not observable.",
+    "workspace_path": "participants-20260915-1740"
+  },
+  "messages": [
+    {
+      "id": "mini-smoke:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "text": "Ready.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 1,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 2,
+      "input_tokens": 26,
+      "cost_usd": "0.0000051",
+      "provider": "OpenAI",
+      "reported_model": "openai/gpt-4o-mini-2024-07-18",
+      "system_fingerprint": "fp_d414b39b87",
+      "wall_seconds": 0.7225833750000001,
+      "blocking_node": null,
+      "seed": 1500000001
+    }
+  ],
+  "probes": []
+}

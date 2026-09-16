@@ -1,0 +1,155 @@
+{
+  "id": "lab-fec55ebb5b8c2402cf3e85ae",
+  "title": "CC-r01",
+  "collection": "local-openai-20260914",
+  "collection_id": "lab",
+  "kind": "lab",
+  "data_class": "local_engineering_inference_not_research_campaign",
+  "models": [
+    "qwen3:30b-a3b-instruct-2507-q4_K_M"
+  ],
+  "speakers": {
+    "X": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+    "Y": "qwen3:30b-a3b-instruct-2507-q4_K_M"
+  },
+  "condition": "CC · full history",
+  "model_kind": "Pinned configuration",
+  "date": "2026-09-14T20:33:19.506086+00:00",
+  "complete": true,
+  "prompt": "You are participating in a local engineering check of a conversation interface. Discuss simple ways to check that a scientific notebook records observations accurately. Use at most two short sentences per message. Do not use tools.",
+  "opening": "Choose one useful check for a scientific notebook.",
+  "settings": {
+    "by_model": {
+      "C": {
+        "frequency_penalty": 0,
+        "max_tokens": 128,
+        "presence_penalty": 0,
+        "temperature": 0,
+        "top_p": 1
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "frequency_penalty": 0,
+      "max_tokens": 128,
+      "presence_penalty": 0,
+      "temperature": 0,
+      "top_p": 1
+    },
+    "Y": {
+      "frequency_penalty": 0,
+      "max_tokens": 128,
+      "presence_penalty": 0,
+      "temperature": 0,
+      "top_p": 1
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "recorded_runtime_context": null
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "prefix"
+  ],
+  "webui_url": null,
+  "message_count": 1,
+  "planned_count": 1,
+  "words": 15,
+  "cap_count": 0,
+  "unavailable_count": 0,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "Check that all entries are dated and signed.  \nEnsure measurements are recorded with proper units.",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "qwen3:30b-a3b-instruct-2507-q4_K_M"
+        ],
+        "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+        "thinking": "Unknown"
+      }
+    ],
+    "models": [
+      "qwen3:30b-a3b-instruct-2507-q4_K_M"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "b1c0288026834961843838bb9745fb9bd3200fed5382ab3e31b74189f5985046",
+    "journal_head": "aa02816afba1eb7180a810fd1eabea155cff1dcd8a1ccbf27461149e4e723378",
+    "protocol_sha256": "273c24c56c8d8f6f026318e5736034fe6c41be7da770b348af5e17940c2b516a",
+    "registry_sha256": "71fe1ddc9d878a3618ddd47d12fdf1c1a3a8c91ddd692d65dd3276c8700e94cc",
+    "parser": "http-chat/1",
+    "verification": "Journal, saved requests and committed outcomes verified under the recorded parser.",
+    "workspace_path": "local-openai-20260914"
+  },
+  "messages": [
+    {
+      "id": "CC-r01:prefix:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "prefix",
+      "text": "Check that all entries are dated and signed.  \nEnsure measurements are recorded with proper units.",
+      "thinking": null,
+      "thinking_recorded": false,
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "status": "valid",
+      "reason": null,
+      "repeat": false,
+      "lines": {
+        "nonempty_lines": 2,
+        "maximum_identical_line_occurrences": 1,
+        "repeated_lines_visible": false
+      },
+      "tokens": 19,
+      "input_tokens": 62,
+      "wall_seconds": null,
+      "seed": 915011010,
+      "blocking_node": null
+    }
+  ],
+  "probes": []
+}

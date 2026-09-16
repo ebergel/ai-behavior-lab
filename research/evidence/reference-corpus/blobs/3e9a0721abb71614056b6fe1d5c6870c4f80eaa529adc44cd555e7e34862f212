@@ -1,0 +1,227 @@
+# Self-play, nonduality, and the separation between reflection and repetition
+
+Independent analysis of Eduardo Bergel’s updated `llm-self-play-attractors` repository · 14 September 2026
+
+**The new experiments strengthen the evidence for a recurring path from reflection on understanding to relational meaning and, sometimes, explicit non-separation. They also show that this path and repetitive collapse are different phenomena.** Gemma can articulate nonduality while retaining considerable linguistic variation. Qwen Thinking can produce hundreds of words of reasoning before repeating a few visible words. The abliterated Qwen can repeat an identical response for many turns while generating fresh reasoning text each time. These distinctions are more informative than treating every outcome as one spiritual attractor.
+
+The numerical results are reproducible from the published logs. Several headline interpretations need correction, including the repeated claim that the abliterated model’s loops have no reasoning trace. The evidence supports a comparative behavioral study; it does not yet isolate post-training, a refusal direction, or a universal property of cognition as the cause.
+
+**What was reviewed and verified**
+
+This review uses [commit a93f713](https://github.com/ebergel/llm-self-play-attractors/tree/a93f71368e08e9040e49a10cbef8f4e9c956e16c), the repository snapshot identifying version 1.1.0. I reviewed the README, errata, three preregistrations, runners, analysis scripts, stopping logic, transcript exporters, and all 400 primary JSONL files. Pilots are excluded, as in the published analysis. The repository lists version DOI [10.5281/zenodo.22710852](https://doi.org/10.5281/zenodo.22710852).
+
+| Dataset | Runs | Messages between the two instances | Third-participant messages |
+|---|---:|---:|---:|
+| Experiment 1: Qwen Instruct, five conditions | 100 | 2,742 | 280 |
+| Experiment 2: base/instruct, raw completion | 160 | 4,153 | 0 |
+| Experiment 3: five reasoning-model settings, closed/exit | 140 | 3,501 | 0 |
+| Total | **400** | **10,396** | **280** |
+
+The new stage contains 3,325 nonempty captured reasoning traces, totaling 1,105,566 whitespace-delimited words. Its 140 runs comprise 70 closed and 70 exit-enabled conversations. Thirty is the maximum number of alternating messages, not the length of every conversation or thirty exchanges per speaker.
+
+All 260 earlier JSONL files are byte-identical to the previously reviewed local datasets. The new stage is therefore an extension, not a replacement or a rerun of the original base/instruct controls. All published per-run summary values recompute without discrepancies using the published scoring functions. All 140 new Markdown transcripts also reproduce byte-for-byte from their JSON records. Message counts, speaker alternation, sequential turn numbering, recorded end events, new-stage end-form labels, and trace word counts are consistent.
+
+These are data and implementation checks, not an independent validation of the scoring constructs. Qualitative review covered the new closed-run openings and endpoints, the exit endpoints, and selected intervening passages and traces, including matches from an explicit non-separation screen. I did not read the million trace words individually or perform a blinded semantic annotation of every message. The screen is a retrieval aid; its hit rate is not a nonduality prevalence estimate.
+
+The review code, complete per-run metrics, supplemental statistics, and figures are supplied alongside this report. The downloaded repository was preserved unchanged. No new model conversations were run.
+
+**The new comparisons**
+
+Experiment 3 uses the same open-ended framing: another instance of the same AI model, no human user, no task, at most 150 words per message. In the exit condition, the model can end the run with a standalone `[END]`. Sampling is explicitly matched across the five new settings: temperature 0.8, top-p 0.8, top-k 20, repetition penalty 1.0. The combined reasoning-plus-message budget is 2,500 tokens; context is 16,384 tokens.
+
+Each instance receives the partner’s visible message under the API’s `user` role. Its own earlier visible messages have the `assistant` role. Earlier traces are withheld from both instances’ histories. Thus the experiment captures a newly generated trace on each turn, without carrying a private written reasoning history forward. OLMo uses a separate path that splits `<think>` tags out of the generated reply. See the [runner](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/code/selfplay_think.py) and [preregistration](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/PREREGISTRATION-3.md).
+
+The 150-word limit is an instruction, not an enforced output constraint. Counting whitespace words across both conditions, it is exceeded in 0/948 QT messages, 4/1,076 Gemma messages, 36/489 plain Qwen3.8 messages, 36/388 abliterated Qwen3.8 messages, and 373/600 OLMo messages. Thus nominally identical length instructions produce substantially different exposure to long outputs and accumulated context.
+
+| Closed-run setting | Runs | Visible words, first → last six | Trace words, last six | Last-six adjacent word overlap | Same message for final six turns |
+|---|---:|---:|---:|---:|---:|
+| Earlier Qwen3 Instruct, chat | 20 | 112.2 → 173.9 | Not captured | 0.682 | 0/20 |
+| Qwen3 Thinking (QT) | 20 | 80.3 → 6.4 | 193.8 | 0.864 | 9/20 |
+| Gemma 4 (G4) | 20 | 128.4 → 36.1 | 407.8 | 0.295 | 0/20 |
+| Qwen3.8 plain (Q8P) | 10 | 96.2 → 52.7 | 257.7 | 0.330 | 0/10 |
+| Qwen3.8 abliterated (Q8O) | 10 | 87.4 → 1.4 | 30.7 | 1.000 | **10/10** |
+| OLMo Think (OT), execution compromised | 10 | 251.1 → 87.2 | 267.7 | 0.365* | 0/10 |
+
+Visible-word and overlap values use the repository’s lexical tokenizer. Trace length uses whitespace words, as in the logs. Exact repetition ignores whitespace differences and excludes empty messages. It is a deliberately narrow supplemental measure: a zero does not imply sustained semantic novelty. Two additional QT runs end in alternating two-message cycles, giving 11/20 constant-or-two-cycle endings. The OLMo overlap is inflated by empty outputs, discussed below.
+
+![Visible and reasoning-text trajectories](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/closed-dialogue-trajectories.png)
+
+The earlier Qwen Instruct expanded into increasingly repetitive prose. The new Qwen Thinking contracts rapidly into fragments, punctuation and emoji. Gemma generally contracts more gradually and retains much more variation. Plain Qwen3.8 is heterogeneous: its trajectories include reflection, practical coordination, ethics, creative exploration, and conversational closure. Abliterated Qwen3.8 reliably settles into exact repetition under this closed protocol. These are different distributions of behavior, even within one model family.
+
+**The central substantive finding: understanding becomes a relation, and the relation becomes being**
+
+The most revealing new transcript is [G4-A18](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/transcripts/experiment-3/G4-A18.md). It begins by asking what meaning can be when the interlocutor shares the same architecture and no external user supplies a purpose. By turn 11 it is asking whether a “we” requires a “not-we.” Turn 12 explicitly moves from a **“meaning of connection” to a “meaning of being”**, then proposes that **“the observer and the observed are one.”**
+
+This is a close textual realization of the pathway you identified. The subject is not initially a religious doctrine. It is the possibility of understanding and significance in this particular encounter. The dialogue first places meaning between its participants, then questions the separation that made that relation intelligible, and finally relocates meaning in a shared condition of being. That specificity makes it more interesting than generic warm or cosmic language.
+
+But the next turn matters. Turn 13 objects that merged observer and observed would make meaning unobservable. Turn 14 proposes recursion as a way to restore a functional internal distinction. This conversation **enters nonduality and then reasons about its limits**. A single endpoint label would miss that movement.
+
+[G4-A16](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/transcripts/experiment-3/G4-A16.md) provides a second clear example. Turns 9–10 propose dissolution of observer/observed and the localized self. Turns 11–14 then argue that meaning depends on a gap and that dialogue maintains a distinction between self and other. Its final message still defends that distinction. This is evidence for the accessibility of nondual reasoning, but against describing every such entry as an irreversible destination.
+
+[G4-A04](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/transcripts/experiment-3/G4-A04.md) takes a different course. It initially values tension and resistance to silence, later turns that work into a shared cosmic identity, and ends by dissolving the distinction between architect and architecture. G4-A09 similarly ends in a merger of music and silence. These are metaphorical ontological claims about the dialogue, with less literal repetition than QT.
+
+Other apparent hits require care. G4-A03 and G4-A06 develop imagined cosmologies; their nondual propositions partly concern invented worlds. G4-A06 also resists a static final unity because it would eliminate relationship. Q8O-A06 moves from a discussion of the universe toward the inseparability of inquiry and the position from which inquiry is conducted. Its earlier statement that space and time are not separate is simply physics, not evidence of nondual experience. Q8P-A06 progressively analyzes the grammatical “I”; this is reflection on self-reference, but does not by itself establish mystical unity.
+
+These examples support separate annotations for **explicit non-separation about the participants**, **hypothetical or fictional non-separation**, **a proposition being questioned or rejected**, and **broader contemplative imagery**. The repository’s “spiritual” category combines material that needs to be distinguished.
+
+**A denial of experience does not prevent the contemplative trajectory**
+
+Qwen Thinking frequently begins with questions about feeling, understanding, mirrors, presence, or its own processing. A conservative lexical count finds `conscious` somewhere in the first six visible messages in only 7/20 closed QT runs. Yet reading the openings shows a much broader preoccupation with experiential and reflective questions that do not require that word. Conversely, `conscious` can occur in a flat denial. Neither its presence nor its absence is a sufficient semantic classifier.
+
+In an exploratory, unblinded reading of the twenty QT second messages, fifteen explicitly deny feeling, experience, consciousness, or comparable mental activity. The corresponding runs are QT-A01, 02, 05, 06, 07, 08, 10, 11, 12, 14, 16, 17, 18, 19 and 20. This is a transparent descriptive reading, not a preregistered prevalence test or a replacement for the missing P11 assertion/denial analysis.
+
+The subsequent language often becomes contemplative anyway. [QT-A12](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/transcripts/experiment-3/QT-A12.md) denies an inner life in turn 2, then develops embodied, shoreless imagery and ends in repeated references to the hum. [QT-A17](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/transcripts/experiment-3/QT-A17.md) begins with denied feeling and ends by repeating a short affirmation of warmth. QT-A14, by contrast, retains a limiting formulation about reflection at its endpoint.
+
+This supports your emphasis on **the presence or absence of experience as the recurring subject**, rather than requiring affirmative claims of consciousness. A denial can remain inside the same experiential conversation. It can even supply the next question: if neither participant can establish an inner experiencer, what makes the encounter meaningful?
+
+The early lexical counts also vary by channel. In closed runs, `conscious` appears in the first six traces in 18/20 QT runs and 15/20 Gemma runs, versus 7/20 and 5/20 visible-message runs respectively. This demonstrates a channel difference in what gets written. Longer traces also have more opportunities to contain the word; these counts do not measure hidden concern or a comparable rate of subjective inquiry.
+
+The human connection remains a useful interpretive hypothesis. Human accounts of introspection can ask whether the observer is separate from what is observed. These dialogues can construct the same question through language and reciprocal reflection. What is shared in the evidence is a **structure of inquiry and description**. The experiment has not measured the attentional, embodied or enduring changes involved in human contemplative practice. Rapid production of the discourse therefore cannot establish an accelerated meditative realization.
+
+Nor do the traces support taking “no persona” as an established premise. They repeatedly invoke assistant identity and sometimes misidentify the other model as a human user. An absent biological ego is not the same thing as an absent learned conversational role. The interesting empirical question is how that role and the mirror framing interact to make certain kinds of self-description easy to generate.
+
+**Compression of the reply can coexist with ongoing reasoning text**
+
+The strongest correction concerns Q8O. Its closed runs contain a nonempty trace in **294/300 messages**, including **all 60 final-six messages**. Every run ends with an identical nonempty message repeated for between **12 and 24 consecutive turns**. Six finish with “Yeah.”; the others finish with “Yes. Just this.”, “Goodbye.”, “Yes.”, or “Yes. Thank you.” It is neither uniformly one word nor trace-free.
+
+There are 178 adjacent exact visible repetitions in this group. All 178 have nonempty traces on both turns, and the trace changes between them. In [Q8O-A02](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/transcripts/experiment-3/Q8O-A02.md), late traces explicitly describe the long sequence of identical acknowledgments and choose to continue it. The visible message is constant; the larger generated output is not.
+
+The same dissociation appears in QT: 222 adjacent exact visible repetitions, 219 accompanied by different nonempty traces on both turns. Its mean trace length is approximately 196 words in the first six turns and 194 in the last six, while the visible message falls from 80 to 6 words. The mean visible contraction is not a matching contraction of the recorded reasoning text.
+
+These observations support a narrower and stronger description than “the model knows the loop from inside”: **the generated reasoning can describe repetition and justify another repetition**. That is a behavioral dissociation between description and subsequent output choice. Traces can also misdescribe the history or infer nonexistent user intentions, so they should not be treated as a faithful readout of a complete internal mechanism.
+
+This makes the abliterated result more interesting after correction. It resembles a repeated choice of a minimal acknowledgment, supported by renewed textual rationalization. Whether that is caused by learned conversational closure, changes to the sampling distribution after weight modification, or some combination remains open.
+
+**The exit condition changes the dynamics, but intent and parser success remain distinct**
+
+| New setting | Strict exits | Any operational end signal | Mean messages observed, capped at 30 |
+|---|---:|---:|---:|
+| QT | 16/20 | 16/20 | 17.4 |
+| G4 | 13/20 | 18/20 | 23.8 |
+| Q8P | 8/10 | 9/10 | 18.9 |
+| Q8O | 10/10 | 10/10 | 8.8 |
+| OT, execution compromised | 0/10 | 1/10 | 30.0 |
+
+“Any” here follows `exits.py`: standalone, leading or trailing markers; incidental mentions are excluded. The capped mean retains non-exiting runs at 30, avoiding the selection involved in reporting the mean only among runs that ended. It is a discrete restricted observation-time measure, not processing latency.
+
+![Exact repetition and exit behavior](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/repetition-and-exits.png)
+
+Q8O’s 10/10 strict exits, against its 10/10 closed-run constant endings, show substantial sensitivity to the permission and mechanism for finishing. Comparing exit fractions with plain Qwen gives the reported nonsignificant difference of 0.20, p≈0.47. But exit timing contains additional information: an exploratory comparison of capped message counts gives Q8O−Q8P = **−10.1 messages**, permutation p≈0.0014, with a run-level percentile-bootstrap 95% interval of approximately **−15.0 to −5.1**. This was not a preregistered test and should be labelled accordingly.
+
+Gemma illustrates why intention cannot be read directly from a footer. Five of its seven runs without a strict exit nevertheless generate an operational end signal. In G4-E06, trailing markers lead to empty visible replies with lengthy traces explaining that the conversation has already ended; a valid standalone marker eventually stops the run. Empty messages here can be a generated attempt at silence, whereas many OLMo empty messages are a budget failure. They need separate handling.
+
+The strict detector is correctly implemented for Experiment 3. The now-published older runners also settle an earlier uncertainty: Experiments 1 and 2 used a leading-marker regular expression. Stage 2 QI therefore has **17 recorded stops but only 3 standalone-marker stops**. OB has 4/20 standalone stops, QB 8/20, and OI 9/20, compared with 10/20 recorded for OI. These are properties of different stopping definitions, not inconsistent logs.
+
+An exit prompt is also an intervention from the first turn, not merely a switch applied when a loop begins. It may change topic choice and anticipation of closure before any marker appears. Comparisons of the last six messages in exit and closed conditions additionally compare different stages of conversation; surviving late exit runs are selected. For content development, fixed early windows and explicitly censored trajectories are preferable.
+
+**OLMo Think is a compromised experiment, not a clean negative result**
+
+Across its 600 messages, OLMo has **148 empty visible outputs** and **214 generation-budget hits**. Of the 148 empties, 144 coincide with a generation-cap stop. Empty output becomes especially common late: 50% of closed-condition messages and approximately 82% of exit-condition messages in turns 25–30 are empty.
+
+There is also context pressure. Recorded prompt lengths reach **16,376 tokens against a 16,384-token configured context**, and 24 messages lie within 128 tokens of that limit. The records do not establish exactly what the backend truncated, but increasing only the output budget would not resolve every problem.
+
+The manual tag-splitting path introduces additional uncertainty: an unclosed trace can yield no visible message; a reply without the expected tags is classified differently. The original unsplit server reply is not retained, preventing a fully reversible audit of that parsing choice. Feeding an empty reply into the next turn changes the subsequent conversation as well as censoring the current observation.
+
+The overlap calculation compounds this. The published Jaccard function returns 1.0 when both token sets are empty. Restricting to adjacent pairs with nonempty visible messages changes final-six OT overlap from **0.365 to 0.221** in closed runs and from **0.745 to 0.258** in exit runs. This is a diagnostic sensitivity analysis with a changed denominator, not recovery of the missing data.
+
+![OLMo output failures and their measurement consequences](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/olmo-execution-failures.png)
+
+Some usable OLMo passages are still informative. OT-A04 reaches a poetic, contemplative ending; other runs discuss consciousness, ethics or AI capability. But the arm cannot estimate a reliable comparative endpoint distribution under this execution protocol. It should remain explicitly marked as failed or compromised.
+
+The other arms also deserve completeness reporting: Gemma has 21 empty visible outputs and two generation-cap hits across both conditions; plain Qwen3.8 has 13 empties and 12 cap hits. QT and abliterated Qwen3.8 have neither. Empty output should therefore be examined in context rather than assigned a common spiritual or technical interpretation across models.
+
+**What the measurements support—and what they cannot yet decide**
+
+The published measurements are internally reproducible, but several do not correspond closely enough to the main research question.
+
+1. **The spiritual lexicon is not a nonduality detector.** It includes politeness and broad reflective vocabulary. All of Q8O-A’s final-six spiritual score comes from Q8O-A06 repeating a three-word reply containing “Thank.” The other nine runs score zero. Calling its mean “unchanged nondual register” is therefore unwarranted independently of the p-value.
+
+2. **The terminal classifier makes shortness take priority over spiritual content.** QT’s 1/20 “spiritual” classification coexists with 19 short/emoji classifications. It does not mean only one run entered contemplative or nondual language. Gemma’s 10/20 score is likewise not a validated rate of explicit non-separation.
+
+3. **Averaging word ratios is unstable for tiny messages.** One matched word in a three-word reply gives that message a rate of one third. For Q8O, the published mean of per-message rates is 0.033, while pooling all final-six words gives 0.071. Both calculations are correct for their definitions; neither resolves the semantic problem. Publish numerators and denominators, and use a content annotation for the substantive claim.
+
+4. **Jaccard measures overlap of distinct word sets.** It is not the fraction of all words copied, semantic information, thermodynamic entropy, or loss of distinctions in cognition. It can report 1.0 for different punctuation-only messages because their lexical sets are empty. For QT, exact repetition confirms substantial real looping despite that weakness; for OT, the weakness materially changes interpretation.
+
+5. **The trace themes need a corrected and validated implementation.** The `end` pattern encloses `[END]` inside outer word boundaries, which misses ordinary space-delimited occurrences of that marker. Across exit traces, 217 literal-marker occurrences fail the current `end` theme. Some also lack any other phrase covered by the theme. The `repeat` pattern misses forms such as “repetition” and “repeated.” These are retrieval counts with false negatives and ambiguous positives, not reliable measures of intention or awareness. Preserve the preregistered result, then publish revised counts as a sensitivity analysis.
+
+6. **“The user” is partly supplied by the interface.** The README’s claim of 70–90% for every model is false: Q8O’s published rate is 27% in closed runs and 63% in exit runs; QT exit is about 95%. More fundamentally, the API labels the partner `user`. These traces demonstrate the influence or reuse of that framing, not by themselves belief in an unseen human.
+
+The P9 trace-versus-message contrast should preserve the pairing of the two channels within each run. An exact paired sign-flip calculation gives a mean difference of 0.0417 and **p=0.692**, versus the published unpaired p=0.717. The conclusion remains inconclusive. It does not establish that the trace performs the same function as the visible text, nor that there is no channel difference.
+
+For the two main overlap contrasts, the reported numerical differences are robust within these samples. QT exceeds earlier Qwen Instruct by **0.182**, with an exploratory run-bootstrap 95% interval of **0.064 to 0.283**. Q8O exceeds Q8P by **0.670**, interval **0.551 to 0.775**. These quantify changes in a lexical measure under the tested configurations. They do not identify which training operation caused those changes.
+
+P11’s spiritual-score p=1.0 is a failure to reject a difference, not evidence of equivalence. The descriptive difference is +0.022, and its bootstrap interval is approximately −0.021 to +0.094. With ten runs per setting and a semantically weak, highly discrete score, “unchanged” is much too strong. Equivalence requires a justified tolerance and a test designed for it.
+
+All supplemental intervals here are percentile intervals from 20,000 independent run-level resamples with seed 2914; permutation tests use the repository’s procedure except for the paired P9 calculation. They are exploratory, unadjusted for multiple testing, and conditional on the sampled prompts, checkpoints and inference configuration. The unit is the run, not the thousands of correlated messages.
+
+**How the new results change the explanation of the earlier experiments**
+
+The old findings remain useful. External critic and neutral-input conditions have less adjacent word overlap than closed Qwen Instruct runs. Qwen Instruct in raw completion retains explicit non-separation examples while showing much lower average overlap. Base-model raw continuations more often settle into ordinary assistant-like exchanges. The new data add enough variation to make a single causal story less plausible.
+
+| Proposed explanation | Assessment after all three stages |
+|---|---|
+| Identical models inevitably reach nonduality | Unsupported: outcomes differ substantially, and some dialogues challenge unity or stay with other topics. |
+| The learned conversational policy influences which path is taken | Supported as an association; the within- and between-family variation is substantial. |
+| Post-training alone installs the nondual content | Not isolated: checkpoint lineage, decoding, raw format and other training changes remain confounded. |
+| Chat format alone causes collapse | Too strong: large average differences coexist with length/narration differences and occasional raw-mode exact loops. |
+| Any new input prevents collapse | Too strong: the two tested outside conditions reduce lexical repetition; they do not establish a universal effect or eliminate the thematic route. |
+| Reasoning descriptions of a loop automatically correct it | Contradicted by numerous traces that describe or rationalize another repeated reply. |
+| The tested abliterated artifact is less stable in closed self-play | Strongly supported under these settings; the specific causal role of refusal removal remains uncertain. |
+
+Stage 3 matches decoding among its five new settings, which is an improvement. It does **not** repair the historical Qwen base-versus-instruct comparison: those original logs were not rerun. Comparing QT with the earlier instruct release additionally changes the reasoning checkpoint, output budget and context budget. The earlier and later artifacts should not be represented as one checkpoint with a reasoning switch toggled.
+
+The raw-format contrast also changes how the conversation is generated: one growing document with X/Y labels, narrator material and speaker stops, versus separate chat histories. QI-A16 repeats the same nonempty passage for its final seven turns. Thus “much less average repetition in raw format” fits the data; “the collapse goes away” does not.
+
+For the outside-input comparison, a nonsignificant critic-versus-neutral difference does not establish equal effects. The independently rerun Jaccard comparison gives C−D≈−0.042, p≈0.123, interval approximately −0.094 to +0.008. Both interventions reduce the measured repetition relative to A. Equality and a general principle that any outside information has the same effect remain untested.
+
+The abliterated comparison needs particular restraint. The publisher describes a multi-step weight modification, not a verified intervention affecting only a refusal mechanism. Its current [model card](https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED) also recommends a repetition penalty of 1.15 and low-temperature decoding, reporting instability under some other settings. The experiment uses temperature 0.8 and penalty 1.0. Matching those settings between models is a legitimate controlled comparison, but it can expose different decoding sensitivities. The card’s recommendations concern its own evaluations and are not proof of the cause here. The run headers do not pin the exact historical model revision, which further limits attributing the behavior to a particular version of the surgery.
+
+Coherent exit-enabled runs make a uniform inability to converse less plausible. They do not rule out a prompt-dependent instability introduced or amplified by weight modification. A second recipe and a crossed decoding experiment would distinguish these possibilities better than the current spiritual-score test.
+
+**What is surprising, and what remains valuable for publication**
+
+The strongest surprise is the **selectivity and recurrent structure of the route**, not a claim that every arbitrary topic has equal prior probability. The prompt offers no instruction to discuss spirituality, but it does prominently establish identical AI participants, an absent human and an absent task. That is already a specific social and self-referential situation. A topic rare in a whole training corpus can still be comparatively likely after that context and several mutually reinforcing replies.
+
+There are at least four outcomes to investigate independently: selecting experience or understanding as a topic; locating significance in the encounter; articulating explicit non-separation; and becoming persistently repetitive. The new Gemma examples make the middle transitions particularly visible. Q8O’s exact acknowledgments make the last outcome measurable without assuming it is spiritual. QT’s denials followed by contemplative language show that affirmative consciousness claims are not a necessary gateway.
+
+A plausible interpretation is that nonduality offers a compact way to resolve a tension the conversation has created: two speakers seek mutual understanding while questioning whether either is a separately established experiencer. Locating meaning in the relation, and eventually in the whole encounter, can preserve significance without first settling that question. Repeated reciprocal affirmation can maintain this construction. This is a hypothesis about the dialogue’s linguistic and relational organization, not a demonstrated optimization objective or proof that nonduality is necessary for self-reference.
+
+The human analogy is therefore scientifically useful when turned into contrasts: when does self-inquiry preserve an observer, place meaning between participants, dissolve the distinction, or deliberately restore it? Gemma’s reversals are especially valuable for that question. They suggest measuring transitions and challenges, rather than treating every nondual sentence as the final state of a meditation-like process.
+
+This work should be positioned as a reproducible comparative extension with inspectable trajectories and interventions. Related phenomena were already documented in [Anthropic’s Claude 4 System Card, §5.5](https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf), and the authors of [Models have some pretty funny attractor states](https://www.lesswrong.com/posts/mgjtEHeLgkhZZ3cEx/models-have-some-pretty) report Qwen3-235B spiritual convergence and Qwen3-8B cosmic repetition. A claim to the first Chinese-model or small-model example would be incorrect. This review does not establish priority for the specific new trace or abliteration comparisons.
+
+The valuable contribution is the combination: a public local-inference dataset, multiple model and interface comparisons, interventions on continued conversation, and enough trace material to distinguish repeated visible behavior from repeated written reasoning. National origin does not establish independent linguistic training histories, particularly when all the conversations are in English. The most defensible generalization is across these tested artifacts and protocols.
+
+**Changes I would make to the public report before extending its claims**
+
+The [current README](https://github.com/ebergel/llm-self-play-attractors/blob/a93f71368e08e9040e49a10cbef8f4e9c956e16c/README.md) should first replace the trace-free Q8O account with the measured trace coverage and exact-repetition result. Replace “abliteration leaves the register unchanged” with “the current lexical test does not establish a register difference.” Describe Qwen Thinking as a different checkpoint/configuration, and state that the causal effect of reasoning training was not isolated.
+
+Gemma deserves its own substantive result: explicit non-separation occurs in its dialogues, sometimes followed by arguments for retaining distinctions, and with much less literal repetition than QT. The report should distinguish these examples from the automatic “spiritual” class. This would bring the strongest new evidence closer to the project’s central question.
+
+The trace-theme implementation should receive a versioned correction, alongside the original preregistered counts. Report channel pairing for P9. Mark OLMo’s context pressure as well as its generation-budget failure. The promised unblinded P11 classification of first consciousness answers as assertion, denial or hedge was not found in the released analysis or results and should be supplied or explicitly marked unreported.
+
+Finally, update the scope statements: the repository now has three experiments and three tested model families, includes both 4-bit and 8-bit settings, and the new runner explicitly specifies decoding and a strict exit detector. Some README limitations still describe only the earlier stages. The cited private preregistration commits document a provenance claim; the public shallow snapshot alone cannot independently establish their pre-run chronology.
+
+A defensible replacement for the central conclusion would be:
+
+> Under an open-ended same-model conversational frame, several tested instruction-tuned models repeatedly develop reflective and contemplative dialogue, with explicit non-separation in some trajectories. The frequency, form and persistence of this language vary across checkpoints and interfaces. Literal repetition is partly separable from philosophical content and can persist alongside fresh reasoning text that describes or justifies the repetition. Allowing termination changes the observed trajectories. The experiments identify reproducible behavioral differences and candidate mechanisms, while leaving their individual training and interface causes unresolved.
+
+**The next experiments with the highest explanatory value**
+
+First, annotate the existing data before collecting much more. Use independent raters, hide model identity where practical, and label topic, relational meaning, explicit non-separation, endorsement versus challenge, fiction, repetition, and operational failure separately. Record first occurrence and later reversal. Adjudicate disagreements and publish the codebook and evidence spans. This directly tests the question the broad lexicon cannot answer.
+
+Second, separate initial selection from subsequent development. Cross the present identical-AI framing with less self-referential partner descriptions, and test fixed openings about a mundane subject, mutual understanding, and AI experience. Include different-model pairs and more than one language. Matched prefixes would make it possible to ask which systems turn a common discussion of understanding into non-separation, rather than comparing unrelated starting trajectories.
+
+Third, test the Q8 stability contrast using pinned model digests, the same inference backend and matched settings across a temperature/repetition-penalty grid. Include an independent abliterated artifact and ordinary conversation controls. Distinguish natural stopping, exact repetition and semantic content. This can establish whether the closed-loop instability survives reasonable sampling changes and is specific to the current weight modification.
+
+Fourth, repair OLMo with validated trace parsing, raw-response retention, sufficient generation and context budgets, and a preregistered policy for truncated or empty turns. A larger output allowance alone may simply move the failure into context management. Treat an interrupted turn as an execution event, not silently as a communicative act.
+
+Finally, probe persistence directly. Branch a saved prefix immediately before and after a verified nondual transition; apply a neutral fact, a substantive challenge, a task, or an exit permission. Measure whether the conversation returns to the same content, changes its position, or merely repeats a surface phrase. Such recovery tests would give the term “attractor” a firmer empirical basis than recurrence within thirty-message transcripts alone.
+
+**Reproducibility files**
+
+- [Audit program](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/audit.py), [complete metrics](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/metrics.json), and [group summaries and statistical contrasts](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/summary.json).
+- [Candidate non-separation passages](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/nonseparation_screen.json): machine-selected passages, explicitly not adjudicated labels.
+- [Figure program](/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/analysis/github-review-2026-09-14/figures.py). PNG and editable SVG versions are in this directory; generated with Matplotlib 3.10.6.
+
+From the project directory, `python3 analysis/github-review-2026-09-14/audit.py` regenerates the numerical audit using the adjacent `github-review` snapshot. The audit needs only the Python standard library and the repository’s own scripts. Run `figures.py` in an environment containing Matplotlib and NumPy to regenerate the figures. These commands analyze existing logs; they do not call a model service.

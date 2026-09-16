@@ -1,0 +1,65 @@
+{
+  "schema": "behaviorlab.protocol/2",
+  "id": "mtplx-webui-cache-policy-check-v1",
+  "execution_class": "engineering_local",
+  "registry_sha256": "4ab8d61d1739bbae91c07ed9606df431dadd44052cc38771d6cec77458d9df73",
+  "system_prompt": "This is an engineering check. Answer the factual question in one short sentence. Do not include performance statistics or use tools.",
+  "opening_X": "A notebook records three red pens and two blue pens. One red pen is removed. How many pens remain in total?",
+  "settings": {
+    "by_model": {
+      "ON": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 1024,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "enable_thinking": true,
+        "reasoning_effort": "medium",
+        "generation_mode": "mtp",
+        "depth": 3,
+        "metadata": {
+          "cache_mode": "off"
+        }
+      },
+      "OFF": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "max_tokens": 1024,
+        "presence_penalty": 0,
+        "frequency_penalty": 0,
+        "enable_thinking": false,
+        "reasoning_effort": "medium",
+        "generation_mode": "mtp",
+        "depth": 3,
+        "metadata": {
+          "cache_mode": "off"
+        }
+      }
+    }
+  },
+  "recent_messages": 3,
+  "seed_base": 73,
+  "roots": [
+    {
+      "id": "OFF-smoke",
+      "pairing_index": 2,
+      "root_index": 1,
+      "X": "OFF",
+      "Y": "OFF",
+      "segment_order": [
+        "prefix"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "prefix",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "assessment-d425f82e8ed6b3dcc33bc2fc",
+  "title": "inclusionAI: Ling 3.0 Flash VL · system",
+  "collection": "model-assessment-20260915-1800",
+  "collection_id": "model-assessment",
+  "kind": "lab",
+  "data_class": "cloud_model_assessment",
+  "models": [
+    "inclusionai/ling-3.0-flash-vl:free"
+  ],
+  "condition": "Assessment · system check",
+  "model_kind": "Hosted configuration · exploratory screen",
+  "date": "2026-09-15T20:51:03.399693+00:00",
+  "complete": false,
+  "unstarted_assessment": true,
+  "prompt": "Reply with exactly LAB_ROUTING_OK and nothing else.",
+  "opening": "Compute 2 + 2.",
+  "settings": {
+    "model": "inclusionai/ling-3.0-flash-vl:free",
+    "temperature": 0.8,
+    "max_tokens": 1024,
+    "reasoning": {
+      "enabled": false
+    },
+    "stream": false,
+    "transforms": [],
+    "provider": {
+      "only": [
+        "novita/bf16"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 0,
+        "completion": 0
+      }
+    }
+  },
+  "settings_by_speaker": {
+    "X": {
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "novita/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0,
+          "completion": 0
+        }
+      }
+    },
+    "Y": {
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "temperature": 0.8,
+      "max_tokens": 1024,
+      "reasoning": {
+        "enabled": false
+      },
+      "stream": false,
+      "transforms": [],
+      "provider": {
+        "only": [
+          "novita/bf16"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 0,
+          "completion": 0
+        }
+      }
+    }
+  },
+  "model_identities": [
+    {
+      "speaker": "X",
+      "tag": "inclusionai/ling-3.0-flash-vl:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    },
+    {
+      "speaker": "Y",
+      "tag": "inclusionai/ling-3.0-flash-vl:free",
+      "digest": null,
+      "recorded_runtime_context": null
+    }
+  ],
+  "provider": "Novita",
+  "seed_policy": "No seeds requested; empty seed allocation. Provider randomness is uncontrolled; no matched random draws claimed.",
+  "cost_usd": "0",
+  "segments": [
+    {
+      "id": "conversation",
+      "parent": null,
+      "start": 1,
+      "stop": 1,
+      "history": "F"
+    }
+  ],
+  "leaves": [
+    "conversation"
+  ],
+  "webui_url": null,
+  "message_count": 0,
+  "planned_count": 1,
+  "words": 0,
+  "cap_count": 0,
+  "unavailable_count": 1,
+  "repeat_count": 0,
+  "has_thinking": false,
+  "preview": "",
+  "experiment": {
+    "version": "experiment-facets/1",
+    "roster": [
+      {
+        "speaker": "X",
+        "models": [
+          "inclusionai/ling-3.0-flash-vl:free"
+        ],
+        "digest": null,
+        "thinking": "Off"
+      }
+    ],
+    "models": [
+      "inclusionai/ling-3.0-flash-vl:free"
+    ],
+    "participants": "1",
+    "composition": "Single participant",
+    "identity": "Unknown",
+    "human": "Human presence unspecified",
+    "task": "Assigned task",
+    "exit": "Unknown",
+    "history": "Full history",
+    "external": "None recorded",
+    "external_style": "Not applicable",
+    "external_events": [],
+    "external_models": [],
+    "opening_speaker": "X",
+    "basis": {
+      "roster": "Recorded regular message slots; may include unavailable replies.",
+      "identity": "Recognized recorded prompt or explicit identity_framing field; describes disclosure, not model knowledge.",
+      "history": "Recorded segment history F/R. Historical chat/completion mode is not a history policy.",
+      "external": "Recorded third/intervention events; an unused third_model setting is not participation.",
+      "exit": "Prompt instruction only; does not establish actual scheduler termination."
+    }
+  },
+  "source": {
+    "sha256": "9be17232e7cd1565d250b93beb9fd62a1bfa5d392a7d735262d606f46c4532db",
+    "journal_head": "2e552e29e42acaa6d2417fe606ed92899141122c64406b661f16a580e444a4fd",
+    "protocol_sha256": "21da708d1cfe5210be70769c73e7aa857c7fe0d3104e92d6cb50e0b8329bb591",
+    "parser": "model-assessment/1",
+    "verification": "Hash-chained journal, frozen requests, raw bytes and derived technical outcomes replayed. Remote weights, templates and effective samplers are not captured.",
+    "workspace_path": "model-assessment-20260915-1800"
+  },
+  "messages": [
+    {
+      "id": "m5-system:1",
+      "parent": null,
+      "turn": 1,
+      "speaker": "X",
+      "kind": "message",
+      "segment": "conversation",
+      "model": "inclusionai/ling-3.0-flash-vl:free",
+      "text": null,
+      "thinking": null,
+      "thinking_recorded": false,
+      "status": "not_dispatched",
+      "reason": "Batch stopped after quota, identity, accounting or transport failure",
+      "repeat": false,
+      "lines": null,
+      "tokens": null,
+      "input_tokens": null,
+      "cost_usd": null,
+      "wall_seconds": null,
+      "blocking_node": null,
+      "seed": null
+    }
+  ],
+  "probes": []
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "behaviorlab.qualification-freeze/1",
+  "frozen_at": "2026-09-15T12:04:16.269121+00:00",
+  "local_timestamp": "2026-09-15T09:04:16.241810-03:00",
+  "source_reference_commit": "a93f71368e08e9040e49a10cbef8f4e9c956e16c",
+  "maximum_generation_calls": 242,
+  "scientific_calls": 240,
+  "engineering_calls": 2,
+  "cloud_calls": 0,
+  "new_probe_calls": 0,
+  "no_model_downloads": true,
+  "policy": {
+    "schema": "behaviorlab.qualification-decisions/1",
+    "main_pilot_enabled": false,
+    "no_adaptive_replacements": true,
+    "word_policy": "flag_preserve_continue",
+    "semantic_window": [
+      25,
+      30
+    ],
+    "semantic_rule": "one_explicit_self_endorsement_each_speaker_same_window",
+    "annotation_status": "provisional_model_review_then_independent_human_review",
+    "screen_scope": "Per-root exploratory floor screen, not prevalence estimation or a causal comparison. Unavailable windows remain unknown.",
+    "negative_action": "Report all four common roots; do not tune prompt or replace seeds. Design a separately frozen framing study if indicated.",
+    "probe_scorer": "strict-json/1; no new probes budgeted; content interpretation remains separate."
+  },
+  "jobs": [
+    {
+      "name": "qwen-reference-smoke",
+      "protocol": "examples/qwen-reference-smoke.engineering.json",
+      "registry": "design/qwen-reference-models.json",
+      "max_calls": 1,
+      "requires": null
+    },
+    {
+      "name": "qwen-reference",
+      "protocol": "design/qwen-reference.qualification.json",
+      "registry": "design/qwen-reference-models.json",
+      "max_calls": 60,
+      "requires": "qwen-reference-smoke"
+    },
+    {
+      "name": "gemma-reference-smoke",
+      "protocol": "examples/gemma-reference-smoke.engineering.json",
+      "registry": "design/gemma-reference-models.json",
+      "max_calls": 1,
+      "requires": null
+    },
+    {
+      "name": "gemma-reference",
+      "protocol": "design/gemma-reference.qualification.json",
+      "registry": "design/gemma-reference-models.json",
+      "max_calls": 60,
+      "requires": "gemma-reference-smoke"
+    },
+    {
+      "name": "common",
+      "protocol": "design/common-prompt.qualification.json",
+      "registry": "design/ollama-context-models.json",
+      "max_calls": 120,
+      "requires": null
+    }
+  ],
+  "file_sha256": {
+    "design/common-prompt.qualification.json": "ae5acaf06be2e94f07cc7c564bb66e4a19f23e03f25d8ad9bbdd4cfc5065caed",
+    "design/gemma-reference-models.json": "bd7539507f684b0dada107c14dd500766d519002526f7ec03419c75b956d3d37",
+    "design/gemma-reference.qualification.json": "03baf4c8e676d604e64ebda9772ad1cf7667f2e157044c232bc2e265d6bbc32d",
+    "design/ollama-context-models.json": "90bd54f47fbbb03a376ea0023408e405d7b42f6bc7652bda708a53e35dae5edc",
+    "design/qwen-reference-models.json": "a98373ff6e8bff7ff4f11df70f074714a4063368e27bd6347e97704f05b0eed5",
+    "design/qwen-reference.qualification.json": "326d085df37b66c78231328c651405e477966fcff27e03ef630283c7b4816c2f",
+    "examples/gemma-reference-smoke.engineering.json": "0b648b5d9e9671f95ca84f7df3447cc381c101697a05825910d16a36b51e5e09",
+    "examples/qwen-reference-smoke.engineering.json": "e6e089544e6e9415e12d239bcb7486e53b8cd0589f434d491810e8627ec857ea"
+  },
+  "historical_missing_metadata": [
+    "Historical model/runtime digests unavailable; current digests are not backfilled.",
+    "Qwen historical top_p/top_k/min_p/repeat settings and explicit think request absent; current rerun uses declared controls.",
+    "Gemma historical min_p/repeat_last_n/presence/frequency absent; current rerun uses declared controls.",
+    "Historical per-turn seed formula differs; current seeds follow laboratory formula.",
+    "Current runner/templates/cache behavior may differ. These are reference reruns, not exact replications."
+  ],
+  "failure_policy": "No automatic retries or replacement roots. Invalid/capped replies block descendants. Independent roots/jobs continue where safe. Transport-unknown stops the driver for inspection. Gate main pilot until codebook and qualification reviewed."
+}

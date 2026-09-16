@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-14T22:17:57.055017+00:00",
+  "schema": "behaviorlab.engineering-revision/1",
+  "prior_protocol": "mtplx-long-rf-sentences-engineering-v3",
+  "prior_result": "11 valid turns; turn 12 hit 2048 output tokens, comprising 2037 reasoning tokens and only six visible words. All failed versions are retained.",
+  "new_protocol_sha256": "37774e60e8949535c6ee35426b46a3fd533542e46143d4204b7ff94a53104cf4",
+  "change": "Keep the v3 prompt, seeds, sampling, and reasoning/history settings. Raise only request max_tokens from 2048 to 8192.",
+  "server_default_output_tokens": 2048,
+  "explicit_per_request_output_tokens": 8192,
+  "client_http_timeout_seconds": 300,
+  "client_timeout_scope": "Changes only how long the client waits; it is recorded outside the model payload. Earlier invocations used the prior 120-second default.",
+  "reason": "The 2048-token total allowance is inadequate for this reasoning-on trajectory even with concise visible replies.",
+  "new_call_limit": 50,
+  "total_call_limit_including_failed_versions": 66,
+  "total_prior_generation_calls": 16,
+  "selection_scope": "Engineering budget qualification, not a preregistered behavioral comparison. All cap hits are excluded from valid main trajectories and remain documented.",
+  "context_policy": "Each actual rendered request plus the larger 8192-token reserve must fit 32768. No context truncation is allowed."
+}

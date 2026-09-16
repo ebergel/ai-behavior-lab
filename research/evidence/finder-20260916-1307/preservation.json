@@ -1,0 +1,46 @@
+{
+  "source_artifacts_preserved": 111,
+  "prior_sqlite_tables": {
+    "notes": {
+      "rows": 5,
+      "unchanged": true
+    },
+    "history": {
+      "rows": 5,
+      "unchanged": true
+    },
+    "research_collections": {
+      "rows": 5,
+      "unchanged": true
+    },
+    "collection_history": {
+      "rows": 6,
+      "unchanged": true
+    },
+    "topic_flags": {
+      "rows": 28,
+      "unchanged": true
+    },
+    "topic_flag_history": {
+      "rows": 28,
+      "unchanged": true
+    },
+    "topic_dictionary": {
+      "rows": 22,
+      "unchanged": true
+    },
+    "topic_dictionary_history": {
+      "rows": 22,
+      "unchanged": true
+    },
+    "topic_openings": {
+      "rows": 4,
+      "unchanged": true
+    },
+    "topic_opening_history": {
+      "rows": 4,
+      "unchanged": true
+    }
+  },
+  "new_finder_views": 0
+}
