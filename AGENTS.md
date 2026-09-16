@@ -18,6 +18,8 @@ On 16 September the researcher explicitly included local–cloud mixtures, start
 
 # Evidence and verification
 
+The Topic atlas milestone adds separate versioned dictionary/opening-review tables; see `docs/TOPIC-ATLAS.md`. Preserve its 22 seed entries, four Codex opening reviews and their histories alongside all existing personal notes, flags and collections. Literal phrase counts and recurrence candidates are discovery measures, not automatic semantic labels or model preference estimates. The current four-root opening denominator differs from the 438-record lexical corpus. Unreviewed and unavailable openings are not negatives. Dictionary/source changes require affected reviews to be reconsidered; do not silently recode them. New generations require their own finite experimental freeze.
+
 The first local–cloud mixed pilot is now closed: `workspace/mixed-gemma-haiku-20260916-1139`, four eighteen-message Gemma/Haiku roots, 72 valid replies, $0.102302 hosted cost. See `docs/GEMMA-HAIKU-PILOT.md` and `docs/RESEARCH-PURPOSE.md`. Preserve this journal, frozen executable dependencies, complete reading, collection and flags. Its authorization does not extend to the larger 540-call draft, GPT-4o mixtures or trios. The new runner remains a bounded pair pilot; those extensions need their own design and freeze. Treat the researcher's untouched-self language as a guiding interpretation; reduced active human steering is the measured setup.
 
 Keep generated campaigns and imported datasets under the ignored `workspace/` directory or another explicitly selected evidence directory. Label synthetic engineering output separately from actual inference and scientific results. Preserve exact source bytes and missing historical metadata.

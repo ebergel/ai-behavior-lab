@@ -20,6 +20,7 @@ from .common import canonical, fingerprint, read_json, require, sha256
 from .history import ancestry, request
 from .exploration_collections import ResearchCollections
 from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
+from .topic_atlas import TopicAtlas
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
@@ -27,6 +28,7 @@ from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
 REPORTS = [('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
+           ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
            ('mixed-dialogue', 'Gemma and Haiku: local–cloud dialogues', 'GEMMA-HAIKU-PILOT.md'),
            ('framing', 'Nemotron framing comparison', 'NEMOTRON-FRAMING.md'),
            ('cheap-framing', 'GPT-4o mini and Haiku comparison', 'CHEAP-MODEL-FRAMING.md'),
@@ -385,7 +387,7 @@ class Notes:
 
 def make_server(workspace, port=8765):
     catalog=Catalog(workspace); notes=Notes(Path(workspace)/'explorer'/'notes.sqlite'); token=secrets.token_urlsafe(32)
-    studies=ResearchCollections(notes); topics=TopicFlags(notes)
+    studies=ResearchCollections(notes); topics=TopicFlags(notes); topic_atlas=TopicAtlas(notes)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args): pass
 
@@ -406,7 +408,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -432,6 +434,10 @@ def make_server(workspace, port=8765):
                     return self.send(studies.detail(parts[3],catalog))
                 if path=='/api/topics': return self.send({'flags':topics.all(catalog)})
                 if path=='/api/topics/export': return self.send(topics.export(catalog),download='behavior-lab-topic-flags.json')
+                if path in ('/api/topic-atlas','/api/topic-atlas/export'):
+                    q=parse_qs(url.query);args=[catalog,studies,q.get('cohort',['all'])[0],q.get('subject',['emergence'])[0],q.get('participant_model',[''])[0]]
+                    if path.endswith('/export'):return self.send(topic_atlas.export(*args),download='behavior-lab-topic-atlas.json')
+                    return self.send(topic_atlas.analyze(*args))
                 if path=='/api/runs': return self.send(catalog.search(parse_qs(url.query),notes.all(),topics.all(catalog)))
                 if path.startswith('/api/runs/'):
                     run=catalog.runs[path.rsplit('/',1)[-1]]
@@ -457,6 +463,8 @@ def make_server(workspace, port=8765):
                 if self.path=='/api/studies': return self.send(studies.save(data,catalog))
                 if self.path=='/api/topics': return self.send(topics.save(data,catalog))
                 if self.path=='/api/topics/remove': return self.send(topics.delete(data))
+                if self.path=='/api/topic-atlas/dictionary': return self.send(topic_atlas.save_entry(data))
+                if self.path=='/api/topic-atlas/openings': return self.send(topic_atlas.save_review(data,catalog))
                 if self.path=='/api/notes': return self.send(notes.save(data,catalog))
                 if self.path=='/api/notes/remove': return self.send(notes.delete(data))
                 if self.path=='/api/refresh': catalog.refresh(); return self.send({'refreshed':True})

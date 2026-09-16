@@ -1,0 +1,119 @@
+{
+  "recorded_at": "2026-09-16T12:25:28.261094-03:00",
+  "schema": "behaviorlab.topic-atlas-validation/1",
+  "tests": {
+    "passed": 172,
+    "full_suite": "docs/evidence/topic-atlas-tests.txt",
+    "javascript_syntax": "pass",
+    "git_diff_check": "pass"
+  },
+  "browser": {
+    "live_source_link_and_researcher_note": "pass",
+    "back_to_cohort": "pass",
+    "model_filter": "3 whole conversations / 54 messages for Gemma; clearing restores 4 / 72",
+    "dictionary_edit": "isolated copy only; revision 2 excludes two stale reviews",
+    "opening_edit": "isolated copy only; original Codex author and exact narrower spans retained; editor Local researcher; history added",
+    "pagination": "13–24 / 438 opening cards and 25–48 / 366 matching excerpts verified",
+    "console_errors": 0,
+    "screenshot": "docs/evidence/topic-atlas.jpg"
+  },
+  "snapshots": {
+    "pilot": {
+      "path": "workspace/topic-atlas-20260916-1206/pilot-atlas-verified.json",
+      "sha256": "a094923c468a1b6c8885b95df4ae16dbd3660ce4ced75563e4bf8f80b545371f",
+      "denominators": {
+        "branched_records": 0,
+        "opening_reviews_pending": 0,
+        "opening_reviews_resolved": 4,
+        "opening_reviews_stale": 0,
+        "opening_reviews_unavailable": 0,
+        "partial_or_unqualified_messages": 0,
+        "runs": 4,
+        "visible_messages": 72,
+        "visible_words": 9835
+      },
+      "emergence": {
+        "id": "emergence",
+        "initial_choices": 2,
+        "message_hits": 22,
+        "opening_run_hits": 3,
+        "repeated_run_hits": 3,
+        "return_candidates": 3,
+        "run_hits": 3,
+        "title": "Emergence"
+      }
+    },
+    "corpus": {
+      "path": "workspace/topic-atlas-20260916-1206/corpus-atlas-verified.json",
+      "sha256": "6899ebb72d36e3eb61ca86f9ab60381a877504ede510884f552d35ebdf15a56b",
+      "denominators": {
+        "branched_records": 4,
+        "opening_reviews_pending": 434,
+        "opening_reviews_resolved": 4,
+        "opening_reviews_stale": 0,
+        "opening_reviews_unavailable": 0,
+        "partial_or_unqualified_messages": 1502,
+        "runs": 438,
+        "visible_messages": 11204,
+        "visible_words": 1002269
+      },
+      "emergence": {
+        "id": "emergence",
+        "initial_choices": 2,
+        "message_hits": 366,
+        "opening_run_hits": 83,
+        "repeated_run_hits": 79,
+        "return_candidates": 55,
+        "run_hits": 115,
+        "title": "Emergence"
+      }
+    }
+  },
+  "preserved_tables": {
+    "notes": {
+      "before": 5,
+      "after": 5,
+      "unchanged": 5
+    },
+    "history": {
+      "before": 5,
+      "after": 5,
+      "unchanged": 5
+    },
+    "research_collections": {
+      "before": 5,
+      "after": 5,
+      "unchanged": 5
+    },
+    "collection_history": {
+      "before": 6,
+      "after": 6,
+      "unchanged": 6
+    },
+    "topic_flags": {
+      "before": 28,
+      "after": 28,
+      "unchanged": 28
+    },
+    "topic_flag_history": {
+      "before": 28,
+      "after": 28,
+      "unchanged": 28
+    }
+  },
+  "preserved_prior_artifacts": 111,
+  "frozen_pilot_dependencies": 32,
+  "new_tables": {
+    "topic_dictionary": 22,
+    "topic_dictionary_history": 22,
+    "topic_openings": 4,
+    "topic_opening_history": 4
+  },
+  "researcher_note": {
+    "id": "1236932f318cd39d7b639d07",
+    "author": "Local researcher"
+  },
+  "inference_calls": 0,
+  "new_cost_usd": "0",
+  "automation_active": false
+}

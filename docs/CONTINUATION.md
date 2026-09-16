@@ -1,6 +1,14 @@
 # Continuation milestone: transcript exploration
 
-## Latest completed milestone: four Gemma–Haiku dialogues
+## Latest completed milestone: topic atlas
+
+The researcher requested an evolving dictionary of initial and recurrent topics after highlighting Gemma's emergence proposal. [Topic atlas](TOPIC-ATLAS.md) now supplies 22 versioned definitions, literal variants and counts, an attributed opening-review workflow, source links, cohort/model filters, pagination, and analysis/history exports. Four Codex reviews identify emergence twice, authenticity once and reasoning styles once; all adopted proposals occur at Y2 with uptake at X3. The full eligible corpus has 438 records and 115 emergence-variant matches, with 434 openings still unreviewed. Literal hits, semantic choices and possible returns are separate outcomes.
+
+No new inference or cost. The researcher's fifth personal note, all previous notebook/collection/flag rows, 111 checked evidence files and 32 frozen pilot dependencies are preserved. Evidence snapshots: `workspace/topic-atlas-20260916-1206/`. The Explorer remains on port 8765. No automation is active.
+
+Next useful analysis: freeze a reading cohort and dictionary revision, review its openings including ordinary/unmatched cases, then annotate semantic episodes and transitions. This can sharpen the repeated-pair and matched-prefix designs below without treating one pilot root per pairing as a model preference estimate. A larger causal batch, trios and additional GPT-4o mixtures remain future work with separate allocation and freeze.
+
+## Previous completed milestone: four Gemma–Haiku dialogues
 
 The approved first local–cloud pilot is complete. See [the full report](GEMMA-HAIKU-PILOT.md) and [the research purpose](RESEARCH-PURPOSE.md), which preserves the researcher's guiding idea while operationalizing reduced human steering. Four fresh eighteen-message roots (GG, HH, GH, HG) produced all 72 valid replies for **$0.102302** hosted cost, against a frozen $0.129167 forecast and separate $1 ceiling. There were no caps, errors, retries, returned reasoning or unknown costs; thirty word overruns remain untrimmed. The new runner keeps explicit participant routing, faithful histories, native local token preflight, raw-response recovery and no-retry uncertainty handling separate from earlier frozen runners.
 
