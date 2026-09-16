@@ -12,6 +12,8 @@ The [Model assessment section](docs/MODEL-ASSESSMENT.md) adds model profiles, fr
 
 The [latest participant comparison](docs/CHEAP-MODEL-FRAMING.md) adds eight complete twelve-message roots from GPT-4o mini and Claude Haiku 4.5, using the same anonymous/mirror prompts as the earlier four-root Nemotron screen. All 96 new calls completed for $0.14248480. Haiku repeatedly discussed experience and authenticity; mini developed practical or fictional paths. Both anonymous Haiku roots invented a human participant. No explicit nonseparation was identified in these windows. A combined twelve-root research collection keeps eight Codex findings and 21 exact passages together; the default library now has 466 entries. All 145 tests pass. The original thirty-message paid campaign and full GPT-4o remain deferred.
 
+[Updated cost projections](docs/CHEAP-MODEL-FRAMING.md#updated-cost-projections--16-september-2026) use the measured token usage: about $0.68 for eight comparable thirty-message conversations or $3.38 for forty, evenly split between mini and Haiku. Expected cost and enforced spending ceilings are reported separately.
+
 The [trajectory-outcomes report](docs/PILOT-OUTCOMES-V0.2.md), [failed capacity screen](docs/CAPACITY-AND-MEASUREMENT.md), [measurement draft](docs/MEASUREMENT-V2-DRAFT.md) and [human coding handoff](docs/RATER-HANDOFF.md) retain their scientific status. The revised factorial proposal remains planning-only.
 
 ## Open the transcript explorer

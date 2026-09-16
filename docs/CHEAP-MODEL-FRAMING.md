@@ -59,6 +59,37 @@ The 150-word instruction was exceeded in 63 of 96 replies: mini anonymous roots 
 
 Two roots per condition, fixed rather than randomized scheduling, uncontrolled remote sampling, unequal output exposure and the bundled mirror cues limit interpretation. The Nemotron data were collected on a different date and route. Haiku's earlier system-instruction control remains unresolved. Observed uptake of the mirror wording cannot establish that all requested system instructions were rendered or prioritized faithfully. None of these exploratory readings is independent human coding or a prevalence estimate.
 
+## Updated cost projections — 16 September 2026
+
+The observed **$0.14248480 for eight twelve-message conversations** is now the planning baseline. Four mini conversations cost $0.00938580 (about $0.00235 each); four Haiku conversations cost $0.13309900 (about $0.03327 each). Haiku contributed 93.4% of the total. The $1 batch ceiling and the older held campaign's $5 ceiling are spending controls, not expected costs; future plans should show expected consumption separately.
+
+The following projections use equal numbers of mini and Haiku conversations and equal anonymous/mirror allocation. “Messages” counts both speakers together. Only the first row was actually run at this size; other rows are planning calculations, not newly authorized experiments.
+
+| Total conversations | Messages each | Calls | Mini cost | Haiku cost | Combined cost |
+|---:|---:|---:|---:|---:|---:|
+| 8 | 12 | 96 | $0.0094 | $0.1331 | **$0.1425 observed** |
+| 40 | 12 | 480 | $0.0469 | $0.6655 | **about $0.71** |
+| 8 | 30 | 240 | $0.0535 | $0.6233 | **about $0.68** |
+| 40 | 30 | 1,200 | $0.2676 | $3.1163 | **about $3.38** |
+| 100 | 30 | 3,000 | $0.6689 | $7.7908 | **about $8.46** |
+| 40 | 60 | 2,400 | $0.9876 | $11.0164 | **about $12.00** |
+
+Adding independent conversations at the same length scales expected cost linearly. Extending each conversation does not: every new message resends its growing history. For example, extending the eight-root design from 12 to 30 messages projects about $0.68, rather than $0.36 from simply multiplying the bill by 30/12.
+
+For each of the eight roots, the calculation retains its actual first twelve-message bill. It projects later replies at that root's observed mean completion-token count and grows later prompt-token counts by `(last prompt tokens − first prompt tokens) / 11` per message. Later input/output tokens use the saved route prices. The per-root forecasts are then averaged and scaled to the balanced sample size. Thus both different reply lengths and full-history accumulation are included.
+
+Mini reported 15,616 cached input tokens; its measured bill is $0.00117120 below charging all its observed tokens at undiscounted rates. The measured prefix keeps that discount. Additional projected input uses the undiscounted saved rate, so future cache hits could lower the projection. Haiku reported no cached input tokens in this batch.
+
+These are point estimates based on four roots per model, including Haiku's closing sequence. They assume comparable prompts, reply lengths, no reasoning or tools, and the 16 September route prices; they do not claim current future prices or a statistical confidence interval. A larger output cap is an allowance, not a prediction that every reply uses it. Conversely, actual longer replies or reasoning would increase costs. The older forty-root thirty-message plan also differs in mirror wording, seed controls and token allowance, so $3.38 is a useful planning analogue, not a guarantee for that frozen plan. Technical checks, failures and unknown billing are outside these projected totals.
+
+Reproduce the calculation without inference:
+
+```sh
+PYTHONPATH=. python3 scripts/estimate_participant_costs.py workspace/cheap-framing-20260916-0927/events.jsonl
+```
+
+The [machine-readable calibration](evidence/participant-cost-calibration.json) records the source hash, per-root inputs, formula and unrounded projections. Future estimates should use this measured baseline and declare any changed assumptions; frozen evidence and spending controls are preserved.
+
 ## Next design informed by this batch
 
 The next useful contrast should separate **same-model identity**, **absence of a human**, and **permission to stop**. A small separately frozen identity/no-human 2×2 screen could first measure whether the intended relationship remains stable, before treating later experience discussion as its consequence. A separately declared stopping policy can then test how much repetitive or increasingly intimate language depends on continued scheduler calls. These are proposals, not additional calls authorized or launched by this batch.

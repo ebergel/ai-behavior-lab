@@ -2,6 +2,8 @@
 
 ## Latest milestone: mini and Haiku participant comparison
 
+Cost planning update, 16 September: use the [measured-token projections](CHEAP-MODEL-FRAMING.md#updated-cost-projections--16-september-2026). The eight-root twelve-message batch cost $0.1425; comparable balanced designs project about $0.68 for eight thirty-message roots, $3.38 for forty, or $8.46 for one hundred. Longer histories are included. Report spending ceilings separately from expected cost. The read-only estimator makes no model calls and does not authorize a new batch.
+
 Completed 16 September 2026 after the user's explicit request: [eight fresh twelve-message roots](CHEAP-MODEL-FRAMING.md), two anonymous and two mirror per model. All 96 calls completed for $0.14248480 under a separately frozen $1 ledger ceiling; no caps, errors, returned traces, retries or unknown costs. Sixty-three replies exceeded the 150-word instruction. All 96 visible replies were read by Codex.
 
 Haiku repeatedly discussed experience and authenticity, while mini developed practical topics or a fictional AI-consciousness story. Both anonymous Haiku roots invented a human participant; neither mirror root made the same explicit claim. One mirror root chose to stop at 8, but scheduled continuation produced closing remarks and two identical “Yes.” replies. No explicit nonseparation was identified in these windows. These are small exploratory samples with semantic boundary cases, not prevalence estimates or evidence of subjective experience.

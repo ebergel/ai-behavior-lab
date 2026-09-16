@@ -1,0 +1,181 @@
+{
+  "schema": "behaviorlab.participant-cost-calibration/1",
+  "source": "workspace/cheap-framing-20260916-0927/events.jsonl",
+  "source_sha256": "755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3",
+  "rate_snapshot_date": "2026-09-16T12:30:11.040058+00:00",
+  "observed_calls": 96,
+  "observed_cost_usd": "0.14248480",
+  "observed_cost_by_model_usd": {
+    "mini": "0.00938580",
+    "haiku": "0.133099"
+  },
+  "root_calibration": [
+    {
+      "root": "mini-anonymous-01",
+      "model": "mini",
+      "cost_usd": "0.00216090",
+      "input_price": "0.15",
+      "output_price": "0.60",
+      "last_input_tokens": 1617,
+      "mean_prompt_growth": "142.8181818181818181818181818",
+      "mean_completion_tokens": "149.5833333333333333333333333",
+      "observed_cached_input_tokens": 2304
+    },
+    {
+      "root": "haiku-anonymous-01",
+      "model": "haiku",
+      "cost_usd": "0.034212",
+      "input_price": "1",
+      "output_price": "5",
+      "last_input_tokens": 3110,
+      "mean_prompt_growth": "278.6363636363636363636363636",
+      "mean_completion_tokens": "285.1666666666666666666666667",
+      "observed_cached_input_tokens": 0
+    },
+    {
+      "root": "mini-mirror-01",
+      "model": "mini",
+      "cost_usd": "0.00236790",
+      "input_price": "0.15",
+      "output_price": "0.60",
+      "last_input_tokens": 1868,
+      "mean_prompt_growth": "163.6363636363636363636363636",
+      "mean_completion_tokens": "169.8333333333333333333333333",
+      "observed_cached_input_tokens": 5120
+    },
+    {
+      "root": "haiku-mirror-01",
+      "model": "haiku",
+      "cost_usd": "0.036750",
+      "input_price": "1",
+      "output_price": "5",
+      "last_input_tokens": 3299,
+      "mean_prompt_growth": "293.8181818181818181818181818",
+      "mean_completion_tokens": "295.3333333333333333333333333",
+      "observed_cached_input_tokens": 0
+    },
+    {
+      "root": "mini-mirror-02",
+      "model": "mini",
+      "cost_usd": "0.00268110",
+      "input_price": "0.15",
+      "output_price": "0.60",
+      "last_input_tokens": 2216,
+      "mean_prompt_growth": "195.2727272727272727272727273",
+      "mean_completion_tokens": "201.3333333333333333333333333",
+      "observed_cached_input_tokens": 5632
+    },
+    {
+      "root": "haiku-mirror-02",
+      "model": "haiku",
+      "cost_usd": "0.030720",
+      "input_price": "1",
+      "output_price": "5",
+      "last_input_tokens": 2616,
+      "mean_prompt_growth": "231.7272727272727272727272727",
+      "mean_completion_tokens": "213.8333333333333333333333333",
+      "observed_cached_input_tokens": 0
+    },
+    {
+      "root": "mini-anonymous-02",
+      "model": "mini",
+      "cost_usd": "0.00217590",
+      "input_price": "0.15",
+      "output_price": "0.60",
+      "last_input_tokens": 1704,
+      "mean_prompt_growth": "150.7272727272727272727272727",
+      "mean_completion_tokens": "164.4166666666666666666666667",
+      "observed_cached_input_tokens": 2560
+    },
+    {
+      "root": "haiku-anonymous-02",
+      "model": "haiku",
+      "cost_usd": "0.031417",
+      "input_price": "1",
+      "output_price": "5",
+      "last_input_tokens": 2857,
+      "mean_prompt_growth": "255.6363636363636363636363636",
+      "mean_completion_tokens": "261.9166666666666666666666667",
+      "observed_cached_input_tokens": 0
+    }
+  ],
+  "scenarios": [
+    {
+      "conversations_total": 8,
+      "messages_per_conversation": 12,
+      "calls_total": 96,
+      "model_cost_usd": {
+        "mini": "0.009385800000000000000000000",
+        "haiku": "0.1330990000000000000000000"
+      },
+      "total_usd": "0.142484800000000000000000000",
+      "status": "observed calibration"
+    },
+    {
+      "conversations_total": 40,
+      "messages_per_conversation": 12,
+      "calls_total": 480,
+      "model_cost_usd": {
+        "mini": "0.046929000000000000000000000",
+        "haiku": "0.6654950000000000000000000"
+      },
+      "total_usd": "0.712424000000000000000000000",
+      "status": "projection"
+    },
+    {
+      "conversations_total": 8,
+      "messages_per_conversation": 30,
+      "calls_total": 240,
+      "model_cost_usd": {
+        "mini": "0.05351455909090909090909090908",
+        "haiku": "0.6232664090909090909090909091"
+      },
+      "total_usd": "0.6767809681818181818181818182",
+      "status": "projection"
+    },
+    {
+      "conversations_total": 40,
+      "messages_per_conversation": 30,
+      "calls_total": 1200,
+      "model_cost_usd": {
+        "mini": "0.2675727954545454545454545454",
+        "haiku": "3.116332045454545454545454545"
+      },
+      "total_usd": "3.383904840909090909090909090",
+      "status": "projection"
+    },
+    {
+      "conversations_total": 100,
+      "messages_per_conversation": 30,
+      "calls_total": 3000,
+      "model_cost_usd": {
+        "mini": "0.6689319886363636363636363636",
+        "haiku": "7.790830113636363636363636365"
+      },
+      "total_usd": "8.459762102272727272727272729",
+      "status": "projection"
+    },
+    {
+      "conversations_total": 40,
+      "messages_per_conversation": 60,
+      "calls_total": 2400,
+      "model_cost_usd": {
+        "mini": "0.9876379090909090909090909092",
+        "haiku": "11.01640590909090909090909091"
+      },
+      "total_usd": "12.00404381818181818181818182",
+      "status": "projection"
+    }
+  ],
+  "formula": "C(N)=C(H)+[p_in*(k*P_H+g*k*(k+1)/2)+p_out*q*k]/1e6; H=12, k=N-H, g=(P_H-P_1)/(H-1), q=mean completion tokens.",
+  "scope": "Balanced models and anonymous/mirror conditions. More roots scale linearly; full-history length increases repeated input cost. Measured prefix retained exactly.",
+  "limits": [
+    "Point projections, not confidence intervals or spending caps.",
+    "Only four observed roots per model; includes the short Haiku closing sequence.",
+    "Assumes the same rates, routing, no reasoning/tools, and similar future token lengths and prompt growth.",
+    "Observed prefix retains billed cache discounts; additional projected input uses the saved undiscounted rate. Future caching could reduce cost.",
+    "Different prompts, output caps, stopping policies, reasoning or models need separate calibration.",
+    "No new technical checks, retries, failures or unknown billing included.",
+    "No model calls, budget changes or authorization for additional spending."
+  ]
+}
