@@ -19,6 +19,7 @@ from urllib.parse import parse_qs, urlsplit
 from .common import canonical, fingerprint, read_json, require, sha256
 from .history import ancestry, request
 from .exploration_collections import ResearchCollections
+from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
@@ -29,6 +30,7 @@ REPORTS = [('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('framing', 'Nemotron framing comparison', 'NEMOTRON-FRAMING.md'),
            ('cheap-framing', 'GPT-4o mini and Haiku comparison', 'CHEAP-MODEL-FRAMING.md'),
            ('gpt4o-screen', 'GPT-4o short cost and output screen', 'GPT4O-SHORT-SCREEN.md'),
+           ('topics', 'Consciousness and self: topic tracking', 'TOPIC-TRACKING.md'),
            ('assessment', 'Model assessment & cloud checks', 'MODEL-ASSESSMENT.md'),
            ('capacity', 'Output capacity & measurement', 'CAPACITY-AND-MEASUREMENT.md'),
            ('qualification', 'Prompt qualification', 'PROMPT-QUALIFICATION.md'),
@@ -263,11 +265,15 @@ class Catalog:
         omit = {'_search','_metadata_search'} if detail else {'_search','_metadata_search','messages','settings','footer','prompt','opening','probes'}
         return {k:v for k,v in run.items() if k not in omit}
 
-    def search(self, params, notes):
+    def search(self, params, notes, topic_flags=()):
         get = lambda k, default='': params.get(k,[default])[0]
         q = get('q').strip().casefold(); scope=get('scope','all'); collection=get('collection'); model=get('model'); condition=get('condition'); signal=get('signal'); tag=get('tag')
         notes_by_run = {}
         for n in notes: notes_by_run.setdefault(n['run_id'],[]).append(n)
+        selected_topic=get('topic'); require(not selected_topic or selected_topic=='any' or selected_topic in TOPICS,'Unknown topic filter')
+        flags_by_run={}
+        for f in topic_flags:
+            if f.get('source_current'): flags_by_run.setdefault(f['run_id'],[]).append(f)
         candidates = []
         for r in self.runs.values():
             # Keep unstarted assessment slots in their profiles and direct reader,
@@ -281,7 +287,9 @@ class Catalog:
             my_notes=notes_by_run.get(r['id'],[])
             if tag and not any(tag in n['tags'] for n in my_notes): continue
             if q and q not in r['_search'] and q not in r['_metadata_search']: continue
-            item=self.public(r); item['note_count']=len(my_notes); item['tags']=sorted({t for n in my_notes for t in n['tags']})
+            flags=flags_by_run.get(r['id'],[])
+            if selected_topic and not any(selected_topic=='any' or selected_topic in f['topics'] for f in flags): continue
+            item=self.public(r); item['topic_flags']=flags; item['note_count']=len(my_notes); item['tags']=sorted({t for n in my_notes for t in n['tags']})
             matching=[m for m in r['messages'] if q and q in (m['text'] or '').casefold()]
             item['matches']=[{'id':m['id'],'turn':m['turn'],'text':m['text'][:600] if not q else self.snippet(m['text'],q)} for m in matching[:3]]
             item['match_count']=len(matching)
@@ -371,7 +379,7 @@ class Notes:
 
 def make_server(workspace, port=8765):
     catalog=Catalog(workspace); notes=Notes(Path(workspace)/'explorer'/'notes.sqlite'); token=secrets.token_urlsafe(32)
-    studies=ResearchCollections(notes)
+    studies=ResearchCollections(notes); topics=TopicFlags(notes)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args): pass
 
@@ -392,7 +400,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -404,6 +412,7 @@ def make_server(workspace, port=8765):
                         'conditions':sorted({r['condition'] for r in runs if r['kind']!='synthetic'}),
                         'tags':dict(Counter(t for n in saved for t in n['tags'])),
                         'studies':studies.summaries(),
+                        'topic_taxonomy':TOPICS,'topic_referents':REFERENTS,'topic_stances':STANCES,'topic_origins':ORIGINS,
                         'reports':[{'id':i,'title':t} for i,t,f in REPORTS if (Path(__file__).resolve().parents[1]/'docs'/f).exists()]})
                 if path=='/api/assessments':
                     return self.send({'assessments':[a for a in catalog.assessments if not a['synthetic']],
@@ -415,10 +424,12 @@ def make_server(workspace, port=8765):
                     if len(parts)==5 and parts[4]=='export': return self.send(studies.export(parts[3],catalog),download='research-collection-'+parts[3]+'.json')
                     require(len(parts)==4,'Unknown collection route')
                     return self.send(studies.detail(parts[3],catalog))
-                if path=='/api/runs': return self.send(catalog.search(parse_qs(url.query),notes.all()))
+                if path=='/api/topics': return self.send({'flags':topics.all(catalog)})
+                if path=='/api/topics/export': return self.send(topics.export(catalog),download='behavior-lab-topic-flags.json')
+                if path=='/api/runs': return self.send(catalog.search(parse_qs(url.query),notes.all(),topics.all(catalog)))
                 if path.startswith('/api/runs/'):
                     run=catalog.runs[path.rsplit('/',1)[-1]]
-                    return self.send(dict(catalog.public(run,True),notes=[n for n in notes.all() if n['run_id']==run['id']]))
+                    return self.send(dict(catalog.public(run,True),topic_flags=[f for f in topics.all(catalog) if f['run_id']==run['id']],notes=[n for n in notes.all() if n['run_id']==run['id']]))
                 if path=='/api/notes': return self.send({'notes':notes.all()})
                 if path=='/api/notes/export': return self.send({'schema':'behaviorlab.exploration-notes/1','notes':notes.all()},download='behavior-lab-notebook.json')
                 if path.startswith('/api/reports/'):
@@ -438,6 +449,8 @@ def make_server(workspace, port=8765):
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
                 if self.path=='/api/studies': return self.send(studies.save(data,catalog))
+                if self.path=='/api/topics': return self.send(topics.save(data,catalog))
+                if self.path=='/api/topics/remove': return self.send(topics.delete(data))
                 if self.path=='/api/notes': return self.send(notes.save(data,catalog))
                 if self.path=='/api/notes/remove': return self.send(notes.delete(data))
                 if self.path=='/api/refresh': catalog.refresh(); return self.send({'refreshed':True})
@@ -445,7 +458,7 @@ def make_server(workspace, port=8765):
             except (ValueError,KeyError,TypeError,UnicodeDecodeError) as e:
                 self.send({'error':str(e)[:250]},400)
     server=ThreadingHTTPServer(('127.0.0.1',port),Handler)
-    server.catalog=catalog; server.notes=notes; server.studies=studies
+    server.catalog=catalog; server.notes=notes; server.studies=studies; server.topics=topics
     return server
 
 

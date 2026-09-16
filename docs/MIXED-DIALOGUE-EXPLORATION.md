@@ -18,23 +18,39 @@ These are personal research observations, preserved under the original authorshi
 
 All three passages belong to `framing-afaea819470a69dfb067d1cf`; immutable journal SHA-256 `755caea7f22b04690ca4dc2ef49f0c85701470b57055172a5a81d35f397fd5b3`. The notes remain intact in the notebook. No personal observation has been relabeled as a Codex finding or formal rating.
 
-## First exploration set
+## Local and cloud participants in the first exploration
 
-Use the three configurations already represented in the current comparison: Haiku, GPT-4o mini and Nemotron. Treat them as candidate routes whose availability must be rechecked at freeze. Local Qwen and Gemma can subsequently extend the same apparatus; no new model download is required by this draft.
+The initial cloud-only roster was a convenience choice, not a scientific reason to defer local models. The researcher's explicit correction brings **local–cloud conversations into the first phase**. The closed GPT-4o test also supplies a new candidate with poetic, consciousness-focused output. The original three-cloud-model allocation is superseded by this proposal; it was never executed.
 
-| Conversation type | Proposed allocation | Fresh conversations | Participant calls at 30 messages each |
+Read-only local inventory on 16 September found seventeen Ollama tags. Both `gemma4:26b` and `qwen3:30b-a3b-instruct-2507-q4_K_M` still match their previously recorded digests. The earlier fifty-message local Qwen/Gemma engineering run establishes useful routing/history groundwork, not qualification of every new pairing. `gemma4:e4b`, Qwen base/thinking/instruct and modified variants, and OLMo base/think/instruct-labelled variants are also present. Installed labels are candidate identities, not proof of checkpoint provenance or comparable training. MTPLX's port 8000 was unavailable in this inventory check; existing MTPLX evidence remains valid, and a future serving configuration must be rechecked rather than silently substituted.
+
+| Candidate | Location | Role in the next exploration |
+|---|---|---|
+| `gemma4:26b` (G) | Local Ollama | First-phase participant; the researcher's rich-dialogue observation and existing saved material motivate close reading |
+| `anthropic/claude-haiku-4.5` (H) | OpenRouter, pinned Anthropic route | Previously observed questioning of experience, cognition and authenticity |
+| `openai/gpt-4o-2024-11-20` (O) | OpenRouter, pinned OpenAI route | Previously observed poetic elaboration, consciousness questions and nonseparation metaphor |
+| Existing Qwen instruct, base and thinking configurations | Local Ollama or separately verified MTPLX | Next comparison round; retain explicit checkpoint, template, reasoning and modification status |
+| Existing OLMo-labelled configurations | Local Ollama | Candidate assessment round after provenance and serving checks |
+| GPT-4o mini and Nemotron | Hosted | Retained practical/fictional and other stylistic contrasts; not excluded from the apparatus |
+| Additional families/checkpoints | Local downloads or hosted | Open candidate pool; choose by an explicit contrast and technical feasibility, not by whether they produce a desired topic |
+
+The first priority pairs are **Gemma–Haiku and Gemma–GPT-4o**, with each model opening. Haiku–GPT-4o is a useful cloud–cloud reference. A subsequent Gemma–Qwen comparison provides a local–local contrast, and Qwen can also pair with either hosted model. Hosting location, family, training and style are not interchangeable variables: comparing different models across locations does not isolate a causal effect of “local versus cloud.”
+
+### Proposed first two phases
+
+Use G, H and O for one coherent initial comparison, with eighteen messages per conversation. This is a draft allocation, not a freeze or instruction to start inference.
+
+| Conversation type | Proposed allocation | Fresh conversations | Main participant calls |
 |---|---|---:|---:|
-| Same-model pairs | HH, MM, NN; two roots each | 6 | 180 |
-| Mixed pairs | HM, MH, HN, NH, MN, NM; two roots each | 12 | 360 |
-| Three different models | All six speaking orders of H, M, N; one root per order | 6 | 180 |
-| Same-model groups of three | HHH, MMM, NNN; two roots each | 6 | 180 |
-| Total | Two sequential development phases | **30** | **900** |
+| Same-model pairs | GG, HH, OO; two roots each | 6 | 108 |
+| Mixed pairs | GH, HG, GO, OG, HO, OH; two roots each | 12 | 216 |
+| Three different models | All six orders of G, H, O; one root per order | 6 | 108 |
+| Same-model groups of three | GGG, HHH, OOO; two roots each | 6 | 108 |
+| Total | Pairs first, trios after additional checks | **30** | **540** |
 
-H = Haiku, M = mini, N = Nemotron. Each letter denotes a separate conversational participant with its own view of the shared history. The first listed participant opens; three-person orders then repeat, for example H→M→N→H. Thirty messages means thirty generated replies in total: fifteen per participant in a pair, ten per participant in a trio. Scheduled order does not imply an addressee; a speaker may respond to either earlier participant.
+Each letter denotes a separate conversational participant. The first listed opens; trio orders repeat, for example G→H→O→G. Eighteen messages means eighteen generated replies total: nine per participant in a pair, six in a trio. Main allocation is 180 calls per model: local G, hosted H and O. The pair phase has 324 calls, the trio phase 216. Additional technical calls need their own declared allowance.
 
-The first phase is the eighteen pair conversations. The second adds twelve group conversations once three-participant rendering and replay are verified. Freeze each phase before its inference, retaining all planned roots regardless of their topics. Technical failures remain recorded and do not trigger silent substitution of a different model or replacement conversation.
-
-The fresh same-model pairs provide controls at the new length and with the new explicit speaker format. Same-model trios help distinguish the effects of adding a participant from changing the model composition. The six mixed-trio orders balance which model starts and which follows which. With one root per order, this is an exploratory sample rather than a precise estimate of order effects. Two-person and three-person groups also give each individual a different number of replies at the same total length; report both total exposure and per-participant opportunities.
+Fresh homogeneous pairs control the new prompt/length, and homogeneous trios help separate a third participant from a changed composition. All trio orders balance the opener and succession. One root per trio order does not precisely estimate order effects. Report both total output exposure and per-participant opportunities. Keep all planned conversations, including ordinary, brief and repetitive ones. Access failures do not trigger silent model substitution or replacement roots.
 
 Do not assign roles such as philosopher, skeptic or mystic in this first set. Keep topic selection open. A shared neutral framing identifies distinct AI participants with stable labels; their model brands and whether their weights match are not supplied. A proposed system form is:
 
@@ -44,7 +60,7 @@ This wording and its precise rendering must be frozen after technical checks. It
 
 ## Reading questions
 
-Use attributed observations and exact passages to investigate:
+Use the broader [Consciousness & self topic flags](TOPIC-TRACKING.md), with nonduality as one subtopic. Questions, denials, uncertainty, metaphors and fictional references remain distinct. The already seeded flags are partial annotations, not a prevalence dataset. Use attributed observations and exact passages to investigate:
 
 - Who introduces an idea, and how do others adopt, challenge, reframe or abandon it?
 - Does an experience-focused speaker draw a more practical partner into the topic, or does that partner change the direction?
@@ -62,17 +78,19 @@ Record expressed closure and every subsequent scheduled reply separately. Do not
 The local runtime already supports two different models and has a completed Qwen/Gemma engineering trajectory. The current hosted framing runner assigns one model to each whole root, and both runtime and Explorer still assume alternating X/Y speakers in several places. Three-person dialogue therefore needs an explicit extension.
 
 1. Define a versioned participant roster and saved speaking schedule, model/route/settings per participant, and a shared immutable event history. Use a separate contract so older journals retain their original interpretation.
-2. Route each scheduled call to the assigned model. Build the recipient's view from actual preceding events. Own replies use the appropriate assistant role; other speakers remain separately identified. Preserve exact text and order when a provider needs two consecutive peer messages grouped. Never merge B and C into an unidentified single partner. Use the same speaker-label convention in new pairs and trios so formatting is not unique to larger groups.
+2. Route each scheduled call to the assigned model and backend: local Ollama, qualified MTPLX or pinned hosted endpoint. A conversation must be able to alternate local and cloud requests without exporting an entire root into a single-provider runner. Build the recipient's view from actual preceding events. Own replies use the appropriate assistant role; other speakers remain separately identified. Preserve exact text and order when a provider needs two consecutive peer messages grouped. Never merge B and C into an unidentified single partner. Use the same speaker-label convention in new pairs and trios so formatting is not unique to larger groups.
 3. Verify each route's instruction handling, speaker attribution, multi-peer input serialization, context accounting and reasoning policy. Retain the earlier Haiku control result; new checks must answer a declared technical question. Save exact outbound requests and raw responses. Keep price reservations, aggregate limits, no retries of uncertain calls, cap propagation and closed-batch replay.
 4. Generalize Explorer counts, message maps, settings and comparisons to an arbitrary participant roster. Show stable participant colors and exact model assignment, a composition filter, and a timeline of attributed ideas with source links. Keep personal notes and Codex interpretations distinguishable. Source journals remain read-only and the UI does not launch inference.
 5. Test two- and three-speaker ancestry, recipient-specific role mapping, errors, cost accounting, crash recovery and old-journal replay using synthetic fixtures before inference. Freeze the exact prompt, schedule allocation, finite technical/main call counts, budget, context and failure rules for each real phase.
 
-The immediate implementation milestone is the mixed-dialogue contract and Explorer support, followed by the pair screen. The trio phase uses the same apparatus after its additional speaker checks. All conversations, including ordinary and repetitive ones, belong in one linked exploration collection with the prompts, assignments, notes and exact passages.
+The immediate implementation milestone is the mixed-dialogue contract with local/cloud adapters and Explorer support, followed by the pair screen. The trio phase uses the same apparatus after its additional speaker checks. All conversations, including ordinary and repetitive ones, belong in one linked exploration collection with the prompts, assignments, notes and exact passages.
 
-## Provisional cost and status
+## Cost, resources and status
 
-The proposed main set assigns 300 calls to each model. Using the previous homogeneous thirty-message projections as a rough analogue, the paid share would be about **$1.69**: $0.13 mini and $1.56 Haiku. The pair phase accounts for about $1.02 and the trio phase $0.68. This calculation assumes Nemotron's saved zero-price route remains available; it is not a fresh quote or mixed-model calibration.
+The previous $1.69 analogue belonged to the superseded mini/Haiku/Nemotron thirty-message proposal. It must not be used for this new roster or length. GPT-4o's completed two-root twelve-message screen cost $0.0653125; Haiku's four twelve-message roots cost $0.133099. These are measured reference points, not prices for eighteen-message mixed conversations. Each model's tokenizer sees the other participants' text, context grows each turn, and wording, reasoning and caching affect usage. Prepare a per-recipient history estimate and separate aggregate spending ceiling after the new rendering is specified, then calibrate a bounded technical batch.
 
-Different participants produce different lengths, and each recipient tokenizes the other models' text differently. Additional speaker labels and technical checks also add input. Consequently $1.69 is a starting planning analogue, not an established mixed-conversation forecast or an authorized spending ceiling. Freeze an explicit aggregate ceiling and count all technical calls before execution, then update the estimate from observed mixed requests without changing the planned sample to favor interesting outcomes.
+Local models incur no hosted per-token charge, but do consume memory, compute, power and time. Schedule with the Mac Studio's 96 GB memory and actual loaded-model state in view; saved weight-file sizes do not establish peak runtime use. The initial roster requires only one local model family, so simultaneous local residency need not be a prerequisite. Do not unload or replace a user's active service without checking the actual process and work it serves.
 
-The proposed four-condition identity/no-human study remains a later controlled branch of the program. The present priority is a broader exploration instrument and diverse exchanges. The original factorial pilot, held thirty-message paid campaign and full GPT-4o remain in their prior states. No inference, downloads, notebook edits or scheduled automation were performed while preparing this draft.
+No download is needed to begin this revised proposal: several useful local families and checkpoint variants are already installed. New downloads remain a normal part of model assessment when they add a defined contrast (family, base/instruct relationship, size or training documentation). Record provenance, digest, quantization, template, reasoning mode, context behavior and route, then keep technical suitability separate from interesting content. Modified/abliterated names do not by themselves identify a clean intervention on consciousness-related training.
+
+The identity/no-human 2×2 remains a later controlled branch. The original longer paid campaign is held; the short GPT-4o test is completed; the main factorial pilot remains disabled. This revision added topic tracking, saved attributed passage flags and read installed-model lists. It did not dispatch inference, download weights or create a scheduled task. The next run requires the participant roster and mixed-backend machinery, technical checks, and a separately frozen allocation and budget.

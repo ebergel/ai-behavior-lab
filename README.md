@@ -2,7 +2,9 @@
 
 A standalone local laboratory for controlled experiments on AI model behavior.
 
-The [next exploration](docs/MIXED-DIALOGUE-EXPLORATION.md) broadens the laboratory to mixed-model pairs and three-participant conversations, with close reading of how ideas develop, meet resistance or change direction. This design incorporates the researcher's new notes and treats interesting dialogue as a source of new questions. Implementation and protocol freezing precede new inference.
+The [next exploration](docs/MIXED-DIALOGUE-EXPLORATION.md) brings local Gemma and hosted Haiku/GPT-4o into mixed pairs and three-participant conversations, with an open candidate pool including Qwen and OLMo, with close reading of how ideas develop, meet resistance or change direction. This design incorporates the researcher's new notes and treats interesting dialogue as a source of new questions. Implementation and protocol freezing precede new inference.
+
+[Consciousness & self tracking](docs/TOPIC-TRACKING.md) now groups consciousness, subjective experience, selfhood, the hard problem and nonduality. Exact passage flags preserve author, referent, stance and topic entry. Browse them in the new Explorer view or filter the library; unflagged means not annotated, not absent.
 
 The first instrument studies how participant configuration and access to conversation history affect self-play trajectories. The research questions include experience-focused discourse, relational meaning, nonseparation, repetition, and retained responsiveness. The experiment runner is designed to support later interventions without losing the exact inputs and outputs that produced an observation.
 

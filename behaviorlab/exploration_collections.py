@@ -4,6 +4,7 @@ import json
 import secrets
 
 from .common import canonical, require
+from .topic_flags import TopicFlags
 
 
 AUTHORS = ('Local researcher', 'Codex')
@@ -122,4 +123,5 @@ class ResearchCollections:
             source['messages']=[{k:m.get(k) for k in ('id','parent','turn','speaker','segment','text','thinking','thinking_recorded','status','reason')}
                                 for m in run['messages']]
             source['segments']=run['segments']
-        return dict(schema='behaviorlab.research-collection/1',**bundle)
+        flags=[f for f in TopicFlags(self.notes).all(catalog) if f['run_id'] in bundle['sources']]
+        return dict(schema='behaviorlab.research-collection/1',topic_flags=flags,**bundle)
