@@ -296,5 +296,73 @@
     "exact_exported_originals": 940,
     "notebook_tables_unchanged": 14
   },
-  "check_script_sha256": "4c6a124ee5c3220c9e76dfd80ea62aa132c63b3bef9660a92f76240f55bcd0cc"
+  "check_script_sha256": "4c6a124ee5c3220c9e76dfd80ea62aa132c63b3bef9660a92f76240f55bcd0cc",
+  "github_verification": {
+    "repository": "https://github.com/ebergel/ai-behavior-lab",
+    "visibility": "private",
+    "branch": "main",
+    "snapshot_commit": "627b6d61bc397ba4345c3f91eb98db153e25e217",
+    "verified_at": "2026-09-16T16:46:02.852650-03:00",
+    "fresh_remote_clone_offline_restore": {
+      "bundle_sha256": "a839c7eb8bf6455f12359f55c04bc7c1a3cf043317e608fdea7de9c967a48a48",
+      "inventory": {
+        "records": 573,
+        "by_kind": {
+          "reference": 400,
+          "lab": 113,
+          "synthetic": 60
+        },
+        "default_records": 472,
+        "assessment_screens": 6,
+        "probe_batches": 4
+      },
+      "notebook_rows": {
+        "collection_history": 7,
+        "finder_view_history": 0,
+        "finder_views": 0,
+        "history": 5,
+        "lab_musing_history": 5,
+        "lab_musings": 5,
+        "notes": 5,
+        "research_collections": 6,
+        "topic_dictionary": 23,
+        "topic_dictionary_history": 23,
+        "topic_flag_history": 28,
+        "topic_flags": 28,
+        "topic_opening_history": 12,
+        "topic_openings": 12
+      },
+      "source_project_access": "blocked by Python audit hook",
+      "network_access": "blocked by Python audit hook",
+      "attempted_forbidden_operations": 0,
+      "notebook_exact_tables": 14,
+      "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+      "collections": 6,
+      "findings": 43,
+      "exact_spans_checked": 174,
+      "atlas_denominators": {
+        "runs": 438,
+        "visible_messages": 11204,
+        "visible_words": 1002269,
+        "partial_or_unqualified_messages": 1502,
+        "opening_reviews_resolved": 12,
+        "opening_reviews_unavailable": 0,
+        "opening_reviews_stale": 0,
+        "opening_reviews_pending": 426,
+        "branched_records": 4
+      },
+      "finder_haiku_consciousness": 4
+    },
+    "restored_app_http": {
+      "app_html_status": 200,
+      "bootstrap_counts": {
+        "lab": 72,
+        "reference": 400,
+        "synthetic": 60
+      },
+      "default_library_records": 472,
+      "research_collections": 6,
+      "mixed_pilot_dialogues": 4
+    }
+  }
 }

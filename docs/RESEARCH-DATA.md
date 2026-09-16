@@ -49,3 +49,7 @@ python3 -m behaviorlab.research_bundle verify --bundle /tmp/lab-research-next
 Export includes a full restore test. Review the manifest, inventory, notebook and source changes, then replace the tracked `research/` directory with the verified new snapshot, retaining the previous copy until verification is complete. Commit and push the reviewed update. Do not export into `workspace/`, force-add the live database, or copy credential folders into Git. Publication does not configure background synchronization or change repository visibility.
 
 The original public reference project remains independent. The private lab stores its imported evidence with source provenance and content hashes; it does not require that repository at runtime. Any future public release needs its own deliberate selection of code and evidence.
+
+## Publication verification
+
+A fresh copy downloaded from the private GitHub repository restored successfully with access to the original project and network connections blocked during restoration. Checks reproduced all catalog projections and fourteen notebook tables, verified 174 exact quoted passages across six collections and annotations, and recovered the same atlas counts and four Haiku/consciousness Finder matches. The application and collections also passed a separate localhost HTTP check using the restored copy. See the [validation record](evidence/research-publication-validation.json) and its [standalone restoration check](evidence/research-publication-check.py). The full suite passed 210 Python tests and fourteen JavaScript checks.
