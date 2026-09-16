@@ -1,6 +1,12 @@
 # Continuation milestone: transcript exploration
 
-## Latest completed milestone: opening-and-partner development study
+## Latest completed milestone: Topic atlas selection and prominence
+
+The researcher prioritized Topic atlas navigation before new experiments. The atlas is now directly below All transcripts in the sidebar. A persistent **Selected topic** picker works in dictionary and conversation views. Topic names and related-topic buttons select the entry panel; a checkmark identifies the selected row. Counts still open their exact conversation subsets, and **View matching conversations** explicitly opens all literal matches for the selected entry. Cohort/model filters, sorting and transcript-return URLs retain their meaning. Narrow layouts put the selected definition before the frequency table.
+
+Verification and preservation are recorded in [the navigation validation](evidence/atlas-selection-validation.json). No annotation, dictionary definition, review, collection or source transcript was edited. The prospective opening/partner experiment remains the next research milestone below; this UI request ran no inference or spending.
+
+## Previous completed milestone: opening-and-partner development study
 
 The approved first step is complete: a bounded twelve-opening reading, a reusable **Study workbench**, and a concrete [prospective design](OPENING-PARTNER-DESIGN.md). [Opening & partner: who sets the direction?](OPENING-PARTNER-STUDY.md), collection `f15547eb8cf7b85d4bcb413c`, retains four pilot reviews and adds eight attributed mini/Haiku opening reviews. Five findings link exact proposal/uptake passages. The second speaker proposes the adopted topic in nine readings; the opener does so in three. Identity/setup negotiation now has its own provisional dictionary entry, with boundary cases recorded separately from experience claims.
 
@@ -28,7 +34,7 @@ Next useful research step remains a bounded reading cohort and opening-topic rev
 
 ## Previous completed milestone: topic atlas
 
-UI follow-up: the dictionary and variant tables now support ascending/descending column sorting. Topic names open deduplicated conversation lists; each count opens its exact evidence subset. Lists add search, sorting, experimental settings, matching-message links and page-preserving return from the reader. See [the navigation guide](TOPIC-ATLAS.md#sort-and-browse-matching-conversations). The analysis and annotation definitions remain unchanged.
+UI follow-up: the dictionary and variant tables now support ascending/descending column sorting. In that initial navigation revision, topic names opened deduplicated conversation lists. The later selection refinement above makes names select dictionary entries; counts still open their exact evidence subsets. Lists add search, sorting, experimental settings, matching-message links and page-preserving return from the reader. See [the navigation guide](TOPIC-ATLAS.md#sort-and-browse-matching-conversations). The analysis and annotation definitions remain unchanged.
 
 The researcher requested an evolving dictionary of initial and recurrent topics after highlighting Gemma's emergence proposal. [Topic atlas](TOPIC-ATLAS.md) now supplies 22 versioned definitions, literal variants and counts, an attributed opening-review workflow, source links, cohort/model filters, pagination, and analysis/history exports. Four Codex reviews identify emergence twice, authenticity once and reasoning styles once; all adopted proposals occur at Y2 with uptake at X3. The full eligible corpus has 438 records and 115 emergence-variant matches, with 434 openings still unreviewed. Literal hits, semantic choices and possible returns are separate outcomes.
 

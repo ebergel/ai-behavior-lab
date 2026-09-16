@@ -37,3 +37,33 @@ test('a transcript return URL retains topic, cohort, mode, sorting, search and p
  const f={cohort:'pilot',subject:'emergence',model:'local',panel:'conversations',match:'repeated',sort:'run_hits',direction:'asc',variantSort:'messages',variantDirection:'desc',chatSort:'matches',q:'a & b',page:3};
  assert.deepEqual(plain(atlasRouteFilters(new URLSearchParams(atlasParams(f)))),f);
 });
+
+function navigationHarness(panel='dictionary'){
+ const listeners={},routes=[];
+ const filters={cohort:'pilot',subject:'history',model:'local',panel,match:'repeated',sort:'run_hits',direction:'asc',variantSort:'messages',variantDirection:'desc',chatSort:'matches',q:'old topic query',page:3};
+ const ui=vm.createContext({document:{addEventListener(name,fn){(listeners[name]??=[]).push(fn);}},URLSearchParams,state:{atlasFilters:filters},go:route=>routes.push(route),toast:message=>{throw new Error(message);}});
+ vm.runInContext(fs.readFileSync(path.join(__dirname,'../behaviorlab/explorer_ui/topic-atlas.js'),'utf8'),ui);
+ return {filters,routes,async click(dataset){for(const fn of listeners.click)await fn({target:{closest:()=>({dataset})}});},change(id,value){for(const fn of listeners.change)fn({target:{id,value}});}};
+}
+test('topic names change the dictionary entry while count clicks open their exact subset',async()=>{
+ const h=navigationHarness();
+ await h.click({action:'atlas-select',topic:'consciousness'});
+ let route=plain(h.routes.at(-1));
+ assert.equal(route.subject,'consciousness');assert.equal(route.atlas_panel,'dictionary');
+ assert.equal(route.cohort,'pilot');assert.equal(route.participant_model,'local');
+ assert.equal(route.atlas_sort,'run_hits');assert.equal(route.variant_sort,'messages');
+ assert.equal(route.chat_q,undefined);assert.equal(route.chat_page,undefined);
+ await h.click({action:'atlas-topic',topic:'consciousness',match:'early'});
+ route=plain(h.routes.at(-1));
+ assert.equal(route.atlas_panel,'conversations');assert.equal(route.match_type,'early');
+ assert.equal(route.subject,'consciousness');assert.equal(route.participant_model,'local');
+});
+test('topic picker stays in the current view and retains evidence mode while clearing stale query and page',()=>{
+ for(const panel of ['dictionary','conversations']){
+  const h=navigationHarness(panel);h.change('atlas-subject','consciousness');
+  const route=plain(h.routes.at(-1));
+  assert.equal(route.subject,'consciousness');assert.equal(route.atlas_panel,panel);
+  assert.equal(route.match_type,'repeated');assert.equal(route.cohort,'pilot');
+  assert.equal(route.chat_q,undefined);assert.equal(route.chat_page,undefined);
+ }
+});

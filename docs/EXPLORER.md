@@ -47,6 +47,10 @@ A useful first route is to search **understanding**, select a model, switch to t
 
 Search is literal and case-insensitive, over visible message text and run/model/condition metadata. It does not search prompts or hidden reasoning, infer synonyms, or assign semantic topics. “Nonduality” and “non-duality” are different search strings. Recorded reasoning can be opened within the reader when the source contains it. An absent historical trace is not treated as a recorded empty trace.
 
+## Topic atlas navigation
+
+**Topic atlas** is directly below **All transcripts** in the sidebar. Its **Selected topic** picker switches between dictionary entries or conversation lists while retaining the current reading cohort. Topic names and related-topic buttons select the definition panel; numerical counts open the corresponding conversation subset. **View matching conversations** opens all phrase matches for the selected topic. See the [topic atlas guide](TOPIC-ATLAS.md) for sorting, exact passage links and the distinction between literal matches and reviewed initial topics.
+
 ## Experimental settings and source evidence
 
 The inspector shows the source prompt and opening, available per-recipient sampler settings, requested output cap, context setting, thinking mode and seed policy. Mixed-model differences are displayed by participant. MTPLX's recorded runtime context is explicitly labeled as a runtime value. Requested output limits are not a claim that older engines honored them; the earlier effective-limit findings and saved parser versions remain available.

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-09-16T14:54:03.671977-03:00",
+  "scope": "Topic atlas selection and navigation; UI-only, no inference",
+  "python_tests": 198,
+  "javascript_tests": 12,
+  "browser_checks": [
+    "History to Consciousness via dictionary topic button stays in dictionary; selected heading, row checkmark and URL agree",
+    "Picker switches dictionary entry and lists all 23 topics",
+    "Any-turn count sort is descending and survives navigation",
+    "Consciousness First 6 count opens 155 conversations; reader opens A run 02 line-2 and returns to same topic, subset and sort",
+    "Picker in conversation view switches to History with First 6 subset retained: 42 conversations",
+    "Back to dictionary selects History; related Stories & fiction button selects its dictionary entry",
+    "Opening/partner collection plus Haiku filter remains selected when changing topic; explicit View matching conversations opens four Consciousness matches with Any turn subset",
+    "Full reload restores Consciousness dictionary, all 438 records, 12 opening reviews and 23 entries",
+    "Topic atlas is second main navigation item; no page horizontal overflow at tested desktop viewport",
+    "Browser error log empty"
+  ],
+  "preservation": {
+    "sqlite_rows_unchanged": {
+      "collection_history": 7,
+      "finder_view_history": 0,
+      "finder_views": 0,
+      "history": 5,
+      "lab_musing_history": 5,
+      "lab_musings": 5,
+      "notes": 5,
+      "research_collections": 6,
+      "topic_dictionary": 23,
+      "topic_dictionary_history": 23,
+      "topic_flag_history": 28,
+      "topic_flags": 28,
+      "topic_opening_history": 12,
+      "topic_openings": 12
+    },
+    "earlier_artifact_hashes_unchanged": 111
+  },
+  "frozen_pilot_dependencies_verified": 32,
+  "pilot_journal_sha256": "3c7da636c58d0626a32ba6fa4770578dee4d73c522e92fe962a0cd759c8c8f90",
+  "screenshots": [
+    "atlas-selection-dictionary-20260916.jpg",
+    "atlas-selection-conversations-20260916.jpg"
+  ],
+  "evidence_directory": "workspace/atlas-selection-20260916-1450",
+  "limitations": [
+    "Responsive stacking implemented; browser interaction checks performed at desktop viewport.",
+    "No new semantic classifications or experiment outcomes."
+  ]
+}
