@@ -13,6 +13,8 @@ def load_framing(directory):
     path=Path(directory)/'events.jsonl'; original=path.read_bytes(); events=read_events(path)
     if events[0]['kind']=='paid_framing_created':
         from .paid_framing import replay, request_for, summary
+    elif events[0]['kind']=='gpt4o_screen_created':
+        from .gpt4o_screen import replay, request_for, summary
     else:
         from .framing import replay, request_for, summary
     state=replay(events); plan=state['plan']; runs=[]; roots=[]; stats=summary(state)
