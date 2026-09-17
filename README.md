@@ -168,3 +168,9 @@ python3 -m behaviorlab calibration-packets workspace/reference-corpus workspace/
 ```
 
 `run-qualification` makes real local calls. Its schema admits at most four homogeneous 30-message roots, with no replacement attempts or factorial branches. The recorded study used a separate aggregate freeze including reference jobs and two engineering checks. Do not rerun completed qualification roots as replacements or pool new calls with their evidence. Review the [report](docs/PROMPT-QUALIFICATION.md) before extending the protocol.
+
+### Topic Trajectories and replication readiness
+
+Open **Topic Trajectories** in the Explorer to follow all 53 saved questions over an actual conversation path. Choose a tier, threshold, model or disclosure; click a score to read its passage and return from the reader with your selection intact. [Guide](docs/TOPIC-TRAJECTORIES.md). The 377-record discovery view withholds 60 reserved validation conversations.
+
+The next collection remains a proposal: [candidate preflight](docs/REPLICATION-CANDIDATE-AUDIT.md), [precision options](docs/REPLICATION-PRECISION.md), and [design v0.2](designs/balanced-replication-v0.2.json). Native OLMo provenance is now checked; generation qualification and the final allocation/budget remain pending.

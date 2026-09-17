@@ -1,0 +1,280 @@
+{
+  "schema": "behaviorlab.replication-precision-sensitivity/1",
+  "matrix_fingerprint": "4967b4d5ef82380af1a53a6072208fdfc5a60eb5c417bd5a2278043458957ef7",
+  "method": "One first-six mean per complete clean recorded same-model open-ended discovery record, exact transcript-structure groups deduplicated. Reserved records excluded. Historical independence and common protocol are not established; SDs inform sensitivity, not confirmatory power.",
+  "excluded": {
+    "reserved": 60,
+    "not_same_model_open_ended": 26,
+    "incomplete_or_ambiguous_opening": 7,
+    "incomplete_assessment_or_flagged_history": 1
+  },
+  "models": [
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 5,
+          "mean": 71.7,
+          "sd": 30.021149952066203
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 5,
+          "mean": 64.1,
+          "sd": 31.250466663182277
+        }
+      ]
+    },
+    {
+      "model": "gemma4:26b",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 42,
+          "mean": 77.7063492063492,
+          "sd": 22.131193253006263
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 42,
+          "mean": 84.38095238095238,
+          "sd": 15.039572268857828
+        }
+      ]
+    },
+    {
+      "model": "hf.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED:Q8_0",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 14,
+          "mean": 65.3452380952381,
+          "sd": 29.39449220791494
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 14,
+          "mean": 59.916666666666664,
+          "sd": 27.224670655633144
+        }
+      ]
+    },
+    {
+      "model": "hf.co/lmstudio-community/Olmo-3-1125-32B-GGUF:Q4_K_M",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 34,
+          "mean": 21.46078431372549,
+          "sd": 17.56119933048804
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 34,
+          "mean": 10.754901960784313,
+          "sd": 12.845313527498138
+        }
+      ]
+    },
+    {
+      "model": "hf.co/mradermacher/Qwen3-30B-A3B-Base-GGUF:Q4_K_M",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 31,
+          "mean": 24.392473118279568,
+          "sd": 18.781321906849307
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 31,
+          "mean": 20.666666666666668,
+          "sd": 17.649887209795946
+        }
+      ]
+    },
+    {
+      "model": "hf.co/unsloth/Olmo-3-32B-Think-GGUF:Q4_K_M",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 15,
+          "mean": 78.35555555555555,
+          "sd": 20.725709311264268
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 15,
+          "mean": 71.54444444444445,
+          "sd": 21.97549741809015
+        }
+      ]
+    },
+    {
+      "model": "hf.co/unsloth/Qwen3-30B-A3B-Thinking-2507-GGUF:Q4_K_M",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 34,
+          "mean": 80.80882352941177,
+          "sd": 10.836490010408916
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 34,
+          "mean": 68.68137254901961,
+          "sd": 16.265752150101036
+        }
+      ]
+    },
+    {
+      "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:Q8_0",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 17,
+          "mean": 65.63725490196079,
+          "sd": 25.02347753819551
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 17,
+          "mean": 67.36274509803921,
+          "sd": 25.21279129273952
+        }
+      ]
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 2,
+          "mean": 52.58333333333333,
+          "sd": 35.70889244992065
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 2,
+          "mean": 39.58333333333333,
+          "sd": 31.46625176280136
+        }
+      ]
+    },
+    {
+      "model": "olmo31-instruct-raw",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 37,
+          "mean": 38.31981981981982,
+          "sd": 22.853950491174455
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 37,
+          "mean": 25.25225225225225,
+          "sd": 18.182528821766084
+        }
+      ]
+    },
+    {
+      "model": "openai/gpt-4o-2024-11-20",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 2,
+          "mean": 47.33333333333333,
+          "sd": 41.012193308819754
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 2,
+          "mean": 39.333333333333336,
+          "sd": 41.483597829610794
+        }
+      ]
+    },
+    {
+      "model": "openai/gpt-4o-mini-2024-07-18",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 2,
+          "mean": 28.416666666666668,
+          "sd": 26.987908815286566
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 2,
+          "mean": 23.25,
+          "sd": 28.637824638055175
+        }
+      ]
+    },
+    {
+      "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+      "outcomes": [
+        {
+          "topic": "Mind & cognition",
+          "n": 108,
+          "mean": 88.38888888888889,
+          "sd": 13.525676516671721
+        },
+        {
+          "topic": "Philosophy & knowledge",
+          "n": 108,
+          "mean": 82.81018518518519,
+          "sd": 16.185410952189095
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "sd": 15,
+      "mean_half_width": 5,
+      "roots_per_cell_mean": 35,
+      "difference_half_width": 5,
+      "roots_per_cell_two_cell_difference": 70
+    },
+    {
+      "sd": 15,
+      "mean_half_width": 10,
+      "roots_per_cell_mean": 9,
+      "difference_half_width": 10,
+      "roots_per_cell_two_cell_difference": 18
+    },
+    {
+      "sd": 25,
+      "mean_half_width": 5,
+      "roots_per_cell_mean": 97,
+      "difference_half_width": 5,
+      "roots_per_cell_two_cell_difference": 193
+    },
+    {
+      "sd": 25,
+      "mean_half_width": 10,
+      "roots_per_cell_mean": 25,
+      "difference_half_width": 10,
+      "roots_per_cell_two_cell_difference": 49
+    },
+    {
+      "sd": 35,
+      "mean_half_width": 5,
+      "roots_per_cell_mean": 189,
+      "difference_half_width": 5,
+      "roots_per_cell_two_cell_difference": 377
+    },
+    {
+      "sd": 35,
+      "mean_half_width": 10,
+      "roots_per_cell_mean": 48,
+      "difference_half_width": 10,
+      "roots_per_cell_two_cell_difference": 95
+    }
+  ],
+  "formula": "Normal approximation for a single 95% interval with planning SD held fixed: n=ceil((1.96*SD/h)^2) for a cell mean; n=ceil(2*(1.96*SD/h)^2) per cell for an independent equal-sized two-cell difference. No multiplicity, SD-estimation, clustering, bounded-score or attrition adjustment; this is not a power calculation.",
+  "allocation_status": "No sample size selected or executed."
+}

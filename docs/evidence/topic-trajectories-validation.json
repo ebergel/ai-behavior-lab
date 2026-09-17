@@ -1,0 +1,58 @@
+{
+  "schema": "behaviorlab.trajectory-source-audit/1",
+  "matrix_fingerprint": "4967b4d5ef82380af1a53a6072208fdfc5a60eb5c417bd5a2278043458957ef7",
+  "discovery_records": 377,
+  "reserved_records": 60,
+  "counts": {
+    "paths_checked": 386,
+    "position_memberships": 10329,
+    "unknown_score_cells": 36729,
+    "external_position_memberships": 346
+  },
+  "examples": {
+    "branch": {
+      "id": "lab-159c0954319455ff9a0f77ca",
+      "title": "ON-history",
+      "paths": [
+        "FF",
+        "FR",
+        "RF",
+        "RR"
+      ]
+    },
+    "external": {
+      "id": "ref-00b983b3677142df6f9dd023",
+      "title": "D · run 01",
+      "paths": [
+        "conversation"
+      ]
+    }
+  },
+  "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "at": "2026-09-17T19:56:45.216712-03:00",
+  "author": "Codex",
+  "scope": "Topic Trajectories and candidate/precision preflight; no inference",
+  "tests": {
+    "python": 289,
+    "javascript": 41,
+    "status": "passed"
+  },
+  "restored_corpus_matches": true,
+  "human_semantic_validation": "pending",
+  "new_generation_calls": 0,
+  "new_assessment_calls": 0,
+  "new_downloaded_weight_files": 0,
+  "notebook_unchanged": true,
+  "frozen_scoring_software_unchanged": true,
+  "browser_checks": [
+    "Model filter and broad/experiential tier switching",
+    "Threshold switch to 90 retains topic and updates summaries",
+    "Heatmap cell opens the exact position and score panel",
+    "Reader opens exact message and returns to model/topic/threshold selection",
+    "FR path selection and reader Back preserve actual branch",
+    "No document-wide horizontal overflow at 1191px",
+    "External interventions have distinct event columns with unknown participant scores",
+    "Coverage draft v0.2 and candidate audit open within the app"
+  ],
+  "session_record": "SESSION-RECORD-2026-09-17-1957.md"
+}

@@ -1,8 +1,10 @@
 # Balanced partner-disclosure replication
 
-Design draft 0.1 · 17 September 2026 · author: Codex.
+Design draft 0.2 · 17 September 2026 · author: Codex.
 
-The researcher approved preparing this next milestone after the model-selection audit. This document and `designs/balanced-replication-v0.1.json` make the proposed collection reviewable. They do not dispatch inference, certify semantic validity, allocate seeds or authorize new spending. The final precision target, qualification results, executable schedule and aggregate monetary ceiling remain to be settled before an execution freeze.
+Version 0.1 is preserved. The candidate and precision update is documented in [candidate audit](REPLICATION-CANDIDATE-AUDIT.md) and [precision planning](REPLICATION-PRECISION.md). The twenty-root table remains illustrative.
+
+The researcher approved preparing this next milestone after the model-selection audit. This document and `designs/balanced-replication-v0.2.json` make the proposed collection reviewable. They do not dispatch inference, certify semantic validity, allocate seeds or authorize new spending. The final precision target, qualification results, executable schedule and aggregate monetary ceiling remain to be settled before an execution freeze.
 
 ## Why a new collection
 
@@ -18,12 +20,12 @@ Target a deliberately diverse panel of accessible conversational model configura
 |---|---|---|---|
 | Qwen3 30B Instruct 2507 Q4 | Alibaba / Qwen | Local | Repin checkpoint, template, thinking-off behaviour and generation limits |
 | Gemma 4 26B | Google | Local | Repin checkpoint and qualify common controls |
-| OLMo 3.1 Instruct candidate | Ai2 / AllenAI | Local | Establish checkpoint provenance and native instruction rendering; the old raw-completion alias alone is insufficient |
+| OLMo 3.1 Instruct · native chat candidate | Ai2 / AllenAI | Local | Installed artifact verified against publisher; six offline render fixtures match upstream. Native serving and generation checks remain pending |
 | Claude Haiku 4.5 | Anthropic | Hosted | Recheck route, system-message fidelity, reasoning policy, controls and current price |
 | GPT-4o mini July 2024 snapshot | OpenAI | Hosted | Verify snapshot/provider availability, controls and price |
 | Nemotron 3.5 Lightning | NVIDIA | Hosted | Verify checkpoint/provider stability, capacity and controls; free access is not guaranteed |
 
-Exact candidate IDs are in the JSON draft and derive from the existing model catalogue. Their availability and model-card provenance have not been freshly qualified by this implementation. Candidate inclusion does not depend on producing philosophical text. GPT-4o is retained as a proposed seventh-model extension, not replaced by mini as an interchangeable model. Smaller configurations, new families and verified base/instruct/thinking relationships belong in subsequent purposeful contrasts.
+Exact candidate IDs are in the JSON draft and derive from the existing model catalogue. The read-only candidate audit verifies listed availability and narrows local provenance; it does not newly qualify generation or provider access. Candidate inclusion does not depend on producing philosophical text. GPT-4o is retained as a proposed seventh-model extension, not replaced by mini as an interchangeable model. Smaller configurations, new families and verified base/instruct/thinking relationships belong in subsequent purposeful contrasts.
 
 One configuration per family does not identify a causal developer effect. Open/closed weights and local/cloud hosting also remain confounded with model identity. Matched within-family studies are needed for size or training-stage effects. Dense parameter counts and active MoE parameter counts must be recorded separately; tag names are not sufficient size metadata.
 

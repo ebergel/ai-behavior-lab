@@ -30,6 +30,6 @@ Source blocks use an explicit recorded protocol hash when present. Historical co
 
 ## Implementation and verification
 
-`behaviorlab/design_coverage.py` builds the metadata projection. Read-only routes are `/api/design-coverage` and `/api/design-coverage/export`, with a JSON `filters` query parameter. The UI is in `behaviorlab/explorer_ui/coverage.js` and `.css`. The proposed allocation is `designs/balanced-replication-v0.1.json`, independently versioned and explicitly non-executable.
+`behaviorlab/design_coverage.py` builds the metadata projection. Read-only routes are `/api/design-coverage` and `/api/design-coverage/export`, with a JSON `filters` query parameter. The UI is in `behaviorlab/explorer_ui/coverage.js` and `.css`. The current proposed allocation is `designs/balanced-replication-v0.2.json`, independently versioned and explicitly non-executable. Version 0.1 is preserved. Candidate audit and precision reports open from the draft panel.
 
 Tests exercise root/branch counting, duplicate nodes, guest-event exclusion, actual speaker exposure, unavailable runs, whitespace-only output, nested and per-speaker controls, scope separation, zero cells, pagination, invalid requests, local host restrictions, read-only projection, draft arithmetic and UI state retention. Browser checks and the real-inventory summary are recorded separately in `docs/evidence/model-design-coverage-validation.json`.

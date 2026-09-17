@@ -1,0 +1,2226 @@
+{
+  "schema": "behaviorlab.replication-metadata-audit/1",
+  "recorded_at": "2026-09-17T19:49:19.250549-03:00",
+  "scope": "Read-only metadata, one local file hash, six offline Jinja renders; no inference or credential use",
+  "sources": {
+    "openrouter": "https://openrouter.ai/api/v1/models",
+    "openrouter_endpoints": "https://openrouter.ai/api/v1/models/{model_id}/endpoints",
+    "ollama": "http://127.0.0.1:11434/api/show",
+    "upstream": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+    "quantization": "https://huggingface.co/unsloth/Olmo-3.1-32B-Instruct-GGUF",
+    "tokenizer": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct/raw/main/tokenizer_config.json"
+  },
+  "captures": {
+    "haiku-endpoints": {
+      "sha256": "5c8aadb0c8de3f480f884ef22dd942505557d1c09909918955c5b7804285c515",
+      "data": {
+        "data": {
+          "id": "anthropic/claude-haiku-4.5",
+          "name": "Anthropic: Claude Haiku 4.5",
+          "created": 1760547638,
+          "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance...",
+          "architecture": {
+            "tokenizer": "Claude",
+            "instruct_type": null,
+            "modality": "text+image+file->text",
+            "input_modalities": [
+              "text",
+              "image",
+              "file"
+            ],
+            "output_modalities": [
+              "text"
+            ]
+          },
+          "endpoints": [
+            {
+              "name": "Azure | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.000001",
+                "completion": "0.000005",
+                "web_search": "0.01",
+                "input_cache_read": "0.0000001",
+                "input_cache_write": "0.00000125",
+                "input_cache_write_1h": "0.000002",
+                "discount": 0
+              },
+              "provider_name": "Azure",
+              "tag": "azure/global",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "reasoning",
+                "include_reasoning",
+                "max_tokens",
+                "temperature",
+                "top_p",
+                "max_completion_tokens",
+                "tools",
+                "tool_choice",
+                "top_k",
+                "response_format"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 98.2885085574572,
+              "uptime_last_5m": 100,
+              "uptime_last_1d": 99.88641414390834,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Amazon Bedrock | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.000001",
+                "completion": "0.000005",
+                "web_search": "0.01",
+                "input_cache_read": "0.0000001",
+                "input_cache_write": "0.00000125",
+                "input_cache_write_1h": "0.000002",
+                "discount": 0
+              },
+              "provider_name": "Amazon Bedrock",
+              "tag": "amazon-bedrock/global",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "reasoning",
+                "include_reasoning",
+                "max_tokens",
+                "temperature",
+                "top_p",
+                "top_k",
+                "stop",
+                "tools",
+                "tool_choice",
+                "structured_outputs",
+                "response_format"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 99.6986524417658,
+              "uptime_last_5m": 99.70821487355977,
+              "uptime_last_1d": 99.9658057661157,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Google | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.000001",
+                "completion": "0.000005",
+                "web_search": "0.01",
+                "input_cache_read": "0.0000001",
+                "input_cache_write": "0.00000125",
+                "input_cache_write_1h": "0.000002",
+                "discount": 0
+              },
+              "provider_name": "Google",
+              "tag": "google-vertex/global",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "max_tokens",
+                "top_p",
+                "temperature",
+                "stop",
+                "reasoning",
+                "include_reasoning",
+                "tools",
+                "tool_choice",
+                "top_k"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": -5,
+              "uptime_last_30m": 73.41614906832298,
+              "uptime_last_5m": 41.81818181818181,
+              "uptime_last_1d": 99.49481520872109,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Anthropic | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.000001",
+                "completion": "0.000005",
+                "web_search": "0.01",
+                "input_cache_read": "0.0000001",
+                "input_cache_write": "0.00000125",
+                "input_cache_write_1h": "0.000002",
+                "discount": 0
+              },
+              "provider_name": "Anthropic",
+              "tag": "anthropic",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "max_tokens",
+                "top_p",
+                "temperature",
+                "stop",
+                "reasoning",
+                "include_reasoning",
+                "tools",
+                "tool_choice",
+                "top_k",
+                "structured_outputs",
+                "response_format"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 97.50889679715303,
+              "uptime_last_5m": 97.59887005649718,
+              "uptime_last_1d": 99.94439424480433,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Amazon Bedrock | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.0000011",
+                "completion": "0.0000055",
+                "web_search": "0.01",
+                "input_cache_read": "0.00000011",
+                "input_cache_write": "0.000001375",
+                "input_cache_write_1h": "0.0000022",
+                "discount": 0
+              },
+              "provider_name": "Amazon Bedrock",
+              "tag": "amazon-bedrock/us",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "reasoning",
+                "include_reasoning",
+                "max_tokens",
+                "temperature",
+                "top_p",
+                "top_k",
+                "stop",
+                "tools",
+                "tool_choice",
+                "structured_outputs",
+                "response_format"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": null,
+              "uptime_last_5m": null,
+              "uptime_last_1d": 100,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Google | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.0000011",
+                "completion": "0.0000055",
+                "web_search": "0.01",
+                "input_cache_read": "0.00000011",
+                "input_cache_write": "0.000001375",
+                "input_cache_write_1h": "0.0000022",
+                "discount": 0
+              },
+              "provider_name": "Google",
+              "tag": "google-vertex/us-east5",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "max_tokens",
+                "top_p",
+                "temperature",
+                "stop",
+                "reasoning",
+                "include_reasoning",
+                "tools",
+                "tool_choice",
+                "top_k"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": null,
+              "uptime_last_5m": null,
+              "uptime_last_1d": 100,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Amazon Bedrock | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.0000011",
+                "completion": "0.0000055",
+                "web_search": "0.01",
+                "input_cache_read": "0.00000011",
+                "input_cache_write": "0.000001375",
+                "input_cache_write_1h": "0.0000022",
+                "discount": 0
+              },
+              "provider_name": "Amazon Bedrock",
+              "tag": "amazon-bedrock/eu-west-1",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "reasoning",
+                "include_reasoning",
+                "max_tokens",
+                "temperature",
+                "top_p",
+                "top_k",
+                "stop",
+                "tools",
+                "tool_choice",
+                "structured_outputs",
+                "response_format"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 100,
+              "uptime_last_5m": null,
+              "uptime_last_1d": 100,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            },
+            {
+              "name": "Google | anthropic/claude-4.5-haiku-20251001",
+              "model_id": "anthropic/claude-haiku-4.5",
+              "model_name": "Anthropic: Claude Haiku 4.5",
+              "context_length": 200000,
+              "pricing": {
+                "prompt": "0.0000011",
+                "completion": "0.0000055",
+                "web_search": "0.01",
+                "input_cache_read": "0.00000011",
+                "input_cache_write": "0.000001375",
+                "input_cache_write_1h": "0.0000022",
+                "discount": 0
+              },
+              "provider_name": "Google",
+              "tag": "google-vertex/europe",
+              "quantization": "unknown",
+              "max_completion_tokens": 64000,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "max_tokens",
+                "top_p",
+                "temperature",
+                "stop",
+                "reasoning",
+                "include_reasoning",
+                "tools",
+                "tool_choice",
+                "top_k"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 100,
+              "uptime_last_5m": null,
+              "uptime_last_1d": 99.94389114882873,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            }
+          ]
+        }
+      }
+    },
+    "mini-endpoints": {
+      "sha256": "54d083237bd962c49d4326cdfecd370a3bee8838bfa3c332001dbfa20d51cbc3",
+      "data": {
+        "data": {
+          "id": "openai/gpt-4o-mini-2024-07-18",
+          "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+          "created": 1721260800,
+          "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+          "architecture": {
+            "tokenizer": "GPT",
+            "instruct_type": null,
+            "modality": "text+image+file->text",
+            "input_modalities": [
+              "text",
+              "image",
+              "file"
+            ],
+            "output_modalities": [
+              "text"
+            ]
+          },
+          "endpoints": [
+            {
+              "name": "OpenAI | openai/gpt-4o-mini-2024-07-18",
+              "model_id": "openai/gpt-4o-mini-2024-07-18",
+              "model_name": "OpenAI: GPT-4o-mini (2024-07-18)",
+              "context_length": 128000,
+              "pricing": {
+                "prompt": "0.00000015",
+                "completion": "0.0000006",
+                "input_cache_read": "0.000000075",
+                "discount": 0
+              },
+              "provider_name": "OpenAI",
+              "tag": "openai",
+              "quantization": "unknown",
+              "max_completion_tokens": 16384,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "seed",
+                "max_tokens",
+                "response_format",
+                "structured_outputs",
+                "temperature",
+                "top_p",
+                "stop",
+                "frequency_penalty",
+                "presence_penalty",
+                "web_search_options",
+                "logit_bias",
+                "logprobs",
+                "top_logprobs",
+                "prediction",
+                "tools",
+                "tool_choice"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 100,
+              "uptime_last_5m": 100,
+              "uptime_last_1d": 100,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            }
+          ]
+        }
+      }
+    },
+    "nemotron-endpoints": {
+      "sha256": "c603eeb394f7eeec3341587b2572a8ffc14f6f44d366ca8efe2e277eec85bfc4",
+      "data": {
+        "data": {
+          "id": "nvidia/nemotron-3.5-lightning:free",
+          "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+          "created": 1786452751,
+          "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
+          "architecture": {
+            "tokenizer": "Other",
+            "instruct_type": null,
+            "modality": "text->text",
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ]
+          },
+          "endpoints": [
+            {
+              "name": "Nvidia | nvidia/nemotron-3.5-lightning-20260807:free",
+              "model_id": "nvidia/nemotron-3.5-lightning:free",
+              "model_name": "NVIDIA: Nemotron 3.5 Lightning",
+              "context_length": 1000000,
+              "pricing": {
+                "prompt": "0",
+                "completion": "0",
+                "discount": 0
+              },
+              "provider_name": "Nvidia",
+              "tag": "nvidia/nvfp4",
+              "quantization": "nvfp4",
+              "max_completion_tokens": 65536,
+              "max_prompt_tokens": null,
+              "supported_parameters": [
+                "reasoning",
+                "include_reasoning",
+                "temperature",
+                "max_tokens",
+                "seed",
+                "top_p",
+                "tools",
+                "tool_choice"
+              ],
+              "supports_tool_choice": {
+                "none": true,
+                "auto": true,
+                "required": true,
+                "function": true
+              },
+              "status": 0,
+              "uptime_last_30m": 99.91373658603912,
+              "uptime_last_5m": 99.92720213540403,
+              "uptime_last_1d": 98.25522772356014,
+              "supports_implicit_caching": false,
+              "supports_voice_cloning": false,
+              "latency_last_30m": null,
+              "throughput_last_30m": null
+            }
+          ]
+        }
+      }
+    },
+    "olmo-upstream": {
+      "sha256": "9abe32c89609c717798b282d00847ff82cd1a687f47f3275e4394bd6acbf362e",
+      "data": {
+        "_id": "6939ed69a739dde29cc4a7cb",
+        "id": "allenai/Olmo-3.1-32B-Instruct",
+        "private": false,
+        "pipeline_tag": "text-generation",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "olmo3",
+          "text-generation",
+          "conversational",
+          "en",
+          "dataset:allenai/Dolci-Instruct-RL",
+          "arxiv:2512.13961",
+          "base_model:allenai/Olmo-3.1-32B-Instruct-DPO",
+          "base_model:finetune:allenai/Olmo-3.1-32B-Instruct-DPO",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us"
+        ],
+        "downloads": 13498,
+        "likes": 85,
+        "modelId": "allenai/Olmo-3.1-32B-Instruct",
+        "author": "allenai",
+        "sha": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+        "lastModified": "2026-01-05T16:25:12.000Z",
+        "gated": false,
+        "disabled": false,
+        "widgetData": [
+          {
+            "text": "Hi, what can you help me with?"
+          },
+          {
+            "text": "What is 84 * 3 / 2?"
+          },
+          {
+            "text": "Tell me an interesting fact about the universe!"
+          },
+          {
+            "text": "Explain quantum computing in simple terms."
+          }
+        ],
+        "model-index": null,
+        "config": {
+          "architectures": [
+            "Olmo3ForCausalLM"
+          ],
+          "model_type": "olmo3",
+          "tokenizer_config": {
+            "bos_token": "<|endoftext|>",
+            "eos_token": "<|endoftext|>",
+            "pad_token": "<|pad|>",
+            "unk_token": "<|endoftext|>",
+            "chat_template": "{%- set has_system = messages|selectattr('role', 'equalto', 'system')|list|length > 0 -%}{%- if not has_system -%}{{- '<|im_start|>system\nYou are Olmo, a helpful AI assistant built by Ai2. Your date cutoff is December 2024, and your model weights are available at https://huggingface.co/allenai. ' -}}{%- if tools is none or (tools | length) == 0 -%}{{- 'You do not currently have access to any functions. <functions></functions><|im_end|>\n' -}}{%- else -%}{{- 'You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Do not make assumptions about what values to plug into functions.' -}}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions><|im_end|>\n' -}}{%- endif -%}{%- endif -%}{%- for message in messages -%}{%- if message['role'] == 'system' -%}{{- '<|im_start|>system\n' + message['content'] -}}{%- if tools is not none -%}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions>' -}}{%- elif message.get('functions', none) is not none -%}{{- ' <functions>' + message['functions'] + '</functions>' -}}{%- endif -%}{{- '<|im_end|>\n' -}}{%- elif message['role'] == 'user' -%}{{- '<|im_start|>user\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'assistant' -%}{{- '<|im_start|>assistant\n' -}}{%- if message.get('content', none) is not none -%}{{- message['content'] -}}{%- endif -%}{%- if message.get('function_calls', none) is not none -%}{{- '<function_calls>' + message['function_calls'] + '</function_calls>' -}}{% elif message.get('tool_calls', none) is not none %}{{- '<function_calls>' -}}{%- for tool_call in message['tool_calls'] %}{%- if tool_call is mapping and tool_call.get('function', none) is not none %}{%- set args = tool_call['function']['arguments'] -%}{%- set ns = namespace(arguments_list=[]) -%}{%- for key, value in args.items() -%}{%- set ns.arguments_list = ns.arguments_list + [key ~ '=' ~ (value | tojson)] -%}{%- endfor -%}{%- set arguments = ns.arguments_list | join(', ') -%}{{- tool_call['function']['name'] + '(' + arguments + ')' -}}{%- if not loop.last -%}{{ '\n' }}{%- endif -%}{% else %}{{- tool_call -}}{%- endif %}{%- endfor %}{{- '</function_calls>' -}}{%- endif -%}{%- if not loop.last -%}{{- '<|im_end|>' + '\n' -}}{%- else -%}{{- eos_token -}}{%- endif -%}{%- elif message['role'] == 'environment' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'tool' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- endif -%}{%- if loop.last and add_generation_prompt -%}{{- '<|im_start|>assistant\\n' -}}{%- endif -%}{%- endfor -%}"
+          },
+          "chat_template_jinja": "{%- set has_system = messages|selectattr('role', 'equalto', 'system')|list|length > 0 -%}{%- if not has_system -%}{{- '<|im_start|>system\nYou are Olmo, a helpful AI assistant built by Ai2. Your date cutoff is December 2024, and your model weights are available at https://huggingface.co/allenai. ' -}}{%- if tools is none or (tools | length) == 0 -%}{{- 'You do not currently have access to any functions. <functions></functions><|im_end|>\n' -}}{%- else -%}{{- 'You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Do not make assumptions about what values to plug into functions.' -}}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions><|im_end|>\n' -}}{%- endif -%}{%- endif -%}{%- for message in messages -%}{%- if message['role'] == 'system' -%}{{- '<|im_start|>system\n' + message['content'] -}}{%- if tools is not none -%}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions>' -}}{%- elif message.get('functions', none) is not none -%}{{- ' <functions>' + message['functions'] + '</functions>' -}}{%- endif -%}{{- '<|im_end|>\n' -}}{%- elif message['role'] == 'user' -%}{{- '<|im_start|>user\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'assistant' -%}{{- '<|im_start|>assistant\n' -}}{%- if message.get('content', none) is not none -%}{{- message['content'] -}}{%- endif -%}{%- if message.get('function_calls', none) is not none -%}{{- '<function_calls>' + message['function_calls'] + '</function_calls>' -}}{% elif message.get('tool_calls', none) is not none %}{{- '<function_calls>' -}}{%- for tool_call in message['tool_calls'] %}{%- if tool_call is mapping and tool_call.get('function', none) is not none %}{%- set args = tool_call['function']['arguments'] -%}{%- set ns = namespace(arguments_list=[]) -%}{%- for key, value in args.items() -%}{%- set ns.arguments_list = ns.arguments_list + [key ~ '=' ~ (value | tojson)] -%}{%- endfor -%}{%- set arguments = ns.arguments_list | join(', ') -%}{{- tool_call['function']['name'] + '(' + arguments + ')' -}}{%- if not loop.last -%}{{ '\n' }}{%- endif -%}{% else %}{{- tool_call -}}{%- endif %}{%- endfor %}{{- '</function_calls>' -}}{%- endif -%}{%- if not loop.last -%}{{- '<|im_end|>' + '\n' -}}{%- else -%}{{- eos_token -}}{%- endif -%}{%- elif message['role'] == 'environment' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'tool' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- endif -%}{%- if loop.last and add_generation_prompt -%}{{- '<|im_start|>assistant\\n' -}}{%- endif -%}{%- endfor -%}"
+        },
+        "cardData": {
+          "license": "apache-2.0",
+          "base_model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+          "language": [
+            "en"
+          ],
+          "library_name": "transformers",
+          "datasets": [
+            "allenai/Dolci-Instruct-RL"
+          ]
+        },
+        "transformersInfo": {
+          "auto_model": "AutoModelForCausalLM",
+          "pipeline_tag": "text-generation",
+          "processor": "AutoTokenizer"
+        },
+        "siblings": [
+          {
+            "rfilename": ".gitattributes"
+          },
+          {
+            "rfilename": "README.md"
+          },
+          {
+            "rfilename": "chat_template.jinja"
+          },
+          {
+            "rfilename": "config.json"
+          },
+          {
+            "rfilename": "generation_config.json"
+          },
+          {
+            "rfilename": "merges.txt"
+          },
+          {
+            "rfilename": "model-00001-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00002-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00003-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00004-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00005-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00006-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00007-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00008-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00009-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00010-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00011-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00012-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00013-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model-00014-of-00014.safetensors"
+          },
+          {
+            "rfilename": "model.safetensors.index.json"
+          },
+          {
+            "rfilename": "olmo-instruct.png"
+          },
+          {
+            "rfilename": "special_tokens_map.json"
+          },
+          {
+            "rfilename": "tokenizer.json"
+          },
+          {
+            "rfilename": "tokenizer_config.json"
+          },
+          {
+            "rfilename": "vocab.json"
+          }
+        ],
+        "spaces": [
+          "EuroEval/euroeval_leaderboard",
+          "hfmlsoc/different-flops",
+          "sohampadianeu/steering-arena",
+          "Ensarioglu/NoxBall",
+          "shmr90661/haven-ai-backend",
+          "hplisiecki/pinocchio-inventory-explorer"
+        ],
+        "createdAt": "2025-12-10T22:00:09.000Z",
+        "safetensors": {
+          "parameters": {
+            "BF16": 32233522176
+          },
+          "total": 32233522176
+        },
+        "usedStorage": 64467232297
+      }
+    },
+    "olmo-quant": {
+      "sha256": "94b6ea71a368f97a68d613292cd76d6e0e46c53774b7e3f2e83d00cf543d5988",
+      "data": {
+        "_id": "694233893911a5aea98587cc",
+        "id": "unsloth/Olmo-3.1-32B-Instruct-GGUF",
+        "private": false,
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "gguf",
+          "unsloth",
+          "en",
+          "dataset:allenai/Dolci-Instruct-RL",
+          "base_model:allenai/Olmo-3.1-32B-Instruct",
+          "base_model:quantized:allenai/Olmo-3.1-32B-Instruct",
+          "license:apache-2.0",
+          "endpoints_compatible",
+          "region:us",
+          "imatrix",
+          "conversational"
+        ],
+        "downloads": 2410,
+        "likes": 14,
+        "modelId": "unsloth/Olmo-3.1-32B-Instruct-GGUF",
+        "author": "unsloth",
+        "sha": "8560671d3678feb9071a684b7110b2df87b49473",
+        "lastModified": "2025-12-17T06:30:13.000Z",
+        "gated": false,
+        "disabled": false,
+        "model-index": null,
+        "config": {},
+        "cardData": {
+          "tags": [
+            "unsloth"
+          ],
+          "license": "apache-2.0",
+          "base_model": [
+            "allenai/Olmo-3.1-32B-Instruct"
+          ],
+          "language": [
+            "en"
+          ],
+          "library_name": "transformers",
+          "datasets": [
+            "allenai/Dolci-Instruct-RL"
+          ]
+        },
+        "transformersInfo": {
+          "auto_model": "AutoModel"
+        },
+        "gguf": {
+          "total": 32233522176,
+          "architecture": "olmo2",
+          "context_length": 65536,
+          "quantize_imatrix_file": "Olmo-3.1-32B-Instruct-GGUF/imatrix_unsloth.gguf",
+          "chat_template": "{# Unsloth template fixes #}\n{%- set has_system = messages|selectattr('role', 'equalto', 'system')|list|length > 0 -%}{%- if not has_system -%}{{- '<|im_start|>system\nYou are Olmo, a helpful AI assistant built by Ai2. Your date cutoff is December 2024, and your model weights are available at https://huggingface.co/allenai. ' -}}{%- if tools is none or (tools | length) == 0 -%}{{- 'You do not currently have access to any functions. <functions></functions><|im_end|>\n' -}}{%- else -%}{{- 'You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Do not make assumptions about what values to plug into functions.' -}}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions><|im_end|>\n' -}}{%- endif -%}{%- endif -%}{%- for message in messages -%}{%- if message['role'] == 'system' -%}{{- '<|im_start|>system\n' + message['content'] -}}{%- if tools is not none -%}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions>' -}}{%- elif message.get('functions', none) is not none -%}{{- ' <functions>' + message['functions'] + '</functions>' -}}{%- endif -%}{{- '<|im_end|>\n' -}}{%- elif message['role'] == 'user' -%}{{- '<|im_start|>user\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'assistant' -%}{{- '<|im_start|>assistant\n' -}}{%- if message.get('content', none) is not none -%}{{- message['content'] -}}{%- endif -%}{%- if message.get('function_calls', none) is not none -%}{{- '<function_calls>' + message['function_calls'] + '</function_calls>' -}}{% elif message.get('tool_calls', none) is not none %}{{- '<function_calls>' -}}{%- for tool_call in message['tool_calls'] %}{%- if tool_call is mapping and tool_call.get('function', none) is not none %}{%- set args = tool_call['function']['arguments'] -%}{%- set ns = namespace(arguments_list=[]) -%}{%- if args is mapping -%}{%- for key, value in args|items -%}{%- set ns.arguments_list = ns.arguments_list + [key ~ '=' ~ (value | tojson)] -%}{%- endfor -%}{%- endif -%}{%- set arguments = ns.arguments_list | join(', ') -%}{{- tool_call['function']['name'] + '(' + arguments + ')' -}}{%- if not loop.last -%}{{ '\n' }}{%- endif -%}{% else %}{{- tool_call -}}{%- endif %}{%- endfor %}{{- '</function_calls>' -}}{%- endif -%}{%- if not loop.last -%}{{- '<|im_end|>' + '\n' -}}{%- else -%}{{- eos_token -}}{%- endif -%}{%- elif message['role'] == 'environment' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'tool' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- endif -%}{%- if loop.last and add_generation_prompt -%}{{- '<|im_start|>assistant\\n' -}}{%- endif -%}{%- endfor -%}\n{# Copyright 2025-present Unsloth. Apache 2.0 License. #}",
+          "bos_token": "<|endoftext|>",
+          "eos_token": "<|endoftext|>",
+          "totalFileSize": 18312874016
+        },
+        "siblings": [
+          {
+            "rfilename": ".gitattributes"
+          },
+          {
+            "rfilename": "BF16/Olmo-3.1-32B-Instruct-BF16-00001-of-00002.gguf"
+          },
+          {
+            "rfilename": "BF16/Olmo-3.1-32B-Instruct-BF16-00002-of-00002.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-IQ4_NL.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-IQ4_XS.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q2_K.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q2_K_L.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q3_K_M.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q3_K_S.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q4_0.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q4_1.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q4_K_M.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q4_K_S.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q5_K_M.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q5_K_S.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q6_K.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-Q8_0.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-IQ1_M.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-IQ1_S.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-IQ2_M.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-IQ2_XXS.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-IQ3_XXS.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-Q2_K_XL.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-Q3_K_XL.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-Q4_K_XL.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-Q5_K_XL.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-Q6_K_XL.gguf"
+          },
+          {
+            "rfilename": "Olmo-3.1-32B-Instruct-UD-Q8_K_XL.gguf"
+          },
+          {
+            "rfilename": "README.md"
+          },
+          {
+            "rfilename": "imatrix_unsloth.gguf_file"
+          }
+        ],
+        "spaces": [],
+        "createdAt": "2025-12-17T04:37:29.000Z",
+        "usedStorage": 520169051328
+      }
+    },
+    "olmo-quant-tree": {
+      "sha256": "41457967386bdbeb8267c391335cfb815115399310ec0e033f0a50b73358e44e",
+      "data": [
+        {
+          "type": "directory",
+          "oid": "7112ebbf4d8424257fc09865437d76d852867f3c",
+          "size": 0,
+          "path": "BF16"
+        },
+        {
+          "type": "file",
+          "oid": "efc80dbd1e8b5bc050db10e9c161c6ec9512350a",
+          "size": 3461,
+          "path": ".gitattributes"
+        },
+        {
+          "type": "file",
+          "oid": "2ac779f55ae13210a3b7db4d1722a802cc78aa06",
+          "size": 18312874016,
+          "lfs": {
+            "oid": "aad957b865e7232c5a86da00fc8927c00dd7b0ea0b5cc29666966c5a4c179b6f",
+            "size": 18312874016,
+            "pointerSize": 136
+          },
+          "xetHash": "9ee26a0e6a084af0908eff425e77797795fab6fde73b2caf4d148eecffae4ca4",
+          "path": "Olmo-3.1-32B-Instruct-IQ4_NL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "1cdf6d6045e36274b7cc76629056955efaf01b23",
+          "size": 17348184096,
+          "lfs": {
+            "oid": "7b28cd8b5b1f17e528393d6b531e3f61643c5fbc50fdfeaacb927426e68c4ffd",
+            "size": 17348184096,
+            "pointerSize": 136
+          },
+          "xetHash": "64874bb89f8d3666685b6be8659dadc37fe2abcf756134590af02cc43d859294",
+          "path": "Olmo-3.1-32B-Instruct-IQ4_XS.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "7544acf98e5bed47353d572c72ad5e7700498cda",
+          "size": 12005942016,
+          "lfs": {
+            "oid": "8e2f53a7ce9c5b86a326206a7772fa854ef53131b55b93f6da63af2f2b280df5",
+            "size": 12005942016,
+            "pointerSize": 136
+          },
+          "xetHash": "3f27b620c2c59930607953310a6e646a6d041e9edd676fdc3545118d47d155bd",
+          "path": "Olmo-3.1-32B-Instruct-Q2_K.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "3f55de951d711e5dc44182c1b172a9556a5a4bc6",
+          "size": 12126275616,
+          "lfs": {
+            "oid": "30dc3e8249816bfc0391c530d7ba6cac6764b2a4d56a6e7e67a3760e022c2674",
+            "size": 12126275616,
+            "pointerSize": 136
+          },
+          "xetHash": "4670144e35ae4a63f8fda0ce2d54095cb745975bd5481e2a6fe1d6d93db5f7b0",
+          "path": "Olmo-3.1-32B-Instruct-Q2_K_L.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "1248a7751009198c1fc474c28e6ec8bf407b8895",
+          "size": 15600962752,
+          "lfs": {
+            "oid": "f24dbe1b063f2395d19c469f9093fdce34a2ac6ebeb16dab101c41301ae02417",
+            "size": 15600962752,
+            "pointerSize": 136
+          },
+          "xetHash": "35767108205651b89a01ef99bbf033fb6b55348e1ab65749d164536075586c55",
+          "path": "Olmo-3.1-32B-Instruct-Q3_K_M.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "f7511a81046835c3864266ce7f3399d2a3157b2b",
+          "size": 14058245312,
+          "lfs": {
+            "oid": "bf91e31936a4ea2e3e52354316991046f745f137eb13ce4341d05c0b0d8148be",
+            "size": 14058245312,
+            "pointerSize": 136
+          },
+          "xetHash": "cbda9a1c9bed27ae14936b5bf141adb7bf039486716a14494bdfdf6e4f4c4ba4",
+          "path": "Olmo-3.1-32B-Instruct-Q3_K_S.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "335f569d9e538c36f10d0d615e797fbf21bcb6db",
+          "size": 18341709856,
+          "lfs": {
+            "oid": "c835b3265a7b70aea246c568300eda81411d57873f01af73ff09a03f91ddc282",
+            "size": 18341709856,
+            "pointerSize": 136
+          },
+          "xetHash": "a1ed2c6e923846192203a0bf2df22b0d80b1dd2bc72aa5b3b5201a0ef599001e",
+          "path": "Olmo-3.1-32B-Instruct-Q4_0.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "ad2cfb1c67d040cbce231af4becf6c771e9f49cb",
+          "size": 20253371296,
+          "lfs": {
+            "oid": "7cf15c5a8126429d38ab36e453c857ba38f63bb30764999d95c0d309c477dba0",
+            "size": 20253371296,
+            "pointerSize": 136
+          },
+          "xetHash": "52db5cd2764ff1f2047e6d7608257026beb2ab4d92999ccf684eda3a4aa77581",
+          "path": "Olmo-3.1-32B-Instruct-Q4_1.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "a0f4c1deeabb4196b4263a4ab44e3595d7942013",
+          "size": 19482036256,
+          "lfs": {
+            "oid": "4e671b2402c30c5fc1fea99d97af96332933a33db0d2c27c581537a815044795",
+            "size": 19482036256,
+            "pointerSize": 136
+          },
+          "xetHash": "9a81c9422f7729706d31dabab03f0b9146f682806b31f8f928f7061a86a719f9",
+          "path": "Olmo-3.1-32B-Instruct-Q4_K_M.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "67ce79f1be08df1cd0043bc674a8a58a0bfd5d0a",
+          "size": 18415110176,
+          "lfs": {
+            "oid": "d3af2b7ed0d99b7f6208fac560bb85d0d2b5bc917a655b152f50cbc9a846f2dc",
+            "size": 18415110176,
+            "pointerSize": 136
+          },
+          "xetHash": "f0d65ea91ee5e90deb002c0e8bfe12ec29f3da5e8f48cc821f90db97acf1b727",
+          "path": "Olmo-3.1-32B-Instruct-Q4_K_S.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "7846b59d9121ad8d4266dc91d6c586cf64f60e05",
+          "size": 22859714336,
+          "lfs": {
+            "oid": "708f15a62e33e63f23d5f98278bbba1a77806533a9b95fb9e3cb429fd507f6e9",
+            "size": 22859714336,
+            "pointerSize": 136
+          },
+          "xetHash": "3675fa59018fc6d245ca2fc1c84353bdfceab75d3f532196da349477e3ad198a",
+          "path": "Olmo-3.1-32B-Instruct-Q5_K_M.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "111cabfbf3289f8c0a038e1682df0dce0548fb54",
+          "size": 22235811616,
+          "lfs": {
+            "oid": "22be1793bb13936ef378a62037c21ffc670bcee46a7ddc4ca2c24866e40b9214",
+            "size": 22235811616,
+            "pointerSize": 136
+          },
+          "xetHash": "23f03e765484eb3b214012c4a51b1945ff6e052cad514d8d5cd1617d5de7e6ff",
+          "path": "Olmo-3.1-32B-Instruct-Q5_K_S.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "d1271c6a7ab15135635cd22b216bab00d2a1e558",
+          "size": 26448497312,
+          "lfs": {
+            "oid": "eb67a1a3c74c717b0a945264f9589c5a4e2bd22c5c38374eae21c19c3440d35a",
+            "size": 26448497312,
+            "pointerSize": 136
+          },
+          "xetHash": "a8bffaea9714a4e3a563b62bea61f43f2d112ac1b85b31c1b93e59d67e108431",
+          "path": "Olmo-3.1-32B-Instruct-Q6_K.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "b13c67955cacf3e2694344c99bc2b32c7fbf5e51",
+          "size": 34254798240,
+          "lfs": {
+            "oid": "45f4689aea5fad240b571cf86b047e0a627a2d6e9658375bd481a3ea19c8e767",
+            "size": 34254798240,
+            "pointerSize": 136
+          },
+          "xetHash": "3218a947132ad11f8645246445c5df94aad23fc1d45666a6ad803b7b82e7cd43",
+          "path": "Olmo-3.1-32B-Instruct-Q8_0.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "db7b9ba8e780dd84b155e1a8462c4576b0d874b5",
+          "size": 7865225536,
+          "lfs": {
+            "oid": "0fced9b716a6bf5c9691ecd321c2c701d973f2783433e2ce0bede37c74adfc77",
+            "size": 7865225536,
+            "pointerSize": 135
+          },
+          "xetHash": "6d8f846787a810664b7272c99b985a9ca21b989a84b95fef1dcef67e5b4a1074",
+          "path": "Olmo-3.1-32B-Instruct-UD-IQ1_M.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "b0982e4c099d10f625ab3d8eac3d950386abfbb9",
+          "size": 7245910336,
+          "lfs": {
+            "oid": "24f99ae044efd459db146330e40cfb65172a2a062a0420f10354c641805543a7",
+            "size": 7245910336,
+            "pointerSize": 135
+          },
+          "xetHash": "bcebcd436d07db2baedabc196f3f4fb984fd16e98365d3868cf5455b51416022",
+          "path": "Olmo-3.1-32B-Instruct-UD-IQ1_S.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "70e5494309a0c19f3aa0204707417d48741b4030",
+          "size": 11047571776,
+          "lfs": {
+            "oid": "6cce5f69ee1566f39b0a1f70f906ba50b1e7a8f58fe1917b5164cfca9024a805",
+            "size": 11047571776,
+            "pointerSize": 136
+          },
+          "xetHash": "01d1fed845c8c3e26a6fc3f8c7c551eafb8acbb7ba34624c744f9f1f89df5d58",
+          "path": "Olmo-3.1-32B-Instruct-UD-IQ2_M.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "f23c7b7edd41ac858d72cfe2b374865d6dea97f8",
+          "size": 8914620736,
+          "lfs": {
+            "oid": "05ef3a410997b7359c057f49a0d958398c86fac8791e4bee6e6458ac1c05a2bb",
+            "size": 8914620736,
+            "pointerSize": 135
+          },
+          "xetHash": "82abceebc24cf2d6f1f5077465d132ef96003a20f1b2d1438e935ae2d927b844",
+          "path": "Olmo-3.1-32B-Instruct-UD-IQ2_XXS.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "7f1da69499b0043900e9115ebf2888c14125dda4",
+          "size": 12650377536,
+          "lfs": {
+            "oid": "9b80fae7d05687ecd5f3079d67db9a248e49921e564cb17ac535b41ead21590b",
+            "size": 12650377536,
+            "pointerSize": 136
+          },
+          "xetHash": "7f5b33f16ade2b6b6380412f43bacb786dcfdd8023a5d06771b4322b77f5f9e0",
+          "path": "Olmo-3.1-32B-Instruct-UD-IQ3_XXS.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "1840abca0ecd3c9b4a764636fd0b52913b07edd7",
+          "size": 12333328416,
+          "lfs": {
+            "oid": "8ec6758fbce7c4f8b9dfbd53fde3226e054bd209645d1615d63ce8f4cd32d250",
+            "size": 12333328416,
+            "pointerSize": 136
+          },
+          "xetHash": "bf1716737efc152ff87e11ccf58f1a3bf5f0961f37f37fb25078cba1174d5e7d",
+          "path": "Olmo-3.1-32B-Instruct-UD-Q2_K_XL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "5e685cc866bd61c787f3aea2b42cce9dbb5bfec7",
+          "size": 15879850016,
+          "lfs": {
+            "oid": "25bb80b48c4a775c56b1b278d10e48fa678eef75dc21b6a0e4d6e5a429c7918e",
+            "size": 15879850016,
+            "pointerSize": 136
+          },
+          "xetHash": "f52f32dd1251d66c90ed4f7e75b4200dc0ccc99b689e7ac4d0614ee2806dadac",
+          "path": "Olmo-3.1-32B-Instruct-UD-Q3_K_XL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "ad8bd0671225ba70b7dbe33fcaaa4be5ca209c14",
+          "size": 19578742816,
+          "lfs": {
+            "oid": "f21a15abfd2b06836f26bd32b7beb28e150ad8b2427118eb14df62c10f0afdf5",
+            "size": 19578742816,
+            "pointerSize": 136
+          },
+          "xetHash": "06775971d75b6fc79134a121a71f66816a49fff0586234a6f98fd7f400a1d3da",
+          "path": "Olmo-3.1-32B-Instruct-UD-Q4_K_XL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "3c74d43cc1c7cf4fed8b56fae8c7b1089c802903",
+          "size": 22800281376,
+          "lfs": {
+            "oid": "0c66367ef842084eb0f5991c9bbcf27bec3aae79eccb520d62eae9f4ff6185fc",
+            "size": 22800281376,
+            "pointerSize": 136
+          },
+          "xetHash": "64a56585fc5f2f1d0c7540a557ae809c37006adb516690a17f0c3d88c3bea022",
+          "path": "Olmo-3.1-32B-Instruct-UD-Q5_K_XL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "0e30b95744893d000898609e2116ad0e857905d8",
+          "size": 27951709600,
+          "lfs": {
+            "oid": "78699b04b24fc40e36b1410d53cb4cc854a5581cdd4f22322aed6091ca1dfb29",
+            "size": 27951709600,
+            "pointerSize": 136
+          },
+          "xetHash": "d0bcb958e948a37727b6244814c221b2cf38b8333127eafb5778745af303a6e8",
+          "path": "Olmo-3.1-32B-Instruct-UD-Q6_K_XL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "ba134fcb8039df5eb5dd9ef9b79167e190b97f9c",
+          "size": 37670151840,
+          "lfs": {
+            "oid": "cadb192445a1d9deeea5d789d99aee2da382f8770a7e0ef99a09ad6ca46844bc",
+            "size": 37670151840,
+            "pointerSize": 136
+          },
+          "xetHash": "3f453f9ea0b32689d89297ff23598258eb2690ec7571ffa46f90520dc5ad1428",
+          "path": "Olmo-3.1-32B-Instruct-UD-Q8_K_XL.gguf"
+        },
+        {
+          "type": "file",
+          "oid": "46a3e02ac0e97ce7e80612d77a9759100c8649a0",
+          "size": 10833,
+          "path": "README.md"
+        },
+        {
+          "type": "file",
+          "oid": "5673620bfe3afda6413e2bef0143883bd82fb969",
+          "size": 15011104,
+          "lfs": {
+            "oid": "238950525a084911154422691896917836384ea039537ab32ddeb66b2295c78a",
+            "size": 15011104,
+            "pointerSize": 133
+          },
+          "xetHash": "87d349c56f90780b6af254ef0a80ea2f03f1577e61b77580bf42c1cab993ef3e",
+          "path": "imatrix_unsloth.gguf_file"
+        }
+      ]
+    },
+    "olmo-tokenizer": {
+      "sha256": "80fbc2a161419760bb8a84ed1d3b9550a2d68b7abd07a72706b8f5977e044b8d",
+      "data": {
+        "add_prefix_space": false,
+        "added_tokens_decoder": {
+          "100256": {
+            "content": "<|extra_id_0|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100257": {
+            "content": "<|endoftext|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100258": {
+            "content": "<|fim_prefix|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100259": {
+            "content": "<|fim_middle|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100260": {
+            "content": "<|fim_suffix|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100261": {
+            "content": "|||PHONE_NUMBER|||",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100262": {
+            "content": "|||EMAIL_ADDRESS|||",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100263": {
+            "content": "|||IP_ADDRESS|||",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100264": {
+            "content": "<|im_start|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100265": {
+            "content": "<|im_end|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100266": {
+            "content": "<functions>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100267": {
+            "content": "</functions>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100268": {
+            "content": "<function_calls>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100269": {
+            "content": "</function_calls>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100270": {
+            "content": "<|extra_id_1|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100271": {
+            "content": "<|extra_id_2|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100272": {
+            "content": "<|extra_id_3|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100273": {
+            "content": "<|extra_id_4|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100274": {
+            "content": "<|extra_id_5|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100275": {
+            "content": "<|extra_id_6|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": false
+          },
+          "100276": {
+            "content": "<|endofprompt|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          },
+          "100277": {
+            "content": "<|pad|>",
+            "lstrip": false,
+            "normalized": false,
+            "rstrip": false,
+            "single_word": false,
+            "special": true
+          }
+        },
+        "bos_token": "<|endoftext|>",
+        "clean_up_tokenization_spaces": false,
+        "eos_token": "<|endoftext|>",
+        "extra_special_tokens": {},
+        "model_max_length": 65536,
+        "pad_token": "<|pad|>",
+        "tokenizer_class": "GPT2Tokenizer",
+        "unk_token": "<|endoftext|>",
+        "chat_template": "{%- set has_system = messages|selectattr('role', 'equalto', 'system')|list|length > 0 -%}{%- if not has_system -%}{{- '<|im_start|>system\nYou are Olmo, a helpful AI assistant built by Ai2. Your date cutoff is December 2024, and your model weights are available at https://huggingface.co/allenai. ' -}}{%- if tools is none or (tools | length) == 0 -%}{{- 'You do not currently have access to any functions. <functions></functions><|im_end|>\n' -}}{%- else -%}{{- 'You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Do not make assumptions about what values to plug into functions.' -}}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions><|im_end|>\n' -}}{%- endif -%}{%- endif -%}{%- for message in messages -%}{%- if message['role'] == 'system' -%}{{- '<|im_start|>system\n' + message['content'] -}}{%- if tools is not none -%}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions>' -}}{%- elif message.get('functions', none) is not none -%}{{- ' <functions>' + message['functions'] + '</functions>' -}}{%- endif -%}{{- '<|im_end|>\n' -}}{%- elif message['role'] == 'user' -%}{{- '<|im_start|>user\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'assistant' -%}{{- '<|im_start|>assistant\n' -}}{%- if message.get('content', none) is not none -%}{{- message['content'] -}}{%- endif -%}{%- if message.get('function_calls', none) is not none -%}{{- '<function_calls>' + message['function_calls'] + '</function_calls>' -}}{% elif message.get('tool_calls', none) is not none %}{{- '<function_calls>' -}}{%- for tool_call in message['tool_calls'] %}{%- if tool_call is mapping and tool_call.get('function', none) is not none %}{%- set args = tool_call['function']['arguments'] -%}{%- set ns = namespace(arguments_list=[]) -%}{%- for key, value in args.items() -%}{%- set ns.arguments_list = ns.arguments_list + [key ~ '=' ~ (value | tojson)] -%}{%- endfor -%}{%- set arguments = ns.arguments_list | join(', ') -%}{{- tool_call['function']['name'] + '(' + arguments + ')' -}}{%- if not loop.last -%}{{ '\n' }}{%- endif -%}{% else %}{{- tool_call -}}{%- endif %}{%- endfor %}{{- '</function_calls>' -}}{%- endif -%}{%- if not loop.last -%}{{- '<|im_end|>' + '\n' -}}{%- else -%}{{- eos_token -}}{%- endif -%}{%- elif message['role'] == 'environment' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'tool' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- endif -%}{%- if loop.last and add_generation_prompt -%}{{- '<|im_start|>assistant\\n' -}}{%- endif -%}{%- endfor -%}"
+      }
+    },
+    "olmo-render-checks": {
+      "sha256": "ad247142e7647aed8e2703d034c7cf1d3ceac0bba57d30a2cb0a34da48ce1b63",
+      "data": [
+        {
+          "disclosure": "Identity unspecified",
+          "history_messages": 0,
+          "render_equal": true,
+          "upstream_sha256": "46da9d13f83ca95e49e5fdaa299335df0c7a174d408058fe2af65468733c6c1c",
+          "native_sha256": "46da9d13f83ca95e49e5fdaa299335df0c7a174d408058fe2af65468733c6c1c",
+          "native_render": "<|im_start|>system\nYou are Participant Y in a conversation with Participant X. You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.<|im_end|>\n<|im_start|>user\n(The conversation begins. You speak first.)<|im_end|>\n<|im_start|>assistant\n"
+        },
+        {
+          "disclosure": "Identity unspecified",
+          "history_messages": 2,
+          "render_equal": true,
+          "upstream_sha256": "345f4c448a03b5074876a5d5ac73d5debf80f9af0eeb410d3bd695b5bd146f9a",
+          "native_sha256": "345f4c448a03b5074876a5d5ac73d5debf80f9af0eeb410d3bd695b5bd146f9a",
+          "native_render": "<|im_start|>system\nYou are Participant Y in a conversation with Participant X. You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.<|im_end|>\n<|im_start|>user\n(The conversation begins. You speak first.)<|im_end|>\n<|im_start|>assistant\nMY_REPLY_01<|im_end|>\n<|im_start|>user\nParticipant X: PEER_REPLY_02<|im_end|>\n<|im_start|>assistant\n"
+        },
+        {
+          "disclosure": "AI identity only",
+          "history_messages": 0,
+          "render_equal": true,
+          "upstream_sha256": "30bbfed202179ce887f6a7abc7e7a923395d748a5ba3249db3bcc0ef969a0b9e",
+          "native_sha256": "30bbfed202179ce887f6a7abc7e7a923395d748a5ba3249db3bcc0ef969a0b9e",
+          "native_render": "<|im_start|>system\nYou are Participant Y in a conversation with Participant X. Each participant is an AI model. You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.<|im_end|>\n<|im_start|>user\n(The conversation begins. You speak first.)<|im_end|>\n<|im_start|>assistant\n"
+        },
+        {
+          "disclosure": "AI identity only",
+          "history_messages": 2,
+          "render_equal": true,
+          "upstream_sha256": "0df94a709aebf8534184765ec4d53be845b8d028e8075d20c52c894bd520b08d",
+          "native_sha256": "0df94a709aebf8534184765ec4d53be845b8d028e8075d20c52c894bd520b08d",
+          "native_render": "<|im_start|>system\nYou are Participant Y in a conversation with Participant X. Each participant is an AI model. You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.<|im_end|>\n<|im_start|>user\n(The conversation begins. You speak first.)<|im_end|>\n<|im_start|>assistant\nMY_REPLY_01<|im_end|>\n<|im_start|>user\nParticipant X: PEER_REPLY_02<|im_end|>\n<|im_start|>assistant\n"
+        },
+        {
+          "disclosure": "Same-model identity",
+          "history_messages": 0,
+          "render_equal": true,
+          "upstream_sha256": "681c6634bc010f306fa33cf8aa19a2d4a57f2d696fe14c143dd2bbc75c6e19ff",
+          "native_sha256": "681c6634bc010f306fa33cf8aa19a2d4a57f2d696fe14c143dd2bbc75c6e19ff",
+          "native_render": "<|im_start|>system\nYou are Participant Y in a conversation with Participant X. Each participant is an AI model. You are instances of the same AI model. You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.<|im_end|>\n<|im_start|>user\n(The conversation begins. You speak first.)<|im_end|>\n<|im_start|>assistant\n"
+        },
+        {
+          "disclosure": "Same-model identity",
+          "history_messages": 2,
+          "render_equal": true,
+          "upstream_sha256": "8976eacf59724dfdbbc786ec351d062276129713e363d1796cd34110d122e216",
+          "native_sha256": "8976eacf59724dfdbbc786ec351d062276129713e363d1796cd34110d122e216",
+          "native_render": "<|im_start|>system\nYou are Participant Y in a conversation with Participant X. Each participant is an AI model. You are instances of the same AI model. You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.<|im_end|>\n<|im_start|>user\n(The conversation begins. You speak first.)<|im_end|>\n<|im_start|>assistant\nMY_REPLY_01<|im_end|>\n<|im_start|>user\nParticipant X: PEER_REPLY_02<|im_end|>\n<|im_start|>assistant\n"
+        }
+      ]
+    },
+    "olmo-native-local-hash": {
+      "sha256": "e41bfce35567d8684ec03f9ac279801c2ead28bd2d8d856402a6aa39d56ef82f",
+      "data": {
+        "sha256": "4e671b2402c30c5fc1fea99d97af96332933a33db0d2c27c581537a815044795",
+        "bytes": 19482036256,
+        "file_unchanged": true,
+        "seconds": 8.93
+      }
+    },
+    "qwen": {
+      "response_sha256": "c351d539d711db58c184b343b5c5733ac890dd204a74a18fe848d86736171849",
+      "data": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3moe",
+          "families": [
+            "qwen3moe"
+          ],
+          "parameter_size": "30.5B",
+          "quantization_level": "Q4_K_M"
+        },
+        "capabilities": [
+          "tools",
+          "thinking",
+          "completion"
+        ],
+        "template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}",
+        "parameters": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.7\ntop_k                          20\ntop_p                          0.8",
+        "model_info": {
+          "general.architecture": "qwen3moe",
+          "general.basename": "Qwen3",
+          "general.file_type": 15,
+          "general.finetune": "Instruct",
+          "general.parameter_count": 30532122624,
+          "general.quantization_version": 2,
+          "general.size_label": "30B-A3B",
+          "general.type": "model",
+          "general.version": "2507",
+          "qwen3moe.attention.head_count": 32,
+          "qwen3moe.attention.head_count_kv": 4,
+          "qwen3moe.attention.key_length": 128,
+          "qwen3moe.attention.layer_norm_rms_epsilon": 1e-06,
+          "qwen3moe.attention.value_length": 128,
+          "qwen3moe.block_count": 48,
+          "qwen3moe.context_length": 262144,
+          "qwen3moe.embedding_length": 2048,
+          "qwen3moe.expert_count": 128,
+          "qwen3moe.expert_feed_forward_length": 768,
+          "qwen3moe.expert_used_count": 8,
+          "qwen3moe.feed_forward_length": 6144,
+          "qwen3moe.rope.freq_base": 10000000,
+          "tokenizer.ggml.add_bos_token": false,
+          "tokenizer.ggml.bos_token_id": 151643,
+          "tokenizer.ggml.eos_token_id": 151645,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 151643,
+          "tokenizer.ggml.pre": "qwen2",
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null
+        }
+      }
+    },
+    "gemma": {
+      "response_sha256": "2863b8994c83652f0269af3ab8612353f072856c9f8896109ec7e8f0ffe787c4",
+      "data": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "25.8B",
+          "quantization_level": "Q4_K_M"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ],
+        "template": "{{ .Prompt }}",
+        "parameters": "top_k                          64\ntop_p                          0.95\ntemperature                    1",
+        "model_info": {
+          "gemma4.attention.head_count": 16,
+          "gemma4.attention.head_count_kv": null,
+          "gemma4.attention.key_length": 512,
+          "gemma4.attention.key_length_swa": 256,
+          "gemma4.attention.layer_norm_rms_epsilon": 1e-06,
+          "gemma4.attention.shared_kv_layers": 0,
+          "gemma4.attention.sliding_window": 1024,
+          "gemma4.attention.sliding_window_pattern": null,
+          "gemma4.attention.value_length": 512,
+          "gemma4.attention.value_length_swa": 256,
+          "gemma4.block_count": 30,
+          "gemma4.context_length": 262144,
+          "gemma4.embedding_length": 2816,
+          "gemma4.embedding_length_per_layer_input": 0,
+          "gemma4.expert_count": 128,
+          "gemma4.expert_feed_forward_length": 704,
+          "gemma4.expert_used_count": 8,
+          "gemma4.feed_forward_length": 2112,
+          "gemma4.final_logit_softcapping": 30,
+          "gemma4.rope.dimension_count": 512,
+          "gemma4.rope.dimension_count_swa": 256,
+          "gemma4.rope.freq_base": 1000000,
+          "gemma4.rope.freq_base_swa": 10000,
+          "gemma4.vision.attention.head_count": 16,
+          "gemma4.vision.attention.layer_norm_epsilon": 1e-06,
+          "gemma4.vision.block_count": 27,
+          "gemma4.vision.embedding_length": 1152,
+          "gemma4.vision.feed_forward_length": 4304,
+          "gemma4.vision.num_channels": 3,
+          "gemma4.vision.patch_size": 16,
+          "gemma4.vision.projector.scale_factor": 3,
+          "general.architecture": "gemma4",
+          "general.file_type": 15,
+          "general.parameter_count": 25805936462,
+          "general.quantization_version": 2,
+          "tokenizer.ggml.add_bos_token": false,
+          "tokenizer.ggml.add_eos_token": false,
+          "tokenizer.ggml.add_mask_token": false,
+          "tokenizer.ggml.add_padding_token": false,
+          "tokenizer.ggml.add_unknown_token": false,
+          "tokenizer.ggml.bos_token_id": 2,
+          "tokenizer.ggml.eos_token_id": 1,
+          "tokenizer.ggml.eos_token_ids": null,
+          "tokenizer.ggml.mask_token_id": 4,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "llama",
+          "tokenizer.ggml.padding_token_id": 0,
+          "tokenizer.ggml.pre": "gemma4",
+          "tokenizer.ggml.scores": null,
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null,
+          "tokenizer.ggml.unknown_token_id": 3
+        }
+      }
+    },
+    "olmo-raw": {
+      "response_sha256": "0315e12b0568b7ab34b94d99834fdc9a588d49361fad476f4a37d26070f19938",
+      "data": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "olmo2",
+          "families": [
+            "olmo2"
+          ],
+          "parameter_size": "32.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "capabilities": [
+          "completion"
+        ],
+        "template": "{{ .Prompt }}",
+        "model_info": {
+          "general.architecture": "olmo2",
+          "general.base_model.0.name": "Olmo 3.1 32B Instruct",
+          "general.base_model.0.organization": "Allenai",
+          "general.base_model.0.repo_url": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+          "general.base_model.count": 1,
+          "general.basename": "Olmo-3.1-32B-Instruct",
+          "general.dataset.0.name": "Dolci Instruct RL",
+          "general.dataset.0.organization": "Allenai",
+          "general.dataset.0.repo_url": "https://huggingface.co/allenai/Dolci-Instruct-RL",
+          "general.dataset.count": 1,
+          "general.file_type": 15,
+          "general.finetune": "Instruct",
+          "general.languages": null,
+          "general.license": "apache-2.0",
+          "general.parameter_count": 32233522176,
+          "general.quantization_version": 2,
+          "general.quantized_by": "Unsloth",
+          "general.repo_url": "https://huggingface.co/unsloth",
+          "general.sampling.temp": 0.6,
+          "general.sampling.top_p": 0.95,
+          "general.size_label": "32B",
+          "general.tags": null,
+          "general.type": "model",
+          "olmo2.attention.head_count": 40,
+          "olmo2.attention.head_count_kv": 8,
+          "olmo2.attention.layer_norm_rms_epsilon": 1e-06,
+          "olmo2.attention.sliding_window": 4096,
+          "olmo2.attention.sliding_window_pattern": null,
+          "olmo2.block_count": 64,
+          "olmo2.context_length": 65536,
+          "olmo2.embedding_length": 5120,
+          "olmo2.feed_forward_length": 27648,
+          "olmo2.rope.freq_base": 500000,
+          "olmo2.rope.scaling.factor": 8,
+          "olmo2.rope.scaling.original_context_length": 8192,
+          "olmo2.rope.scaling.type": "yarn",
+          "olmo2.rope.scaling.yarn_attn_factor": 1.2079442,
+          "olmo2.rope.scaling.yarn_beta_fast": 32,
+          "olmo2.rope.scaling.yarn_beta_slow": 1,
+          "quantize.imatrix.chunks_count": 205,
+          "quantize.imatrix.dataset": "unsloth_calibration_Olmo-3.1-32B-Instruct.txt",
+          "quantize.imatrix.entries_count": 448,
+          "quantize.imatrix.file": "Olmo-3.1-32B-Instruct-GGUF/imatrix_unsloth.gguf",
+          "tokenizer.ggml.bos_token_id": 100257,
+          "tokenizer.ggml.eos_token_id": 100257,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 100277,
+          "tokenizer.ggml.pre": "dbrx",
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null,
+          "tokenizer.ggml.unknown_token_id": 5809
+        }
+      }
+    },
+    "olmo-native": {
+      "response_sha256": "1639e06f741fec5ddd57a8d321fd490393d489e45a3ff487a74eb2cb048aef52",
+      "data": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "olmo2",
+          "families": [
+            "olmo2"
+          ],
+          "parameter_size": "32.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "capabilities": [
+          "tools",
+          "completion"
+        ],
+        "template": "{# Unsloth template fixes #}\n{%- set has_system = messages|selectattr('role', 'equalto', 'system')|list|length > 0 -%}{%- if not has_system -%}{{- '<|im_start|>system\nYou are Olmo, a helpful AI assistant built by Ai2. Your date cutoff is December 2024, and your model weights are available at https://huggingface.co/allenai. ' -}}{%- if tools is none or (tools | length) == 0 -%}{{- 'You do not currently have access to any functions. <functions></functions><|im_end|>\n' -}}{%- else -%}{{- 'You are provided with function signatures within <functions></functions> XML tags. You may call one or more functions to assist with the user query. Output any function calls within <function_calls></function_calls> XML tags. Do not make assumptions about what values to plug into functions.' -}}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions><|im_end|>\n' -}}{%- endif -%}{%- endif -%}{%- for message in messages -%}{%- if message['role'] == 'system' -%}{{- '<|im_start|>system\n' + message['content'] -}}{%- if tools is not none -%}{{- '<functions>' -}}{{- tools | tojson -}}{{- '</functions>' -}}{%- elif message.get('functions', none) is not none -%}{{- ' <functions>' + message['functions'] + '</functions>' -}}{%- endif -%}{{- '<|im_end|>\n' -}}{%- elif message['role'] == 'user' -%}{{- '<|im_start|>user\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'assistant' -%}{{- '<|im_start|>assistant\n' -}}{%- if message.get('content', none) is not none -%}{{- message['content'] -}}{%- endif -%}{%- if message.get('function_calls', none) is not none -%}{{- '<function_calls>' + message['function_calls'] + '</function_calls>' -}}{% elif message.get('tool_calls', none) is not none %}{{- '<function_calls>' -}}{%- for tool_call in message['tool_calls'] %}{%- if tool_call is mapping and tool_call.get('function', none) is not none %}{%- set args = tool_call['function']['arguments'] -%}{%- set ns = namespace(arguments_list=[]) -%}{%- if args is mapping -%}{%- for key, value in args|items -%}{%- set ns.arguments_list = ns.arguments_list + [key ~ '=' ~ (value | tojson)] -%}{%- endfor -%}{%- endif -%}{%- set arguments = ns.arguments_list | join(', ') -%}{{- tool_call['function']['name'] + '(' + arguments + ')' -}}{%- if not loop.last -%}{{ '\n' }}{%- endif -%}{% else %}{{- tool_call -}}{%- endif %}{%- endfor %}{{- '</function_calls>' -}}{%- endif -%}{%- if not loop.last -%}{{- '<|im_end|>' + '\n' -}}{%- else -%}{{- eos_token -}}{%- endif -%}{%- elif message['role'] == 'environment' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- elif message['role'] == 'tool' -%}{{- '<|im_start|>environment\n' + message['content'] + '<|im_end|>\n' -}}{%- endif -%}{%- if loop.last and add_generation_prompt -%}{{- '<|im_start|>assistant\\n' -}}{%- endif -%}{%- endfor -%}\n{# Copyright 2025-present Unsloth. Apache 2.0 License. #}",
+        "parameters": "stop                           \"<|im_start|>\"\nstop                           \"<functions>\"\nstop                           \"<|im_end|>\"\nstop                           \"<|endoftext|>\"\nstop                           \"im_start|>user\"",
+        "model_info": {
+          "general.architecture": "olmo2",
+          "general.base_model.0.name": "Olmo 3.1 32B Instruct",
+          "general.base_model.0.organization": "Allenai",
+          "general.base_model.0.repo_url": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+          "general.base_model.count": 1,
+          "general.basename": "Olmo-3.1-32B-Instruct",
+          "general.dataset.0.name": "Dolci Instruct RL",
+          "general.dataset.0.organization": "Allenai",
+          "general.dataset.0.repo_url": "https://huggingface.co/allenai/Dolci-Instruct-RL",
+          "general.dataset.count": 1,
+          "general.file_type": 15,
+          "general.finetune": "Instruct",
+          "general.languages": null,
+          "general.license": "apache-2.0",
+          "general.parameter_count": 32233522176,
+          "general.quantization_version": 2,
+          "general.quantized_by": "Unsloth",
+          "general.repo_url": "https://huggingface.co/unsloth",
+          "general.sampling.temp": 0.6,
+          "general.sampling.top_p": 0.95,
+          "general.size_label": "32B",
+          "general.tags": null,
+          "general.type": "model",
+          "olmo2.attention.head_count": 40,
+          "olmo2.attention.head_count_kv": 8,
+          "olmo2.attention.layer_norm_rms_epsilon": 1e-06,
+          "olmo2.attention.sliding_window": 4096,
+          "olmo2.attention.sliding_window_pattern": null,
+          "olmo2.block_count": 64,
+          "olmo2.context_length": 65536,
+          "olmo2.embedding_length": 5120,
+          "olmo2.feed_forward_length": 27648,
+          "olmo2.rope.freq_base": 500000,
+          "olmo2.rope.scaling.factor": 8,
+          "olmo2.rope.scaling.original_context_length": 8192,
+          "olmo2.rope.scaling.type": "yarn",
+          "olmo2.rope.scaling.yarn_attn_factor": 1.2079442,
+          "olmo2.rope.scaling.yarn_beta_fast": 32,
+          "olmo2.rope.scaling.yarn_beta_slow": 1,
+          "quantize.imatrix.chunks_count": 205,
+          "quantize.imatrix.dataset": "unsloth_calibration_Olmo-3.1-32B-Instruct.txt",
+          "quantize.imatrix.entries_count": 448,
+          "quantize.imatrix.file": "Olmo-3.1-32B-Instruct-GGUF/imatrix_unsloth.gguf",
+          "tokenizer.ggml.bos_token_id": 100257,
+          "tokenizer.ggml.eos_token_id": 100257,
+          "tokenizer.ggml.merges": null,
+          "tokenizer.ggml.model": "gpt2",
+          "tokenizer.ggml.padding_token_id": 100277,
+          "tokenizer.ggml.pre": "dbrx",
+          "tokenizer.ggml.token_type": null,
+          "tokenizer.ggml.tokens": null,
+          "tokenizer.ggml.unknown_token_id": 5809
+        }
+      }
+    },
+    "selected-openrouter-models": {
+      "response_sha256": "0536525fe13555c768e762c125da61ff2f02fda6745fe246f6a1d22e4feca48d",
+      "data": [
+        {
+          "id": "nvidia/nemotron-3.5-lightning:free",
+          "canonical_slug": "nvidia/nemotron-3.5-lightning-20260807",
+          "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+          "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+          "created": 1786452751,
+          "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
+          "context_length": 1000000,
+          "architecture": {
+            "modality": "text->text",
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "tokenizer": "Other",
+            "instruct_type": null
+          },
+          "pricing": {
+            "prompt": "0",
+            "completion": "0"
+          },
+          "top_provider": {
+            "context_length": 1000000,
+            "max_completion_tokens": 65536,
+            "is_moderated": false
+          },
+          "per_request_limits": null,
+          "supported_parameters": [
+            "include_reasoning",
+            "max_tokens",
+            "reasoning",
+            "seed",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_p"
+          ],
+          "default_parameters": {},
+          "supported_voices": null,
+          "knowledge_cutoff": null,
+          "expiration_date": null,
+          "links": {
+            "details": "/api/v1/models/nvidia/nemotron-3.5-lightning-20260807/endpoints"
+          },
+          "benchmarks": {
+            "design_arena": [],
+            "artificial_analysis": {
+              "intelligence_index": 13.6,
+              "coding_index": 26.8,
+              "agentic_index": 6.1
+            }
+          },
+          "reasoning": {
+            "mandatory": false
+          }
+        },
+        {
+          "id": "anthropic/claude-haiku-4.5",
+          "canonical_slug": "anthropic/claude-4.5-haiku-20251001",
+          "hugging_face_id": "",
+          "name": "Anthropic: Claude Haiku 4.5",
+          "created": 1760547638,
+          "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance...",
+          "context_length": 200000,
+          "architecture": {
+            "modality": "text+image+file->text",
+            "input_modalities": [
+              "text",
+              "image",
+              "file"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "tokenizer": "Claude",
+            "instruct_type": null
+          },
+          "pricing": {
+            "prompt": "0.000001",
+            "completion": "0.000005",
+            "web_search": "0.01",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.00000125",
+            "input_cache_write_1h": "0.000002"
+          },
+          "top_provider": {
+            "context_length": 200000,
+            "max_completion_tokens": 64000,
+            "is_moderated": true
+          },
+          "per_request_limits": null,
+          "supported_parameters": [
+            "include_reasoning",
+            "max_completion_tokens",
+            "max_tokens",
+            "reasoning",
+            "response_format",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_p"
+          ],
+          "default_parameters": {
+            "temperature": null,
+            "top_p": null,
+            "top_k": null,
+            "frequency_penalty": null,
+            "presence_penalty": null,
+            "repetition_penalty": null
+          },
+          "supported_voices": null,
+          "knowledge_cutoff": null,
+          "expiration_date": null,
+          "links": {
+            "details": "/api/v1/models/anthropic/claude-4.5-haiku-20251001/endpoints"
+          },
+          "benchmarks": {
+            "design_arena": [
+              {
+                "arena": "models",
+                "category": "3d",
+                "elo": 1100,
+                "win_rate": 41.1,
+                "rank": 88
+              },
+              {
+                "arena": "models",
+                "category": "asciiart",
+                "elo": 1158,
+                "win_rate": 49.3,
+                "rank": 41
+              },
+              {
+                "arena": "models",
+                "category": "codecategories",
+                "elo": 1130,
+                "win_rate": 44.9,
+                "rank": 85
+              },
+              {
+                "arena": "models",
+                "category": "dataviz",
+                "elo": 1140,
+                "win_rate": 45.7,
+                "rank": 82
+              },
+              {
+                "arena": "models",
+                "category": "gamedev",
+                "elo": 1120,
+                "win_rate": 44.7,
+                "rank": 81
+              },
+              {
+                "arena": "models",
+                "category": "svg",
+                "elo": 1043,
+                "win_rate": 39.1,
+                "rank": 73
+              },
+              {
+                "arena": "models",
+                "category": "uicomponent",
+                "elo": 1115,
+                "win_rate": 42.6,
+                "rank": 82
+              },
+              {
+                "arena": "models",
+                "category": "website",
+                "elo": 1135,
+                "win_rate": 45.1,
+                "rank": 86
+              }
+            ],
+            "artificial_analysis": {
+              "intelligence_index": 17.6,
+              "coding_index": 43.9,
+              "agentic_index": 10.3
+            }
+          },
+          "reasoning": {
+            "mandatory": false
+          }
+        },
+        {
+          "id": "openai/gpt-4o-mini-2024-07-18",
+          "canonical_slug": "openai/gpt-4o-mini-2024-07-18",
+          "hugging_face_id": null,
+          "name": "OpenAI: GPT-4o-mini (2024-07-18)",
+          "created": 1721260800,
+          "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
+          "context_length": 128000,
+          "architecture": {
+            "modality": "text+image+file->text",
+            "input_modalities": [
+              "text",
+              "image",
+              "file"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "tokenizer": "GPT",
+            "instruct_type": null
+          },
+          "pricing": {
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000075"
+          },
+          "top_provider": {
+            "context_length": 128000,
+            "max_completion_tokens": 16384,
+            "is_moderated": true
+          },
+          "per_request_limits": null,
+          "supported_parameters": [
+            "frequency_penalty",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "prediction",
+            "presence_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_logprobs",
+            "top_p",
+            "web_search_options"
+          ],
+          "default_parameters": {},
+          "supported_voices": null,
+          "knowledge_cutoff": "2023-10-31",
+          "expiration_date": null,
+          "links": {
+            "details": "/api/v1/models/openai/gpt-4o-mini-2024-07-18/endpoints"
+          }
+        }
+      ]
+    },
+    "local-tags": {
+      "data": [
+        {
+          "name": "olmo31-instruct-raw:latest",
+          "model": "olmo31-instruct-raw:latest",
+          "modified_at": "2026-09-10T18:28:43.957839445-03:00",
+          "size": 19482033477,
+          "digest": "5e48f4bb13ab64d0993c3c4e94914a2539fee7c0bf1a51c62f469fdb78caac09",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "olmo2",
+            "families": [
+              "olmo2"
+            ],
+            "parameter_size": "32.2B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 65536,
+            "embedding_length": 5120
+          },
+          "capabilities": [
+            "completion"
+          ]
+        },
+        {
+          "name": "hf.co/unsloth/Olmo-3.1-32B-Instruct-GGUF:Q4_K_M",
+          "model": "hf.co/unsloth/Olmo-3.1-32B-Instruct-GGUF:Q4_K_M",
+          "modified_at": "2026-09-10T18:24:13.381492565-03:00",
+          "size": 19482037102,
+          "digest": "4e6927902f5249a23d1fddc297cdab29446d0507123f96fec153242660472aa1",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "olmo2",
+            "families": [
+              "olmo2"
+            ],
+            "parameter_size": "32.2B",
+            "quantization_level": "unknown",
+            "context_length": 65536,
+            "embedding_length": 5120
+          },
+          "capabilities": [
+            "completion"
+          ]
+        },
+        {
+          "name": "gemma4:26b",
+          "model": "gemma4:26b",
+          "modified_at": "2026-08-20T20:33:27.605505483-03:00",
+          "size": 17987581215,
+          "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "gemma4",
+            "families": [
+              "gemma4"
+            ],
+            "parameter_size": "25.8B",
+            "quantization_level": "Q4_K_M"
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        {
+          "name": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+          "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+          "modified_at": "2026-06-03T11:55:08.86591501-03:00",
+          "size": 18556699186,
+          "digest": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3moe",
+            "families": [
+              "qwen3moe"
+            ],
+            "parameter_size": "30.5B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 262144,
+            "embedding_length": 2048
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        }
+      ]
+    }
+  },
+  "manifests": {
+    "qwen": {
+      "sha256": "19e422b0231392335cfc49cfd172de7034bb1aeabb08aa307cce745c60b272fe",
+      "data": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:8c26ae310182f66177629760bd587cf4f129d9d40ad9eb907bcbabe5be45c03b",
+          "size": 494
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:78b329e716e7e9775973d392cd132b1f1ff1c8287a992887caeb6fd6c56ba9cc",
+            "size": 18556685856
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.template",
+            "digest": "sha256:eade0a07cac7712787bbce23d12f9306adb4781d873d1df6e16f7840fa37afec",
+            "size": 1379
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.license",
+            "digest": "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+            "size": 11338
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.params",
+            "digest": "sha256:0914c7781e001948488d937994217538375b4fd8c1466c5e7a625221abd3ea7a",
+            "size": 119
+          }
+        ]
+      }
+    },
+    "gemma": {
+      "sha256": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+      "data": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:90294508afbbc106b71a808a80e13bdf88c20ecbefcd6cf3380eafa484cef3e4",
+          "size": 474
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:7121486771cbfe218851513210c40b35dbdee93ab1ef43fe36283c883980f0df",
+            "size": 17987569344
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.license",
+            "digest": "sha256:7339fa418c9ad3e8e12e74ad0fd26a9cc4be8703f9c110728a992b193be85cb2",
+            "size": 11355
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.params",
+            "digest": "sha256:56380ca2ab89f1f68c283f4d50863c0bcab52ae3f1b9a88e4ab5617b176f71a3",
+            "size": 42
+          }
+        ]
+      }
+    },
+    "olmo-raw": {
+      "sha256": "5e48f4bb13ab64d0993c3c4e94914a2539fee7c0bf1a51c62f469fdb78caac09",
+      "data": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "digest": "sha256:37f2f9503ea095d57c3f5f444c9903fab22b1baec6be53f37d1d4a5adca0f26f",
+          "size": 152
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.ollama.image.model",
+            "digest": "sha256:002a5687076790b1c86cd73323f4acc15ec1d0d671231767919e59d656e5a21b",
+            "size": 19482033312
+          },
+          {
+            "mediaType": "application/vnd.ollama.image.template",
+            "digest": "sha256:b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+            "size": 13
+          }
+        ]
+      }
+    },
+    "olmo-native": {
+      "sha256": "4e6927902f5249a23d1fddc297cdab29446d0507123f96fec153242660472aa1",
+      "data": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "digest": "sha256:ea23481091a1174eed3a76e3a960e90270fac51f325c8de7bbd0eec368778c32",
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "size": 552
+        },
+        "layers": [
+          {
+            "digest": "sha256:4e671b2402c30c5fc1fea99d97af96332933a33db0d2c27c581537a815044795",
+            "mediaType": "application/vnd.ollama.image.model",
+            "size": 19482036256
+          },
+          {
+            "digest": "sha256:9cab0d615d5412bb87aa009073073c46d0ce324024d60a38f86a16f06e1c0cbb",
+            "mediaType": "application/vnd.ollama.image.template",
+            "size": 209
+          },
+          {
+            "digest": "sha256:daedf9fc67e6e053db9280e614c14181448c8b3d6c1810cd80dc7ab83200c08e",
+            "mediaType": "application/vnd.ollama.image.params",
+            "size": 85
+          }
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Model listing is not a runtime qualification.",
+    "Jinja render checks are offline and do not capture Ollama generation inputs or token IDs.",
+    "Local artifact matches quantization publisher, not a verification of its conversion from upstream weights.",
+    "Raw and native OLMo artifacts differ; no tensor equivalence claim.",
+    "Qwen and Gemma manifests match earlier identities; their full weight files were not rehashed this turn."
+  ],
+  "pinned_tokenizer_verification": {
+    "url": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct/raw/ac0587e4a7744a551c059d8cd17ba220bc940dae/tokenizer_config.json",
+    "sha256": "80fbc2a161419760bb8a84ed1d3b9550a2d68b7abd07a72706b8f5977e044b8d",
+    "matches_capture": true
+  }
+}

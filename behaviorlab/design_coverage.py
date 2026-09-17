@@ -25,7 +25,7 @@ AXES = {
     'block': ('Recorded protocol / source block', []),
 }
 TECHNICAL_CLASSES = {'cloud_model_assessment', 'cloud_integration_smoke', 'cloud_integration_diagnostic'}
-PLAN_PATH = Path(__file__).resolve().parents[1] / 'designs' / 'balanced-replication-v0.1.json'
+PLAN_PATH = Path(__file__).resolve().parents[1] / 'designs' / 'balanced-replication-v0.2.json'
 
 
 def settings_for(run, speaker):

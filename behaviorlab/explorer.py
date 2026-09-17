@@ -29,13 +29,14 @@ from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
+from .topic_trajectories import build_trajectories
 from .journal import read_events
 from .legacy import parse_run, verify_corpus
 from .runner import campaign_documents, outcome, turn_from
 from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
-REPORTS = [('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
+REPORTS = [('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
            ('opening-partner-design', 'Opening and partner: next study design', 'OPENING-PARTNER-DESIGN.md'),
            ('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
@@ -441,7 +442,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -464,6 +465,9 @@ def make_server(workspace, port=8765):
                 if path in ('/api/design-coverage','/api/design-coverage/export'):
                     q=parse_qs(url.query);result=build_coverage(catalog,json.loads(q.get('filters',['{}'])[0]))
                     return self.send(result,download='model-design-coverage.json' if path.endswith('/export') else None)
+                if path in ('/api/topic-trajectories','/api/topic-trajectories/export'):
+                    q=parse_qs(url.query);result=build_trajectories(catalog,analysis.corpus_dataset(),json.loads(q.get('filters',['{}'])[0]))
+                    return self.send(result,download='topic-trajectory.json' if path.endswith('/export') else None)
                 if path=='/api/analysis': return self.send(analysis.index())
                 if path=='/api/analysis/progress': return self.send(analysis_corpus.progress(workspace))
                 if path=='/api/analysis/dataset':

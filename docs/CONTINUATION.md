@@ -1,3 +1,13 @@
+## Current milestone · 17 September 2026: Topic Trajectories and candidate preflight
+
+**Complete:** the new [Topic Trajectories](TOPIC-TRAJECTORIES.md) view reads existing JEV scores along actual paths, links every available scored passage to the reader, separates external events and missing scores, and withholds all 60 reserved validation lineages. The discovery scope is 377 conversations. No new inference or notebook write was performed.
+
+The [candidate audit](REPLICATION-CANDIDATE-AUDIT.md) verified listed routes/prices for Haiku, dated mini and Nemotron, unchanged Qwen/Gemma manifests, and the installed native OLMo quantization against its publisher's complete file checksum. Six offline supplied-system/no-tools renders match upstream. The historical raw alias remains separate. Runtime generation, account/provider access and longest-history qualification are pending. [Design v0.2](../designs/balanced-replication-v0.2.json) supersedes v0.1 for prospective planning only; both remain preserved and execution is disabled.
+
+The [precision sensitivity](REPLICATION-PRECISION.md) uses one first-six mean per eligible discovery record. Twenty roots is still only a pilot illustration. A single unadjusted ±10-point interval for a disclosure difference requires about 49–95 roots per cell under SD 25–35 scenarios, before multiplicity and technical-availability adjustments. No final sample size or larger budget is authorized by this calculation.
+
+**Next coherent work:** prepare the exact finite technical qualification (four generation slots per candidate, pending fixture/control/seed/ledger freeze and new spending ceiling), implement the reserved independent-reading workflow, and settle the contrast/precision/multiplicity target before the new behavioural collection. Do not spend from closed campaign allocations. No scheduled continuation is active. Earlier milestone entries below are historical.
+
 ## Current milestone · 17 September 2026: Model & Design Coverage
 
 The researcher approved the coverage-and-replication planning milestone after reviewing the model imbalance. **Model & Design Coverage is implemented**: read-only model/family × condition grids, scopes separating conversation inventory from visible atlas-eligible records and assessment checks, zero-cell drill-down, exact source navigation, branch/availability flags and export. See [coverage guide](MODEL-DESIGN-COVERAGE.md).
