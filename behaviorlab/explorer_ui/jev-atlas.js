@@ -14,7 +14,28 @@ function jevMatch(row,topic,mode,review,thresholds){
  if(mode==='disagreement')return !!review&&p!==null&&((review.label==='absent'&&p>=thresholds.candidate)||(review.label==='present'&&p<=thresholds.unlikely));
  return true;
 }
-function jevFilters(params){return {batch:params.get('batch')||'',topic:params.get('topic')||'',mode:Object.hasOwn(jevModes,params.get('mode'))?params.get('mode'):'all',q:params.get('q')||'',sort:params.get('sort')||'order',page:Math.max(0,Number(params.get('page'))||0),item:params.get('item')||'',blind:params.get('blind')==='1'};}
+function jevBin(p){return typeof p==='number'&&Number.isFinite(p)&&p>=0&&p<=1?Math.min(9,Math.floor(p*10)):-1;}
+function jevBinLabel(bin){return `${bin*10}–${bin===9?'':'<'}${(bin+1)*10}%`;}
+function jevDistribution(rows,topic){
+ const bins=Array(10).fill(0),values=[];
+ for(const row of rows){const p=jevProbability(row,topic),bin=jevBin(p);if(bin>=0){bins[bin]++;values.push(p);}}
+ values.sort((a,b)=>a-b);const n=values.length;
+ return {bins,assessed:n,excluded:rows.length-n,mean:n?values.reduce((a,b)=>a+b,0)/n:null,median:n?(values[Math.floor((n-1)/2)]+values[Math.floor(n/2)])/2:null};
+}
+function jevSortRows(rows,topic,sort){
+ const sorted=[...rows];
+ if(sort==='probability'||sort==='probability_asc')sorted.sort((a,b)=>{
+  const x=jevProbability(a,topic),y=jevProbability(b,topic),xm=jevBin(x)<0,ym=jevBin(y)<0;
+  if(xm||ym)return xm===ym?0:xm?1:-1;
+  return sort==='probability_asc'?x-y:y-x;
+ });
+ if(sort==='title')sorted.sort((a,b)=>a.run_title.localeCompare(b.run_title)||a.turn-b.turn);
+ return sorted;
+}
+function jevFilters(params){
+ const blind=params.get('blind')==='1',sort=params.get('sort'),bin=params.get('bin')||'';
+ return {batch:params.get('batch')||'',topic:params.get('topic')||'',mode:blind?'all':Object.hasOwn(jevModes,params.get('mode'))?params.get('mode'):'all',q:params.get('q')||'',sort:['order','probability','probability_asc','title'].includes(sort)&&!(blind&&sort.startsWith('probability'))?sort:'order',bin:!blind&&/^[0-9]$/.test(bin)?bin:'',page:Math.max(0,Number(params.get('page'))||0),item:params.get('item')||'',blind};
+}
 function jevGo(changes={}){
  const f={...state.jevFilters,...changes};go({view:'jev-atlas',...f,blind:f.blind?'1':'0'});
 }
@@ -31,10 +52,16 @@ async function loadJevAtlas(filters){
 function jevReviewFor(id,topic){return state.jev?.reviews.find(r=>r.item_id===id&&r.topic_id===topic);}
 function jevSelection(){
  const f=state.jevFilters,d=state.jev,q=f.q.toLowerCase();
- const rows=d.rows.filter(r=>jevMatch(r,f.topic,f.mode,jevReviewFor(r.id,f.topic),d.plan.thresholds)&&(!q||[r.text,r.run_title,...r.models].join(' ').toLowerCase().includes(q)));
- if(f.sort==='probability')rows.sort((a,b)=>(jevProbability(b,f.topic)??-1)-(jevProbability(a,f.topic)??-1));
- if(f.sort==='title')rows.sort((a,b)=>a.run_title.localeCompare(b.run_title)||a.turn-b.turn);
- return rows;
+ const rows=d.rows.filter(r=>jevMatch(r,f.topic,f.mode,jevReviewFor(r.id,f.topic),d.plan.thresholds)&&(!q||[r.text,r.run_title,...r.models].join(' ').toLowerCase().includes(q))&&(f.bin===''||jevBin(jevProbability(r,f.topic))===Number(f.bin)));
+ return jevSortRows(rows,f.topic,f.sort);
+}
+function jevHistogram(data,filters,topic){
+ if(filters.blind)return '<section class="jev-distribution"><h2>Probability distribution</h2><p class="source-note">Hidden while judgments are hidden.</p></section>';
+ const dist=jevDistribution(data.rows,filters.topic),peak=Math.max(1,...dist.bins);
+ const percent=p=>p===null?'—':(p*100).toFixed(1)+'%';
+ return `<section class="jev-distribution" aria-label="Probability distribution"><div class="jev-distribution-heading"><div><div class="eyebrow">THE WHOLE DISTRIBUTION</div><h2>${esc(topic.title)}</h2><p class="source-note">All ${dist.assessed} scored passages in this batch · ${dist.excluded} unassessed excluded. Queue and search filters do not change this chart.</p></div><div class="jev-distribution-stats"><span>Median<strong>${percent(dist.median)}</strong></span><span>Mean<strong>${percent(dist.mean)}</strong></span></div></div>
+ ${dist.assessed?`<p class="jev-axis-title">Number of passages</p><div class="jev-chart-scroll"><div class="jev-chart"><div class="jev-y-axis" aria-hidden="true"><span>${peak}</span><span>${peak/2}</span><span>0</span></div><div class="jev-histogram">${dist.bins.map((count,bin)=>`<button class="jev-bin ${filters.bin===String(bin)?'selected':''}" data-action="jev-bin" data-bin="${bin}" aria-pressed="${filters.bin===String(bin)}" aria-label="${jevBinLabel(bin)}: ${count} passages; show this range" title="${jevBinLabel(bin)} · ${count} passages · ${(count/dist.assessed*100).toFixed(1)}% of scored passages"><span class="jev-bin-plot"><strong>${count}</strong><span class="jev-bin-bar" style="height:${count/peak*130}px"></span></span><span class="jev-bin-label">${jevBinLabel(bin)}</span></button>`).join('')}</div></div></div><p class="jev-x-axis">JEV probability of substantive discussion</p>`:'<p class="jev-chart-empty">No scored passages yet. Missing assessments are excluded, not placed at zero.</p>'}
+ <div class="jev-distribution-footer"><p class="source-note">Click a bar to read that range; this clears the queue and search. Bins include their lower bound; the last includes 100%. These are model scores, not measured accuracy.</p>${filters.bin!==''?`<button class="button" data-action="jev-clear-bin">Clear ${jevBinLabel(Number(filters.bin))} range</button>`:''}</div></section>`;
 }
 function jevDetail(row){
  if(!row)return '<div class="jev-detail"><h2>Select a passage</h2><p>Choose a row to inspect its context and assessments.</p></div>';
@@ -69,8 +96,9 @@ function renderJevAtlas(){
  ${d.integration_revision?'<details class="jev-method"><summary>Integration correction · rounded probabilities</summary><p>One response paused the original validator because its Choice probabilities totalled 0.99. A recorded integration revision accepts sums within two-decimal rounding bounds. Original values, the stopped run and all requests are preserved in the export. No request was retried; the 200-call allocation is unchanged.</p></details>':''}
  ${!d.dictionary_current?'<p class="jev-status">The original dictionary has changed. This batch keeps its frozen definitions.</p>':''}
  <section class="jev-topic-overview" aria-label="Topic overview"><div class="eyebrow">TOPIC OVERVIEW · TARGET MESSAGES</div><p class="source-note">Candidate counts use completed assessments only. No assessment means unknown.</p><div class="jev-topic-grid">${d.plan.topics.map(id=>{const t=d.plan.dictionary.find(x=>x.id===id),candidates=d.rows.filter(r=>{const p=jevProbability(r,id);return p!==null&&p>=d.plan.thresholds.candidate;}).length;return `<button class="jev-topic-chip ${id===f.topic?'selected':''}" data-action="jev-topic-select" data-topic="${esc(id)}" aria-pressed="${id===f.topic}"><span>${esc(t.title)}</span><strong>${f.blind?'Hidden':s.complete?candidates+' / '+s.complete:'Not assessed'}</strong></button>`;}).join('')}</div></section>
- <div class="jev-controls"><label>Selected topic<select id="jev-topic">${d.plan.topics.map(t=>option(t,d.plan.dictionary.find(a=>a.id===t).title,f.topic)).join('')}</select></label><label>Comparison queue<select id="jev-mode">${Object.entries(jevModes).map(([v,l])=>option(v,l,f.mode)).join('')}</select></label><label>Sort<select id="jev-sort">${[['order','Sample order'],['probability','Highest JEV probability'],['title','Conversation title']].map(([v,l])=>option(v,l,f.sort)).join('')}</select></label><label class="jev-blind"><input type="checkbox" id="jev-blind" ${f.blind?'checked':''}> Hide judgments while reading</label></div>
+ <div class="jev-controls"><label>Selected topic<select id="jev-topic">${d.plan.topics.map(t=>option(t,d.plan.dictionary.find(a=>a.id===t).title,f.topic)).join('')}</select></label><label>Comparison queue<select id="jev-mode">${Object.entries(jevModes).map(([v,l])=>option(v,l,f.mode)).join('')}</select></label><label>Sort<select id="jev-sort" ${f.blind?'disabled':''}>${[['order','Sample order'],['probability','Highest JEV probability'],['probability_asc','Lowest JEV probability'],['title','Conversation title']].map(([v,l])=>option(v,l,f.sort)).join('')}</select></label><label class="jev-blind"><input type="checkbox" id="jev-blind" ${f.blind?'checked':''}> Hide judgments while reading</label></div>
  <form id="jev-search-form" class="jev-search"><input id="jev-search" aria-label="Search sampled passages" placeholder="Search passages, models or conversations…" value="${esc(f.q)}"><button class="button" type="submit">Search</button></form>
+ ${jevHistogram(d,f,topic)}
  <div class="jev-workspace"><section class="jev-list" aria-label="Sampled passages"><div class="jev-list-heading"><h2>${rows.length} passage${rows.length===1?'':'s'}</h2><span>${esc(topic.title)}</span></div>${visible.map(r=>{const p=jevProbability(r,f.topic),review=jevReviewFor(r.id,f.topic);return `<button class="jev-row ${selected?.id===r.id?'selected':''}" data-action="jev-select" data-id="${esc(r.id)}" aria-pressed="${selected?.id===r.id}"><span class="jev-row-top"><span>${esc(r.speaker)}${r.turn} · ${esc(r.status==='pending'?'Not assessed':r.status)}</span><span>${f.blind?'Hidden':p===null?'—':Math.round(p*100)+'%'}</span></span><strong>${esc(r.run_title)}</strong><span class="jev-row-text">${esc(r.text.slice(0,200))}${r.text.length>200?'…':''}</span><span class="jev-row-foot">${f.blind?'Judgments hidden':`${r.literal[f.topic]?.length?'Phrase match':'No phrase match'} · ${jevDecision(p,d.plan.thresholds)}`} ${review?'· Reviewed':''}${!r.source_current?' · Source changed':''}</span></button>`;}).join('')||'<div class="jev-no-results"><h3>No passages in this queue</h3><p>Unassessed passages have no semantic label. Try All passages or another topic.</p><button class="button" data-action="jev-all">Show all passages</button></div>'}<div class="jev-pager"><button class="button" data-action="jev-page" data-page="${f.page-1}" ${!f.page?'disabled':''}>Previous</button><span>${f.page+1} / ${pages}</span><button class="button" data-action="jev-page" data-page="${f.page+1}" ${f.page+1>=pages?'disabled':''}>Next</button></div></section>${jevDetail(selected)}</div>
  <details class="jev-method"><summary>Frozen method, sampling & cost accounting</summary><p>${esc(d.plan.sampling.method)} ${d.plan.sampling.eligible_passages} eligible passages. Historical recorded text and valid lab replies are included; capped, unavailable and oversized targets and branching records are excluded.</p><p>The sampling seed is ${esc(d.plan.sampling.seed)}. Development/held-out assignments are by conversation. Human validation is pending. A passage probability is not an initial-topic choice or a prevalence estimate.</p><p>Candidate ≥ ${d.plan.thresholds.candidate}; unlikely ≤ ${d.plan.thresholds.unlikely}. These thresholds are provisional. Missing or failed assessments remain unknown.</p><p>${esc(d.plan.model)} · $${d.plan.budget.usd_per_million_input}/million input tokens · output free at the checked rate. Costs are calculated from reported token usage, not a billing receipt.</p><pre>${esc(JSON.stringify({dictionary_sha256:d.plan.dictionary_sha256,plan_sha256:d.plan.sha256,excluded:d.plan.sampling.excluded},null,2))}</pre></details></div>`;
 }
@@ -85,10 +113,12 @@ if(typeof document!=='undefined'){
    const a=el.dataset.action;
    if(a==='jev-new')jevNew();
    else if(a==='jev-prepare'){el.disabled=true;const result=await api('/api/jev-atlas/prepare',{title:$('#jev-title').value,cohort:$('#jev-cohort').value,count:Number($('#jev-count').value),topics:[...document.querySelectorAll('[name="jev-topic-choice"]:checked')].map(x=>x.value)});$('#dialog').close();jevGo({batch:result.id,topic:'',item:'',page:0,mode:'all'});}
-   else if(a==='jev-topic-select')jevGo({topic:el.dataset.topic,page:0,item:''});
+   else if(a==='jev-topic-select')jevGo({topic:el.dataset.topic,bin:'',page:0,item:''});
+   else if(a==='jev-bin')jevGo({bin:el.dataset.bin,mode:'all',q:'',page:0,item:''});
+   else if(a==='jev-clear-bin')jevGo({bin:'',page:0,item:''});
    else if(a==='jev-select')jevGo({item:el.dataset.id});
    else if(a==='jev-page')jevGo({page:Number(el.dataset.page),item:''});
-   else if(a==='jev-all')jevGo({mode:'all',q:'',page:0,item:''});
+   else if(a==='jev-all')jevGo({mode:'all',q:'',bin:'',page:0,item:''});
    else if(a==='jev-reload')await loadJevAtlas(state.jevFilters);
    else if(a==='jev-reset')go({view:'jev-atlas'});
    else if(a==='jev-source')go({run:el.dataset.id,message:el.dataset.message});
@@ -99,7 +129,7 @@ if(typeof document!=='undefined'){
    }
   }catch(error){toast(error.message);}finally{el.disabled=false;}
  });
- document.addEventListener('change',e=>{const map={'jev-batch':'batch','jev-topic':'topic','jev-mode':'mode','jev-sort':'sort'};if(map[e.target.id])jevGo({[map[e.target.id]]:e.target.value,page:0,item:''});if(e.target.id==='jev-blind')jevGo({blind:e.target.checked,mode:'all',sort:'order',page:0,item:''});});
+ document.addEventListener('change',e=>{const map={'jev-batch':'batch','jev-topic':'topic','jev-mode':'mode','jev-sort':'sort'};if(map[e.target.id])jevGo({[map[e.target.id]]:e.target.value,...(['jev-batch','jev-topic','jev-mode'].includes(e.target.id)?{bin:''}:{}),page:0,item:''});if(e.target.id==='jev-blind')jevGo({blind:e.target.checked,mode:'all',sort:'order',bin:'',page:0,item:''});});
  document.addEventListener('submit',e=>{if(e.target.id==='jev-search-form'){e.preventDefault();jevGo({q:$('#jev-search').value,page:0,item:''});}});
 }
-if(typeof module!=='undefined')module.exports={jevProbability,jevDecision,jevMatch,jevFilters};
+if(typeof module!=='undefined')module.exports={jevProbability,jevDecision,jevMatch,jevFilters,jevBin,jevDistribution,jevSortRows};

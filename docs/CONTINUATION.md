@@ -18,6 +18,10 @@ JEV found 66 subjective-experience, 43 consciousness and 34 nonduality candidate
 
 Next useful step: a bounded independent human coding pass, distinguishing evoked experience, asserted experience and substantive discussion. Develop rubric changes on development material, then evaluate independently. The held-out partition was partly visible to Codex during integration/browser diagnostics; do not claim Codex blinding. No new inference or automatic future run is scheduled. Resume the prior opening/partner research milestone after this detour when directed.
 
+## JEV interface follow-up: probability exploration
+
+Lowest-first sorting and an interactive whole-batch probability histogram are implemented. Bars open exact ten-point ranges, with counts, mean and median; URL and source-return navigation preserve the selected range. Missing assessments are excluded, and the hide-judgments control hides the distribution and removes score-driven navigation. This is a frontend-only update: no model calls, source edits or assessment freeze changes. See [the distribution guide](JEV-TOPIC-ATLAS.md#exploring-the-probability-distribution).
+
 ## Latest completed infrastructure milestone: appHub launcher
 
 On 17 September 2026, the researcher requested adding the lab to the existing [appHub](http://localhost:5100/). **Behavior Laboratory** now runs under the hub supervisor on port 8765 with automatic startup and crash recovery. The previous Codex terminal server was gracefully stopped; use hub controls for subsequent restarts. The same live workspace and notebook are in use. All 472 default library records and six collections load; the notebook fingerprint and all seven other hub app configurations, states and PIDs were unchanged at verification. See [configuration and operation](APP-HUB.md) and [validation](evidence/apphub-registration-validation.json). This local registration adds no remote access or model calls.

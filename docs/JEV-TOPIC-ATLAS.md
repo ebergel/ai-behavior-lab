@@ -6,7 +6,7 @@ An independent semantic assessment layer beside the existing Topic atlas. Open *
 
 - Prepare a finite passage sample from all eligible conversations or a saved research collection, with selectable topic questions.
 - Freeze a separate copy of the dictionary, exact target text, up to two preceding participant messages, source identities, questions, sampling seed, model and spending limits.
-- Browse a topic overview, comparison queues, text search, probability/title sorting and a close reading panel with model tags and experimental condition.
+- Browse a topic overview, comparison queues, text search, highest/lowest probability sorting, an interactive distribution histogram and a close reading panel with model tags and experimental condition.
 - Open the original conversation and return with the topic, queue, passage and page preserved in the URL.
 - Record present/absent/uncertain judgments and observations, retaining every revision separately from JEV's original output. Hide model judgments and literal matches for an initial reading.
 - Export the complete batch, exact requests, raw responses, probabilities, usage and review history.
@@ -60,6 +60,16 @@ Comparison queues expose candidates without phrase matches, phrase matches rated
 Review authorship is explicit. A personal review or Codex reading is not automatically independent human validation. The hide-judgments control supports a first reading but does not erase prior exposure; it is not a full blinded-rating protocol. For a formal comparison, freeze the definitions on development conversations, code the held-out material independently, then report precision, recall, calibration and coverage with appropriate conversation-level uncertainty. Rare-topic challenge cases should be a separate declared sample.
 
 The complete target message is the linked evidence unit; no model-written quotation is accepted as a source span. A changed/missing source disables new reviews of the stale assessment. Later dictionary edits leave older batch definitions unchanged. No classification establishes that a model has subjective experience.
+
+## Exploring the probability distribution
+
+Choose **Lowest JEV probability** or **Highest JEV probability** in Sort to read either end of the selected queue. Unassessed or failed items stay last in both directions; they are never treated as zero. Equal scores retain sample order.
+
+The histogram shows the selected topic across **all scored targets in the batch**, independently of the queue and text search. Each of ten bins spans ten percentage points: the lower bound is included, the upper bound excluded, except that the final bin includes 100%. Counts, mean and median use scored targets only; the excluded count stays visible. Bar heights represent passage counts, not probability density or calibration.
+
+Click a bar to list its passages. This clears the comparison queue and search, keeps the chosen sort order, and records the range in the URL. **Clear … range** removes that selection. Changing topic, batch or comparison queue also clears the range; source navigation and return preserve it. A subsequent text search narrows the selected range without changing the whole-batch histogram. Bar tooltips show both count and share of assessed targets. All bars are keyboard buttons with explicit range/count labels. On narrow screens, the chart scrolls within its panel.
+
+When **Hide judgments while reading** is enabled, the chart and summary statistics are hidden, probability sorting is disabled, and the range/semantic queue is cleared. These navigation controls do not make the exercise a formal blinded evaluation. Probability values are the saved model judgments, not measured accuracy or evidence of model experience. No chart interaction runs inference or edits research evidence.
 
 ## Research sources and boundaries
 

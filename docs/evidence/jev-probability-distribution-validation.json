@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-09-17T11:50:19.739640-03:00",
+  "scope": "JEV probability sorting and whole-batch histogram UI",
+  "python_tests_passed": 222,
+  "javascript_tests_passed": 21,
+  "browser_checks": {
+    "emergence_uncertain_ascending_first_probability": 0.21,
+    "emergence_whole_batch_bins": [
+      102,
+      45,
+      11,
+      11,
+      6,
+      5,
+      4,
+      7,
+      5,
+      4
+    ],
+    "emergence_mean": 0.1884,
+    "emergence_median": 0.09,
+    "first_bin_opens": 102,
+    "first_bin_lowest_probability": 0.01,
+    "source_return_retains_bin_and_sort": true,
+    "blind_mode_hides_chart_and_clears_score_filters": true,
+    "labels_below_bars_and_proportional_widths": true
+  },
+  "preservation": {
+    "original_notebook_unchanged": true,
+    "frozen_runner_unchanged": true,
+    "jev_evidence_files_byte_identical": 403,
+    "new_model_calls": 0,
+    "research_snapshot_unchanged": true,
+    "review_writes": 0
+  },
+  "notes": "The live batch now has nine saved review records, including researcher additions; this UI update does not edit or resnapshot those records."
+}
