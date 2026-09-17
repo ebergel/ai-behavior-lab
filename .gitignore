@@ -11,3 +11,6 @@ workspace/
 .env
 .env.*
 !.env.example
+
+# Reproducible frontend build dependencies
+node_modules/

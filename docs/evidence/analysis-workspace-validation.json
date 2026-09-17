@@ -1,0 +1,59 @@
+{
+  "verified_at": "2026-09-17T16:37:23.060702-03:00",
+  "scope": "Analysis implementation; no inference",
+  "datasets": {
+    "expanded": {
+      "passages": 31,
+      "conversations": 30,
+      "complete": 31,
+      "questions": 53,
+      "corpus_visible_targets": 11054
+    },
+    "intact": {
+      "passages": 27,
+      "conversations": 17,
+      "complete": 27,
+      "questions": 53,
+      "corpus_visible_targets": 11054
+    },
+    "pilot": {
+      "passages": 200,
+      "conversations": 159,
+      "complete": 200,
+      "questions": 8,
+      "corpus_visible_targets": null
+    }
+  },
+  "tests": {
+    "python": 246,
+    "javascript": 34
+  },
+  "notebook_fingerprint": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "snapshot_preservation": {
+    "prior_bundle_sha256": "e7b75075f5a7bf66f7b06642bed60570e11a329274e7f531f15c1e290a05dcce",
+    "new_bundle_sha256": "69746736c5fcdd6bc7108b62ce6da418d3d596e9a00b3997696f354f9a3600d6",
+    "unchanged_files": 2165,
+    "added": [
+      "evidence/analysis/views/67d7f5dc00dea92409b96b2e/000001.json"
+    ]
+  },
+  "starter_view": {
+    "id": "67d7f5dc00dea92409b96b2e",
+    "author": "Codex",
+    "revision": 1
+  },
+  "browser_checks": [
+    "binary threshold and count table",
+    "pivot cell -> exact contributing passages",
+    "source transcript and return state",
+    "table/heatmap, bars, stacked bars, lines, histogram, scatterplot",
+    "histogram bin -> 18 exact contributing passages",
+    "terciles fitted at 3 and 18 for Consciousness; counts 10/10/11",
+    "local chart controls; no cloud sharing button",
+    "Model-family filtering reduced 31 to 26 passages while Consciousness quantile cutpoints stayed at 3 and 18",
+    "Saved starter recipe reloads with both transformations, nested row dimensions, name, note and authorship",
+    "Multi-field grand-total cell opens all 31 passages",
+    "Dataset selector shows 27 intact passages / 17 conversations and 200 pilot passages / 159 conversations, separately"
+  ],
+  "no_new_inference": true
+}

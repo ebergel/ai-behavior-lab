@@ -21,6 +21,7 @@ from .history import ancestry, request
 from .exploration_collections import ResearchCollections
 from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
 from .topic_atlas import TopicAtlas
+from .analysis_workspace import AnalysisWorkspace, read_record as read_analysis_record
 from .jev_atlas import JevAtlas
 from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
@@ -398,6 +399,7 @@ def make_server(workspace, port=8765):
         if 'experiment' not in run: run['experiment']=experiment(run)
     studies=ResearchCollections(notes); topics=TopicFlags(notes); topic_atlas=TopicAtlas(notes)
     jev_atlas=JevAtlas(workspace)
+    analysis=AnalysisWorkspace(workspace,catalog)
     finder_views=FinderViews(notes)
     musings=LabMusings(notes)
     def study_summaries():
@@ -424,7 +426,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/workbench.js','/workbench.css','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/workbench.js','/workbench.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -444,6 +446,10 @@ def make_server(workspace, port=8765):
                     return self.send({'assessments':[a for a in catalog.assessments if not a['synthetic']],
                         'prior_checks':[{'id':r['id'],'title':r['title'],'models':r['models'],'cost_usd':r.get('cost_usd')}
                                         for r in catalog.runs.values() if r['kind']=='lab' and r['data_class'] in ('cloud_integration_smoke','cloud_integration_diagnostic')]})
+                if path=='/api/analysis': return self.send(analysis.index())
+                if path=='/api/analysis/dataset': return self.send(analysis.dataset(parse_qs(url.query).get('id',[''])[0]))
+                if path=='/api/analysis/export':
+                    return self.send({'views':analysis.views(),'history':[read_analysis_record(p) for p in sorted((analysis.root/'views').glob('*/*.json'))]},download='analysis-views.json')
                 if path=='/api/jev-atlas': return self.send(jev_atlas.index(topic_atlas,studies))
                 if path in ('/api/jev-atlas/batch','/api/jev-atlas/export'):
                     q=parse_qs(url.query);detail=(jev_atlas.export if path.endswith('/export') else jev_atlas.detail)(q.get('id',[''])[0],catalog,topic_atlas)
@@ -495,6 +501,7 @@ def make_server(workspace, port=8765):
                 limit=524288 if self.path=='/api/studies' else 262144 if self.path=='/api/musings' else 65536
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
+                if self.path=='/api/analysis/views': return self.send(analysis.save(data))
                 if self.path=='/api/jev-atlas/prepare': return self.send(jev_atlas.prepare(data,catalog,topic_atlas,studies))
                 if self.path=='/api/jev-atlas/review': return self.send(jev_atlas.save_review(data,catalog))
                 if self.path=='/api/musings': return self.send(musings.save(data,{d['id'] for d in studies.summaries()}))

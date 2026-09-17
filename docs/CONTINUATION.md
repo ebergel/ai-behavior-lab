@@ -2,6 +2,14 @@
 
 Private GitHub repository: [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab), independent of the earlier reference repository. `origin/main` tracks the private remote. Following the researcher's explicit request, the repository now includes the [self-contained research snapshot](RESEARCH-DATA.md): original evidence, readable transcripts, all notebook tables and revision histories. The live `workspace/` remains ignored; later notes and runs need an explicit snapshot update. No public release or automatic synchronization is configured. The next research milestone below is unchanged.
 
+## Latest completed interface milestone: multivariate Analysis workspace
+
+The researcher’s pivot-table proposal is implemented in **Analysis**: all broad/specific/form/stance/coverage scores together, independent probability transformations, fixed-reference quantiles, cross-topic pivots, heatmaps, bars, lines, histograms, scatterplots, passage drill-through and centrally saved versioned configurations. The existing widget’s drag/drop, filters, aggregators and renderer selector remain available. See [Analysis workspace](ANALYSIS-WORKSPACE.md).
+
+Available datasets are the 31-passage expanded qualification, the 27-passage joined intact-window qualification and the 200-passage original pilot. Recovery reuse is counted once. The Codex-attributed starter view crosses broad AI and consciousness at 90% thresholds. It is a configuration, not a human annotation or population result. Original notebook tables and all prior evidence remain unchanged. No new model calls occurred.
+
+**Next research step remains prospective:** independently validate semantic scoring, then complete/freeze the paced corpus runner and agree its finite allocation before assessing the remaining corpus. Existing views can already explore thresholds, ties, co-occurrence and model/setup differences within the assessed samples. Full-corpus prevalence claims, causal claims, remote access and public release remain future work.
+
 ## Parked infrastructure task: remote access
 
 [REMOTE-ACCESS-01 — Private remote access to Mac Studio apps](../TODO.md#remote-access-01--private-remote-access-to-mac-studio-apps) is **parked** at the researcher's request on 17 September 2026, pending a new router and hardware setup. The preferred plan is Cloudflare Tunnel plus Access, with one live notebook on the Mac and reusable routing for other web apps. Resume only when the researcher says the hardware is ready and asks to continue; ordinary “go next” laboratory work does not activate this task. No remote-access setup or scheduler was started. The next research milestone remains unchanged.

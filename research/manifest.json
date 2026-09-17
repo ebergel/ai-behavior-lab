@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-17T18:02:00.616306+00:00",
+  "created_at": "2026-09-17T19:35:11.832010+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -13,6 +13,13 @@
     "probe_batches": 4
   },
   "files": [
+    {
+      "path": "evidence/analysis/views/67d7f5dc00dea92409b96b2e/000001.json",
+      "bytes": 11701,
+      "sha256": "1a3b15e3f69f00f1b4068abf31b9aefb106a8aa87b451ac7a0bf6b3371c2fa7e",
+      "category": "original_evidence",
+      "workspace_path": "analysis/views/67d7f5dc00dea92409b96b2e/000001.json"
+    },
     {
       "path": "evidence/annotation-probes-20260915-0459/annotation-status.json",
       "bytes": 721,
@@ -14608,5 +14615,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "e7b75075f5a7bf66f7b06642bed60570e11a329274e7f531f15c1e290a05dcce"
+  "bundle_sha256": "69746736c5fcdd6bc7108b62ce6da418d3d596e9a00b3997696f354f9a3600d6"
 }
