@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-09-17T12:12:27.889972-03:00",
+  "scope": "JEV cards/list overview, sortable topic statistics and proposed two-tier research design",
+  "python_tests_passed": 222,
+  "javascript_tests_passed": 24,
+  "browser_checks": {
+    "cards_list_toggle": true,
+    "topic_search": true,
+    "candidate_sort_ascending_and_descending": true,
+    "mean_probability_sort": true,
+    "uncertain_count_opens_42_emergence_passages": true,
+    "source_return_preserves_overview_search_and_sort": true,
+    "hidden_judgments_hide_semantic_statistics_and_bars": true,
+    "hidden_judgments_allow_alphabetical_sort_both_directions": true,
+    "topic_name_selection": true,
+    "page_horizontal_overflow": false,
+    "table_scrolls_within_panel": true,
+    "candidate_counts": {
+      "experience": 66,
+      "consciousness": 43,
+      "nonduality": 34,
+      "conversation_dynamics": 24,
+      "creativity": 18,
+      "emergence": 9,
+      "ethics": 9,
+      "history": 0
+    }
+  },
+  "preservation": {
+    "original_notebook_tables_equal_snapshot": 14,
+    "jev_evidence_files_byte_identical": 403,
+    "frozen_runner_unchanged": true,
+    "new_model_calls": 0,
+    "review_writes": 0,
+    "research_snapshot_unchanged": true,
+    "research_bundle_sha256": "59b6a919d1e476acd6c19c124391d621c63faf4b74c18cc33175c6764e4d22c5"
+  },
+  "scope_limits": [
+    "The broad taxonomy and corpus assessment are design proposals, not executed analysis.",
+    "Nine live saved readings remain in runtime; the earlier snapshot contains seven Codex readings. No resnapshot performed.",
+    "This UI update is not a calibration or semantic-accuracy evaluation."
+  ]
+}

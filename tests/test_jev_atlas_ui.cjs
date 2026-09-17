@@ -1,6 +1,6 @@
 const test=require('node:test');
 const assert=require('node:assert/strict');
-const {jevMatch,jevDecision,jevProbability,jevFilters,jevBin,jevDistribution,jevSortRows}=require('../behaviorlab/explorer_ui/jev-atlas.js');
+const {jevMatch,jevDecision,jevProbability,jevFilters,jevBin,jevDistribution,jevSortRows,jevTopicMetrics,jevSortTopics}=require('../behaviorlab/explorer_ui/jev-atlas.js');
 const thresholds={candidate:.8,unlikely:.2};
 function row(p,hits=false,status='complete'){return {status,literal:{consciousness:hits?[{}]:[]},answers:p===null?null:{topic_consciousness:{noul:p},outside_dictionary:{noul:.9}}};}
 test('unassessed and failed messages never become semantic negatives',()=>{
@@ -51,4 +51,32 @@ test('blind bookmarks cannot reveal probabilities through range selection or sor
  assert.equal(f.bin,'');assert.equal(f.sort,'order');assert.equal(f.mode,'all');
  for(const bin of ['-1','10','.1','foo'])assert.equal(jevFilters(new URLSearchParams({bin})).bin,'');
  assert.equal(jevFilters(new URLSearchParams('sort=unknown')).sort,'order');
+});
+test('topic summaries use topic-specific scored denominators and preserve overlapping labels',()=>{
+ const rows=[row(.8,true),row(.2),row(.5),row(null),row(.95,false,'error')].map((r,i)=>({...r,id:'i'+i}));
+ rows[0].answers.topic_experience={noul:.9};
+ rows[2].answers.topic_experience={noul:.95};
+ const data={plan:{topics:['consciousness','experience','history'],dictionary:[{id:'consciousness',title:'Consciousness'},{id:'experience',title:'Experience'},{id:'history',title:'History'}],thresholds},rows,reviews:[{item_id:'i0',topic_id:'consciousness'},{item_id:'i0',topic_id:'consciousness'},{item_id:'i2',topic_id:'consciousness'},{item_id:'not-in-batch',topic_id:'consciousness'}]};
+ const [c,e,h]=jevTopicMetrics(data);
+ assert.equal(c.scored,3);assert.equal(c.candidate,1);assert.equal(c.share,1/3);assert.equal(c.uncertain,1);assert.equal(c.semantic_only,0);assert.equal(c.reviewed,2);
+ assert.equal(c.mean,.5);assert.equal(c.median,.5);
+ assert.equal(e.scored,2);assert.equal(e.candidate,2);assert.equal(e.share,1);assert.equal(e.semantic_only,2);
+ assert.equal(h.scored,0);for(const key of ['candidate','share','mean','median','uncertain','semantic_only'])assert.equal(h[key],null);
+ assert.equal(c.candidate+e.candidate,3); // One target belongs to both topics.
+});
+test('topic sorts distinguish zero from unknown in both directions without mutating data',()=>{
+ const rows=[{id:'u',title:'Unknown',candidate:null},{id:'a',title:'A',candidate:0},{id:'c',title:'C',candidate:2},{id:'b',title:'B',candidate:2}];
+ assert.deepEqual(jevSortTopics(rows,'candidate','desc').map(r=>r.id),['b','c','a','u']);
+ assert.deepEqual(jevSortTopics(rows,'candidate','asc').map(r=>r.id),['a','b','c','u']);
+ assert.deepEqual(jevSortTopics(rows,'title','desc').map(r=>r.id),['u','c','b','a']);
+ assert.deepEqual(rows.map(r=>r.id),['u','a','c','b']);
+});
+test('topic view preferences survive bookmarks while hidden judgments suppress score ordering',()=>{
+ const params=new URLSearchParams({overview:'list',topic_q:'self & mind',topic_sort:'mean',topic_dir:'asc',topic:'consciousness',sort:'probability_asc'});
+ const f=jevFilters(params);
+ assert.equal(f.overview,'list');assert.equal(f.topic_q,'self & mind');assert.equal(f.topic_sort,'mean');assert.equal(f.topic_dir,'asc');
+ assert.deepEqual(jevFilters(new URLSearchParams({...f,blind:'0'})),f);
+ params.set('blind','1');const blind=jevFilters(params);assert.equal(blind.topic_sort,'title');assert.equal(blind.topic_dir,'asc');assert.equal(blind.sort,'order');
+ params.set('topic_sort','title');params.set('topic_dir','desc');assert.equal(jevFilters(params).topic_dir,'desc');
+ const invalid=jevFilters(new URLSearchParams('overview=other&topic_sort=missing&topic_dir=other'));assert.equal(invalid.overview,'cards');assert.equal(invalid.topic_sort,'candidate');assert.equal(invalid.topic_dir,'desc');
 });

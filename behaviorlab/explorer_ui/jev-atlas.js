@@ -1,5 +1,6 @@
 'use strict';
 const jevModes={all:'All passages',candidate:'JEV candidates',semantic_only:'JEV candidate · no phrase match',literal_only:'Phrase match · JEV unlikely',uncertain:'JEV uncertain',unreviewed:'Awaiting review',disagreement:'Reviewer disagrees',pending:'Not assessed',outside:'Outside dictionary'};
+const jevTopicColumns=[['title','Topic'],['scored','Scored'],['candidate','Candidates'],['share','Candidate share'],['mean','Mean probability'],['median','Median probability'],['uncertain','Uncertain'],['semantic_only','No phrase hit'],['reviewed','Saved readings']];
 function jevProbability(row,topic){return row.status==='complete'?row.answers?.['topic_'+topic]?.noul??null:null;}
 function jevDecision(p,thresholds){return p===null?'Not assessed':p>=thresholds.candidate?'Candidate':p<=thresholds.unlikely?'Unlikely':'Uncertain';}
 function jevMatch(row,topic,mode,review,thresholds){
@@ -34,7 +35,49 @@ function jevSortRows(rows,topic,sort){
 }
 function jevFilters(params){
  const blind=params.get('blind')==='1',sort=params.get('sort'),bin=params.get('bin')||'';
- return {batch:params.get('batch')||'',topic:params.get('topic')||'',mode:blind?'all':Object.hasOwn(jevModes,params.get('mode'))?params.get('mode'):'all',q:params.get('q')||'',sort:['order','probability','probability_asc','title'].includes(sort)&&!(blind&&sort.startsWith('probability'))?sort:'order',bin:!blind&&/^[0-9]$/.test(bin)?bin:'',page:Math.max(0,Number(params.get('page'))||0),item:params.get('item')||'',blind};
+ return {batch:params.get('batch')||'',topic:params.get('topic')||'',mode:blind?'all':Object.hasOwn(jevModes,params.get('mode'))?params.get('mode'):'all',q:params.get('q')||'',sort:['order','probability','probability_asc','title'].includes(sort)&&!(blind&&sort.startsWith('probability'))?sort:'order',bin:!blind&&/^[0-9]$/.test(bin)?bin:'',page:Math.max(0,Number(params.get('page'))||0),item:params.get('item')||'',blind,
+  overview:params.get('overview')==='list'?'list':'cards',topic_q:params.get('topic_q')||'',topic_sort:blind?'title':jevTopicColumns.some(([key])=>key===params.get('topic_sort'))?params.get('topic_sort'):'candidate',topic_dir:blind&&params.get('topic_sort')!=='title'?'asc':params.get('topic_dir')==='asc'?'asc':'desc'};
+}
+function jevTopicMetrics(data){
+ return data.plan.topics.map(id=>{
+  const entry=data.plan.dictionary.find(t=>t.id===id),dist=jevDistribution(data.rows,id);
+  const assessed=data.rows.filter(r=>jevBin(jevProbability(r,id))>=0);
+  const candidates=assessed.filter(r=>jevProbability(r,id)>=data.plan.thresholds.candidate);
+  const itemIds=new Set(data.rows.map(r=>r.id));
+  return {id,title:entry.title,definition:entry.definition,scored:dist.assessed,
+   candidate:dist.assessed?candidates.length:null,share:dist.assessed?candidates.length/dist.assessed:null,
+   mean:dist.mean,median:dist.median,uncertain:dist.assessed?assessed.filter(r=>jevProbability(r,id)>data.plan.thresholds.unlikely&&jevProbability(r,id)<data.plan.thresholds.candidate).length:null,
+   semantic_only:dist.assessed?candidates.filter(r=>!r.literal?.[id]?.length).length:null,
+   reviewed:new Set(data.reviews.filter(r=>r.topic_id===id&&itemIds.has(r.item_id)).map(r=>r.item_id)).size};
+ });
+}
+function jevSortTopics(rows,key,direction){
+ return [...rows].sort((a,b)=>{
+  const x=a[key],y=b[key];if(x==null||y==null)return x==null&&y==null?a.title.localeCompare(b.title):x==null?1:-1;
+  const order=typeof x==='number'?x-y:String(x).localeCompare(String(y));
+  return (direction==='asc'?order:-order)||a.title.localeCompare(b.title)||a.id.localeCompare(b.id);
+ });
+}
+function jevTopicOverview(data,filters){
+ const all=jevTopicMetrics(data),query=filters.topic_q.trim().toLowerCase(),matching=all.filter(t=>!query||[t.title,t.definition].join(' ').toLowerCase().includes(query));
+ const items=filters.overview==='list'?jevSortTopics(matching,filters.topic_sort,filters.topic_dir):matching;
+ const percent=p=>p===null?'—':(p*100).toFixed(1)+'%';
+ const cell=(t,key)=>{
+  if(filters.blind&&!['scored','reviewed'].includes(key))return 'Hidden';
+  if(t[key]===null)return '—';
+  if(['mean','median','share'].includes(key))return percent(t[key]);
+  const mode={candidate:'candidate',uncertain:'uncertain',semantic_only:'semantic_only'}[key];
+  return mode?`<button class="jev-topic-count" data-action="jev-topic-queue" data-topic="${esc(t.id)}" data-mode="${mode}" aria-label="${esc(t.title)}: ${t[key]} ${esc(jevModes[mode])}">${t[key]}</button>`:t[key];
+ };
+ const header=([key,label])=>{
+  const active=filters.topic_sort===key,disabled=filters.blind&&key!=='title';
+  const description=key==='semantic_only'?'Candidates without a literal phrase match':key==='reviewed'?'Saved attributed readings, including Codex; not independent validation':key==='share'?'Candidates divided by scored target messages; topics overlap':label;
+  return `<th scope="col" aria-sort="${active?(filters.topic_dir==='asc'?'ascending':'descending'):'none'}"><button class="jev-topic-sort" data-action="jev-topic-sort" data-key="${key}" aria-label="Sort topics by ${label}" title="${description}" ${disabled?'disabled':''}><span>${label}</span><span aria-hidden="true">${active?(filters.topic_dir==='asc'?'↑':'↓'):'↕'}</span></button></th>`;
+ };
+ return `<section class="jev-topic-overview" aria-label="Topic overview"><div class="jev-overview-heading"><div><div class="eyebrow">TOPIC OVERVIEW · TARGET MESSAGES</div><p class="source-note">Whole batch · candidate ≥ ${Math.round(data.plan.thresholds.candidate*100)}%. Topics overlap; counts are not a partition or a calibrated prevalence estimate.</p></div><div class="jev-overview-toggle" role="group" aria-label="Topic overview view">${[['cards','Cards'],['list','List']].map(([value,label])=>`<button class="button ${filters.overview===value?'primary':''}" data-action="jev-overview" data-view="${value}" aria-pressed="${filters.overview===value}">${label}</button>`).join('')}</div></div>
+ <form id="jev-topic-search-form" class="jev-topic-search"><input id="jev-topic-query" aria-label="Find a topic" placeholder="Find a topic…" value="${esc(filters.topic_q)}"><button class="button" type="submit">Find topic</button>${query?'<button class="quiet" type="button" data-action="jev-topic-search-clear">Clear topic search</button>':''}<span class="source-note">${items.length} / ${all.length} topics</span></form>
+ ${!items.length?'<p class="jev-no-results">No matching topics in this frozen batch. The selected passage topic below is unchanged.</p>':filters.overview==='cards'?`<div class="jev-topic-grid">${items.map(t=>`<button class="jev-topic-chip ${t.id===filters.topic?'selected':''}" data-action="jev-topic-select" data-topic="${esc(t.id)}" aria-pressed="${t.id===filters.topic}"><span>${esc(t.title)}</span><strong>${filters.blind?'Hidden':t.scored?t.candidate+' / '+t.scored:'Not assessed'}</strong></button>`).join('')}</div>`:`<div class="jev-topic-table-wrap" tabindex="0" role="region" aria-label="Scrollable topic statistics"><table class="jev-topic-table"><caption>Topic statistics · all sampled targets. Select a topic to explore it; counts open their matching passage queues.</caption><thead><tr>${jevTopicColumns.map(header).join('')}</tr></thead><tbody>${items.map(t=>`<tr class="${t.id===filters.topic?'selected':''}"><th scope="row"><button class="jev-topic-name" data-action="jev-topic-select" data-topic="${esc(t.id)}" aria-pressed="${t.id===filters.topic}">${esc(t.title)}${t.id===filters.topic?' <span aria-hidden="true">✓</span>':''}</button></th>${jevTopicColumns.slice(1).map(([key])=>`<td>${cell(t,key)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+ ${query&&!items.some(t=>t.id===filters.topic)?'<p class="source-note">The selected topic is outside this topic search. Clear the search to see its overview row.</p>':''}</section>`;
 }
 function jevGo(changes={}){
  const f={...state.jevFilters,...changes};go({view:'jev-atlas',...f,blind:f.blind?'1':'0'});
@@ -95,7 +138,7 @@ function renderJevAtlas(){
  ${s.complete<s.planned?`<div class="jev-status"><strong>${s.failed?'Batch needs attention':s.started?'Assessment in progress':'Prepared · awaiting assessment'}</strong><p>${s.failed?'Inspect the saved response before continuing. Failed or uncertain requests are never retried automatically.':s.started?'Reload results to see new saved responses.':'The sample and questions are ready. No JEV classifications have been recorded yet.'}</p>${!s.started?`<details><summary>Run this batch</summary><p>Use the laboratory terminal. Set TYPESAFE_API_KEY, or save the key in workspace/private/typesafe-api-key with permissions 600. The key stays on this Mac.</p><pre>python3 -m behaviorlab.jev_runner --workspace workspace --batch ${esc(f.batch)}</pre><p>At most ${s.planned} calls · $${s.budget.usd_ceiling.toFixed(2)} reserved ceiling. Actual expected usage is lower; the runner records it. No automatic retries.</p></details>`:''}${s.unknown_cost_calls?`<p>${s.unknown_cost_calls} request(s) have unknown cost, excluded from the reported total above.</p>`:''}</div>`:''}
  ${d.integration_revision?'<details class="jev-method"><summary>Integration correction · rounded probabilities</summary><p>One response paused the original validator because its Choice probabilities totalled 0.99. A recorded integration revision accepts sums within two-decimal rounding bounds. Original values, the stopped run and all requests are preserved in the export. No request was retried; the 200-call allocation is unchanged.</p></details>':''}
  ${!d.dictionary_current?'<p class="jev-status">The original dictionary has changed. This batch keeps its frozen definitions.</p>':''}
- <section class="jev-topic-overview" aria-label="Topic overview"><div class="eyebrow">TOPIC OVERVIEW · TARGET MESSAGES</div><p class="source-note">Candidate counts use completed assessments only. No assessment means unknown.</p><div class="jev-topic-grid">${d.plan.topics.map(id=>{const t=d.plan.dictionary.find(x=>x.id===id),candidates=d.rows.filter(r=>{const p=jevProbability(r,id);return p!==null&&p>=d.plan.thresholds.candidate;}).length;return `<button class="jev-topic-chip ${id===f.topic?'selected':''}" data-action="jev-topic-select" data-topic="${esc(id)}" aria-pressed="${id===f.topic}"><span>${esc(t.title)}</span><strong>${f.blind?'Hidden':s.complete?candidates+' / '+s.complete:'Not assessed'}</strong></button>`;}).join('')}</div></section>
+ ${jevTopicOverview(d,f)}
  <div class="jev-controls"><label>Selected topic<select id="jev-topic">${d.plan.topics.map(t=>option(t,d.plan.dictionary.find(a=>a.id===t).title,f.topic)).join('')}</select></label><label>Comparison queue<select id="jev-mode">${Object.entries(jevModes).map(([v,l])=>option(v,l,f.mode)).join('')}</select></label><label>Sort<select id="jev-sort" ${f.blind?'disabled':''}>${[['order','Sample order'],['probability','Highest JEV probability'],['probability_asc','Lowest JEV probability'],['title','Conversation title']].map(([v,l])=>option(v,l,f.sort)).join('')}</select></label><label class="jev-blind"><input type="checkbox" id="jev-blind" ${f.blind?'checked':''}> Hide judgments while reading</label></div>
  <form id="jev-search-form" class="jev-search"><input id="jev-search" aria-label="Search sampled passages" placeholder="Search passages, models or conversations…" value="${esc(f.q)}"><button class="button" type="submit">Search</button></form>
  ${jevHistogram(d,f,topic)}
@@ -113,6 +156,10 @@ if(typeof document!=='undefined'){
    const a=el.dataset.action;
    if(a==='jev-new')jevNew();
    else if(a==='jev-prepare'){el.disabled=true;const result=await api('/api/jev-atlas/prepare',{title:$('#jev-title').value,cohort:$('#jev-cohort').value,count:Number($('#jev-count').value),topics:[...document.querySelectorAll('[name="jev-topic-choice"]:checked')].map(x=>x.value)});$('#dialog').close();jevGo({batch:result.id,topic:'',item:'',page:0,mode:'all'});}
+   else if(a==='jev-overview')jevGo({overview:el.dataset.view});
+   else if(a==='jev-topic-sort'){const key=el.dataset.key;jevGo({topic_sort:key,topic_dir:state.jevFilters.topic_sort===key?(state.jevFilters.topic_dir==='asc'?'desc':'asc'):key==='title'?'asc':'desc'});}
+   else if(a==='jev-topic-search-clear')jevGo({topic_q:''});
+   else if(a==='jev-topic-queue')jevGo({topic:el.dataset.topic,mode:el.dataset.mode,q:'',bin:'',page:0,item:''});
    else if(a==='jev-topic-select')jevGo({topic:el.dataset.topic,bin:'',page:0,item:''});
    else if(a==='jev-bin')jevGo({bin:el.dataset.bin,mode:'all',q:'',page:0,item:''});
    else if(a==='jev-clear-bin')jevGo({bin:'',page:0,item:''});
@@ -130,6 +177,6 @@ if(typeof document!=='undefined'){
   }catch(error){toast(error.message);}finally{el.disabled=false;}
  });
  document.addEventListener('change',e=>{const map={'jev-batch':'batch','jev-topic':'topic','jev-mode':'mode','jev-sort':'sort'};if(map[e.target.id])jevGo({[map[e.target.id]]:e.target.value,...(['jev-batch','jev-topic','jev-mode'].includes(e.target.id)?{bin:''}:{}),page:0,item:''});if(e.target.id==='jev-blind')jevGo({blind:e.target.checked,mode:'all',sort:'order',bin:'',page:0,item:''});});
- document.addEventListener('submit',e=>{if(e.target.id==='jev-search-form'){e.preventDefault();jevGo({q:$('#jev-search').value,page:0,item:''});}});
+ document.addEventListener('submit',e=>{if(e.target.id==='jev-topic-search-form'){e.preventDefault();jevGo({topic_q:$('#jev-topic-query').value});}if(e.target.id==='jev-search-form'){e.preventDefault();jevGo({q:$('#jev-search').value,page:0,item:''});}});
 }
-if(typeof module!=='undefined')module.exports={jevProbability,jevDecision,jevMatch,jevFilters,jevBin,jevDistribution,jevSortRows};
+if(typeof module!=='undefined')module.exports={jevProbability,jevDecision,jevMatch,jevFilters,jevBin,jevDistribution,jevSortRows,jevTopicMetrics,jevSortTopics};

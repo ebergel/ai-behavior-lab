@@ -6,7 +6,7 @@ An independent semantic assessment layer beside the existing Topic atlas. Open *
 
 - Prepare a finite passage sample from all eligible conversations or a saved research collection, with selectable topic questions.
 - Freeze a separate copy of the dictionary, exact target text, up to two preceding participant messages, source identities, questions, sampling seed, model and spending limits.
-- Browse a topic overview, comparison queues, text search, highest/lowest probability sorting, an interactive distribution histogram and a close reading panel with model tags and experimental condition.
+- Browse a topic overview as cards or a sortable list, comparison queues, text search, highest/lowest probability sorting, an interactive distribution histogram and a close reading panel with model tags and experimental condition.
 - Open the original conversation and return with the topic, queue, passage and page preserved in the URL.
 - Record present/absent/uncertain judgments and observations, retaining every revision separately from JEV's original output. Hide model judgments and literal matches for an initial reading.
 - Export the complete batch, exact requests, raw responses, probabilities, usage and review history.
@@ -53,7 +53,7 @@ The correction permits an error of at most 0.005 per option **only when all retu
 
 ## Reading the results
 
-Topic overview counts are **candidate target messages / completed assessments**. A candidate uses probability at least 0.8; unlikely uses at most 0.2; intermediate values are uncertain. These are provisional navigation thresholds, not calibrated acceptance rules. Failed and unassessed items have no semantic label.
+Topic overview counts are **candidate target messages / scored targets for that topic**. A candidate uses probability at least 0.8; unlikely uses at most 0.2; intermediate values are uncertain. These are provisional navigation thresholds, not calibrated acceptance rules. Failed and unassessed items have no semantic label.
 
 Comparison queues expose candidates without phrase matches, phrase matches rated unlikely, uncertainty, unreviewed passages, explicit reviewer disagreement and outside-dictionary candidates. A literal hit and a semantic judgment measure different things; disagreement is a reason to read, not an automatic error verdict. The outside-dictionary question checks all 23 frozen definitions, not just the eight selected topic questions.
 
@@ -70,6 +70,20 @@ The histogram shows the selected topic across **all scored targets in the batch*
 Click a bar to list its passages. This clears the comparison queue and search, keeps the chosen sort order, and records the range in the URL. **Clear … range** removes that selection. Changing topic, batch or comparison queue also clears the range; source navigation and return preserve it. A subsequent text search narrows the selected range without changing the whole-batch histogram. Bar tooltips show both count and share of assessed targets. All bars are keyboard buttons with explicit range/count labels. On narrow screens, the chart scrolls within its panel.
 
 When **Hide judgments while reading** is enabled, the chart and summary statistics are hidden, probability sorting is disabled, and the range/semantic queue is cleared. These navigation controls do not make the exercise a formal blinded evaluation. Probability values are the saved model judgments, not measured accuracy or evidence of model experience. No chart interaction runs inference or edits research evidence.
+
+## Cards and sortable topic list
+
+Use **Cards / List** above the topic overview. **Find a topic** searches topic names and definitions; it does not change the passage search. The list adds scored targets, candidates, candidate share, mean/median probability, uncertain targets, candidates without phrase matches and saved readings. Every column sorts in both directions. Missing assessment statistics remain unknown (a dash), sort last and never become zero. Equal values use topic-name order.
+
+These statistics always describe the whole frozen batch, independently of the selected passage queue, search or histogram range. Topic labels overlap. Candidate share divides by that topic's scored targets; mean probability is a model score, not calibrated prevalence. Saved readings count distinct target identities with an attributed review for the topic, including Codex; they are not independent validation counts.
+
+Click a **topic name** to select it. Click a **Candidates**, **Uncertain** or **No phrase hit** count to open exactly that topic's corresponding queue, clearing the passage search and histogram range. The overview search and sorting remain in place. View choice, topic search and sorting survive bookmarks and source-return navigation. The table scrolls within its panel on narrow displays.
+
+When judgments are hidden, semantic statistics are replaced with “Hidden,” and the list uses alphabetical order with only topic-name sorting available. Assessment availability and saved-reading counts remain visible. The selected topic remains accessible in the topic picker even if the overview search hides its row.
+
+## Proposed next analysis: broad and experiential tiers
+
+The researcher proposed expanding coverage beyond the initial experiential emphasis. The [two-tier design](TWO-TIER-TOPIC-DESIGN.md) proposes 24 broad domains, a separate experiential analysis, an open-ended coverage audit, and explicit corpus/denominator rules. Both tiers should assess the same eligible material; Tier 1 should not silently gate Tier 2. This is a draft for the next research phase. The current pilot's eight questions and 23 frozen dictionary definitions remain unchanged, and no new assessment was run for the list-view update.
 
 ## Research sources and boundaries
 
