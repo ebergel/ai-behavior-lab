@@ -2,6 +2,10 @@
 
 Private GitHub repository: [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab), independent of the earlier reference repository. `origin/main` tracks the private remote. Following the researcher's explicit request, the repository now includes the [self-contained research snapshot](RESEARCH-DATA.md): original evidence, readable transcripts, all notebook tables and revision histories. The live `workspace/` remains ignored; later notes and runs need an explicit snapshot update. No public release or automatic synchronization is configured. The next research milestone below is unchanged.
 
+## Parked infrastructure task: remote access
+
+[REMOTE-ACCESS-01 — Private remote access to Mac Studio apps](../TODO.md#remote-access-01--private-remote-access-to-mac-studio-apps) is **parked** at the researcher's request on 17 September 2026, pending a new router and hardware setup. The preferred plan is Cloudflare Tunnel plus Access, with one live notebook on the Mac and reusable routing for other web apps. Resume only when the researcher says the hardware is ready and asks to continue; ordinary “go next” laboratory work does not activate this task. No remote-access setup or scheduler was started. The next research milestone remains unchanged.
+
 ## Latest completed infrastructure milestone: self-contained research
 
 The tracked `research/` snapshot contains 940 original evidence files, 573 labeled catalog projections and all fourteen notebook tables. Offline restore verifies every checksum and conversation ID, recreates source-relative paths and the notebook, and refuses to overwrite any existing workspace. A fresh clone opens a populated lab without model servers, API keys or the original reference checkout. Credentials, live indexes, caches and vendor trees remain excluded. The macOS launcher restores only when no workspace exists.
