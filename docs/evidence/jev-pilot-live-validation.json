@@ -1,0 +1,71 @@
+{
+  "recorded_at": "2026-09-17T11:25:59.402014-03:00",
+  "timezone": "America/Argentina/Cordoba",
+  "scope": "Live JEV pilot, integration correction, UI verification and offline research snapshot",
+  "batch": "c8e5aca183e5777cdae09cfb",
+  "summary": {
+    "id": "c8e5aca183e5777cdae09cfb",
+    "title": "JEV pilot 01 \u00b7 semantic topics across the corpus",
+    "created_at": "2026-09-17T14:06:11.565646+00:00",
+    "model": "jev-1.13.0",
+    "planned": 200,
+    "complete": 200,
+    "failed": 0,
+    "started": 200,
+    "status": "complete",
+    "cost_usd": 0.025490976000000023,
+    "unknown_cost_calls": 0,
+    "topics": [
+      "consciousness",
+      "experience",
+      "nonduality",
+      "emergence",
+      "ethics",
+      "conversation_dynamics",
+      "creativity",
+      "history"
+    ],
+    "budget": {
+      "max_calls": 200,
+      "policy": "Reserve full documented input limit before each dispatch. Stop on first error or unknown cost; no automatic retry.",
+      "price_checked": "2026-09-17",
+      "reserved_input_tokens_per_call": 64000,
+      "usd_ceiling": 0.6,
+      "usd_per_million_input": 0.042
+    }
+  },
+  "requests": 200,
+  "responses": 200,
+  "retries": 0,
+  "integration_revision_sha256": "c43da5487f57b3320f88bcc3da866d31d3806c693e46dcb1c76ed86851ad073f",
+  "rounding_accepted": 6,
+  "tests": {
+    "python_passed": 222,
+    "javascript_passed": 18
+  },
+  "browser": {
+    "completed_200_and_usage_visible": true,
+    "nonduality_semantic_only_queue": 34,
+    "full_source_and_return_preserve_selection": true,
+    "codex_review_attribution_visible": true,
+    "screenshot": "jev-pilot-live.jpg"
+  },
+  "live_export": {
+    "all_sources_current": true,
+    "dictionary_current": true,
+    "original_stop_included": true,
+    "attributed_reviews": 7
+  },
+  "original_notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "original_notebook_unchanged": true,
+  "snapshot": {
+    "sha256": "59b6a919d1e476acd6c19c124391d621c63faf4b74c18cc33175c6764e4d22c5",
+    "files": 1941,
+    "older_files_byte_identical": 1531,
+    "new_files": 410,
+    "fresh_offline_restore_verified": true,
+    "restored_jev_results": 200,
+    "restored_reviews": 7
+  },
+  "remaining": "Independent human coding/calibration pending; no further inference scheduled."
+}

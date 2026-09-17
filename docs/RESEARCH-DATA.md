@@ -4,7 +4,7 @@ The private repository includes the evidence and notebook needed to explore this
 
 ## Included evidence
 
-`research/evidence/` preserves 940 files as original bytes: imported content-addressed transcripts, laboratory journals with original requests and responses, protocols and registries, failed attempts, diagnostics, analysis sidecars, review packets, and frozen local source snapshots. Missing historical information remains missing. Old absolute paths and WebUI URLs are retained as provenance; they are not required for offline reading.
+`research/evidence/` preserves 1,351 files as original bytes: imported content-addressed transcripts, laboratory journals with original requests and responses, protocols and registries, failed attempts, diagnostics, analysis sidecars, review packets, and frozen local source snapshots. The 17 September JEV update adds its frozen 200-passage plan, 400 request/response files, preserved integration stop/revision, seven attributed review records and summary. Missing historical information remains missing. Old absolute paths and WebUI URLs are retained as provenance; they are not required for offline reading.
 
 `research/transcripts/` provides readable projections of all 573 catalog entries, with conversation/message IDs, model identities, prompts, recorded settings, visible replies, recorded reasoning and status. `research/catalog.json` maps every projection to its authoritative evidence. Repeated raw request/response payloads are omitted only from these projections and remain in the original journals.
 

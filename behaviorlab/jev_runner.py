@@ -46,7 +46,9 @@ def execute(workspace, identity, send=None, key=None, max_calls=None):
     store = JevAtlas(workspace); path = store.batch_path(identity)
     with locked(path / '.runner.lock', blocking=False):
         plan = store.plan(identity)
-        require(plan['software_sha256'] == software_identity(), 'Runner software changed since freeze; prepare a new batch')
+        revision = store.integration_revision(plan)
+        frozen_software = revision['software_sha256'] if revision else plan['software_sha256']
+        require(frozen_software == software_identity(), 'Runner software changed since freeze; prepare a new batch')
         require(plan['endpoint'] == ENDPOINT and plan['model'] == MODEL and
                 plan['budget']['usd_per_million_input'] == PRICE and
                 plan['budget']['reserved_input_tokens_per_call'] == MAX_INPUT and
@@ -56,6 +58,9 @@ def execute(workspace, identity, send=None, key=None, max_calls=None):
         require(not any(r['status'] in ('error', 'unresolved') for r in rows),
                 'Batch stopped on failed or unresolved response. Inspect saved evidence; no automatic retry.')
         pending = [r for r in rows if r['status'] == 'pending']
+        if revision:
+            require(all(r['id'] in revision['allowed_new_items'] for r in pending),
+                    'Pending request is outside the integration allocation')
         if not pending: return store.summary(plan, rows)
         if send is None:
             key = credential(workspace); send = transport

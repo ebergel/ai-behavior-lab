@@ -10,7 +10,7 @@ from unittest.mock import patch
 from behaviorlab.common import canonical, fingerprint
 from behaviorlab.explorer import Notes, make_server
 from behaviorlab.exploration_collections import ResearchCollections
-from behaviorlab.jev_atlas import JevAtlas, MODEL, read_record, validate_response, write_record
+from behaviorlab.jev_atlas import JevAtlas, MODEL, read_record, validate_response, write_record, software_identity
 from behaviorlab.jev_runner import execute
 from behaviorlab.research_bundle import export_notebook
 from behaviorlab.topic_atlas import TopicAtlas
@@ -93,6 +93,52 @@ class JevAtlasTests(unittest.TestCase):
         exported = self.store.export(identity, self.catalog, self.atlas)
         self.assertEqual(len(exported['requests']), 6); self.assertEqual(len(exported['responses']), 6)
         self.assertEqual(json.loads(exported['responses'][0]['raw_text'])['model'], MODEL)
+
+    def test_rounding_revision_reuses_failed_response_without_retry_or_plan_edit(self):
+        identity = self.prepare(); plan = self.store.plan(identity); path = self.store.batch_path(identity)
+        original_plan = (path / 'plan.json').read_bytes()
+        def rounded(payload, key):
+            status, text = reply(payload); raw = json.loads(text)
+            a = raw['answers']['experience_referent']; keys = list(a['probabilities'])
+            a['probabilities'] = {k: 0.0 for k in keys}
+            a['probabilities'].update({keys[0]: 0.80, keys[1]: 0.16, keys[2]: 0.01, keys[3]: 0.01, keys[4]: 0.01})
+            return status, json.dumps(raw)
+        first = execute(self.workspace, identity, send=rounded, max_calls=1)
+        self.assertEqual(first['failed'], 1)
+        rows = self.store.results(plan); earlier = rows[0]['id']
+        original_response = (path / 'responses' / (earlier + '.json')).read_bytes()
+        write_record(path / 'integration-stop.json', {'plan_sha256': plan['sha256'], 'outcomes': rows})
+        stop = read_record(path / 'integration-stop.json')
+        write_record(path / 'integration-revision.json', {
+            'schema': 'behaviorlab.jev-integration-revision/1', 'base_plan_sha256': plan['sha256'],
+            'stop_sha256': stop['sha256'], 'policy': 'two-decimal-choice-rounding/1',
+            'software_sha256': software_identity(), 'aggregate_budget': plan['budget'],
+            'allowed_new_items': [r['id'] for r in rows if r['status'] == 'pending'],
+            'max_additional_calls': 5,
+            'prior_evidence': {earlier: {kind: read_record(path / kind / (earlier + '.json'))['sha256']
+                                       for kind in ('requests', 'responses')}}})
+        calls = []
+        def continue_batch(payload, key): calls.append(payload); return reply(payload)
+        result = execute(self.workspace, identity, send=continue_batch)
+        self.assertEqual(result['complete'], 6); self.assertEqual(len(calls), 5)
+        self.assertEqual((path / 'plan.json').read_bytes(), original_plan)
+        self.assertEqual((path / 'responses' / (earlier + '.json')).read_bytes(), original_response)
+        detail = self.store.export(identity, self.catalog, self.atlas)
+        self.assertIn('validation_note', detail['rows'][0]); self.assertEqual(detail['integration_stop']['outcomes'][0]['status'], 'error')
+        execute(self.workspace, identity, send=lambda *a: self.fail('Duplicate call'))
+        with patch('behaviorlab.jev_runner.software_identity', return_value={}):
+            with self.assertRaisesRegex(ValueError, 'software changed'): execute(self.workspace, identity, send=reply)
+
+    def test_rounded_distribution_bound_does_not_accept_arbitrary_missing_mass(self):
+        identity = self.prepare(); plan = self.store.plan(identity)
+        raw = json.loads(reply(self.store.payload(plan, plan['items'][0]))[1])
+        a = raw['answers']['experience_referent']; first = a['choice']
+        a['probabilities'][first] = .99
+        with self.assertRaisesRegex(ValueError, 'distribution'): validate_response(raw, plan['questions'])
+        validate_response(raw, plan['questions'], rounded_choice=True)
+        for value in (.90, .9901, float('nan'), True):
+            a['probabilities'][first] = value
+            with self.assertRaises(ValueError): validate_response(raw, plan['questions'], rounded_choice=True)
 
     def test_interrupted_dispatch_is_unknown_and_never_retried(self):
         identity = self.prepare()

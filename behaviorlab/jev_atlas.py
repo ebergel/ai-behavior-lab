@@ -98,7 +98,7 @@ def questions_for(dictionary, selected):
     return questions
 
 
-def validate_response(raw, questions, model=MODEL):
+def validate_response(raw, questions, model=MODEL, rounded_choice=False):
     require(isinstance(raw, dict) and raw.get('model') == model, 'Returned model differs from pinned version')
     answers = raw.get('answers')
     require(isinstance(answers, dict) and set(answers) == set(questions), 'Missing or unexpected answers')
@@ -112,7 +112,12 @@ def validate_response(raw, questions, model=MODEL):
         else:
             probs = answer.get('probabilities', {})
             require(isinstance(probs, dict) and set(probs) == set(q['criteria']) and
-                    all(probability(v) for v in probs.values()) and abs(sum(probs.values()) - 1) < 0.002,
+                    all(probability(v) for v in probs.values()),
+                    'Invalid choice distribution')
+            rounding_bound = len(probs) * 0.005 + 1e-9
+            rounded = rounded_choice and all(abs(v * 100 - round(v * 100)) < 1e-8 for v in probs.values())
+            require(abs(sum(probs.values()) - 1) < 0.002 or
+                    rounded and abs(sum(probs.values()) - 1) <= rounding_bound,
                     'Invalid choice distribution')
             require(answer.get('choice') in probs and probability(answer.get('confidence')),
                     'Invalid choice or confidence')
@@ -135,6 +140,29 @@ class JevAtlas:
         plan = read_record(self.batch_path(identity) / 'plan.json')
         require(plan['id'] == identity and plan['schema'] == 'behaviorlab.jev-atlas/1', 'Invalid assessment plan')
         return plan
+
+    def integration_revision(self, plan):
+        """An explicit, immutable compatibility plan; never rewrites the original freeze."""
+        path = self.batch_path(plan['id']); revision_path = path / 'integration-revision.json'
+        if not revision_path.exists(): return None
+        revision = read_record(revision_path); stop = read_record(path / 'integration-stop.json')
+        require(revision['schema'] == 'behaviorlab.jev-integration-revision/1' and
+                revision['base_plan_sha256'] == plan['sha256'] and
+                revision['stop_sha256'] == stop['sha256'] and stop['plan_sha256'] == plan['sha256'] and
+                revision['policy'] == 'two-decimal-choice-rounding/1', 'Invalid integration revision')
+        pending = [r['id'] for r in stop['outcomes'] if r['status'] == 'pending']
+        require(revision['allowed_new_items'] == pending and
+                revision['max_additional_calls'] == len(pending) and
+                revision['aggregate_budget'] == plan['budget'], 'Integration allocation differs')
+        prior = {r['id'] for r in stop['outcomes'] if r['status'] != 'pending'}
+        require(set(revision['prior_evidence']) == prior and
+                prior | set(pending) == {r['id'] for r in plan['items']} and not prior & set(pending),
+                'Integration evidence allocation differs')
+        for item, hashes in revision['prior_evidence'].items():
+            for kind in ('requests', 'responses'):
+                require(read_record(path / kind / (item + '.json'))['sha256'] == hashes[kind],
+                        'Earlier integration evidence changed')
+        return revision
 
     def prepare(self, data, catalog, atlas, studies):
         require(isinstance(data, dict), 'Expected batch settings')
@@ -199,7 +227,7 @@ class JevAtlas:
         return {'id': plan['id'], 'title': title, 'planned': len(items)}
 
     def results(self, plan):
-        path = self.batch_path(plan['id']); result = []
+        path = self.batch_path(plan['id']); result = []; revision = self.integration_revision(plan)
         for item in plan['items']:
             row = dict(item, status='pending', answers=None, cost_usd=None, error=None)
             request_path = path / 'requests' / (item['id'] + '.json')
@@ -217,8 +245,14 @@ class JevAtlas:
                            elapsed_seconds=response.get('elapsed_seconds'))
                 if response.get('http_status') == 200:
                     try:
-                        row['answers'], row['cost_usd'] = validate_response(json.loads(response['raw_text']), plan['questions'], plan['model'])
+                        raw = json.loads(response['raw_text'])
+                        row['answers'], row['cost_usd'] = validate_response(raw, plan['questions'], plan['model'], rounded_choice=bool(revision))
                         row.update(status='complete', error=None)
+                        if revision:
+                            row['validation_revision'] = revision['sha256']
+                            try: validate_response(raw, plan['questions'], plan['model'])
+                            except ValueError:
+                                row['validation_note'] = 'Original sum check rejects this response. Accepted under recorded two-decimal rounding bounds; values are unchanged.'
                     except (ValueError, TypeError, KeyError):
                         row['answers'] = None; row['error'] = 'Returned schema, version or usage failed validation; raw response preserved.'
             result.append(row)
@@ -265,7 +299,8 @@ class JevAtlas:
         for row in rows:
             run = catalog.runs.get(row['run_id']); message = next((m for m in (run or {}).get('messages', []) if m['id'] == row['message_id']), None)
             row['source_current'] = bool(run and message and run['source']['sha256'] == row['source_sha256'] and message['text'] == row['text'])
-        return {'plan': plan, 'summary': self.summary(plan, rows), 'rows': rows, 'reviews': reviews, 'review_history': history,
+        return {'plan': plan, 'integration_revision': self.integration_revision(plan),
+                'summary': self.summary(plan, rows), 'rows': rows, 'reviews': reviews, 'review_history': history,
                 'dictionary_current': fingerprint(atlas.dictionary()) == plan['dictionary_sha256']}
 
     def export(self, identity, catalog, atlas):
@@ -273,6 +308,7 @@ class JevAtlas:
         path = self.batch_path(identity)
         result['requests'] = [read_record(p) for p in sorted((path / 'requests').glob('*.json'))]
         result['responses'] = [read_record(p) for p in sorted((path / 'responses').glob('*.json'))]
+        if (path / 'integration-stop.json').exists(): result['integration_stop'] = read_record(path / 'integration-stop.json')
         return dict(result, schema='behaviorlab.jev-atlas-export/1')
 
     def save_review(self, data, catalog):

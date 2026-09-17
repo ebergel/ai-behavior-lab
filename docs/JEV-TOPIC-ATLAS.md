@@ -15,7 +15,7 @@ The existing Topic atlas, its phrase counts, initial-topic reviews and notebook 
 
 The Explorer prepares local records and reads saved responses. **Only the separate terminal runner contacts TypeSafe.** Page loads, filtering, export and personal review make no inference calls.
 
-## First prepared pilot
+## First pilot
 
 Batch: `c8e5aca183e5777cdae09cfb` — **JEV pilot 01 · semantic topics across the corpus**.
 
@@ -25,7 +25,7 @@ Eight independent topic questions cover consciousness, subjective experience, no
 
 Four branching records were excluded. 1,850 missing/partial/unqualified target messages and six oversized windows were excluded. Historical `recorded` text and valid laboratory replies remain distinguishable; these criteria do not retrospectively qualify historical runtime conditions. Preceding unavailable context remains explicitly marked. The first version assesses messages, not first adopted topics or semantic recurrence episodes.
 
-**Status: prepared; zero live TypeSafe calls.** No TypeSafe credential was configured at implementation verification. Human reference coding, comparison with another generative classifier and actual semantic accuracy/calibration remain pending. Synthetic responses were used only in isolated temporary tests and are absent from this research batch.
+**Status: live assessment activated on 17 September 2026 after the researcher supplied the key.** See [the first results and integration record](JEV-PILOT-01.md) for completion, usage, findings and limitations. Human reference coding, comparison with another generative classifier and actual semantic accuracy/calibration remain pending. Synthetic responses were used only in isolated temporary tests and are absent from this research batch.
 
 ## Running the prepared batch
 
@@ -41,9 +41,15 @@ python3 -m behaviorlab.jev_runner --workspace workspace \
   --batch c8e5aca183e5777cdae09cfb
 ```
 
-The route is fixed to `https://api.typesafe.ai/v1/systemone`, with redirects refused and model `jev-1.13.0` pinned. Runner source hashes are frozen in the plan; changed software requires a new plan. There is no model sampling-seed parameter in the documented request; the saved seed controls passage selection only.
+The route is fixed to `https://api.typesafe.ai/v1/systemone`, with redirects refused and model `jev-1.13.0` pinned. Runner source hashes are frozen in the plan; changed software requires a new plan. This pilot has a separately frozen integration revision for two-decimal Choice rounding, tied to the unchanged original plan and the 155 items not yet dispatched at the pause. There is no model sampling-seed parameter in the documented request; the saved seed controls passage selection only.
 
 The batch permits at most 200 requests under a **$0.60 reserved ceiling**. At the price checked on 17 September 2026 ($0.042 per million input tokens, free output), the runner reserves 64,000 input tokens per call and replaces that reserve with validated reported usage after success. This is a conservative dispatch limit, not an expected bill or a provider-enforced account cap. Reverify prices before later campaigns. A failure, missing usage, returned model mismatch or invalid answer stops the batch. Unknown-cost requests remain explicit and block automatic continuation. Requests are saved before dispatch, so an interrupted request is never silently retried. Successful saved responses are reused without sending another request.
+
+## Recorded integration correction
+
+Request 45 returned seven Choice probabilities totaling 0.99. The original validator rejected the sum because its tolerance was 0.002. We retained an immutable stop record with the original 44 accepted outcomes, the rejected outcome, all original requests/responses and the original software source. A separate `integration-revision.json` freezes the corrected software, prior evidence hashes and exactly 155 remaining request IDs. Aggregate allocation remains 200 requests and $0.60.
+
+The correction permits an error of at most 0.005 per option **only when all returned probabilities have two-decimal precision**. Every individual probability, option set, selected maximum, model version and usage check still applies. Values are never renormalized or replaced; the rejected response was reread locally, not retried. This rounding interpretation is inferred from returned precision; the [official API reference](https://docs.typesafe.ai/api) states that distributions sum to one but does not document a rounding tolerance. The UI marks affected responses and exports both the original stop and the revision. Later unrelated failures still stop execution.
 
 ## Reading the results
 
