@@ -1,0 +1,54 @@
+{
+  "recorded_at": "2026-09-17T14:29:39.044258-03:00",
+  "status": "stopped_provider_overload",
+  "authorization": {
+    "usd_ceiling": 2,
+    "max_original_calls": 54,
+    "original_stricter_allocation_preserved_usd": 0.6,
+    "transcripts": "nonconfidential model output per researcher",
+    "github": "private pending publication readiness"
+  },
+  "results": {
+    "requests_sent": 2,
+    "complete": 1,
+    "http_529": 1,
+    "unstarted": 52,
+    "known_cost_usd": 0.000368676,
+    "unknown_cost_calls": 1,
+    "answers_validated": 24,
+    "retry_count": 0,
+    "full_corpus_calls": 0
+  },
+  "tests": {
+    "python": 236,
+    "javascript": 26,
+    "offline_failed_aggregate_blocks_dispatch": true,
+    "frozen_software_matches": true,
+    "sent_payloads_match_frozen_inputs": true
+  },
+  "browser": {
+    "failed_status_visible": true,
+    "unknown_cost_visible": true,
+    "failed_row_has_no_score": true,
+    "detail_pack_pending": true,
+    "successful_result_visible": true
+  },
+  "preservation": {
+    "prior_original_files_preserved": 1450,
+    "all_573_transcript_projections_unchanged": true,
+    "notebook_tables_unchanged": 14,
+    "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+    "new_files": 2049,
+    "categories": {
+      "original_evidence": 1459,
+      "notebook_table": 14,
+      "notebook_readable": 1,
+      "transcript_projection": 573,
+      "catalog": 1,
+      "guide": 1
+    },
+    "bundle_sha256": "aad75909dde3221de4157cf6422b0fcd00722cd5221c6cb6650b2f708e538393",
+    "export_restore_test": "passed"
+  },
+  "remaining": "Provider overload stops original protocol. Exact 53-attempt recovery draft is inactive. No complete qualification or final corpus freeze."
+}

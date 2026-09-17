@@ -91,7 +91,7 @@ Expand **Coverage development** to see the full corpus inventory and 56 source-l
 
 ## Intact-window preparation
 
-The [next qualification](JEV-INTACT-WINDOW-QUALIFICATION.md) splits the frozen 53 questions into 24 broad and 29 detailed questions, while keeping every target/context window intact. Both 27-target packs are available in the batch picker as **prepared**. No new scores exist yet; explicit approval for the 54 TypeSafe calls is pending. Their inventory panel does not imply that they contain the earlier 56 open readings, and both use one aggregate terminal coordinator.
+The [intact-window qualification](JEV-INTACT-WINDOW-QUALIFICATION.md) splits the same 53 questions into 24 broad and 29 detailed questions, preserving all target/context text. The researcher approved 54 calls under a $2 authorized ceiling. The broad pack has one completed response and one HTTP 529 provider-overload error; the detail pack remains unstarted. The frozen aggregate coordinator stopped both packs. Failed and pending rows have no score. The earlier completed batches and reviews remain available unchanged.
 
 ## Research sources and boundaries
 

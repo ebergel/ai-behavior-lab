@@ -1,6 +1,6 @@
 # Intact-window qualification and corpus preparation
 
-17 September 2026. **Offline preparation is complete; the frozen 54-call TypeSafe qualification awaits the researcher's explicit external-dispatch approval. No new inference request has been sent.** The earlier 39-call qualification remains complete and unchanged.
+17 September 2026. **The researcher approved the 54-call qualification and raised its authorized ceiling to $2. Two requests were sent: one completed and the second returned HTTP 529 (`system_overloaded`). The frozen failure rule stopped both packs; 52 requests remain unstarted.** The earlier 39-call qualification remains complete and unchanged.
 
 ## Preserve the passage; partition the questions
 
@@ -25,7 +25,7 @@ All **22,108 logical requests** for the **11,054 visible targets** passed the of
 
 - All 15 visible windows above the original 18,000-byte window screen, including capped/after-cap output.
 - The first twelve root-sampled controls from the completed 53-question qualification, selected without using their scores.
-- The same 27 targets in both question packs: **54 calls total, $0.60 aggregate ceiling**.
+- The same 27 targets in both question packs: **54 calls total, originally allocated $0.60 aggregate**. The later authorization amendment raises the approved total ceiling to **$2**; the smaller $0.30 per-pack guards are preserved and sufficient for this fixed allocation.
 - Broad batch `d5078aa105039b65e07cb188`; detail batch `903d721b5cebc479b8011e0d`.
 - Exact question/state content, software and plan hashes, target identities, selection rules and 18,732–50,347-byte qualification request sizes.
 
@@ -35,24 +35,28 @@ The [official model page](https://docs.typesafe.ai/models), checked 17 September
 
 Technical acceptance requires all 54 saved responses to validate under the unchanged model/usage/schema checks. Available historical full-pack scores will be compared with both new packs by exact target/question identity. Differences, including threshold crossings, are descriptive: historical comparisons cannot isolate question-pack effects from service/time variability. Technical acceptance does not imply semantic accuracy or calibrated probabilities. No threshold is changed to make the test pass.
 
-## Approval status and continuation
+## Approval, service stop and remaining work
 
-Automatic approval review rejected the first command before it ran, because the prior approval explicitly covered 39 calls and this qualification sends additional private transcript/context content to TypeSafe. The researcher has been asked to approve **these 54 calls**, their payload, destination and $0.60 ceiling. The question is pending. Do not dispatch until that approval arrives; do not retry the rejected command through another route.
+The researcher explicitly approved this qualification and raised the authorized total to **$2**. `authorization-amendment.json` preserves the exact message and original protocol hash. It does not rewrite the original $0.60 allocation or $0.30 per-pack guards; those stricter limits are already sufficient for 54 calls. The researcher also clarified that transcripts are nonconfidential model output with no personal information. The repository remains private because the project is not yet ready for publication; credentials remain secret. The earlier automatic approval rejection was resolved by this explicit approval.
 
-After explicit approval, save its receipt, run one pending request and inspect it, then complete only the remaining approved allocation:
+| Observed result | Value |
+|---|---:|
+| Requests sent | 2 |
+| Valid responses | 1 |
+| Provider-overload responses | 1 |
+| Never-started requests | 52 |
+| Validated probability answers | 24 |
+| Reported input / output tokens | 8,778 / 513 |
+| Known usage-based cost | $0.000368676 |
+| Calls without usage information | 1 |
 
-```sh
-python3 -m behaviorlab.jev_corpus run --workspace workspace \
-  --qualification workspace/jev-atlas/intact-window-20260917-v1 --max-calls 1
+The first response used the pinned `jev-1.13.0` and returned all 24 broad-domain answers for the intact long passage. The second returned HTTP 529 with `error_type: system_overloaded` and no token usage. The raw error is retained, and the failed assessment remains unknown, not negative. There were no automatic retries. Known cost excludes the failed request because its billing was not reported.
 
-python3 -m behaviorlab.jev_corpus run --workspace workspace \
-  --qualification workspace/jev-atlas/intact-window-20260917-v1
+`first-response-check.json`, `stopped-summary.json` and `stop-record.json` preserve the checks and exact accounting. All-54 technical acceptance is **not met**; there are no matched full-pack/fixed-pack comparisons yet. One structural success does not establish semantic accuracy or long-context reliability. This stop reflects provider availability, not demonstrated inability to process the passage.
 
-python3 -m behaviorlab.jev_corpus summarize --workspace workspace \
-  --qualification workspace/jev-atlas/intact-window-20260917-v1
-```
+`recovery-draft.json` records the exact remaining work: reuse the successful response, explicitly retry the one saved overloaded request once, and assess the 52 never-started requests. That would require **53 additional attempts, 55 cumulative attempts for the original 54 distinct assessments**. The draft proposes two-second spacing, reserves the unknown-cost attempt rather than assuming it was free, and stops at any further failure. It is **not active**. A separately recorded recovery release and software freeze must precede dispatch; the original coordinator deliberately refuses to resume past failed evidence. The existing $2 authorization and transcript classification carry forward.
 
-The coordinator remains frozen at preparation. A separate source or software change requires a new version; never overwrite this freeze or earlier stopped/failed evidence. The Explorer displays both packs, pending targets and unavailable scores, and does not dispatch inference.
+No complete qualification summary or final corpus manifest has been fabricated. The offline corpus audit below is preserved, and `freeze-corpus` remains gated until qualification succeeds. No corpus calls, public release or scheduled retries were started.
 
 ## Prepared corpus scope
 
@@ -90,6 +94,6 @@ The final manifest uses observed per-pack input-token/byte ratios to give median
 
 ## Verification
 
-Tests exercise exact question partitions and identical states, refusal rather than truncation for windows beyond the limit, source drift, resume without duplicate calls, aggregate stop after failure, exact-result reuse, reference-root separation, full-path branch quality and speaker attribution. Synthetic responses occur only in temporary tests. All research qualification rows remain pending.
+Tests exercise exact question partitions and identical states, refusal rather than truncation for windows beyond the limit, source drift, resume without duplicate calls, aggregate stop after failure, exact-result reuse, reference-root separation, full-path branch quality and speaker attribution. Synthetic responses occur only in temporary tests. The live UI shows one completed assessment, the failed request with no score, and remaining targets as unassessed. The untouched detail pack remains prepared. All 236 Python tests and 26 JavaScript checks pass.
 
 The atlas handles a qualification inventory without inheriting the earlier 56-reading packet. It also directs related packs to their aggregate coordinator instead of displaying a standalone command that could bypass aggregate accounting. Original batches retain their source links, scores and reviews.

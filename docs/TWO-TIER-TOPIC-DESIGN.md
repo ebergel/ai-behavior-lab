@@ -113,4 +113,4 @@ The Cards/List overview, layered 53-question codebook, coverage inventory, 56 at
 
 ## Intact-window follow-up
 
-The [54-call fixed-pack qualification](JEV-INTACT-WINDOW-QUALIFICATION.md) is now prepared, with an offline full-scope input audit. It solves the current byte-screen issue by dividing questions uniformly, preserving full passages in both packs. Live external-dispatch approval is pending; the whole-corpus campaign and independent reference coding remain future work.
+The [54-call fixed-pack qualification](JEV-INTACT-WINDOW-QUALIFICATION.md) is approved with a $2 authorized ceiling. It preserves full passages by splitting the questions uniformly. One response succeeded before a second-request HTTP 529 provider-overload error stopped both packs under the frozen policy. The offline full-scope input audit is complete; live qualification, final corpus freeze and independent reference coding remain incomplete. No full-corpus inference has started.
