@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-09-17T10:35:56.437168-03:00",
+  "hub_url": "http://localhost:5100/",
+  "entry": {
+    "name": "behavior-lab",
+    "title": "Behavior Laboratory",
+    "dir": "/Users/eduardobergel/Documents/Codex/AI-Chat-Experiment/laboratory",
+    "command": "/usr/bin/python3 -u -m behaviorlab explore --workspace workspace --port 8765",
+    "port": 8765,
+    "autostart": true,
+    "url": "http://127.0.0.1:8765/"
+  },
+  "state": "RUNNING",
+  "pid_at_verification": 31895,
+  "default_library_records": 472,
+  "research_collections": 6,
+  "notebook_sha256_before_and_after": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "other_app_configurations_states_and_pids_unchanged": 7,
+  "browser_verification": "Behavior Laboratory card shows RUNNING, port 8765, correct Open link and Start/Stop/Restart/Logs controls.",
+  "scope": "Existing app registration and process handover only; no source code, evidence, notebook entries or remote access settings changed."
+}

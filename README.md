@@ -32,6 +32,8 @@ The [trajectory-outcomes report](docs/PILOT-OUTCOMES-V0.2.md), [failed capacity 
 
 ## Open the transcript explorer
 
+On the researcher's Mac Studio, open [appHub](http://localhost:5100/) and choose **Behavior Laboratory**. The hub manages automatic startup, crash recovery and Start/Stop/Restart controls using the existing workspace. See [appHub setup](docs/APP-HUB.md).
+
 The private repository includes the original transcripts and a complete research notebook snapshot. Double-click **Open Explorer.command** on macOS to restore a fresh clone and open the populated lab, or run:
 
 ```sh

@@ -6,7 +6,11 @@ Private GitHub repository: [ebergel/ai-behavior-lab](https://github.com/ebergel/
 
 [REMOTE-ACCESS-01 — Private remote access to Mac Studio apps](../TODO.md#remote-access-01--private-remote-access-to-mac-studio-apps) is **parked** at the researcher's request on 17 September 2026, pending a new router and hardware setup. The preferred plan is Cloudflare Tunnel plus Access, with one live notebook on the Mac and reusable routing for other web apps. Resume only when the researcher says the hardware is ready and asks to continue; ordinary “go next” laboratory work does not activate this task. No remote-access setup or scheduler was started. The next research milestone remains unchanged.
 
-## Latest completed infrastructure milestone: self-contained research
+## Latest completed infrastructure milestone: appHub launcher
+
+On 17 September 2026, the researcher requested adding the lab to the existing [appHub](http://localhost:5100/). **Behavior Laboratory** now runs under the hub supervisor on port 8765 with automatic startup and crash recovery. The previous Codex terminal server was gracefully stopped; use hub controls for subsequent restarts. The same live workspace and notebook are in use. All 472 default library records and six collections load; the notebook fingerprint and all seven other hub app configurations, states and PIDs were unchanged at verification. See [configuration and operation](APP-HUB.md) and [validation](evidence/apphub-registration-validation.json). This local registration adds no remote access or model calls.
+
+## Previous completed infrastructure milestone: self-contained research
 
 The tracked `research/` snapshot contains 940 original evidence files, 573 labeled catalog projections and all fourteen notebook tables. Offline restore verifies every checksum and conversation ID, recreates source-relative paths and the notebook, and refuses to overwrite any existing workspace. A fresh clone opens a populated lab without model servers, API keys or the original reference checkout. Credentials, live indexes, caches and vendor trees remain excluded. The macOS launcher restores only when no workspace exists.
 
