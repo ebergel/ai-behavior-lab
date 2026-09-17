@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-17T15:40:03.352966+00:00",
+  "created_at": "2026-09-17T16:30:30.025888+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -1258,6 +1258,13 @@
       "sha256": "2ad30e2b953ec2b1db047ddb9b67ba2e3d6f4b1dc3565fe4913a384657c44c59",
       "category": "original_evidence",
       "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/d6189a971fd9eee424cbeb6e-coverage_no_subject/000001.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/903d721b5cebc479b8011e0d/plan.json",
+      "bytes": 404734,
+      "sha256": "6458c0096b5a8d94972877604b53ba1affc2db2727cdd07c20b9c9febb8d63f6",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/903d721b5cebc479b8011e0d/plan.json"
     },
     {
       "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/integration-revision.json",
@@ -4151,6 +4158,13 @@
       "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/summary-20260917.json"
     },
     {
+      "path": "evidence/jev-atlas/batches/d5078aa105039b65e07cb188/plan.json",
+      "bytes": 374722,
+      "sha256": "772d232bb5a1fadb21cee734bb49ea7ac6caf97f9ed5a31724ddcdc36acfe7b8",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/d5078aa105039b65e07cb188/plan.json"
+    },
+    {
       "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/plan.json",
       "bytes": 50813,
       "sha256": "f627717221096a15d8938d9cc7fe070b4db99995314a7a611fe19946aaad3f33",
@@ -4331,6 +4345,27 @@
       "sha256": "27eeb049354753a39c4067ad946901c45503705aa3af6eed984d0ed160e042ea",
       "category": "original_evidence",
       "workspace_path": "jev-atlas/coverage-20260917-v2/reading-packet.json"
+    },
+    {
+      "path": "evidence/jev-atlas/intact-window-20260917-v1/corpus-readiness.json",
+      "bytes": 8084018,
+      "sha256": "51f48a771fb5bcecba4b37315c01d381709b5532105b2628db2f005de259f974",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/intact-window-20260917-v1/corpus-readiness.json"
+    },
+    {
+      "path": "evidence/jev-atlas/intact-window-20260917-v1/qualification.json",
+      "bytes": 5149,
+      "sha256": "4d817cb6daf2185679a688f61e7ceecd1e6f6ee7546bb3f007338f9d1b066fab",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/intact-window-20260917-v1/qualification.json"
+    },
+    {
+      "path": "evidence/jev-atlas/intact-window-20260917-v1/scope-audit.json",
+      "bytes": 4894028,
+      "sha256": "5c25d7be185c12d1fa3e5d2927d1985e05ce6ef33051b40a3ecae86827d89bbe",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/intact-window-20260917-v1/scope-audit.json"
     },
     {
       "path": "evidence/local-bridge-20260914/events.jsonl",
@@ -13698,5 +13733,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "e74348780d0d3c676830972047c9c70b20ed1a99f6b7699d7b2e4ea9629088a2"
+  "bundle_sha256": "26f471234ea04db6f69765aec2b1afa7a072e34dc3607a3ff4c7489430096aa4"
 }

@@ -89,6 +89,10 @@ Open [the 53-question assessment](http://127.0.0.1:8765/#view=jev-atlas&batch=7f
 
 Expand **Coverage development** to see the full corpus inventory and 56 source-linked Codex descriptions. Hide judgments also hides those descriptions. They are attributed development readings, not independent human labels. Three additional Codex reviews in the new batch record poetry, closure and a denial missed by the provisional 0.80 threshold. The whole corpus has not yet been assessed with this vocabulary.
 
+## Intact-window preparation
+
+The [next qualification](JEV-INTACT-WINDOW-QUALIFICATION.md) splits the frozen 53 questions into 24 broad and 29 detailed questions, while keeping every target/context window intact. Both 27-target packs are available in the batch picker as **prepared**. No new scores exist yet; explicit approval for the 54 TypeSafe calls is pending. Their inventory panel does not imply that they contain the earlier 56 open readings, and both use one aggregate terminal coordinator.
+
 ## Research sources and boundaries
 
 The implementation follows the official [API](https://docs.typesafe.ai/api), [model/version/pricing](https://docs.typesafe.ai/models), [confidence](https://docs.typesafe.ai/confidence) and [known limitations](https://docs.typesafe.ai/model-jaggedness/jev-1.13.md) documentation read on 17 September 2026. TypeSafe describes a specialized decision interface and RLCD training; its [workflow evaluation](https://evals.typesafe.ai/) uses model-consensus reference labels. These vendor evaluations do not validate our philosophical categories. The model's literal-reading, indirect-reasoning and adversarial-input limitations motivate the short explicit questions and the separate evaluation phase.

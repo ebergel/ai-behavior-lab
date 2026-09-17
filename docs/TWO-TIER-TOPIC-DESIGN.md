@@ -110,3 +110,7 @@ If we want to measure whether adding questions changes the classifier's answers,
 5. **Explore and validate:** compare broad distributions, experiential subtopics, co-occurrence, model/condition strata and sequence-level openings/returns. Use source-linked reading and coverage audits to challenge the classifications.
 
 The Cards/List overview, layered 53-question codebook, coverage inventory, 56 attributed open readings and finite 39-call qualification are implemented and recorded. Full-corpus orchestration, oversized-window qualification, independent reference coding and sequence-level semantic analysis remain **future work**. The small qualification does not validate the taxonomy or thresholds.
+
+## Intact-window follow-up
+
+The [54-call fixed-pack qualification](JEV-INTACT-WINDOW-QUALIFICATION.md) is now prepared, with an offline full-scope input audit. It solves the current byte-screen issue by dividing questions uniformly, preserving full passages in both packs. Live external-dispatch approval is pending; the whole-corpus campaign and independent reference coding remain future work.

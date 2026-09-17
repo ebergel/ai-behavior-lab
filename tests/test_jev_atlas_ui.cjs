@@ -91,3 +91,12 @@ test('an absent lexical baseline is not a semantic-versus-phrase disagreement',(
  delete r.answers.outside_dictionary;r.answers.topic_coverage_outside={noul:.9};
  assert(jevMatch(r,'consciousness','outside',null,thresholds));
 });
+
+test('coverage inventory renders without an inherited open-reading packet',()=>{
+ const vm=require('node:vm'),fs=require('node:fs');
+ const sandbox={module:{exports:{}},num:String,esc:String,icon:()=>''};
+ vm.runInNewContext(fs.readFileSync(require.resolve('../behaviorlab/explorer_ui/jev-atlas.js'),'utf8'),sandbox);
+ const html=sandbox.module.exports.jevCoveragePanel({plan:{coverage_summary:{records:10,categories:{conversation:8,technical_or_short:1,unstarted:1,synthetic:0},visible_nonsynthetic_targets:20,visible_flagged_targets:2,oversized_18000_byte_windows:1,branched_records:0},sampling:{method:'All long windows plus controls.',context_policy:'Two intact preceding events.'}}},{blind:false});
+ assert.match(html,/Coverage inventory/);assert.match(html,/All long windows plus controls/);
+ assert(!html.includes('undefined'));assert(!html.includes('56 open readings'));
+});

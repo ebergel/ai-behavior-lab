@@ -22,6 +22,16 @@ Next useful step: a bounded independent human coding pass, distinguishing evoked
 
 Lowest-first sorting and an interactive whole-batch probability histogram are implemented. Bars open exact ten-point ranges, with counts, mean and median; URL and source-return navigation preserve the selected range. Missing assessments are excluded, and the hide-judgments control hides the distribution and removes score-driven navigation. This is a frontend-only update: no model calls, source edits or assessment freeze changes. See [the distribution guide](JEV-TOPIC-ATLAS.md#exploring-the-probability-distribution).
 
+## Current prepared milestone: intact-window qualification
+
+The researcher said “go” to the next long-window/corpus-planning step. Offline implementation and input qualification are complete; see [the exact preparation and resume instructions](JEV-INTACT-WINDOW-QUALIFICATION.md).
+
+Two fixed question packs (24 broad, 29 detailed) preserve full target/context text for every current passage. All 22,108 logical requests for 11,054 visible targets fit the unchanged byte screen. Scope audit records actual speaker models and full-path history quality: 9,587 clean observed histories, 1,467 flagged/incomplete histories; 484 unavailable positions remain unknown.
+
+A separate **54-call, $0.60-ceiling** qualification is frozen under `workspace/jev-atlas/intact-window-20260917-v1`: all 15 long windows plus twelve prior controls, assessed with both packs. Broad batch `d5078aa105039b65e07cb188`; detail batch `903d721b5cebc479b8011e0d`. **Zero new calls were sent.** Automatic approval review rejected the first command because the previous approval covered only 39 calls; a payload/destination-specific question for these 54 calls is pending. Do not dispatch without that answer or bypass the rejection.
+
+After approval, record it, inspect one call, finish only this frozen allocation and summarize. Then use the implemented `freeze-corpus` action to seal the full campaign and reserve independent-reading roots. The current `corpus-readiness.json` is a complete offline hash/size audit, not a live-qualified executable corpus allocation. A later whole-corpus dispatch needs its own aggregate runner and explicit allocation; it is not included in the 54-call question. No automation or remote-access work is active.
+
 ## Latest completed research milestone: two-tier JEV qualification
 
 The researcher's approved continuation is complete. See [coverage development and results](JEV-COVERAGE-DEVELOPMENT.md): all 573 records inventoried; 56 full targets read and described by Codex; a separate 53-question codebook frozen; new layer navigation and source-linked reading log implemented. The original atlas, 14 notebook tables and original JEV pilot remain unchanged.
