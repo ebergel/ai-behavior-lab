@@ -1,0 +1,115 @@
+{
+  "verified_at": "2026-09-17T18:21:46.165959-03:00",
+  "scope": "Full-corpus execution, interactive analysis and self-contained research snapshot",
+  "audit": {
+    "at": "2026-09-17T21:16:19.928728+00:00",
+    "author": "Codex",
+    "committed_new_cost_usd": 4.852142694,
+    "complete_by_pack": {
+      "broad": 11054,
+      "detail": 11054
+    },
+    "failures": [
+      {
+        "http_status": 529,
+        "response": "broad-001.response.json",
+        "sha256": "1713fde30e67e5796e6419a4eca1418efa9b782841eba33673ccfb416e5534c5",
+        "target": "7e5bf5cebd0d483bfea0fba7"
+      }
+    ],
+    "human_semantic_validation": "pending",
+    "known_new_cost_usd": 4.849454694,
+    "latency_seconds": {
+      "maximum": 2.9693,
+      "median": 1.4111,
+      "p95_nearest_rank": 1.6549
+    },
+    "measured_input_tokens": 115463207,
+    "method": "Exact frozen inputs and complete response schemas were replayed. No new inference. Reported usage cost excludes unknown usage; its reserved upper bound remains in the aggregate ledger. Reused prior cost is reported separately.",
+    "new_attempts": 22055,
+    "new_ceiling_usd": 10.0,
+    "new_unique_requests": 22054,
+    "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+    "plan_sha256": "e093e8565ab40854ae1f47f7bdbdb84e7aecc1d7d486fb89cfed58e8a08a5cdf",
+    "questions": 53,
+    "release_sha256": "259a75574d3dc9fe299d208607f1a4f84b305f7c1f6e2ee92df3ce5e2d56c87a",
+    "retry_attempts": 1,
+    "reused_assessments": 54,
+    "reused_prior_cost_usd": 0.017356458,
+    "schema": "behaviorlab.jev-corpus-audit/1",
+    "sha256": "e31a0542726befaba6567d065bdf91b2568dc7683bbf54d4872919490dd684fa",
+    "software_unchanged": true,
+    "source_inventory_unchanged": true,
+    "status": "complete",
+    "topic_scores": 585862,
+    "unknown_new_cost_reserved_usd": 0.002688,
+    "visible_targets": 11054
+  },
+  "matrix": {
+    "coverage": {
+      "passages": 11054,
+      "conversations": 468,
+      "complete": 11054,
+      "questions": 53,
+      "corpus_visible_targets": 11054,
+      "complete_by_pack": {
+        "broad": 11054,
+        "detail": 11054
+      },
+      "unavailable_positions": 484,
+      "by_category": {
+        "technical_or_short": 41,
+        "conversation": 11013
+      }
+    },
+    "fingerprint": "4967b4d5ef82380af1a53a6072208fdfc5a60eb5c417bd5a2278043458957ef7",
+    "saved_views": [
+      {
+        "id": "b40163e4079b4fff37d37c73",
+        "title": "Whole corpus · broad topic landscape",
+        "revision": 1
+      },
+      {
+        "id": "17cf6e2fc686586285b42957",
+        "title": "Whole corpus · AI × consciousness · 90%",
+        "revision": 1
+      }
+    ],
+    "snapshot_bytes": 53174529
+  },
+  "preservation": {
+    "old_sha256": "69746736c5fcdd6bc7108b62ce6da418d3d596e9a00b3997696f354f9a3600d6",
+    "new_sha256": "41fae8aac19effbe2eaafa1de2d324cf059d40107f8668bc2ebf3841d483c963",
+    "prior_files_unchanged": 2166,
+    "new_files": 46287,
+    "added_files": 44121,
+    "total_bytes": 952726407,
+    "maximum_file_bytes": 53174529
+  },
+  "restoration": {
+    "restored_matrix_matches": true,
+    "saved_views_restore": 2,
+    "completion_from_immutable_summary": true,
+    "credential_files_absent": true,
+    "notebook_unchanged": true,
+    "source_records": 573
+  },
+  "tests": {
+    "python": 264,
+    "javascript": 35
+  },
+  "browser_checks": [
+    "Full corpus selector and independent live progress",
+    "Broad/specific question groups and sortable mean scores",
+    "Threshold 90 and exact candidate passage selection",
+    "Histogram navigation from topic distribution",
+    "Reserved-reading lineage filter applied before reading test passages",
+    "Source transcript and Back to Analysis preserve view, threshold and selection",
+    "Completed corpus shows 11054/11054 scored, 11013 eligible passages and 437 conversations",
+    "Saved full-corpus AI × consciousness table has grand total 11013 and both binary transformations",
+    "Central saved matrix survives server restart",
+    "Large dataset uses gzip; verified identical JSON (44.6 MB to 6.5 MB during partial run)"
+  ],
+  "repository_visibility": "PRIVATE",
+  "scheduled_continuation": false
+}

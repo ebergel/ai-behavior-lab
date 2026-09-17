@@ -4,7 +4,7 @@ Open **Analysis** in the lab sidebar, or **Explore in Analysis** from a supporte
 
 ## Start exploring
 
-1. Select an assessment dataset. The two-tier development sample has 31 passages from 30 conversations and 53 questions. The intact-window sample has 27 passages from 17 conversations and the same 53 questions. The original pilot has 200 passages from 159 conversations and eight topics.
+1. Select an assessment dataset. **Full corpus · broad & specific topics** contains all 11,054 visible source rows and the 53-question matrix, with live coverage shown separately. The two-tier development sample has 31 passages from 30 conversations and 53 questions. The intact-window sample has 27 passages from 17 conversations and the same 53 questions. The original pilot has 200 passages from 159 conversations and eight topics.
 2. Choose a topic under **Probability → analysis variable**. Keep it continuous, apply a binary threshold, enter custom band boundaries, or fit quantiles. Repeat for other topics independently.
 3. Drag fields into rows and columns. The **Add row / Add column** selectors offer the same arrangement without dragging, including on touch devices. Use a field’s triangle to filter values; search or group the available field list to reduce clutter.
 4. Select an aggregator and renderer in the pivot widget. Switch among tables, full/row/column heatmaps, bars, stacked bars, lines, histograms and scatterplots without discarding dimensions, filters or transformations. Histograms and scatterplots have explicit score selectors and always use original continuous probabilities after the pivot’s filters.
@@ -12,6 +12,10 @@ Open **Analysis** in the lab sidebar, or **Explore in Analysis** from a supporte
 6. Save a named analysis and optional observation. Configurations and all revisions live under `workspace/analysis/views/`, independently of the existing notebooks. Export the recipe, filtered derived data, chart image or complete saved-view history. Refreshing or returning from a transcript retains the draft in the URL; use Save to keep it centrally.
 
 A Codex-attributed starter view, **Broad AI × consciousness · 90% thresholds**, crosses a broad domain with a specific topic and groups counts by target model family. It is a reusable configuration, not a new semantic finding or human rating.
+
+## Topic coverage
+
+The sortable topic table lists broad domains, specific topics, discourse forms, stance and coverage questions separately or together. It reports observed denominators, threshold counts/shares, means and small probability histograms under the current pivot filters. Candidate thresholds are 50, 80 or 90; scores remain continuous. Click a topic or histogram to expand its distribution; click a candidate count to read those passages.
 
 ## Transformations and denominators
 
@@ -31,9 +35,9 @@ Histogram bins are ten points wide, with the final bin including 100. Raw probab
 
 The development sample uses batch `7f665a93c90cb1c2e1253d36`. The intact sample joins recovery broad/detail packs and the original first successful broad result exactly once, using the checked recovery release. It retains one row per source passage and rejects duplicate question scores or inconsistent target/context identities. The stopped overload is not an extra observation. The pilot uses `c8e5aca183e5777cdae09cfb`.
 
-These datasets remain separate: assessment packing and sampling differ, and some source passages overlap. All 53 broad, focused, form, stance and coverage questions are available together within each two-tier dataset. This implementation performs no inference and does not assess the remaining corpus. The 11,054-target full-corpus plan remains prospective.
+These datasets remain separate: assessment packing and sampling differ, and some source passages overlap. All 53 broad, focused, form, stance and coverage questions are available together within each two-tier dataset. The Analysis implementation performs no inference. The separately authorized [full-corpus coordinator](JEV-CORPUS-ASSESSMENT.md) populates a fourth dataset while preserving these earlier samples. Incoming scores do not silently change an open matrix. Load latest scores explicitly; this clears quantile fits and their filters. Saved corpus analyses preserve their exact matrix snapshots and remain available after completion or restart.
 
-Each saved view records exact assessment-plan/request/response receipts and the matrix fingerprint. Writes use atomic, append-only revision files and optimistic revision checks. Source changes invalidate affected scores; a changed matrix blocks updating an old saved configuration. A draft returning after another edit is kept as a new view rather than silently replacing the newer revision. Exports preserve histories. The existing notebook tables are untouched. Analysis records are included by the normal research snapshot exporter and restore with a fresh clone; unsnapshotted live edits still require a later snapshot/commit.
+Each saved view records exact assessment-plan/request/response receipts and the matrix fingerprint. Writes use atomic, append-only revision files and optimistic revision checks. Source changes invalidate affected scores when building a current matrix. Earlier sample views reject changed matrices. Corpus views preserve an immutable matrix snapshot together with the exact evidence receipts; a saved historical snapshot describes sources at its capture time. A draft returning after another edit is kept as a new view rather than silently replacing the newer revision. Exports preserve histories. The existing notebook tables are untouched. Analysis records are included by the normal research snapshot exporter and restore with a fresh clone; unsnapshotted live edits still require a later snapshot/commit.
 
 ## Implementation and attribution
 

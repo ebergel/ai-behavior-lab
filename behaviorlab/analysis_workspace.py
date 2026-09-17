@@ -8,6 +8,9 @@ import math
 from pathlib import Path
 import re
 import secrets
+import threading
+from collections import OrderedDict
+from . import analysis_corpus
 
 from .common import fingerprint, require
 from .jev_atlas import JevAtlas, read_record, write_record, now, locked
@@ -22,6 +25,7 @@ class AnalysisWorkspace:
     def __init__(self, workspace, catalog):
         self.workspace = Path(workspace); self.catalog = catalog
         self.store = JevAtlas(workspace); self.root = self.workspace / 'analysis'
+        self.corpus_lock=threading.RLock(); self.corpus_cache = OrderedDict(); self.corpus_receipts = {}; self.current_corpus = None
 
     def sources(self, identity):
         if identity in ('expanded', 'pilot'):
@@ -35,6 +39,8 @@ class AnalysisWorkspace:
 
     def index(self):
         available = []; issues = []
+        if (self.workspace / analysis_corpus.EXECUTION / 'release.json').exists():
+            available.append({'id':'corpus','title':'Full corpus · broad & specific topics','description':'All 11,054 visible passages · 53 questions in two packs. Coverage updates separately; load new scores when ready.'})
         for identity, title, description in (
             ('expanded', 'Two tiers · development sample', '31 selected passages; all 53 questions in one request per passage.'),
             ('intact', 'Two tiers · intact-window sample', '27 selected passages; joined broad and detail packs, including the reused first result.'),
@@ -45,9 +51,28 @@ class AnalysisWorkspace:
                 available.append({'id': identity, 'title': title, 'description': description})
             except (ValueError, OSError) as error:
                 issues.append({'id': identity, 'message': str(error)[:180]})
-        return {'datasets': available, 'issues': issues, 'views': self.views()}
+        return {'datasets': available, 'issues': issues, 'views': self.views(), 'corpus_progress':analysis_corpus.progress(self.workspace)}
+
+    def corpus_dataset(self, revision=None, refresh=False):
+        with self.corpus_lock:return self._corpus_dataset(revision,refresh)
+
+    def _corpus_dataset(self, revision=None, refresh=False):
+        if revision:
+            require(bool(re.fullmatch('[a-f0-9]{64}',revision)), 'Invalid dataset revision')
+            if revision in self.corpus_cache: return self.corpus_cache[revision]
+            p=self.root/'corpus-snapshots'/(revision+'.json')
+            require(p.exists(), 'This corpus revision is not saved; load current scores')
+            d=read_record(p);d.pop('sha256')
+            require(d['fingerprint']==revision and fingerprint({k:v for k,v in d.items() if k!='fingerprint'})==revision, 'Saved corpus snapshot changed')
+            return d
+        if self.current_corpus and not refresh:return self.corpus_cache[self.current_corpus]
+        d=analysis_corpus.matrix(self.workspace,self.catalog,self.corpus_receipts)
+        self.corpus_cache[d['fingerprint']]=d;self.current_corpus=d['fingerprint']
+        while len(self.corpus_cache)>3:self.corpus_cache.popitem(last=False)
+        return d
 
     def dataset(self, identity):
+        if identity=='corpus':return self.corpus_dataset()
         sources = self.sources(identity); merged = {}; topics = {}; receipts = []; inventory = None
         for source in sources:
             plan = self.store.plan(source['batch'])
@@ -120,7 +145,7 @@ class AnalysisWorkspace:
         return entries
 
     def save(self, data):
-        dataset = self.dataset(data.get('dataset'))
+        dataset = (self.corpus_dataset(data.get('dataset_fingerprint')) if data.get('dataset')=='corpus' else self.dataset(data.get('dataset')))
         require(data.get('dataset_fingerprint') == dataset['fingerprint'], 'Assessment data changed; reload before saving')
         config = data.get('config'); require(isinstance(config, dict) and config.get('version') == 1, 'Invalid analysis configuration')
         require(len(json.dumps(config)) < 50000, 'Analysis configuration too large')
@@ -150,5 +175,12 @@ class AnalysisWorkspace:
                       'author': prior['author'] if prior else author, 'edited_by': author,
                       'title': title, 'note': data.get('note', ''), 'dataset': dataset['id'],
                       'dataset_fingerprint': dataset['fingerprint'], 'provenance': dataset['provenance'], 'config': config}
+            if dataset['id']=='corpus':
+                record['provenance']={k:v for k,v in dataset['provenance'].items() if k!='receipts'}
+                record['provenance'].update(matrix_snapshot='analysis/corpus-snapshots/'+dataset['fingerprint']+'.json',
+                    receipt_count=len(dataset['provenance']['receipts']),receipts_sha256=fingerprint(dataset['provenance']['receipts']))
+            if dataset['id']=='corpus':
+                snapshot=self.root/'corpus-snapshots'/(dataset['fingerprint']+'.json')
+                if not snapshot.exists():write_record(snapshot,dataset)
             write_record(self.root / 'views' / identity / f"{record['revision']:06d}.json", record)
         return record

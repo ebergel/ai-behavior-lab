@@ -86,3 +86,17 @@ class AnalysisTests(unittest.TestCase):
             code,view=call('POST','/api/analysis/views',body,headers);self.assertEqual(code,200)
             self.assertEqual(call('GET','/api/analysis/export')[1]['history'][0]['id'],view['id'])
             self.assertEqual(call('POST','/api/analysis/run',{},headers)[0],404)
+
+    def test_large_matrix_transport_compression_preserves_exact_json(self):
+        import gzip
+        with patch('behaviorlab.explorer.ThreadingHTTPServer',side_effect=lambda address,handler:SimpleNamespace(server_port=8765,handler=handler)):
+            server=make_server(self.root/'gzip-fixture')
+        body={'rows':[{'text':'repeated test content '*50,'value':0} for _ in range(100)]}
+        for accept,compressed in [('gzip, deflate',True),('gzip;q=0',False),('',False),('gzip;q=0.5',True)]:
+            h=server.handler.__new__(server.handler);h.path='/api/analysis/dataset?id=corpus';h.headers={'Accept-Encoding':accept};h.wfile=io.BytesIO()
+            headers={};h.send_response=lambda status:None;h.send_header=lambda k,v:headers.update({k:v});h.end_headers=lambda:None
+            h.send(body);raw=h.wfile.getvalue()
+            self.assertEqual(headers.get('Content-Encoding')=='gzip',compressed)
+            self.assertEqual(int(headers['Content-Length']),len(raw))
+            self.assertEqual(gzip.decompress(raw) if compressed else raw,canonical(body).encode())
+            self.assertEqual(headers['Vary'],'Accept-Encoding')

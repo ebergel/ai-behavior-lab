@@ -1,3 +1,9 @@
+# Current milestone · full-corpus JEV assessment complete
+
+Completed 17 September 2026: **11,054 passages × 53 questions = 585,862 scores**, with both packs complete. New reported usage was **$4.849454694**; one recovered overload retains a $0.002688 reserve under the $10 ceiling. There were 22,054 unique new successes, 54 exact reuses and one additional overload attempt. See [scope, audit and descriptive results](JEV-CORPUS-ASSESSMENT.md). The finite allocation is exhausted; no additional inference is implied by its unused dollar ceiling.
+
+The full corpus is available in Analysis with broad/specific topic overviews, sortable statistics, distributions, cross-topic pivots and exact passage navigation. Two saved corpus views share a reproducible matrix snapshot. Independent human validation remains pending. The next scientific work is independent reading and calibration of the existing scores, followed by a separately designed experiment; no new dialogues or scheduled continuation are running.
+
 # Continuation milestone: transcript exploration
 
 Private GitHub repository: [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab), independent of the earlier reference repository. `origin/main` tracks the private remote. Following the researcher's explicit request, the repository now includes the [self-contained research snapshot](RESEARCH-DATA.md): original evidence, readable transcripts, all notebook tables and revision histories. The live `workspace/` remains ignored; later notes and runs need an explicit snapshot update. No public release or automatic synchronization is configured. The next research milestone below is unchanged.

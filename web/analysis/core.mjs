@@ -49,3 +49,12 @@ export function numericAggregator(kind) {
       format(v){return v==null?'—':kind==='count'?String(v):v.toLocaleString(undefined,{maximumFractionDigits:2})+(kind==='percent'?'%':'');}};
   };
 }
+export function topicOverview(rows, topics, threshold=80) {
+  return topics.map(topic=>{
+    const values=rows.map(r=>r[topic.field]).filter(numeric),n=values.length;
+    const bins=Array(10).fill(0);for(const v of values)bins[Math.min(9,Math.floor(v/10))]++;
+    const candidates=values.filter(v=>v>=threshold).length;
+    return {...topic,n,missing:rows.length-n,candidates,share:n?candidates/n*100:null,
+      mean:n?values.reduce((a,b)=>a+b,0)/n:null,bins};
+  });
+}

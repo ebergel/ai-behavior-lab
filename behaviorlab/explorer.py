@@ -8,6 +8,7 @@ from collections import Counter
 from contextlib import contextmanager
 from datetime import datetime, timezone
 import json
+import gzip
 import os
 from pathlib import Path
 import secrets
@@ -22,6 +23,7 @@ from .exploration_collections import ResearchCollections
 from .topic_flags import TopicFlags, TOPICS, REFERENTS, STANCES, ORIGINS
 from .topic_atlas import TopicAtlas
 from .analysis_workspace import AnalysisWorkspace, read_record as read_analysis_record
+from . import analysis_corpus
 from .jev_atlas import JevAtlas
 from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
@@ -411,7 +413,19 @@ def make_server(workspace, port=8765):
 
         def send(self, data, status=200, mime='application/json; charset=utf-8', download=None):
             body=data if isinstance(data,bytes) else canonical(data).encode()
+            # Corpus matrices can be tens of MB. Compression changes transport only.
+            compressed=False
+            if urlsplit(self.path).path=='/api/analysis/dataset' and len(body)>4096:
+                for part in self.headers.get('Accept-Encoding','').lower().split(','):
+                    name,*params=part.strip().split(';')
+                    if name!='gzip':continue
+                    try: quality=float(next((p.strip()[2:] for p in params if p.strip().startswith('q=')),'1'))
+                    except ValueError: quality=0
+                    if quality>0:body=gzip.compress(body,compresslevel=1,mtime=0);compressed=True
+                    break
             self.send_response(status); self.send_header('Content-Type',mime); self.send_header('Content-Length',str(len(body)))
+            if compressed:self.send_header('Content-Encoding','gzip')
+            if urlsplit(self.path).path=='/api/analysis/dataset':self.send_header('Vary','Accept-Encoding')
             self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff')
             self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
             if download: self.send_header('Content-Disposition','attachment; filename="'+download+'"')
@@ -447,7 +461,10 @@ def make_server(workspace, port=8765):
                         'prior_checks':[{'id':r['id'],'title':r['title'],'models':r['models'],'cost_usd':r.get('cost_usd')}
                                         for r in catalog.runs.values() if r['kind']=='lab' and r['data_class'] in ('cloud_integration_smoke','cloud_integration_diagnostic')]})
                 if path=='/api/analysis': return self.send(analysis.index())
-                if path=='/api/analysis/dataset': return self.send(analysis.dataset(parse_qs(url.query).get('id',[''])[0]))
+                if path=='/api/analysis/progress': return self.send(analysis_corpus.progress(workspace))
+                if path=='/api/analysis/dataset':
+                    params=parse_qs(url.query);identity=params.get('id',[''])[0]
+                    return self.send(analysis.corpus_dataset(params.get('fingerprint',[None])[0],params.get('refresh',[''])[0]=='1') if identity=='corpus' else analysis.dataset(identity))
                 if path=='/api/analysis/export':
                     return self.send({'views':analysis.views(),'history':[read_analysis_record(p) for p in sorted((analysis.root/'views').glob('*/*.json'))]},download='analysis-views.json')
                 if path=='/api/jev-atlas': return self.send(jev_atlas.index(topic_atlas,studies))
