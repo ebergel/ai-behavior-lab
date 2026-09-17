@@ -1,6 +1,6 @@
 # Two-tier topic analysis: breadth and depth
 
-Status: **research design draft, 17 September 2026**. Proposed by the researcher; methodological synthesis and candidate taxonomy by Codex. No new dictionary, assessment batch or model calls are activated by this document. The completed eight-topic JEV pilot retains its frozen questions and results.
+Status: **design with completed development qualification, 17 September 2026**. Proposed by the researcher; methodological synthesis and taxonomy by Codex. The [coverage development record](JEV-COVERAGE-DEVELOPMENT.md) documents the frozen 53-question codebook, 56 open readings and completed approved 39-call comparison. Whole-corpus execution and independent semantic validation remain prospective. The completed eight-topic JEV pilot retains its frozen questions and results.
 
 ## The question this design addresses
 
@@ -103,10 +103,10 @@ If we want to measure whether adding questions changes the classifier's answers,
 
 ## Proposed implementation sequence
 
-1. **Coverage development:** freeze the corpus inventory, select a finite open-reading subset, and revise the draft vocabulary with examples and exclusion rules. This is the recommended next research step.
+1. **Coverage development:** freeze the corpus inventory, select a finite open-reading subset, and revise the draft vocabulary with examples and exclusion rules. Completed for the 56-target development packet; see the linked record.
 2. **Technical qualification:** prepare a new versioned adapter/plan for the two tiers, qualify question counts and context limits, record exact requests/usage, and check matched anchors. The current preparation UI caps batches at 200; do not bypass this by making many uncontrolled batches.
 3. **Freeze and evaluate:** reserve separate evaluation roots, settle unit/threshold policies, and write a finite aggregate call and spending budget. Recheck pricing and project cost from the actual larger question pack; the first pilot's $0.02549 does not by itself price a whole-corpus run.
 4. **Corpus assessment:** run the authorized frozen campaign once, with durable accounting and explicit failure/unknown states. Aggregate batches by unique target identities and preserve every dictionary/model/version boundary.
 5. **Explore and validate:** compare broad distributions, experiential subtopics, co-occurrence, model/condition strata and sequence-level openings/returns. Use source-linked reading and coverage audits to challenge the classifications.
 
-The Cards/List topic overview and its sortable statistics are implemented now. The broad taxonomy, new campaign runner, whole-corpus results, formal reference coding and sequence-level semantic analysis are **proposals**, not completed features or findings.
+The Cards/List overview, layered 53-question codebook, coverage inventory, 56 attributed open readings and finite 39-call qualification are implemented and recorded. Full-corpus orchestration, oversized-window qualification, independent reference coding and sequence-level semantic analysis remain **future work**. The small qualification does not validate the taxonomy or thresholds.

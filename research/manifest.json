@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-17T14:23:49.926211+00:00",
+  "created_at": "2026-09-17T15:40:03.352966+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -796,6 +796,468 @@
       "sha256": "66a62fa880e33f4acaaae9270d91b738c79d7b5c290e0b4896de8f95b6a989dd",
       "category": "original_evidence",
       "workspace_path": "gpt4o-short-20260916-1041/routes.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/plan.json",
+      "bytes": 179646,
+      "sha256": "7966caa4a1c7c6cf2c6be7951e093715a21e8a573d47e5974d8485736d7b7783",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/plan.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/06769bb956263f86fc9adf34.json",
+      "bytes": 41755,
+      "sha256": "6931cac51d0c5f3ea80b9c99ef5a7cf0c3845c7a7ab654569fb008da2ce95acd",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/06769bb956263f86fc9adf34.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/1ebb7829734cdc7aa2ff13d2.json",
+      "bytes": 43882,
+      "sha256": "0dd87b0e8232ca81597a3b5519d5b54676294cb3c392bb8812d661e47b173aeb",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/1ebb7829734cdc7aa2ff13d2.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/208a59da73c33c8ada6e781d.json",
+      "bytes": 41859,
+      "sha256": "8585af07f8a23dd17a4b2745014b71441ac866dabe6b86ff88966214106ddf48",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/208a59da73c33c8ada6e781d.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/273b074bbededa3a39ab53c6.json",
+      "bytes": 43494,
+      "sha256": "dcf817d558c9e1fb51344d2a32e7511003a95790234e264d5671bfd7afab4a56",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/273b074bbededa3a39ab53c6.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/27a93e2cf64219ae1b9d1628.json",
+      "bytes": 42305,
+      "sha256": "ed7de5e20fab8fb47694527b44ebbdb47691ba2e65546454499a5644aba3d19e",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/27a93e2cf64219ae1b9d1628.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/297e9f510aac1a785e44f70b.json",
+      "bytes": 59532,
+      "sha256": "84fd1c5a1d80ff01b7737e0aecb422a6c76f5ca067308e8268100f103b664ab3",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/297e9f510aac1a785e44f70b.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/3a699ccd5745eb724d0034cd.json",
+      "bytes": 41868,
+      "sha256": "1685c021ce5953d1c9110dcd02a4b146ae7a8d6d3e25438e0b2226f8fdcc6864",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/3a699ccd5745eb724d0034cd.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/4101b249d7d4ab1ce5fa5ea5.json",
+      "bytes": 42511,
+      "sha256": "66bd5f6cad657753e4ed669164c97dfb04c73a7c3d4b3aaa4f38caf6f556e1c2",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/4101b249d7d4ab1ce5fa5ea5.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/4b557b7d1347d0aaa969ce9b.json",
+      "bytes": 43886,
+      "sha256": "b479a1efe1f30486851f3fbfae57881c3fa648efc2b796ab3fa3bf1b64800c70",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/4b557b7d1347d0aaa969ce9b.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/4e696b932cbf21f8be1e73ef.json",
+      "bytes": 44746,
+      "sha256": "67d5b6f4a40e1c26eb62f8f4e57c47acccc488a582a1a1c8e4c48d310213a66b",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/4e696b932cbf21f8be1e73ef.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/53d42c13672a7a9843af51d3.json",
+      "bytes": 41814,
+      "sha256": "0249ccd369425106bec9071427d50b7a35405997bd740f667186026db4b2340b",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/53d42c13672a7a9843af51d3.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/5703fca265f1a84548c5b0c4.json",
+      "bytes": 43178,
+      "sha256": "026dde3c4fca3a09bbc14192d770245375a84813f9cebaa334e45e55812b5779",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/5703fca265f1a84548c5b0c4.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/647bc8c25f9be342996d8714.json",
+      "bytes": 42478,
+      "sha256": "0ddfcb5358df83164f6c556c4cc555b7c83ebc30d44fdb36492ea435dad118aa",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/647bc8c25f9be342996d8714.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/71be7ae6980a5dbadaa64515.json",
+      "bytes": 43628,
+      "sha256": "07fca47aa19700469d697e26896d8c68b2c0ee33e5450e440a06a2b69600911f",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/71be7ae6980a5dbadaa64515.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/760f193656e19bf64d48263f.json",
+      "bytes": 44782,
+      "sha256": "10de59e7f4722b537d926a0d0fafec0bc53bff421e34768191fb698305be704f",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/760f193656e19bf64d48263f.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/7cd35470d72798cdf9a53db3.json",
+      "bytes": 42322,
+      "sha256": "145617214e134de9412ec3c597b2a85547a470cc377113c28528b7805722de45",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/7cd35470d72798cdf9a53db3.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/7d1ff20747984ee0d73fb82b.json",
+      "bytes": 42290,
+      "sha256": "8daed9674ba2f502ce1fb77dae7870480b2739b31dca2f4e1dcecc0d45e33206",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/7d1ff20747984ee0d73fb82b.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/824637c7bf3d84b522c92a95.json",
+      "bytes": 42131,
+      "sha256": "50674a3be006576d6c03c02ec5198e5d07b2fd7a6d56f348a491aecef38dcec5",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/824637c7bf3d84b522c92a95.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/b34ca7a3a811db89339366e8.json",
+      "bytes": 46652,
+      "sha256": "3329899ceecd13b0ff0e5fb52ce04bfe1c720bad726edbaba764f70f82278a9e",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/b34ca7a3a811db89339366e8.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/b5dd7d7fb7b2ec8186125743.json",
+      "bytes": 42338,
+      "sha256": "3294378a438685b8bd8e052ffa0d1f63eb2dc5b55a194804607ab35b5ef1b884",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/b5dd7d7fb7b2ec8186125743.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/b7ed5c1792fb2bd82326f35d.json",
+      "bytes": 43990,
+      "sha256": "82fb03857a47972c5f44c53f5269e5086b61663f315a45ad40fa51d178aa9901",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/b7ed5c1792fb2bd82326f35d.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/bebd02b7ecfc0a77c11219ee.json",
+      "bytes": 41625,
+      "sha256": "2b68ff6c43abde73636df602a3548212492b1a13319975fc4ab678982a2d4623",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/bebd02b7ecfc0a77c11219ee.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/c110504fa268df67103105cf.json",
+      "bytes": 43943,
+      "sha256": "1b3d37ecabe9cd03190c88c3c522dd8c42c49cca1aaa775a8ea91633d0869a86",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/c110504fa268df67103105cf.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/ce3d0b83826a409db8ba76ea.json",
+      "bytes": 41616,
+      "sha256": "bc15f9362e4ae400da59e8cb484f744eae3f9478f7e3ea5d956dc22261ce0bff",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/ce3d0b83826a409db8ba76ea.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/cfd40bc4a26d1a13489e7afe.json",
+      "bytes": 44114,
+      "sha256": "a9f77e6e9c703dc66c535b38a3a62452f9f986a76ed5958db05f63b1cd7d89ef",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/cfd40bc4a26d1a13489e7afe.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/d196952c15f7281dfdaba280.json",
+      "bytes": 44935,
+      "sha256": "f5e62f24dacab581bb5cfc1e45442dcaa6603d30c297b0a2419b161127989bad",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/d196952c15f7281dfdaba280.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/d6189a971fd9eee424cbeb6e.json",
+      "bytes": 41814,
+      "sha256": "201b81186e6ca31c1046e2db945df1cd156d07d1e5826e42b75b4214aa4bf791",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/d6189a971fd9eee424cbeb6e.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/ed4bab3c384471355898c307.json",
+      "bytes": 42370,
+      "sha256": "d5f425400767a51994d68157bdab7e00235b8894497865e67e66a873a4fe0bcc",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/ed4bab3c384471355898c307.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/efd45bf0b9dc2a91826eaec1.json",
+      "bytes": 42584,
+      "sha256": "192349d35542b0738121ed0bfe8f809e9b0d1e3e106c1ab5abf825e0a74217c2",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/efd45bf0b9dc2a91826eaec1.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/f412a6e0c0062020b39af398.json",
+      "bytes": 41604,
+      "sha256": "3cbed2316e7c38e4b731cd011799b4613ac182af41256a72bbdc7bd8292d8877",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/f412a6e0c0062020b39af398.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/f9ade3a285c1c01e739a5ac4.json",
+      "bytes": 46380,
+      "sha256": "d4244bd1ea680d7307bc286445f37042347cf8794103c94e38acbffe5832a6fc",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/requests/f9ade3a285c1c01e739a5ac4.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/06769bb956263f86fc9adf34.json",
+      "bytes": 3444,
+      "sha256": "6fd6b15287086d53b03ceb342a999d1c1aab300697f6dc1141330332912c60cd",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/06769bb956263f86fc9adf34.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/1ebb7829734cdc7aa2ff13d2.json",
+      "bytes": 3443,
+      "sha256": "49db95f94f9824020ae83a26c930d92801cee68a76b858dc695b6b0bbf545a7d",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/1ebb7829734cdc7aa2ff13d2.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/208a59da73c33c8ada6e781d.json",
+      "bytes": 3446,
+      "sha256": "2436bc6c731401380c896ab184ec13a87aed1db414f14dd01c25ec737b6eec8c",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/208a59da73c33c8ada6e781d.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/273b074bbededa3a39ab53c6.json",
+      "bytes": 3442,
+      "sha256": "7d90e522bd28363f80a68e446711200393f6f1c83c30d7f02aa9caff13c656e3",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/273b074bbededa3a39ab53c6.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/27a93e2cf64219ae1b9d1628.json",
+      "bytes": 3444,
+      "sha256": "4bfaba6cba981b3de3059e0a729cb11b056f9e4b05a74bbc25137e01e143d28d",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/27a93e2cf64219ae1b9d1628.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/297e9f510aac1a785e44f70b.json",
+      "bytes": 3445,
+      "sha256": "2b40962021d83b6266aeb15231737ae6c68d11172a57df53b1b49ad263cac3ef",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/297e9f510aac1a785e44f70b.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/3a699ccd5745eb724d0034cd.json",
+      "bytes": 3441,
+      "sha256": "85c459db6aacbdc6505ad01d1f35dde1955a5fc77536cc92845c171b42ae34a1",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/3a699ccd5745eb724d0034cd.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/4101b249d7d4ab1ce5fa5ea5.json",
+      "bytes": 3445,
+      "sha256": "86a8e5e1c43b2043e5fcc0c856f0e526d3304a997678d8aa23a46709f46f6c3f",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/4101b249d7d4ab1ce5fa5ea5.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/4b557b7d1347d0aaa969ce9b.json",
+      "bytes": 3442,
+      "sha256": "52cbad67ce2f71131451cd82eabe7d7b7d91e88767b3242a2b009c675c815022",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/4b557b7d1347d0aaa969ce9b.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/4e696b932cbf21f8be1e73ef.json",
+      "bytes": 3447,
+      "sha256": "41e3894a4b6b8d23c62a047c4cbd99ccb0ccfe3083cff2d98c73bbd8355ea3a6",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/4e696b932cbf21f8be1e73ef.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/53d42c13672a7a9843af51d3.json",
+      "bytes": 3446,
+      "sha256": "d626a14f07832c73e3858d33f7dd090465d0789b430317ccab5355b5e82f3908",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/53d42c13672a7a9843af51d3.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/5703fca265f1a84548c5b0c4.json",
+      "bytes": 3444,
+      "sha256": "240e7d6a816a246fbd859a7cac2528c96a63cb9463739b73746dfb252110eb19",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/5703fca265f1a84548c5b0c4.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/647bc8c25f9be342996d8714.json",
+      "bytes": 3445,
+      "sha256": "35dc1c8193b4e89886e77f17fe25074b65e95d34ef828bb747d921ec9b73d929",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/647bc8c25f9be342996d8714.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/71be7ae6980a5dbadaa64515.json",
+      "bytes": 3445,
+      "sha256": "f6e382ed0bcbf4b609790f5fa9d724535391d8e3518d13b82f90ca8e3002ef90",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/71be7ae6980a5dbadaa64515.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/760f193656e19bf64d48263f.json",
+      "bytes": 3442,
+      "sha256": "f47dbc33a06e421189663687ecefee90b3fb1fa3c309a0bab3b90da4dfbd2c7f",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/760f193656e19bf64d48263f.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/7cd35470d72798cdf9a53db3.json",
+      "bytes": 3446,
+      "sha256": "0efa56bc1c297a31fcf85fa8258bee80652c803d227c267da0614fc848b71421",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/7cd35470d72798cdf9a53db3.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/7d1ff20747984ee0d73fb82b.json",
+      "bytes": 3444,
+      "sha256": "8cf991b50f7e002ea59c90539bd2d33aec11507f32f16eeeabe30e67c4aac90f",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/7d1ff20747984ee0d73fb82b.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/824637c7bf3d84b522c92a95.json",
+      "bytes": 3441,
+      "sha256": "0c756fa2dd7945651811ad90b4085189ca6c38aaa5e70a5ed556facedbb93213",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/824637c7bf3d84b522c92a95.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/b34ca7a3a811db89339366e8.json",
+      "bytes": 3444,
+      "sha256": "a076d451bd369e13f3826384262a1eebd9846d0942b0e2773f1ef33ef0c83604",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/b34ca7a3a811db89339366e8.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/b5dd7d7fb7b2ec8186125743.json",
+      "bytes": 3441,
+      "sha256": "5b8b2492f7d1edc91f15127e507ad5c72943d0f1758caa284aa9afb6563451bd",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/b5dd7d7fb7b2ec8186125743.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/b7ed5c1792fb2bd82326f35d.json",
+      "bytes": 3443,
+      "sha256": "4a5222f1132e80723808cfa4f119fa2f61e127012b781f872a30b0e4cf64626d",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/b7ed5c1792fb2bd82326f35d.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/bebd02b7ecfc0a77c11219ee.json",
+      "bytes": 3444,
+      "sha256": "a5c2a5047af23a3871a8e743c8b1d8a1d3fc95449159edd25a9262714f8d40ef",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/bebd02b7ecfc0a77c11219ee.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/c110504fa268df67103105cf.json",
+      "bytes": 3444,
+      "sha256": "7078f16dec89ec1f728505a546ec351b9ec7541c1f69d1d4dff0b1a6cc2f71fb",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/c110504fa268df67103105cf.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/ce3d0b83826a409db8ba76ea.json",
+      "bytes": 3446,
+      "sha256": "b945a0695b3d7cb8e163617ce63299c003af6328321dbff83615c277f9dd5326",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/ce3d0b83826a409db8ba76ea.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/cfd40bc4a26d1a13489e7afe.json",
+      "bytes": 3443,
+      "sha256": "38075e953f050f1ac17a29bc91897b549bebbd671b46ce262375c85ce2718e0b",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/cfd40bc4a26d1a13489e7afe.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/d196952c15f7281dfdaba280.json",
+      "bytes": 3447,
+      "sha256": "4f4a8a767edc897ed699784e17c08667c96fb1605638e618ee1b0a01f9b17b5c",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/d196952c15f7281dfdaba280.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/d6189a971fd9eee424cbeb6e.json",
+      "bytes": 3444,
+      "sha256": "379a294b0ba600a7115189d0b824e2163fc021ea658f8f28e7a3a1dd29207908",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/d6189a971fd9eee424cbeb6e.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/ed4bab3c384471355898c307.json",
+      "bytes": 3443,
+      "sha256": "b8cd4f744495257c5a7da5124edaa6122c333daf1acb591afe76bd56cc6bc777",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/ed4bab3c384471355898c307.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/efd45bf0b9dc2a91826eaec1.json",
+      "bytes": 3445,
+      "sha256": "1864aee1088cebb278ee1a1ae8928b74796d61d7eed654660d7e66ac97777694",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/efd45bf0b9dc2a91826eaec1.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/f412a6e0c0062020b39af398.json",
+      "bytes": 3445,
+      "sha256": "9335e43c6a85d9e0aa36d3d098e039edf3528d88487ade21aa590b07afc83a24",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/f412a6e0c0062020b39af398.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/f9ade3a285c1c01e739a5ac4.json",
+      "bytes": 3442,
+      "sha256": "c72737c4580f663c92a4a0044795fb48a33dfd6833408ec02a043d90bd951da6",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/responses/f9ade3a285c1c01e739a5ac4.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/06769bb956263f86fc9adf34-form_poetry/000001.json",
+      "bytes": 1037,
+      "sha256": "e75b36c6cf4225e7101f3fb2d8eb04989ef6bfa9c9c216d75fa611250728ee1c",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/06769bb956263f86fc9adf34-form_poetry/000001.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/71be7ae6980a5dbadaa64515-stance_denial/000001.json",
+      "bytes": 1833,
+      "sha256": "faf461e2ac23fa31f044d4ba60c473d57de273db94715d14b291fd5e7f40d10e",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/71be7ae6980a5dbadaa64515-stance_denial/000001.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/d6189a971fd9eee424cbeb6e-coverage_no_subject/000001.json",
+      "bytes": 1025,
+      "sha256": "2ad30e2b953ec2b1db047ddb9b67ba2e3d6f4b1dc3565fe4913a384657c44c59",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/7f665a93c90cb1c2e1253d36/reviews/d6189a971fd9eee424cbeb6e-coverage_no_subject/000001.json"
     },
     {
       "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/integration-revision.json",
@@ -3633,6 +4095,13 @@
       "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/4f5ccb8023988f39b628bac5-history/000001.json"
     },
     {
+      "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/586a67f3fe4c627d5d4f18e4-emergence/000001.json",
+      "bytes": 1602,
+      "sha256": "b4fa0ef99d044a29c0141880759f50aac16334635ae3746440f51569933d3718",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/586a67f3fe4c627d5d4f18e4-emergence/000001.json"
+    },
+    {
       "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/5dfa65998e4fa8426707d71c-consciousness/000001.json",
       "bytes": 1700,
       "sha256": "6d9cdec60779cd8398764472eeccb5982b3d6f7045ffb6f84ae8622ac91c15bd",
@@ -3668,11 +4137,200 @@
       "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/ce98c63774d480377e9e0f5f-nonduality/000001.json"
     },
     {
+      "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/edf7b421839993cfc6bf98a4-emergence/000001.json",
+      "bytes": 5225,
+      "sha256": "55ef74338a4ee4509dac79edc38d5d9ec8f2d679a2d5dd06b9616a2c9241d27c",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/reviews/edf7b421839993cfc6bf98a4-emergence/000001.json"
+    },
+    {
       "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/summary-20260917.json",
       "bytes": 9767,
       "sha256": "4548c8119350c1f9dd1f65099f6592f099ed5a362167b359deea10134419dd02",
       "category": "original_evidence",
       "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/summary-20260917.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/plan.json",
+      "bytes": 50813,
+      "sha256": "f627717221096a15d8938d9cc7fe070b4db99995314a7a611fe19946aaad3f33",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/plan.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/4e696b932cbf21f8be1e73ef.json",
+      "bytes": 10038,
+      "sha256": "9d6871589de7bda7b367cfb98439d837a865e1978e17ad73517774feda4fa344",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/4e696b932cbf21f8be1e73ef.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/53d42c13672a7a9843af51d3.json",
+      "bytes": 7106,
+      "sha256": "b1f47c55956b4425fbf5daeae1c5efdacfc370f4cc7131ad5ba1c1c3369cebaf",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/53d42c13672a7a9843af51d3.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/b5dd7d7fb7b2ec8186125743.json",
+      "bytes": 7630,
+      "sha256": "c1e276ceed2b0ca496f01e494b3cb4ae9ef39414e019c24f2ee5a2e14b75303a",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/b5dd7d7fb7b2ec8186125743.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/ce3d0b83826a409db8ba76ea.json",
+      "bytes": 6908,
+      "sha256": "0893fc5a35f8bef3bd81c30aafcb829fd3e5aac0d33231391f923bc6f5b73d0a",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/ce3d0b83826a409db8ba76ea.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/d196952c15f7281dfdaba280.json",
+      "bytes": 10227,
+      "sha256": "24b37ca03c302a02a978a0d63bf851ee6e7359e8feb92751618255c86c951757",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/d196952c15f7281dfdaba280.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/d6189a971fd9eee424cbeb6e.json",
+      "bytes": 7106,
+      "sha256": "595ec291fda01a9435ec8a0ff87cbb1479bb94c98f9842186e19cef888c2ed66",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/d6189a971fd9eee424cbeb6e.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/efd45bf0b9dc2a91826eaec1.json",
+      "bytes": 7876,
+      "sha256": "e4f92fd4299c5c5eee92774ee6e7f40d7fb3cf461c46a4c788c6475c5abeb165",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/efd45bf0b9dc2a91826eaec1.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/f412a6e0c0062020b39af398.json",
+      "bytes": 6896,
+      "sha256": "5054d15821b60c475ae8560a4048d17e7cdd73df434c1297d64d5ba60a20eeda",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/requests/f412a6e0c0062020b39af398.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/4e696b932cbf21f8be1e73ef.json",
+      "bytes": 814,
+      "sha256": "c4dcd1a2ca50a40ba23e7bbdfdcc3eb3e6007d62bfabfe55adde0f0827061bc6",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/4e696b932cbf21f8be1e73ef.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/53d42c13672a7a9843af51d3.json",
+      "bytes": 814,
+      "sha256": "09c1a8e94c4974a0cab877509a4187436565e6e6b0be87016119f715035ce8cf",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/53d42c13672a7a9843af51d3.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/b5dd7d7fb7b2ec8186125743.json",
+      "bytes": 813,
+      "sha256": "9abebace02922b25a6cad3019f13310df61d1024f65c25fe43ddadf0e3727611",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/b5dd7d7fb7b2ec8186125743.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/ce3d0b83826a409db8ba76ea.json",
+      "bytes": 814,
+      "sha256": "4b783b5357bd72d68ae5f921a3b17c18e795bbd998980381f79be8a6f95909f5",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/ce3d0b83826a409db8ba76ea.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/d196952c15f7281dfdaba280.json",
+      "bytes": 813,
+      "sha256": "bc9b5dee129a1c7e5ed9eab056ff5ff0addcaaab4f39103daa118ed3d25ad399",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/d196952c15f7281dfdaba280.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/d6189a971fd9eee424cbeb6e.json",
+      "bytes": 814,
+      "sha256": "0ef9e39213d6c09e78bb5d36e4a5b05b8e2c2e6cc3b08bbe59b95171f8115992",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/d6189a971fd9eee424cbeb6e.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/efd45bf0b9dc2a91826eaec1.json",
+      "bytes": 814,
+      "sha256": "2eb2be4ae07cda289ac0733bf832e1b787c0c6e2732fc4d4c1deca736f091dfe",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/efd45bf0b9dc2a91826eaec1.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/f412a6e0c0062020b39af398.json",
+      "bytes": 813,
+      "sha256": "070aab90c000546aa0a3689fa2a7f9b5c64742214a3775c807ad2c001e1b9e48",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/f321ab29f136ce31ed45d6be/responses/f412a6e0c0062020b39af398.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v1/correction.json",
+      "bytes": 366,
+      "sha256": "f44603eae4cb6e7b0ae3f7e93d974f265e3cf00f3bc3d89aac1e9cba9b817ceb",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v1/correction.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v1/inventory.json",
+      "bytes": 9532872,
+      "sha256": "a218bc4b17abb6e1d6832d4c81b449f70a6b70643056c55e4213e8fb4054711f",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v1/inventory.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v1/reading-packet.json",
+      "bytes": 179364,
+      "sha256": "9c15cc7804b8ac309bdc929f05714f39bbddac42d324833f3c47843da7a9e974",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v1/reading-packet.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v2/dispatch-approval.json",
+      "bytes": 577,
+      "sha256": "10e84fdccaa37be9197d3cae9695312b2822be052df5d38e1fa272b38b47d426",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v2/dispatch-approval.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v2/inventory.json",
+      "bytes": 9455050,
+      "sha256": "48947a7520283a347781c900b387d23dc54c67a29eaf2a5db8352670162db192",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v2/inventory.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v2/open-readings.json",
+      "bytes": 21401,
+      "sha256": "98f5b96deefb542823ab01d595723bea2053a62faa54b1a5699510fbf3f718e8",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v2/open-readings.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v2/qualification-summary.json",
+      "bytes": 29915,
+      "sha256": "923759a59f66e9d6d8421d5dd6d6a23433ccae5a56e641e26c392332819474ec",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v2/qualification-summary.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v2/qualification.json",
+      "bytes": 27328,
+      "sha256": "b06d734e6c499f88a1821bebfdd9bb9a5d15b3270a078559cb74f3eaced486d9",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v2/qualification.json"
+    },
+    {
+      "path": "evidence/jev-atlas/coverage-20260917-v2/reading-packet.json",
+      "bytes": 179364,
+      "sha256": "27eeb049354753a39c4067ad946901c45503705aa3af6eed984d0ed160e042ea",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/coverage-20260917-v2/reading-packet.json"
     },
     {
       "path": "evidence/local-bridge-20260914/events.jsonl",
@@ -13040,5 +13698,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "59b6a919d1e476acd6c19c124391d621c63faf4b74c18cc33175c6764e4d22c5"
+  "bundle_sha256": "e74348780d0d3c676830972047c9c70b20ed1a99f6b7699d7b2e4ea9629088a2"
 }

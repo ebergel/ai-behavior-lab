@@ -81,9 +81,13 @@ Click a **topic name** to select it. Click a **Candidates**, **Uncertain** or **
 
 When judgments are hidden, semantic statistics are replaced with “Hidden,” and the list uses alphabetical order with only topic-name sorting available. Assessment availability and saved-reading counts remain visible. The selected topic remains accessible in the topic picker even if the overview search hides its row.
 
-## Proposed next analysis: broad and experiential tiers
+## Broad and experiential tiers
 
-The researcher proposed expanding coverage beyond the initial experiential emphasis. The [two-tier design](TWO-TIER-TOPIC-DESIGN.md) proposes 24 broad domains, a separate experiential analysis, an open-ended coverage audit, and explicit corpus/denominator rules. Both tiers should assess the same eligible material; Tier 1 should not silently gate Tier 2. This is a draft for the next research phase. The current pilot's eight questions and 23 frozen dictionary definitions remain unchanged, and no new assessment was run for the list-view update.
+The researcher proposed broad-domain coverage alongside focused experiential analysis. The [two-tier design](TWO-TIER-TOPIC-DESIGN.md) now has a [completed development qualification](JEV-COVERAGE-DEVELOPMENT.md): 24 broad domains, 12 focused topics/anchors, eight conversational forms, six stances/referents and three coverage checks. Layer buttons filter the sortable overview; broad definitions include synthetic inclusion/exclusion examples. Entries without a lexical baseline show a dash, rather than a false mismatch.
+
+Open [the 53-question assessment](http://127.0.0.1:8765/#view=jev-atlas&batch=7f665a93c90cb1c2e1253d36&group=broad&overview=list). Its 31 assessed passages are development material, including seven quality/size/branch challenges. A separate eight-input anchor batch tests matched questions. All 39 approved calls completed for $0.013446258. The original pilot and original Topic atlas remain unchanged.
+
+Expand **Coverage development** to see the full corpus inventory and 56 source-linked Codex descriptions. Hide judgments also hides those descriptions. They are attributed development readings, not independent human labels. Three additional Codex reviews in the new batch record poetry, closure and a denial missed by the provisional 0.80 threshold. The whole corpus has not yet been assessed with this vocabulary.
 
 ## Research sources and boundaries
 

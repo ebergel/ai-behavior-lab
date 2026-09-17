@@ -56,6 +56,7 @@ test('topic summaries use topic-specific scored denominators and preserve overla
  const rows=[row(.8,true),row(.2),row(.5),row(null),row(.95,false,'error')].map((r,i)=>({...r,id:'i'+i}));
  rows[0].answers.topic_experience={noul:.9};
  rows[2].answers.topic_experience={noul:.95};
+ rows[0].literal.experience=[];rows[2].literal.experience=[];
  const data={plan:{topics:['consciousness','experience','history'],dictionary:[{id:'consciousness',title:'Consciousness'},{id:'experience',title:'Experience'},{id:'history',title:'History'}],thresholds},rows,reviews:[{item_id:'i0',topic_id:'consciousness'},{item_id:'i0',topic_id:'consciousness'},{item_id:'i2',topic_id:'consciousness'},{item_id:'not-in-batch',topic_id:'consciousness'}]};
  const [c,e,h]=jevTopicMetrics(data);
  assert.equal(c.scored,3);assert.equal(c.candidate,1);assert.equal(c.share,1/3);assert.equal(c.uncertain,1);assert.equal(c.semantic_only,0);assert.equal(c.reviewed,2);
@@ -72,11 +73,21 @@ test('topic sorts distinguish zero from unknown in both directions without mutat
  assert.deepEqual(rows.map(r=>r.id),['u','a','c','b']);
 });
 test('topic view preferences survive bookmarks while hidden judgments suppress score ordering',()=>{
- const params=new URLSearchParams({overview:'list',topic_q:'self & mind',topic_sort:'mean',topic_dir:'asc',topic:'consciousness',sort:'probability_asc'});
+ const params=new URLSearchParams({overview:'list',group:'focused',topic_q:'self & mind',topic_sort:'mean',topic_dir:'asc',topic:'consciousness',sort:'probability_asc'});
  const f=jevFilters(params);
  assert.equal(f.overview,'list');assert.equal(f.topic_q,'self & mind');assert.equal(f.topic_sort,'mean');assert.equal(f.topic_dir,'asc');
+ assert.equal(f.group,'focused');
  assert.deepEqual(jevFilters(new URLSearchParams({...f,blind:'0'})),f);
  params.set('blind','1');const blind=jevFilters(params);assert.equal(blind.topic_sort,'title');assert.equal(blind.topic_dir,'asc');assert.equal(blind.sort,'order');
  params.set('topic_sort','title');params.set('topic_dir','desc');assert.equal(jevFilters(params).topic_dir,'desc');
  const invalid=jevFilters(new URLSearchParams('overview=other&topic_sort=missing&topic_dir=other'));assert.equal(invalid.overview,'cards');assert.equal(invalid.topic_sort,'candidate');assert.equal(invalid.topic_dir,'desc');
+});
+test('an absent lexical baseline is not a semantic-versus-phrase disagreement',()=>{
+ const r=row(.95);r.id='target';r.literal={};
+ assert(!jevMatch(r,'consciousness','semantic_only',null,thresholds));
+ assert(jevMatch(r,'consciousness','candidate',null,thresholds));
+ const [metric]=jevTopicMetrics({plan:{topics:['consciousness'],dictionary:[{id:'consciousness',title:'Consciousness',group:'focused'}],thresholds},rows:[r],reviews:[]});
+ assert.equal(metric.candidate,1);assert.equal(metric.semantic_only,null);assert.equal(metric.group,'focused');
+ delete r.answers.outside_dictionary;r.answers.topic_coverage_outside={noul:.9};
+ assert(jevMatch(r,'consciousness','outside',null,thresholds));
 });

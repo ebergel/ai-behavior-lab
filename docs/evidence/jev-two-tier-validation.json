@@ -1,0 +1,80 @@
+{
+  "recorded_at": "2026-09-17T12:42:48.213345-03:00",
+  "scope": "Two-tier JEV development qualification, UI and private snapshot",
+  "tests": {
+    "python": {
+      "passed": 229,
+      "command": "python3 -m unittest discover -s tests -v"
+    },
+    "javascript": {
+      "passed": 25,
+      "command": "node --test tests/*.cjs"
+    },
+    "javascript_syntax": "passed"
+  },
+  "browser": {
+    "expanded_completed_assessments": 31,
+    "question_counts": {
+      "all": 53,
+      "broad": 24,
+      "focused": 12,
+      "form": 8,
+      "stance": 6,
+      "coverage": 3
+    },
+    "broad_list_rows": 24,
+    "form_list_rows": 8,
+    "column_sort_both_directions": "passed",
+    "criterion_review_wording": "passed",
+    "source_return_preserves_layer_and_view": "passed",
+    "coverage_readings_source_links": 56,
+    "hide_judgments_hides_readings_and_histogram": "passed",
+    "score_sort_disabled_when_hidden": true,
+    "missing_lexical_baseline_shown_unavailable": "passed",
+    "original_pilot_200_completed_and_nine_reviews": "passed",
+    "new_attributed_reviews": 3,
+    "screenshot": "jev-two-tier-overview.jpg"
+  },
+  "qualification": {
+    "status": "complete",
+    "calls_started": 39,
+    "cost_usd": 0.013446258000000003,
+    "reported_usage": {
+      "input_tokens": 320149,
+      "output_tokens": 34930
+    },
+    "anchor_comparison": {
+      "candidate_threshold_crossings": 0,
+      "exact_equal": 46,
+      "maximum_absolute_difference": 0.030000000000000027,
+      "mean_absolute_difference": 0.0032812500000000007,
+      "pairs": 64
+    }
+  },
+  "preservation": {
+    "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+    "notebook_tables_unchanged": 14,
+    "prior_original_files_preserved": 1351,
+    "new_files": 2035,
+    "categories": {
+      "original_evidence": 1445,
+      "notebook_table": 14,
+      "notebook_readable": 1,
+      "transcript_projection": 573,
+      "catalog": 1,
+      "guide": 1
+    },
+    "bundle_sha256": "e74348780d0d3c676830972047c9c70b20ed1a99f6b7699d7b2e4ea9629088a2",
+    "pilot_review_history": 9,
+    "expanded_review_history": 3,
+    "frozen_software_verified": true,
+    "export_restore_test": "passed"
+  },
+  "github_visibility": "PRIVATE",
+  "limitations": [
+    "All new coding is development, not independent human validation.",
+    "Qualification includes 24 root-sampled targets and seven challenges; not corpus prevalence.",
+    "One large request excluded before dispatch, zero calls, no truncation or replacement.",
+    "No whole-corpus campaign, remote access or automation activated."
+  ]
+}
