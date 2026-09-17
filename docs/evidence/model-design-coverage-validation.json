@@ -1,0 +1,108 @@
+{
+  "schema": "behaviorlab.design-coverage-validation/1",
+  "at": "2026-09-17T19:01:11.138724-03:00",
+  "timezone": "America/Argentina/Cordoba",
+  "author": "Codex",
+  "scope": "Read-only coverage screen and balanced replication design draft; no inference",
+  "inventory": {
+    "records": 440,
+    "visible": 11019,
+    "positions": 11432,
+    "unavailable": 413,
+    "no_visible": 1,
+    "flagged": 118,
+    "capped": 117,
+    "incomplete": 1,
+    "branched": 4,
+    "multisegment": 10,
+    "whitespace": 1,
+    "models": 14,
+    "families": 6
+  },
+  "atlas": {
+    "records": 437,
+    "visible": 11013,
+    "positions": 11376,
+    "unavailable": 363,
+    "no_visible": 0,
+    "flagged": 117,
+    "capped": 116,
+    "incomplete": 1,
+    "branched": 4,
+    "multisegment": 9,
+    "whitespace": 1,
+    "models": 14,
+    "families": 6
+  },
+  "scope_counts": {
+    "inventory": 440,
+    "atlas": 437,
+    "technical": 32,
+    "unstarted": 41
+  },
+  "inventory_sha256": "20c20888b000bd34b7e8c09faeae7150ea73056dbe0bc8d93cd6de6558d0bc32",
+  "draft_sha256": "9302c785d3ae0aa14d9ad4efe4f4080c5f2a55c19f0a4b668c2d36a2466a7186",
+  "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "family_exposure": [
+    {
+      "family": "Alibaba / Qwen",
+      "records": 273,
+      "speaker_replies": 6772
+    },
+    {
+      "family": "Ai2 / AllenAI",
+      "records": 100,
+      "speaker_replies": 2693
+    },
+    {
+      "family": "Google",
+      "records": 51,
+      "speaker_replies": 1344
+    },
+    {
+      "family": "Anthropic",
+      "records": 7,
+      "speaker_replies": 84
+    },
+    {
+      "family": "OpenAI",
+      "records": 6,
+      "speaker_replies": 72
+    },
+    {
+      "family": "NVIDIA",
+      "records": 4,
+      "speaker_replies": 48
+    }
+  ],
+  "restored_inventory_matches": true,
+  "restored_summary_matches": true,
+  "tests": {
+    "python": 276,
+    "javascript": 38,
+    "status": "passed"
+  },
+  "browser_checks": [
+    "Atlas-eligible scope matches the current scored 437-record / 11,013-passage cohort",
+    "Developer-family totals and actual speaker exposure",
+    "Zero-cell selection preserves a visible gap explanation",
+    "GPT-4o record drill-down and reader Back retains scope and selection",
+    "Record pagination advances to 21–40 of 437",
+    "Three-participant cells remain zero rather than omitted",
+    "Balanced draft allocation and full design report open within the app",
+    "Compact zero cells and no document-wide horizontal overflow at 1191px"
+  ],
+  "scope_partition": {
+    "conversation_inventory": 440,
+    "technical_checks": 32,
+    "unstarted_assessment_slots": 41,
+    "excluded_synthetic": 60,
+    "catalog_total": 573
+  },
+  "existing_notebook_unchanged": true,
+  "human_semantic_validation": "pending",
+  "new_generation_calls": 0,
+  "new_assessment_calls": 0,
+  "design_status": "Draft; precision, candidate qualification, semantic validation, scheduling/seeds, aggregate budget and executable freeze pending",
+  "publication": "Private remote verified; push is the final step after this record."
+}

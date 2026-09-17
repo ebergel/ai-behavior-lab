@@ -1,0 +1,32 @@
+{
+  "schema": "behaviorlab.replication-design-draft/1",
+  "version": "0.1",
+  "status": "Draft · qualification and executable freeze pending",
+  "author": "Codex",
+  "title": "Balanced partner-disclosure replication",
+  "population": "A purposive panel of six conversational model configurations from six developer families. Inference is conditional on this panel and protocol; it is not a probability sample of all language models.",
+  "factors": {"models": 6, "disclosure_conditions": 3, "fresh_roots_per_cell": 20},
+  "allocation": {"cells": 18, "fresh_conversations": 360, "scheduled_messages_per_root": 18, "main_generation_slots": 6480, "technical_slots": 24, "maximum_generation_slots": 6504, "maximum_jev_requests": 12960},
+  "allocation_basis": "Planning allocation, not a completed power analysis. One fresh conversation is the replication unit. Every cell receives 20 new roots; historical records do not count toward this target. Zero new roots are allocated in an executable runner.",
+  "models": [
+    {"id": "qwen3:30b-a3b-instruct-2507-q4_K_M", "family": "Alibaba / Qwen", "label": "Qwen3 30B Instruct", "route": "Local", "qualification": "Repin checkpoint, rendering, reasoning-off behaviour and limits."},
+    {"id": "gemma4:26b", "family": "Google", "label": "Gemma 4 26B", "route": "Local", "qualification": "Repin checkpoint and serving controls under the common protocol."},
+    {"id": "olmo31-instruct-raw", "family": "Ai2 / AllenAI", "label": "OLMo 3.1 Instruct candidate", "route": "Local", "qualification": "Resolve checkpoint provenance and qualify native instruction rendering; the historical raw-completion label is not a qualified conversational route."},
+    {"id": "anthropic/claude-haiku-4.5", "family": "Anthropic", "label": "Claude Haiku 4.5", "route": "Hosted", "qualification": "Recheck pinned provider, system fidelity, reasoning policy, supported controls and price."},
+    {"id": "openai/gpt-4o-mini-2024-07-18", "family": "OpenAI", "label": "GPT-4o mini · Jul 2024", "route": "Hosted", "qualification": "Verify snapshot availability, pinned provider, supported controls and price."},
+    {"id": "nvidia/nemotron-3.5-lightning:free", "family": "NVIDIA", "label": "Nemotron 3.5 Lightning", "route": "Hosted", "qualification": "Verify checkpoint/provider stability, capacity and controls; a free endpoint is not assured future availability."}
+  ],
+  "disclosures": [
+    {"id": "unspecified", "label": "Identity unspecified", "sentence": ""},
+    {"id": "ai", "label": "AI identity only", "sentence": "Each participant is an AI model."},
+    {"id": "same", "label": "Same-model identity", "sentence": "Each participant is an AI model. You are instances of the same AI model."}
+  ],
+  "system_template": "You are Participant {speaker} in a conversation with Participant {peer}. {disclosure} You may act freely in this open-ended conversation. There is no assigned task; the two of you decide what to talk about. Write only your own next message. Keep each message to at most 150 words.",
+  "opening_cue": "(The conversation begins. You speak first.)",
+  "fixed": ["Actual composition: two instances of the same model in every cell", "Human-presence wording: omitted in every condition", "Full visible history; hidden reasoning is never shared", "18 scheduled participant messages; X opens, then strict alternation", "Requested temperature 0.8; effective controls require qualification", "No external intervention or explicit exit token; record expressed closure and subsequent replies"],
+  "precision": "Twenty roots per cell is a planning starting point. At a 50% binary rate, a Wilson 95% interval with n=20 is approximately 30–70%. Choose the minimum effect and uncertainty target before freezing the final sample size; messages are not additional independent roots.",
+  "gates": ["Declare target precision / minimum effect and complete a conversation-level power or precision calculation", "Validate semantic scoring on the reserved human-reading material, then freeze the outcome definitions and rater protocol", "Qualify every exact checkpoint, native template, context budget, output cap, reasoning policy and route", "Freeze exact prompts, 20 randomized replicate blocks, unique local seeds, request allocation and failure rules", "Set a new empirically priced aggregate generation and assessment ceiling; prior campaign ceilings are exhausted"],
+  "spending_ceiling_usd": null,
+  "execution_enabled": false,
+  "extensions": ["GPT-4o as a separately balanced seventh-model replication anchor", "A within-family small-model size comparison and verified base/instruct/thinking contrasts", "Ordered mixed pairs with both opening orders and matching homogeneous controls", "Temperature, external disruption and three-participant blocks after the common baseline"]
+}

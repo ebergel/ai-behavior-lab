@@ -1,3 +1,11 @@
+## Current milestone · 17 September 2026: Model & Design Coverage
+
+The researcher approved the coverage-and-replication planning milestone after reviewing the model imbalance. **Model & Design Coverage is implemented**: read-only model/family × condition grids, scopes separating conversation inventory from visible atlas-eligible records and assessment checks, zero-cell drill-down, exact source navigation, branch/availability flags and export. See [coverage guide](MODEL-DESIGN-COVERAGE.md).
+
+The [balanced partner-disclosure draft](BALANCED-REPLICATION-DESIGN.md), machine-readable as `designs/balanced-replication-v0.1.json`, proposes six developer-family candidates × three disclosure conditions × twenty fresh roots: 360 conversations, 6,480 main generation slots, 24 technical slots and at most 12,960 JEV pack requests. These are planning counts, not executable allocations or a new spending approval. Human-presence wording and actual same-model composition stay fixed; only partner disclosure changes. OLMo conversational rendering/provenance, hosted availability, common limits, precision, semantic validation, seeds/scheduling and an aggregate dollar ceiling still need qualification/freeze. The earlier $10 corpus allocation is exhausted.
+
+**Next coherent work:** use the coverage map and the researcher's reading to settle target precision and the panel, complete the declared qualification design and finite budget, then freeze a separately versioned runner before collection. Topic Trajectories remains the next reading/analysis interface. No new inference, model download, notebook edit, public release or scheduled continuation was performed in the coverage milestone. Earlier continuation entries below are historical context; they do not reopen completed campaigns.
+
 # Current milestone · full-corpus JEV assessment complete
 
 Completed 17 September 2026: **11,054 passages × 53 questions = 585,862 scores**, with both packs complete. New reported usage was **$4.849454694**; one recovered overload retains a $0.002688 reserve under the $10 ceiling. There were 22,054 unique new successes, 54 exact reuses and one additional overload attempt. See [scope, audit and descriptive results](JEV-CORPUS-ASSESSMENT.md). The finite allocation is exhausted; no additional inference is implied by its unused dollar ceiling.
