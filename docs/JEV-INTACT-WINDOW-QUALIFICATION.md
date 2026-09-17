@@ -1,5 +1,7 @@
 # Intact-window qualification and corpus preparation
 
+**Subsequent outcome:** the researcher explicitly requested retry. [The separate recovery completed all 54 unique assessments](JEV-INTACT-WINDOW-RECOVERY.md), reusing the first success and preserving the overload below. Known total cost is $0.017356458; the final corpus inputs are frozen but unexecuted. This document retains the original preparation and stop history.
+
 17 September 2026. **The researcher approved the 54-call qualification and raised its authorized ceiling to $2. Two requests were sent: one completed and the second returned HTTP 529 (`system_overloaded`). The frozen failure rule stopped both packs; 52 requests remain unstarted.** The earlier 39-call qualification remains complete and unchanged.
 
 ## Preserve the passage; partition the questions

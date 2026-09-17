@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-09-17T15:02:36.909718-03:00",
+  "status": "qualification_complete_corpus_prepared_not_dispatched",
+  "results": {
+    "effective_complete_assessments": 54,
+    "cumulative_calls_started": 55,
+    "recovery_calls_started": 53,
+    "cumulative_known_cost_usd": 0.017356457999999998,
+    "prior_unknown_cost_calls": 1,
+    "comparison": {
+      "crossings_080": 2,
+      "maximum_absolute_difference": 0.07,
+      "mean_absolute_difference": 0.0068359941944847605,
+      "pairs": 689,
+      "targets": 13
+    }
+  },
+  "corpus_counts": {
+    "by_category": {
+      "conversation": 11013,
+      "technical_or_short": 41
+    },
+    "by_split": {
+      "analysis": 8151,
+      "development": 1496,
+      "reference_reserved": 1407
+    },
+    "logical_requests": 22108,
+    "max_request_bytes": 50347,
+    "new_calls": 22054,
+    "reference_lineages": 60,
+    "reference_targets": 60,
+    "reuse_requests": 54,
+    "visible_targets": 11054
+  },
+  "corpus_cost_scenarios": {
+    "maximum": 4.943763064487186,
+    "median": 4.857949379144712
+  },
+  "tests": {
+    "python": 240,
+    "javascript": 26,
+    "recovery_and_reuse_cases": 4
+  },
+  "browser": {
+    "broad_complete": true,
+    "detail_complete": true,
+    "recovery_provenance_link": true,
+    "original_error_preserved": true,
+    "probability_distribution_visible": true
+  },
+  "preservation": {
+    "prior_original_files_preserved": 1459,
+    "notebook_tables_unchanged": 14,
+    "notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+    "transcript_projections_unchanged": 573,
+    "files": 2165,
+    "categories": {
+      "original_evidence": 1575,
+      "notebook_table": 14,
+      "notebook_readable": 1,
+      "transcript_projection": 573,
+      "catalog": 1,
+      "guide": 1
+    },
+    "bundle_sha256": "e7b75075f5a7bf66f7b06642bed60570e11a329274e7f531f15c1e290a05dcce",
+    "export_restore_test": "passed"
+  },
+  "scope": "Explicit recovery under USD 2; no full-corpus inference, public release, automation or fabricated human validation."
+}
