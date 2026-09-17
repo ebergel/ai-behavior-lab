@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-17T11:12:03.980434-03:00",
+  "scope": "Independent JEV Topic Atlas, bounded runner and prepared pilot; no live TypeSafe calls",
+  "batch_id": "c8e5aca183e5777cdae09cfb",
+  "plan_sha256": "4854ddd2601883857cbeeebfb94dc6b64c301773d1c30d623df89b14555f0fdb",
+  "sampled_passages": 200,
+  "sampled_conversations": 159,
+  "eligible_passages": 9609,
+  "questions": 12,
+  "python_tests": 220,
+  "javascript_checks": 18,
+  "notebook_before_and_after_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "unchanged_notebook_tables": 14,
+  "browser_checks": [
+    "Separate sidebar entry and original atlas coexistence",
+    "Batch preparation dialog",
+    "Real prepared state shows no semantic results",
+    "Topic overview chips select the topic",
+    "Synthetic semantic-only queue",
+    "Synthetic correction saved and amended with both revisions retained",
+    "Reviewer disagreement disappears when revised to uncertain",
+    "Source reader and return retain topic and comparison queue"
+  ],
+  "fixture_scope": "Browser classifications and corrections used an isolated synthetic workspace on temporary port 8774; not part of research data",
+  "offline_restore": "200 frozen JEV passages restore with all original source links current; network disabled",
+  "research_snapshot_sha256": "0b93028a8793148a702076dbe0f29ddcd9dfd9d0cbba2bd14b74071ad9f28bc8",
+  "prior_snapshot_files_unchanged": 1530,
+  "new_snapshot_files": 1,
+  "live_calls": 0,
+  "live_cost_usd": 0,
+  "pending": [
+    "TypeSafe API credential",
+    "Live API integration and finite assessment",
+    "Independent human coding, calibration and classifier comparison"
+  ],
+  "remote_access": "Still parked; no scheduler or automatic continuation created"
+}

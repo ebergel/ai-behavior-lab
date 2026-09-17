@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-16T19:35:41.546198+00:00",
+  "created_at": "2026-09-17T14:08:51.634341+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -796,6 +796,13 @@
       "sha256": "66a62fa880e33f4acaaae9270d91b738c79d7b5c290e0b4896de8f95b6a989dd",
       "category": "original_evidence",
       "workspace_path": "gpt4o-short-20260916-1041/routes.json"
+    },
+    {
+      "path": "evidence/jev-atlas/batches/c8e5aca183e5777cdae09cfb/plan.json",
+      "bytes": 542610,
+      "sha256": "5df4d4b41c82edb59a249bc5599f5a0e3f8f51e45b9b57266d0aed9379489246",
+      "category": "original_evidence",
+      "workspace_path": "jev-atlas/batches/c8e5aca183e5777cdae09cfb/plan.json"
     },
     {
       "path": "evidence/local-bridge-20260914/events.jsonl",
@@ -10163,5 +10170,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "a839c7eb8bf6455f12359f55c04bc7c1a3cf043317e608fdea7de9c967a48a48"
+  "bundle_sha256": "0b93028a8793148a702076dbe0f29ddcd9dfd9d0cbba2bd14b74071ad9f28bc8"
 }
