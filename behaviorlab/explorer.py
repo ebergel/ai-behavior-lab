@@ -32,6 +32,7 @@ from .gem_finder import GemFinder
 from .discourse_view import build as discourse_view, export_plan as discourse_plan
 from .lab_dictionary import dictionary_catalog
 from . import lab_jobs
+from .population import catalog_population
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
 from .topic_trajectories import build_trajectories
@@ -463,13 +464,14 @@ def make_server(workspace, port=8765):
                 if path=='/api/gems/export':return self.send(gems.export(),download='gem-finder-assessments-and-readings.json')
                 if path.startswith('/api/gems/history/'):
                     return self.send({'history':gems.history(path.rsplit('/',1)[-1])})
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/tasks.js','/tasks.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
+                if path in ('/','/population.js','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/tasks.js','/tasks.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
                     runs=[r for r in catalog.runs.values() if not r.get('unstarted_assessment')]; saved=notes.all()
                     return self.send({'token':token,'indexed_at':catalog.indexed_at,'issues':catalog.issues,
                         'counts':dict(Counter(r['kind'] for r in runs)),
+                        'population':catalog_population(catalog.runs.values(),catalog.indexed_at),
                         'collections':dict(Counter(r['collection_id'] for r in runs if r['kind']!='synthetic')),
                         'models':sorted({m for r in runs if r['kind']!='synthetic' for m in r['models']}),
                         'conditions':sorted({r['condition'] for r in runs if r['kind']!='synthetic'}),

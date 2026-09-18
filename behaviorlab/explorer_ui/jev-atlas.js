@@ -134,7 +134,7 @@ function jevCoveragePanel(data,filters){
 function renderJevAtlas(){
  const index=state.jevIndex,d=state.jev,f=state.jevFilters;
  const analysisDataset=({'7f665a93c90cb1c2e1253d36':'expanded','c8e5aca183e5777cdae09cfb':'pilot','d5078aa105039b65e07cb188':'intact','0df92be1f9ed0c110ac86789':'intact','bc254fce0908e939bd943abf':'intact'})[f.batch];
- const intro=`${pageTop('JEV Topic Atlas','Semantic readings, uncertainty, and the passages behind them.')}<div class="jev-intro"><div><span class="eyebrow">AN INDEPENDENT ASSESSMENT LAYER</span><p>The same conversations, viewed through explicit semantic questions. Keep JEV suggestions, phrase matches and your own readings alongside one another.</p></div><button class="button primary" data-action="jev-new">${icon('plus',14)} Prepare assessment</button></div>`;
+ const intro=`${pageTop('JEV Topic Atlas','Semantic readings, uncertainty, and the passages behind them.')}${d?jevPopulationBanner(d,f,jevSelection()):''}<div class="jev-intro"><div><span class="eyebrow">AN INDEPENDENT ASSESSMENT LAYER</span><p>The same conversations, viewed through explicit semantic questions. Keep JEV suggestions, phrase matches and your own readings alongside one another.</p></div><button class="button primary" data-action="jev-new">${icon('plus',14)} Prepare assessment</button></div>`;
  if(!d){$('#main').innerHTML=`<div class="content jev-page">${intro}<section class="jev-empty"><span class="jev-symbol">J<span>↗</span></span><h2>A new lens on the conversations</h2><p>Prepare a small, reproducible passage sample. Its topic definitions and questions are saved before any assessment runs.</p><div class="jev-steps"><div><strong>01</strong><h3>Define & sample</h3><p>Choose a collection and topics.</p></div><div><strong>02</strong><h3>Assess</h3><p>Run the bounded JEV batch.</p></div><div><strong>03</strong><h3>Read & compare</h3><p>Explore matches, uncertainty and disagreement.</p></div></div><button class="button" data-action="jev-new">Prepare the first assessment ${icon('arrow',14)}</button></section>${index.issues.map(i=>`<p class="error-banner">${esc(i.id)}: ${esc(i.error)}</p>`).join('')}</div>`;return;}
  const s=d.summary,topic=d.plan.dictionary.find(t=>t.id===f.topic),rows=jevSelection(),pages=Math.max(1,Math.ceil(rows.length/12));f.page=Math.min(f.page,pages-1);
  const visible=rows.slice(f.page*12,(f.page+1)*12),selected=rows.find(r=>r.id===f.item)||visible[0];
@@ -189,3 +189,12 @@ if(typeof document!=='undefined'){
  document.addEventListener('submit',e=>{if(e.target.id==='jev-topic-search-form'){e.preventDefault();jevGo({topic_q:$('#jev-topic-query').value});}if(e.target.id==='jev-search-form'){e.preventDefault();jevGo({q:$('#jev-search').value,page:0,item:''});}});
 }
 if(typeof module!=='undefined')module.exports={jevProbability,jevDecision,jevMatch,jevFilters,jevBin,jevDistribution,jevSortRows,jevTopicMetrics,jevSortTopics,jevCoveragePanel};
+
+function jevPopulationBanner(d,f,rows) {
+ const batch=state.jevIndex.batches.find(item=>item.id===f.batch),topic=d.plan.dictionary.find(t=>t.id===f.topic),filters=[];
+ if(f.mode!=='all')filters.push('Queue: '+(jevModes[f.mode]||f.mode));
+ if(!['all','outside'].includes(f.mode)||f.bin!=='')filters.push('Topic: '+(topic?.title||f.topic));
+ if(f.bin!=='')filters.push('Probability: '+jevBinLabel(Number(f.bin)));
+ if(f.q)filters.push('Search: '+f.q);
+ return populationBanner({base:{label:'This assessment batch',count:d.rows.length,unit:'target passages',detail:(batch?.title||f.batch)+' · '+populationRecords(d.rows)+' source records'},current:{count:rows.length,detail:populationRecords(rows)+' source records · '+populationShare(rows.length,d.rows.length)},filters,note:'The subset counts the passage queue before pagination. Topic overview and distributions describe the full batch; topics can overlap.'});
+}

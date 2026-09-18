@@ -149,6 +149,12 @@ class ExplorerTests(unittest.TestCase):
             h.send=lambda data,status=200,**kwargs:captured.append((status,data,kwargs))
             getattr(h,'do_'+method)(); return captured[0]
         code,boot,_=call('GET','/api/bootstrap'); self.assertEqual(code,200)
+        self.assertEqual(boot['population']['records'],1)
+        self.assertEqual(boot['population']['synthetic_records'],1)
+        self.assertEqual(boot['population']['recorded_messages'],sum(r['message_count'] for r in server.catalog.runs.values() if r['kind']!='synthetic'))
+        code,script,meta=call('GET','/population.js')
+        self.assertEqual(code,200)
+        self.assertIn(b'function populationBanner',script)
         self.assertEqual(call('GET','/api/assessments')[1],{'assessments':[],'prior_checks':[]})
         self.assertEqual(call('POST','/api/assessments',{})[0],403)
         self.assertEqual(boot['counts'],{'reference':1,'synthetic':1}); self.assertNotIn('lab',boot['collections'])

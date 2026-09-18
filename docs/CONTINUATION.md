@@ -1,3 +1,9 @@
+## Completed interface milestone · 18 September 2026: population context
+
+The researcher requested clear population and subset counts across analysis windows. A common **Population in view** banner now separates the lab library, the selected sample/dataset and the current filtered subset in the Library, Mind & discourse, Gem Finder, JEV Topic Atlas and Analysis. It labels units, active restrictions and source records, keeps synthetic controls separate, and counts the whole subset before pagination. Assessment requests/questions are distinct from targets. See [population definitions and examples](POPULATION-CONTEXT.md).
+
+This is read-only context over existing evidence. No new inference, research snapshot or notebook edits. The next research step remains review of the classifier's useful distinctions.
+
 ## Completed interface milestone · 18 September 2026: passage family means
 
 The researcher requested overall matching-pattern weight per target. Mind & discourse adds **Thinkers mean** (16 features) and **Discourse mean** (11 features) to the passage comparison and profile matrix, with both sort directions. Each is an equal-weight arithmetic mean of observed scores for the selected wording, with coverage counts and unknown values preserved. Both use the full family regardless of which individual columns are visible, and work within the existing topic/model/length filters.
