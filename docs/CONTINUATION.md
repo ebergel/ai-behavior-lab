@@ -1,3 +1,9 @@
+## Completed terminology milestone · 18 September 2026: messages and excerpts in the interface
+
+The researcher found that retaining “Passage (legacy term)” continued the ambiguity. Dictionary v5 removes that entry, keeps passage as a searchable alias and redirects its bookmarks to **Message**. The 39-entry guide now has 23 research entities. Whole-message samples, probability plots, profile matrices and population banners use **messages**; reader actions distinguish **Save message** from **Save excerpt**; synthetic controls retain separate text labels. Saved quotations may contain whole messages or excerpts.
+
+Library inventory counts are labeled **runs** because technical checks are included. Mind & discourse identifies its verified source conversations; unrestricted analysis/Gem/JEV counts use **source runs**. Older pivot Count passages / Count conversations recipes load as Count messages / Count source runs, preserving selections, filters, IDs and results. No database, assessment, score or denominator migration and no inference. Exact frozen instrument wording, source evidence, saved research text and old transport keys remain intact. The detailed participant-message/event eligibility audit remains separate future work.
+
 ## Completed dictionary milestone · 18 September 2026: research entities & units
 
 The researcher requested that the clarified vocabulary live in the Lab dictionary. Version `dictionary-2026-09-18-v4` now has **40 entries**, including a **Research entities & units** section of 24 definitions and linked visual relationships. Message, target and context have separate entries; the old passage link explains the legacy wording. Conversation/run, branch/lineage, controls/fixtures and assessment/question/score/request distinctions are explicit. Earlier passage/lineage bookmarks migrate safely and Gem return links remain intact. See [Lab dictionary](LAB-DICTIONARY.md).

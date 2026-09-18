@@ -40,7 +40,12 @@ export function observedSummary(rows, field) {
   return {n:values.length, missing:rows.length-values.length, mean:values.length ? values.reduce((a,b)=>a+b,0)/values.length : null};
 }
 const KEYS=['rows','cols','vals','aggregatorName','rendererName','valueFilter','rowOrder','colOrder'];
-export function cleanPivot(state) { return Object.fromEntries(KEYS.filter(k=>state[k]!==undefined).map(k=>[k,state[k]])); }
+// Read older recipes without changing their selected fields, filters or counts.
+export function normalizeCountLabels(pivot={}) {
+  const names={'Count passages':'Count messages','Count conversations':'Count source runs'};
+  return Object.hasOwn(names,pivot.aggregatorName)?{...pivot,aggregatorName:names[pivot.aggregatorName]}:{...pivot};
+}
+export function cleanPivot(state) { return normalizeCountLabels(Object.fromEntries(KEYS.filter(k=>state[k]!==undefined).map(k=>[k,state[k]]))); }
 export function numericAggregator(kind) {
   return ([field]) => () => {
     let n=0, sum=0, ones=0;

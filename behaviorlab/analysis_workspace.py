@@ -40,11 +40,11 @@ class AnalysisWorkspace:
     def index(self):
         available = []; issues = []
         if (self.workspace / analysis_corpus.EXECUTION / 'release.json').exists():
-            available.append({'id':'corpus','title':'Full corpus · broad & specific topics','description':'All 11,054 visible passages · 53 questions in two packs. Coverage updates separately; load new scores when ready.'})
+            available.append({'id':'corpus','title':'Full corpus · broad & specific topics','description':'All 11,054 visible messages · 53 questions in two packs. Coverage updates separately; load new scores when ready.'})
         for identity, title, description in (
-            ('expanded', 'Two tiers · development sample', '31 selected passages; all 53 questions in one request per passage.'),
-            ('intact', 'Two tiers · intact-window sample', '27 selected passages; joined broad and detail packs, including the reused first result.'),
-            ('pilot', 'Original eight-topic pilot', '200 sampled passages assessed with the original eight-topic vocabulary.')):
+            ('expanded', 'Two tiers · development sample', '31 selected messages; all 53 questions in one request per message.'),
+            ('intact', 'Two tiers · intact-window sample', '27 selected messages; joined broad and detail packs, including the reused first result.'),
+            ('pilot', 'Original eight-topic pilot', '200 sampled messages assessed with the original eight-topic vocabulary.')):
             try:
                 sources = self.sources(identity)
                 for source in sources: self.store.plan(source['batch'])

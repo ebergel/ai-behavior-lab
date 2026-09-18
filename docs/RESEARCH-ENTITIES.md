@@ -1,6 +1,6 @@
 # Research entities and units — vocabulary v1
 
-Status: published in the Lab dictionary, 18 September 2026, following the researcher's request to place the vocabulary there. The dictionary's Research entities & units section is the in-app reference. This document also specifies the pending label migration; it is not a database migration or a change to frozen assessment inputs. The researcher identified ambiguity between messages, targets, passages and source records in the population banner.
+Status: published in the Lab dictionary, 18 September 2026, following the researcher's request to place the vocabulary there. The dictionary's Research entities & units section is the in-app reference. This document also specifies the display naming contract; it is not a database migration or a change to frozen assessment inputs. The researcher identified ambiguity between messages, targets, passages and source records in the population banner.
 
 ## Evidence hierarchy
 
@@ -32,9 +32,9 @@ Above conversations, a **campaign** groups executions under an operational plan.
 - An **API request / attempt** is execution/accounting provenance. Requests can bundle questions or split them into packs, and attempts can fail or be retried. Request, assessment and target totals must have independent labels.
 - A **lineage** is the laboratory's grouping for related/identical conversation structures and shared ancestry. The current coverage code hashes models, prompt and recorded message structure; it is an operational grouping, not proof of independent generation. Preserve the frozen grouping rule and show lineage only where an actual lineage ID exists.
 
-## What the current implementation actually counts
+## Unit mapping from the earlier interface
 
-| Current label | Current implementation | Preferred wording |
+| Earlier label | Underlying count | Current wording |
 | --- | --- | --- |
 | Mind & discourse “48 target passages” | 48 selected recorded messages, copied with run ID, message ID and source hash | **48 messages in this assessment sample** |
 | Mind & discourse “48 source records” | Distinct run IDs for those 48 messages; all are selected conversational records | **From 48 conversations** |
@@ -46,7 +46,7 @@ Above conversations, a **campaign** groups executions under an operational plan.
 
 “Source record” is particularly ambiguous: the current banner counts run IDs, not files. Use **source artifact** for an original file, journal or response receipt and **source revision** for its checksum/version. One file or campaign journal can represent several runs. File count is not conversation count.
 
-## Proposed display contract
+## Display contract
 
 For the current Mind & discourse view:
 
@@ -60,6 +60,6 @@ Distinct units are not necessarily independent observations. Messages in a conve
 
 ## Next implementation boundary
 
-The Lab dictionary now contains the separate entries and linked relationships. Applying the vocabulary to the banner and analysis screens remains next work. Audit library participant-message/event counters and run categories before presenting all 472 runs as conversations or harmonizing the 11,245/11,054 totals. Preserve URLs, stable source IDs, exact frozen payloads, scores and saved research notes. A naming change must not silently change eligibility, deduplication or scientific denominators.
+The Lab dictionary contains the separate entries and linked relationships. The 18 September label migration applies them to population banners, Mind & discourse, Gem Finder, JEV, Analysis, the reader and research dialogs. Whole replies are messages; selected text is an excerpt; stored quotations can cover either. Passage is now only a dictionary search/bookmark alias for Message. Legacy route/transport keys and exact recorded instrument text remain compatible. The full library is labeled runs, including conversations and technical checks; known Mind & discourse source counts are labeled conversations. No counts were recomputed. Audit library participant-message/event counters and run categories before presenting all 472 runs as conversations or harmonizing the 11,245/11,054 totals. Preserve URLs, stable source IDs, exact frozen payloads, scores and saved research notes. A naming change must not silently change eligibility, deduplication or scientific denominators.
 
 Implementation references: `explorer.py` (`base_summary`, legacy/campaign importers); `population.py`; `jev_coverage.py` (`context_for`, `build_inventory`); `gem_plan.py` (`select_items`, `payload`); `discourse_probe.py` (`prepare`, `payload`); `discourse_view.py`; `topic_atlas.py` (exact-span evidence).

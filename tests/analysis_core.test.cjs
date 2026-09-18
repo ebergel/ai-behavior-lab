@@ -50,3 +50,14 @@ test('target filter state is immutable and stale topics stay invalid until clear
  assert.equal(c.targetFilterStatus(topics,{group:'broad',field:'Score · X',threshold:75}).valid,false);
  assert.equal(c.targetFilterStatus(topics,{group:'broad',field:'Score · X',threshold:'80'}).valid,false);
 });
+test('older count recipes migrate labels without changing fields, filters or source state',async()=>{
+ const {normalizeCountLabels,cleanPivot}=await import('../web/analysis/core.mjs');
+ for(const [oldName,newName] of [['Count passages','Count messages'],['Count conversations','Count source runs']]){
+  const before={aggregatorName:oldName,rows:['Model family'],cols:[],vals:[],rendererName:'Table Heatmap',valueFilter:{Model:{A:true}}};
+  const snapshot=JSON.stringify(before),after=normalizeCountLabels(before);
+  assert.deepEqual(after,{...before,aggregatorName:newName});
+  assert.equal(JSON.stringify(before),snapshot);
+  assert.deepEqual(cleanPivot({...before,data:['not config']}),after);
+ }
+ assert.equal(normalizeCountLabels({aggregatorName:'Mean (observed)'}).aggregatorName,'Mean (observed)');
+});

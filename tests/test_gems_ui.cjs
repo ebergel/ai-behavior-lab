@@ -41,7 +41,7 @@ test('enlarging a matrix pair preserves the active bin on its original measure',
 test('matrix plots current filtered rows without unsafe text or unknown-score coercion',()=>{
  const rows=[{...scored('a',0,0),model_label:'<script>bad</script>'},scored('b',10,20),scored('c',20,40)];
  const f=ctx.gemFilters({bin:'0',plot:'matrix'});const filtered=ctx.gemRows(rows,f);
- const html=ctx.gemMatrix(filtered,f);assert.match(html,/1 filtered passages/);assert.match(html,/r — · n=1/);assert.match(html,/&lt;script&gt;/);assert.doesNotMatch(html,/<script>|NaN|Infinity/);
+ const html=ctx.gemMatrix(filtered,f);assert.match(html,/1 filtered messages/);assert.match(html,/r — · n=1/);assert.match(html,/&lt;script&gt;/);assert.doesNotMatch(html,/<script>|NaN|Infinity/);
  const empty=ctx.gemMatrix([],ctx.gemFilters({matrix_scale:'observed'}));assert.match(empty,/No paired scores/);assert.match(empty,/No scores/);assert.doesNotMatch(empty,/NaN|Infinity/);
 });
 test('word count stays in actual units, handles zero and excludes invalid or stale counts',()=>{
@@ -67,7 +67,7 @@ test('word histogram bins retain explicit boundaries when filters or plotted pai
  const f=ctx.gemFilters({x:'words',bin:'9',bin_axis:'words',bin_width:60});
  assert.equal(ctx.gemRows(rows,f).map(i=>i.words).join(),'599,600');
  const next=ctx.gemMatrixFocus(f,'surprise','contribution');assert.equal(next.bin_axis,'words');assert.equal(next.bin_width,60);assert.equal(ctx.gemRows(rows,next).map(i=>i.words).join(),'599,600');
- const html=ctx.gemHistogram(rows,f);assert.match(html,/data-width="60"/);assert.match(html,/540 to 600 inclusive words: 2 passages/);assert.match(html,/1 values outside this fixed bin range/);
+ const html=ctx.gemHistogram(rows,f);assert.match(html,/data-width="60"/);assert.match(html,/540 to 600 inclusive words: 2 messages/);assert.match(html,/1 values outside this fixed bin range/);
  assert.equal(ctx.gemBinCaption(next),'540–600 words inclusive');
 });
 test('inclusive word limits combine with existing filters and work while scores are hidden',()=>{

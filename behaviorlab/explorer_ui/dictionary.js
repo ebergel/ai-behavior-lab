@@ -1,7 +1,8 @@
 'use strict';
 function dictionaryParams(raw={}) {
  const out={term:String(raw.term||''),q:String(raw.q||''),category:String(raw.category||''),fromGem:''};
- if(out.category==='evidence'&&['passage','lineage'].includes(out.term))out.category='entities';
+ if(out.term==='passage'){out.term='message';out.category='entities';}
+ if(out.category==='evidence'&&out.term==='lineage')out.category='entities';
  if(raw.fromGem){try{const value=JSON.parse(raw.fromGem);if(value&&typeof value==='object'&&!Array.isArray(value))out.fromGem=JSON.stringify(value);}catch{}}
  return out;
 }
@@ -31,10 +32,10 @@ function dictionaryEntry(e,catalog) {
  return `<article class="dictionary-entry" aria-labelledby="dictionary-title"><header><div class="eyebrow">${esc(e.kind)}</div><h2 id="dictionary-title">${esc(e.title)}</h2><p class="dictionary-definition">${esc(e.definition)}</p>${e.scale?`<span class="dictionary-scale">${esc(e.scale)}</span>`:''}</header>
  <section class="dictionary-practical"><h3>What it means in practice</h3><p>${esc(e.practical)}</p>${e.low?`<div class="dictionary-range"><div><span>LOWER VALUES</span><p>${esc(e.low)}</p></div><div><span>HIGHER VALUES</span><p>${esc(e.high)}</p></div></div>`:''}</section>
  ${e.example?`<section class="dictionary-example"><div class="eyebrow">ILLUSTRATIVE EXAMPLE · NOT SCORED CORPUS EVIDENCE</div><p>${esc(e.example)}</p></section>`:''}
- <section><h3>Technical specification</h3>${e.formula?`<pre class="dictionary-formula">${esc(e.formula)}</pre>`:''}${list(e.method||[])}${e.rubric?`<div class="dictionary-rubric"><h4>Exact assessment question</h4><p>${esc(e.rubric.question)}</p><h4>The five rubric levels</h4><ol start="0">${e.rubric.criteria.map((c,k)=>`<li><span>LEVEL ${k} · ${k*25} ON DISPLAY SCALE</span><p>${esc(c)}</p></li>`).join('')}</ol><details><summary>Shared assessment instructions</summary><p>${esc(e.scope)}</p></details></div>`:''}</section>
+ <section><h3>Technical specification</h3>${e.formula?`<pre class="dictionary-formula">${esc(e.formula)}</pre>`:''}${list(e.method||[])}${e.rubric?`<div class="dictionary-rubric"><h4>Exact assessment question · original wording</h4><p class="source-note">This recorded instrument uses “passage” for the selected message. Its original wording is preserved for reproducibility.</p><p>${esc(e.rubric.question)}</p><h4>The five rubric levels</h4><ol start="0">${e.rubric.criteria.map((c,k)=>`<li><span>LEVEL ${k} · ${k*25} ON DISPLAY SCALE</span><p>${esc(c)}</p></li>`).join('')}</ol><details><summary>Shared assessment instructions</summary><p>${esc(e.scope)}</p></details></div>`:''}</section>
  <section class="dictionary-limits"><h3>What this does not establish</h3>${list(e.limits||[])}</section>
  <section><h3>Related terms</h3><div class="dictionary-related">${e.related.map(id=>dictionaryLink(id,catalog.entries.find(x=>x.id===id)?.title||id)).join('')}</div></section>
- <details class="dictionary-provenance"><summary>Definition version & implementation sources</summary><p>Guide: ${esc(catalog.version)} · ${esc(catalog.author)}</p>${e.rubric?`<p>Exact rubric: ${esc(catalog.rubric.version)} · ${esc(catalog.rubric.status)}</p><p class="dictionary-hash">Rubric file SHA-256: ${esc(catalog.rubric.file_sha256)}</p>`:''}${list(e.sources||[])}<p>The guide is explanatory documentation. Opening it does not rerate passages or change saved readings.</p></details>
+ <details class="dictionary-provenance"><summary>Definition version & implementation sources</summary><p>Guide: ${esc(catalog.version)} · ${esc(catalog.author)}</p>${e.rubric?`<p>Exact rubric: ${esc(catalog.rubric.version)} · ${esc(catalog.rubric.status)}</p><p class="dictionary-hash">Rubric file SHA-256: ${esc(catalog.rubric.file_sha256)}</p>`:''}${list(e.sources||[])}<p>The guide is explanatory documentation. Opening it does not reassess messages or change saved readings.</p></details>
  </article>`;
 }
 function dictionaryEntityMap() {

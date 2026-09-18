@@ -15,13 +15,13 @@ test('population counts distinguish true zero from unknown and share uses the sa
 
 test('population labels escape text and preserve distinct target and fixture units',()=>{
  const html=populationBanner({base:{count:48,detail:'<script>sample</script>'},current:{count:0},filters:['Search: <img onerror=x>']},{records:472,recorded_messages:11245,synthetic_records:60});
- assert.match(html,/472 <small>conversation records/);
- assert.match(html,/48 <small>target passages/);
- assert.match(html,/0 <small>target passages/);
- assert.match(html,/60 synthetic fixture records kept separately/);
+ assert.match(html,/472 <small>runs/);
+ assert.match(html,/48 <small>messages/);
+ assert.match(html,/0 <small>messages/);
+ assert.match(html,/60 synthetic fixture runs kept separately/);
  assert.match(html,/&lt;script&gt;/);
  assert.doesNotMatch(html,/<script|<img/);
- assert.match(populationBanner({base:{count:0},current:{count:0}},{}),/— <small>conversation records/);
+ assert.match(populationBanner({base:{count:0},current:{count:0}},{}),/— <small>runs/);
 });
 
 const ctx=vm.createContext({state:{boot:{population:{records:472,recorded_messages:11245,synthetic_records:60}}},document:{addEventListener(){}},short:s=>s});
@@ -38,10 +38,10 @@ test('Mind banner counts the full evidence sample and combined filtered targets 
  const rows=ctx.lensRows(data,filters);
  assert.equal(rows.length,1);
  const html=ctx.discoursePopulation(data,filters,rows);
- assert.match(html,/3 <small>target passages/);
- assert.match(html,/1 <small>target passages/);
- assert.match(html,/2 source records · 1 synthetic controls/);
- assert.match(html,/33.3% of this sample · 1 source records/);
+ assert.match(html,/3 <small>messages/);
+ assert.match(html,/1 <small>messages/);
+ assert.match(html,/2 conversations · 1 synthetic controls/);
+ assert.match(html,/33.3% of this sample · 1 conversations/);
  assert.match(html,/Topic: Consciousness ≥ 80%/);
  assert.match(html,/Words ≥ 50/);
  assert.match(html,/Assessment wording: Names \+ portraits/);
@@ -60,15 +60,15 @@ test('Gem banner follows sample items, score-bin intersection and hidden-mode by
  ctx.state.gems=data;
  const f=ctx.gemFilters({batch:'pilot',model:'m',bin:'8',bin_axis:'surprise'});
  let rows=ctx.gemRows(data.items,f),html=ctx.gemPopulationBanner(data,f,rows);
- assert.match(html,/Original pilot · 2 source records/);
- assert.match(html,/3 <small>target passages/);
- assert.match(html,/1 <small>target passages/);
+ assert.match(html,/Original pilot · 2 source runs/);
+ assert.match(html,/3 <small>messages/);
+ assert.match(html,/1 <small>messages/);
  assert.match(html,/Model: Readable model/);
  assert.match(html,/Surprise: 80–90 \(upper bound excluded\)/);
  const hidden={...f,hidden:true};rows=ctx.gemRows(data.items,hidden);html=ctx.gemPopulationBanner(data,hidden,rows);
  assert.equal(rows.length,3);assert.doesNotMatch(html,/Surprise: 80/);
  const empty={...f,q:'no matching words'};html=ctx.gemPopulationBanner(data,empty,ctx.gemRows(data.items,empty));
- assert.match(html,/0 <small>target passages/);
+ assert.match(html,/0 <small>messages/);
 });
 
 test('JEV banner counts the whole queue, not the page or number of questions',()=>{
@@ -77,8 +77,8 @@ test('JEV banner counts the whole queue, not the page or number of questions',()
  ctx.state.jev=data;ctx.state.jevIndex={batches:[{id:'batch',title:'Thirty targets'}]};
  const f={batch:'batch',topic:'mind',mode:'candidate',q:'',sort:'order',bin:'',page:1};ctx.state.jevFilters=f;
  let selected=ctx.jevSelection(),html=ctx.jevPopulationBanner(data,f,selected);
- assert.equal(selected.length,20);assert.match(html,/30 <small>target passages/);assert.match(html,/20 <small>target passages/);
- assert.match(html,/Thirty targets · 10 source records/);assert.match(html,/Topic: Mind/);
+ assert.equal(selected.length,20);assert.match(html,/30 <small>messages/);assert.match(html,/20 <small>messages/);
+ assert.match(html,/Thirty targets · 10 source runs/);assert.match(html,/Topic: Mind/);
  const all={...f,mode:'all'};html=ctx.jevPopulationBanner(data,all,rows);
  assert.match(html,/No population filters/);assert.doesNotMatch(html,/Topic: Mind/);
  const bin={...all,bin:'8'};ctx.state.jevFilters=bin;html=ctx.jevPopulationBanner(data,bin,ctx.jevSelection());

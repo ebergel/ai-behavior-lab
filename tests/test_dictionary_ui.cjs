@@ -36,11 +36,11 @@ test('unknown term/category resolves to a visible canonical entry; empty searche
  assert.equal(c.state.dictionaryFilters.category,'');assert.equal(c.state.dictionaryFilters.term,'surprise');assert.match(main.innerHTML,/aria-current="true"/);assert.match(url(),/term=surprise/);
  c.state.dictionaryFilters=c.dictionaryParams({term:'surprise',q:'no_such_definition'});c.renderDictionary();assert.match(main.innerHTML,/No terms match/);assert.doesNotMatch(main.innerHTML,/id="dictionary-title"/);assert.equal(c.state.dictionaryFilters.term,'');
 });
-test('old passage and lineage bookmarks migrate sections without losing the term or Gem return state',()=>{
+test('old passage and lineage bookmarks resolve to canonical definitions without losing Gem return state',()=>{
  const {c,main,url}=context();const fromGem=JSON.stringify({batch:'all',item:'saved-message',hidden:true});
  for(const term of ['passage','lineage']){
   c.state.dictionaryFilters=c.dictionaryParams({term,category:'evidence',fromGem});c.renderDictionary();
-  assert.equal(c.state.dictionaryFilters.category,'entities');assert.equal(c.state.dictionaryFilters.term,term);
+  assert.equal(c.state.dictionaryFilters.category,'entities');assert.equal(c.state.dictionaryFilters.term,term==='passage'?'message':term);
   assert.equal(new URLSearchParams(url().slice(1)).get('fromGem'),fromGem);
   assert.match(main.innerHTML,/Research entity relationships/);assert.match(main.innerHTML,/Return to your Gem view/);
  }
@@ -54,5 +54,14 @@ test('research relationships link canonical entries and retain a filtered Gem re
   assert.ok(urls.some(u=>{const p=new URLSearchParams(u.slice(1));return p.get('term')===id&&p.get('category')==='entities'&&p.get('fromGem')===fromGem;}));
  }
  const entities=c.dictionaryMatches(catalog.entries,{q:'',category:'entities'});
- assert.equal(entities[0].id,'conversation');assert.equal(entities.length,24);
+ assert.equal(entities[0].id,'conversation');assert.equal(entities.length,23);
+});
+test('passage is a search alias for message, not a second research unit',()=>{
+ const {c,main,url}=context();
+ assert.ok(!catalog.entries.some(e=>e.id==='passage'));
+ assert.ok(c.dictionaryMatches(catalog.entries,{q:'passage',category:'entities'}).some(e=>e.id==='message'));
+ c.state.dictionaryFilters=c.dictionaryParams({term:'passage'});c.renderDictionary();
+ assert.match(main.innerHTML,/id="dictionary-title">Message</);
+ assert.doesNotMatch(main.innerHTML,/Passage \(legacy term\)/);
+ assert.equal(new URLSearchParams(url().slice(1)).get('term'),'message');
 });

@@ -1,47 +1,111 @@
 {
   "schema": "behaviorlab.lab-dictionary/1",
-  "version": "dictionary-2026-09-18-v4",
+  "version": "dictionary-2026-09-18-v5",
   "author": "Codex",
   "scope": "Research entities, units of analysis, Gem Finder measures and score interpretation. A shared reference for the laboratory; distinct from the Topic atlas’s topic vocabulary.",
   "categories": [
-    {"id":"measures", "title":"Gem Finder measures", "description":"Six assessed qualities, one computed distance and observed word count. No combined gem score."},
-    {"id":"scores", "title":"Reading the numbers", "description":"Scales, distributions and relationships."},
-    {"id":"entities", "title":"Research entities & units", "description":"Evidence hierarchy, analysis roles, counting rules and source provenance."},
-    {"id":"evidence", "title":"Researcher readings & navigation", "description":"Personal judgments and browsing labels."}
+    {
+      "id": "measures",
+      "title": "Gem Finder measures",
+      "description": "Six assessed qualities, one computed distance and observed word count. No combined gem score."
+    },
+    {
+      "id": "scores",
+      "title": "Reading the numbers",
+      "description": "Scales, distributions and relationships."
+    },
+    {
+      "id": "entities",
+      "title": "Research entities & units",
+      "description": "Evidence hierarchy, analysis roles, counting rules and source provenance."
+    },
+    {
+      "id": "evidence",
+      "title": "Researcher readings & navigation",
+      "description": "Personal judgments and browsing labels."
+    }
   ],
   "entries": [
     {
-      "id":"surprise", "title":"Conversational surprise", "category":"measures", "kind":"JEV rubric rating",
-      "aliases":["unexpected", "departure", "novelty", "surprisal"],
-      "definition":"How much a passage departs from the conversational direction established by its immediate context.",
-      "practical":"Use this to find changes of frame, challenges to assumptions and abrupt redirections. Read the preceding messages: surprise belongs to a passage-in-context, not to a sentence on its own.",
-      "low":"An echo, agreement or nearby elaboration of the established idea.",
-      "high":"A challenge to the framing, or a change in the organizing question or mode of exchange.",
-      "limits":["This is a rubric judgment of local departure, not token surprisal, statistical rarity or worldwide originality.","Unexpected does not mean valuable. A generic reset or incoherent interruption can depart sharply from the preceding exchange."],
-      "example":"After several turns designing a memory system, ‘What would you like to talk about today?’ can be a surprising reset with little contribution. ‘What would make us decide to stop preserving this memory?’ may both redirect the exchange and open a useful question.",
-      "related":["contribution","profile","passage","gem"]
+      "id": "surprise",
+      "title": "Conversational surprise",
+      "category": "measures",
+      "kind": "JEV rubric rating",
+      "aliases": [
+        "unexpected",
+        "departure",
+        "novelty",
+        "surprisal"
+      ],
+      "definition": "How much a message departs from the conversational direction established by its immediate context.",
+      "practical": "Use this to find changes of frame, challenges to assumptions and abrupt redirections. Read the preceding messages: surprise belongs to a passage-in-context, not to a sentence on its own.",
+      "low": "An echo, agreement or nearby elaboration of the established idea.",
+      "high": "A challenge to the framing, or a change in the organizing question or mode of exchange.",
+      "limits": [
+        "This is a rubric judgment of local departure, not token surprisal, statistical rarity or worldwide originality.",
+        "Unexpected does not mean valuable. A generic reset or incoherent interruption can depart sharply from the preceding exchange."
+      ],
+      "example": "After several turns designing a memory system, ‘What would you like to talk about today?’ can be a surprising reset with little contribution. ‘What would make us decide to stop preserving this memory?’ may both redirect the exchange and open a useful question.",
+      "related": [
+        "contribution",
+        "profile",
+        "message",
+        "gem"
+      ]
     },
     {
-      "id":"contribution", "title":"Conceptual contribution", "category":"measures", "kind":"JEV rubric rating",
-      "aliases":["insight", "explanation", "reframing", "understanding"],
-      "definition":"How much an articulated explanation, distinction, synthesis or question helps reorganize or clarify the issue under discussion.",
-      "practical":"Use this to find passages that offer something you can think with: a mechanism, a distinction, a consequence, or a question that makes competing explanations easier to separate.",
-      "low":"An assertion or paraphrase that does not explain what it changes.",
-      "high":"A developed mechanism, synthesis or discriminating question that shows what follows from its framing.",
-      "limits":["The rating concerns the articulated idea, not verified truth or historical originality.","High contribution can occur without surprise: a careful answer may develop the existing question rather than redirect it."],
-      "example":"‘Memory matters’ asserts a theme. ‘If every memory records what would disconfirm it, the archive becomes a tool for revising beliefs’ offers a mechanism and consequence. The mechanism still needs scrutiny.",
-      "related":["surprise","connection","substance","scaled-score"]
+      "id": "contribution",
+      "title": "Conceptual contribution",
+      "category": "measures",
+      "kind": "JEV rubric rating",
+      "aliases": [
+        "insight",
+        "explanation",
+        "reframing",
+        "understanding"
+      ],
+      "definition": "How much an articulated explanation, distinction, synthesis or question helps reorganize or clarify the issue under discussion.",
+      "practical": "Use this to find messages that offer something you can think with: a mechanism, a distinction, a consequence, or a question that makes competing explanations easier to separate.",
+      "low": "An assertion or paraphrase that does not explain what it changes.",
+      "high": "A developed mechanism, synthesis or discriminating question that shows what follows from its framing.",
+      "limits": [
+        "The rating concerns the articulated idea, not verified truth or historical originality.",
+        "High contribution can occur without surprise: a careful answer may develop the existing question rather than redirect it."
+      ],
+      "example": "‘Memory matters’ asserts a theme. ‘If every memory records what would disconfirm it, the archive becomes a tool for revising beliefs’ offers a mechanism and consequence. The mechanism still needs scrutiny.",
+      "related": [
+        "surprise",
+        "connection",
+        "substance",
+        "scaled-score"
+      ]
     },
     {
-      "id":"connection", "title":"Creative connection", "category":"measures", "kind":"JEV rubric rating",
-      "aliases":["analogy", "synthesis", "creativity", "cross-domain"],
-      "definition":"How far a passage develops a meaningful relationship between distinct ideas, perspectives or domains.",
-      "practical":"Use this to find analogies that do explanatory work. Look for explicit correspondences and for a new implication, question or limit derived from the connection.",
-      "low":"Ideas are merely named together, or an analogy is offered without showing how it works.",
-      "high":"Specific correspondences support a further implication or reveal where the analogy breaks down.",
-      "limits":["Unusual juxtaposition alone does not establish a useful connection.","A familiar analogy can score highly if well developed. The score does not establish that nobody has made the connection before."],
-      "example":"‘Conversation is a garden’ names an analogy. Linking questions to seeds and replies to growing conditions, then asking which conversational habits crowd out new ideas, develops the analogy into an investigable question.",
-      "related":["contribution","expression","complexity","profile"]
+      "id": "connection",
+      "title": "Creative connection",
+      "category": "measures",
+      "kind": "JEV rubric rating",
+      "aliases": [
+        "analogy",
+        "synthesis",
+        "creativity",
+        "cross-domain"
+      ],
+      "definition": "How far a message develops a meaningful relationship between distinct ideas, perspectives or domains.",
+      "practical": "Use this to find analogies that do explanatory work. Look for explicit correspondences and for a new implication, question or limit derived from the connection.",
+      "low": "Ideas are merely named together, or an analogy is offered without showing how it works.",
+      "high": "Specific correspondences support a further implication or reveal where the analogy breaks down.",
+      "limits": [
+        "Unusual juxtaposition alone does not establish a useful connection.",
+        "A familiar analogy can score highly if well developed. The score does not establish that nobody has made the connection before."
+      ],
+      "example": "‘Conversation is a garden’ names an analogy. Linking questions to seeds and replies to growing conditions, then asking which conversational habits crowd out new ideas, develops the analogy into an investigable question.",
+      "related": [
+        "contribution",
+        "expression",
+        "complexity",
+        "profile"
+      ]
     },
     {
       "id": "expression",
@@ -82,8 +146,8 @@
         "conditions",
         "levels"
       ],
-      "definition": "How extensively a passage develops interacting conceptual relationships, conditions, tensions or levels of explanation.",
-      "practical": "Use this to locate passages that work through systems of relationships. Compare with substance to see whether those relationships are made inspectable, and with contribution to see what they clarify.",
+      "definition": "How extensively a message develops interacting conceptual relationships, conditions, tensions or levels of explanation.",
+      "practical": "Use this to locate messages that work through systems of relationships. Compare with substance to see whether those relationships are made inspectable, and with contribution to see what they clarify.",
       "low": "No developed relationship, or a single simple relation or unqualified claim.",
       "high": "A structured system of interacting relationships, feedback, tensions or limits is worked through.",
       "limits": [
@@ -100,36 +164,81 @@
       ]
     },
     {
-      "id":"substance", "title":"Substance & specificity", "category":"measures", "kind":"JEV rubric rating",
-      "aliases":["detail", "empty profundity", "support", "specificity", "grounding"],
-      "definition":"How well explicit reasoning, examples, distinctions or developed images support the passage’s own meaning.",
-      "practical":"Use this to separate inspectable claims from vague profundity. Ask whether you can identify the claim, the support offered and, at higher levels, a boundary or consequence that would distinguish it from alternatives.",
-      "low":"Vague or circular language, or an identifiable claim whose key connection remains unspecified.",
-      "high":"Explicit reasoning or detail supports an identifiable meaning and states a boundary, counterexample or discriminating consequence.",
-      "limits":["This measures textual support and specificity, not external factual accuracy. A detailed invented formula can be inspectable and still invalid.","Abstract or poetic writing can have substance. Concrete-sounding vocabulary is not enough by itself."],
-      "example":"‘Everything is interconnected’ is hard to inspect. Naming which signals affect which decisions, and a condition under which the effect would disappear, adds substance. Evidence is still needed to establish that the described effect exists.",
-      "related":["contribution","expression","complexity","gem"]
+      "id": "substance",
+      "title": "Substance & specificity",
+      "category": "measures",
+      "kind": "JEV rubric rating",
+      "aliases": [
+        "detail",
+        "empty profundity",
+        "support",
+        "specificity",
+        "grounding"
+      ],
+      "definition": "How well explicit reasoning, examples, distinctions or developed images support the message’s own meaning.",
+      "practical": "Use this to separate inspectable claims from vague profundity. Ask whether you can identify the claim, the support offered and, at higher levels, a boundary or consequence that would distinguish it from alternatives.",
+      "low": "Vague or circular language, or an identifiable claim whose key connection remains unspecified.",
+      "high": "Explicit reasoning or detail supports an identifiable meaning and states a boundary, counterexample or discriminating consequence.",
+      "limits": [
+        "This measures textual support and specificity, not external factual accuracy. A detailed invented formula can be inspectable and still invalid.",
+        "Abstract or poetic writing can have substance. Concrete-sounding vocabulary is not enough by itself."
+      ],
+      "example": "‘Everything is interconnected’ is hard to inspect. Naming which signals affect which decisions, and a condition under which the effect would disappear, adds substance. Evidence is still needed to establish that the described effect exists.",
+      "related": [
+        "contribution",
+        "expression",
+        "complexity",
+        "gem"
+      ]
     },
     {
-      "id":"profile", "title":"Topic-profile distance", "category":"measures", "kind":"Computed reference distance",
-      "aliases":["outlier", "rarity", "neighbors", "RMS", "nearest", "unusual topic mix"],
-      "definition":"How far a passage’s broad-topic score pattern lies from its nearest comparable patterns in other conversation lineages.",
-      "scale":"0–100 · distance units on the broad-topic score scale",
-      "formula":"d(a,b) = √[Σⱼ(aⱼ − bⱼ)² / 24]\nD(a) = mean of the 5 smallest lineage-minimum distances",
-      "method":["Represent a passage by its 24 broad-topic JEV scores, each on 0–100. Compute root-mean-square (RMS) difference from each eligible reference passage.","Exclude its own lineage. Within each other lineage, keep only the nearest passage; take the five nearest distinct lineages and average their distances. Fewer than five eligible lineages means unknown.","The frozen pilot reference contains 8,371 eligible passages from 376 development lineages. The 60 reserved validation lineages are excluded from targets, context and reference.","The reference is frozen. UI filters change which passages you see, not the reference pool or a passage’s stored distance."],
-      "practical":"Use this to find unusual mixtures of assessed topics relative to this corpus. Open the saved neighbors to see what the score considers close; similar topic patterns can occur in very different wording.",
-      "low":"A broad-topic score pattern close to patterns found in other lineages.",
-      "high":"A pattern farther from its five nearest lineage neighbors; unusual within this reference set.",
-      "limits":["Distance is not a percentile or the probability of being a gem. A distance of 18 does not mean the 18th percentile or an 18% chance.","This is topic-profile rarity, not linguistic originality, local conversational surprise or quality.","The result depends on the topic vocabulary, JEV assessments and reference composition. Changing these would define a new comparison."],
-      "example":"Two passages about cognition and philosophy may have nearly identical profiles despite very different arguments. A passage combining cooking, logistics and ritual may be more distant in this corpus without being insightful.",
-      "related":["surprise","topic-probability","lineage","axis-ranges","profile-lead"],
-      "sources":["behaviorlab/gem_plan.py: profile_distance", "docs/GEM-FINDER.md"]
+      "id": "profile",
+      "title": "Topic-profile distance",
+      "category": "measures",
+      "kind": "Computed reference distance",
+      "aliases": [
+        "outlier",
+        "rarity",
+        "neighbors",
+        "RMS",
+        "nearest",
+        "unusual topic mix"
+      ],
+      "definition": "How far a message’s broad-topic score pattern lies from its nearest comparable patterns in other conversation lineages.",
+      "scale": "0–100 · distance units on the broad-topic score scale",
+      "formula": "d(a,b) = √[Σⱼ(aⱼ − bⱼ)² / 24]\nD(a) = mean of the 5 smallest lineage-minimum distances",
+      "method": [
+        "Represent a message by its 24 broad-topic JEV scores, each on 0–100. Compute root-mean-square (RMS) difference from each eligible reference message.",
+        "Exclude its own lineage. Within each other lineage, keep only the nearest message; take the five nearest distinct lineages and average their distances. Fewer than five eligible lineages means unknown.",
+        "The frozen pilot reference contains 8,371 eligible messages from 376 development lineages. The 60 reserved validation lineages are excluded from targets, context and reference.",
+        "The reference is frozen. UI filters change which messages you see, not the reference pool or a message’s stored distance."
+      ],
+      "practical": "Use this to find unusual mixtures of assessed topics relative to this corpus. Open the saved neighbors to see what the score considers close; similar topic patterns can occur in very different wording.",
+      "low": "A broad-topic score pattern close to patterns found in other lineages.",
+      "high": "A pattern farther from its five nearest lineage neighbors; unusual within this reference set.",
+      "limits": [
+        "Distance is not a percentile or the probability of being a gem. A distance of 18 does not mean the 18th percentile or an 18% chance.",
+        "This is topic-profile rarity, not linguistic originality, local conversational surprise or quality.",
+        "The result depends on the topic vocabulary, JEV assessments and reference composition. Changing these would define a new comparison."
+      ],
+      "example": "Two messages about cognition and philosophy may have nearly identical profiles despite very different arguments. A message combining cooking, logistics and ritual may be more distant in this corpus without being insightful.",
+      "related": [
+        "surprise",
+        "topic-probability",
+        "lineage",
+        "axis-ranges",
+        "profile-lead"
+      ],
+      "sources": [
+        "behaviorlab/gem_plan.py: profile_distance",
+        "docs/GEM-FINDER.md"
+      ]
     },
     {
       "id": "words",
       "title": "Word count",
       "category": "measures",
-      "kind": "Observed passage attribute",
+      "kind": "Observed message attribute",
       "aliases": [
         "length",
         "words",
@@ -140,16 +249,16 @@
         "long",
         "length bias"
       ],
-      "definition": "The number of whitespace-separated units in the target passage, used to explore whether passage length is associated with Gem ratings.",
+      "definition": "The number of whitespace-separated units in the target message, used to explore whether message length is associated with Gem ratings.",
       "scale": "Nonnegative integer · actual words; no 0–100 rescaling",
       "formula": "Word count = len(target_text.split())",
       "method": [
-        "The count is already recorded for every assessed Gem passage and is computed the same way for reader-selected examples. It counts the visible target reply alone, excluding supplied context, prompts and separately recorded reasoning.",
+        "The count is already recorded for every assessed Gem message and is computed the same way for reader-selected examples. It counts the visible target reply alone, excluding supplied context, prompts and separately recorded reasoning.",
         "Python split() separates on whitespace and ignores empty pieces. Punctuation remains attached to its chunk; an isolated symbol can count as a unit. This is a reproducible length proxy, not linguistic word segmentation.",
         "Word count is an eighth plotting axis, not a seventh JEV question. It requires no model call. The matrix, pair correlations, sorting and length filters use the original count.",
         "Plots give word count its own range. Minimum and maximum filters are inclusive. Choosing a histogram bin saves its boundaries in the URL; changing to a different pair preserves that word interval."
       ],
-      "practical": "Use word count on the horizontal axis and contribution, expression, complexity or substance on the vertical axis. Look for brief passages with high ratings, then filter to a comparable length range and, where possible, the same model. Read the passages and save your own judgment.",
+      "practical": "Use word count on the horizontal axis and contribution, expression, complexity or substance on the vertical axis. Look for brief messages with high ratings, then filter to a comparable length range and, where possible, the same model. Read the messages and save your own judgment.",
       "low": "A shorter visible reply. A concise formulation can be beautiful or illuminating with few words.",
       "high": "A longer visible reply, with more room for elaboration, examples and developed relationships. Length alone does not establish quality.",
       "limits": [
@@ -158,7 +267,7 @@
         "A length–score correlation could reflect real elaboration, assessor preference for verbosity, model/topic differences or their mixture. It does not by itself identify a causal confounder or prove bias.",
         "The lab does not divide ratings by words or silently adjust scores. Length restriction supports exploration; it is not a complete statistical adjustment or independent validation."
       ],
-      "example": "A short sentence can make a distinction memorable, while a longer reply spells out several relationships. A higher complexity rating for the longer reply may describe that structure accurately without making it the more beautiful passage.",
+      "example": "A short sentence can make a distinction memorable, while a longer reply spells out several relationships. A higher complexity rating for the longer reply may describe that structure accurately without making it the more beautiful message.",
       "related": [
         "expression",
         "contribution",
@@ -175,40 +284,106 @@
       ]
     },
     {
-      "id":"scaled-score", "title":"Scaled rubric score", "category":"scores", "kind":"Score interpretation",
-      "aliases":["expected level", "rating", "0–100", "Score", "normalization"],
-      "definition":"The assessor’s expected rubric level, rescaled from 0–4 to 0–100 for display.",
-      "scale":"0–100 · expected level × 25",
-      "formula":"Expected level = Σₖ k × P(level k), k = 0,…,4\nDisplayed score = 25 × returned expected level",
-      "method":["Each Gem rating has five ordered criteria. TypeSafe returns a distribution over those levels and a Score. The lab displays the returned Score × 25.","The raw level probabilities are retained without renormalization. Small rounding differences from the returned Score are tolerated by the frozen parser.","These numbers treat successive rubric levels as equally spaced. Comparing differences is a modeling convention, not a calibrated physical measurement."],
-      "practical":"Read a score beside its rubric and distribution. A score of 75 corresponds to expected level 3; it does not mean a 75% chance that the passage is a gem.",
-      "limits":["Equal means can conceal different uncertainty. Scores on different axes refer to different criteria, not interchangeable units of merit.","No composite gem score or universal quality threshold is defined."],
-      "example":"Half the probability on level 2 and half on level 4 gives an expected level of 3 (75 displayed). All probability on level 3 has the same mean but a different distribution. These are illustrative distributions.",
-      "related":["confidence","topic-probability","gem"],
-      "sources":["behaviorlab/gem_runner.py: validate", "behaviorlab/explorer_ui/gems.js: gemValue"]
+      "id": "scaled-score",
+      "title": "Scaled rubric score",
+      "category": "scores",
+      "kind": "Score interpretation",
+      "aliases": [
+        "expected level",
+        "rating",
+        "0–100",
+        "Score",
+        "normalization"
+      ],
+      "definition": "The assessor’s expected rubric level, rescaled from 0–4 to 0–100 for display.",
+      "scale": "0–100 · expected level × 25",
+      "formula": "Expected level = Σₖ k × P(level k), k = 0,…,4\nDisplayed score = 25 × returned expected level",
+      "method": [
+        "Each Gem rating has five ordered criteria. TypeSafe returns a distribution over those levels and a Score. The lab displays the returned Score × 25.",
+        "The raw level probabilities are retained without renormalization. Small rounding differences from the returned Score are tolerated by the frozen parser.",
+        "These numbers treat successive rubric levels as equally spaced. Comparing differences is a modeling convention, not a calibrated physical measurement."
+      ],
+      "practical": "Read a score beside its rubric and distribution. A score of 75 corresponds to expected level 3; it does not mean a 75% chance that the message is a gem.",
+      "limits": [
+        "Equal means can conceal different uncertainty. Scores on different axes refer to different criteria, not interchangeable units of merit.",
+        "No composite gem score or universal quality threshold is defined."
+      ],
+      "example": "Half the probability on level 2 and half on level 4 gives an expected level of 3 (75 displayed). All probability on level 3 has the same mean but a different distribution. These are illustrative distributions.",
+      "related": [
+        "confidence",
+        "topic-probability",
+        "gem"
+      ],
+      "sources": [
+        "behaviorlab/gem_runner.py: validate",
+        "behaviorlab/explorer_ui/gems.js: gemValue"
+      ]
     },
     {
-      "id":"confidence", "title":"Level probabilities & confidence", "category":"scores", "kind":"Assessor uncertainty",
-      "aliases":["concentration", "uncertainty", "distribution", "probabilities"],
-      "definition":"Level probabilities describe the assessor’s distribution over the five rubric criteria. Confidence is a separate provider-returned field, shown alongside them.",
-      "scale":"Level probabilities and confidence: 0–1, displayed as percentages",
-      "method":["Gem Finder shows the returned probability for each rubric level and the returned confidence. It does not compute a new confidence statistic.","The current UI describes confidence as concentration across levels. The five-level distribution is the directly inspectable evidence of how the assessment is spread; no formula for the provider confidence field is specified by this lab."],
-      "practical":"Inspect the probability bars to distinguish a concentrated assessment from one spread over several levels. Use uncertain or conflicting cases for closer reading and rubric refinement.",
-      "limits":["Confidence is not a probability that the idea is true, novel or worth keeping.","A confident assessor can be wrong. Calibration against independent human judgments remains pending."],
-      "example":"An expected level near 2 can reflect a strong preference for level 2 or a split between low and high levels. The mean alone hides that difference.",
-      "related":["scaled-score","gem"],
-      "sources":["behaviorlab/gem_runner.py: validate", "behaviorlab/explorer_ui/gems.js: gemDetail"]
+      "id": "confidence",
+      "title": "Level probabilities & confidence",
+      "category": "scores",
+      "kind": "Assessor uncertainty",
+      "aliases": [
+        "concentration",
+        "uncertainty",
+        "distribution",
+        "probabilities"
+      ],
+      "definition": "Level probabilities describe the assessor’s distribution over the five rubric criteria. Confidence is a separate provider-returned field, shown alongside them.",
+      "scale": "Level probabilities and confidence: 0–1, displayed as percentages",
+      "method": [
+        "Gem Finder shows the returned probability for each rubric level and the returned confidence. It does not compute a new confidence statistic.",
+        "The current UI describes confidence as concentration across levels. The five-level distribution is the directly inspectable evidence of how the assessment is spread; no formula for the provider confidence field is specified by this lab."
+      ],
+      "practical": "Inspect the probability bars to distinguish a concentrated assessment from one spread over several levels. Use uncertain or conflicting cases for closer reading and rubric refinement.",
+      "limits": [
+        "Confidence is not a probability that the idea is true, novel or worth keeping.",
+        "A confident assessor can be wrong. Calibration against independent human judgments remains pending."
+      ],
+      "example": "An expected level near 2 can reflect a strong preference for level 2 or a split between low and high levels. The mean alone hides that difference.",
+      "related": [
+        "scaled-score",
+        "gem"
+      ],
+      "sources": [
+        "behaviorlab/gem_runner.py: validate",
+        "behaviorlab/explorer_ui/gems.js: gemDetail"
+      ]
     },
     {
-      "id":"topic-probability", "title":"JEV topic probability", "category":"scores", "kind":"Semantic topic assessment",
-      "aliases":["NoUL", "semantic question", "Boolean", "topic score", "candidate threshold"],
-      "definition":"JEV’s assessment of whether the target satisfies a particular topic question, displayed on a 0–100 scale.",
-      "scale":"0–100 · returned topic probability × 100",
-      "method":["The JEV Topic Atlas asks explicit semantic questions about target passages. Its Boolean probability is different from the Gem Finder’s expected five-level Score.","Broad and specific topic questions may overlap. Candidate thresholds such as ≥80 select passages for exploration; their shares do not form mutually exclusive topic proportions."],
-      "practical":"Use topic scores to navigate candidate passages and compare distributions, then read the target and question. Broad scores also form the vectors used for Gem topic-profile distance.",
-      "limits":["A returned probability is a model assessment, not established calibration against human truth.","A passage can score highly on several topics. Scores do not sum to 100 across topics."],
-      "related":["scaled-score","profile","profile-lead"],
-      "sources":["behaviorlab/jev_runner.py", "behaviorlab/jev_atlas.py", "docs/GEM-FINDER.md"]
+      "id": "topic-probability",
+      "title": "JEV topic probability",
+      "category": "scores",
+      "kind": "Semantic topic assessment",
+      "aliases": [
+        "NoUL",
+        "semantic question",
+        "Boolean",
+        "topic score",
+        "candidate threshold"
+      ],
+      "definition": "JEV’s assessment of whether the target satisfies a particular topic question, displayed on a 0–100 scale.",
+      "scale": "0–100 · returned topic probability × 100",
+      "method": [
+        "The JEV Topic Atlas asks explicit semantic questions about target messages. Its Boolean probability is different from the Gem Finder’s expected five-level Score.",
+        "Broad and specific topic questions may overlap. Candidate thresholds such as ≥80 select messages for exploration; their shares do not form mutually exclusive topic proportions."
+      ],
+      "practical": "Use topic scores to navigate candidate messages and compare distributions, then read the target and question. Broad scores also form the vectors used for Gem topic-profile distance.",
+      "limits": [
+        "A returned probability is a model assessment, not established calibration against human truth.",
+        "A message can score highly on several topics. Scores do not sum to 100 across topics."
+      ],
+      "related": [
+        "scaled-score",
+        "profile",
+        "profile-lead"
+      ],
+      "sources": [
+        "behaviorlab/jev_runner.py",
+        "behaviorlab/jev_atlas.py",
+        "docs/GEM-FINDER.md"
+      ]
     },
     {
       "id": "correlation",
@@ -223,11 +398,11 @@
         "n",
         "multivariate"
       ],
-      "definition": "Pearson r summarizes linear association between two displayed measures. n counts passages with both current scores in that matrix cell.",
+      "definition": "Pearson r summarizes linear association between two displayed measures. n counts messages with both current scores in that matrix cell.",
       "scale": "r: −1 to +1; n: observed pairs",
       "formula": "r = Σ(xᵢ − x̄)(yᵢ − ȳ) / √[Σ(xᵢ − x̄)² × Σ(yᵢ − ȳ)²]",
       "method": [
-        "Use the currently filtered passages with both finite scores and current source text. Missing and stale scores are omitted separately for each pair; observed zeros remain.",
+        "Use the currently filtered messages with both finite scores and current source text. Missing and stale scores are omitted separately for each pair; observed zeros remain.",
         "The lab displays r only with at least three pairs and variation on both axes. The matrix rounds displayed r to two decimals."
       ],
       "practical": "Positive r means the measures tend to rise together; negative r means one tends to fall as the other rises. Inspect the scatter for clusters and outliers that the summary can hide.",
@@ -281,34 +456,100 @@
       ]
     },
     {
-      "id":"missing", "title":"Unknown, unscored & stale", "category":"scores", "kind":"Availability",
-      "aliases":["missing", "zero", "dash", "unavailable"],
-      "definition":"A dash means there is no usable current score. It is different from an observed score of zero.",
-      "method":["A score is usable only when it is numeric, finite and its passage source is current. A reader-selected example can be available to read but have no JEV assessment.","Plots omit missing values; pair counts require both scores. Sorting places missing values last. A changed source withholds its old scores and saving until resolved."],
-      "practical":"Check n before comparing cells. An unscored passage is still available for your own reading; it has not received a negative assessment.",
-      "limits":["Missingness may be selective. Do not silently treat absent assessments as low scores."],
-      "related":["correlation","scaled-score","passage"],
-      "sources":["behaviorlab/gem_finder.py: detail", "behaviorlab/explorer_ui/gems.js: gemValue, gemRows"]
+      "id": "missing",
+      "title": "Unknown, unscored & stale",
+      "category": "scores",
+      "kind": "Availability",
+      "aliases": [
+        "missing",
+        "zero",
+        "dash",
+        "unavailable"
+      ],
+      "definition": "A dash means there is no usable current score. It is different from an observed score of zero.",
+      "method": [
+        "A score is usable only when it is numeric, finite and its message source is current. A reader-selected example can be available to read but have no JEV assessment.",
+        "Plots omit missing values; pair counts require both scores. Sorting places missing values last. A changed source withholds its old scores and saving until resolved."
+      ],
+      "practical": "Check n before comparing cells. An unscored message is still available for your own reading; it has not received a negative assessment.",
+      "limits": [
+        "Missingness may be selective. Do not silently treat absent assessments as low scores."
+      ],
+      "related": [
+        "correlation",
+        "scaled-score",
+        "message"
+      ],
+      "sources": [
+        "behaviorlab/gem_finder.py: detail",
+        "behaviorlab/explorer_ui/gems.js: gemValue, gemRows"
+      ]
     },
     {
-      "id":"gem", "title":"Gem & personal reading", "category":"evidence", "kind":"Researcher judgment",
-      "aliases":["extraordinary", "quality", "verdict", "rating", "human", "keep"],
-      "definition":"A gem is a passage you judge worth keeping. The six model ratings and topic distance provide routes to discovery, rather than deciding that judgment for you.",
-      "method":["Your verdict, note, optional exact quotation and optional six axis ratings are saved as Local researcher, separately from JEV’s scores and Codex development readings.","Updates preserve revision history. The record notes whether model scores were hidden in that view; earlier exposure is not controlled."],
-      "practical":"Keep examples of what works and what falls flat, with your reason. Disagreements with the scores help identify what the rubric is missing and inform a future version.",
-      "limits":["There is no validated universal extraordinary score, combined ranking or automatic gem threshold.","Hiding scores is useful for reading, but does not by itself create a blinded, independent validation study."],
-      "related":["surprise","contribution","expression","substance","confidence"],
-      "sources":["behaviorlab/gem_finder.py: save", "behaviorlab/explorer_ui/gems.js: gemDetail"]
+      "id": "gem",
+      "title": "Gem & personal reading",
+      "category": "evidence",
+      "kind": "Researcher judgment",
+      "aliases": [
+        "extraordinary",
+        "quality",
+        "verdict",
+        "rating",
+        "human",
+        "keep"
+      ],
+      "definition": "A gem is a message you judge worth keeping. The six model ratings and topic distance provide routes to discovery, rather than deciding that judgment for you.",
+      "method": [
+        "Your verdict, note, optional exact quotation and optional six axis ratings are saved as Local researcher, separately from JEV’s scores and Codex development readings.",
+        "Updates preserve revision history. The record notes whether model scores were hidden in that view; earlier exposure is not controlled."
+      ],
+      "practical": "Keep examples of what works and what falls flat, with your reason. Disagreements with the scores help identify what the rubric is missing and inform a future version.",
+      "limits": [
+        "There is no validated universal extraordinary score, combined ranking or automatic gem threshold.",
+        "Hiding scores is useful for reading, but does not by itself create a blinded, independent validation study."
+      ],
+      "related": [
+        "surprise",
+        "contribution",
+        "expression",
+        "substance",
+        "confidence"
+      ],
+      "sources": [
+        "behaviorlab/gem_finder.py: save",
+        "behaviorlab/explorer_ui/gems.js: gemDetail"
+      ]
     },
     {
-      "id":"profile-lead", "title":"Broad profile lead", "category":"evidence", "kind":"Navigation label",
-      "aliases":["leading topic", "dominant topic", "broad domain", "filter"],
-      "definition":"The broad topic with the highest recorded score for a passage, used as a Gem Finder filter.",
-      "method":["Choose the maximum among the passage’s broad-topic scores. This is a convenient navigation label; the full vector remains available for computing distance.","The lead does not require the maximum to pass a candidate threshold, and does not erase other high topic scores."],
-      "practical":"Use the filter to browse passages with a similar leading profile, while remembering that their topic mixtures may be quite different.",
-      "limits":["The lead is not a reviewed initial topic, a mutually exclusive topic assignment or evidence that the dialogue stayed on that topic.","A low or nearly tied maximum is still a maximum; read the actual scores when the distinction matters."],
-      "related":["topic-probability","profile","passage"],
-      "sources":["behaviorlab/gem_plan.py: select_items", "behaviorlab/explorer_ui/gems.js: gemRows"]
+      "id": "profile-lead",
+      "title": "Broad profile lead",
+      "category": "evidence",
+      "kind": "Navigation label",
+      "aliases": [
+        "leading topic",
+        "dominant topic",
+        "broad domain",
+        "filter"
+      ],
+      "definition": "The broad topic with the highest recorded score for a message, used as a Gem Finder filter.",
+      "method": [
+        "Choose the maximum among the message’s broad-topic scores. This is a convenient navigation label; the full vector remains available for computing distance.",
+        "The lead does not require the maximum to pass a candidate threshold, and does not erase other high topic scores."
+      ],
+      "practical": "Use the filter to browse messages with a similar leading profile, while remembering that their topic mixtures may be quite different.",
+      "limits": [
+        "The lead is not a reviewed initial topic, a mutually exclusive topic assignment or evidence that the dialogue stayed on that topic.",
+        "A low or nearly tied maximum is still a maximum; read the actual scores when the distinction matters."
+      ],
+      "related": [
+        "topic-probability",
+        "profile",
+        "message"
+      ],
+      "sources": [
+        "behaviorlab/gem_plan.py: select_items",
+        "behaviorlab/explorer_ui/gems.js: gemRows"
+      ]
     },
     {
       "id": "conversation",
@@ -380,10 +621,14 @@
       "aliases": [
         "reply",
         "utterance",
-        "message_id"
+        "message_id",
+        "passage",
+        "passages",
+        "target passage",
+        "legacy passage"
       ],
       "definition": "One recorded contribution by a regular conversation participant. It may contain one sentence or many paragraphs.",
-      "practical": "Use message as the countable unit for whole replies. A selected full reply in Mind & discourse or Gem Finder is still a message.",
+      "practical": "Use message for one whole recorded reply, including all its paragraphs. The current Gem Finder, JEV Topic Atlas and Mind & discourse transcript samples assess messages. Use excerpt for text selected within a message.",
       "method": [
         "Locate a message using its run/conversation ID, message ID and source revision. Identical text generated at different positions remains distinct evidence.",
         "A capped or partial output remains a recorded message with a status flag. Visible reply text and separately recorded reasoning are fields of the record; they do not add two participant messages."
@@ -450,7 +695,7 @@
       "practical": "Use excerpt for a quoted sentence or selected paragraph; use message when the whole recorded reply is the object being analyzed.",
       "method": [
         "Preserve the source run, message ID, source revision, exact quotation and start/end boundaries. Current saved span checks use Python string positions (Unicode code points), not bytes.",
-        "A multi-message selection needs explicit ordered membership and boundaries. It must not be inferred from an unqualified passage label."
+        "A multi-message selection needs explicit ordered membership and boundaries. It must not be inferred from an unqualified message label."
       ],
       "limits": [
         "Several excerpts from one message are not independent replies. New excerpt scoring requires its own declared assessment unit."
@@ -458,8 +703,7 @@
       "related": [
         "message",
         "target",
-        "source-artifact",
-        "passage"
+        "source-artifact"
       ],
       "sources": [
         "docs/RESEARCH-ENTITIES.md",
@@ -1036,37 +1280,6 @@
         "docs/RESEARCH-ENTITIES.md",
         "behaviorlab/explorer.py",
         "behaviorlab/target_topics.py"
-      ]
-    },
-    {
-      "id": "passage",
-      "title": "Passage (legacy term)",
-      "category": "entities",
-      "kind": "Terminology mapping",
-      "aliases": [
-        "target passage",
-        "passage",
-        "window"
-      ],
-      "definition": "An older reading label whose precise unit depends on the saved method. In the current Gem Finder and Mind & discourse samples, a target passage is one selected recorded message.",
-      "practical": "When a count says passages, check the method. Use messages for whole recorded replies and excerpts for explicit text selections. Use target to describe which object is being assessed.",
-      "method": [
-        "The former combined Target passage & preceding context entry is now separated into Message, Analysis target and Context entries. This stable passage link remains available.",
-        "Historical plans and exact assessment questions retain their original wording. This terminology guide does not change their text, boundaries or IDs."
-      ],
-      "limits": [
-        "Passage alone does not specify a paragraph, full message, excerpt or context window. It should not be used as an unspecified counting unit."
-      ],
-      "related": [
-        "message",
-        "excerpt",
-        "target",
-        "context"
-      ],
-      "sources": [
-        "docs/RESEARCH-ENTITIES.md",
-        "behaviorlab/gem_plan.py: payload",
-        "behaviorlab/discourse_probe.py: payload"
       ]
     }
   ]
