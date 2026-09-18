@@ -1,3 +1,9 @@
+## Completed interface milestone · 18 September 2026: sorting and topic tiers
+
+Mind & discourse overview columns are sortable with URL persistence and preserved scroll/focus. Analysis now separates Topic tier from Topic / question, with counts, alphabetical choices, grouped chart menus and selector persistence in URLs/recipes/saved views. The researcher clarified that tier filtering organizes the Analysis selector only. Existing transformations, pivot filters and evidence remain unchanged while browsing. Coverage-to-histogram navigation is preserved.
+
+Verified: 355 Python and 85 JavaScript tests, rebuilt local bundle, and browser checks for both sort directions, grouping, rule preservation and reload. No new inference or notebook/evidence changes. See [Analysis workspace](ANALYSIS-WORKSPACE.md) and [Mind & discourse](MIND-DISCOURSE-PORTRAITS.md). The scientific next step below remains classifier review.
+
 ## Completed milestone · Lab Jobs and portrait comparison
 
 **Implemented:** [Lab Jobs](LAB-JOBS.md) delegates registered JEV assessment work to a detached Python worker. The sidebar page shows progress, attempts, known/reserved cost, effective cap, Start/Resume, graceful pause and result links. Polling is browser-local and only active while the view is visible. No language model supervises runtime requests. GPT-5.6 Luna implemented the frontend and focused UI tests.

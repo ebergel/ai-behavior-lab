@@ -16,3 +16,20 @@ test('topic coverage uses observed denominators and fixed threshold boundaries',
  assert.deepEqual(summary[0].bins,[1,0,0,0,0,0,0,0,1,1]);
  assert.equal(summary[1].candidates,1);assert.equal(c.topicOverview([],topics)[0].share,null);
 });
+test('topic selector normalizes legacy chart state and keeps group and field aligned',async()=>{
+ const c=await core,topics=[
+  {id:'consciousness',field:'Score · Consciousness',group:'broad',title:'Consciousness'},
+  {id:'specific',field:'Score · Specific',group:'focused',title:'Specific question'},
+  {id:'another',field:'Score · Another',group:'focused',title:'Another question'}
+ ];
+ assert.deepEqual(c.normalizeTopicSelector(topics,{chart:{x:'Score · Specific'}}),{group:'focused',field:'Score · Specific'});
+ assert.deepEqual(c.normalizeTopicSelector(topics,{topicSelector:{group:'all',field:'Score · Specific'},chart:{x:'Score · Consciousness'}}),{group:'all',field:'Score · Specific'});
+ assert.deepEqual(c.normalizeTopicSelector(topics,{topicSelector:{group:'focused',field:'Score · Consciousness'},chart:{x:'Score · Consciousness'}}),{group:'focused',field:'Score · Specific'});
+ assert.deepEqual(c.normalizeTopicSelector(topics,{topicSelector:{group:'stale',field:'Score · Missing'},chart:{x:'Score · Consciousness'}}),{group:'broad',field:'Score · Consciousness'});
+ const config={topicSelector:{group:'all',field:'Score · Specific'},transforms:{keep:{mode:'binary'}},pivot:{valueFilter:{Model:{A:true}}},chart:{x:'Score · Consciousness'},selection:['passage-1']};
+ const before=JSON.stringify(config);assert.deepEqual(c.normalizeTopicSelector(topics,config),{group:'all',field:'Score · Specific'});assert.equal(JSON.stringify(config),before);
+});
+test('topic groups sort topics and expose counts for selector tiers',async()=>{
+ const c=await core,groups=c.topicGroups([{group:'focused',title:'Zed'},{group:'focused',title:'Alpha'},{group:'broad',title:'Core'}],{focused:'Specific topics',broad:'Broad domains'});
+ assert.deepEqual(groups.map(g=>[g.key,g.label,g.count,g.topics.map(t=>t.title)]),[['focused','Specific topics',2,['Alpha','Zed']],['broad','Broad domains',1,['Core']]]);
+});

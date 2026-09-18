@@ -49,13 +49,15 @@ class AnalysisTests(unittest.TestCase):
 
     def test_versioned_save_keeps_history_and_provenance(self):
         d=self.app.dataset('intact'); before=copy.deepcopy(self.item)
-        body={'dataset':'intact','dataset_fingerprint':d['fingerprint'],'title':'Test analysis','author':'Codex','config':{'version':1,'transforms':{'Score · a':{'mode':'binary','threshold':90}}}}
+        body={'dataset':'intact','dataset_fingerprint':d['fingerprint'],'title':'Test analysis','author':'Codex','config':{'version':1,'transforms':{'Score · a':{'mode':'binary','threshold':90}},'topicSelector':{'group':'broad','field':'Score · b'}}}
         with patch('urllib.request.OpenerDirector.open',side_effect=AssertionError('No inference')):
             a=self.app.save(body)
             b=self.app.save(dict(body,id=a['id'],revision=1,note='An observation'))
         self.assertEqual(b['revision'],2);self.assertEqual(self.app.views()[0]['note'],'An observation')
         self.assertEqual(len(list((self.root/'analysis'/'views'/a['id']).glob('*.json'))),2)
         self.assertEqual(b['provenance'],d['provenance']);self.assertEqual(self.item,before)
+        self.assertEqual(b['config'],body['config'])
+        self.assertEqual(self.app.views()[0]['config']['topicSelector'],body['config']['topicSelector'])
         with self.assertRaisesRegex(ValueError,'changed'):self.app.save(dict(body,id=a['id'],revision=1))
         with self.assertRaisesRegex(ValueError,'changed'):self.app.save(dict(body,dataset_fingerprint='old'))
 

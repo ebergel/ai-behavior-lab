@@ -31,6 +31,12 @@ Raw JEV values remain in the frozen evidence. The matrix presents them on a 0–
 
 Histogram bins are ten points wide, with the final bin including 100. Raw probabilities, transformed values and source passages are available together. Model assessments are not calibrated prevalence probabilities; the selected development samples cannot estimate whole-corpus frequencies or causal differences between models. Different passages from the same conversation are not independent replicates.
 
+## Choosing a topic
+
+The probability transformation editor separates **Topic tier** from **Topic / question**. Choose Broad domains, Specific topics, Discourse form, Stance or Coverage to shorten the topic list. Available tiers show their question counts; topics are alphabetical within each tier. All questions retains separate labeled groups. Chart score menus use the same grouped ordering.
+
+The editor's tier and selected topic travel with the URL, exported recipe and saved analysis. Earlier saved analyses remain supported. Opening a topic from the coverage table or an applied-rule chip selects the matching tier. Browsing these controls changes which variable you are editing; existing transformations, pivot filters and passage counts remain in place until you explicitly change them.
+
 ## Dataset provenance
 
 The development sample uses batch `7f665a93c90cb1c2e1253d36`. The intact sample joins recovery broad/detail packs and the original first successful broad result exactly once, using the checked recovery release. It retains one row per source passage and rejects duplicate question scores or inconsistent target/context identities. The stopped overload is not an extra observation. The pilot uses `c8e5aca183e5777cdae09cfb`.

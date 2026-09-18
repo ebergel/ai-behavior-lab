@@ -33,6 +33,8 @@ The same 48 distinct lineages cover 14 model variants, with 2–4 targets per av
 
 The app keeps controls separate from transcripts, exposes word-count filtering, shows all four conditions beside the exact passage and supports a profile matrix. Yes-probability is not degree of resemblance, authorship, quality, consciousness or scientific truth. The researcher evaluates the usefulness and coherence of the classifier; no individual passage ratings are required.
 
+The overview table supports ascending and descending sorting on every column: feature, observed count, mean yes-probability, count at or above 80%, mean absolute paired difference and paired count. Missing statistics remain last in either direction. Overview sorting is independent of passage sorting and is preserved in the view URL.
+
 ## Sixteen conceptual portraits
 
 ### f01 · Plato

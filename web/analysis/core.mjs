@@ -58,3 +58,31 @@ export function topicOverview(rows, topics, threshold=80) {
       mean:n?values.reduce((a,b)=>a+b,0)/n:null,bins};
   });
 }
+
+// Topic selection is presentation state. Keep it separate from transforms,
+// pivot filters, chart choices, and passage selections so browsing the topic
+// list cannot change the analysis itself.
+export function normalizeTopicSelector(topics=[], config={}) {
+  const list=Array.isArray(topics)?topics:[], valid=new Set(list.map(t=>t.field));
+  const requested=config.topicSelector?.field;
+  const chartField=config.chart?.x;
+  const consciousness=list.find(t=>t.id==='consciousness')?.field;
+  const groupKeys=new Set(list.map(t=>t.group));
+  const requestedGroup=config.topicSelector?.group;
+  const candidate=[requested,chartField,consciousness,list[0]?.field].find(f=>f&&valid.has(f))||'';
+  const candidateTopic=list.find(t=>t.field===candidate);
+  const group=requestedGroup==='all'||(requestedGroup&&groupKeys.has(requestedGroup))?requestedGroup:(candidateTopic?.group||list[0]?.group||'all');
+  const topic=group==='all'||candidateTopic?.group===group?candidateTopic:list.find(t=>t.group===group);
+  const field=topic?.field||candidate;
+  return {group,field};
+}
+
+export function topicGroups(topics=[], labels={}) {
+  const groups=new Map();
+  for(const topic of (Array.isArray(topics)?topics:[])) {
+    const key=topic.group||'other';
+    if(!groups.has(key)) groups.set(key,{key,label:labels[key]||key,count:0,topics:[]});
+    const group=groups.get(key);group.count++;group.topics.push(topic);
+  }
+  return [...groups.values()].map(group=>({...group,topics:group.topics.slice().sort((a,b)=>String(a.title||a.field).localeCompare(String(b.title||b.field)))}));
+}

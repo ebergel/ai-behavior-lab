@@ -1,14 +1,24 @@
 'use strict';
 const lensVariants=[['definition_only','Definitions only'],['name_only','Names only'],['name_and_definition','Names + definitions'],['name_and_portrait','Names + portraits']];
+const overviewSorts=new Set(['spec','feature','observed','probability','threshold','delta','paired']);
 function lensFilters(raw={}) {
  const valid=(key,values,fallback)=>values.includes(raw[key])?raw[key]:fallback;
  const number=key=>raw[key]!==''&&raw[key]!==undefined&&Number.isFinite(Number(raw[key]))&&Number(raw[key])>=0?String(Number(raw[key])):'';
  return {family:valid('family',['all','thinkers','discourse'],'all'),kind:valid('kind',['transcript','synthetic'],'transcript'),
   variant:valid('variant',lensVariants.map(v=>v[0]),'definition_only'),panel:valid('panel',['codebook','passages','matrix'],'codebook'),
   feature:String(raw.feature||'f11'),item:String(raw.item||''),model:String(raw.model||''),q:String(raw.q||''),
-  contrast:valid('contrast',['label','portrait'],'label'),sort:valid('sort',['probability','probability_asc','delta','words','sample'],'probability'),min:number('min'),max:number('max')};
+  contrast:valid('contrast',['label','portrait'],'label'),sort:valid('sort',['probability','probability_asc','delta','words','sample'],'probability'),overviewSort:valid('overviewSort',Array.from(overviewSorts),'spec'),overviewDir:valid('overviewDir',['asc','desc'],'asc'),min:number('min'),max:number('max')};
 }
 function lensGo(change={}) {go({view:'discourse',lens:JSON.stringify(lensFilters({...state.lensFilters,...change}))});}
+function lensOverviewGo(change={}) {
+ const next=lensFilters({...state.lensFilters,...change}),y=window.scrollY||0;
+ state.lensFilters=next;
+ history.replaceState(null,'','#'+new URLSearchParams({view:'discourse',lens:JSON.stringify(next)}).toString());
+ renderLenses();
+ window.scrollTo(0,y);
+ const focus=()=>document.querySelector(`[data-lens-overview-sort="${next.overviewSort}"]`)?.focus({preventScroll:true});
+ if(window.requestAnimationFrame)window.requestAnimationFrame(focus);else focus();
+}
 function lensRows(data,f) {
  const rows=data.samples.filter(s=>s.kind===f.kind&&(!f.model||s.model===f.model)&&(f.min===''||s.words>=Number(f.min))&&(f.max===''||s.words<=Number(f.max))&&(!f.q||[s.text,s.title,s.model_label].join(' ').toLowerCase().includes(f.q.toLowerCase())));
  const score=s=>s.probabilities[f.variant]?.[f.feature]??null;
@@ -25,6 +35,21 @@ function lensSummary(rows,key,variant,contrast="label") {
 }
 function lensProbability(p) {return Number.isFinite(p)?(100*p).toFixed(1)+'%':'—';}
 function lensDelta(a,b) {return Number.isFinite(a)&&Number.isFinite(b)?((a-b)*100>=0?'+':'')+((a-b)*100).toFixed(1)+' pp':'—';}
+function overviewRows(features,rows,variant,contrast,sort='feature',direction='asc') {
+ const ordered=features.map((feature,index)=>{const summary=lensSummary(rows,feature.id,variant,contrast);let value;
+  if(sort==='spec')value=index;
+  else if(sort==='feature')value=String(feature.label||feature.id).toLocaleLowerCase();
+  else if(sort==='observed')value=summary.n;
+  else if(sort==='probability')value=summary.mean;
+  else if(sort==='threshold')value=summary.n?summary.candidates:null;
+  else if(sort==='delta')value=summary.delta;
+  else value=summary.paired;
+  return {feature,index,value};
+ });
+ if(sort==='spec')return features;
+ return ordered.sort((a,b)=>{const amissing=a.value===null||a.value===undefined||Number.isNaN(a.value),bmissing=b.value===null||b.value===undefined||Number.isNaN(b.value);if(amissing!==bmissing)return amissing?1:-1;if(amissing)return a.index-b.index;const result=typeof a.value==='string'?a.value.localeCompare(b.value):a.value-b.value;return result?direction==='desc'?-result:result:a.index-b.index;}).map(row=>row.feature);
+}
+function overviewHeader(key,label,f) {const active=f.overviewSort===key, direction=active?f.overviewDir:'asc';return `<th scope="col" aria-sort="${active?(direction==='desc'?'descending':'ascending'):'none'}"><button class="text-button lens-overview-sort" data-lens-overview-sort="${key}" aria-label="Sort by ${esc(label)} ${active&&direction==='asc'?'descending':'ascending'}">${esc(label)} <span aria-hidden="true">${active?(direction==='desc'?'↓':'↑'):'↕'}</span></button></th>`;}
 async function loadLenses(raw={}) {
  const previousItem=state.lensFilters?.item;const version=++routeVersion;state.run=null;state.view='discourse';state.lensFilters=lensFilters(raw);
  const data=await api('/api/discourse');if(version!==routeVersion)return;state.lenses=data;
@@ -45,7 +70,7 @@ function renderLenses() {
  const contrastText=f.contrast==='portrait'?'portrait':'label';
  const features=d.spec.features.filter(x=>f.family==='all'||x.family===f.family);
  const feature=features.find(x=>x.id===f.feature)||features[0];f.feature=feature.id;
- const rows=lensRows(d,f),selected=rows.find(s=>s.id===f.item);const ex=d.execution;
+ const rows=lensRows(d,f),selected=rows.find(s=>s.id===f.item);const overview=overviewRows(features,rows,f.variant,f.contrast,f.overviewSort,f.overviewDir);const ex=d.execution;
  const models=[...new Set(d.samples.filter(s=>s.kind==='transcript').map(s=>s.model))];
  const th=t=>`<th scope="col">${t}</th>`;
  const choose=(key,label)=>`<button class="text-button" data-lens-feature="${esc(key)}">${esc(label)}</button>`;
@@ -56,7 +81,7 @@ function renderLenses() {
  <form id="lens-filters" class="lens-filters"><label>Feature family<select name="family">${[['all','All 27 features'],['thinkers','Thinkers & writers'],['discourse','Discourse practices']].map(([v,t])=>option(v,t,f.family)).join('')}</select></label><label>Feature<select name="feature">${features.map(x=>option(x.id,x.label,f.feature)).join('')}</select></label><label>Assessment wording<select name="variant">${variants.map(([v,t])=>option(v,t,f.variant)).join('')}</select></label><label>Paired comparison<select name="contrast">${option('label','Label effect: named − unnamed definition',f.contrast)}${d.conditions.name_and_portrait?option('portrait','Portrait − named definition',f.contrast):''}</select></label><label>Evidence<select name="kind">${option('transcript','Transcript passages',f.kind)}${option('synthetic','Codex synthetic controls',f.kind)}</select></label><label>Source model<select name="model" ${f.kind==='synthetic'?'disabled':''}>${option('','All sampled models',f.model)}${models.map(m=>option(m,short(m),f.model)).join('')}</select></label><label>Minimum words<input name="min" type="number" min="0" value="${f.min}"></label><label>Maximum words<input name="max" type="number" min="0" value="${f.max}"></label><label>Find in passages<input name="q" type="search" value="${esc(f.q)}"></label><button class="button" type="submit">Apply</button><button class="quiet" type="button" data-lens-reset>Reset</button></form>
  <div class="lens-tabs">${[['codebook','Codebook & overview'],['passages','Passage comparison'],['matrix','Profile matrix']].map(([v,t])=>`<button class="button ${f.panel===v?'primary':''}" data-lens-panel="${v}" aria-pressed="${f.panel===v}">${t}</button>`).join('')}<span class="source-note">${rows.length} ${f.kind==='transcript'?'transcript passages':'synthetic controls'} in view</span></div>
  <section class="lens-definition"><div class="eyebrow">${feature.family==='thinkers'?'THINKER / WRITER LENS':'DISCOURSE PRACTICE'}</div><h2>${esc(feature.label)}</h2>${feature.portrait?`<div class="lens-portrait"><span class="eyebrow">CONCEPTUAL PORTRAIT</span><p>${esc(feature.portrait)}</p><p class="lens-recognition"><strong>What to recognize.</strong> ${esc(feature.recognition)}</p><small>Interpretive portrait by ${esc(feature.portrait_author)}; not a quotation or a complete account.${feature.id==='f03'?' Developed from your Spinoza sketch.':''}</small><p class="source-note">Reading sources: ${(feature.sources||[]).filter(x=>/^https:\/\//.test(x.url)).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title||x.url)}</a>`).join(' · ')}</p></div><details><summary>Original operational definition</summary><p>${esc(feature.definition)}</p></details>`:`<p>${esc(feature.definition)}</p><p class="source-note">The portrait condition repeats this discourse question unchanged; the surrounding thinker questions differ.</p>`}<details><summary>Exact assessment question · ${esc(lensVariants.find(v=>v[0]===f.variant)[1])}</summary><p class="lens-question">${esc(d.conditions[f.variant][feature.id].instructions)}</p></details></section>
- ${f.panel==='codebook'?`<div class="lens-table-wrap"><table class="lens-table"><caption>Overview for the ${rows.length} filtered ${f.kind==='transcript'?'transcript passages':'synthetic controls'}. ≥80% is a browsing threshold. ${f.contrast==='portrait'?'Paired differences compare names + portraits with names + definitions. This changes the definition as well as its wording.':'Paired differences compare names + definitions with definitions only.'}</caption><thead><tr>${['Feature','Observed','Mean yes probability','≥80%','Mean |'+contrastText+' difference|','Paired n'].map(th).join('')}</tr></thead><tbody>${features.map(x=>{const v=lensSummary(rows,x.id,f.variant,f.contrast);return `<tr class="${x.id===f.feature?'selected':''}"><td>${choose(x.id,x.label)}</td><td>${v.n} / ${rows.length}</td><td>${lensProbability(v.mean)}</td><td>${v.n?v.candidates:'—'}</td><td>${v.delta===null?'—':(v.delta*100).toFixed(1)+' pp'}</td><td>${v.paired}</td></tr>`;}).join('')}</tbody></table></div>`:''}
+ ${f.panel==='codebook'?`<div class="lens-table-wrap"><table class="lens-table"><caption>Overview for the ${rows.length} filtered ${f.kind==='transcript'?'transcript passages':'synthetic controls'}. ≥80% is a browsing threshold. ${f.contrast==='portrait'?'Paired differences compare names + portraits with names + definitions. This changes the definition as well as its wording.':'Paired differences compare names + definitions with definitions only.'}</caption><thead><tr>${overviewHeader('feature','Feature',f)}${overviewHeader('observed','Observed',f)}${overviewHeader('probability','Mean yes probability',f)}${overviewHeader('threshold','≥80%',f)}${overviewHeader('delta','Mean |'+contrastText+' difference|',f)}${overviewHeader('paired','Paired n',f)}</tr></thead><tbody>${overview.map(x=>{const v=lensSummary(rows,x.id,f.variant,f.contrast);return `<tr class="${x.id===f.feature?'selected':''}"><td>${choose(x.id,x.label)}</td><td>${v.n} / ${rows.length}</td><td>${lensProbability(v.mean)}</td><td>${v.n?v.candidates:'—'}</td><td>${v.delta===null?'—':(v.delta*100).toFixed(1)+' pp'}</td><td>${v.paired}</td></tr>`;}).join('')}</tbody></table></div>`:''}
  ${f.panel==='passages'?`<label class="lens-sort">Sort passages<select id="lens-sort">${[['probability','Highest probability'],['probability_asc','Lowest probability'],['delta','Largest '+contrastText+' difference'],['words','Most words'],['sample','Frozen sample order']].map(([v,t])=>option(v,t,f.sort)).join('')}</select></label><div class="lens-table-wrap"><table class="lens-table"><caption>${esc(feature.label)} · all ${variants.length} wordings side by side. Differences are percentage points; each comparison uses only observed pairs.</caption><thead><tr>${['Passage','Words',...variants.map(v=>v[1]),'Label difference',...(d.conditions.name_and_portrait?['Portrait difference']:[])].map(th).join('')}</tr></thead><tbody>${rows.map(s=>`<tr class="${s.id===f.item?'selected':''}"><td><button class="text-button" data-lens-item="${esc(s.id)}">${esc(s.kind==='transcript'?s.model_label:s.title)}<small>${esc(s.text.slice(0,115))}…</small></button></td><td>${s.words}</td>${variants.map(([v])=>`<td>${lensProbability(s.probabilities[v]?.[f.feature])}</td>`).join('')}<td>${lensDelta(s.probabilities.name_and_definition?.[f.feature],s.probabilities.definition_only?.[f.feature])}</td>${d.conditions.name_and_portrait?`<td>${lensDelta(s.probabilities.name_and_portrait?.[f.feature],s.probabilities.name_and_definition?.[f.feature])}</td>`:''}</tr>`).join('')}</tbody></table></div>`:''}
  ${f.panel==='matrix'?`<div class="lens-table-wrap"><table class="lens-table lens-matrix"><caption>${esc(lensVariants.find(v=>v[0]===f.variant)[1])} · yes-probability 0 → 100%. Select any cell to read the exact passage and definition. — = unassessed.</caption><thead><tr>${th('Passage')}${features.map(x=>th(choose(x.id,x.label))).join('')}</tr></thead><tbody>${rows.map((s,i)=>`<tr><th scope="row"><button class="text-button" data-lens-item="${esc(s.id)}">${i+1}. ${esc(s.kind==='transcript'?s.model_label:s.title)}<small>${s.words} words</small></button></th>${features.map(x=>{const p=s.probabilities[f.variant]?.[x.id];return `<td><button data-lens-cell="${esc(s.id)}" data-feature="${esc(x.id)}" aria-label="${esc(x.label)}, passage ${i+1}, ${lensProbability(p)}" style="${Number.isFinite(p)?`background:rgba(116,85,153,${p*.75});color:${p>.65?'white':'#2d2735'}`:''}">${Number.isFinite(p)?Math.round(p*100):'—'}</button></td>`;}).join('')}</tr>`).join('')}</tbody></table></div>`:''}
  <div id="lens-selected">${lensDetail(selected,feature)}</div>
@@ -65,12 +90,13 @@ function renderLenses() {
 document.addEventListener('submit',e=>{if(e.target.id!=='lens-filters')return;e.preventDefault();const f=Object.fromEntries(new FormData(e.target));lensGo({...f,item:''});});
 document.addEventListener('change',e=>{if(e.target.id==='lens-sort')lensGo({sort:e.target.value});else if(e.target.closest('#lens-filters')&&e.target.tagName==='SELECT'){const f=Object.fromEntries(new FormData($('#lens-filters')));lensGo({...f,model:f.kind==='synthetic'?'':f.model,item:''});}});
 document.addEventListener('click',e=>{
- const el=e.target.closest('[data-lens-feature],[data-lens-item],[data-lens-cell],[data-lens-panel],[data-lens-source],[data-lens-reset]');if(!el)return;
- if(el.hasAttribute('data-lens-feature'))lensGo({feature:el.dataset.lensFeature});
+ const el=e.target.closest('[data-lens-overview-sort],[data-lens-feature],[data-lens-item],[data-lens-cell],[data-lens-panel],[data-lens-source],[data-lens-reset]');if(!el)return;
+ if(el.hasAttribute('data-lens-overview-sort')){const key=el.dataset.lensOverviewSort;const f=state.lensFilters;lensOverviewGo({overviewSort:key,overviewDir:f.overviewSort===key&&f.overviewDir==='asc'?'desc':'asc'});}
+ else if(el.hasAttribute('data-lens-feature'))lensGo({feature:el.dataset.lensFeature});
  else if(el.hasAttribute('data-lens-item'))lensGo({item:el.dataset.lensItem});
  else if(el.hasAttribute('data-lens-cell'))lensGo({item:el.dataset.lensCell,feature:el.dataset.feature});
  else if(el.hasAttribute('data-lens-panel'))lensGo({panel:el.dataset.lensPanel});
  else if(el.hasAttribute('data-lens-reset'))go({view:'discourse'});
  else {const s=state.lenses.samples.find(x=>x.id===el.dataset.lensSource);go({run:s.run_id,message:s.message_id});}
 });
-if(typeof module!=='undefined')module.exports={lensFilters,lensRows,lensSummary,lensProbability,lensDelta};
+if(typeof module!=='undefined')module.exports={lensFilters,lensRows,lensSummary,lensProbability,lensDelta,overviewRows,lensOverviewGo};
