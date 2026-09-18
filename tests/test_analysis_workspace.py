@@ -49,7 +49,7 @@ class AnalysisTests(unittest.TestCase):
 
     def test_versioned_save_keeps_history_and_provenance(self):
         d=self.app.dataset('intact'); before=copy.deepcopy(self.item)
-        body={'dataset':'intact','dataset_fingerprint':d['fingerprint'],'title':'Test analysis','author':'Codex','config':{'version':1,'transforms':{'Score · a':{'mode':'binary','threshold':90}},'topicSelector':{'group':'broad','field':'Score · b'}}}
+        body={'dataset':'intact','dataset_fingerprint':d['fingerprint'],'title':'Test analysis','author':'Codex','config':{'version':1,'transforms':{'Score · a':{'mode':'binary','threshold':90}},'topicSelector':{'group':'broad','field':'Score · b'},'targetFilter':{'group':'broad','field':'Score · a','threshold':80}}}
         with patch('urllib.request.OpenerDirector.open',side_effect=AssertionError('No inference')):
             a=self.app.save(body)
             b=self.app.save(dict(body,id=a['id'],revision=1,note='An observation'))
@@ -65,6 +65,17 @@ class AnalysisTests(unittest.TestCase):
         d=self.app.dataset('intact');body={'dataset':'intact','dataset_fingerprint':d['fingerprint'],'title':'x','config':{'version':1,'transforms':{}}}
         for change in [{'id':'../escape'},{'config':{'version':1,'transforms':[]}}, {'config':{'version':1,'transforms':{'Score · a':{'mode':'binary','threshold':float('nan')}}}}, {'config':{'version':1,'transforms':{'Score · a':{'mode':'quantile','cuts':[10,20],'reference':'stale'}}}}]:
             with self.assertRaises(ValueError): self.app.save(dict(body,**change))
+
+    def test_target_topic_save_validation(self):
+        d=self.app.dataset('intact')
+        body={'dataset':'intact','dataset_fingerprint':d['fingerprint'],'title':'Topic scope'}
+        for target in [None, {'field':'Score · missing'}, {'field':'Score · a','threshold':79},
+                       {'field':'Score · a','threshold':'80'}, {'field':'Score · a','group':'missing'}]:
+            with self.subTest(target=target), self.assertRaises(ValueError):
+                self.app.save(dict(body,config={'version':1,'transforms':{},'targetFilter':target}))
+        no_filter={'group':'all','field':'','threshold':80}
+        saved=self.app.save(dict(body,config={'version':1,'transforms':{},'targetFilter':no_filter}))
+        self.assertEqual(saved['config']['targetFilter'],no_filter)
 
     def test_http_routes_enforce_origin_and_keep_inference_unavailable(self):
         with patch('behaviorlab.explorer.ThreadingHTTPServer', side_effect=lambda address, handler: SimpleNamespace(server_port=8765, handler=handler)):

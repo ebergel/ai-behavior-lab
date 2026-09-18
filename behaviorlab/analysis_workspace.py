@@ -152,6 +152,13 @@ class AnalysisWorkspace:
         title = data.get('title', '').strip(); require(0 < len(title) <= 160, 'Name the analysis (up to 160 characters)')
         require(isinstance(data.get('note', ''), str) and len(data.get('note', '')) <= 8000, 'Observation too long')
         fields = {t['field'] for t in dataset['topics']}
+        if 'targetFilter' in config:
+            target_filter=config['targetFilter']
+            require(isinstance(target_filter, dict), 'Invalid target topic filter')
+            require(target_filter.get('field', '') in fields | {''}, 'Unknown target topic')
+            threshold=target_filter.get('threshold', 80)
+            require(type(threshold) in (int, float) and math.isfinite(threshold) and threshold in (50, 80, 90), 'Choose target threshold 50, 80 or 90')
+            require(target_filter.get('group', 'all') in {t.get('group', 'focused') for t in dataset['topics']} | {'all'}, 'Unknown target topic tier')
         require(isinstance(config.get('transforms', {}), dict), 'Invalid transformations')
         for field, rule in config.get('transforms', {}).items():
             require(field in fields and isinstance(rule, dict), 'Unknown transformed field')

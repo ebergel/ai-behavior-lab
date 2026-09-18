@@ -86,3 +86,21 @@ export function topicGroups(topics=[], labels={}) {
   }
   return [...groups.values()].map(group=>({...group,topics:group.topics.slice().sort((a,b)=>String(a.title||a.field).localeCompare(String(b.title||b.field)))}));
 }
+
+export function targetFilterStatus(topics=[], targetFilter=null) {
+  if(!targetFilter||!targetFilter.field) return {active:false,valid:true,topic:null,reason:''};
+  const topic=(Array.isArray(topics)?topics:[]).find(t=>t.field===targetFilter.field);
+  const groupValid=targetFilter.group==='all'||!targetFilter.group||topic?.group===targetFilter.group;
+  const threshold=targetFilter.threshold;
+  if(!topic) return {active:true,valid:false,topic:null,reason:'The saved target topic is unavailable in this dataset.'};
+  if(!groupValid) return {active:true,valid:false,topic,reason:'The saved target topic tier no longer contains this topic.'};
+  if(typeof threshold!=='number'||![50,80,90].includes(threshold)) return {active:true,valid:false,topic,reason:'The saved target threshold is invalid.'};
+  return {active:true,valid:true,topic,threshold,reason:''};
+}
+
+export function filterTargetRows(rows=[], targetFilter=null, topics=[]) {
+  const status=targetFilterStatus(topics,targetFilter);
+  if(!status.active) return rows;
+  if(!status.valid) return [];
+  return rows.filter(row=>numeric(row[status.topic.field])&&row[status.topic.field]>=status.threshold);
+}

@@ -1,3 +1,11 @@
+## Completed interface milestone · 18 September 2026: target topic filtering
+
+The researcher clarified that topic selection must restrict the actual target population in Mind & discourse and Analysis. Both now offer a separate **Filter target passages by topic** panel with tier, topic and inclusive 50/80/90 threshold controls. Mind & discourse joins existing JEV scores to the exact current passage; all 48 classifier targets match, with Consciousness ≥80 selecting 3. Its overview, comparison and matrix share that subset. Synthetic controls remain separate.
+
+Analysis applies the same restriction to original scores before transformations and pivot filters; tables, charts, topic coverage, passage reading and filtered export share the scope. Transformations and frozen quantile boundaries remain intact. URLs and saved recipes retain the filter. Unknown/stale scores do not become negatives. No new inference, research snapshot, notebook or source changes. The selector-only work below remains a separate capability.
+
+The scientific next step remains classifier review; these are browsing subsets, not new model-behavior estimates. See [Analysis workspace](ANALYSIS-WORKSPACE.md) and [Mind & discourse](MIND-DISCOURSE-PORTRAITS.md).
+
 ## Completed interface milestone · 18 September 2026: sorting and topic tiers
 
 Mind & discourse overview columns are sortable with URL persistence and preserved scroll/focus. Analysis now separates Topic tier from Topic / question, with counts, alphabetical choices, grouped chart menus and selector persistence in URLs/recipes/saved views. The researcher clarified that tier filtering organizes the Analysis selector only. Existing transformations, pivot filters and evidence remain unchanged while browsing. Coverage-to-histogram navigation is preserved.

@@ -13,7 +13,15 @@ Open **Analysis** in the lab sidebar, or **Explore in Analysis** from a supporte
 
 A Codex-attributed starter view, **Broad AI × consciousness · 90% thresholds**, crosses a broad domain with a specific topic and groups counts by target model family. It is a reusable configuration, not a new semantic finding or human rating.
 
-## Topic coverage
+## Filtering target passages
+
+**Filter target passages by topic** changes the population being analysed. Choose a tier, a topic such as **Consciousness**, and a score threshold of 50, 80 or 90. The threshold is inclusive and uses the target's original JEV score on the 0–100 scale. Unknown scores do not match. Choosing a tier alone does not restrict passages; **All topics · no restriction** and **Clear target filter** restore the full dataset before other filters.
+
+This restriction applies before transformations and pivot filters. The pivot, topic coverage, charts, passage drill-through and filtered-data export all use the resulting population. Existing transformations and fitted quantile boundaries remain unchanged. The filter travels with the URL, exported recipe and saved analysis. A stale topic produces an explicit empty state until cleared. The transformation editor's separate topic selector still only chooses the variable to edit.
+
+Mind & discourse has the same target-topic controls. Its existing classifier sample is joined to corpus scores using exact conversation/message IDs, source hash and target text. Scores from another turn in the conversation cannot qualify a passage. Synthetic controls have no corpus-topic classification and remain a separate, unfiltered control set.
+
+## Topic coverage table
 
 The sortable topic table lists broad domains, specific topics, discourse forms, stance and coverage questions separately or together. It reports observed denominators, threshold counts/shares, means and small probability histograms under the current pivot filters. Candidate thresholds are 50, 80 or 90; scores remain continuous. Click a topic or histogram to expand its distribution; click a candidate count to read those passages.
 

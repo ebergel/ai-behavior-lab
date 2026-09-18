@@ -7,6 +7,7 @@ import math
 from .jev_atlas import read_record, locked
 from . import discourse_probe, discourse_portrait_probe
 from .discourse_probe import ROOT, SPEC, VARIANTS
+from .target_topics import attach_target_topics
 
 def release(workspace):
     return discourse_portrait_probe if (Path(workspace)/discourse_portrait_probe.ROOT/"plan.json").exists() else discourse_probe
@@ -43,7 +44,7 @@ def feature_stats(samples,features,variants=VARIANTS):
     return result
 
 
-def build(workspace,catalog=None):
+def build(workspace,catalog=None,analysis=None):
     module=release(workspace);variants=module.VARIANTS;root=Path(workspace)/module.ROOT
     if not (root/'plan.json').exists():
         import json
@@ -68,6 +69,12 @@ def build(workspace,catalog=None):
             msg=next((m for m in run.get('messages',[]) if m['id']==source['message_id']),{})
             sample['source_current']=run.get('source',{}).get('sha256')==source['source_sha256'] and msg.get('text')==source['text']
         samples.append(sample)
+    dataset=None;topic_message=None
+    if analysis is not None:
+        try:dataset=analysis.corpus_dataset()
+        except (OSError, ValueError, KeyError):
+            topic_message='Corpus topic scores could not be verified. Topic filtering is unavailable; existing classifier results remain available.'
+    samples,topic_filter=attach_target_topics(samples,dataset,topic_message)
     groups={kind:feature_stats([s for s in samples if s['kind']==kind],plan['spec']['features'],variants) for kind in ('transcript','synthetic')}
     base=next(s for s in samples if s['id']=='ordinary')
     cue_differences={s['id']:{v:{k:p-base['probabilities'][v][k] for k,p in s['probabilities'][v].items() if k in base['probabilities'][v]} for v in variants}
@@ -75,7 +82,7 @@ def build(workspace,catalog=None):
     return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'in_progress' if active else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
             'plan_sha256':plan['sha256'],'root':module.ROOT,'variants':list(variants),'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
             'budget':plan['budget'],'selection':{k:v for k,v in plan['selection'].items() if k!='reserved_lineages'},
-            'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,
+            'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,'topic_filter':topic_filter,
             'word_band_counts':dict(Counter('1–50' if s['words']<=50 else '51–100' if s['words']<=100 else '101–150' if s['words']<=150 else '151+' for s in samples if s['kind']=='transcript')),
             'review_guide':'Judge whether the classifier makes useful, coherent distinctions across passages and wording conditions. No personal passage ratings are required. Probabilities describe yes answers to these questions, not similarity degree, provenance or quality. Synthetic controls remain separate.'}
 

@@ -33,3 +33,20 @@ test('topic groups sort topics and expose counts for selector tiers',async()=>{
  const c=await core,groups=c.topicGroups([{group:'focused',title:'Zed'},{group:'focused',title:'Alpha'},{group:'broad',title:'Core'}],{focused:'Specific topics',broad:'Broad domains'});
  assert.deepEqual(groups.map(g=>[g.key,g.label,g.count,g.topics.map(t=>t.title)]),[['focused','Specific topics',2,['Alpha','Zed']],['broad','Broad domains',1,['Core']]]);
 });
+test('target passage filtering uses raw scores, inclusive boundaries, and excludes unknowns',async()=>{
+ const c=await core,topics=[{field:'Score · Consciousness',group:'broad'}],rows=[{__id:'zero','Score · Consciousness':0},{__id:'eighty','Score · Consciousness':80},{__id:'hundred','Score · Consciousness':100},{__id:'unknown','Score · Consciousness':null},{__id:'text','Score · Consciousness':'80'}];
+ assert.deepEqual(c.filterTargetRows(rows,{group:'broad',field:'Score · Consciousness',threshold:80},topics).map(r=>r.__id),['eighty','hundred']);
+ assert.deepEqual(c.filterTargetRows(rows,{group:'broad',field:'Score · Consciousness',threshold:50},topics).map(r=>r.__id),['eighty','hundred']);
+ assert.deepEqual(c.filterTargetRows(rows,{group:'broad',field:'Score · Missing',threshold:80},topics),[]);
+ assert.equal(c.targetFilterStatus(topics,{group:'all',field:'',threshold:80}).active,false);
+ const raw=[{__id:'raw-80','Score · Consciousness':80},{__id:'raw-90','Score · Consciousness':90}];
+ const filtered=c.filterTargetRows(raw,{group:'broad',field:'Score · Consciousness',threshold:80},topics);
+ assert.deepEqual(c.materialize(filtered,{'Score · Consciousness':{mode:'binary',threshold:90}}).map(r=>r['Score · Consciousness']),[0,1]);
+});
+test('target filter state is immutable and stale topics stay invalid until cleared',async()=>{
+ const c=await core,topics=[{field:'Score · X',group:'broad'}],config={transforms:{'Score · X':{mode:'binary',threshold:90}},pivot:{valueFilter:{Model:{A:true}}},chart:{x:'Score · X'},selection:['a'],targetFilter:{group:'broad',field:'Score · X',threshold:80}},before=JSON.stringify(config);
+ assert.equal(c.targetFilterStatus(topics,config.targetFilter).valid,true);assert.equal(JSON.stringify(config),before);
+ const stale={group:'broad',field:'Score · Gone',threshold:80};assert.equal(c.targetFilterStatus(topics,stale).valid,false);assert.deepEqual(c.filterTargetRows([{__id:'a','Score · X':100}],stale,topics),[]);
+ assert.equal(c.targetFilterStatus(topics,{group:'broad',field:'Score · X',threshold:75}).valid,false);
+ assert.equal(c.targetFilterStatus(topics,{group:'broad',field:'Score · X',threshold:'80'}).valid,false);
+});

@@ -37,7 +37,15 @@ Mind & discourse uses the full workspace width, including ultrawide monitors. Th
 
 The overview table supports ascending and descending sorting on every column: feature, observed count, mean yes-probability, count at or above 80%, mean absolute paired difference and paired count. Missing statistics remain last in either direction. Overview sorting is independent of passage sorting and is preserved in the view URL.
 
-## Sixteen conceptual portraits
+## Filtering the target population
+
+**Filter target passages by topic** restricts the real passages behind the overview, passage comparison and profile matrix. Select a topic tier, a topic and an inclusive JEV threshold of 50, 80 or 90. The filter combines with source-model, word-count and text filters and is retained in the view URL and source-navigation return state. Clear it to restore all otherwise matching passages.
+
+This reuses the separate corpus Topic Atlas scores; the philosopher/discourse features remain the measured outcomes. Scores are joined only on the exact conversation, message, source hash and target text, with current sources verified. Missing, stale or ambiguous topic scores remain unknown and are excluded when a topic is selected. Synthetic controls are explicitly outside this filter.
+
+Verified against the current completed sample on 18 September: all 48 transcript targets have exact corpus score matches; Consciousness ≥80 selects 3, ≥50 selects 8, and ≥90 selects 1. These are subsets of the 48-target classifier screen, not whole-corpus frequencies. No additional TypeSafe calls are needed.
+
+## Sixteen conceptual portraits and recognition guides
 
 ### f01 · Plato
 
@@ -1086,4 +1094,3 @@ synthetic · 59 words · `meeting_technical`.
 Codex register manipulation of the meeting scenario; adds diagnostic content, not an exact semantic-preservation control.
 
 > If the projector shows no input, first verify that its selected input matches the connected port. Then replace the cable with the spare and test the same laptop. If the spare works, the original cable is the likely failure point. If neither works, test another laptop before changing the room configuration. This isolates the cable from the source device.
-
