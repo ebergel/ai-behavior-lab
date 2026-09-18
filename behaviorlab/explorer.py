@@ -33,6 +33,7 @@ from .discourse_view import build as discourse_view, export_plan as discourse_pl
 from .lab_dictionary import dictionary_catalog
 from . import lab_jobs
 from .population import catalog_population
+from .lab_summary import build_summary
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
 from .topic_trajectories import build_trajectories
@@ -451,11 +452,13 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
+                if path in ('/api/lab-summary','/api/lab-summary/export'):
+                    return self.send(build_summary(workspace,catalog,analysis,gems,jev_atlas),download='behavior-lab-summary.json' if path.endswith('/export') else None)
                 if path=='/api/jobs':return self.send(lab_jobs.listing(workspace))
                 if path in ('/jobs.js','/jobs.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/discourse':return self.send(discourse_view(workspace,catalog,analysis))
                 if path=='/api/discourse/export':return self.send({'view':discourse_view(workspace,catalog,analysis),'plan':discourse_plan(workspace)},download='mind-and-discourse.json')
-                if path in ('/discourse.js','/discourse.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
+                if path in ('/discourse.js','/discourse.css','/summary.js','/summary.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path == '/api/dictionary': return self.send(dictionary_catalog())
                 if path in ('/gems.js','/gems.css','/dictionary.js','/dictionary.css'):
                     return self.send((STATIC/path[1:]).read_bytes(),mime='text/javascript; charset=utf-8' if path.endswith('.js') else 'text/css; charset=utf-8')

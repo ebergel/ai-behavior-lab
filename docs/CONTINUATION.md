@@ -1,3 +1,9 @@
+## Completed overview milestone · 18 September 2026: Goals, Ideas & Task / Lab summary
+
+The top workspace section is now **Goals, Ideas & Task**. Its fourth tab, **Lab summary**, sits beside Ideas & tasks. A live read-only overview separates indexed data-generation experiments from assessment batches, with real/synthetic message proportions, explicit denominators, sortable/filterable source rows, exact run navigation and assessment links. Synthetic classifier controls stay distinct from synthetic conversation fixtures; repeated questions and wordings do not inflate message counts.
+
+Coverage verifies completed assessments against current source hashes and text and counts a unique union across batches. Earlier pending/partial experiments remain visible. No new inference, notebook mutation or scientific recoding. See [Lab summary](LAB-SUMMARY.md) for the counting contract and verified inventory.
+
 ## Completed terminology follow-through · 18 September 2026: whole-lab consistency
 
 Topic atlas now uses the same research units as the other analysis screens and has a Population in view banner. Its frequency columns distinguish runs with matches from message and phrase-occurrence counts; opening windows are labeled first six participant positions. The eligible sample, reading scope, resolved opening-review denominator and filtered conversation list remain separate.

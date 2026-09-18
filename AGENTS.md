@@ -4,6 +4,8 @@ This is a standalone laboratory repository. The user explicitly clarified that i
 
 # Autonomous continuation
 
+On 18 September the researcher renamed the top workspace section **Goals, Ideas & Task** and requested the **Lab summary** tab beside Ideas & tasks. Use `docs/LAB-SUMMARY.md` for its read-only inventory and assessment-coverage counting contract. Preserve explicit real/synthetic fixture/control distinctions and unique message denominators. Opening or refreshing the summary never dispatches inference.
+
 The user requested longer rounds without repeated intervention on 15 September 2026. Treat "go next" and equivalent instructions as authorization to complete the next coherent laboratory milestone, including its dependent implementation, appropriate checks, bounded local experiments, analysis, documentation and timestamped session record. Continue through routine intermediate successes and recoverable implementation failures without asking for another "go next". Give concise progress updates while working.
 
 Use the current plan, latest evidence and session records to choose the next useful step. Resolve routine implementation choices autonomously. Before new inference, freeze the relevant protocol, seed allocation, aggregate call budget and failure rules; keep each experimental batch finite and preserve failed or negative outcomes. Save enough state to resume without duplicating generation.

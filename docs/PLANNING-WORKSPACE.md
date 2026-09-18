@@ -1,12 +1,13 @@
-# Purpose, musings & ideas board
+# Goals, Ideas & Task
 
-Purpose & musings is the first workspace item and the default landing page. Its three tabs keep the lab's direction, reflections and actionable work together:
+Goals, Ideas & Task is the first workspace item and the default landing page. Its four tabs keep the lab's direction, reflections and actionable work together:
 
 - **Working purpose** — the evolving research charter and experimental space.
 - **Musings** — attributed questions, hypotheses and reflections, with earlier wording preserved.
 - **Ideas & tasks** — a board with **Ideas → Next → In progress → Done**.
+- **Lab summary** — all indexed experiments, real/synthetic message proportions and source-current assessment coverage. See [the summary guide](LAB-SUMMARY.md).
 
-The Current focus strip appears above all three tabs. It shows up to three active cards and three Next cards, in their board order, with a link to the complete board. Empty In progress means no work has been marked active. A status change records a planning decision; it does not launch an experiment or schedule future work.
+The Current focus strip appears above all four tabs (collapsed on Lab summary to keep the data overview in view). It shows up to three active cards and three Next cards, in their board order, with a link to the complete board. Empty In progress means no work has been marked active. A status change records a planning decision; it does not launch an experiment or schedule future work.
 
 ## Using the board
 
@@ -35,6 +36,6 @@ Cards and their revisions are stored in separate `lab_tasks` and `lab_task_histo
 
 **Export planning & history** downloads the purpose, musings, cards and their complete revision histories. It is a planning export; passage notes and other research annotations retain their existing exports. The private `research/` snapshot includes both new tables through the existing generic notebook exporter and restores them with exact row values. Live edits are immediately local; publishing another GitHub snapshot remains a separate operation.
 
-Routes: `#view=purpose`, `#view=purpose&section=journal`, `#view=purpose&section=tasks`, and `#view=purpose&section=tasks&task=ID`. Empty hashes open Working purpose. Explicit library links use `#view=library`; older filtered transcript links keep working.
+Routes: `#view=purpose&section=summary`, `#view=purpose`, `#view=purpose&section=journal`, `#view=purpose&section=tasks`, and `#view=purpose&section=tasks&task=ID`. Empty hashes open Working purpose. Explicit library links use `#view=library`; older filtered transcript links keep working.
 
 The API preserves existing local-origin and write-token protections. There are no external services, model calls or new dependencies in this feature.
