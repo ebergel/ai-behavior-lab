@@ -2,7 +2,7 @@
 
 The researcher clarified on 17 September that transcripts are nonconfidential plain model output; the repository remains private until the project is ready for publication. Credentials remain excluded.
 
-The private repository includes the evidence and notebook needed to explore this laboratory without the original computer, a reference-project checkout, model servers or API keys. The researcher explicitly authorized publication on 16 September 2026; the latest verified snapshot includes the completed 17 September corpus assessment. It supports reading, annotation and reanalysis. Repeating inference on another machine requires separate model access and runtime qualification.
+The private repository includes the evidence and notebook needed to explore this laboratory without the original computer, a reference-project checkout, model servers or API keys. The researcher explicitly authorized publication on 16 September 2026; the latest verified snapshot includes the completed 17 September corpus assessment and the 18 September planning board. It supports reading, annotation and reanalysis. Repeating inference on another machine requires separate model access and runtime qualification.
 
 ## Included evidence
 
@@ -16,7 +16,7 @@ Corpus saved views reference an immutable matrix snapshot containing all request
 
 The default library contains **472 records**: 400 historical references and 72 laboratory records, including technical checks. The complete catalog also retains 60 synthetic entries and 41 unstarted assessment slots with explicit labels. These totals are an inventory, not counts of comparable experimental replicates. The snapshot includes six assessment screens and four probe batches. Topic atlas has 438 eligible records, 11,204 visible messages, 23 dictionary entries and twelve attributed opening reviews.
 
-`research/notebook/` exports all fourteen SQLite tables as schemas and exact row values. It retains five personal notes, six collections, 28 topic flags, 23 topic definitions, twelve opening reviews, five purpose/musing entries, saved-view tables and every stored revision. Empty tables and deletion history are preserved. `readable.json` also presents parsed notebook content for direct reading on GitHub. A consistent SQLite backup is used to capture the notebook, including committed WAL transactions.
+`research/notebook/` exports all sixteen SQLite tables as schemas and exact row values. It retains five personal notes, six collections, 28 topic flags, 23 topic definitions, twelve opening reviews, five purpose/musing entries, six planning cards, saved-view tables and every stored revision. Empty tables and deletion history are preserved. `readable.json` also presents parsed notebook content for direct reading on GitHub. A consistent SQLite backup is used to capture the notebook, including committed WAL transactions. The 18 September planning snapshot adds `lab_tasks` and `lab_task_history`; all fourteen preceding tables retain exact row values.
 
 The snapshot deliberately excludes credential files, the live SQLite database and indexes, old binary database backups, model weights, vendor dependencies, caches, locks, logs and disposable fixtures. This is a research snapshot, not an image of the entire computer. Original sources are never redacted or rewritten; export stops if its known-credential or token/private-key screening finds a candidate. That bounded screening is not a universal secret detector.
 

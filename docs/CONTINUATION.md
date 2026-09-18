@@ -1,3 +1,11 @@
+## Current milestone · 18 September 2026: planning workspace
+
+**Complete:** [Purpose, musings & ideas board](PLANNING-WORKSPACE.md) is the lab's landing page and first workspace item. Working purpose, Musings and Ideas & tasks share a Current focus strip. The board supports quick capture, workstream/search filters, ordered Ideas → Next → In progress → Done, blockers, completion notes, archive/restore, source-linked cards and attributed revision history. Creating a task from a musing preserves the exact source wording, author and revision.
+
+The five Codex-authored planning seeds capture Gem Finder, candidate qualification, independent topic-score review, balanced factorial design and the parked remote-access idea. A sixth Codex card records this completed interface milestone. All fourteen earlier notebook tables are unchanged; the two task tables are added to the self-contained research snapshot. Browser mutation checks used an isolated notebook. No new inference, public release, remote-access setup or scheduled continuation occurred.
+
+**Next selection:** choose the first task from the board. Gem Finder rubric development and model qualification preparation are the two proposed Next cards. Both remain prospective: model scoring/generation needs its own exact design and finite allocation, and independent validation remains pending. The board records priorities without dispatching work or reopening exhausted budgets. Earlier milestones below retain their historical scope.
+
 ## Current milestone · 17 September 2026: Topic Trajectories and candidate preflight
 
 **Complete:** the new [Topic Trajectories](TOPIC-TRAJECTORIES.md) view reads existing JEV scores along actual paths, links every available scored passage to the reader, separates external events and missing scores, and withholds all 60 reserved validation lineages. The discovery scope is 377 conversations. No new inference or notebook write was performed.

@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-17T21:18:14.340530+00:00",
+  "created_at": "2026-09-18T14:17:42.648489+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -319929,6 +319929,18 @@
       "category": "notebook_table"
     },
     {
+      "path": "notebook/lab_task_history.json",
+      "bytes": 7829,
+      "sha256": "df1b25863fe9d6af3405f0b8bbac36aa34616bafd92df94a052d48b153f15e86",
+      "category": "notebook_table"
+    },
+    {
+      "path": "notebook/lab_tasks.json",
+      "bytes": 7801,
+      "sha256": "0bccc474bf33a98d458416d137b6c3f8773737fb17a38501578a5ddf090cb32b",
+      "category": "notebook_table"
+    },
+    {
       "path": "notebook/notes.json",
       "bytes": 11274,
       "sha256": "3326c0603faee7b26f6207468ff10c29059beadddb3b044d0758950aa77fe01e",
@@ -319978,8 +319990,8 @@
     },
     {
       "path": "notebook/readable.json",
-      "bytes": 549958,
-      "sha256": "a3f49fdc05d6c9f4f7afa91e41f364acb544738338930873413a02539cdc11c4",
+      "bytes": 566467,
+      "sha256": "9f65109f8aade6b7690087998773ec6902d310b7834a2677d412574929b9be1a",
       "category": "notebook_readable"
     },
     {
@@ -323440,6 +323452,8 @@
     "history": 5,
     "lab_musing_history": 5,
     "lab_musings": 5,
+    "lab_task_history": 6,
+    "lab_tasks": 6,
     "notes": 5,
     "research_collections": 6,
     "topic_dictionary": 23,
@@ -323462,5 +323476,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "41fae8aac19effbe2eaafa1de2d324cf059d40107f8668bc2ebf3841d483c963"
+  "bundle_sha256": "bb6853515de32f4be61ac1ac927d526031766e67933895a41645c142855774ab"
 }

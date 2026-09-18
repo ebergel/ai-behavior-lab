@@ -1,0 +1,56 @@
+{
+  "schema": "behaviorlab.lab-tasks-seed/1",
+  "entries": [
+    {
+      "id": "gemfinder20260918",
+      "title": "Gem Finder: define what makes a passage extraordinary",
+      "status": "next",
+      "stream": "tools",
+      "notes": "Start from the researcher's idea of finding the Gems. Separate corpus distinctiveness, surprise relative to preceding replies, conceptual contribution, creative connections, complexity, expressive force and conversational influence. Keep rarity distinct from quality, and uncertainty distinct from originality.\n\nFirst step: collect a few researcher-selected gems, ordinary passages and examples of empty profundity, with short explanations. Draft a small set of scoring axes and a review interface before preparing any new classifier calls.",
+      "finish": "An explicit rubric, attributed example set and reviewable pilot design with a way to compare each axis and inspect its outliers.",
+      "links": [{"kind":"view","id":"trajectories","label":"Topic Trajectories"}],
+      "source": {"kind":"discussion","label":"Codex planning summary of the researcher's Gem Finder proposal; proposed work, not completed scoring."}
+    },
+    {
+      "id": "modelqualification20260918",
+      "title": "Qualify the candidate models for balanced replication",
+      "status": "next",
+      "stream": "experiments",
+      "notes": "Use the candidate audit and native OLMo replacement recorded in design v0.2. Metadata and offline templates have been checked; actual serving qualification remains to be done. Prepare a finite technical freeze covering prompts, seeds, output limits, provenance and failure rules before running it.",
+      "finish": "A recorded qualification decision for each candidate, including failures, with enough provenance to freeze the behavioral study.",
+      "blocker": "New technical seed allocation and aggregate call budget must be frozen before generation.",
+      "links": [{"kind":"report","id":"replication-candidates","label":"Replication candidate audit"},{"kind":"view","id":"coverage","label":"Model & Design Coverage"}],
+      "source": {"kind":"discussion","label":"Codex planning summary of the agreed diversity and balanced-replication workstream."}
+    },
+    {
+      "id": "independentreview20260918",
+      "title": "Independently review topic scores against close reading",
+      "stream": "synthesis",
+      "notes": "Develop the coding guidance on discovery material, then obtain independent readings of the reserved validation targets. Distinguish discussion, evoked experience, asserted experience and denial. Keep the 60 reserved lineages out of development reading, and retain disagreements rather than replacing original scores.",
+      "finish": "Attributed independent ratings, documented blinding and an agreement/error analysis against the existing JEV scores.",
+      "blocker": "Independent reader and finalized coding guidance needed.",
+      "links": [{"kind":"view","id":"jev-atlas","label":"JEV Topic Atlas"}],
+      "source": {"kind":"discussion","label":"Codex planning summary of the pending independent semantic validation."}
+    },
+    {
+      "id": "balancedexperiment20260918",
+      "title": "Freeze the first balanced factorial experiment",
+      "stream": "experiments",
+      "notes": "Choose the primary causal contrasts and precision target, then settle the model panel, disclosures, fresh-root allocation and scheduling. Treat the current six-model design and twenty-roots-per-cell illustration as a draft. Mixed local–cloud pairs, trios and external disruptors remain useful subsequent contrasts.",
+      "finish": "A separately versioned executable freeze with qualified participants, outcomes, analysis plan, seeds, finite budget and failure rules.",
+      "blocker": "Serving qualification, semantic validation and precision decisions remain pending.",
+      "links": [{"kind":"report","id":"balanced-replication-design","label":"Balanced replication design"},{"kind":"report","id":"replication-precision","label":"Replication precision planning"},{"kind":"musing","id":"researchergoals20260916","label":"Whose patterns are we seeing? Start with the small cell"}],
+      "source": {"kind":"discussion","label":"Codex summary connecting the researcher's factorial design goal to the current prospective design."}
+    },
+    {
+      "id": "remoteaccess20260918",
+      "title": "Read and annotate the lab from an iPad or notebook",
+      "stream": "tools",
+      "notes": "Parked infrastructure idea: private remote access to the same Mac-hosted app and notebook, reusable for other Mac Studio apps. The existing plan is retained in TODO.md as REMOTE-ACCESS-01. Resume only when the researcher says the router and hardware are ready and asks to continue.",
+      "finish": "Authenticated remote reading and annotation reach the single live notebook, with tested backup and recovery.",
+      "blocker": "Parked by the researcher until the new router and hardware setup are ready.",
+      "links": [],
+      "source": {"kind":"discussion","label":"Codex summary of TODO.md · REMOTE-ACCESS-01. This card does not activate remote access."}
+    }
+  ]
+}

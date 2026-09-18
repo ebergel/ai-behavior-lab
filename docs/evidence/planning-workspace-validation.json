@@ -1,0 +1,38 @@
+{
+  "schema": "behaviorlab.planning-validation/1",
+  "recorded_by": "Codex",
+  "before_notebook_sha256": "b6b38ae993980bae033b17091a2c07da323c8497a1d1f6197d9e7747529476b0",
+  "after_notebook_sha256": "1c1a87d290a12b9b26042d922b7ec3f8bf886da0e57cd056c649089f09f7be82",
+  "original_tables_preserved": 14,
+  "tables_now": 16,
+  "new_tables": [
+    "lab_tasks",
+    "lab_task_history"
+  ],
+  "task_rows": 6,
+  "task_history_rows": 6,
+  "previous_bundle_sha256": "41fae8aac19effbe2eaafa1de2d324cf059d40107f8668bc2ebf3841d483c963",
+  "bundle_sha256": "bb6853515de32f4be61ac1ac927d526031766e67933895a41645c142855774ab",
+  "snapshot_added": [
+    "notebook/lab_task_history.json",
+    "notebook/lab_tasks.json"
+  ],
+  "snapshot_changed": [
+    "notebook/readable.json"
+  ],
+  "unchanged_original_evidence_files": 45697,
+  "unchanged_transcript_projections": 573,
+  "full_restore_checked_by": "behaviorlab.research_bundle.export_bundle (separate temporary workspace; exact notebook rows and all catalog projections)",
+  "python_tests": 298,
+  "javascript_tests": 46,
+  "new_inference_calls": 0,
+  "browser_checks": [
+    "isolated notebook: capture, move, Done validation, completion, archive/restore",
+    "isolated notebook: create from musing, preserve original wording, inspect history and navigate to original",
+    "live notebook: six attributed cards, Ideas 3 / Next 2 / In progress 0 / Done 1",
+    "live notebook: workstream and text filtering; candidate report opens; no horizontal overflow at 1191px",
+    "empty hash opens Purpose; first workspace link is Purpose; All transcripts still opens the library"
+  ],
+  "completion_card": "bca297f33cf196f14f5de938",
+  "scope": "Planning UI and persistent notebook cards; original annotations, sources, scoring and generation unchanged."
+}

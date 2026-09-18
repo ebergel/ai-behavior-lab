@@ -27,6 +27,7 @@ from . import analysis_corpus
 from .jev_atlas import JevAtlas
 from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
+from .lab_tasks import LabTasks, STATUSES as TASK_STATUSES, STREAMS as TASK_STREAMS
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
 from .topic_trajectories import build_trajectories
@@ -36,7 +37,7 @@ from .runner import campaign_documents, outcome, turn_from
 from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
-REPORTS = [('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
+REPORTS = [('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
            ('opening-partner-design', 'Opening and partner: next study design', 'OPENING-PARTNER-DESIGN.md'),
            ('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
@@ -406,6 +407,7 @@ def make_server(workspace, port=8765):
     analysis=AnalysisWorkspace(workspace,catalog)
     finder_views=FinderViews(notes)
     musings=LabMusings(notes)
+    tasks=LabTasks(notes,musings,studies,catalog,REPORTS)
     def study_summaries():
         members={d['id']:d['runs'] for d in studies.all()}
         return [dict(s,models=sorted({model for member in members[s['id']] for model in
@@ -442,7 +444,7 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
+                if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/tasks.js','/tasks.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/bootstrap':
@@ -489,6 +491,12 @@ def make_server(workspace, port=8765):
                     result=build_workbench(catalog,studies,topic_atlas,q.get('cohort',[''])[0],None if picks is None else [i for i in picks.split(',') if i])
                     return self.send(result,**({'download':'opening-comparison.json'} if path.endswith('/export') else {}))
                 if path=='/api/musings': return self.send({'entries':musings.all(),'kinds':MUSING_KINDS,'statuses':MUSING_STATUSES})
+                if path=='/api/tasks': return self.send({'entries':tasks.all(),'statuses':TASK_STATUSES,'streams':TASK_STREAMS,'choices':tasks.choices()})
+                if path=='/api/tasks/export': return self.send(tasks.export(),download='lab-ideas-and-tasks.json')
+                if path=='/api/planning/export':
+                    return self.send({'schema':'behaviorlab.planning/1','musings':musings.export(),'tasks':tasks.export()},download='lab-purpose-musings-and-tasks.json')
+                if path.startswith('/api/tasks/history/'):
+                    return self.send({'history':tasks.history(path.rsplit('/',1)[-1])})
                 if path=='/api/musings/export': return self.send(musings.export(),download='lab-purpose-and-musings.json')
                 if path.startswith('/api/musings/history/'):
                     return self.send({'history':musings.history(path.rsplit('/',1)[-1])})
@@ -523,13 +531,14 @@ def make_server(workspace, port=8765):
             if not self.allowed(True): return self.send({'error':'Local authenticated request required'},403)
             try:
                 size=int(self.headers.get('Content-Length','0'))
-                limit=524288 if self.path=='/api/studies' else 262144 if self.path=='/api/musings' else 65536
+                limit=524288 if self.path=='/api/studies' else 262144 if self.path in ('/api/musings','/api/tasks') else 65536
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
                 if self.path=='/api/analysis/views': return self.send(analysis.save(data))
                 if self.path=='/api/jev-atlas/prepare': return self.send(jev_atlas.prepare(data,catalog,topic_atlas,studies))
                 if self.path=='/api/jev-atlas/review': return self.send(jev_atlas.save_review(data,catalog))
                 if self.path=='/api/musings': return self.send(musings.save(data,{d['id'] for d in studies.summaries()}))
+                if self.path=='/api/tasks': return self.send(tasks.save(data))
                 if self.path=='/api/finder/views': return self.send(finder_views.save(data))
                 if self.path=='/api/studies': return self.send(studies.save(data,catalog))
                 if self.path=='/api/topics': return self.send(topics.save(data,catalog))
