@@ -5,7 +5,14 @@ from statistics import mean
 import math
 
 from .jev_atlas import read_record
-from .discourse_probe import ROOT, SPEC, VARIANTS, receipts, summary
+from . import discourse_probe, discourse_portrait_probe
+from .discourse_probe import ROOT, SPEC, VARIANTS
+
+def release(workspace):
+    return discourse_portrait_probe if (Path(workspace)/discourse_portrait_probe.ROOT/"plan.json").exists() else discourse_probe
+
+def export_plan(workspace):
+    return read_record(Path(workspace)/release(workspace).ROOT/"plan.json")
 
 
 def correlation(pairs):
@@ -15,32 +22,33 @@ def correlation(pairs):
     return sum((a-mx)*(b-my) for a,b in pairs)/den if den else None
 
 
-def feature_stats(samples,features):
+def feature_stats(samples,features,variants=VARIANTS):
     result=[]
     for feature in features:
         key=feature['id'];conditions={}
-        for variant in VARIANTS:
+        for variant in variants:
             observed=[s for s in samples if key in s['probabilities'][variant]]
             values=[s['probabilities'][variant][key] for s in observed]
             conditions[variant]={'n':len(values),'mean':mean(values) if values else None,
                 'at_least_80':sum(v>=.8 for v in values),
                 'word_correlation':correlation([(s['words'],s['probabilities'][variant][key]) for s in observed])}
         contrasts={}
-        for variant in ('name_only','name_and_definition'):
-            diffs=[s['probabilities'][variant][key]-s['probabilities']['definition_only'][key] for s in samples
-                   if key in s['probabilities'][variant] and key in s['probabilities']['definition_only']]
-            contrasts[variant]={'n':len(diffs),'mean_difference':mean(diffs) if diffs else None,
+        for variant in [v for v in variants if v!='definition_only']:
+            baseline='name_and_definition' if variant=='name_and_portrait' else 'definition_only'
+            diffs=[s['probabilities'][variant][key]-s['probabilities'][baseline][key] for s in samples
+                   if key in s['probabilities'][variant] and key in s['probabilities'][baseline]]
+            contrasts[variant]={'baseline':baseline,'n':len(diffs),'mean_difference':mean(diffs) if diffs else None,
                                'mean_absolute_difference':mean(abs(d) for d in diffs) if diffs else None}
         result.append(dict(feature,conditions=conditions,contrasts=contrasts))
     return result
 
 
 def build(workspace,catalog=None):
-    root=Path(workspace)/ROOT
+    module=release(workspace);variants=module.VARIANTS;root=Path(workspace)/module.ROOT
     if not (root/'plan.json').exists():
         import json
         return {'status':'not_prepared','spec':json.loads(SPEC.read_text()),'samples':[], 'features':[], 'groups':{}}
-    plan=read_record(root/'plan.json');histories,_=receipts(root,plan);execution=summary(root,plan)
+    plan=read_record(root/'plan.json');histories,_=module.receipts(root,plan);execution=module.summary(root,plan)
     by_sample={}
     for item in plan['items']:
         h=histories.get(item['id'],[]);last=h[-1] if h else {}
@@ -48,20 +56,20 @@ def build(workspace,catalog=None):
     samples=[]
     for source in plan['samples']:
         probs={v:{f:a['noul'] for f,a in by_sample[source['id']][v].get('answers',{}).items()}
-               if by_sample[source['id']][v].get('status')=='complete' else {} for v in VARIANTS}
-        sample=dict(source,probabilities=probs,assessment_status={v:by_sample[source['id']][v].get('status','unassessed') for v in VARIANTS})
+               if by_sample[source['id']][v].get('status')=='complete' else {} for v in variants}
+        sample=dict(source,probabilities=probs,assessment_status={v:by_sample[source['id']][v].get('status','unassessed') for v in variants})
         sample['source_current']=None
         if catalog is not None and source['kind']=='transcript':
             run=catalog.runs.get(source['run_id'],{})
             msg=next((m for m in run.get('messages',[]) if m['id']==source['message_id']),{})
             sample['source_current']=run.get('source',{}).get('sha256')==source['source_sha256'] and msg.get('text')==source['text']
         samples.append(sample)
-    groups={kind:feature_stats([s for s in samples if s['kind']==kind],plan['spec']['features']) for kind in ('transcript','synthetic')}
+    groups={kind:feature_stats([s for s in samples if s['kind']==kind],plan['spec']['features'],variants) for kind in ('transcript','synthetic')}
     base=next(s for s in samples if s['id']=='ordinary')
-    cue_differences={s['id']:{v:{k:p-base['probabilities'][v][k] for k,p in s['probabilities'][v].items() if k in base['probabilities'][v]} for v in VARIANTS}
+    cue_differences={s['id']:{v:{k:p-base['probabilities'][v][k] for k,p in s['probabilities'][v].items() if k in base['probabilities'][v]} for v in variants}
                      for s in samples if s['id'] in ('ordinary_borges_cue','ordinary_plato_cue')}
     return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
-            'plan_sha256':plan['sha256'],'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
+            'plan_sha256':plan['sha256'],'root':module.ROOT,'variants':list(variants),'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
             'budget':plan['budget'],'selection':{k:v for k,v in plan['selection'].items() if k!='reserved_lineages'},
             'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,
             'word_band_counts':dict(Counter('1–50' if s['words']<=50 else '51–100' if s['words']<=100 else '101–150' if s['words']<=150 else '151+' for s in samples if s['kind']=='transcript')),

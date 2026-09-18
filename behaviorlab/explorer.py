@@ -29,7 +29,7 @@ from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
 from .lab_tasks import LabTasks, STATUSES as TASK_STATUSES, STREAMS as TASK_STREAMS
 from .gem_finder import GemFinder
-from .discourse_view import build as discourse_view
+from .discourse_view import build as discourse_view, export_plan as discourse_plan
 from .lab_dictionary import dictionary_catalog
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
@@ -41,7 +41,7 @@ from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
 REPORTS = [
-    ('discourse-lenses','Mind & discourse: classifier screen','MIND-DISCOURSE-PROBE.md'),('gem-finder', 'Gem Finder: pilot and reading guide', 'GEM-FINDER.md'), ('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
+    ('discourse-lenses','Mind & discourse: conceptual portraits','MIND-DISCOURSE-PORTRAITS.md'),('gem-finder', 'Gem Finder: pilot and reading guide', 'GEM-FINDER.md'), ('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
            ('opening-partner-design', 'Opening and partner: next study design', 'OPENING-PARTNER-DESIGN.md'),
            ('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
@@ -450,7 +450,7 @@ def make_server(workspace, port=8765):
             url=urlsplit(self.path); path=url.path
             try:
                 if path=='/api/discourse':return self.send(discourse_view(workspace,catalog))
-                if path=='/api/discourse/export':return self.send({'view':discourse_view(workspace,catalog),'plan':read_json((Path(workspace)/'mind-lenses/discourse-20260918-v1/plan.json').read_text())},download='mind-and-discourse.json')
+                if path=='/api/discourse/export':return self.send({'view':discourse_view(workspace,catalog),'plan':discourse_plan(workspace)},download='mind-and-discourse.json')
                 if path in ('/discourse.js','/discourse.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path == '/api/dictionary': return self.send(dictionary_catalog())
                 if path in ('/gems.js','/gems.css','/dictionary.js','/dictionary.css'):

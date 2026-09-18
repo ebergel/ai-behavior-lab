@@ -1,3 +1,13 @@
+## Prepared · 18 September 2026: all sixteen conceptual portraits
+
+**Implemented and tested:** [Mind & discourse portraits](MIND-DISCOURSE-PORTRAITS.md) adds sixteen conceptual portraits, recognition guidance, attributed reading sources and the preserved procedural definitions. The fourth condition compares names + portraits with names + definitions; the eleven discourse questions remain unchanged references within the altered pack. The interface supports both label and portrait contrasts, four-condition passage tables, profile matrices, length filtering and exact source reading.
+
+**Frozen, not executed:** `mind-lenses/discourse-portraits-20260918-v2`, plan `49f5b17c48e18825b7635c591163e9505cc3806fe1bbe15b7bf28e548de3e0b3`, inherits the exact 48 real targets and 12 synthetic controls. Scope: 240 unique TypeSafe requests, 27 questions each, at most 252 attempts including 12 HTTP 429/529 retries, $2 total cap. The first three question packs are identical to the preserved unexecuted v1 proposal. New v2 replaces, rather than adds to, earlier unrun allocations. All 60 reserved validation lineages stay excluded. No notebook changes.
+
+**Actual blocker:** automatic approval review rejected the first four-request dispatch because it requires explicit confirmation of the expanded 60-text payload and TypeSafe destination. No authorization file, request marker, call or cost exists. The user has been asked to approve the precise 240-request/$2 scope. Do not bypass this review block or interpret another earlier budget as approval. After explicit approval: bind it to this plan, execute its first four technical checks, verify intact valid results, then finish only the remaining finite allocation and analyze the contrasts. No scheduling is active.
+
+Validation: 348 Python and 75 JavaScript tests passed, with browser checks of thinker selection, four-condition columns, separate controls, matrix passage drill-through and unknown scores. Portraits are interpretive proposals; changed definitions and prompt length mean the fourth-condition difference is not an isolated literary-wording effect. Researcher evaluation of classifier usefulness remains pending.
+
 ## Prepared · 18 September 2026: Mind & discourse classifier
 
 **Implemented:** a separate Mind & discourse workspace view with a 27-feature codebook (the researcher’s 16 thinkers/writers plus 11 discourse practices), passage comparison, profile matrix, word/model filters, all three exact question wordings, source navigation with return state, and export. This is descriptive multi-label classification; no personal passage ratings are required to start. Existing Gem scores and all notebook tables remain unchanged.

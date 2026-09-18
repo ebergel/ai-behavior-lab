@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-18T19:20:28.253710+00:00",
+  "created_at": "2026-09-18T19:37:15.509181+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -328391,6 +328391,69 @@
       "workspace_path": "mind-lenses/discourse-20260918-v1/plan.json"
     },
     {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/portrait-supersession.json",
+      "bytes": 358,
+      "sha256": "7cece8cab746417295ea037d974c8b6934cf8f049754f7da2252b76810b8347d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/portrait-supersession.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/dispatch-proposal.json",
+      "bytes": 684,
+      "sha256": "7600f17b611402c56ce7bf7885f46fc289d3b1a009898a32944dc3602b4220fd",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/dispatch-proposal.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/dispatch-review.json",
+      "bytes": 623,
+      "sha256": "e64a013ee05a4d94c4ab0206d559d82e69824e10171426fcb075f3407fa7d1e2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/dispatch-review.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/common.py",
+      "bytes": 1005,
+      "sha256": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/common.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/discourse-portraits-v2.json",
+      "bytes": 35474,
+      "sha256": "e5d1bec8dd13fa87db8342e25eeffabff3fe31741a25330d63739e1249618a8a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/discourse-portraits-v2.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/discourse_portrait_probe.py",
+      "bytes": 12988,
+      "sha256": "ace62945c3beba644782dac4eddb04429d42386d19b3915e37e67b8caf1a8039",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/discourse_portrait_probe.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/jev_atlas.py",
+      "bytes": 22257,
+      "sha256": "c7e02c9ceb219eeaf007edf9ae71c5e535d546f9c41c8d7ac65e39ddf0f4f76f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/jev_atlas.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/jev_runner.py",
+      "bytes": 6319,
+      "sha256": "63f9f1c11dcd8037f0d893f613baa47da577bbc5128a6fec34a7bb16cc1eafa8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/jev_runner.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/plan.json",
+      "bytes": 235510,
+      "sha256": "d636b68e62226950e2428911df37e5c9d08d51bdf5c856ea540b07f8a5641d78",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/plan.json"
+    },
+    {
       "path": "evidence/mixed-gemma-haiku-20260916-1139/api-export.json",
       "bytes": 112679,
       "sha256": "baac5c708a06946db85a0bdd231779f15f41ddc0f5fa8d49f06b42da19197227",
@@ -337756,5 +337819,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "385b4dba22c651ba6a26f0366daabd1ed51d91d9d573eb76603da62d88ba864c"
+  "bundle_sha256": "3594cc3cc8dff5cedb271286eea530c9e71d26a94a826d9c6cfceaf570716dff"
 }
