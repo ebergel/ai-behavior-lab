@@ -1,3 +1,9 @@
+## Completed dictionary milestone · 18 September 2026: research entities & units
+
+The researcher requested that the clarified vocabulary live in the Lab dictionary. Version `dictionary-2026-09-18-v4` now has **40 entries**, including a **Research entities & units** section of 24 definitions and linked visual relationships. Message, target and context have separate entries; the old passage link explains the legacy wording. Conversation/run, branch/lineage, controls/fixtures and assessment/question/score/request distinctions are explicit. Earlier passage/lineage bookmarks migrate safely and Gem return links remain intact. See [Lab dictionary](LAB-DICTIONARY.md).
+
+No inference, notebook/evidence changes or scientific denominator changes. Next: apply the shared terminology to the other screens after the run-category and participant-message/event counting audit described in [Research entities](RESEARCH-ENTITIES.md).
+
 ## Vocabulary clarification · 18 September 2026: research entities
 
 The researcher identified ambiguity between conversation, message, passage, target and source record. [Research entities v0.1](RESEARCH-ENTITIES.md) proposes **conversation → message → excerpt**, treats “target” as an analysis role, separates context/assessment/question/score/request, and preserves branch, lineage and intervention distinctions. Current Mind/Gem targets are selected messages; their “source records” count source runs. The full library includes technical runs, so renaming all 472 records to conversations would be inaccurate.

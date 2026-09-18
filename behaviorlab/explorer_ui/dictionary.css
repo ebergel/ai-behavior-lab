@@ -9,3 +9,5 @@
 @media(max-width:720px){.dictionary-intro{flex-direction:column}.dictionary-intro .actions{max-width:none}.dictionary-layout{grid-template-columns:1fr}.dictionary-nav{position:static;max-height:260px}.dictionary-entry{padding:22px}.dictionary-entry h2{font-size:25px}.dictionary-definition{font-size:19px}.dictionary-search label{flex:1}.dictionary-search .source-note{width:100%;margin:0}.dictionary-example,.dictionary-limits{padding:18px}}
 
 #dictionary-detail{scroll-margin-top:95px}
+.dictionary-entity-map{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;background:#fff;border:1px solid #dce4dc;border-radius:10px;padding:23px 28px;margin:0 0 26px}.dictionary-entity-map p{line-height:1.8;margin:7px 0 0}.dictionary-entity-map a{color:#70528f;text-underline-offset:4px}.dictionary-entity-map .eyebrow{font-size:10px}.dictionary-entity-map p>span{color:#87977f;margin:0 5px}.dictionary-map-note{grid-column:1/-1;font-size:12px;color:#65766b;border-top:1px solid #e3e9e0;padding-top:14px}
+@media(max-width:720px){.dictionary-entity-map{grid-template-columns:1fr;padding:20px}}

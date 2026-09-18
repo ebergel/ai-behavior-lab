@@ -1,6 +1,6 @@
-# Research entities and units — vocabulary proposal v0.1
+# Research entities and units — vocabulary v1
 
-Status: proposed shared vocabulary, 18 September 2026. This is a semantic clarification and migration specification, not a database migration or a change to frozen assessment inputs. The researcher identified ambiguity between messages, targets, passages and source records in the population banner.
+Status: published in the Lab dictionary, 18 September 2026, following the researcher's request to place the vocabulary there. The dictionary's Research entities & units section is the in-app reference. This document also specifies the pending label migration; it is not a database migration or a change to frozen assessment inputs. The researcher identified ambiguity between messages, targets, passages and source records in the population banner.
 
 ## Evidence hierarchy
 
@@ -25,7 +25,7 @@ Above conversations, a **campaign** groups executions under an operational plan.
 **Target** names an object's role in a particular analysis. It is not another level of text.
 
 - A **message target** is an existing message selected for assessment. The current Mind & discourse and Gem samples select messages. An excerpt target or a whole-conversation target would require its own explicitly declared unit and method.
-- **Context** is other evidence supplied to interpret the target. It is not added to the target's message count. Gem supplies up to two preceding messages; the corpus topic assessment uses two preceding evidence events, including interventions. Mind & discourse currently sends only the target text. Context policies must remain attached to their assessment versions.
+- **Context** is other evidence supplied to interpret the target. It is not added to the target's message count. Gem inherits the corpus topic window of up to two preceding evidence events, including interventions. Mind & discourse currently sends only the target text. Context policies must remain attached to their assessment versions.
 - A **sample** is the frozen set of selected target identities under a stated sampling rule. A **dataset** combines those units with specified metadata and measurements at a known revision. A **filtered subset** is the part currently selected for browsing. Repeated assessments do not expand the sample.
 - An **assessment** evaluates a target using a specified assessor/model, instrument version, wording, context and procedure. Different wording conditions yield different assessments of the same message.
 - A **question / feature** is one dimension assessed. A **score** is the recorded result for that dimension. A vector of 27 scores still describes one message under one assessment condition.
@@ -60,6 +60,6 @@ Distinct units are not necessarily independent observations. Messages in a conve
 
 ## Next implementation boundary
 
-Update the Lab dictionary with separate entries and apply this vocabulary to the banner and analysis screens after adopting the definitions. Audit library participant-message/event counters and run categories before presenting all 472 runs as conversations or harmonizing the 11,245/11,054 totals. Preserve URLs, stable source IDs, exact frozen payloads, scores and saved research notes. A naming change must not silently change eligibility, deduplication or scientific denominators.
+The Lab dictionary now contains the separate entries and linked relationships. Applying the vocabulary to the banner and analysis screens remains next work. Audit library participant-message/event counters and run categories before presenting all 472 runs as conversations or harmonizing the 11,245/11,054 totals. Preserve URLs, stable source IDs, exact frozen payloads, scores and saved research notes. A naming change must not silently change eligibility, deduplication or scientific denominators.
 
 Implementation references: `explorer.py` (`base_summary`, legacy/campaign importers); `population.py`; `jev_coverage.py` (`context_for`, `build_inventory`); `gem_plan.py` (`select_items`, `payload`); `discourse_probe.py` (`prepare`, `payload`); `discourse_view.py`; `topic_atlas.py` (exact-span evidence).

@@ -1,6 +1,14 @@
 # Lab dictionary
 
-The Dictionary is a first-class Explorer section at `#view=dictionary`. Its initial scope is **18 terms**: all eight Gem Finder axes, six terms for interpreting numbers, and four terms for passages and researcher judgments. It is a measurement guide, distinct from the Topic atlas’s evolving topic vocabulary.
+The Dictionary is a first-class Explorer section at `#view=dictionary`. Its current scope is **40 terms**: all eight Gem Finder axes, six terms for interpreting numbers, 24 research entities and units, and two terms for researcher readings and navigation. It is the lab's shared vocabulary and measurement guide, distinct from the Topic atlas’s evolving topic vocabulary.
+
+## Research entities & units
+
+Open `#view=dictionary&category=entities&term=conversation` for the linked evidence hierarchy and assessment relationship. Separate entries cover conversations, runs, messages, turns, excerpts, branches, transcripts, external interventions, lineages, campaigns, studies, analysis targets, context, samples, datasets, subsets, units of analysis, assessments, features, scores, requests/attempts, synthetic controls and source artifacts.
+
+The stable `passage` entry now explains the legacy terminology and links to Message, Excerpt, Analysis target and Context. It no longer combines those concepts in one definition. Existing passage/lineage bookmarks that specify the former `evidence` category migrate to `entities`; other term IDs, Gem links and return state stay intact. Definitions document the actual current methods and keep unknown counts, technical runs, synthetic evidence and statistical independence distinct.
+
+The visual map links **Conversation → Message → Optional excerpt** and **Selected object → Assessment → Feature scores**. Each entry supplies a definition, practical meaning, counting/method rules, limitations and implementation references. [Research entities](RESEARCH-ENTITIES.md) records the terminology and pending application to other screens. This dictionary addition does not rename scientific payloads, recalculate counts or implement the pending run/message eligibility audit.
 
 Each measure includes a plain definition, practical interpretation, lower/higher-value descriptions, an explicitly illustrative example, technical specification, limitations, related terms and implementation provenance. The six JEV entries reproduce the exact assessment question, five rubric criteria and shared scope directly from `behaviorlab/gem_rubric.json`; the guide does not maintain a second copy of the scoring rubric. The computed topic-profile entry specifies its 24-dimensional RMS distance, nearest-per-lineage selection and mean across five neighbors.
 
@@ -31,3 +39,5 @@ This change makes no inference calls or notebook writes. It leaves the research 
 The length-axis extension passed 313 Python and 66 JavaScript tests. Its version is `dictionary-2026-09-18-v2`; the six frozen scoring rubrics are unchanged.
 
 The expansion update (`dictionary-2026-09-18-v3`) clarifies that the original sample has one target per lineage while the expansion permits three across both samples. Word count and correlation definitions now apply to both development samples; the frozen assessment rubric is unchanged. See [Gem expansion](GEM-EXPANSION.md).
+
+The research-entities update (`dictionary-2026-09-18-v4`) adds 22 entries, revises the existing passage and lineage explanations, and organizes the 24 entity/unit definitions into their own section. The six frozen scoring rubrics remain unchanged.

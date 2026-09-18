@@ -36,3 +36,23 @@ test('unknown term/category resolves to a visible canonical entry; empty searche
  assert.equal(c.state.dictionaryFilters.category,'');assert.equal(c.state.dictionaryFilters.term,'surprise');assert.match(main.innerHTML,/aria-current="true"/);assert.match(url(),/term=surprise/);
  c.state.dictionaryFilters=c.dictionaryParams({term:'surprise',q:'no_such_definition'});c.renderDictionary();assert.match(main.innerHTML,/No terms match/);assert.doesNotMatch(main.innerHTML,/id="dictionary-title"/);assert.equal(c.state.dictionaryFilters.term,'');
 });
+test('old passage and lineage bookmarks migrate sections without losing the term or Gem return state',()=>{
+ const {c,main,url}=context();const fromGem=JSON.stringify({batch:'all',item:'saved-message',hidden:true});
+ for(const term of ['passage','lineage']){
+  c.state.dictionaryFilters=c.dictionaryParams({term,category:'evidence',fromGem});c.renderDictionary();
+  assert.equal(c.state.dictionaryFilters.category,'entities');assert.equal(c.state.dictionaryFilters.term,term);
+  assert.equal(new URLSearchParams(url().slice(1)).get('fromGem'),fromGem);
+  assert.match(main.innerHTML,/Research entity relationships/);assert.match(main.innerHTML,/Return to your Gem view/);
+ }
+});
+test('research relationships link canonical entries and retain a filtered Gem return path',()=>{
+ const {c,main}=context();const fromGem=JSON.stringify({model:'a',item:'one'});
+ c.state.dictionaryFilters=c.dictionaryParams({term:'message',category:'entities',fromGem});c.renderDictionary();
+ assert.match(main.innerHTML,/id="dictionary-title">Message</);
+ for(const id of ['conversation','message','excerpt','target','assessment','score','unit-of-analysis']){
+  const urls=[...main.innerHTML.matchAll(/href="([^"]+)"/g)].map(m=>m[1].replace(/&amp;/g,'&'));
+  assert.ok(urls.some(u=>{const p=new URLSearchParams(u.slice(1));return p.get('term')===id&&p.get('category')==='entities'&&p.get('fromGem')===fromGem;}));
+ }
+ const entities=c.dictionaryMatches(catalog.entries,{q:'',category:'entities'});
+ assert.equal(entities[0].id,'conversation');assert.equal(entities.length,24);
+});

@@ -1,12 +1,13 @@
 {
   "schema": "behaviorlab.lab-dictionary/1",
-  "version": "dictionary-2026-09-18-v3",
+  "version": "dictionary-2026-09-18-v4",
   "author": "Codex",
-  "scope": "Gem Finder measures and the terms needed to interpret them. An expandable reference for the laboratory; distinct from the Topic atlas’s topic vocabulary.",
+  "scope": "Research entities, units of analysis, Gem Finder measures and score interpretation. A shared reference for the laboratory; distinct from the Topic atlas’s topic vocabulary.",
   "categories": [
     {"id":"measures", "title":"Gem Finder measures", "description":"Six assessed qualities, one computed distance and observed word count. No combined gem score."},
     {"id":"scores", "title":"Reading the numbers", "description":"Scales, distributions and relationships."},
-    {"id":"evidence", "title":"Passages & judgments", "description":"What is being assessed, compared and saved."}
+    {"id":"entities", "title":"Research entities & units", "description":"Evidence hierarchy, analysis roles, counting rules and source provenance."},
+    {"id":"evidence", "title":"Researcher readings & navigation", "description":"Personal judgments and browsing labels."}
   ],
   "entries": [
     {
@@ -300,26 +301,6 @@
       "sources":["behaviorlab/gem_finder.py: save", "behaviorlab/explorer_ui/gems.js: gemDetail"]
     },
     {
-      "id":"passage", "title":"Target passage & preceding context", "category":"evidence", "kind":"Assessment unit",
-      "aliases":["message", "turn", "window", "target", "influence"],
-      "definition":"The target is one recorded participant reply. Its preceding context is the earlier text supplied so the assessor can interpret that reply locally.",
-      "method":["The Gem pilot supplies the target and up to two preceding messages on its actual conversation path. It supplies no later replies or human ratings.","Ratings address what the target does in that context. The full conversation remains available for your own broader reading."],
-      "practical":"Open preceding context before interpreting surprise. Open the full conversation when a claim, reference or apparent insight depends on more history.",
-      "limits":["This local window can omit relevant earlier developments.","The current measures do not assess whether an idea influenced later replies. Influence would require a separate definition and assessment."],
-      "related":["surprise","lineage","gem"],
-      "sources":["behaviorlab/gem_plan.py: payload", "behaviorlab/gem_finder.py: item_for_source"]
-    },
-    {
-      "id":"lineage", "title":"Conversation lineage", "category":"evidence", "kind":"Shared ancestry",
-      "aliases":["root", "branch", "independence", "reference pool", "validation"],
-      "definition":"The conversation ancestry used to group related records and branches that share a root.",
-      "method":["The original Gem pilot selects one target per lineage; the expansion allows up to three targets per lineage across both samples. These repeated passages share history. Topic-profile neighbors exclude the target’s own lineage and contribute at most one passage from each other lineage.","Sixty reserved validation lineages are excluded from both development samples’ targets, supplied context and topic-profile reference."],
-      "practical":"Use lineage to avoid treating a shared prefix or related branch as an independent discovery. It is also why a long conversation cannot supply all five nearest neighbors.",
-      "limits":["Different lineages can still share prompts, model families and experimental conditions. Separate ancestry is not sufficient to establish statistical independence."],
-      "related":["profile","passage","correlation"],
-      "sources":["behaviorlab/gem_plan.py: select_items, profile_distance"]
-    },
-    {
       "id":"profile-lead", "title":"Broad profile lead", "category":"evidence", "kind":"Navigation label",
       "aliases":["leading topic", "dominant topic", "broad domain", "filter"],
       "definition":"The broad topic with the highest recorded score for a passage, used as a Gem Finder filter.",
@@ -328,6 +309,765 @@
       "limits":["The lead is not a reviewed initial topic, a mutually exclusive topic assignment or evidence that the dialogue stayed on that topic.","A low or nearly tied maximum is still a maximum; read the actual scores when the distinction matters."],
       "related":["topic-probability","profile","passage"],
       "sources":["behaviorlab/gem_plan.py: select_items", "behaviorlab/explorer_ui/gems.js: gemRows"]
+    },
+    {
+      "id": "conversation",
+      "title": "Conversation",
+      "category": "entities",
+      "kind": "Dialogue unit",
+      "aliases": [
+        "dialogue",
+        "chat"
+      ],
+      "definition": "One initiated dialogue with a participant roster, experimental setup and recorded history. Its history can include alternative continuations.",
+      "practical": "Say 48 messages from 48 conversations when each selected reply came from a different dialogue. Count the dialogue separately from its messages.",
+      "method": [
+        "Conversation membership is established from its recorded run and source identity. Topic changes do not create new conversations.",
+        "A conversation can have more than two participants, external interventions or an incomplete ending. Its setup and status remain attached."
+      ],
+      "limits": [
+        "A technical run or synthetic fixture must not silently become a real conversation in a scientific denominator.",
+        "A new branch or a repeated assessment of a reply does not create an independent conversation."
+      ],
+      "related": [
+        "run",
+        "message",
+        "branch",
+        "transcript",
+        "lineage"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py"
+      ]
+    },
+    {
+      "id": "run",
+      "title": "Run",
+      "category": "entities",
+      "kind": "Execution record",
+      "aliases": [
+        "source record",
+        "run_id",
+        "technical check"
+      ],
+      "definition": "A recorded execution with a setup and outcomes. A conversational run contains a dialogue; a technical run records an integration or qualification check.",
+      "practical": "Use runs for library totals that include both conversations and technical checks. State which kinds are included before comparing counts.",
+      "method": [
+        "The catalog identifies a run with run_id. A campaign journal can contain several run roots; a source file is not necessarily one run.",
+        "The population banner currently counts started nonsynthetic runs, with synthetic fixtures and unstarted slots reported separately."
+      ],
+      "limits": [
+        "An unfinished or short run is still a run. It is not automatically an eligible conversation for every analysis."
+      ],
+      "related": [
+        "conversation",
+        "campaign",
+        "source-artifact",
+        "synthetic-control"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py: load_campaign",
+        "behaviorlab/population.py"
+      ]
+    },
+    {
+      "id": "message",
+      "title": "Message",
+      "category": "entities",
+      "kind": "Recorded text unit",
+      "aliases": [
+        "reply",
+        "utterance",
+        "message_id"
+      ],
+      "definition": "One recorded contribution by a regular conversation participant. It may contain one sentence or many paragraphs.",
+      "practical": "Use message as the countable unit for whole replies. A selected full reply in Mind & discourse or Gem Finder is still a message.",
+      "method": [
+        "Locate a message using its run/conversation ID, message ID and source revision. Identical text generated at different positions remains distinct evidence.",
+        "A capped or partial output remains a recorded message with a status flag. Visible reply text and separately recorded reasoning are fields of the record; they do not add two participant messages."
+      ],
+      "limits": [
+        "A scheduled position without an available reply is not an observed message. Empty recorded text, missing output and partial output need explicit eligibility rules.",
+        "External interventions have their own role and must not be folded into regular participant-message counts."
+      ],
+      "related": [
+        "conversation",
+        "turn",
+        "excerpt",
+        "target",
+        "intervention",
+        "source-artifact"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py: base_summary",
+        "behaviorlab/jev_coverage.py: build_inventory"
+      ]
+    },
+    {
+      "id": "turn",
+      "title": "Turn / scheduled position",
+      "category": "entities",
+      "kind": "Schedule position",
+      "aliases": [
+        "position",
+        "round",
+        "scheduled turn"
+      ],
+      "definition": "A position in the conversation schedule at which a participant is expected to contribute.",
+      "practical": "Use turn numbers to locate the sequence. Use message IDs to identify actual evidence, especially in branched conversations.",
+      "method": [
+        "A turn can remain pending, be blocked or have an unresolved response. Scheduled positions and recorded messages therefore have different denominators.",
+        "Turn numbers may recur across branches. The term does not mean a pair of replies or a complete multi-participant round."
+      ],
+      "limits": [
+        "Do not convert planned turns into observed messages or treat missing output as a negative topic result."
+      ],
+      "related": [
+        "message",
+        "branch",
+        "missing"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py: load_campaign"
+      ]
+    },
+    {
+      "id": "excerpt",
+      "title": "Excerpt",
+      "category": "entities",
+      "kind": "Bounded text selection",
+      "aliases": [
+        "span",
+        "quotation",
+        "quote",
+        "text selection"
+      ],
+      "definition": "An explicitly bounded selection of text within one recorded message.",
+      "practical": "Use excerpt for a quoted sentence or selected paragraph; use message when the whole recorded reply is the object being analyzed.",
+      "method": [
+        "Preserve the source run, message ID, source revision, exact quotation and start/end boundaries. Current saved span checks use Python string positions (Unicode code points), not bytes.",
+        "A multi-message selection needs explicit ordered membership and boundaries. It must not be inferred from an unqualified passage label."
+      ],
+      "limits": [
+        "Several excerpts from one message are not independent replies. New excerpt scoring requires its own declared assessment unit."
+      ],
+      "related": [
+        "message",
+        "target",
+        "source-artifact",
+        "passage"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/topic_atlas.py: evidence"
+      ]
+    },
+    {
+      "id": "branch",
+      "title": "Branch & conversation path",
+      "category": "entities",
+      "kind": "History relationship",
+      "aliases": [
+        "continuation",
+        "parent",
+        "shared prefix"
+      ],
+      "definition": "A branch is an alternative continuation from an existing point in a conversation. A path follows one ordered history through that conversation.",
+      "practical": "Read a message along its actual path. Count shared earlier messages once when summarizing unique messages across branches.",
+      "method": [
+        "Where ancestry is recorded, message parent IDs identify the actual path. A linear transcript can instead carry one ordered history.",
+        "The context builder follows recorded ancestry and includes intervening external events."
+      ],
+      "limits": [
+        "Two branches sharing earlier messages are not two independent dialogue histories. Turn number alone cannot identify a branch message."
+      ],
+      "related": [
+        "conversation",
+        "message",
+        "turn",
+        "context",
+        "lineage"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/jev_coverage.py: context_for",
+        "behaviorlab/topic_trajectories.py: path_messages"
+      ]
+    },
+    {
+      "id": "transcript",
+      "title": "Transcript",
+      "category": "entities",
+      "kind": "Evidence representation",
+      "aliases": [
+        "dialog",
+        "transcript file"
+      ],
+      "definition": "The recorded representation of a conversation or one selected path through it.",
+      "practical": "Open the transcript to read selected messages in their surrounding dialogue and inspect the recorded setup.",
+      "method": [
+        "A transcript view can contain participant messages and external events. Display choices must retain their roles.",
+        "Alternative transcript views and exports can represent the same underlying conversation."
+      ],
+      "limits": [
+        "A transcript file or another rendering does not automatically create an additional conversation or experimental replicate."
+      ],
+      "related": [
+        "conversation",
+        "message",
+        "branch",
+        "source-artifact"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py"
+      ]
+    },
+    {
+      "id": "intervention",
+      "title": "External intervention",
+      "category": "entities",
+      "kind": "External event",
+      "aliases": [
+        "observer",
+        "disruption",
+        "external participant"
+      ],
+      "definition": "An event introduced from outside the regular participant roster to affect a conversation.",
+      "practical": "Distinguish an external model disrupting a dialogue from a third model participating in its regular exchange.",
+      "method": [
+        "Record the external role, event kind, source/model, content and position where available. Historical recipient labels such as X or Y do not by themselves establish participant status.",
+        "An intervention can enter the context for a later message while remaining separate from regular participant-message counts."
+      ],
+      "limits": [
+        "An external contribution does not automatically increase the number of regular participants. Missing historical metadata stays unknown."
+      ],
+      "related": [
+        "conversation",
+        "message",
+        "context",
+        "branch"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/jev_coverage.py: build_inventory, context_for"
+      ]
+    },
+    {
+      "id": "lineage",
+      "title": "Conversation lineage",
+      "category": "entities",
+      "kind": "Operational grouping",
+      "aliases": [
+        "root",
+        "ancestry",
+        "independence"
+      ],
+      "definition": "The laboratory grouping used to keep shared ancestry and identical recorded conversation structures together for sampling and comparison.",
+      "practical": "Use lineage to recognize related evidence when sampling or splitting development and validation data. Several messages from one lineage share history.",
+      "method": [
+        "The current coverage inventory computes its grouping from models, prompt and recorded message structure, including IDs, parents, speakers, text and status. It preserves the frozen rule; it is not a newly verified historical genealogy.",
+        "The original Gem pilot selects one message per lineage. Its expansion permits up to three across both samples. Profile neighbors exclude the target lineage and use at most one neighbor from each other lineage."
+      ],
+      "limits": [
+        "Distinct run IDs do not necessarily establish distinct lineages. A source-run count must not be relabeled as a lineage count.",
+        "Different lineages can share models, prompts and experimental conditions. Distinct ancestry alone does not establish statistical independence."
+      ],
+      "related": [
+        "conversation",
+        "branch",
+        "run",
+        "sample",
+        "profile"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/jev_coverage.py: build_inventory",
+        "behaviorlab/gem_plan.py: select_items, profile_distance"
+      ]
+    },
+    {
+      "id": "campaign",
+      "title": "Campaign",
+      "category": "entities",
+      "kind": "Execution grouping",
+      "aliases": [
+        "protocol",
+        "execution plan"
+      ],
+      "definition": "A group of runs organized under an operational plan, with a defined scope and execution rules.",
+      "practical": "Use campaign to identify how related runs were generated, then inspect each run and its actual outcomes.",
+      "method": [
+        "Retain the protocol, model/configuration identities, allocation and outcome records used by that campaign.",
+        "A campaign can contain several conversational roots and conditions. A journal can store more than one run."
+      ],
+      "limits": [
+        "A campaign is not necessarily one conversation, one model or one experimental condition."
+      ],
+      "related": [
+        "run",
+        "conversation",
+        "study",
+        "source-artifact"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py: load_campaign"
+      ]
+    },
+    {
+      "id": "study",
+      "title": "Study / research collection",
+      "category": "entities",
+      "kind": "Research grouping",
+      "aliases": [
+        "research collection",
+        "study"
+      ],
+      "definition": "A curated grouping of evidence and findings around a research question. It can gather conversations from different campaigns.",
+      "practical": "Use a study to keep relevant conversations, observations and notes together without changing the source evidence.",
+      "method": [
+        "Collection membership is a saved selection. It does not create new source conversations.",
+        "Keep the collection purpose, membership and attributed findings separate from the execution plan that generated the data."
+      ],
+      "limits": [
+        "A research collection is not automatically a randomized experiment or representative sample."
+      ],
+      "related": [
+        "campaign",
+        "conversation",
+        "sample",
+        "dataset"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/exploration_collections.py"
+      ]
+    },
+    {
+      "id": "target",
+      "title": "Analysis target",
+      "category": "entities",
+      "kind": "Role in an analysis",
+      "aliases": [
+        "target passage",
+        "selected object"
+      ],
+      "definition": "The object selected for a particular analysis: a message, an excerpt or a whole conversation, as declared by that method.",
+      "practical": "Read target as selected for assessment. In current Mind & discourse and Gem samples, the targets are messages; target is not an extra textual level.",
+      "method": [
+        "Record the target unit, source identity, exact selected content and selection method. Current message targets retain run_id, message_id and source_sha256.",
+        "Repeated wording conditions, question packs or assessors evaluate the same target without adding messages to its sample."
+      ],
+      "limits": [
+        "Future excerpt-level or conversation-level scoring needs a declared unit and procedure. Existing scores must not silently be reinterpreted at those levels."
+      ],
+      "related": [
+        "message",
+        "excerpt",
+        "conversation",
+        "assessment",
+        "context",
+        "unit-of-analysis"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/gem_plan.py: select_items",
+        "behaviorlab/discourse_probe.py: prepare"
+      ]
+    },
+    {
+      "id": "context",
+      "title": "Context / assessment window",
+      "category": "entities",
+      "kind": "Supporting evidence",
+      "aliases": [
+        "preceding context",
+        "window",
+        "history"
+      ],
+      "definition": "Additional evidence supplied to an assessor to help interpret the selected target. A window comprises that target and its declared context.",
+      "practical": "Check what the assessor could see before interpreting a score. The context does not add extra targets to the sample.",
+      "method": [
+        "Gem Finder inherits the corpus target window: the selected message plus up to two preceding evidence events on its actual path. These can include participant messages or external interventions. Mind & discourse currently supplies only the selected message text.",
+        "The source plan fixes the exact context policy and text. Later replies and the full conversation are not implied by a local window."
+      ],
+      "limits": [
+        "The same message assessed with different context can yield different results. Context policies from different assessment versions must not be merged silently."
+      ],
+      "related": [
+        "target",
+        "message",
+        "intervention",
+        "assessment",
+        "surprise"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/gem_plan.py: payload",
+        "behaviorlab/jev_coverage.py: context_for",
+        "behaviorlab/discourse_probe.py: payload"
+      ]
+    },
+    {
+      "id": "sample",
+      "title": "Assessment sample",
+      "category": "entities",
+      "kind": "Selected evidence set",
+      "aliases": [
+        "sampling frame",
+        "development sample"
+      ],
+      "definition": "The set of target identities selected under a stated sampling rule for an assessment.",
+      "practical": "Report the number and kind of selected objects, such as 48 messages, and separately how many conversations supplied them.",
+      "method": [
+        "Frozen samples preserve target membership, source revisions, selection rules and exclusions. Multiple assessments of an existing target do not enlarge that sample.",
+        "Different samples may include the same message. Their counts cannot simply be added without checking identities."
+      ],
+      "limits": [
+        "A development sample or availability-limited selection is not automatically representative of the full library."
+      ],
+      "related": [
+        "target",
+        "dataset",
+        "subset",
+        "lineage",
+        "synthetic-control"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/gem_plan.py: select_items",
+        "behaviorlab/discourse_probe.py: select"
+      ]
+    },
+    {
+      "id": "dataset",
+      "title": "Analysis dataset",
+      "category": "entities",
+      "kind": "Versioned analysis table",
+      "aliases": [
+        "matrix",
+        "analysis table",
+        "snapshot"
+      ],
+      "definition": "A defined set of analysis units together with their metadata and measurements at a specified revision.",
+      "practical": "Choose the dataset before interpreting a filter count. A message table and a conversation summary have different units even when they use the same evidence.",
+      "method": [
+        "Record the unit of analysis, source/assessment versions and dataset fingerprint. Current corpus analysis joins question packs to the same message identity.",
+        "A dataset can cover a full eligible frame or a selected sample. Loading a new score snapshot is distinct from filtering existing rows."
+      ],
+      "limits": [
+        "Rows with different units cannot be pooled as if each were one message. Overlapping datasets are not disjoint populations."
+      ],
+      "related": [
+        "unit-of-analysis",
+        "sample",
+        "subset",
+        "assessment",
+        "source-artifact"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/analysis_corpus.py"
+      ]
+    },
+    {
+      "id": "subset",
+      "title": "Filtered subset",
+      "category": "entities",
+      "kind": "Current view selection",
+      "aliases": [
+        "filter",
+        "population",
+        "cohort",
+        "denominator"
+      ],
+      "definition": "The part of the selected sample or dataset that satisfies the active population filters.",
+      "practical": "Read the current subset against its named base, for example 3 messages from a 48-message assessment sample.",
+      "method": [
+        "Population counts cover all matching units before pagination. Sorting, choosing visible features or changing display style alone does not create a smaller population.",
+        "Topic thresholds, model, length and other actual filters may restrict the subset. A separate cell selection for close reading can be smaller still."
+      ],
+      "limits": [
+        "A threshold-selected subset is not a new independently sampled experiment. State unknown-score handling and the denominator used for percentages."
+      ],
+      "related": [
+        "dataset",
+        "sample",
+        "unit-of-analysis",
+        "missing"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer_ui/population.js",
+        "web/analysis/main.jsx"
+      ]
+    },
+    {
+      "id": "unit-of-analysis",
+      "title": "Unit of analysis",
+      "category": "entities",
+      "kind": "Counting contract",
+      "aliases": [
+        "observation",
+        "replicate",
+        "denominator",
+        "analysis unit"
+      ],
+      "definition": "The kind of object represented by one observation in an analysis: for example a message, an excerpt or a conversation.",
+      "practical": "State the unit with every count and percentage. Messages, conversations, assessments and feature scores answer different counting questions.",
+      "method": [
+        "Declare the unit, target identity, eligibility rules, dataset/sample and actual filters. If messages are aggregated by conversation, state the aggregation rule.",
+        "A message-level table can contain repeated observations within each conversation. Experimental assignment and statistical dependence must be specified separately from the displayed row unit."
+      ],
+      "limits": [
+        "A distinct row does not establish an independent experimental replicate. Branches share prefixes; messages share history; conversations can share model and setup."
+      ],
+      "related": [
+        "conversation",
+        "message",
+        "excerpt",
+        "target",
+        "sample",
+        "dataset",
+        "subset",
+        "lineage"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/analysis_corpus.py",
+        "docs/POPULATION-CONTEXT.md"
+      ]
+    },
+    {
+      "id": "assessment",
+      "title": "Assessment",
+      "category": "entities",
+      "kind": "Evaluation event",
+      "aliases": [
+        "evaluation",
+        "classifier reading",
+        "wording condition"
+      ],
+      "definition": "An evaluation of a selected object under a specified assessor, instrument version, wording, context and procedure.",
+      "practical": "Keep the assessed message count separate from the number of evaluations. Four wording conditions evaluate one message four ways.",
+      "method": [
+        "Link assessments to their target identity and exact question/context specification, assessor model and recorded outcomes.",
+        "An assessment can produce a vector of feature scores. Operational question packs may require more than one request to assemble that vector."
+      ],
+      "limits": [
+        "More assessments do not create more independent messages. A failed call provides no valid score and does not establish a negative label."
+      ],
+      "related": [
+        "target",
+        "context",
+        "feature",
+        "score",
+        "request"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/discourse_view.py",
+        "behaviorlab/analysis_corpus.py"
+      ]
+    },
+    {
+      "id": "feature",
+      "title": "Feature / assessment question",
+      "category": "entities",
+      "kind": "Measured dimension",
+      "aliases": [
+        "question",
+        "dimension",
+        "construct",
+        "topic"
+      ],
+      "definition": "A feature is a dimension to assess, such as a topic or discourse pattern. A question specifies how the instrument operationalizes that dimension.",
+      "practical": "A row can have 27 feature scores while still representing one assessed message. Different wording can change how a feature is measured.",
+      "method": [
+        "Preserve stable feature/question IDs, definitions, wording conditions and instrument versions alongside results.",
+        "Features may overlap or all be absent. A feature family groups dimensions for navigation or a specified summary."
+      ],
+      "limits": [
+        "A familiar feature name alone does not guarantee that different instruments measure the same construct."
+      ],
+      "related": [
+        "assessment",
+        "score",
+        "topic-probability",
+        "scaled-score"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/discourse_probe.py: questions",
+        "behaviorlab/jev_atlas.py"
+      ]
+    },
+    {
+      "id": "score",
+      "title": "Score / measurement result",
+      "category": "entities",
+      "kind": "Recorded result",
+      "aliases": [
+        "measurement",
+        "rating result",
+        "feature vector"
+      ],
+      "definition": "The recorded value for one defined measure on an analysis unit, with its scale and provenance.",
+      "practical": "Distinguish a JEV yes-probability, a Gem expected rubric level and a derived mean. They can share a display range while answering different questions.",
+      "method": [
+        "Interpret an assessed score with its target, feature, assessor and procedure. Derived summaries also need an explicit calculation and coverage count.",
+        "Missing results remain unknown; observed zero remains a value. A score vector contains several measurements of the same unit."
+      ],
+      "limits": [
+        "Score count is not message count. A high value does not by itself establish truth, originality, calibration or personal value."
+      ],
+      "related": [
+        "feature",
+        "assessment",
+        "scaled-score",
+        "topic-probability",
+        "missing"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/lab_dictionary.py",
+        "behaviorlab/discourse_view.py"
+      ]
+    },
+    {
+      "id": "request",
+      "title": "API request & attempt",
+      "category": "entities",
+      "kind": "Execution accounting",
+      "aliases": [
+        "call",
+        "dispatch",
+        "retry",
+        "receipt"
+      ],
+      "definition": "A logical request specifies an intended API payload. An attempt is a recorded dispatch of that request; it can succeed, fail or remain unresolved.",
+      "practical": "Use request and attempt counts to understand execution and cost. Use message counts to describe the evidence sample.",
+      "method": [
+        "A request may bundle many feature questions, or a question set may be divided into packs. Allowed retries add attempts without creating new target messages.",
+        "Keep payload identity, response/receipt, status, usage and retry authorization attached to the frozen execution plan."
+      ],
+      "limits": [
+        "Request, assessment, score and target counts need not be equal. Unknown-cost outcomes must not be interpreted as free or successful."
+      ],
+      "related": [
+        "assessment",
+        "feature",
+        "score",
+        "target",
+        "source-artifact"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/discourse_probe.py",
+        "behaviorlab/jev_corpus.py"
+      ]
+    },
+    {
+      "id": "synthetic-control",
+      "title": "Synthetic control text & fixture run",
+      "category": "entities",
+      "kind": "Constructed evidence",
+      "aliases": [
+        "control",
+        "synthetic fixture",
+        "authored text",
+        "test data"
+      ],
+      "definition": "A synthetic control text is an authored input used to examine a classifier. A synthetic fixture run is constructed execution data used to test the software.",
+      "practical": "Keep classifier controls separate from model-generated conversation messages and from engineering fixtures. They serve different purposes.",
+      "method": [
+        "Mind & discourse contains Codex-authored control texts alongside its separate transcript sample. Synthetic fixture runs are a different library category.",
+        "Keep origin, author and intended check attached to constructed evidence, and use separate denominators."
+      ],
+      "limits": [
+        "An intended positive or negative control is not independent human validation. Synthetic data must not be counted as observed model behavior."
+      ],
+      "related": [
+        "sample",
+        "target",
+        "run",
+        "assessment"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/discourse_probe.py",
+        "behaviorlab/population.py"
+      ]
+    },
+    {
+      "id": "source-artifact",
+      "title": "Source artifact & revision",
+      "category": "entities",
+      "kind": "Evidence provenance",
+      "aliases": [
+        "source record",
+        "file",
+        "checksum",
+        "source_sha256",
+        "provenance"
+      ],
+      "definition": "A source artifact is an original file, journal or response receipt. Its revision is the particular version identified by a checksum or other recorded identity.",
+      "practical": "Use source artifacts to trace a displayed message or score back to evidence. Do not use source-file totals as conversation totals.",
+      "method": [
+        "Preserve artifact bytes, source hashes and stable run/message references. One journal can represent several runs; several artifacts can document one run.",
+        "The population banner currently uses source records for distinct run IDs. That display label does not count files or another unit inside a conversation."
+      ],
+      "limits": [
+        "Changing a display name does not change source identity. If source text changes, an old score must not silently attach to the new text."
+      ],
+      "related": [
+        "run",
+        "message",
+        "excerpt",
+        "dataset",
+        "missing"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/explorer.py",
+        "behaviorlab/target_topics.py"
+      ]
+    },
+    {
+      "id": "passage",
+      "title": "Passage (legacy term)",
+      "category": "entities",
+      "kind": "Terminology mapping",
+      "aliases": [
+        "target passage",
+        "passage",
+        "window"
+      ],
+      "definition": "An older reading label whose precise unit depends on the saved method. In the current Gem Finder and Mind & discourse samples, a target passage is one selected recorded message.",
+      "practical": "When a count says passages, check the method. Use messages for whole recorded replies and excerpts for explicit text selections. Use target to describe which object is being assessed.",
+      "method": [
+        "The former combined Target passage & preceding context entry is now separated into Message, Analysis target and Context entries. This stable passage link remains available.",
+        "Historical plans and exact assessment questions retain their original wording. This terminology guide does not change their text, boundaries or IDs."
+      ],
+      "limits": [
+        "Passage alone does not specify a paragraph, full message, excerpt or context window. It should not be used as an unspecified counting unit."
+      ],
+      "related": [
+        "message",
+        "excerpt",
+        "target",
+        "context"
+      ],
+      "sources": [
+        "docs/RESEARCH-ENTITIES.md",
+        "behaviorlab/gem_plan.py: payload",
+        "behaviorlab/discourse_probe.py: payload"
+      ]
     }
   ]
 }
