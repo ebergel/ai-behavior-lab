@@ -1,3 +1,7 @@
+## UI refinement · 18 September 2026: word count in Gem Finder
+
+**Complete:** [word count](GEM-FINDER.md#length-as-a-possible-confounder) is the eighth matrix axis, with an independent count scale, focused length–score plots, Pearson r/n, sorting, fixed-on-selection word-bin bounds and inclusive minimum/maximum word filters. The Dictionary now has 18 terms, including the exact whitespace-count definition and limits of interpreting length effects. No rubric revision, score adjustment, inference, notebook or research snapshot changes. Next: collect researcher examples of brief insights and compare within length ranges and models before any revised rubric.
+
 ## UI refinement · 18 September 2026: Lab dictionary
 
 **Complete:** a first-class [Lab dictionary](LAB-DICTIONARY.md) explains all seven Gem Finder measures and ten supporting concepts. Searchable entries provide plain definitions, practical interpretations, technical specifications, exact canonical rubric levels, illustrative examples, boundaries and related terms. Links from matrix names and rating panels preserve the Gem view on return. This is documentation and navigation over existing measures; no new scoring, notebook revisions or research snapshot changes. Researcher example collection remains the next substantive measurement-development step.

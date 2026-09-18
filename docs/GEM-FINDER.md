@@ -6,6 +6,7 @@ Gem Finder is a separate discovery notebook: find passages worth reading, compar
 
 - Six provisional JEV ratings: conversational surprise, conceptual contribution, creative connection, expressive force, conceptual complexity, and substance & specificity.
 - A seventh, computed view: topic-profile distance from passages in other conversation lineages, using existing broad-domain scores.
+- An eighth axis: observed word count, with its own numeric range, sorting and inclusive minimum/maximum filters.
 - An interactive two-axis plot, clickable distribution bins, sortable passage list, highest/lowest ordering, model/profile-lead/search filters, and a reading queue.
 - Exact passage, two preceding messages, recorded setup, source-conversation navigation and neighboring topic profiles. Source navigation preserves the return selection.
 - Personal verdict, exact quoted phrase, explanation, optional six-axis rubric ratings, revision history and export. Researcher and Codex readings remain separate; only the researcher’s verdict contributes to “gems kept by you.”
@@ -15,15 +16,27 @@ Choose **Codex development examples** in Reading queue to see four contrasting r
 
 ## Scatterplot matrix
 
-Choose **Scatterplot matrix · all measures** to view all seven measures together: 42 ordered scatterplots and seven diagonal histograms. Columns define horizontal axes and rows define vertical axes. Every plotted point opens its exact passage, and the selected passage is highlighted throughout the matrix. Choose the **r / ↗ header** of any cell to enlarge that pair in the existing plot and distribution view. The view, ranges and passage selection are carried in the URL and preserved when returning from a transcript.
+Choose **Scatterplot matrix · all measures** to view all eight axes together: 56 ordered scatterplots and eight diagonal histograms. Columns define horizontal axes and rows define vertical axes. Every plotted point opens its exact passage, and the selected passage is highlighted throughout the matrix. Choose the **r / ↗ header** of any cell to enlarge that pair in the existing plot and distribution view. The view, ranges and passage selection are carried in the URL and preserved when returning from a transcript.
 
 The matrix uses the current model, profile-lead, reading-queue, text and histogram-bin filters. Enlarging a different pair retains an active bin on its original measure, shown in the Axis filter chip. Clear the chip to widen the sample. Changing the horizontal axis directly in the focused view resets that axis filter, as before.
 
-**Full scale** uses 0–100 throughout. **Observed ranges** rounds each measure's filtered observed minimum/maximum outwards to ten-unit boundaries; constant axes retain a nonzero display range and empty axes use 0–100. The same range applies to a measure in every row/column, with bounds printed beside its labels. Histograms use ten equal-width bins in the displayed range; each is scaled to its own maximum count.
+**Full scale** uses 0–100 for the six ratings and profile distance. Word count uses zero to a rounded upper count, without clipping or rescaling to 100. **Observed ranges** rounds each measure's filtered observed minimum/maximum outwards: ten-unit boundaries for scores, a magnitude-appropriate integer step for words. Constant axes retain a nonzero display range; empty axes use 0–100 for scores and 0–10 for words. The same range applies to a measure in every row/column, with bounds printed beside its labels. Histograms use ten equal-width bins in the displayed range; each is scaled to its own maximum count.
 
 Each scatterplot reports Pearson **r** and the number of observed paired scores **n**. Missing/stale values are omitted per pair, while zero remains observed. Correlation is unavailable for fewer than three pairs or a constant measure. These are descriptive associations, not significance tests or proof of independent constructs. Topic-profile distance remains in distance units. Hiding model scores also hides the entire matrix, its controls, correlations and ranges. Matrix headers support keyboard activation; individual passages are keyboard-accessible in the enlarged plot or reading list.
 
 The matrix reads the existing 100-passage pilot in the browser and makes no new model calls or notebook changes.
+
+## Length as a possible confounder
+
+Choose **Explore length & scores** to put word count on the horizontal axis and contribution on the vertical axis. Change the vertical measure to expression, complexity, substance or any other axis. Both the focused plot and matrix show Pearson r and the number of paired observations. Word count is also available for shortest/longest sorting.
+
+**Minimum words / Maximum words** restrict the whole reading view, plots and correlations to an inclusive interval. Combine this with model and topic filters to compare passages of more similar length; clear the limits to recover the full sample. These controls remain useful when model scores are hidden.
+
+Word count is the frozen `len(target_text.split())`: visible target reply only, with no preceding context, prompt or separately recorded reasoning. It is a whitespace-based length proxy, not tokenizer tokens or linguistic segmentation. The existing 100-passage pilot spans **1–599 words**, mean **105.55**. No scoring call or evidence rewrite was needed.
+
+The focused histogram uses ten equal-width integer word bins. Selecting one freezes its width in the URL, including its original axis, so changing models or opening another pair cannot silently redefine the selected interval. If wider filters include observations outside that retained histogram range, their count is shown separately; clear the bin to rescale. Score histograms retain their existing fixed ten-point bins.
+
+Length is an observed attribute, not another JEV rating. We have not divided scores by words, adjusted them for length, or added a composite ranking. A correlation can reflect real elaboration, assessor preference for verbosity, model/topic mixture, or several of these. Length-matched reading is an exploratory check, not complete confounding control or independent validation. The [Dictionary](LAB-DICTIONARY.md) records the definition and boundaries.
 
 ## Score interpretation
 

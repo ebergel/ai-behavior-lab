@@ -23,10 +23,10 @@ test('matrix ranges remain finite for empty, constant and endpoint samples',()=>
  for(const [values,expected] of [[[],[0,100]],[[0],[0,10]],[[100],[90,100]],[[50,50],[50,60]],[[.04,18.31],[0,20]]])assert.equal(JSON.stringify(ctx.gemMatrixRange(values,'observed')),JSON.stringify(expected));
  assert.equal(JSON.stringify(ctx.gemMatrixRange([4,12],'full')),JSON.stringify([0,100]));
 });
-test('full matrix has seven diagonal distributions and all 42 ordered pairs',()=>{
+test('full matrix has eight diagonal distributions and all 56 ordered pairs',()=>{
  const rows=[scored('a',0,0),scored('b',50,50),scored('c',100,100)];
  const html=ctx.gemMatrix(rows,ctx.gemFilters({plot:'matrix',item:'a'}));
- assert.equal((html.match(/gem-matrix-cell diagonal/g)||[]).length,7);assert.equal((html.match(/gem-matrix-cell pair/g)||[]).length,42);
+ assert.equal((html.match(/gem-matrix-cell diagonal/g)||[]).length,8);assert.equal((html.match(/gem-matrix-cell pair/g)||[]).length,56);
  assert.match(html,/r 1.00 · n=3/);assert.match(html,/data-x="profile" data-y="surprise"/);assert.match(html,/gem-matrix-point selected/);
  assert.doesNotMatch(html,/NaN|Infinity/);assert.equal(ctx.gemMatrix(rows,ctx.gemFilters({hidden:true})), '');
  assert.equal(ctx.gemPlots(rows,rows,ctx.gemFilters({hidden:true,plot:'matrix'})), '');
@@ -43,4 +43,40 @@ test('matrix plots current filtered rows without unsafe text or unknown-score co
  const f=ctx.gemFilters({bin:'0',plot:'matrix'});const filtered=ctx.gemRows(rows,f);
  const html=ctx.gemMatrix(filtered,f);assert.match(html,/1 filtered passages/);assert.match(html,/r — · n=1/);assert.match(html,/&lt;script&gt;/);assert.doesNotMatch(html,/<script>|NaN|Infinity/);
  const empty=ctx.gemMatrix([],ctx.gemFilters({matrix_scale:'observed'}));assert.match(empty,/No paired scores/);assert.match(empty,/No scores/);assert.doesNotMatch(empty,/NaN|Infinity/);
+});
+test('word count stays in actual units, handles zero and excludes invalid or stale counts',()=>{
+ assert.equal(ctx.gemValue({...item,words:599},'words'),599);assert.equal(ctx.gemValue({...item,words:0},'words'),0);
+ for(const words of [undefined,null,-1,2.5,'599',Infinity])assert.equal(ctx.gemValue({...item,words},'words'),null);
+ assert.equal(ctx.gemValue({...item,source_current:false,words:599},'words'),null);
+ const rows=[{...item,id:'missing',words:null},{...item,id:'long',words:599},{...item,id:'short',words:13}];
+ assert.equal(ctx.gemRows(rows,ctx.gemFilters({sort:'words',direction:'asc'})).map(i=>i.id).join(),'short,long,missing');
+ assert.equal(ctx.gemRows(rows,ctx.gemFilters({sort:'words',direction:'desc'})).map(i=>i.id).join(),'long,short,missing');
+});
+test('word ranges cover values over 100 on both matrix modes and constant or empty samples',()=>{
+ for(const [values,mode,expected] of [[[13,599],'full',[0,600]],[[213,599],'observed',[210,600]],[[0],'observed',[0,1]],[[599],'observed',[590,600]],[[],'full',[0,10]]])assert.equal(JSON.stringify(ctx.gemMatrixRange(values,mode,'words')),JSON.stringify(expected));
+ const rows=[{...scored('a',0,0),words:1},{...scored('b',50,50),words:300},{...scored('c',100,100),words:599}];
+ const pair=ctx.gemMatrixPair(rows,'words','contribution');assert.equal(pair.r,1);assert.equal(pair.n,3);
+ for(const f of [ctx.gemFilters({x:'words',y:'contribution'}),ctx.gemFilters({x:'contribution',y:'words'})]){
+  const html=ctx.gemScatter(rows,f);assert.doesNotMatch(html,/NaN|Infinity/);assert.match(html,/599/);assert.match(html,/Pearson r 1.00 · n=3/);
+  for(const m of html.matchAll(/<circle cx="([^"]+)" cy="([^"]+)"/g)){assert.ok(Number(m[1])>=48&&Number(m[1])<=568);assert.ok(Number(m[2])>=42&&Number(m[2])<=242);}
+ }
+});
+test('word histogram bins retain explicit boundaries when filters or plotted pairs change',()=>{
+ const rows=[0,59,60,599,600,601].map((words,n)=>({...item,id:String(n),words}));
+ assert.equal(ctx.gemBinWidth(rows.slice(0,4),'words'),60);assert.equal(ctx.gemBin(599,'words',60),9);assert.equal(ctx.gemBin(600,'words',60),9);assert.equal(ctx.gemBin(601,'words',60),null);
+ const f=ctx.gemFilters({x:'words',bin:'9',bin_axis:'words',bin_width:60});
+ assert.equal(ctx.gemRows(rows,f).map(i=>i.words).join(),'599,600');
+ const next=ctx.gemMatrixFocus(f,'surprise','contribution');assert.equal(next.bin_axis,'words');assert.equal(next.bin_width,60);assert.equal(ctx.gemRows(rows,next).map(i=>i.words).join(),'599,600');
+ const html=ctx.gemHistogram(rows,f);assert.match(html,/data-width="60"/);assert.match(html,/540 to 600 inclusive words: 2 passages/);assert.match(html,/1 values outside this fixed bin range/);
+ assert.equal(ctx.gemBinCaption(next),'540–600 words inclusive');
+});
+test('inclusive word limits combine with existing filters and work while scores are hidden',()=>{
+ const rows=[0,13,50,100,599].map((words,n)=>({...item,id:String(n),words}));
+ const f=ctx.gemFilters({min_words:'13',max_words:'100',hidden:true});
+ assert.equal(ctx.gemRows(rows,f).map(i=>i.words).join(),'13,50,100');
+ assert.equal(ctx.gemRows(rows,{...f,model:'missing'}).length,0);
+ assert.equal(ctx.gemRows(rows,{...f,min_words:0,max_words:0}).length,1);
+ assert.equal(ctx.gemRows([{...item,words:null},{...item,source_current:false}],f).length,0);
+ for(const value of ['',null,undefined,'bad',-1,1.5,Infinity])assert.equal(ctx.gemLengthBound(value),null);
+ assert.equal(ctx.gemLengthBound('0'),0);
 });

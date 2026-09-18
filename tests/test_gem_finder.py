@@ -67,7 +67,7 @@ class GemTests(unittest.TestCase):
         self.assertEqual(call('GET','/dictionary.css')[0],200)
         status, guide = call('GET','/api/dictionary')
         self.assertEqual(status,200)
-        self.assertEqual(len([e for e in guide['entries'] if e['category']=='measures']),7)
+        self.assertEqual(len([e for e in guide['entries'] if e['category']=='measures']),8)
         self.assertEqual(call('GET','/api/gems/export')[1]['readings'],[])
         self.assertEqual(call('GET','/api/dictionary',headers={'Origin':'http://elsewhere'})[0],403)
         self.assertEqual(call('POST','/api/gems/readings',{})[0],403)

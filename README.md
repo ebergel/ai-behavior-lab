@@ -10,7 +10,7 @@ The [research purpose](docs/RESEARCH-PURPOSE.md) is to explore what models devel
 
 [Topic atlas](docs/TOPIC-ATLAS.md) provides a versioned dictionary of **23 topics**, literal variants, frequencies, initial-topic reviews and exact transcript links. [Conversation Finder](docs/CONVERSATION-FINDER.md) combines topic tags with model identities, participant roles and experimental setup. Automatic phrase matches and attributed opening choices remain separate evidence types. The current local corpus includes 438 atlas-eligible records and twelve reviewed openings.
 
-[Lab dictionary](docs/LAB-DICTIONARY.md) explains all seven Gem Finder measures and the terms needed to interpret them, with searchable definitions, exact rubric levels, formulas and practical examples. Open a definition directly from a plot and return to the same filtered view.
+[Lab dictionary](docs/LAB-DICTIONARY.md) explains all eight Gem Finder axes, including word count, and the terms needed to interpret them, with searchable definitions, exact rubric levels, formulas and practical examples. Open a definition directly from a plot and return to the same filtered view.
 
 [JEV Topic Atlas](docs/JEV-TOPIC-ATLAS.md) adds an independent semantic assessment workspace: frozen passage batches, topic probabilities, comparison queues, source-linked reading and separate correction histories. Its [first 200-passage pilot](docs/JEV-PILOT-01.md) is complete for $0.02549 in usage-based cost, with seven attributed development readings. Independent human validation remains pending. The original atlas and notebook remain intact.
 

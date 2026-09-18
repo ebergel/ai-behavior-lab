@@ -26,7 +26,7 @@ class DictionaryTests(unittest.TestCase):
         categories = {c['id'] for c in data['categories']}
         self.assertEqual(len(ids), len(data['entries']))
         self.assertEqual({e['id'] for e in data['entries'] if e['category'] == 'measures'},
-                         {'surprise', 'contribution', 'connection', 'expression', 'complexity', 'substance', 'profile'})
+                         {'surprise', 'contribution', 'connection', 'expression', 'complexity', 'substance', 'profile', 'words'})
         for entry in data['entries']:
             self.assertIn(entry['category'], categories)
             for field in ('definition', 'practical', 'method', 'limits', 'sources'):

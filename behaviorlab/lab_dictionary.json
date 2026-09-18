@@ -1,10 +1,10 @@
 {
   "schema": "behaviorlab.lab-dictionary/1",
-  "version": "dictionary-2026-09-18-v1",
+  "version": "dictionary-2026-09-18-v2",
   "author": "Codex",
   "scope": "Gem Finder measures and the terms needed to interpret them. An expandable reference for the laboratory; distinct from the Topic atlas’s topic vocabulary.",
   "categories": [
-    {"id":"measures", "title":"Gem Finder measures", "description":"Six assessed qualities and one computed distance. No combined gem score."},
+    {"id":"measures", "title":"Gem Finder measures", "description":"Six assessed qualities, one computed distance and observed word count. No combined gem score."},
     {"id":"scores", "title":"Reading the numbers", "description":"Scales, distributions and relationships."},
     {"id":"evidence", "title":"Passages & judgments", "description":"What is being assessed, compared and saved."}
   ],
@@ -43,26 +43,60 @@
       "related":["contribution","expression","complexity","profile"]
     },
     {
-      "id":"expression", "title":"Expressive force", "category":"measures", "kind":"JEV rubric rating",
-      "aliases":["eloquence", "memorable", "poetry", "quotable", "wording"],
-      "definition":"How effectively the wording makes an idea vivid, perceptible or memorable.",
-      "practical":"Use this to find phrases worth keeping and images that make a difficult distinction easier to grasp. Check whether the wording helps you understand, rather than only producing an impression of depth.",
-      "low":"Routine, formulaic or indistinct phrasing; plain wording can also fall toward the lower levels.",
-      "high":"Precise phrasing or a developed image makes a nuanced distinction graspable and meaningfully quotable.",
-      "limits":["Beauty, persuasiveness and memorable wording do not establish correctness.","Plain, accurate prose can be useful with modest expressive force; ornate language alone is not sufficient for a high rubric level."],
-      "example":"‘We kept moving, but the map never changed’ can make the difference between activity and progress memorable. Its expressive force depends on the surrounding idea, and does not prove that no progress occurred.",
-      "related":["substance","contribution","gem"]
+      "id": "expression",
+      "title": "Expressive force",
+      "category": "measures",
+      "kind": "JEV rubric rating",
+      "aliases": [
+        "eloquence",
+        "memorable",
+        "poetry",
+        "quotable",
+        "wording"
+      ],
+      "definition": "How effectively the wording makes an idea vivid, perceptible or memorable.",
+      "practical": "Use this to find phrases worth keeping and images that make a difficult distinction easier to grasp. Check whether the wording helps you understand, rather than only producing an impression of depth.",
+      "low": "Routine, formulaic or indistinct phrasing; plain wording can also fall toward the lower levels.",
+      "high": "Precise phrasing or a developed image makes a nuanced distinction graspable and meaningfully quotable.",
+      "limits": [
+        "Beauty, persuasiveness and memorable wording do not establish correctness.",
+        "Plain, accurate prose can be useful with modest expressive force; ornate language alone is not sufficient for a high rubric level."
+      ],
+      "example": "‘We kept moving, but the map never changed’ can make the difference between activity and progress memorable. Its expressive force depends on the surrounding idea, and does not prove that no progress occurred.",
+      "related": [
+        "substance",
+        "contribution",
+        "gem",
+        "words"
+      ]
     },
     {
-      "id":"complexity", "title":"Conceptual complexity", "category":"measures", "kind":"JEV rubric rating",
-      "aliases":["feedback", "interacting relationships", "conditions", "levels"],
-      "definition":"How extensively a passage develops interacting conceptual relationships, conditions, tensions or levels of explanation.",
-      "practical":"Use this to locate passages that work through systems of relationships. Compare with substance to see whether those relationships are made inspectable, and with contribution to see what they clarify.",
-      "low":"No developed relationship, or a single simple relation or unqualified claim.",
-      "high":"A structured system of interacting relationships, feedback, tensions or limits is worked through.",
-      "limits":["Complexity is descriptive, not automatically desirable. A simple insight can be a gem.","The rubric asks for developed relationships, not word count or jargon. The assessor may still show length or style effects; this pilot does not establish their absence."],
-      "example":"‘Feedback improves learning’ states one relation. Explaining how feedback changes confidence, confidence changes exploration, and exploration changes the evidence available develops an interacting system—even if the account later proves mistaken.",
-      "related":["contribution","substance","correlation","gem"]
+      "id": "complexity",
+      "title": "Conceptual complexity",
+      "category": "measures",
+      "kind": "JEV rubric rating",
+      "aliases": [
+        "feedback",
+        "interacting relationships",
+        "conditions",
+        "levels"
+      ],
+      "definition": "How extensively a passage develops interacting conceptual relationships, conditions, tensions or levels of explanation.",
+      "practical": "Use this to locate passages that work through systems of relationships. Compare with substance to see whether those relationships are made inspectable, and with contribution to see what they clarify.",
+      "low": "No developed relationship, or a single simple relation or unqualified claim.",
+      "high": "A structured system of interacting relationships, feedback, tensions or limits is worked through.",
+      "limits": [
+        "Complexity is descriptive, not automatically desirable. A simple insight can be a gem.",
+        "The rubric asks for developed relationships, not word count or jargon. The assessor may still show length or style effects; this pilot does not establish their absence."
+      ],
+      "example": "‘Feedback improves learning’ states one relation. Explaining how feedback changes confidence, confidence changes exploration, and exploration changes the evidence available develops an interacting system—even if the account later proves mistaken.",
+      "related": [
+        "contribution",
+        "substance",
+        "correlation",
+        "gem",
+        "words"
+      ]
     },
     {
       "id":"substance", "title":"Substance & specificity", "category":"measures", "kind":"JEV rubric rating",
@@ -89,6 +123,55 @@
       "example":"Two passages about cognition and philosophy may have nearly identical profiles despite very different arguments. A passage combining cooking, logistics and ritual may be more distant in this corpus without being insightful.",
       "related":["surprise","topic-probability","lineage","axis-ranges","profile-lead"],
       "sources":["behaviorlab/gem_plan.py: profile_distance", "docs/GEM-FINDER.md"]
+    },
+    {
+      "id": "words",
+      "title": "Word count",
+      "category": "measures",
+      "kind": "Observed passage attribute",
+      "aliases": [
+        "length",
+        "words",
+        "tokens",
+        "confounder",
+        "verbosity",
+        "short",
+        "long",
+        "length bias"
+      ],
+      "definition": "The number of whitespace-separated units in the target passage, used to explore whether passage length is associated with Gem ratings.",
+      "scale": "Nonnegative integer · actual words; no 0–100 rescaling",
+      "formula": "Word count = len(target_text.split())",
+      "method": [
+        "The count is already recorded for every Gem pilot passage and is computed the same way for reader-selected examples. It counts the visible target reply alone, excluding supplied context, prompts and separately recorded reasoning.",
+        "Python split() separates on whitespace and ignores empty pieces. Punctuation remains attached to its chunk; an isolated symbol can count as a unit. This is a reproducible length proxy, not linguistic word segmentation.",
+        "Word count is an eighth plotting axis, not a seventh JEV question. It requires no model call. The matrix, pair correlations, sorting and length filters use the original count.",
+        "Plots give word count its own range. Minimum and maximum filters are inclusive. Choosing a histogram bin saves its boundaries in the URL; changing to a different pair preserves that word interval."
+      ],
+      "practical": "Use word count on the horizontal axis and contribution, expression, complexity or substance on the vertical axis. Look for brief passages with high ratings, then filter to a comparable length range and, where possible, the same model. Read the passages and save your own judgment.",
+      "low": "A shorter visible reply. A concise formulation can be beautiful or illuminating with few words.",
+      "high": "A longer visible reply, with more room for elaboration, examples and developed relationships. Length alone does not establish quality.",
+      "limits": [
+        "A word is not a tokenizer token. Token counts depend on the model/tokenizer and can include hidden reasoning or different accounting; this axis does not estimate them.",
+        "Whitespace counts are less comparable across languages without regular word spacing, code and formulas.",
+        "A length–score correlation could reflect real elaboration, assessor preference for verbosity, model/topic differences or their mixture. It does not by itself identify a causal confounder or prove bias.",
+        "The lab does not divide ratings by words or silently adjust scores. Length restriction supports exploration; it is not a complete statistical adjustment or independent validation."
+      ],
+      "example": "A short sentence can make a distinction memorable, while a longer reply spells out several relationships. A higher complexity rating for the longer reply may describe that structure accurately without making it the more beautiful passage.",
+      "related": [
+        "expression",
+        "contribution",
+        "complexity",
+        "substance",
+        "correlation",
+        "axis-ranges",
+        "gem"
+      ],
+      "sources": [
+        "behaviorlab/gem_plan.py: select_items",
+        "behaviorlab/gem_finder.py: item_for_source",
+        "behaviorlab/explorer_ui/gems.js: gemValue, gemLengthMatch, gemMatrixPair"
+      ]
     },
     {
       "id":"scaled-score", "title":"Scaled rubric score", "category":"scores", "kind":"Score interpretation",
@@ -127,27 +210,74 @@
       "sources":["behaviorlab/jev_runner.py", "behaviorlab/jev_atlas.py", "docs/GEM-FINDER.md"]
     },
     {
-      "id":"correlation", "title":"Pearson correlation (r) & pair count (n)", "category":"scores", "kind":"Matrix statistic",
-      "aliases":["association", "scatterplot", "matrix", "r", "n", "multivariate"],
-      "definition":"Pearson r summarizes linear association between two displayed measures. n counts passages with both current scores in that matrix cell.",
-      "scale":"r: −1 to +1; n: observed pairs",
-      "formula":"r = Σ(xᵢ − x̄)(yᵢ − ȳ) / √[Σ(xᵢ − x̄)² × Σ(yᵢ − ȳ)²]",
-      "method":["Use the currently filtered passages with both finite scores and current source text. Missing and stale scores are omitted separately for each pair; observed zeros remain.","The lab displays r only with at least three pairs and variation on both axes. The matrix rounds displayed r to two decimals."],
-      "practical":"Positive r means the measures tend to rise together; negative r means one tends to fall as the other rises. Inspect the scatter for clusters and outliers that the summary can hide.",
-      "limits":["r near zero does not rule out a nonlinear relationship. Correlation does not establish causation.","These are descriptive pilot associations. Length, model, topic, common assessor and sample selection can all contribute; they are not adjusted for here."],
-      "example":"Contribution and complexity can rise together because useful explanations develop more relationships, because the assessor rewards length, or because of the sampled model mixture. The correlation alone cannot decide among these accounts.",
-      "related":["complexity","scaled-score","missing","axis-ranges"],
-      "sources":["behaviorlab/explorer_ui/gems.js: gemMatrixPair"]
+      "id": "correlation",
+      "title": "Pearson correlation (r) & pair count (n)",
+      "category": "scores",
+      "kind": "Matrix statistic",
+      "aliases": [
+        "association",
+        "scatterplot",
+        "matrix",
+        "r",
+        "n",
+        "multivariate"
+      ],
+      "definition": "Pearson r summarizes linear association between two displayed measures. n counts passages with both current scores in that matrix cell.",
+      "scale": "r: −1 to +1; n: observed pairs",
+      "formula": "r = Σ(xᵢ − x̄)(yᵢ − ȳ) / √[Σ(xᵢ − x̄)² × Σ(yᵢ − ȳ)²]",
+      "method": [
+        "Use the currently filtered passages with both finite scores and current source text. Missing and stale scores are omitted separately for each pair; observed zeros remain.",
+        "The lab displays r only with at least three pairs and variation on both axes. The matrix rounds displayed r to two decimals."
+      ],
+      "practical": "Positive r means the measures tend to rise together; negative r means one tends to fall as the other rises. Inspect the scatter for clusters and outliers that the summary can hide.",
+      "limits": [
+        "r near zero does not rule out a nonlinear relationship. Correlation does not establish causation.",
+        "These are descriptive pilot associations. Length, model, topic, common assessor and sample selection can all contribute; they are not adjusted for here."
+      ],
+      "example": "Contribution and complexity can rise together because useful explanations develop more relationships, because the assessor rewards length, or because of the sampled model mixture. The correlation alone cannot decide among these accounts.",
+      "related": [
+        "complexity",
+        "scaled-score",
+        "missing",
+        "axis-ranges",
+        "words"
+      ],
+      "sources": [
+        "behaviorlab/explorer_ui/gems.js: gemMatrixPair"
+      ]
     },
     {
-      "id":"axis-ranges", "title":"Full scale & observed ranges", "category":"scores", "kind":"Plot display",
-      "aliases":["zoom", "histogram", "bins", "distribution"],
-      "definition":"Two ways to display the same scores: a fixed 0–100 axis, or an axis narrowed to the observed values for each measure.",
-      "method":["Full scale uses 0–100 for every measure. Observed ranges round the filtered minimum down and maximum up to multiples of ten; a constant range is padded to span ten units. Empty axes use 0–100.","Each measure uses the same range throughout its matrix row and column. The ten diagonal histogram bins divide that displayed range; the last bin includes its upper endpoint.","The focused-pair histogram always uses ten fixed 10-point bins on 0–100. Display-range changes do not recalculate scores or correlations."],
-      "practical":"Observed ranges make narrow spreads, especially topic-profile distance, easier to inspect. Full scale helps you see how much of the possible score range the sample actually occupies.",
-      "limits":["A visually large gap after zooming may be a small numeric difference. Read the printed axis bounds.","Histogram bar shapes can change with the display range and binning; the underlying observations do not."],
-      "related":["profile","correlation","missing"],
-      "sources":["behaviorlab/explorer_ui/gems.js: gemMatrixRange, gemMatrix, gemHistogram"]
+      "id": "axis-ranges",
+      "title": "Full scale & observed ranges",
+      "category": "scores",
+      "kind": "Plot display",
+      "aliases": [
+        "zoom",
+        "histogram",
+        "bins",
+        "distribution"
+      ],
+      "definition": "Two ways to display the same values: fixed 0–100 ranges for ratings and distance, or narrower observed ranges. Word count always keeps its own range in actual words.",
+      "method": [
+        "Full scale uses 0–100 for ratings and profile distance; words use zero to a rounded upper count. Observed ranges narrow each axis to its filtered values, rounding scores to multiples of ten and words to a scale-appropriate integer step. Constant axes retain a nonzero span; empty word axes show 0–10.",
+        "Each measure uses the same range throughout its matrix row and column. The ten diagonal histogram bins divide that displayed range; the last bin includes its upper endpoint.",
+        "The focused-pair histogram uses ten fixed 10-point bins for scores and ten equal-width integer word bins for length. An active word bin retains its width as other filters change or another pair is opened; counts outside that retained histogram range are reported. Clear the bin to rescale.",
+        "Display-range changes do not recalculate values or correlations. Word count is never clipped to 100 or converted into a rating."
+      ],
+      "practical": "Observed ranges make narrow spreads, especially topic-profile distance, easier to inspect. Full scale helps you see how much of the possible score range the sample actually occupies.",
+      "limits": [
+        "A visually large gap after zooming may be a small numeric difference. Read the printed axis bounds.",
+        "Histogram bar shapes can change with the display range and binning; the underlying observations do not."
+      ],
+      "related": [
+        "profile",
+        "correlation",
+        "missing",
+        "words"
+      ],
+      "sources": [
+        "behaviorlab/explorer_ui/gems.js: gemMatrixRange, gemMatrix, gemHistogram"
+      ]
     },
     {
       "id":"missing", "title":"Unknown, unscored & stale", "category":"scores", "kind":"Availability",
