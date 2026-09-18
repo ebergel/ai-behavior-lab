@@ -29,3 +29,5 @@ This change makes no inference calls or notebook writes. It leaves the research 
 313 Python and 62 JavaScript tests passed. Tests cover canonical rubric consistency, complete measure coverage, valid references, safe rendering, search and category combinations, unavailable terms, export/API origin enforcement, and preservation of the complete Gem return state. Live-browser checks cover sidebar access, measure selection, synonym search, matrix links and the return path to the selected filtered matrix.
 
 The length-axis extension passed 313 Python and 66 JavaScript tests. Its version is `dictionary-2026-09-18-v2`; the six frozen scoring rubrics are unchanged.
+
+The expansion update (`dictionary-2026-09-18-v3`) clarifies that the original sample has one target per lineage while the expansion permits three across both samples. Word count and correlation definitions now apply to both development samples; the frozen assessment rubric is unchanged. See [Gem expansion](GEM-EXPANSION.md).

@@ -1,3 +1,11 @@
+## Current milestone · 18 September 2026: Gem expansion
+
+**Complete:** [model × length expansion](GEM-EXPANSION.md), 900 fresh assessments / 5,400 ratings / exactly 900 calls / **$0.081287682**, with no failures or retries. Gem Finder now offers original (100), expansion (900) and combined (1,000) views using the unchanged rubric and profile reference. The additions span 375 lineages; combined coverage is 376, capped at three targets per lineage. Model and length coverage remain availability-limited. All 60 reserved validation lineages remain excluded.
+
+The length association persists (fresh complexity r=0.694, contribution r=0.602, surprise r=0.062). Eighteen fresh replies of at most 50 words score ≥80 for expression; these need the researcher's reading. One historical newline-only reply is retained and explicitly flagged; a separate n=899 sensitivity shows essentially unchanged correlations. Preserve both reports and all 900 receipts. The new allocation is exhausted; no further inference follows from its unused $2 ceiling.
+
+**Next:** collect researcher readings across brief/high-expression cases, longer high-score cases, ordinary passages and unsupported claims; examine within-model and length-matched disagreements before revising the rubric. A future sampling release should explicitly handle empty replies. No new participant dialogues, reserved-set reading, notebook edits or scheduled continuation occurred. Older milestone entries below retain their historical scope.
+
 ## UI refinement · 18 September 2026: word count in Gem Finder
 
 **Complete:** [word count](GEM-FINDER.md#length-as-a-possible-confounder) is the eighth matrix axis, with an independent count scale, focused length–score plots, Pearson r/n, sorting, fixed-on-selection word-bin bounds and inclusive minimum/maximum word filters. The Dictionary now has 18 terms, including the exact whitespace-count definition and limits of interpreting length effects. No rubric revision, score adjustment, inference, notebook or research snapshot changes. Next: collect researcher examples of brief insights and compare within length ranges and models before any revised rubric.

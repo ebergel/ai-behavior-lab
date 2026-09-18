@@ -103,3 +103,7 @@ Read across both tails, keep a few gems, and also mark ordinary or hollow passag
 ## Measure dictionary
 
 The [Lab dictionary](LAB-DICTIONARY.md) provides definitions, exact assessment questions and rubric levels, formulas, practical interpretations and examples for every measure. Open it from the sidebar, the Gem Finder header, any matrix measure name or an individual rating panel. The return link preserves the current Gem filters, plot and selected passage. Supporting entries explain score vs probability, confidence, correlation, missingness and reference lineages.
+
+## Larger development sample
+
+The separate [model × length expansion](GEM-EXPANSION.md) adds 900 fresh targets using the unchanged rubric and reference. Use the Assessment sample selector to compare the original 100, the fresh 900, or their combination. Historical results above describe the original pilot only.

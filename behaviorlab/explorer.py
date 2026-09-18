@@ -451,8 +451,8 @@ def make_server(workspace, port=8765):
                 if path in ('/gems.js','/gems.css','/dictionary.js','/dictionary.css'):
                     return self.send((STATIC/path[1:]).read_bytes(),mime='text/javascript; charset=utf-8' if path.endswith('.js') else 'text/css; charset=utf-8')
                 if path=='/api/gems':
-                    q=parse_qs(url.query);return self.send(gems.detail(q.get('run',[None])[0],q.get('message',[None])[0]))
-                if path=='/api/gems/export':return self.send(gems.export(),download='gem-finder-pilot-and-readings.json')
+                    q=parse_qs(url.query);return self.send(gems.detail(q.get('run',[None])[0],q.get('message',[None])[0],q.get('batch',['all'])[0]))
+                if path=='/api/gems/export':return self.send(gems.export(),download='gem-finder-assessments-and-readings.json')
                 if path.startswith('/api/gems/history/'):
                     return self.send({'history':gems.history(path.rsplit('/',1)[-1])})
                 if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/tasks.js','/tasks.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):

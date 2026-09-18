@@ -80,3 +80,19 @@ test('inclusive word limits combine with existing filters and work while scores 
  for(const value of ['',null,undefined,'bad',-1,1.5,Infinity])assert.equal(ctx.gemLengthBound(value),null);
  assert.equal(ctx.gemLengthBound('0'),0);
 });
+test('sample loading caches each cohort separately and retains other filters',async()=>{
+ const local=vm.createContext({document:{addEventListener(){}},state:{},routeVersion:0,URLSearchParams,esc});
+ vm.runInContext(fs.readFileSync('behaviorlab/explorer_ui/gems.js','utf8'),local);
+ const requests=[];local.api=async u=>{requests.push(u);return {items:[]};};
+ local.renderSidebar=()=>{};local.renderCompareTray=()=>{};local.renderGems=()=>{};
+ await local.loadGems({batch:'pilot',max_words:'50',plot:'matrix'});
+ await local.loadGems({batch:'pilot',max_words:'25',plot:'pair'});
+ await local.loadGems({batch:'expansion-20260918-v1',max_words:'25',plot:'matrix'});
+ assert.deepEqual(requests,['/api/gems?batch=pilot','/api/gems?batch=expansion-20260918-v1']);
+ assert.equal(local.state.gemFilters.max_words,'25');assert.equal(local.state.gemFilters.plot,'matrix');
+});
+test('historical empty replies are labeled and cannot create an unsupported passage reading',()=>{
+ const html=ctx.gemDetail({...item,text:'\n',words:0,answers:{}},ctx.gemFilters());
+ assert.match(html,/Empty visible reply/);assert.match(html,/minimum words to 1/);
+ assert.match(html,/disabled>Save my reading/);
+});

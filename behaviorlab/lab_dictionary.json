@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.lab-dictionary/1",
-  "version": "dictionary-2026-09-18-v2",
+  "version": "dictionary-2026-09-18-v3",
   "author": "Codex",
   "scope": "Gem Finder measures and the terms needed to interpret them. An expandable reference for the laboratory; distinct from the Topic atlas’s topic vocabulary.",
   "categories": [
@@ -143,7 +143,7 @@
       "scale": "Nonnegative integer · actual words; no 0–100 rescaling",
       "formula": "Word count = len(target_text.split())",
       "method": [
-        "The count is already recorded for every Gem pilot passage and is computed the same way for reader-selected examples. It counts the visible target reply alone, excluding supplied context, prompts and separately recorded reasoning.",
+        "The count is already recorded for every assessed Gem passage and is computed the same way for reader-selected examples. It counts the visible target reply alone, excluding supplied context, prompts and separately recorded reasoning.",
         "Python split() separates on whitespace and ignores empty pieces. Punctuation remains attached to its chunk; an isolated symbol can count as a unit. This is a reproducible length proxy, not linguistic word segmentation.",
         "Word count is an eighth plotting axis, not a seventh JEV question. It requires no model call. The matrix, pair correlations, sorting and length filters use the original count.",
         "Plots give word count its own range. Minimum and maximum filters are inclusive. Choosing a histogram bin saves its boundaries in the URL; changing to a different pair preserves that word interval."
@@ -232,7 +232,7 @@
       "practical": "Positive r means the measures tend to rise together; negative r means one tends to fall as the other rises. Inspect the scatter for clusters and outliers that the summary can hide.",
       "limits": [
         "r near zero does not rule out a nonlinear relationship. Correlation does not establish causation.",
-        "These are descriptive pilot associations. Length, model, topic, common assessor and sample selection can all contribute; they are not adjusted for here."
+        "These are descriptive development-sample associations. Length, model, topic, common assessor and sample selection can all contribute; they are not adjusted for here."
       ],
       "example": "Contribution and complexity can rise together because useful explanations develop more relationships, because the assessor rewards length, or because of the sampled model mixture. The correlation alone cannot decide among these accounts.",
       "related": [
@@ -313,7 +313,7 @@
       "id":"lineage", "title":"Conversation lineage", "category":"evidence", "kind":"Shared ancestry",
       "aliases":["root", "branch", "independence", "reference pool", "validation"],
       "definition":"The conversation ancestry used to group related records and branches that share a root.",
-      "method":["The Gem pilot selects one target per lineage. Topic-profile neighbors exclude the target’s own lineage and contribute at most one passage from each other lineage.","Sixty reserved validation lineages are excluded from this development pilot’s targets, supplied context and topic-profile reference."],
+      "method":["The original Gem pilot selects one target per lineage; the expansion allows up to three targets per lineage across both samples. These repeated passages share history. Topic-profile neighbors exclude the target’s own lineage and contribute at most one passage from each other lineage.","Sixty reserved validation lineages are excluded from both development samples’ targets, supplied context and topic-profile reference."],
       "practical":"Use lineage to avoid treating a shared prefix or related branch as an independent discovery. It is also why a long conversation cannot supply all five nearest neighbors.",
       "limits":["Different lineages can still share prompts, model families and experimental conditions. Separate ancestry is not sufficient to establish statistical independence."],
       "related":["profile","passage","correlation"],

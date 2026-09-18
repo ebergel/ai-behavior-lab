@@ -1,6 +1,6 @@
 # Behavior Laboratory
 
-[Gem Finder](docs/GEM-FINDER.md) explores six distinct passage ratings, topic-profile distance and your own saved judgments. Its first 100-passage pilot produced 600 ratings for **$0.00939**, with interactive plots, both distribution tails, exact source navigation and versioned readings. Four Codex development examples include a high-scoring counterexample; the rubric still needs researcher evaluation.
+[Gem Finder](docs/GEM-FINDER.md) explores six distinct passage ratings, topic-profile distance, word count and your own saved judgments. The [model × length expansion](docs/GEM-EXPANSION.md) brings it to **1,000 assessed replies and 6,000 ratings** across 14 model variants, for **$0.09068 combined**. Switch between the original 100, fresh 900 and combined sample. The full matrix, length filters and source-linked readings support exploration; the rubric still needs researcher evaluation. One empty historical reply is explicitly labeled and preserved.
 
 A standalone local laboratory for controlled experiments on AI model behavior.
 
