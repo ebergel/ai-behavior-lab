@@ -1,3 +1,7 @@
+## UI refinement · 18 September 2026: Gem Finder matrix
+
+**Complete:** the [Gem Finder scatterplot matrix](GEM-FINDER.md#scatterplot-matrix) shows all seven measures (42 scatterplots, seven diagonal distributions), paired correlations/counts, full or observed axis ranges, passage selection and enlargement of any pair. It follows the existing filters and retains an active bin on its original measure when changing pairs. Hidden-score mode withholds the matrix. This is a view of existing results; no new inference, notebook write or evidence-snapshot change is involved. Researcher example collection remains the next research step.
+
 ## Current milestone · 18 September 2026: Gem Finder
 
 **Complete:** [Gem Finder](GEM-FINDER.md) is a separate workspace view with six provisional JEV Score axes, topic-profile distance, interactive scatter/distribution views, sortable passages, source/context navigation and attributed personal reading history. The finite pilot completed **100 passages from 100 lineages across 14 model variants, 600 ratings, 100 calls, $0.009391662**. There were no retries or unknown costs. All 60 reserved validation lineages remain outside target, context and reference selection. No new dialogues were generated, and no previous allocation was reopened.

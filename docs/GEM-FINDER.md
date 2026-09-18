@@ -13,6 +13,18 @@ Gem Finder is a separate discovery notebook: find passages worth reading, compar
 
 Choose **Codex development examples** in Reading queue to see four contrasting readings: a promising reframing, an inspectable proposed rule, a routine conversational reset, and a detailed passage with unsupported claims. These are assisted development examples, not independent human validation.
 
+## Scatterplot matrix
+
+Choose **Scatterplot matrix · all measures** to view all seven measures together: 42 ordered scatterplots and seven diagonal histograms. Columns define horizontal axes and rows define vertical axes. Every plotted point opens its exact passage, and the selected passage is highlighted throughout the matrix. Choose the **r / ↗ header** of any cell to enlarge that pair in the existing plot and distribution view. The view, ranges and passage selection are carried in the URL and preserved when returning from a transcript.
+
+The matrix uses the current model, profile-lead, reading-queue, text and histogram-bin filters. Enlarging a different pair retains an active bin on its original measure, shown in the Axis filter chip. Clear the chip to widen the sample. Changing the horizontal axis directly in the focused view resets that axis filter, as before.
+
+**Full scale** uses 0–100 throughout. **Observed ranges** rounds each measure's filtered observed minimum/maximum outwards to ten-unit boundaries; constant axes retain a nonzero display range and empty axes use 0–100. The same range applies to a measure in every row/column, with bounds printed beside its labels. Histograms use ten equal-width bins in the displayed range; each is scaled to its own maximum count.
+
+Each scatterplot reports Pearson **r** and the number of observed paired scores **n**. Missing/stale values are omitted per pair, while zero remains observed. Correlation is unavailable for fewer than three pairs or a constant measure. These are descriptive associations, not significance tests or proof of independent constructs. Topic-profile distance remains in distance units. Hiding model scores also hides the entire matrix, its controls, correlations and ranges. Matrix headers support keyboard activation; individual passages are keyboard-accessible in the enlarged plot or reading list.
+
+The matrix reads the existing 100-passage pilot in the browser and makes no new model calls or notebook changes.
+
 ## Score interpretation
 
 TypeSafe model `jev-1.13.0` returns a five-level Score distribution for each rubric question. The displayed value is `25 × score`, mapping expected levels 0–4 onto 0–100. **It is not the probability that a passage is a gem.** Confidence is the concentration of the level distribution, not a correctness probability. Full level probabilities, returned legends, raw responses and usage remain in the evidence. Two-decimal distribution rounding is accepted only within declared mathematical bounds; probabilities are not renormalized.
