@@ -15,6 +15,7 @@ import time
 from .common import require
 from .jev_atlas import locked, now, read_record
 from . import discourse_portrait_probe as portrait
+from . import discourse_job
 
 DEFAULT_CEILING = 10.0
 JOB_ID = 'mind-portraits-v2'
@@ -22,7 +23,7 @@ PLAN_SHA = '49f5b17c48e18825b7635c591163e9505cc3806fe1bbe15b7bf28e548de3e0b3'
 
 
 def directory(workspace, identity):
-    require(identity == JOB_ID, 'Unknown lab job')
+    require(identity in (JOB_ID,discourse_job.JOB_ID), 'Unknown lab job')
     return Path(workspace) / '.lab-jobs' / identity
 
 
@@ -58,6 +59,7 @@ def check(workspace):
 
 
 def status(workspace, identity=JOB_ID):
+    if identity==discourse_job.JOB_ID:return discourse_job.status(workspace)
     runtime=directory(workspace,identity);state=read_state(runtime)
     result={'id':identity,'title':'Mind & discourse · four-wording comparison','status':'prepared','planned':240,'complete':0,'attempts':0,'known_cost_usd':0,'unknown_reserved_usd':0,'effective_ceiling_usd':2,'default_ceiling_usd':DEFAULT_CEILING,'can_start':False,'can_pause':False,'result_url':'/#view=discourse','error':'','updated_at':state.get('updated_at')}
     try:
@@ -86,7 +88,9 @@ def status(workspace, identity=JOB_ID):
 
 
 def listing(workspace):
-    return {'default_ceiling_usd':DEFAULT_CEILING,'jobs':[status(workspace)]}
+    jobs=[status(workspace)]
+    if (Path(workspace)/discourse_job.corpus.EXECUTION/'release.json').exists():jobs.insert(0,status(workspace,discourse_job.JOB_ID))
+    return {'default_ceiling_usd':DEFAULT_CEILING,'jobs':jobs}
 
 
 def start(workspace, identity, spawn=subprocess.Popen):
@@ -96,6 +100,7 @@ def start(workspace, identity, spawn=subprocess.Popen):
         if current['status'] in ('running','complete'):return current
         require(current['can_start'],current['error'] or 'Job cannot start')
         (runtime/'pause').unlink(missing_ok=True)
+        if identity==discourse_job.JOB_ID:(Path(workspace)/discourse_job.corpus.EXECUTION/'PAUSE').unlink(missing_ok=True)
         write_state(runtime,status='starting')
         env=dict(os.environ);env['PYTHONDONTWRITEBYTECODE']='1'
         # Discard bulk logs; the durable receipt ledger and compact state are authoritative.
@@ -111,11 +116,14 @@ def pause(workspace, identity):
     root=directory(workspace,identity)
     with locked(root/'control.lock'):
         current=status(workspace,identity)
-        if current['can_pause']:(root/'pause').touch()
+        if current['can_pause']:
+            if identity==discourse_job.JOB_ID:(Path(workspace)/discourse_job.corpus.EXECUTION/'PAUSE').touch()
+            else:(root/'pause').touch()
     return status(workspace,identity)
 
 
 def worker(workspace, identity, execute=None, sleep=time.sleep):
+    if identity==discourse_job.JOB_ID:return discourse_job.worker(workspace)
     runtime=directory(workspace,identity)
     try:
         with locked(runtime/'worker.lock',blocking=False):

@@ -141,6 +141,18 @@ def build_summary(workspace, catalog, analysis, gems, jev):
                               questions=len(b['plan']['questions']), requests=len(attempts),
                               href='#'+urlencode({'view':'gems','gem':json.dumps({'batch':b['id']})}), source=str(b['root'].relative_to(workspace)))
         collect('gem-'+b['id'], 'Gem Finder · '+b['title'], gem)
+    from . import discourse_corpus
+    if (Path(workspace)/discourse_corpus.EXECUTION/'release.json').exists():
+        def full_discourse():
+            from .discourse_corpus_view import load
+            plan,histories,execution,active=load(workspace)
+            expected=defaultdict(list)
+            for item in plan['items']:expected[item['sample_id']].append(item['id'])
+            samples=[dict(t,complete=all(histories.get(i) and histories[i][-1]['status']=='complete' for i in expected[t['id']])) for t in plan['samples']]
+            return assessment('mind-discourse-corpus','Mind & discourse · full eligible corpus',samples,message_index,
+                              questions=27,wordings=2,requests=execution['attempts'],source=discourse_corpus.ROOT,
+                              href='#view=discourse&lens=%7B%22batch%22%3A%22corpus%22%7D')
+        collect('mind-discourse-corpus','Mind & discourse · full eligible corpus',full_discourse)
     for module, title in ((mind_lens_probe,'Mind lenses · Borges / Plato'),
                           (discourse_probe,'Mind & discourse · definitions'),
                           (discourse_portrait_probe,'Mind & discourse · conceptual portraits')):

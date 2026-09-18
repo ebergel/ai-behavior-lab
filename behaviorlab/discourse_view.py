@@ -5,6 +5,7 @@ from statistics import mean
 import math
 
 from .jev_atlas import read_record, locked
+from .common import require
 from . import discourse_probe, discourse_portrait_probe
 from .discourse_probe import ROOT, SPEC, VARIANTS
 from .target_topics import attach_target_topics
@@ -12,7 +13,11 @@ from .target_topics import attach_target_topics
 def release(workspace):
     return discourse_portrait_probe if (Path(workspace)/discourse_portrait_probe.ROOT/"plan.json").exists() else discourse_probe
 
-def export_plan(workspace):
+def export_plan(workspace,batch='pilot'):
+    require(batch in ('pilot','corpus'), 'Unknown discourse batch')
+    if batch=='corpus':
+        from .discourse_corpus import ROOT
+        return read_record(Path(workspace)/ROOT/'plan.json')
     return read_record(Path(workspace)/release(workspace).ROOT/"plan.json")
 
 
@@ -36,6 +41,7 @@ def feature_stats(samples,features,variants=VARIANTS):
         contrasts={}
         for variant in [v for v in variants if v!='definition_only']:
             baseline='name_and_definition' if variant=='name_and_portrait' else 'definition_only'
+            if baseline not in variants:continue
             diffs=[s['probabilities'][variant][key]-s['probabilities'][baseline][key] for s in samples
                    if key in s['probabilities'][variant] and key in s['probabilities'][baseline]]
             contrasts[variant]={'baseline':baseline,'n':len(diffs),'mean_difference':mean(diffs) if diffs else None,
@@ -44,25 +50,31 @@ def feature_stats(samples,features,variants=VARIANTS):
     return result
 
 
-def build(workspace,catalog=None,analysis=None):
+def build(workspace,catalog=None,analysis=None,batch='pilot'):
+    require(batch in ('pilot','corpus'), 'Unknown discourse batch')
     module=release(workspace);variants=module.VARIANTS;root=Path(workspace)/module.ROOT
     if not (root/'plan.json').exists():
         import json
         return {'status':'not_prepared','spec':json.loads(SPEC.read_text()),'samples':[], 'features':[], 'groups':{}}
-    plan=read_record(root/'plan.json');histories,_=module.receipts(root,plan);execution=module.summary(root,plan)
-    active=False
-    try:
-        with locked(root/'.runner.lock',blocking=False):pass
-    except BlockingIOError:active=True
+    if batch=='corpus':
+        from .discourse_corpus_view import load
+        from . import discourse_corpus as module
+        plan,histories,execution,active=load(workspace);variants=module.VARIANTS
+    else:
+        plan=read_record(root/'plan.json');histories,_=module.receipts(root,plan);execution=module.summary(root,plan)
+        active=False
+        try:
+            with locked(root/'.runner.lock',blocking=False):pass
+        except BlockingIOError:active=True
     by_sample={}
     for item in plan['items']:
         h=histories.get(item['id'],[]);last=h[-1] if h else {}
         by_sample.setdefault(item['sample_id'],{})[item['variant']]=last
     samples=[]
     for source in plan['samples']:
-        probs={v:{f:a['noul'] for f,a in by_sample[source['id']][v].get('answers',{}).items()}
-               if by_sample[source['id']][v].get('status')=='complete' else {} for v in variants}
-        sample=dict(source,probabilities=probs,assessment_status={v:by_sample[source['id']][v].get('status','unassessed') for v in variants})
+        probs={v:{f:a['noul'] for f,a in by_sample.get(source['id'],{}).get(v,{}).get('answers',{}).items()}
+               if by_sample.get(source['id'],{}).get(v,{}).get('status')=='complete' else {} for v in variants}
+        sample=dict(source,probabilities=probs,assessment_status={v:by_sample.get(source['id'],{}).get(v,{}).get('status','unassessed') for v in variants})
         sample['source_current']=None
         if catalog is not None and source['kind']=='transcript':
             run=catalog.runs.get(source['run_id'],{})
@@ -80,7 +92,7 @@ def build(workspace,catalog=None,analysis=None):
     cue_differences={s['id']:{v:{k:p-base['probabilities'][v][k] for k,p in s['probabilities'][v].items() if k in base['probabilities'][v]} for v in variants}
                      for s in samples if s['id'] in ('ordinary_borges_cue','ordinary_plato_cue')}
     return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'in_progress' if active else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
-            'plan_sha256':plan['sha256'],'root':module.ROOT,'variants':list(variants),'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
+            'batch':batch,'batches':(['pilot','corpus'] if (Path(workspace)/'mind-lenses/discourse-corpus-20260918-v1/plan.json').exists() else ['pilot']),'plan_sha256':plan['sha256'],'root':module.ROOT,'variants':list(variants),'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
             'budget':plan['budget'],'selection':{k:v for k,v in plan['selection'].items() if k!='reserved_lineages'},
             'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,'topic_filter':topic_filter,
             'word_band_counts':dict(Counter('1–50' if s['words']<=50 else '51–100' if s['words']<=100 else '101–150' if s['words']<=150 else '151+' for s in samples if s['kind']=='transcript')),

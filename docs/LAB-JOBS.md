@@ -30,3 +30,7 @@ Offline tests exercise registry/budget/authorization checks, duplicate Start beh
 Validation at implementation: **355 Python tests and 80 JavaScript tests passed**. Live browser checks verified progress, cost display, normal in-flight status and navigation; the actual worker continued through an Explorer restart.
 
 The first real job completed **240 / 240 requests, 6,480 probabilities, $0.047085024 reported cost**, without retries or unknown-cost reserves. Its finite allocation is exhausted; completed job controls cannot launch additional inference. See [the comparison report](MIND-DISCOURSE-RESULTS.md).
+
+## Full-corpus Mind & discourse job
+
+`mind-discourse-corpus-v1` is the second allowlisted job. Its separately pinned plan and release authorize 19,196 new calls plus 120 exact pilot reuses, under an aggregate $10 cap. It uses the frozen concurrent coordinator, which drains active calls before pausing, and continues independently of Explorer. Its results link selects the full-corpus dataset. The original pilot remains a separate completed job. See [the full protocol](MIND-DISCOURSE-CORPUS.md).

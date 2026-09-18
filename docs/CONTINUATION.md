@@ -1,3 +1,9 @@
+## Running milestone · 18 September 2026: full Mind & discourse assessment
+
+The researcher authorized the full JEV job after reviewing its low actual cost. [Full-corpus protocol](MIND-DISCOURSE-CORPUS.md) freezes 9,646 nonblank real messages outside the 60 reserved validation lineages, plus twelve existing synthetic controls. Two unchanged 27-feature packs (names + definitions; names + portraits) give 19,316 logical assessments, 120 exact reuses and 19,196 new calls under one $10 ceiling. The first two new calls passed; the detached Lab Jobs worker is running the remaining finite allocation.
+
+Full-corpus results are available in Mind & discourse through a separate dataset selector, with technical/run filters, chronological ordering, pagination and explicit score refresh. The pilot and all historical evidence remain unchanged. Lab summary includes the new batch. Validation: 387 Python and 114 JavaScript tests pass; live job and results navigation checked. This is a running allocation, not a completion claim. The next continuation should read its saved status and receipts, inspect any actual stop without duplicating uncertain calls, then produce the completed descriptive report and a verified research snapshot. No recurring scheduler or supervising model was installed.
+
 ## Completed overview milestone · 18 September 2026: Goals, Ideas & Task / Lab summary
 
 The top workspace section is now **Goals, Ideas & Task**. Its fourth tab, **Lab summary**, sits beside Ideas & tasks. A live read-only overview separates indexed data-generation experiments from assessment batches, with real/synthetic message proportions, explicit denominators, sortable/filterable source rows, exact run navigation and assessment links. Synthetic classifier controls stay distinct from synthetic conversation fixtures; repeated questions and wordings do not inflate message counts.

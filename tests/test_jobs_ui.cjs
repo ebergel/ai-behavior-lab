@@ -84,3 +84,9 @@ test('result links reject cross-origin and javascript URLs',()=>{
  assert.equal(jobs.safeResultUrl('https://evil.example/results'), '');
  assert.equal(jobs.safeResultUrl('/results/job.json'), 'http://localhost/results/job.json');
 });
+
+
+test('full corpus job is allowlisted with its own $10 cap and result link',()=>{
+ const data=jobs.normalized({jobs:[{id:'mind-discourse-corpus-v1',status:'running',planned:19316,complete:120,effective_ceiling_usd:10,result_url:'/#view=discourse&lens=%7B%22batch%22%3A%22corpus%22%7D'}]});
+ assert.equal(data.jobs.length,1);jobs.renderJobs(data);assert.match(html,/mind-discourse-corpus-v1/);assert.match(html,/\$10.0000/);assert.doesNotMatch(html,/capped at \$2/);
+});

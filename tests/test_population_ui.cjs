@@ -40,8 +40,8 @@ test('Mind banner counts the full evidence sample and combined filtered targets 
  const html=ctx.discoursePopulation(data,filters,rows);
  assert.match(html,/3 <small>messages/);
  assert.match(html,/1 <small>messages/);
- assert.match(html,/2 conversations · 1 synthetic controls/);
- assert.match(html,/33.3% of this sample · 1 conversations/);
+ assert.match(html,/2 source runs · 1 synthetic controls/);
+ assert.match(html,/33.3% of this sample · 1 source runs/);
  assert.match(html,/Topic: Consciousness ≥ 80%/);
  assert.match(html,/Words ≥ 50/);
  assert.match(html,/Assessment wording: Names \+ portraits/);
