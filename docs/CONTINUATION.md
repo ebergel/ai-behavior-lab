@@ -1,3 +1,9 @@
+## Completed interface milestone · 18 September 2026: passage family means
+
+The researcher requested overall matching-pattern weight per target. Mind & discourse adds **Thinkers mean** (16 features) and **Discourse mean** (11 features) to the passage comparison and profile matrix, with both sort directions. Each is an equal-weight arithmetic mean of observed scores for the selected wording, with coverage counts and unknown values preserved. Both use the full family regardless of which individual columns are visible, and work within the existing topic/model/length filters.
+
+These derived summaries reuse completed assessments. They do not change classifiers, frozen scoring software or evidence, and do not require new inference. See [the definitions and interpretation](MIND-DISCOURSE-PORTRAITS.md#family-means-for-each-passage). The next scientific step remains review of the classifier's distinctions.
+
 ## Completed interface milestone · 18 September 2026: target topic filtering
 
 The researcher clarified that topic selection must restrict the actual target population in Mind & discourse and Analysis. Both now offer a separate **Filter target passages by topic** panel with tier, topic and inclusive 50/80/90 threshold controls. Mind & discourse joins existing JEV scores to the exact current passage; all 48 classifier targets match, with Consciousness ≥80 selecting 3. Its overview, comparison and matrix share that subset. Synthetic controls remain separate.

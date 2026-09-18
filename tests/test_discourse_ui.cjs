@@ -19,3 +19,40 @@ test('overview columns sort numerically, keep missing values last, and preserve 
 test('overview sort clicks update URL in place, preserve scroll and focus, and leave passage sort independent',()=>{let rendered=0;const originalRender=ctx.renderLenses;ctx.renderLenses=()=>{rendered+=1};ctx.state.lensFilters=ctx.lensFilters({sort:'words',overviewSort:'probability',overviewDir:'asc'});const button={dataset:{lensOverviewSort:'probability'},hasAttribute:name=>name==='data-lens-overview-sort'};listeners.click({target:{closest:selector=>selector.includes('[data-lens-overview-sort]')?button:null}});let route=new URLSearchParams(history.url.slice(1));let lens=JSON.parse(route.get('lens'));assert.equal(lens.sort,'words');assert.equal(lens.overviewSort,'probability');assert.equal(lens.overviewDir,'desc');assert.equal(rendered,1);assert.equal(scrollPosition,120);assert.equal(focusOptions.preventScroll,true);ctx.state.lensFilters=lens;listeners.click({target:{closest:selector=>selector.includes('[data-lens-overview-sort]')?button:null}});lens=JSON.parse(new URLSearchParams(history.url.slice(1)).get('lens'));assert.equal(lens.overviewDir,'asc');ctx.renderLenses=originalRender;});
 test('topic thresholds exclude zero and unknown scores, include exact 80, and combine with base filters',()=>{const data={topic_filter:{available:true,topics:[{id:'consciousness',title:'Consciousness',group:'mind'}]},samples:[{...make('zero',0),words:20,topic_scores:{consciousness:0}},{...make('high',1),words:80,topic_scores:{consciousness:85}},{...make('boundary',1),words:80,topic_scores:{consciousness:80}},{...make('unknown',1),words:80,topic_scores:{consciousness:null}},{...make('other',1),words:80,topic_scores:{consciousness:75}}]};assert.equal(ctx.lensRows(data,ctx.lensFilters({topic:'consciousness',topic_threshold:'80',min:'50'})).map(x=>x.id).join(),'high,boundary');assert.equal(ctx.lensRows(data,ctx.lensFilters({topic:'consciousness',topic_threshold:'50'})).map(x=>x.id).join(),'high,boundary,other');assert.equal(ctx.lensRows(data,ctx.lensFilters({topic:'consciousness',topic_threshold:'50',q:'zero'})).length,0);});
 test('invalid topics stay empty, while synthetic controls bypass stale and unavailable topic state',()=>{const data={topic_filter:{available:true,topics:[{id:'consciousness',title:'Consciousness',group:'mind'}]},samples:[{...make('real',1),topic_scores:{consciousness:95}},{...make('control',1),kind:'synthetic',topic_scores:{}}]};assert.equal(ctx.lensRows(data,ctx.lensFilters({topic:'unknown',topic_threshold:'50'})).length,0);assert.equal(ctx.lensRows(data,ctx.lensFilters({kind:'synthetic',topic:'stale-id',topic_threshold:'90'})).map(x=>x.id).join(),'control');const unavailable={topic_filter:{available:false,topics:[]},samples:data.samples};assert.equal(ctx.lensRows(unavailable,ctx.lensFilters({kind:'synthetic',topic:'stale-id'})).map(x=>x.id).join(),'control');const roundTrip=ctx.lensFilters(ctx.lensFilters({topic_group:'mind',topic:'consciousness',topic_threshold:'90'}));assert.equal(roundTrip.topic_group,'mind');assert.equal(roundTrip.topic,'consciousness');assert.equal(roundTrip.topic_threshold,'90');});
+test('family means keep full-family denominators, zero, missing scores and selected wording separate',()=>{
+ const features=[...Array.from({length:16},(_,i)=>({id:'t'+i,family:'thinkers'})),...Array.from({length:11},(_,i)=>({id:'d'+i,family:'discourse'}))];
+ const sample={probabilities:{definition_only:{t0:0,t1:.5,t2:null,t3:NaN,t4:Infinity,t5:'0.8',d0:.9},name_and_portrait:{t0:.8,t1:1}}};
+ const summary=(variant,family)=>JSON.parse(JSON.stringify(ctx.familyMean(sample,features,variant,family)));
+ assert.deepEqual(summary('definition_only','thinkers'),{mean:.25,n:2,total:16});
+ assert.deepEqual(summary('definition_only','discourse'),{mean:.9,n:1,total:11});
+ assert.deepEqual(summary('name_and_portrait','thinkers'),{mean:.9,n:2,total:16});
+ assert.deepEqual(summary('name_and_portrait','discourse'),{mean:null,n:0,total:11});
+});
+test('family means sort both directions with stable ties, keep unknowns last and ignore displayed family',()=>{
+ const features=[{id:'t1',family:'thinkers'},{id:'t2',family:'thinkers'},{id:'d1',family:'discourse'}];
+ const data={spec:{features},samples:[
+  {...make('a',0),probabilities:{definition_only:{t1:.8,t2:.8,d1:.2}}},
+  {...make('b',0),probabilities:{definition_only:{t1:.8,t2:.8,d1:null}}},
+  {...make('c',0),probabilities:{definition_only:{t1:null,t2:null,d1:.9}}},
+  {...make('d',0),probabilities:{definition_only:{t1:0,t2:0,d1:.1}}}]};
+ const order=sort=>ctx.lensRows(data,ctx.lensFilters({sort,family:'discourse',feature:'d1'})).map(x=>x.id).join();
+ assert.equal(order('thinkers_mean'),'a,b,d,c');assert.equal(order('thinkers_mean_asc'),'d,a,b,c');
+ assert.equal(order('discourse_mean'),'c,a,d,b');assert.equal(order('discourse_mean_asc'),'d,a,c,b');
+ assert.equal(ctx.lensFilters(ctx.lensFilters({sort:'discourse_mean_asc'})).sort,'discourse_mean_asc');
+});
+test('summary header toggles sort and retains filters, scroll and originating control focus',()=>{
+ let rendered=0,focusedSelector;const originalRender=ctx.renderLenses,originalQuery=document.querySelector;
+ ctx.renderLenses=()=>{rendered+=1};document.querySelector=selector=>{focusedSelector=selector;return focusTarget;};
+ try {
+  ctx.state.lensFilters=ctx.lensFilters({sort:'probability',topic:'consciousness',topic_threshold:'80',panel:'matrix'});
+  const button={dataset:{lensSummarySort:'thinkers_mean'},hasAttribute:name=>name==='data-lens-summary-sort'};
+  const click=()=>listeners.click({target:{closest:selector=>selector.includes('[data-lens-summary-sort]')?button:null}});
+  click();click();
+  let lens=JSON.parse(new URLSearchParams(history.url.slice(1)).get('lens'));
+  assert.equal(lens.sort,'thinkers_mean_asc');assert.equal(lens.topic,'consciousness');assert.equal(lens.topic_threshold,'80');
+  assert.equal(rendered,2);assert.equal(scrollPosition,120);assert.equal(focusedSelector,'[data-lens-summary-sort="thinkers_mean"]');
+  assert.equal(focusOptions.preventScroll,true);
+  listeners.change({target:{id:'lens-sort',value:'discourse_mean'}});
+  assert.equal(focusedSelector,'#lens-sort');assert.equal(ctx.state.lensFilters.sort,'discourse_mean');
+ } finally {ctx.renderLenses=originalRender;document.querySelector=originalQuery;}
+});

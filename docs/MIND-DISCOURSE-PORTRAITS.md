@@ -37,6 +37,16 @@ Mind & discourse uses the full workspace width, including ultrawide monitors. Th
 
 The overview table supports ascending and descending sorting on every column: feature, observed count, mean yes-probability, count at or above 80%, mean absolute paired difference and paired count. Missing statistics remain last in either direction. Overview sorting is independent of passage sorting and is preserved in the view URL.
 
+## Family means for each passage
+
+**Thinkers mean** averages the 16 thinker/writer feature scores; **Discourse mean** averages the 11 discourse-practice scores. Both use the currently selected assessment wording and give every feature in that family equal weight. Their 0–100 values summarize the overall level of matching across that family.
+
+For a passage and family, the displayed mean is `100 × sum(observed probabilities) / observed feature count`. Zero is observed; unavailable scores are excluded. Coverage is shown as observed / family total, and a fully unassessed family displays a dash. Partial means need to be read alongside their coverage.
+
+The two columns appear in the passage comparison and profile matrix. Click either header to alternate descending/ascending order, or use **Sort passages**. Unknown means stay last. Sorting and assessment wording persist in the URL; model, word-count and topic filters continue to restrict the target population. Hiding individual feature columns or selecting a feature does not change either mean: each always uses its full family.
+
+A higher mean can reflect several moderate matches or fewer strong ones. Because the labels overlap, these averages are descriptive summaries, not the probability of any match, a quality rating, or a count of distinct ideas. They are calculated from existing results without another assessment.
+
 ## Filtering the target population
 
 **Filter target passages by topic** restricts the real passages behind the overview, passage comparison and profile matrix. Select a topic tier, a topic and an inclusive JEV threshold of 50, 80 or 90. The filter combines with source-model, word-count and text filters and is retained in the view URL and source-navigation return state. Clear it to restore all otherwise matching passages.
