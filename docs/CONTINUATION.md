@@ -1,3 +1,9 @@
+## Vocabulary clarification · 18 September 2026: research entities
+
+The researcher identified ambiguity between conversation, message, passage, target and source record. [Research entities v0.1](RESEARCH-ENTITIES.md) proposes **conversation → message → excerpt**, treats “target” as an analysis role, separates context/assessment/question/score/request, and preserves branch, lineage and intervention distinctions. Current Mind/Gem targets are selected messages; their “source records” count source runs. The full library includes technical runs, so renaming all 472 records to conversations would be inaccurate.
+
+This session records the vocabulary proposal and code audit only. No UI/schema or scientific denominator was changed. Next implementation: adopt the glossary and standardize labels with explicit run categories and message eligibility, preserving historical assessment wording and evidence.
+
 ## Completed interface milestone · 18 September 2026: population context
 
 The researcher requested clear population and subset counts across analysis windows. A common **Population in view** banner now separates the lab library, the selected sample/dataset and the current filtered subset in the Library, Mind & discourse, Gem Finder, JEV Topic Atlas and Analysis. It labels units, active restrictions and source records, keeps synthetic controls separate, and counts the whole subset before pagination. Assessment requests/questions are distinct from targets. See [population definitions and examples](POPULATION-CONTEXT.md).
