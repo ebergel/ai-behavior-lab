@@ -40,7 +40,7 @@ class GemFinder:
             ids={i['id'] for i in plan['items']}
             require(len(ids)==len(plan['items']) and not seen & ids, 'Duplicate Gem assessment target across batches')
             sources={(i['run_id'],i['message_id']) for i in plan['items']}
-            require(len(sources)==len(plan['items']) and not seen_sources & sources, 'Duplicate Gem source passage across batches')
+            require(len(sources)==len(plan['items']) and not seen_sources & sources, 'Duplicate Gem source message across batches')
             seen.update(ids)
             seen_sources.update(sources)
             batches.append({'id':path.parent.name,'title':'Model × length expansion','root':path.parent,'plan':plan})
@@ -60,12 +60,12 @@ class GemFinder:
 
     def current_source(self,run_id,message_id):
         plan=self.plan();require(plan is not None,'Prepare a discovery pilot first')
-        require(isinstance(run_id,str) and isinstance(message_id,str),'Invalid passage identity')
+        require(isinstance(run_id,str) and isinstance(message_id,str),'Invalid message identity')
         require(run_id in plan['discovery_runs'],'This conversation is outside Gem Finder discovery scope or reserved for independent validation')
         run=self.catalog.runs.get(run_id)
         require(run and run['source']['sha256']==plan['discovery_runs'][run_id],'Source changed since discovery freeze')
         m=next((m for m in run['messages'] if m['id']==message_id),None)
-        require(m and m.get('kind')=='message' and isinstance(m.get('text'),str) and m['text'].strip(),'Choose a visible participant passage')
+        require(m and m.get('kind')=='message' and isinstance(m.get('text'),str) and m['text'].strip(),'Choose a recorded participant message')
         return run,m
 
     def save(self,data):
@@ -78,7 +78,7 @@ class GemFinder:
         rating=data.get('rating','');note=data.get('note','');quote=data.get('quote','');axes=data.get('axes',{})
         require(isinstance(rating,str) and rating in RATINGS,'Choose a reading verdict')
         require(isinstance(note,str) and len(note)<=8000,'Use a note of up to 8,000 characters')
-        require(isinstance(quote,str) and (not quote or quote in m['text']),'The quoted phrase must appear exactly in this passage')
+        require(isinstance(quote,str) and (not quote or quote in m['text']),'The quoted phrase must appear exactly in this message')
         rubric=self.plan()['rubric'];allowed={a['id'] for a in rubric['axes']}
         require(isinstance(axes,dict) and set(axes)<=allowed and all(type(v) is int and 0<=v<=4 for v in axes.values()),'Choose rubric levels 0–4, or leave unrated')
         exposure=data.get('exposure');require(exposure in ('visible','hidden_in_this_view'),'Record score visibility')
@@ -144,7 +144,7 @@ class GemFinder:
         hashes=[b['plan']['sha256'] for b in selected]
         note=(f"{combined['planned']} planned targets from {lineages} conversation lineages. "
               + ('The original pilot selected one target per lineage. ' if batch=='pilot' or len(batches)==1 else
-                 'The expansion samples model × length cells where available, with at most three targets per lineage including the original pilot. These are distinct passages, not independent conversation replicates. ')
+                 'The expansion samples model × length cells where available, with at most three targets per lineage including the original pilot. These are distinct messages, not independent conversation replicates. ')
               + f"All {len(plan['selection']['reserved_lineages'])} reserved validation lineages remain excluded. Sampling is for development, not a corpus prevalence estimate. Your readings remain separate from model assessments.")
         return {'available':True,'batch':batch,'batches':index,'plan_sha256':hashes[0] if len(hashes)==1 else fingerprint(hashes),
                 'plan_hashes':hashes,'created_at':selected[-1]['plan']['created_at'],'rubric':plan['rubric'],

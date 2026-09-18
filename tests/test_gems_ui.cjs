@@ -91,8 +91,8 @@ test('sample loading caches each cohort separately and retains other filters',as
  assert.deepEqual(requests,['/api/gems?batch=pilot','/api/gems?batch=expansion-20260918-v1']);
  assert.equal(local.state.gemFilters.max_words,'25');assert.equal(local.state.gemFilters.plot,'matrix');
 });
-test('historical empty replies are labeled and cannot create an unsupported passage reading',()=>{
+test('historical empty messages are labeled and cannot create an unsupported reading',()=>{
  const html=ctx.gemDetail({...item,text:'\n',words:0,answers:{}},ctx.gemFilters());
- assert.match(html,/Empty visible reply/);assert.match(html,/minimum words to 1/);
+ assert.match(html,/Empty message/);assert.match(html,/minimum words to 1/);
  assert.match(html,/disabled>Save my reading/);
 });

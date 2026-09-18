@@ -203,7 +203,7 @@ class TopicAtlas:
 
     def cohort(self,catalog,studies,scope,model=''):
         all_runs=[r for r in catalog.runs.values() if eligible(r)]
-        groups=[{'id':'all','title':'All eligible conversation records','count':len(all_runs)}]
+        groups=[{'id':'all','title':'All atlas-eligible runs','count':len(all_runs)}]
         for study in studies.all():
             ids={m['run_id'] for m in study['runs']};groups.append({'id':study['id'],'title':study['title'],'count':sum(r['id'] in ids for r in all_runs)})
         require(scope in {g['id'] for g in groups},'Unknown reading cohort')
@@ -281,7 +281,7 @@ class TopicAtlas:
             'occurrences':matched[topic], 'reviews':selected_reviews,
             'openings':[{'run_id':r['id'],'title':r['title'],'condition':r['condition'],'models':r['models'],'source_sha256':r['source']['sha256'],
                 'messages':[{k:m.get(k) for k in ('id','turn','speaker','model','text','status')} for m in participant_messages(r) if m['turn']<=WINDOW]} for r in runs],
-            'limits':'Literal matches are not semantic topic choices. Repeated mention is two distinct messages; a return candidate has at least two intervening messages without a match, only in linear records. Neither proves semantic recurrence. Shared prefixes count once per record; distinct roots/campaigns may remain dependent. Initial-choice denominator includes current selected/no-selection reviews, excludes unknowns. No-match is not semantic absence. Prompts and traces are excluded. Model filter keeps whole conversations containing that model.'}
+            'limits':'Literal matches are not semantic topic choices. Repeated mention is two distinct messages; a return candidate has at least two intervening messages without a match, only in linear runs. Neither proves semantic recurrence. Shared prefixes count once per run; distinct roots/campaigns may remain dependent. Initial-choice denominator includes current selected/no-selection reviews, excludes unknowns. No-match is not semantic absence. Prompts and traces are excluded. Model filter keeps whole conversations containing that model.'}
         if len(self.cache)>12:self.cache.clear()
         self.cache[key]=result;return result
 

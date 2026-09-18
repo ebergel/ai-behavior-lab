@@ -1,3 +1,9 @@
+## Completed terminology follow-through · 18 September 2026: whole-lab consistency
+
+Topic atlas now uses the same research units as the other analysis screens and has a Population in view banner. Its frequency columns distinguish runs with matches from message and phrase-occurrence counts; opening windows are labeled first six participant positions. The eligible sample, reading scope, resolved opening-review denominator and filtered conversation list remain separate.
+
+The audit extends to Finder, Coverage, Trajectories, library/reader, collections/workbench, Model assessment, JEV, Gem Finder, Mind & discourse and Analysis. Inventory totals count runs; unstarted entries count planned run slots; current whole-text analyses count messages. External interventions retain their own label. A Research units link opens the dictionary from page headings. Original evidence, frozen instrument wording, attributed research text and stable transport keys remain intact. See [research entities](RESEARCH-ENTITIES.md) and [population context](POPULATION-CONTEXT.md). No new inference or denominator migration; the deeper historical message/event counting audit remains separate.
+
 ## Completed terminology milestone · 18 September 2026: messages and excerpts in the interface
 
 The researcher found that retaining “Passage (legacy term)” continued the ambiguity. Dictionary v5 removes that entry, keeps passage as a searchable alias and redirects its bookmarks to **Message**. The 39-entry guide now has 23 research entities. Whole-message samples, probability plots, profile matrices and population banners use **messages**; reader actions distinguish **Save message** from **Save excerpt**; synthetic controls retain separate text labels. Saved quotations may contain whole messages or excerpts.

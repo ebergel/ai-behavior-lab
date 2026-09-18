@@ -138,7 +138,7 @@ class ExpansionReaderTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,error):self.store.batches()
         broken=deepcopy(self.plan);broken['items'][0]['message_id']='m1'
         with patch('behaviorlab.gem_finder.read_record',return_value=broken):
-            with self.assertRaisesRegex(ValueError,'source passage'):self.store.batches()
+            with self.assertRaisesRegex(ValueError,'source message'):self.store.batches()
 
 class ExpansionReportTests(unittest.TestCase):
     def test_descriptive_correlations_and_length_band_denominators(self):

@@ -21,3 +21,12 @@ test('zero cells remain navigable and labels escape external metadata',()=>{
  assert.match(html,/coverage-cell empty/);assert.match(html,/data-action="coverage-cell"/);
  assert.match(html,/&lt;model>/);assert.doesNotMatch(html,/disabled/);
 });
+
+test('coverage keeps unstarted slots distinct from observed runs, including zero cells',()=>{
+ for(const scope of ['inventory','atlas','technical','unstarted']){
+  c.state.coverageFilters.scope=scope;
+  const html=c.coverageCellHtml({key:'m',label:'Model'},{value:'3',records:0,flagged:0,branched:0});
+  assert.match(html,scope==='unstarted'?/0 planned run slots/:/0 runs/);
+  assert.doesNotMatch(html,/disabled/);
+ }
+});

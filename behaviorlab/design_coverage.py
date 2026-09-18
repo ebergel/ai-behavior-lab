@@ -7,8 +7,8 @@ from .common import fingerprint, require, timestamp
 from .finder import experiment, model_info
 from .topic_atlas import eligible
 
-SCOPES = {'inventory': 'Conversation inventory', 'atlas': 'Visible atlas-eligible records',
-          'technical': 'Technical checks', 'unstarted': 'Unstarted assessment slots'}
+SCOPES = {'inventory': 'Conversation runs', 'atlas': 'Atlas-eligible runs with text',
+          'technical': 'Technical checks', 'unstarted': 'Unstarted run slots'}
 AXES = {
     'identity': ('Partner disclosure', ['Anonymous-Full', 'Anonymous-AI', 'Mirror', 'Named models', 'Unknown']),
     'human': ('Human-presence wording', ['Human presence unspecified', 'No human · explicit', 'Unknown']),
@@ -162,10 +162,10 @@ def build_coverage(catalog, filters=None):
             'evidence': rows, 'inventory_sha256': fingerprint(all_rows),
             'omitted_synthetic': sum(r['category'] == 'synthetic' for r in all_rows),
             'plan': plan, 'plan_sha256': fingerprint(plan),
-            'notes': ['Records are root/slot inventory units, not certified independent replicates.',
-                      'Shared branch nodes occur once; branch paths never multiply the record count.',
+            'notes': ['Runs and planned run slots are inventory units, not certified independent replicates.',
+                      'Shared branch nodes occur once; branch paths never multiply the run count.',
                       'A mixed conversation appears under each participating model/family; row totals are not additive.',
-                      'Visible replies are nonempty returned strings, including whitespace-only output. Presence does not establish substantive content. Guest interventions are excluded.',
+                      'Recorded messages here are nonempty returned strings, including whitespace-only output. Presence does not establish substantive content. Guest interventions are excluded.',
                       'Historical blocks group source collections, not identical protocols. Requested settings are not verified effective settings.',
-                      'Zero means no matching record in this inventory, not a behavioural absence or a planned allocation.',
+                      'Zero means no matching run or planned slot in this inventory, not a behavioural absence or a planned allocation.',
                       'Historical planned_count may describe returned positions, not the original allocation. Allocated slots are shown only in the new draft.']}

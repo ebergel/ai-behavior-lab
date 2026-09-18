@@ -85,3 +85,21 @@ test('JEV banner counts the whole queue, not the page or number of questions',()
  assert.match(html,/Topic: Mind/);assert.match(html,/Probability: 80–&lt;90%/);
  assert.match(html,/before pagination/);assert.match(html,/distributions describe the full batch/);
 });
+
+vm.runInContext(fs.readFileSync('behaviorlab/explorer_ui/topic-atlas.js','utf8'),ctx);
+test('Topic atlas distinguishes eligibility, reading scope, and filtered run subset before pagination',()=>{
+ const data={scope:'study',topic:'mind',dictionary:[{id:'mind',title:'Mind'}],cohorts:[{id:'all',count:438},{id:'study',title:'Selected study',count:30}],denominators:{runs:25,visible_messages:750},reviews:[],openings:Array.from({length:25},(_,i)=>({run_id:'r'+i,title:'Run '+i,condition:'open',models:['model']})),occurrences:Array.from({length:20},(_,i)=>({run_id:'r'+i,message_id:'m'+i,turn:i+1,excerpt:'mind',matches:[{quote:'mind'}]}))};
+ const f={panel:'dictionary',model:'model',match:'any',q:'',chatSort:'title',page:1};
+ let html=ctx.atlasPopulation(data,f);
+ assert.match(html,/472 <small>runs/);assert.match(html,/438 <small>runs/);assert.match(html,/25 <small>runs/);
+ assert.match(html,/750 recorded messages/);assert.match(html,/Selected study/);
+ assert.doesNotMatch(html,/>Mind<|Search:/);
+ html=ctx.atlasPopulation(data,{...f,panel:'conversations'});
+ assert.match(html,/20 <small>runs/);assert.match(html,/within 25 runs/);assert.match(html,/before pagination/);
+ html=ctx.atlasPopulation(data,{...f,panel:'conversations',match:'early'});
+ assert.match(html,/6 <small>runs/);assert.match(html,/First 6 positions/);
+ html=ctx.atlasPopulation(data,{...f,panel:'conversations',q:'nonexistent'});
+ assert.match(html,/0 <small>runs/);
+ const unknown={...data,cohorts:[]};
+ assert.match(ctx.atlasPopulation(unknown,f),/— <small>runs/);
+});

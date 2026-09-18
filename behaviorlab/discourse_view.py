@@ -84,7 +84,7 @@ def build(workspace,catalog=None,analysis=None):
             'budget':plan['budget'],'selection':{k:v for k,v in plan['selection'].items() if k!='reserved_lineages'},
             'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,'topic_filter':topic_filter,
             'word_band_counts':dict(Counter('1–50' if s['words']<=50 else '51–100' if s['words']<=100 else '101–150' if s['words']<=150 else '151+' for s in samples if s['kind']=='transcript')),
-            'review_guide':'Judge whether the classifier makes useful, coherent distinctions across passages and wording conditions. No personal passage ratings are required. Probabilities describe yes answers to these questions, not similarity degree, provenance or quality. Synthetic controls remain separate.'}
+            'review_guide':'Judge whether the classifier makes useful, coherent distinctions across messages and control texts and wording conditions. No personal text ratings are required. Probabilities describe yes answers to these questions, not similarity degree, provenance or quality. Synthetic controls remain separate.'}
 
 
 def review_markdown(plan):

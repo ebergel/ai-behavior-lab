@@ -65,7 +65,7 @@ class ResearchCollections:
             kind=finding.get('kind','observation')
             require(kind in ('observation','counterexample','hypothesis','limitation'), 'Invalid finding category')
             evidence=finding.get('evidence',[])
-            require(isinstance(evidence,list) and len(evidence)<=20, 'Use up to 20 passages per finding')
+            require(isinstance(evidence,list) and len(evidence)<=20, 'Use up to 20 evidence quotations per finding')
             require(evidence or kind in ('hypothesis','limitation'), 'Observations need source evidence')
             clean_evidence=[]
             for item in evidence:
