@@ -59,3 +59,8 @@ The original public reference project remains independent. The private lab store
 ## Publication verification
 
 A fresh copy downloaded from the private GitHub repository restored successfully with access to the original project and network connections blocked during restoration. Checks reproduced all catalog projections and fourteen notebook tables, verified 174 exact quoted passages across six collections and annotations, and recovered the same atlas counts and four Haiku/consciousness Finder matches. The application and collections also passed a separate localhost HTTP check using the restored copy. See the [validation record](evidence/research-publication-validation.json) and its [standalone restoration check](evidence/research-publication-check.py). The full suite passed 210 Python tests and fourteen JavaScript checks.
+
+
+## Gem Finder snapshot · 18 September 2026
+
+The snapshot also includes the frozen 100-passage Gem Finder plan, six-axis rubric, software copies, all 100 request/response pairs, authorization basis, completion summary and descriptive analysis. The two new notebook tables are `gem_readings` and `gem_reading_history`; four initial entries are explicitly Codex development readings. All sixteen pre-existing notebook tables are preserved, with only the explicit Gem planning-card completion and follow-up card changing the task tables in this work round. Disposable browser-test judgments are excluded. The snapshot is verified and restored to a separate directory before it replaces the earlier private snapshot.

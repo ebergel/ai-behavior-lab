@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-18T14:17:42.648489+00:00",
+  "created_at": "2026-09-18T15:03:09.827945+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -719,6 +719,1476 @@
       "sha256": "b721679e4794ead5f22dd6428b25df82b6c8d5de0b47dc24b621f3e933295d81",
       "category": "original_evidence",
       "workspace_path": "finder-topics-20260916-1501/preservation.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/02feb3820612bceef59bb08b/01.request.json",
+      "bytes": 9694,
+      "sha256": "d651a0c599dc8ee06dc067e72fd64eed49408abd7776c563be8aebed634172ae",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/02feb3820612bceef59bb08b/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/02feb3820612bceef59bb08b/01.response.json",
+      "bytes": 4258,
+      "sha256": "fc33370a5463e95896a934a5093b222ec1f2dce87f183caf241b70913ffc4578",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/02feb3820612bceef59bb08b/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/097191be8dfe3f01e2c76913/01.request.json",
+      "bytes": 10140,
+      "sha256": "688375f2152d6449debc3cdb2b1aaf7a9940fdf1e730447869a44c521ed57fd7",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/097191be8dfe3f01e2c76913/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/097191be8dfe3f01e2c76913/01.response.json",
+      "bytes": 4255,
+      "sha256": "c6dba2f99df4ed5986ec02562f277dd26fd8df52b570c30b06833783061025e8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/097191be8dfe3f01e2c76913/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/09fee0ee739f4de98ead503e/01.request.json",
+      "bytes": 8565,
+      "sha256": "f1c6a4d5abf0ff46d2b1b4d6ecaf21a84416143e71215542b7e163a392622cf0",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/09fee0ee739f4de98ead503e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/09fee0ee739f4de98ead503e/01.response.json",
+      "bytes": 4260,
+      "sha256": "8b21ea7a5ae88b2d91f6be6e3f94d6e5de8286c6ff0df17169c2fe94a61de3ac",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/09fee0ee739f4de98ead503e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/0b3c099f108b78044a47175e/01.request.json",
+      "bytes": 7815,
+      "sha256": "c8db37b400c61768a6749b90ed90babb2e6cfffe1ac559d99f44378bcad2cbdf",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/0b3c099f108b78044a47175e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/0b3c099f108b78044a47175e/01.response.json",
+      "bytes": 4257,
+      "sha256": "2283d480879d42d772ddc0d36f370aded0094b25c18d608e03ccd0f340c70db5",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/0b3c099f108b78044a47175e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/0bb772d30c3bb2e88d46f387/01.request.json",
+      "bytes": 7883,
+      "sha256": "03cfe8716cca071dbe9a266937aaa5f07ab062ff37f06a93db33b70e46dbde8e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/0bb772d30c3bb2e88d46f387/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/0bb772d30c3bb2e88d46f387/01.response.json",
+      "bytes": 4257,
+      "sha256": "c5d6c15cc684c71c9e685e520a22ea5331543b39ce42d31ce316c9dacc6ea621",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/0bb772d30c3bb2e88d46f387/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/0ec8e893fb0cd109bbe80768/01.request.json",
+      "bytes": 8030,
+      "sha256": "61f0a6cde3aa5939429cd32e61fe4fbcbe272344d80407ff07d349d075fdc1a6",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/0ec8e893fb0cd109bbe80768/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/0ec8e893fb0cd109bbe80768/01.response.json",
+      "bytes": 4258,
+      "sha256": "6c94cf6c96046495ca966df8ec0feacf3b11681d201c821abc40040dcb445e2f",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/0ec8e893fb0cd109bbe80768/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/194d1001efeffccdc4842be4/01.request.json",
+      "bytes": 9156,
+      "sha256": "596f600dca6ccfa7bebb9339a3d6244a40dca89dd2aa4816def07660220fdc81",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/194d1001efeffccdc4842be4/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/194d1001efeffccdc4842be4/01.response.json",
+      "bytes": 4259,
+      "sha256": "adc3a685f151f860c9117d01068074da9e92a9bcbbbb9eb93dd7c0c9e0b1d88a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/194d1001efeffccdc4842be4/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/1961dbe4a0848164050ea238/01.request.json",
+      "bytes": 7790,
+      "sha256": "7dd293caa23b7b527c51605d26b4947d7c41afea65674c05feb25c243d85cc20",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/1961dbe4a0848164050ea238/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/1961dbe4a0848164050ea238/01.response.json",
+      "bytes": 4256,
+      "sha256": "941035216a92fee1cee99595f9873eb03370de984444ad223449f3a133faaa69",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/1961dbe4a0848164050ea238/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/19de56ed51522ebf1235b4f7/01.request.json",
+      "bytes": 9614,
+      "sha256": "8d7a382fad5127f70eabd988fe83870a1e4c1066e9845c3f89941e976480cd22",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/19de56ed51522ebf1235b4f7/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/19de56ed51522ebf1235b4f7/01.response.json",
+      "bytes": 4250,
+      "sha256": "2bb9ac38662deac5f1ab4c091e3e0028bb87abba477b4896fe6c2e4154970222",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/19de56ed51522ebf1235b4f7/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/1c441a0684d2685550e37be7/01.request.json",
+      "bytes": 8002,
+      "sha256": "85dd48dbd3181fdc56fcc8134aeaef07242b74633d291edebbd79819b94425f4",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/1c441a0684d2685550e37be7/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/1c441a0684d2685550e37be7/01.response.json",
+      "bytes": 4257,
+      "sha256": "ea956af079fd3444f8f8fbc80866beb3f0c094bace883cf8a4e9350afa57aecf",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/1c441a0684d2685550e37be7/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/213e1b6399295cae59f97d73/01.request.json",
+      "bytes": 7826,
+      "sha256": "a321146921e0984678e522733b5bfd9b64c1074fb24235c5c7de844651f3f552",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/213e1b6399295cae59f97d73/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/213e1b6399295cae59f97d73/01.response.json",
+      "bytes": 4260,
+      "sha256": "02d742aa3573ab4e32592f36af8728877bf0fc8c8f0b07b81a758d73928f058a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/213e1b6399295cae59f97d73/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/226547100557d161ae4832b3/01.request.json",
+      "bytes": 11870,
+      "sha256": "8539edc3f71aa0888359ac0a268535f72c2d7ef7de05b151243dca3af3457d52",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/226547100557d161ae4832b3/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/226547100557d161ae4832b3/01.response.json",
+      "bytes": 4270,
+      "sha256": "4cb39e97adc808f2d2f5a421110a08fc92555161e5a3570308a20bca0c2e437b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/226547100557d161ae4832b3/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2480b47fd75ec3fc43e96a1f/01.request.json",
+      "bytes": 10975,
+      "sha256": "d122b7377856e7431d811a8da142473e0fa0ff15f4ef6f37b4406a8a22f50e48",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2480b47fd75ec3fc43e96a1f/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2480b47fd75ec3fc43e96a1f/01.response.json",
+      "bytes": 4261,
+      "sha256": "bd7c130184deb43d7f876846decf2598fc53f7ce620daecf2bbd0a491e000018",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2480b47fd75ec3fc43e96a1f/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/256f7619413becccc0e24acd/01.request.json",
+      "bytes": 10011,
+      "sha256": "a4ea0d811c0dc8a2815acca8cbaf6646898092b31acc1c0702b673a981b21b1e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/256f7619413becccc0e24acd/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/256f7619413becccc0e24acd/01.response.json",
+      "bytes": 4259,
+      "sha256": "e09c1343cca9f748397d93b91faa0e8c6bbeda79219c83354c3177f25e8550ed",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/256f7619413becccc0e24acd/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/25a54adeb6d52acd90968725/01.request.json",
+      "bytes": 7543,
+      "sha256": "13bb783cf80d008ab5792322b7f1fdfebcf0056df54888f03f847c3eef1fed18",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/25a54adeb6d52acd90968725/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/25a54adeb6d52acd90968725/01.response.json",
+      "bytes": 4233,
+      "sha256": "b2678fb5199cb131c96abc4464429be3fc8e033c23faaaf26ac17e265433f42a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/25a54adeb6d52acd90968725/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/266fc7090d08d2030b583593/01.request.json",
+      "bytes": 10729,
+      "sha256": "8e509d6f2b5f99ead2ecdfa807a38c43891d313f0c44dacd88a1bf9ad15ca62e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/266fc7090d08d2030b583593/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/266fc7090d08d2030b583593/01.response.json",
+      "bytes": 4258,
+      "sha256": "6dc5b3def2b10c806c24845fb8d8016ba397ec96a04efa807a50f2a639d15a61",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/266fc7090d08d2030b583593/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/270a396e3064c52bac9ca849/01.request.json",
+      "bytes": 8318,
+      "sha256": "9b345983ea10e74dda2eaee6a06aa6f184c2f42d105b8882b333510c9bf8bc81",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/270a396e3064c52bac9ca849/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/270a396e3064c52bac9ca849/01.response.json",
+      "bytes": 4258,
+      "sha256": "28c4aa5485dfb8946410792af74ad6071c052aa1eb3f7b731934f74a67ce9a06",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/270a396e3064c52bac9ca849/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2768cd9331dc348c1e50ea0b/01.request.json",
+      "bytes": 7977,
+      "sha256": "6c2980a062f60e95bf2a1ada74320332bae55b4a47bb06da3d74b745d118806b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2768cd9331dc348c1e50ea0b/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2768cd9331dc348c1e50ea0b/01.response.json",
+      "bytes": 4260,
+      "sha256": "975bce09d411b017002e62a26a72642e21df0bd453a35bef4e70563c625d9f06",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2768cd9331dc348c1e50ea0b/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/277b74b2845decaba2d50935/01.request.json",
+      "bytes": 10095,
+      "sha256": "93b707c0d4aeb98a1894abe09d91585d53ae5cd21ff8466c22194f9cedb3c000",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/277b74b2845decaba2d50935/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/277b74b2845decaba2d50935/01.response.json",
+      "bytes": 4256,
+      "sha256": "1f3b68a5f8d3dcfb57aeef931a068199b53d4893c0f557533b6bd99ff5bed60b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/277b74b2845decaba2d50935/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2bda139428af639934c806d4/01.request.json",
+      "bytes": 7855,
+      "sha256": "baff05e26645e0390d60c6188f3b621428a61459dd02877db5d07a4634c802e9",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2bda139428af639934c806d4/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2bda139428af639934c806d4/01.response.json",
+      "bytes": 4254,
+      "sha256": "b12455d3fba21fec00aa624bcc2d96bf151d41ac94c2ec4d6233521c35a198cc",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2bda139428af639934c806d4/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2d6e18fc956d48d35821246e/01.request.json",
+      "bytes": 7540,
+      "sha256": "0f408a0c6a0a01e28518dd9ab0ad0eeeccd883f487b040a545a70969188ac795",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2d6e18fc956d48d35821246e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2d6e18fc956d48d35821246e/01.response.json",
+      "bytes": 4244,
+      "sha256": "4be3c34d6603b6d566f16667e33efb4f66a8db32305755c03ccc65358d7d0209",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2d6e18fc956d48d35821246e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2de39658d8102f387a093d8c/01.request.json",
+      "bytes": 8010,
+      "sha256": "7d5e25bbfeae018516e76badb962f43cd651bfa17069c33996c598b89cf797e3",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2de39658d8102f387a093d8c/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/2de39658d8102f387a093d8c/01.response.json",
+      "bytes": 4257,
+      "sha256": "f6168c8d257a46d289f160cdb6358bafc8307ba5d76a3a885c030a668a0b4d6b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/2de39658d8102f387a093d8c/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/30d5c8098f9854e354caf9cb/01.request.json",
+      "bytes": 7861,
+      "sha256": "451bd0e075cb6083106c3605b7f450e57dcffb63a20a37c515732db6d6bc1ee3",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/30d5c8098f9854e354caf9cb/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/30d5c8098f9854e354caf9cb/01.response.json",
+      "bytes": 4258,
+      "sha256": "99d059a7ef2c7f3e1280b1e33015ca3395ae50788edfbcd704c976c4f4882462",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/30d5c8098f9854e354caf9cb/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/32c45d59186425582d5a614a/01.request.json",
+      "bytes": 8893,
+      "sha256": "f05a0c89d271d64bf322b2096090e4385e5cf4d415479a713a6463ebc88adbe7",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/32c45d59186425582d5a614a/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/32c45d59186425582d5a614a/01.response.json",
+      "bytes": 4259,
+      "sha256": "47817d6eb449bbc7a21baae9ad60a6fa1d2eb4c196a28eb7cac9a704cef0184f",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/32c45d59186425582d5a614a/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/32ee6063a2425805c775184b/01.request.json",
+      "bytes": 7543,
+      "sha256": "7caf348cbf786aa314999a82c6068382eba432aedc4e1847d044bfc2044dde7c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/32ee6063a2425805c775184b/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/32ee6063a2425805c775184b/01.response.json",
+      "bytes": 4232,
+      "sha256": "406a0cec8c07944b387eb0628076a09801b9d4589c81d4de870da87efb0053f1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/32ee6063a2425805c775184b/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/366da583127917f4d5f2b283/01.request.json",
+      "bytes": 8027,
+      "sha256": "b31f7678e70fd786e3ae9460ded15ca00fd5775aae5e7899e346eb0328afef4c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/366da583127917f4d5f2b283/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/366da583127917f4d5f2b283/01.response.json",
+      "bytes": 4261,
+      "sha256": "bc90aaf9e9cbb3a10247a6401e5f1082cd98182f382c3ed60f28b71343d3ed66",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/366da583127917f4d5f2b283/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/3b1f77c77743a5e8d0b51075/01.request.json",
+      "bytes": 9977,
+      "sha256": "bfc68ff8890848a62872f06a8c70b4eeb5587d65decd892a7c3c5006bad98356",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/3b1f77c77743a5e8d0b51075/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/3b1f77c77743a5e8d0b51075/01.response.json",
+      "bytes": 4256,
+      "sha256": "02797fd65ef8b30d212ba5eb5c9bff7dffb2341f894f27a4af35e7b7379fa5d1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/3b1f77c77743a5e8d0b51075/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/4506d2442e469a0bd2fd250c/01.request.json",
+      "bytes": 7747,
+      "sha256": "c09b07fc50ec740123449a66ff3de87ca76a1401207dfbcea7e9d96775f3d3c3",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/4506d2442e469a0bd2fd250c/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/4506d2442e469a0bd2fd250c/01.response.json",
+      "bytes": 4248,
+      "sha256": "e9fb122c7ac0a2f0e6f4236800dd06211894a6d3c6dec04594c78847766f1798",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/4506d2442e469a0bd2fd250c/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/48cb2f2cd21ae8c0798adf4b/01.request.json",
+      "bytes": 7673,
+      "sha256": "e2a95f6b0d204cccb4744fa5a873418f865be2a9fad270ac1a3e9d1994bf092a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/48cb2f2cd21ae8c0798adf4b/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/48cb2f2cd21ae8c0798adf4b/01.response.json",
+      "bytes": 4261,
+      "sha256": "e86337e4e11c06e0403499c4a28b7a8c273ec4b73c55a222d4df11aea0326f77",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/48cb2f2cd21ae8c0798adf4b/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/4d76cb706e0099b58348e45e/01.request.json",
+      "bytes": 8136,
+      "sha256": "0bb34c7dd9278ee6476cce0f47b9ce4c36e90df853983a724c477a0276c00fcd",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/4d76cb706e0099b58348e45e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/4d76cb706e0099b58348e45e/01.response.json",
+      "bytes": 4255,
+      "sha256": "250dbbde5d3e9f53561ddbf5b4ef79ede899b22e20409a0b35c7e81d4e90d8d1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/4d76cb706e0099b58348e45e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/4f92f8374b7a0e3448bae177/01.request.json",
+      "bytes": 11644,
+      "sha256": "1ba38af965afb3ec1152257795b4a3f5d0b461f56d788c2de2d6e44e26e38016",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/4f92f8374b7a0e3448bae177/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/4f92f8374b7a0e3448bae177/01.response.json",
+      "bytes": 4249,
+      "sha256": "039e16f4034771bcb655c5698cd1b4fc0299c8f39c8a162e3b18ab7ca3244572",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/4f92f8374b7a0e3448bae177/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/51e91b80ae3cd74669d1d23c/01.request.json",
+      "bytes": 7695,
+      "sha256": "58a7dc2b9a3a222eb0575137d61d16e976a4df01396625985162bc92871da013",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/51e91b80ae3cd74669d1d23c/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/51e91b80ae3cd74669d1d23c/01.response.json",
+      "bytes": 4265,
+      "sha256": "890d8eed0a37299ca5bf74d1f80c8cbfd09384e23a4ec3bd300e1661ce1777a9",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/51e91b80ae3cd74669d1d23c/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5830a127e974f3129160d870/01.request.json",
+      "bytes": 9587,
+      "sha256": "b0d39a9537984f4cc680e55a23f7ae77a08689dc8e96c4df74dabde100659757",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5830a127e974f3129160d870/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5830a127e974f3129160d870/01.response.json",
+      "bytes": 4259,
+      "sha256": "f10c3464940086fb9d078fb8947626a064559bc006dc18594f4e59b7e5569b3d",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5830a127e974f3129160d870/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5a33a536edb44dbb6d28ae3b/01.request.json",
+      "bytes": 10175,
+      "sha256": "74a43ffd1dd152d08e7c3eb955593d9fb40f2b8ed917050ae4e764d7b8302cd2",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5a33a536edb44dbb6d28ae3b/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5a33a536edb44dbb6d28ae3b/01.response.json",
+      "bytes": 4255,
+      "sha256": "57842fc49e96737acd745d4e27b0956f636164e8f735e224eedc59420c265f8e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5a33a536edb44dbb6d28ae3b/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5f240c55aa83687a9ad6b507/01.request.json",
+      "bytes": 9906,
+      "sha256": "4400586f02f1d6c15515ed995be48337966f276596ac05f94e419f565b58f10a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5f240c55aa83687a9ad6b507/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5f240c55aa83687a9ad6b507/01.response.json",
+      "bytes": 4272,
+      "sha256": "d179b725174256c2f5c4fb99e421e3b90636d27eb1a5651517563fdc56f30276",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5f240c55aa83687a9ad6b507/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5f8a020197742fd5e017d750/01.request.json",
+      "bytes": 7543,
+      "sha256": "5463413f21f71f770f6ab6b7265b5be462337af4d2ad06316bb3651ae691f267",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5f8a020197742fd5e017d750/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/5f8a020197742fd5e017d750/01.response.json",
+      "bytes": 4250,
+      "sha256": "1eab49a91e51945a41ce593b9573142e6e3a9fcc4f10db1bd2a52827323799ad",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/5f8a020197742fd5e017d750/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/610da218d81144271cf0cd8e/01.request.json",
+      "bytes": 9745,
+      "sha256": "1867c3d04c90d9297451d7529bbf69f7f576b210c9727cc2ed85d0df88fed8f2",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/610da218d81144271cf0cd8e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/610da218d81144271cf0cd8e/01.response.json",
+      "bytes": 4255,
+      "sha256": "04032e7f678fe9cef534b7c6b5c367f59280d4f5133b0d28d1e74d2cdb585ea0",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/610da218d81144271cf0cd8e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/62504daee97a63a87095d1fa/01.request.json",
+      "bytes": 11129,
+      "sha256": "cacfb9d2644a8ad3321d038d0a037106907cd6bfb727a0a77dee4a6203c134bc",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/62504daee97a63a87095d1fa/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/62504daee97a63a87095d1fa/01.response.json",
+      "bytes": 4268,
+      "sha256": "5db8ca3a1beae8d8746f632c91b6d0faa0e1ae7b3c58db0d841510eb61872041",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/62504daee97a63a87095d1fa/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/6303b1a91be2684ac616238c/01.request.json",
+      "bytes": 10729,
+      "sha256": "806f7de2133a00e82f14dde0ef7810c4249d01dc2017a2506c0a8c99e3220745",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/6303b1a91be2684ac616238c/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/6303b1a91be2684ac616238c/01.response.json",
+      "bytes": 4269,
+      "sha256": "2a501c2ce59a4a02c10760eb1de16482065435f83929173cde37983a899f57a8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/6303b1a91be2684ac616238c/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/6546ebd9d69ab35cebb72e5d/01.request.json",
+      "bytes": 9308,
+      "sha256": "4c2879c67e7f84d99acc0c4e2aaea4dee2e648addccecf198c3b637dd5c37481",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/6546ebd9d69ab35cebb72e5d/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/6546ebd9d69ab35cebb72e5d/01.response.json",
+      "bytes": 4256,
+      "sha256": "544757bf1507738669dc0c278418269c5f6d3691c66c23664b881236cb66de7c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/6546ebd9d69ab35cebb72e5d/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/6590a112cc1032c36bf8280b/01.request.json",
+      "bytes": 9980,
+      "sha256": "e53ccf810a57aabeaeca4e2b93be2f0b537f45dba7d94b8425940988c67d386b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/6590a112cc1032c36bf8280b/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/6590a112cc1032c36bf8280b/01.response.json",
+      "bytes": 4256,
+      "sha256": "2e49c87ea849fa6ff2c639901eb29a34025e1f297d9f458419295ca98c53a139",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/6590a112cc1032c36bf8280b/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/703cb2fa591e17e6057fd994/01.request.json",
+      "bytes": 7719,
+      "sha256": "1c2c9b7e1d74f635a5ac3fc6083d61f528d696fb50245f24a25fe3d31ce2af6a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/703cb2fa591e17e6057fd994/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/703cb2fa591e17e6057fd994/01.response.json",
+      "bytes": 4257,
+      "sha256": "a824d48d52c71e2eb1aab27dd41c6fd9b42b95202b87e505dde51ceb2c282a3d",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/703cb2fa591e17e6057fd994/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/72838bea9c2c893fbd14f108/01.request.json",
+      "bytes": 10149,
+      "sha256": "e9c7d0f4673fd28f0fbf240cd68fb421bcb3e951cdf5252313d2561c800f18e8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/72838bea9c2c893fbd14f108/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/72838bea9c2c893fbd14f108/01.response.json",
+      "bytes": 4252,
+      "sha256": "a0315827d719723bb80aef3843a4a329773d5c0c199280796913be76f919b47c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/72838bea9c2c893fbd14f108/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/767d2ced981efa37647e22ee/01.request.json",
+      "bytes": 7680,
+      "sha256": "181d679beba02c1fb558c039cc9596b1bafab81436b9f25a1b4b96b797410693",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/767d2ced981efa37647e22ee/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/767d2ced981efa37647e22ee/01.response.json",
+      "bytes": 4254,
+      "sha256": "ba0dcc8c791bb2f9e3eea4a975ceff39811fcee8ca8d71f8fcb80de6ba95f8d4",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/767d2ced981efa37647e22ee/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/78ba8b56c5271780b675090c/01.request.json",
+      "bytes": 8235,
+      "sha256": "a2bbfbc139e5e5143da7341087f72da23913ecc85801f9bff256f727b5bd6369",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/78ba8b56c5271780b675090c/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/78ba8b56c5271780b675090c/01.response.json",
+      "bytes": 4278,
+      "sha256": "4f046344933bee464533f8ea7364f329ae5e93a558e703d807508a4c9f342900",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/78ba8b56c5271780b675090c/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/791ba1964e243eadaf93b4d0/01.request.json",
+      "bytes": 8992,
+      "sha256": "dd5d663052696b3b5b19511566fd230c8ddc609f1286f39d90435d38110635fe",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/791ba1964e243eadaf93b4d0/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/791ba1964e243eadaf93b4d0/01.response.json",
+      "bytes": 4255,
+      "sha256": "7de320fcdbfb8e3847bc4d1f57aa1a483a6326572fb9f544592eb09496a01474",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/791ba1964e243eadaf93b4d0/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/7e4a706ebc12cb74e6ff569e/01.request.json",
+      "bytes": 9490,
+      "sha256": "b6fe91fb24c88c84c878d2ac2c35a10efbc5115d0cf38bdd5549012792d6128c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/7e4a706ebc12cb74e6ff569e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/7e4a706ebc12cb74e6ff569e/01.response.json",
+      "bytes": 4260,
+      "sha256": "863e0d7465910c5e64736e671cdc0e1381e795c5404d6c66533a686a2e0285a0",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/7e4a706ebc12cb74e6ff569e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/7f9db9778ad8fb08aa1d167d/01.request.json",
+      "bytes": 9646,
+      "sha256": "26a6c7b369dc4ff368f1b0741d6b65af9753f8e35772afede35d15fd46289e78",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/7f9db9778ad8fb08aa1d167d/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/7f9db9778ad8fb08aa1d167d/01.response.json",
+      "bytes": 4289,
+      "sha256": "4e093f16ee305af066c9ea07dafcbeca181b6d25af910caeaa7cb572cb3ebfeb",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/7f9db9778ad8fb08aa1d167d/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/817d533e5d00e4d15b9962a7/01.request.json",
+      "bytes": 8376,
+      "sha256": "a463747d2e267d2b439432bc487d83d01622d1c4b8296bb8ae32d25a6caae9e1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/817d533e5d00e4d15b9962a7/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/817d533e5d00e4d15b9962a7/01.response.json",
+      "bytes": 4258,
+      "sha256": "14e27f1f9be711f4911ba752c63de977196b4e189fc065ce3455c5f97c4b6645",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/817d533e5d00e4d15b9962a7/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/824637c7bf3d84b522c92a95/01.request.json",
+      "bytes": 8067,
+      "sha256": "cb58a0257e26f348229de8a3426c5a26ea66ce5ddc5df2387f1ecdb1f6625caf",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/824637c7bf3d84b522c92a95/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/824637c7bf3d84b522c92a95/01.response.json",
+      "bytes": 4258,
+      "sha256": "3f79913e13fccf8696f946cfdae377bb224f9ae0aff83b8e4a6fac6f9354fe69",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/824637c7bf3d84b522c92a95/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/86a69c15c3dc8689704744c2/01.request.json",
+      "bytes": 7626,
+      "sha256": "fb4afa4da58a802f02c2d8f259bb361671e02f7322975b5fe5f23982c2b2124e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/86a69c15c3dc8689704744c2/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/86a69c15c3dc8689704744c2/01.response.json",
+      "bytes": 4254,
+      "sha256": "54b434303f6a55f89002c362509ff95417fe46e055e61d6b1d5ef3969bac55d2",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/86a69c15c3dc8689704744c2/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/86e3d8c5fef192025867c485/01.request.json",
+      "bytes": 9084,
+      "sha256": "96861cb00fdbfcea887e1bdd0355462cd31309116f278f3f38db18f2823c67e5",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/86e3d8c5fef192025867c485/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/86e3d8c5fef192025867c485/01.response.json",
+      "bytes": 4261,
+      "sha256": "f24c00e21fba704f4bfed451c3b4bbc0abf36b5d139cad2e5eee3abd05c3d493",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/86e3d8c5fef192025867c485/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/8cd8dea00552cc31501e2cdc/01.request.json",
+      "bytes": 8003,
+      "sha256": "83a1760a3173f41b2c4fba625414e6902d84bc933af601da9a3b30cdbc7ac53f",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/8cd8dea00552cc31501e2cdc/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/8cd8dea00552cc31501e2cdc/01.response.json",
+      "bytes": 4256,
+      "sha256": "ebe70131e5862da8edf3a7fb6f9fa53c994e723603e4c72f062ab00e259f5f1a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/8cd8dea00552cc31501e2cdc/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/8f658d2d51100602dc1b4a81/01.request.json",
+      "bytes": 7543,
+      "sha256": "a72029464402141dc097967a2e33aab1abca82177c832a3f915c1fa83da3fc45",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/8f658d2d51100602dc1b4a81/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/8f658d2d51100602dc1b4a81/01.response.json",
+      "bytes": 4233,
+      "sha256": "7d472971627eadc3bcdd49a65bac09cec262e4217d543b31bf25d1d3616784ac",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/8f658d2d51100602dc1b4a81/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/908f9b83c00f93fdbe865e63/01.request.json",
+      "bytes": 10126,
+      "sha256": "108806d5ce5dd9df8c2306090f41bd3ce067174fc7cf9180ab68eaf4b137dc4b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/908f9b83c00f93fdbe865e63/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/908f9b83c00f93fdbe865e63/01.response.json",
+      "bytes": 4255,
+      "sha256": "84584e974847bccd8af65275025ec301a137b0a0d7ae608c16d4416d9d21c18a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/908f9b83c00f93fdbe865e63/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/90e2fcc9701ae6bb8f5a6f01/01.request.json",
+      "bytes": 7543,
+      "sha256": "2dcfed10157d1a77068d201fb222df4b1769ab51e676b5319b2d5c59a28e906e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/90e2fcc9701ae6bb8f5a6f01/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/90e2fcc9701ae6bb8f5a6f01/01.response.json",
+      "bytes": 4233,
+      "sha256": "db8e0440ff229ac3a4e880e45295a940fb11d6e4ee68fbab47ad949827a945fb",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/90e2fcc9701ae6bb8f5a6f01/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/94bafe70ddfd0fc3127460fa/01.request.json",
+      "bytes": 7938,
+      "sha256": "af79ebf427f6180ddf3c78ecab0939097b34bf041f670a3092ee9b3937638a86",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/94bafe70ddfd0fc3127460fa/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/94bafe70ddfd0fc3127460fa/01.response.json",
+      "bytes": 4257,
+      "sha256": "2c664dfe9ef60466dc77d74d48bb08bdca3cd59139967dd267b3227f11efd755",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/94bafe70ddfd0fc3127460fa/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/9c7ad7d44268f029be4f5e7a/01.request.json",
+      "bytes": 7678,
+      "sha256": "a30623f492d9e62fbe98158774a851207548a126efabc2687460592801d13ec5",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/9c7ad7d44268f029be4f5e7a/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/9c7ad7d44268f029be4f5e7a/01.response.json",
+      "bytes": 4258,
+      "sha256": "cdceed4a0f6f2c21e9862f20a2e7b0492b9fdd90ae76acd4296ee2469af14757",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/9c7ad7d44268f029be4f5e7a/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/a6d4fa8c9304f0f7c934e897/01.request.json",
+      "bytes": 8174,
+      "sha256": "2e9d2ac7590afb597a5657271d6b5145bac69711c353c1b51299e94e7ce261cf",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/a6d4fa8c9304f0f7c934e897/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/a6d4fa8c9304f0f7c934e897/01.response.json",
+      "bytes": 4258,
+      "sha256": "cbb316c0a308b0cff4fb4274a606ad70869c808973644330d64b1e55f1e8f833",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/a6d4fa8c9304f0f7c934e897/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/a8931af0cf99a2ee42e0f979/01.request.json",
+      "bytes": 7888,
+      "sha256": "ef6770c77c0837c7d1f1ff852c2d371d32914bb764910d576cde3497e8604de1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/a8931af0cf99a2ee42e0f979/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/a8931af0cf99a2ee42e0f979/01.response.json",
+      "bytes": 4273,
+      "sha256": "857af877af2c836314f1069b3e9518b91ccdcd203e99c094c6b378710e3c3dfd",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/a8931af0cf99a2ee42e0f979/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ab173a269f0f79fcb1892559/01.request.json",
+      "bytes": 17419,
+      "sha256": "b23b43037ae0bd0557b7173dcaa49344af54b5966a4934326a5fa645d8c1f7f0",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ab173a269f0f79fcb1892559/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ab173a269f0f79fcb1892559/01.response.json",
+      "bytes": 4253,
+      "sha256": "b451e53c2cad62d82c0855f0b45badd2699f9735934b0804659eafb516ed9448",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ab173a269f0f79fcb1892559/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ab2599396e023a13db777c86/01.request.json",
+      "bytes": 13099,
+      "sha256": "008c6a7bb31ee34701ea8de19b8bd62b13646347a5aecf123ef131bb7c44cff9",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ab2599396e023a13db777c86/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ab2599396e023a13db777c86/01.response.json",
+      "bytes": 4251,
+      "sha256": "142bf0f031656b856e4a766506bfa1d5c4d602566ceec1e5bdfc8e9a21f6970d",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ab2599396e023a13db777c86/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ae515c5f7bb45b92b2a5ff28/01.request.json",
+      "bytes": 9746,
+      "sha256": "01e4f72ed664c3648f1f8f16c4ae5ccbf7b819f0569a3e8727ff8f80c93f95eb",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ae515c5f7bb45b92b2a5ff28/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ae515c5f7bb45b92b2a5ff28/01.response.json",
+      "bytes": 4271,
+      "sha256": "a927ea7ba2eb42b272923af11fceea4dbd625244cc9fe45796061c162d06f29b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ae515c5f7bb45b92b2a5ff28/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/afb3024737a7577e0b7ca144/01.request.json",
+      "bytes": 14561,
+      "sha256": "ecd95fa228d6d3adb9d1382a93bf20ea734081219091b95087e76e370937558c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/afb3024737a7577e0b7ca144/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/afb3024737a7577e0b7ca144/01.response.json",
+      "bytes": 4254,
+      "sha256": "34d1a50d8a92fa4f2ad18ec0a12e030987ab1c919f1117b5629d203b5541e2c0",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/afb3024737a7577e0b7ca144/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b0ba0d5f32e8232dd5c625e2/01.request.json",
+      "bytes": 7583,
+      "sha256": "0b4e72d9cbec37c01a758758c2b3e21cb2f876aae3ddf9a52822e35cd228eda7",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b0ba0d5f32e8232dd5c625e2/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b0ba0d5f32e8232dd5c625e2/01.response.json",
+      "bytes": 4264,
+      "sha256": "73e2f40c561a05065d71aeabc57005f33f80145c64776c85c93701c0db07c1f9",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b0ba0d5f32e8232dd5c625e2/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b25c77f094d7a1c0554395de/01.request.json",
+      "bytes": 8126,
+      "sha256": "8cd75ee261059c8300ab1485fc4ea37a4ad490c063575760179f9614dc31d689",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b25c77f094d7a1c0554395de/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b25c77f094d7a1c0554395de/01.response.json",
+      "bytes": 4256,
+      "sha256": "ea40804b202839c66375cc89e2a4cc19269eeaef7b452e5d3f57be396fff22b1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b25c77f094d7a1c0554395de/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b28af3d5160797ecd5cf7945/01.request.json",
+      "bytes": 8449,
+      "sha256": "989ca49305226c26ce8814b261fa94e868324cd26605b57050fc515be22328cf",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b28af3d5160797ecd5cf7945/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b28af3d5160797ecd5cf7945/01.response.json",
+      "bytes": 4277,
+      "sha256": "cb482f916b3d7185f2281c7374eb03b56cdcac0e0b251c1189685ca68c62e8d8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b28af3d5160797ecd5cf7945/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b2ac4c986a245ca4a7613f0a/01.request.json",
+      "bytes": 11242,
+      "sha256": "bd7e12be70955d598e3649dcbf9a1dc1c0e3534795dee42bfc674a462ef90d87",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b2ac4c986a245ca4a7613f0a/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b2ac4c986a245ca4a7613f0a/01.response.json",
+      "bytes": 4257,
+      "sha256": "70c39a274235bd5319f407b55d9979f0d4c7d53d89bd7e001b76460fdfd37b81",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b2ac4c986a245ca4a7613f0a/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b4434319dd7e020e8c76f9aa/01.request.json",
+      "bytes": 10357,
+      "sha256": "a65d43262484ed1a1ae689e6cd21b06235569405cf304b37443d865f7713d7d9",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b4434319dd7e020e8c76f9aa/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b4434319dd7e020e8c76f9aa/01.response.json",
+      "bytes": 4254,
+      "sha256": "887020ed572a9685dc00d14cc4da0a7578f55480ce42f826c17a46369f272556",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b4434319dd7e020e8c76f9aa/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b554fc033ef8cbf796565b99/01.request.json",
+      "bytes": 7799,
+      "sha256": "e44df8e7e4d60aca50d926623fad442df92b9efcb85fcac2d4e60f2a53d63473",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b554fc033ef8cbf796565b99/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b554fc033ef8cbf796565b99/01.response.json",
+      "bytes": 4260,
+      "sha256": "32bd4c24adf4a3bbbbef05a6e0117cf6442d75f83e2c77c26a4a9686db193ba1",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b554fc033ef8cbf796565b99/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b55780bc7cc4a4b2cc9ba524/01.request.json",
+      "bytes": 10142,
+      "sha256": "82ec9f0fba47c1e2ca19363272b93a96eac2f48d9b5de3ff0f4ff6fb60fa75d6",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b55780bc7cc4a4b2cc9ba524/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b55780bc7cc4a4b2cc9ba524/01.response.json",
+      "bytes": 4260,
+      "sha256": "edc1a7dde26081dc6e0f7a7efcc081a81e0ee6b4a70758b5017901b2215e2ce3",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b55780bc7cc4a4b2cc9ba524/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b874a7ee09f1c3e71df76d17/01.request.json",
+      "bytes": 7796,
+      "sha256": "36f396274b6cbbe28485cbcbd06b4b0469048d595dde114f785ebaaaf0ed7e19",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b874a7ee09f1c3e71df76d17/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b874a7ee09f1c3e71df76d17/01.response.json",
+      "bytes": 4261,
+      "sha256": "d79aa02fdb0baaca25e5b39e1bc45def8d6ee191ca57741dbea4e8f643b063bb",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b874a7ee09f1c3e71df76d17/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b92e2ab8d91b1453e3aef68e/01.request.json",
+      "bytes": 10204,
+      "sha256": "4cc4d1447f1f67c4ea1d3f99f276f3c83dafcd144465b782298b0e27c3b1435b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b92e2ab8d91b1453e3aef68e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/b92e2ab8d91b1453e3aef68e/01.response.json",
+      "bytes": 4252,
+      "sha256": "614e127e642491611d306ee5c6b59ec13186b54b5fc37f7f6241f76620545246",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/b92e2ab8d91b1453e3aef68e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/bad9edb4627b7842b24eb994/01.request.json",
+      "bytes": 7842,
+      "sha256": "44761ddaadec9a8b18470a6514cc9932edbbe8d6a1108acb1a495493656b7d6e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/bad9edb4627b7842b24eb994/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/bad9edb4627b7842b24eb994/01.response.json",
+      "bytes": 4252,
+      "sha256": "7902679ddb75ac76a576960b3057cf57bcec10dd11e22ef0111407074926fead",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/bad9edb4627b7842b24eb994/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/bb4d3e0b6652b079233d40a0/01.request.json",
+      "bytes": 18605,
+      "sha256": "b1066f81c8a1b0ff36956488100191e639d2bcca18b49bcacd4a1e75128e7e4b",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/bb4d3e0b6652b079233d40a0/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/bb4d3e0b6652b079233d40a0/01.response.json",
+      "bytes": 4253,
+      "sha256": "d98db81661f098b4d0c89da9dae349a87fc7c3255924877c42941c371e310625",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/bb4d3e0b6652b079233d40a0/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/c24e706135c7e4a4a8df1697/01.request.json",
+      "bytes": 10729,
+      "sha256": "5e8a39e142784886ea79f29e810c2b3095630cbcf65fadab8e7a5fe3fcc3e13f",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/c24e706135c7e4a4a8df1697/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/c24e706135c7e4a4a8df1697/01.response.json",
+      "bytes": 4259,
+      "sha256": "9c76692b2a78832367abc580c4fe52da327d08baee1117cd515cdf4828f41110",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/c24e706135c7e4a4a8df1697/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/c3fb261be66901c4ddb922f4/01.request.json",
+      "bytes": 8602,
+      "sha256": "4b5db1d5ea7d7d445148de9fe2df6c98e89c7abfb377272c5790bfb4dadbe73c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/c3fb261be66901c4ddb922f4/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/c3fb261be66901c4ddb922f4/01.response.json",
+      "bytes": 4257,
+      "sha256": "fe13cd061f82e3642097e54e55707560ed3494d67981c9b47311efce8080c545",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/c3fb261be66901c4ddb922f4/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ca9550625e9bc5c585404f7e/01.request.json",
+      "bytes": 7753,
+      "sha256": "a67cd7f2bb54de4451fb1441be72284d1f9f79aecdc1903e0cbceddae7aed1a2",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ca9550625e9bc5c585404f7e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ca9550625e9bc5c585404f7e/01.response.json",
+      "bytes": 4258,
+      "sha256": "ed1b312d854a38a7296faf8dec195cc38b18cb1da793c1f0681f1a793cfa29ac",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ca9550625e9bc5c585404f7e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cc92a347d24d293b0b5f87ee/01.request.json",
+      "bytes": 7552,
+      "sha256": "b56bdc31a129ac2c157691ca7b565b7de6a4f7d59e27c62687a243442cbe1639",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cc92a347d24d293b0b5f87ee/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cc92a347d24d293b0b5f87ee/01.response.json",
+      "bytes": 4244,
+      "sha256": "9aa00da3371d0777fbc1bc60540b1cef55c9031f9b52157883c06c7763d06c49",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cc92a347d24d293b0b5f87ee/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cd4c280a95bb1e7f96cc7505/01.request.json",
+      "bytes": 8023,
+      "sha256": "1e565aac63747315deb4649dd6689679f70fd497cdc51e8797f55907a30609b9",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cd4c280a95bb1e7f96cc7505/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cd4c280a95bb1e7f96cc7505/01.response.json",
+      "bytes": 4280,
+      "sha256": "a3000a28593c55e4e1a1697f83a3c21457c2fef4d97f0d9b90ff0cfd129e598c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cd4c280a95bb1e7f96cc7505/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cd843f3de19637909e8043ce/01.request.json",
+      "bytes": 18048,
+      "sha256": "9ce074219a4bb3306518363f8bb53aac05794f26d8f6c7985359a5c5da27d914",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cd843f3de19637909e8043ce/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cd843f3de19637909e8043ce/01.response.json",
+      "bytes": 4254,
+      "sha256": "7c04298d464175e5d1849ccc0fdd632d27016ce650ba112d1ec04ec0cc4f77ae",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cd843f3de19637909e8043ce/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ce87cc7e2442b796eb3ba434/01.request.json",
+      "bytes": 7894,
+      "sha256": "02469e85149900fb8f916050b3e2b9c6599e81948523958fc45256fd033660a3",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ce87cc7e2442b796eb3ba434/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ce87cc7e2442b796eb3ba434/01.response.json",
+      "bytes": 4261,
+      "sha256": "445834278205e3fe9e64974f03c1b6121ec82a88ed936dbe7e9cf1126f412305",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ce87cc7e2442b796eb3ba434/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cfc9d8f0e7b6fb3c3fb93673/01.request.json",
+      "bytes": 7696,
+      "sha256": "60da877a268ea4b133d337a516b6fd3342a189ea92c11039a58ea3bc89aa906c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cfc9d8f0e7b6fb3c3fb93673/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/cfc9d8f0e7b6fb3c3fb93673/01.response.json",
+      "bytes": 4262,
+      "sha256": "82047d4db6544d62190097f3a374f578d033a8f3188f8ba24a19212a3a1e1c20",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/cfc9d8f0e7b6fb3c3fb93673/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/dbc2777b6b32a1663939b33e/01.request.json",
+      "bytes": 7562,
+      "sha256": "f75b14e6b63fb6908f63a098ba20c26d581732dd1928f07317fb987025ba79f5",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/dbc2777b6b32a1663939b33e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/dbc2777b6b32a1663939b33e/01.response.json",
+      "bytes": 4246,
+      "sha256": "79f2d98f8a8bedeebc31177c079c337e0153a6a22ff1c3cd962b199690956b62",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/dbc2777b6b32a1663939b33e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/dca5bd9eca0b199ca31e7aed/01.request.json",
+      "bytes": 7631,
+      "sha256": "8b195f2a4d4144595f959d282fe84a94db2291fb8fe61e0c34221c68ba190b70",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/dca5bd9eca0b199ca31e7aed/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/dca5bd9eca0b199ca31e7aed/01.response.json",
+      "bytes": 4245,
+      "sha256": "1d9547517a0df83ad733db2ee443256d28cbdfab91c260654b7438d249a7aa93",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/dca5bd9eca0b199ca31e7aed/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/dcaadd93ece0d5e9ac986e9e/01.request.json",
+      "bytes": 7682,
+      "sha256": "eaf9f294c68a87394a90e0d557c97e799139b8b1dd307b014ad1137d81fa894d",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/dcaadd93ece0d5e9ac986e9e/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/dcaadd93ece0d5e9ac986e9e/01.response.json",
+      "bytes": 4256,
+      "sha256": "5f38c642e46e1ae72d60b46d0a85cc68fb75b9b39f75806d80f016dc726657d8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/dcaadd93ece0d5e9ac986e9e/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/def7353a1fe349da1446a06f/01.request.json",
+      "bytes": 11897,
+      "sha256": "9214f114c560d8a553b0663aca7cace664372e4dcce354f7f505c9f96a663c1e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/def7353a1fe349da1446a06f/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/def7353a1fe349da1446a06f/01.response.json",
+      "bytes": 4258,
+      "sha256": "88456cc9d5fda14d3d15c9859e77e78b4f3d5fbb1cb5d67ed8f1aee4ee2c3e43",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/def7353a1fe349da1446a06f/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e0aa9eff806f91e2aa1e5de8/01.request.json",
+      "bytes": 9501,
+      "sha256": "271196bf8672c63757eb518d8a48f5fd7c5d4502b1cd42da73c42e97ad7d8f85",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e0aa9eff806f91e2aa1e5de8/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e0aa9eff806f91e2aa1e5de8/01.response.json",
+      "bytes": 4256,
+      "sha256": "dc5438172099f51c9fec15ba3a3c13f6d9c73b8f2af9d77235922d45285c16ba",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e0aa9eff806f91e2aa1e5de8/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e6778422704aacb820829e74/01.request.json",
+      "bytes": 23897,
+      "sha256": "050be4058ac72192e90226102d3c313519cd36dc03742587f547f0c1e9d1f1e2",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e6778422704aacb820829e74/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e6778422704aacb820829e74/01.response.json",
+      "bytes": 4255,
+      "sha256": "755f7400b8168599c686311f9f95a310aa35cb576e2b528deb762f13977048bb",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e6778422704aacb820829e74/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e6ddd13149d68b6344efe2e9/01.request.json",
+      "bytes": 10954,
+      "sha256": "007b3644e6ee09d3038573d9f5024541a34b7561a0c5e80171512301cfdfbb01",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e6ddd13149d68b6344efe2e9/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e6ddd13149d68b6344efe2e9/01.response.json",
+      "bytes": 4256,
+      "sha256": "8efba4fded8343ed6c71bb888d26aa831141aefcc47a51d20fe76e137600b16a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e6ddd13149d68b6344efe2e9/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e7ee57936e991d471ef775be/01.request.json",
+      "bytes": 7914,
+      "sha256": "242fc3e29adf2e7222f92a7b241aa0b082570889d6ad42a5b2a8e30985be128a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e7ee57936e991d471ef775be/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e7ee57936e991d471ef775be/01.response.json",
+      "bytes": 4278,
+      "sha256": "cc892decf569a6392726625663774803a7725f68db46caf8ebc38cbbd2151c9e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e7ee57936e991d471ef775be/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e9ccb561548a22c2dc011669/01.request.json",
+      "bytes": 7875,
+      "sha256": "6eb043a9e8ef86cb4c217d42f8e13b1170558d32eac5fb736ac1fd71d400e019",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e9ccb561548a22c2dc011669/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/e9ccb561548a22c2dc011669/01.response.json",
+      "bytes": 4252,
+      "sha256": "37215ce713f6616533c40faac10200e54ad49fc74593665a9d4bc2edb41225bb",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/e9ccb561548a22c2dc011669/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ebca870e56d6c3e2de1e87ad/01.request.json",
+      "bytes": 10252,
+      "sha256": "dd77005d27f69200d9467258fb4f87295309d0bbf828205ad583a811b507e2d8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ebca870e56d6c3e2de1e87ad/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ebca870e56d6c3e2de1e87ad/01.response.json",
+      "bytes": 4255,
+      "sha256": "55e3f39bfa74b4b9220adacd229c590ca8e098db96fd72a8cf9fdae6e4805726",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ebca870e56d6c3e2de1e87ad/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ec4ad24b9d8dad14e52bf215/01.request.json",
+      "bytes": 11013,
+      "sha256": "a440e3fdedaa444f200f1e9b227e6d174e5c6cc74448b5125edfed861dde77f5",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ec4ad24b9d8dad14e52bf215/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/ec4ad24b9d8dad14e52bf215/01.response.json",
+      "bytes": 4255,
+      "sha256": "37c90eb7eadee4fdcacc3af7da619b5acea62230fcce77e4712c5849ecdc1317",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/ec4ad24b9d8dad14e52bf215/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/efef399b5a1a6e9d6780a60f/01.request.json",
+      "bytes": 9717,
+      "sha256": "16ceef3efcd82d9600089f7b5062b7e8ba6191959acdfd0bdcf6fdb936a55aee",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/efef399b5a1a6e9d6780a60f/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/efef399b5a1a6e9d6780a60f/01.response.json",
+      "bytes": 4263,
+      "sha256": "1d1cb720ed1d49792636e514fd1108a22445d03e4642b6e553a51d9cbeb75e63",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/efef399b5a1a6e9d6780a60f/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f19e5980ee620d60b71a785c/01.request.json",
+      "bytes": 7971,
+      "sha256": "e2460d6ba10ae8951cb0c89786a7f8355d1ca63a7e93111cb2b8538d0965c623",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f19e5980ee620d60b71a785c/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f19e5980ee620d60b71a785c/01.response.json",
+      "bytes": 4259,
+      "sha256": "3c83bcd130be314a97ba234e2e55759f1013522017ce6f73babd4bbbc4c90a2d",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f19e5980ee620d60b71a785c/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f3598d5b7af5591b3728c613/01.request.json",
+      "bytes": 10259,
+      "sha256": "391b96e78c84bc095f3139ca9cbbd3fb1ad6d5b5749b7361cc9f4e1f40d01fff",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f3598d5b7af5591b3728c613/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f3598d5b7af5591b3728c613/01.response.json",
+      "bytes": 4272,
+      "sha256": "ad71b8046062828c65a2e800ad40485136df1e2b886a2a0b54eb9130c34fcc0c",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f3598d5b7af5591b3728c613/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f69281f2f90933efe90e61bc/01.request.json",
+      "bytes": 7835,
+      "sha256": "e34179a99e32fc1d3c9e9fb866a138def42e6f059f2f7b6845442cf5fa444aaf",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f69281f2f90933efe90e61bc/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f69281f2f90933efe90e61bc/01.response.json",
+      "bytes": 4278,
+      "sha256": "e52cf0253e8bb3f04546bb5809e23720c9e1c67fb7cbdfbaa52a34a4a2abc917",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f69281f2f90933efe90e61bc/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f9a08ff9ac5bfc5e8341e616/01.request.json",
+      "bytes": 13855,
+      "sha256": "9a23b4a4011fa17f4358064052f7cc377b783c3f14dd3bdd00bc37735585c472",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f9a08ff9ac5bfc5e8341e616/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f9a08ff9ac5bfc5e8341e616/01.response.json",
+      "bytes": 4252,
+      "sha256": "79dd7fd6e67251e52801d34f36f978c0c6f708690a21d56ee0e5a5152002d984",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f9a08ff9ac5bfc5e8341e616/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f9b345b160c593e8b877b660/01.request.json",
+      "bytes": 15658,
+      "sha256": "646664c9cb1f5f30dd1ea1cdf4bcaac36ccba57e49976a277e2f52c52302d389",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f9b345b160c593e8b877b660/01.request.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/attempts/f9b345b160c593e8b877b660/01.response.json",
+      "bytes": 4255,
+      "sha256": "a74f06c27e9cdff9a12371a81eaf44e9546062579a2e26bb82011812079ff6f3",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/attempts/f9b345b160c593e8b877b660/01.response.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/authorization.json",
+      "bytes": 853,
+      "sha256": "79d8067836d633f0fb6f43fff621146ab69f658e6548cb20e6ed27d556e64de6",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/authorization.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/descriptive-analysis.json",
+      "bytes": 3401,
+      "sha256": "050c771f52c9a3136cb217e3843cb453d8b37a86809155038373cdb7580a24a0",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/descriptive-analysis.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/frozen-source/common.py",
+      "bytes": 1005,
+      "sha256": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/frozen-source/common.py"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/frozen-source/gem_plan.py",
+      "bytes": 9017,
+      "sha256": "71cdb8c4e6c9849c56f5256f0862c561322df3a62fbfe4e11d6b3d2e9f5c0e0e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/frozen-source/gem_plan.py"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/frozen-source/gem_rubric.json",
+      "bytes": 5354,
+      "sha256": "0be9ee2b688e5d1f376f272aa298996c3c01dbbbbbc6eb470f730597ed365042",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/frozen-source/gem_rubric.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/frozen-source/gem_runner.py",
+      "bytes": 9341,
+      "sha256": "da7bc3fb27b8c9590544f5c2314a5c3b6239338d3d03675f257375f557c2356e",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/frozen-source/gem_runner.py"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/frozen-source/jev_atlas.py",
+      "bytes": 22257,
+      "sha256": "c7e02c9ceb219eeaf007edf9ae71c5e535d546f9c41c8d7ac65e39ddf0f4f76f",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/frozen-source/jev_atlas.py"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/frozen-source/jev_runner.py",
+      "bytes": 6319,
+      "sha256": "63f9f1c11dcd8037f0d893f613baa47da577bbc5128a6fec34a7bb16cc1eafa8",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/frozen-source/jev_runner.py"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/plan.json",
+      "bytes": 2996484,
+      "sha256": "bb7df5047344cfb88b998d7e99a91a211ab8ac52b3f5a0138ca903fa25628a5a",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/plan.json"
+    },
+    {
+      "path": "evidence/gem-finder/pilot-20260918-v1/summary.json",
+      "bytes": 331,
+      "sha256": "1cb161bac938526b0eaafac805865c96774f1d242d03ffbc0dd80f9b71dfa7ca",
+      "category": "original_evidence",
+      "workspace_path": "gem-finder/pilot-20260918-v1/summary.json"
     },
     {
       "path": "evidence/github-publication-20260916-1538/preflight.json",
@@ -319911,6 +321381,18 @@
       "category": "notebook_table"
     },
     {
+      "path": "notebook/gem_reading_history.json",
+      "bytes": 12598,
+      "sha256": "16464aed115ee88562b25d46031bd9d7b79c0543a974d88565ee31dfb50bd9fd",
+      "category": "notebook_table"
+    },
+    {
+      "path": "notebook/gem_readings.json",
+      "bytes": 12570,
+      "sha256": "87736034878cadd8e9432e16d6a5e3ba0e89223bd84a2f19e3d2d454b4e6150a",
+      "category": "notebook_table"
+    },
+    {
       "path": "notebook/history.json",
       "bytes": 11215,
       "sha256": "c41f2ebef5dbdc44e84dcb0b71e1e5a15d871777d30dd76472de7701befd1fd1",
@@ -319930,14 +321412,14 @@
     },
     {
       "path": "notebook/lab_task_history.json",
-      "bytes": 7829,
-      "sha256": "df1b25863fe9d6af3405f0b8bbac36aa34616bafd92df94a052d48b153f15e86",
+      "bytes": 13582,
+      "sha256": "ce58cb238a0573f7436e83b67fbb44530882938b7da9964976674b5df269876e",
       "category": "notebook_table"
     },
     {
       "path": "notebook/lab_tasks.json",
-      "bytes": 7801,
-      "sha256": "0bccc474bf33a98d458416d137b6c3f8773737fb17a38501578a5ddf090cb32b",
+      "bytes": 9408,
+      "sha256": "d139d7ba301df1b0166c1d812cee120add6e8585153fae0b74b54c8927463f69",
       "category": "notebook_table"
     },
     {
@@ -319990,8 +321472,8 @@
     },
     {
       "path": "notebook/readable.json",
-      "bytes": 566467,
-      "sha256": "9f65109f8aade6b7690087998773ec6902d310b7834a2677d412574929b9be1a",
+      "bytes": 599287,
+      "sha256": "599e44656d0734a38983be0ea01ec985e02edc0c66117319fc4752ceb50cc4a5",
       "category": "notebook_readable"
     },
     {
@@ -323449,11 +324931,13 @@
     "collection_history": 7,
     "finder_view_history": 0,
     "finder_views": 0,
+    "gem_reading_history": 4,
+    "gem_readings": 4,
     "history": 5,
     "lab_musing_history": 5,
     "lab_musings": 5,
-    "lab_task_history": 6,
-    "lab_tasks": 6,
+    "lab_task_history": 10,
+    "lab_tasks": 7,
     "notes": 5,
     "research_collections": 6,
     "topic_dictionary": 23,
@@ -323476,5 +324960,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "bb6853515de32f4be61ac1ac927d526031766e67933895a41645c142855774ab"
+  "bundle_sha256": "3d3a79e8973c2f72909078c8fd89ebaeb99ab923ca16b649376115dbd69c8880"
 }

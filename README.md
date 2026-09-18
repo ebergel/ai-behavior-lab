@@ -1,5 +1,7 @@
 # Behavior Laboratory
 
+[Gem Finder](docs/GEM-FINDER.md) explores six distinct passage ratings, topic-profile distance and your own saved judgments. Its first 100-passage pilot produced 600 ratings for **$0.00939**, with interactive plots, both distribution tails, exact source navigation and versioned readings. Four Codex development examples include a high-scoring counterexample; the rubric still needs researcher evaluation.
+
 A standalone local laboratory for controlled experiments on AI model behavior.
 
 **Private development repository:** [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab). The project is under active research and development; a public release and its license have not been decided. See [repository scope and publication](docs/REPOSITORY.md).

@@ -28,6 +28,7 @@ from .jev_atlas import JevAtlas
 from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
 from .lab_tasks import LabTasks, STATUSES as TASK_STATUSES, STREAMS as TASK_STREAMS
+from .gem_finder import GemFinder
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
 from .topic_trajectories import build_trajectories
@@ -37,7 +38,7 @@ from .runner import campaign_documents, outcome, turn_from
 from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
-REPORTS = [('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
+REPORTS = [('gem-finder', 'Gem Finder: pilot and reading guide', 'GEM-FINDER.md'), ('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
            ('opening-partner-design', 'Opening and partner: next study design', 'OPENING-PARTNER-DESIGN.md'),
            ('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
@@ -408,6 +409,7 @@ def make_server(workspace, port=8765):
     finder_views=FinderViews(notes)
     musings=LabMusings(notes)
     tasks=LabTasks(notes,musings,studies,catalog,REPORTS)
+    gems=GemFinder(workspace,notes,catalog)
     def study_summaries():
         members={d['id']:d['runs'] for d in studies.all()}
         return [dict(s,models=sorted({model for member in members[s['id']] for model in
@@ -444,6 +446,13 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
+                if path in ('/gems.js','/gems.css'):
+                    return self.send((STATIC/path[1:]).read_bytes(),mime='text/javascript; charset=utf-8' if path.endswith('.js') else 'text/css; charset=utf-8')
+                if path=='/api/gems':
+                    q=parse_qs(url.query);return self.send(gems.detail(q.get('run',[None])[0],q.get('message',[None])[0]))
+                if path=='/api/gems/export':return self.send(gems.export(),download='gem-finder-pilot-and-readings.json')
+                if path.startswith('/api/gems/history/'):
+                    return self.send({'history':gems.history(path.rsplit('/',1)[-1])})
                 if path in ('/','/app.js','/research.js','/assessment.js','/topics.js','/topic-atlas.js','/topic-atlas.css','/jev-atlas.js','/jev-atlas.css','/finder.js','/finder.css','/musings.js','/musings.css','/tasks.js','/tasks.css','/workbench.js','/workbench.css','/coverage.js','/coverage.css','/trajectories.js','/trajectories.css','/analysis-widget.js','/analysis-widget.css','/style.css'):
                     file='index.html' if path=='/' else path[1:]
                     return self.send((STATIC/file).read_bytes(),mime='text/html; charset=utf-8' if path=='/' else 'text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
@@ -534,6 +543,7 @@ def make_server(workspace, port=8765):
                 limit=524288 if self.path=='/api/studies' else 262144 if self.path in ('/api/musings','/api/tasks') else 65536
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
+                if self.path=='/api/gems/readings':return self.send(gems.save(data))
                 if self.path=='/api/analysis/views': return self.send(analysis.save(data))
                 if self.path=='/api/jev-atlas/prepare': return self.send(jev_atlas.prepare(data,catalog,topic_atlas,studies))
                 if self.path=='/api/jev-atlas/review': return self.send(jev_atlas.save_review(data,catalog))

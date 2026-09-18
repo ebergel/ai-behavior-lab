@@ -1,3 +1,11 @@
+## Current milestone · 18 September 2026: Gem Finder
+
+**Complete:** [Gem Finder](GEM-FINDER.md) is a separate workspace view with six provisional JEV Score axes, topic-profile distance, interactive scatter/distribution views, sortable passages, source/context navigation and attributed personal reading history. The finite pilot completed **100 passages from 100 lineages across 14 model variants, 600 ratings, 100 calls, $0.009391662**. There were no retries or unknown costs. All 60 reserved validation lineages remain outside target, context and reference selection. No new dialogues were generated, and no previous allocation was reopened.
+
+The two new notebook tables preserve four **Codex development readings**, including an unsupported-claims counterexample to high automated scores. User judgments remain separate. This instrument is provisional: contribution, connection, complexity and substance correlate strongly and also correlate with length. The pilot allocation is exhausted.
+
+**Next:** use the reading queue to collect the researcher's own gems, ordinary cases and hollow-profundity examples; compare disagreements and length-matched passages before freezing a new rubric or larger scoring allocation. Consider epistemic grounding as a separate future axis. Model serving qualification and independent semantic validation remain on the board with their existing prerequisites. No scheduled continuation is active. Earlier entries below retain their historical scope.
+
 ## Current milestone · 18 September 2026: planning workspace
 
 **Complete:** [Purpose, musings & ideas board](PLANNING-WORKSPACE.md) is the lab's landing page and first workspace item. Working purpose, Musings and Ideas & tasks share a Current focus strip. The board supports quick capture, workstream/search filters, ordered Ideas → Next → In progress → Done, blockers, completion notes, archive/restore, source-linked cards and attributed revision history. Creating a task from a musing preserves the exact source wording, author and revision.
