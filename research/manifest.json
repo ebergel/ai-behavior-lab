@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-18T16:54:01.884094+00:00",
+  "created_at": "2026-09-18T19:20:28.253710+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -328279,6 +328279,118 @@
       "workspace_path": "local-openai-20260914/events.jsonl"
     },
     {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/authorization.json",
+      "bytes": 439,
+      "sha256": "354e436f8238cc6ef586f92c3ace19b6fb85b8fc4eab7d6b41474c28ae748771",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/authorization.json"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/dispatch-review.json",
+      "bytes": 545,
+      "sha256": "75ae5d8ad45b8a65e72a4ed958618cffb4810bdb75c0dbbad03173d46dbead35",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/dispatch-review.json"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/frozen-source/common.py",
+      "bytes": 1005,
+      "sha256": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/frozen-source/common.py"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/frozen-source/jev_atlas.py",
+      "bytes": 22257,
+      "sha256": "c7e02c9ceb219eeaf007edf9ae71c5e535d546f9c41c8d7ac65e39ddf0f4f76f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/frozen-source/jev_atlas.py"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/frozen-source/jev_runner.py",
+      "bytes": 6319,
+      "sha256": "63f9f1c11dcd8037f0d893f613baa47da577bbc5128a6fec34a7bb16cc1eafa8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/frozen-source/jev_runner.py"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/frozen-source/mind-lens-probe-v1.json",
+      "bytes": 6206,
+      "sha256": "7634d5740bd220f4c4126d945599567a22caefa1b1f6cab7126ba6dcbfca03e3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/frozen-source/mind-lens-probe-v1.json"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/frozen-source/mind_lens_probe.py",
+      "bytes": 12841,
+      "sha256": "ddb5949fbb330c8e0093a17c6513a6d095dc7bbb467af5d54015490ea898220f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/frozen-source/mind_lens_probe.py"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/plan.json",
+      "bytes": 54025,
+      "sha256": "8389447432415c4b44b0cccd295727fdc037803be1e8959cb3a5518d8eda8092",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/plan.json"
+    },
+    {
+      "path": "evidence/mind-lenses/borges-plato-20260918-v1/scope-superseded.json",
+      "bytes": 547,
+      "sha256": "1465296d661f3104bed04032d772af84f7a05529b627a3352b72a153b765530f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/borges-plato-20260918-v1/scope-superseded.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/dispatch-proposal.json",
+      "bytes": 685,
+      "sha256": "04702be767107e83c37f49b0779c2ef5ab8e484f6524a70bf1771447ccf40f4b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/dispatch-proposal.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/frozen-source/common.py",
+      "bytes": 1005,
+      "sha256": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/frozen-source/common.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/frozen-source/discourse-lenses-v1.json",
+      "bytes": 18313,
+      "sha256": "11d11379d342ebd442263f499eca4a04668a259b7fb7162cce59555df8adb662",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/frozen-source/discourse-lenses-v1.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/frozen-source/discourse_probe.py",
+      "bytes": 14197,
+      "sha256": "346d417b8373868aa4089d241eb28f7fb9ae7bab54426fb098636b2f85937594",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/frozen-source/discourse_probe.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/frozen-source/jev_atlas.py",
+      "bytes": 22257,
+      "sha256": "c7e02c9ceb219eeaf007edf9ae71c5e535d546f9c41c8d7ac65e39ddf0f4f76f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/frozen-source/jev_atlas.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/frozen-source/jev_runner.py",
+      "bytes": 6319,
+      "sha256": "63f9f1c11dcd8037f0d893f613baa47da577bbc5128a6fec34a7bb16cc1eafa8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/frozen-source/jev_runner.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-20260918-v1/plan.json",
+      "bytes": 180711,
+      "sha256": "78de8f47115f1be586d16b9a9543a9435f0e96d8417874415ea27ebd598c30e2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-20260918-v1/plan.json"
+    },
+    {
       "path": "evidence/mixed-gemma-haiku-20260916-1139/api-export.json",
       "bytes": 112679,
       "sha256": "baac5c708a06946db85a0bdd231779f15f41ddc0f5fa8d49f06b42da19197227",
@@ -337644,5 +337756,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "7590c7a604596e704376862b622651d4a134c3abbd047fb97944e3a79188fea8"
+  "bundle_sha256": "385b4dba22c651ba6a26f0366daabd1ed51d91d9d573eb76603da62d88ba864c"
 }

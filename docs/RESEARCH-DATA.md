@@ -64,3 +64,9 @@ A fresh copy downloaded from the private GitHub repository restored successfully
 ## Gem Finder snapshot · 18 September 2026
 
 The snapshot also includes the frozen 100-passage Gem Finder plan, six-axis rubric, software copies, all 100 request/response pairs, authorization basis, completion summary and descriptive analysis. The two new notebook tables are `gem_readings` and `gem_reading_history`; four initial entries are explicitly Codex development readings. All sixteen pre-existing notebook tables are preserved, with only the explicit Gem planning-card completion and follow-up card changing the task tables in this work round. Disposable browser-test judgments are excluded. The snapshot is verified and restored to a separate directory before it replaces the earlier private snapshot.
+
+## Mind & discourse preparation snapshot · 18 September 2026
+
+This snapshot contains **48,329 files, 973,092,216 bytes**; fingerprint `385b4dba22c651ba6a26f0366daabd1ed51d91d9d573eb76603da62d88ba864c`. All 48,313 files from the preceding Gem expansion snapshot remain byte-identical, including all eighteen notebook tables. Sixteen additions preserve the original two-feature proposal, its approval stop and supersession, and the expanded 27-feature plan with exact source passages, dispatch proposal and frozen software. Both probes have **zero live calls** at this milestone. They are prospective experiments, not new findings.
+
+Export completed a full restore into a separate temporary workspace before installation. The newly installed snapshot was hash-verified. See [expanded review packet](MIND-DISCOURSE-PROBE.md). No credential, inference authorization for the expanded plan, generated classifier result or disposable test receipt is included. The private repository remains private.
