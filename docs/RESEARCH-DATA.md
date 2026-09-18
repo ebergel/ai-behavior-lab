@@ -74,3 +74,7 @@ Export completed a full restore into a separate temporary workspace before insta
 ## 18 September 2026 · conceptual portrait comparison
 
 The latest verified snapshot contains **48,338 files, 973,407,434 bytes**, fingerprint `3594cc3cc8dff5cedb271286eea530c9e71d26a94a826d9c6cfceaf570716dff`. It adds nine evidence files for the four-condition portrait plan, frozen sources and recorded dispatch-review rejection. Every one of the previous **48,329 files** remains byte-identical, including all eighteen notebook table exports. Export completed a full restoration into a separate temporary directory before installation. No TypeSafe call or authorization file exists for the new plan; source passages and all previous assessments are unchanged.
+
+## 18 September 2026 · completed portrait job
+
+The verified snapshot now contains **48,826 files, 979,510,584 bytes**, fingerprint `a1c8106ff27fbcf3fe4906487239264046cbd4a4f6d6f9150a46567277a365cf`. It adds the explicit authorization, 240 exact request/response pairs, frozen execution/report code and the completed comparison analysis. All **48,338** previous evidence files and all eighteen notebook tables remain byte-identical. A full restoration into a new temporary directory passed before installation. The job completed for $0.047085024 without retries or unknown usage. Runtime worker locks/state are excluded; completed evidence is self-contained. The allocation is exhausted.

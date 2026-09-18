@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-18T19:37:15.509181+00:00",
+  "created_at": "2026-09-18T20:02:38.076210+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -328398,6 +328398,3380 @@
       "workspace_path": "mind-lenses/discourse-20260918-v1/portrait-supersession.json"
     },
     {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0036e2460e395ec12f0a7b72/01.request.json",
+      "bytes": 22409,
+      "sha256": "23a65e70caa3406f327c3a59574a801b9f13843e16fdb0deb04ae1320d211c4c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0036e2460e395ec12f0a7b72/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0036e2460e395ec12f0a7b72/01.response.json",
+      "bytes": 1500,
+      "sha256": "decec6f5d910a0ad81d368d50b91408c236a9b3d5c2740825d26fe1bb31db38e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0036e2460e395ec12f0a7b72/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/007b264d60a914e5e4284bcd/01.request.json",
+      "bytes": 28770,
+      "sha256": "5c9ffd96ee44609b1b3e0ef0481074217b9cc3f20a09c2b4b2e3de3161d67cf2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/007b264d60a914e5e4284bcd/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/007b264d60a914e5e4284bcd/01.response.json",
+      "bytes": 1501,
+      "sha256": "a90fdfa99e32e97c4d3a74f146c36b292ca80f545d1db187092a48af51014f8c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/007b264d60a914e5e4284bcd/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/02e4afa17223c1e529262e63/01.request.json",
+      "bytes": 28864,
+      "sha256": "35cc1cb3ffb66ccce2b96d9e31cb0f2d2bab5779718291506f9a50f91069ed71",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/02e4afa17223c1e529262e63/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/02e4afa17223c1e529262e63/01.response.json",
+      "bytes": 1498,
+      "sha256": "2ff19e2a63bd61e5adf8a7d14bc0c5e9946d18d425ce34f6ab34c7cb8082bb07",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/02e4afa17223c1e529262e63/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0458bbdb87f035a4b7e0b828/01.request.json",
+      "bytes": 23929,
+      "sha256": "cccaab005f5a5ca6e54656f4f2657a97a185583836bb4dc8ea98a6c93c47daf7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0458bbdb87f035a4b7e0b828/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0458bbdb87f035a4b7e0b828/01.response.json",
+      "bytes": 1501,
+      "sha256": "ca0d56f012504e94dc8214062c42650cdc92c3b65c2c1ed32b46e9202a220a2e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0458bbdb87f035a4b7e0b828/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/04b8a923bacd433cb675b971/01.request.json",
+      "bytes": 28529,
+      "sha256": "a9a0fe0aaecf756d31bcbd079b6acfb8259837408cba66346e3f19136681d973",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/04b8a923bacd433cb675b971/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/04b8a923bacd433cb675b971/01.response.json",
+      "bytes": 1500,
+      "sha256": "cd4844aaccaede5bcae20aa7b4bc36cbc0a5b60337e955f6e87375c368e0ee98",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/04b8a923bacd433cb675b971/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/059667b1ac519757f46cccc2/01.request.json",
+      "bytes": 23560,
+      "sha256": "6c0920b7739cf0e7cff82dd7ced71ee254aad26eb96cae11bdf0a01fce7b0573",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/059667b1ac519757f46cccc2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/059667b1ac519757f46cccc2/01.response.json",
+      "bytes": 1499,
+      "sha256": "9c597223024f8c1abb686cc30376d548eee428c27643904f1647d97d7af4e876",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/059667b1ac519757f46cccc2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/071d445c3e5279211fd669a2/01.request.json",
+      "bytes": 28160,
+      "sha256": "9eae6fe78347ce8e745829825279e8a6b86d59e7193d18125bdad019db8e7f9b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/071d445c3e5279211fd669a2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/071d445c3e5279211fd669a2/01.response.json",
+      "bytes": 1502,
+      "sha256": "f4db9433b4e84dffed59f96da63fd028680980a0fa71c22693c6f5bb8815faa2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/071d445c3e5279211fd669a2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0732959b4b4742f2ae5a8c58/01.request.json",
+      "bytes": 28477,
+      "sha256": "6b77bb99cbacadc1f95ab9f062752b62d47201653fd1ebd91e2ccb58a4eba1f4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0732959b4b4742f2ae5a8c58/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0732959b4b4742f2ae5a8c58/01.response.json",
+      "bytes": 1501,
+      "sha256": "00627a80dda35d0e4c3164e58206a09dfb88217be71dc1a9c919dc4c89237d34",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0732959b4b4742f2ae5a8c58/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0810dcbcfd2f2a79943da4db/01.request.json",
+      "bytes": 22940,
+      "sha256": "cc0f476c91c648af85929219639a0195dbc66024b975c05fd25c480e2de62ac5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0810dcbcfd2f2a79943da4db/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0810dcbcfd2f2a79943da4db/01.response.json",
+      "bytes": 1496,
+      "sha256": "7af3e3bda66e87b90cd96f253f543a4f3eab26c99a1b43776d103b4fba9ea19f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0810dcbcfd2f2a79943da4db/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/09799b0aff13d410e8608542/01.request.json",
+      "bytes": 22437,
+      "sha256": "856c0be383698a312c05d7ee38a1dbdf512610312cd7afab51f0bb2bde3203c8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/09799b0aff13d410e8608542/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/09799b0aff13d410e8608542/01.response.json",
+      "bytes": 1501,
+      "sha256": "6c7ce6d2d4ae4e690d06b7d7b17e2ee919df325fa42e734efa01901714702ff3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/09799b0aff13d410e8608542/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/09c0e005466f0d86aabe9548/01.request.json",
+      "bytes": 28615,
+      "sha256": "1ae4b0837beb663fa8d8ba771784430fc402797451d722f42fd59ace66c3df56",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/09c0e005466f0d86aabe9548/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/09c0e005466f0d86aabe9548/01.response.json",
+      "bytes": 1501,
+      "sha256": "31e841eea60035174f466bedd1ade904f9f1391d6f5e9c623c255d83ff0efa92",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/09c0e005466f0d86aabe9548/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0b6769e7c7f5dd38f7102638/01.request.json",
+      "bytes": 23174,
+      "sha256": "a4191f3ff7e632c826bc8b9662a97e7a76ae79e2aac6fa9fadbb685bcb669206",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0b6769e7c7f5dd38f7102638/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0b6769e7c7f5dd38f7102638/01.response.json",
+      "bytes": 1502,
+      "sha256": "8002e2cd32be8da76ce7975399c32c5eb5eb8fd7f2b188416e217ec67b9d4091",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0b6769e7c7f5dd38f7102638/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0ba5fbe6655fec6dd0f88690/01.request.json",
+      "bytes": 28159,
+      "sha256": "c30c61c56412c96c2ac72c269262e36bdb6e77bdc5558014b7966bc537f052da",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0ba5fbe6655fec6dd0f88690/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0ba5fbe6655fec6dd0f88690/01.response.json",
+      "bytes": 1501,
+      "sha256": "f61a67e37eb424af79072e06af247fd92046da2f830c2371a693a93dbaf44b7b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0ba5fbe6655fec6dd0f88690/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0dc49bce93ab24e7cfb3a6d8/01.request.json",
+      "bytes": 17937,
+      "sha256": "a4aa07fc02df5a3437671e7b1492e55c2e1d410e44cbbc36af5885e04165547e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0dc49bce93ab24e7cfb3a6d8/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0dc49bce93ab24e7cfb3a6d8/01.response.json",
+      "bytes": 1498,
+      "sha256": "e586523a3579af82b24c3a2b2a7fb2c26790188dddac22238db7fd0e2af88f12",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0dc49bce93ab24e7cfb3a6d8/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0e44332a992337a69622c4b8/01.request.json",
+      "bytes": 19104,
+      "sha256": "6e360cc95be176b894c2af20f81fe7c5cdc19048423d35170fd540d5c509c0d8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0e44332a992337a69622c4b8/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0e44332a992337a69622c4b8/01.response.json",
+      "bytes": 1498,
+      "sha256": "3ebae3f948725c9957d248381d582d15adb0df3c4eec24544b472dddeb253490",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0e44332a992337a69622c4b8/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0f4f228f007c2e167cf12785/01.request.json",
+      "bytes": 28277,
+      "sha256": "58f6da716aec6d8f4878a30da2021e36f5744fd5ffc5fd86bb911104fa7fc643",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0f4f228f007c2e167cf12785/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/0f4f228f007c2e167cf12785/01.response.json",
+      "bytes": 1502,
+      "sha256": "d5379988c8f1e2a666519d8d57723de3d6dd7ec03da2518a4bcf9e7c8e9cdc66",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/0f4f228f007c2e167cf12785/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/10d85a72cd4a1d9e9f8dda45/01.request.json",
+      "bytes": 22521,
+      "sha256": "2224e836961bbc7a13b3681e1e9899b9b2514c17be04440553cc9bac9a4740d2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/10d85a72cd4a1d9e9f8dda45/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/10d85a72cd4a1d9e9f8dda45/01.response.json",
+      "bytes": 1502,
+      "sha256": "5c251b54cfd452f552c3cb8d7a12e1fdf49a9314b7cba93879c55e30c9cbff87",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/10d85a72cd4a1d9e9f8dda45/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/10f13cc4bbe2aa0fc79dd45f/01.request.json",
+      "bytes": 23787,
+      "sha256": "0fd9fd1e0a70f6d32cbf12a3de4bbdaac24e6708aa5c5e749e0fc53e1c1646d5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/10f13cc4bbe2aa0fc79dd45f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/10f13cc4bbe2aa0fc79dd45f/01.response.json",
+      "bytes": 1500,
+      "sha256": "6da14dc5a60da86e62540fff7c0b8388e4a5e22b260a909dda4d24999b4ba2b9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/10f13cc4bbe2aa0fc79dd45f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/11e96fec773f748e264b7ece/01.request.json",
+      "bytes": 28850,
+      "sha256": "7a58e26932165ec40ebcf699dcc4d6f7781f8a8fe740b7af6e2d367782459f9b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/11e96fec773f748e264b7ece/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/11e96fec773f748e264b7ece/01.response.json",
+      "bytes": 1501,
+      "sha256": "d5271051379f6788a63d89ccd95c293999bdb3298bd2e6f93f2a84bcb6efb467",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/11e96fec773f748e264b7ece/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/11f7ca96a407a07af1fbc822/01.request.json",
+      "bytes": 28996,
+      "sha256": "aaf785d17d25386e3dcea98c1b21096bf68ac9f19ec08784732486fe308e8c95",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/11f7ca96a407a07af1fbc822/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/11f7ca96a407a07af1fbc822/01.response.json",
+      "bytes": 1501,
+      "sha256": "3a82fefffec4ea9278cffd8f29c93174ad91e00bef8f419fb39a25e1c73133c0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/11f7ca96a407a07af1fbc822/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/126474671e29fa023fb76477/01.request.json",
+      "bytes": 22761,
+      "sha256": "4ca6245c4a56712c781078c3fbd16e1b95e151d5448844eb35be7f531f410bcd",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/126474671e29fa023fb76477/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/126474671e29fa023fb76477/01.response.json",
+      "bytes": 1500,
+      "sha256": "835e79e1a8637d3e2755a544dcf6e00be2bc9b0a755afbe06951655fa5bc5dc2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/126474671e29fa023fb76477/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/14173b27a5aacf61fa645850/01.request.json",
+      "bytes": 22223,
+      "sha256": "fe41375da3db3d20384a94452c26ffef6d2c282105972d3aa52d504f4abbc734",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/14173b27a5aacf61fa645850/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/14173b27a5aacf61fa645850/01.response.json",
+      "bytes": 1502,
+      "sha256": "6e443744933f62a51e9abe4f936bbe2066fdceef2dfc378c798aa9b1e0859ec7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/14173b27a5aacf61fa645850/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/144ad684b9fe6be71235dd05/01.request.json",
+      "bytes": 22690,
+      "sha256": "478a1fafe1122bd0c8e5f459fd123d24befec5945a03b77915b65af5dd54e1d7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/144ad684b9fe6be71235dd05/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/144ad684b9fe6be71235dd05/01.response.json",
+      "bytes": 1502,
+      "sha256": "783698b3811072a35e220353965a379edcdd78f22720486fd1dc602791a95f26",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/144ad684b9fe6be71235dd05/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/14c8b2e10df8509cb31a3745/01.request.json",
+      "bytes": 28829,
+      "sha256": "310545942b05b815d6fe206a0a733d9b83a8deb1b69bbafb36eaf4abca0bb0a4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/14c8b2e10df8509cb31a3745/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/14c8b2e10df8509cb31a3745/01.response.json",
+      "bytes": 1501,
+      "sha256": "b2e33d65a4a44f68fc55725d5a1d84d3ed1926eaf4dfec7abaf91447fc0d6401",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/14c8b2e10df8509cb31a3745/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/171468b7eee78993cd377df0/01.request.json",
+      "bytes": 17885,
+      "sha256": "9d7d72ce86635252e5b850c0014f5e41364fb6fa871e3810e6903280f021b7b4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/171468b7eee78993cd377df0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/171468b7eee78993cd377df0/01.response.json",
+      "bytes": 1502,
+      "sha256": "5abff733f7ac736b00c296c51b2f6c00df09733a8e794b8cabeaa694f12d8981",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/171468b7eee78993cd377df0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/178fc87d5a3e2f5f6e20bde6/01.request.json",
+      "bytes": 28652,
+      "sha256": "d707a32ef26c509c7e8cee2667b71a807674e3eae30649739c11f07e0dba5604",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/178fc87d5a3e2f5f6e20bde6/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/178fc87d5a3e2f5f6e20bde6/01.response.json",
+      "bytes": 1498,
+      "sha256": "260642f685e263b0351d5ac43dfc8e4eef95e85f029841dbfcd80d57e85f4a74",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/178fc87d5a3e2f5f6e20bde6/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/192316bbd435dce963a99435/01.request.json",
+      "bytes": 28160,
+      "sha256": "77d06550b8a8bde8f502796faee2b4c4a186496c7ecbfd4f909314684664f6db",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/192316bbd435dce963a99435/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/192316bbd435dce963a99435/01.response.json",
+      "bytes": 1501,
+      "sha256": "599d330e2164d00a392349dd6035c63d445a7fed851f40882bc5bc454bd27b8d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/192316bbd435dce963a99435/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1ac6e106bff0371250f1e750/01.request.json",
+      "bytes": 22633,
+      "sha256": "6e858238357cf57d24fd5cb423f334391009109e2769c9a3e7bc334a2aa1e7ed",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1ac6e106bff0371250f1e750/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1ac6e106bff0371250f1e750/01.response.json",
+      "bytes": 1501,
+      "sha256": "fb1ee0586678193727ea7833d0e2e403dc19900e748ea4ed2fc02c73bbb8784f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1ac6e106bff0371250f1e750/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1b254ec5f7e0f88f0beeca72/01.request.json",
+      "bytes": 22540,
+      "sha256": "d680d14800ef6d4eee483b124a6a923cfd22f4f2d3c0f41d15cb0d30620e28dc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1b254ec5f7e0f88f0beeca72/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1b254ec5f7e0f88f0beeca72/01.response.json",
+      "bytes": 1501,
+      "sha256": "303b1387f9a4363978bc6ec9bc44f26ac4d0542c1d77c49a8787d15d93e57814",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1b254ec5f7e0f88f0beeca72/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1dd1010d89c14cd1875e4eca/01.request.json",
+      "bytes": 23196,
+      "sha256": "ba95f9eadb86fd9e9796b5967b88c976ae7c2fb2bcc535898117bd2b05cc0100",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1dd1010d89c14cd1875e4eca/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1dd1010d89c14cd1875e4eca/01.response.json",
+      "bytes": 1501,
+      "sha256": "135c3953e4308109ccbe247a67e2db1117f8f4990b48c4b473fa3a808d61a40c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1dd1010d89c14cd1875e4eca/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1ee8af2e41c24a4866428710/01.request.json",
+      "bytes": 23059,
+      "sha256": "0d31de08542b97fed03361e40500e7b0305c8d7f2ab7d0476c2bb21d392d0581",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1ee8af2e41c24a4866428710/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1ee8af2e41c24a4866428710/01.response.json",
+      "bytes": 1502,
+      "sha256": "33526ec9d220b1b41b51929ddd3e6b1e7f7d6f2a9fee30aa958e5f8371c19060",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1ee8af2e41c24a4866428710/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fb07f16e6188bbdbf2c8fe0/01.request.json",
+      "bytes": 17978,
+      "sha256": "2b3f7961ef6ade32104b6a88fb17ef6be27124e933c3b5eadd6b8dea091269df",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fb07f16e6188bbdbf2c8fe0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fb07f16e6188bbdbf2c8fe0/01.response.json",
+      "bytes": 1499,
+      "sha256": "9162581e8da1edc17360142211b59930b9c6d698eeec8ee9a2fa544d609eff77",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fb07f16e6188bbdbf2c8fe0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fc8b630d0bbfb84cf4701c0/01.request.json",
+      "bytes": 28719,
+      "sha256": "08758d0790d5c7d5a6217c36a0173f397f9d40b5e309a01072d16ca9521a2227",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fc8b630d0bbfb84cf4701c0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fc8b630d0bbfb84cf4701c0/01.response.json",
+      "bytes": 1501,
+      "sha256": "5b3305acd1fcf9c739d01af10a4268a0b8c42f1c6bebffbd907e52c8fdfde4e8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fc8b630d0bbfb84cf4701c0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fdc48eea4645a172015d3ca/01.request.json",
+      "bytes": 23176,
+      "sha256": "5c54902b9d3d5127fbd77949ef38581801e47bccd80927c6d4ff5504d7fc36de",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fdc48eea4645a172015d3ca/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fdc48eea4645a172015d3ca/01.response.json",
+      "bytes": 1501,
+      "sha256": "63af0b2f5b5a0a11c114faea820cf316b8de40487d4932dfe8a3cc360c935fca",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fdc48eea4645a172015d3ca/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fe1bdbc88b67a8b13b6f6e7/01.request.json",
+      "bytes": 18550,
+      "sha256": "9e68703f8b9525f5adc49d000075ab1f795128fae59ea6d046ca9d2afa1e01f9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fe1bdbc88b67a8b13b6f6e7/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/1fe1bdbc88b67a8b13b6f6e7/01.response.json",
+      "bytes": 1500,
+      "sha256": "1fdb1ac8517c2d8eacc5da05306fbbbd2827a4774fb8c237846cf1774a7aeb82",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/1fe1bdbc88b67a8b13b6f6e7/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/21b7144750001feccb0b7317/01.request.json",
+      "bytes": 17591,
+      "sha256": "e56f6f70a75a06eae610cd97e7e2150e38862275a456293b7cf6648e2b8c0ffc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/21b7144750001feccb0b7317/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/21b7144750001feccb0b7317/01.response.json",
+      "bytes": 1501,
+      "sha256": "42a7d17e3119643391614b014da844d4b5a7ec8e4a290fa122baef40e03f51ed",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/21b7144750001feccb0b7317/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/24f9efff4d90de309fa64558/01.request.json",
+      "bytes": 22379,
+      "sha256": "8ad481745cecac3cef268e6258266e7e5b2db4cf903f74d32cb0b8467faedec9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/24f9efff4d90de309fa64558/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/24f9efff4d90de309fa64558/01.response.json",
+      "bytes": 1500,
+      "sha256": "4fe8921714d7a0bcac6b11546688ff85b7871d6119f100c108c2d7a6aa0a510c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/24f9efff4d90de309fa64558/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/25e529a14cba2f38ebe25ef2/01.request.json",
+      "bytes": 22223,
+      "sha256": "3b63f49db69a88fbe32e3a51ff9863b22554a92c85fbdeac883db6eeaad7b47a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/25e529a14cba2f38ebe25ef2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/25e529a14cba2f38ebe25ef2/01.response.json",
+      "bytes": 1502,
+      "sha256": "eaaa33fbae174077b4947c66758bb1bd3dffc8206f79eabdce623a25fabc56ad",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/25e529a14cba2f38ebe25ef2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/285e75667c6986f3748a2b1b/01.request.json",
+      "bytes": 22946,
+      "sha256": "a65004aff625fdd6086aed7f2c91f1eb13627acf1881f877369a8e0943d592e1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/285e75667c6986f3748a2b1b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/285e75667c6986f3748a2b1b/01.response.json",
+      "bytes": 1502,
+      "sha256": "43af1c259a0ebc5e6185bfc7ca6fa30c4b7ad90a8607c80ff7d3bf15f477f9c6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/285e75667c6986f3748a2b1b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/288e896e77551142b2d0e5af/01.request.json",
+      "bytes": 22925,
+      "sha256": "f68d8fbf0f4bd1c3bc3734be3050291becf2f8cb78b2dd448d9b6d5be9a2075c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/288e896e77551142b2d0e5af/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/288e896e77551142b2d0e5af/01.response.json",
+      "bytes": 1501,
+      "sha256": "4a52362dd70605e42164bffd23e7dc8a2817c2a3a3202e834c7fb44a0c798d35",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/288e896e77551142b2d0e5af/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/292c0e5bc15c2f45a708713b/01.request.json",
+      "bytes": 28394,
+      "sha256": "086ed676e0ff72b6073236623fbae6d977b20e004ce89b18795b06968fdd187e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/292c0e5bc15c2f45a708713b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/292c0e5bc15c2f45a708713b/01.response.json",
+      "bytes": 1496,
+      "sha256": "b8e685d9652030f48eae70e7253d1a35b3a11b05e3b86cdfcc63942e42253b72",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/292c0e5bc15c2f45a708713b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/293b47a04dccdef7d2724ff1/01.request.json",
+      "bytes": 19043,
+      "sha256": "1f9bf45863e77ef868754447c364c85dd824ff9bbe9e2d13f9897410b1590558",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/293b47a04dccdef7d2724ff1/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/293b47a04dccdef7d2724ff1/01.response.json",
+      "bytes": 1498,
+      "sha256": "c644f48acad5172630ad374bfdf410b533dabd301ca7b6e24e939fd6b44689fe",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/293b47a04dccdef7d2724ff1/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2a1351af7f75914612c2193f/01.request.json",
+      "bytes": 18261,
+      "sha256": "53d7a4bfe08376f37b8fb0c4f0ed0786cc60942c17b1aa027aa0595418cf98f6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2a1351af7f75914612c2193f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2a1351af7f75914612c2193f/01.response.json",
+      "bytes": 1500,
+      "sha256": "29f9bfb2db6a010f92bf474b307a5605d35d8808a78f1c5dbf15357bae41e1d2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2a1351af7f75914612c2193f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2c7be18167deb9fd6adea22b/01.request.json",
+      "bytes": 24187,
+      "sha256": "7e104d27aa7bf59ae274c383dd31ce073002c29ff10306508f50c573398603fe",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2c7be18167deb9fd6adea22b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2c7be18167deb9fd6adea22b/01.response.json",
+      "bytes": 1500,
+      "sha256": "0a86617f64ab3f079dee34fbfcf75cc71c5c7c8a0e50e5bb24ccc7be6edb8b61",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2c7be18167deb9fd6adea22b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2cbb3a742b6139b3f2329263/01.request.json",
+      "bytes": 22222,
+      "sha256": "6c9268cc9c016ee768683080fe6faf32ef5e83e95425961f3150d78f48f261e5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2cbb3a742b6139b3f2329263/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2cbb3a742b6139b3f2329263/01.response.json",
+      "bytes": 1502,
+      "sha256": "7e86298be6fc78c119ef1e9478a16bdaa95cf9e12e2a6af3f87c8d061703d42c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2cbb3a742b6139b3f2329263/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2d4f866788c35d80a3f6842d/01.request.json",
+      "bytes": 29672,
+      "sha256": "0fdea5056c23cee1d9ac83342b66f70b806a0b1fbbe96793e564efd2de890d65",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2d4f866788c35d80a3f6842d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2d4f866788c35d80a3f6842d/01.response.json",
+      "bytes": 1500,
+      "sha256": "46136e1405764d4557a8b3d601d5cf2d0308a063b9ed49f0ca0a8d44b86d3a00",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2d4f866788c35d80a3f6842d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2de2b471353d7837470e9668/01.request.json",
+      "bytes": 27407,
+      "sha256": "2596de49c2e8dcb0f55cc84977eae0655bb2e75a7cbcb7a27c783e167a07a07f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2de2b471353d7837470e9668/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/2de2b471353d7837470e9668/01.response.json",
+      "bytes": 1500,
+      "sha256": "b1bfbe140943c2a391b175b0f00c8917a7fc5d7cc443e2b76cd8be329b509e96",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/2de2b471353d7837470e9668/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/30574f7775e85f4d31295482/01.request.json",
+      "bytes": 28891,
+      "sha256": "902892030ea688c527efba0b1515c92aab86887b4304ce6f9f4e7d2d04561b3b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/30574f7775e85f4d31295482/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/30574f7775e85f4d31295482/01.response.json",
+      "bytes": 1500,
+      "sha256": "c762795696fc2ff964d326db7dbd62a66d5d4f5e76d3ae4e0c74a9cb5a431349",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/30574f7775e85f4d31295482/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/314fe6a0d7705f5daaa8cd22/01.request.json",
+      "bytes": 17806,
+      "sha256": "da84b83f9967639ccc99ed672aaff57653db6aeaba39b272822be2eb69f82ac2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/314fe6a0d7705f5daaa8cd22/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/314fe6a0d7705f5daaa8cd22/01.response.json",
+      "bytes": 1499,
+      "sha256": "5175a5451c93f88729487529b6bfa4636b85604024f956ed18b5c54f32f81400",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/314fe6a0d7705f5daaa8cd22/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3221f913163f243113627118/01.request.json",
+      "bytes": 28505,
+      "sha256": "c38a90fcf62ecf2b6d154ea0772b269f369ab37dff920865a9ff6257b15019cf",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3221f913163f243113627118/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3221f913163f243113627118/01.response.json",
+      "bytes": 1501,
+      "sha256": "84abd82a177b66f7ffa1a3c782f4f473848d5d0802397182379cef1b3637b4aa",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3221f913163f243113627118/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/325b3d048f941dc56ae1b7b7/01.request.json",
+      "bytes": 17964,
+      "sha256": "be9a3b51e2abac7c5e51beaf9565f94d6403188548ea226aad0ef17756659cbd",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/325b3d048f941dc56ae1b7b7/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/325b3d048f941dc56ae1b7b7/01.response.json",
+      "bytes": 1499,
+      "sha256": "c67e1ffb2b2a4d65260497cb04af73b60603a959c476e899553f34fa7512fa80",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/325b3d048f941dc56ae1b7b7/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3454b252fa04e00400c66e6c/01.request.json",
+      "bytes": 24341,
+      "sha256": "df28c74ae7c271b146869c7bd74265dd224cfcc3308d13b86ec89e0ab1c86e7d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3454b252fa04e00400c66e6c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3454b252fa04e00400c66e6c/01.response.json",
+      "bytes": 1497,
+      "sha256": "c7033f8827e6b8424d22dde444e898beaf75d5df2a280ce4ffab72f88d95b883",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3454b252fa04e00400c66e6c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/392452d020165633df6592b9/01.request.json",
+      "bytes": 23014,
+      "sha256": "41eb18c13145455e73ee7859fa0041f1e7cee4ca8c03bf2c86e65bde183cdad9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/392452d020165633df6592b9/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/392452d020165633df6592b9/01.response.json",
+      "bytes": 1501,
+      "sha256": "4ff02bfd70f8c444712e65a6212d05da1237b845ef44cc22a4ed305ef27363ec",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/392452d020165633df6592b9/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/395f38933a1350105b2542b5/01.request.json",
+      "bytes": 18202,
+      "sha256": "7c135c956744968530bca09ae4c1109e8c149dbba3ba781a076fa3c9a4f18f03",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/395f38933a1350105b2542b5/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/395f38933a1350105b2542b5/01.response.json",
+      "bytes": 1500,
+      "sha256": "179276c9a5a29e11f90e3cfe5f7b001e53dbb5f5c7ee63f8978c49912aa7b8f8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/395f38933a1350105b2542b5/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3a9d80e93b10f359fc28edf3/01.request.json",
+      "bytes": 21640,
+      "sha256": "998135b9ade15248e44245ce6676e1768f8635ea497004c21b35ba0c628b4952",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3a9d80e93b10f359fc28edf3/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3a9d80e93b10f359fc28edf3/01.response.json",
+      "bytes": 1497,
+      "sha256": "9ba375b1f89e342339c87ea6a8daee5e60e6eb59fb8307caa0f02d74cd707159",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3a9d80e93b10f359fc28edf3/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3b43efa9ff0eca977f590d65/01.request.json",
+      "bytes": 28486,
+      "sha256": "f0e88e09d1c77990db13ec90b03ca05bf520fc4f11b890c54e711273c966cc2e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3b43efa9ff0eca977f590d65/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3b43efa9ff0eca977f590d65/01.response.json",
+      "bytes": 1502,
+      "sha256": "17925d37fa05d1824fa028b02884ba1a133727a14abb0bbb56844d5bd4061836",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3b43efa9ff0eca977f590d65/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3bbadf0d8e83c14b44d29a5d/01.request.json",
+      "bytes": 17909,
+      "sha256": "ef2bba205e4979af657e2d166f648e73ae0ad07344fe5b3e5c43c406fa82e75f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3bbadf0d8e83c14b44d29a5d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3bbadf0d8e83c14b44d29a5d/01.response.json",
+      "bytes": 1501,
+      "sha256": "6a85c30fba6e5828adaa367974aa98fa3dc8f19243bc32cf4c114b2677b5853e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3bbadf0d8e83c14b44d29a5d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3cc5b3d2075a8b57cc9edc92/01.request.json",
+      "bytes": 18323,
+      "sha256": "1508431fe98ac7d05f4cfc9ea04b30bc08801db6f281d8a19f3cc0d7d954fcf3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3cc5b3d2075a8b57cc9edc92/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3cc5b3d2075a8b57cc9edc92/01.response.json",
+      "bytes": 1499,
+      "sha256": "e6c8ec2ecd4f92352ed42e7f8634e69293472801eed8265072acb15fbe6f5ded",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3cc5b3d2075a8b57cc9edc92/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3fb254d1b69b0b58cc1565c3/01.request.json",
+      "bytes": 22829,
+      "sha256": "fcac8d7665cd655c8c6a2e0a6f793e00c4502041f339433fa7b569a4d8f41c00",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3fb254d1b69b0b58cc1565c3/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/3fb254d1b69b0b58cc1565c3/01.response.json",
+      "bytes": 1502,
+      "sha256": "3aa3df5bd35d23aeae7c6b77bfd4640b031ebaf1b7a72b05462b307784b90d47",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/3fb254d1b69b0b58cc1565c3/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/429bad6a5c0cb56f1e5fd461/01.request.json",
+      "bytes": 23533,
+      "sha256": "33d45ca22d2a57b026cdf27f112580876ab3089e05695d4e68aa4530894f9603",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/429bad6a5c0cb56f1e5fd461/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/429bad6a5c0cb56f1e5fd461/01.response.json",
+      "bytes": 1500,
+      "sha256": "b41c0d35be3686856a0a848113f902ccc3187425a4d027a458cc523dff8aa02d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/429bad6a5c0cb56f1e5fd461/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4359a27fa35effc3bc0c4078/01.request.json",
+      "bytes": 28527,
+      "sha256": "92e57f4d00a98fb3cad7c498c82dd1ff6377a4e1e1e0041c73f3a25164d09b10",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4359a27fa35effc3bc0c4078/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4359a27fa35effc3bc0c4078/01.response.json",
+      "bytes": 1501,
+      "sha256": "2752c1945b65673c1be8d74646e6293cf1bb46701b4db119b4ac4034af54e606",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4359a27fa35effc3bc0c4078/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/43616979461bb128e96071bb/01.request.json",
+      "bytes": 18454,
+      "sha256": "2be0c537fc70ef1cbbfb554cdf1f7302cbf7725c1d426df773791509827bead8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/43616979461bb128e96071bb/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/43616979461bb128e96071bb/01.response.json",
+      "bytes": 1499,
+      "sha256": "63527ad06ffb23d08f51d769d72f304a8c5064acaa4bed894d647eaf2d1e9ba2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/43616979461bb128e96071bb/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/43fffd310498be55baa58338/01.request.json",
+      "bytes": 29260,
+      "sha256": "5b8b688365a638bff076bbcfbff4d66ba26781d687c0caf67c7f3724928e5173",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/43fffd310498be55baa58338/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/43fffd310498be55baa58338/01.response.json",
+      "bytes": 1499,
+      "sha256": "b5cf1a70473c591663743af2f7d7f48e9a285c26fb55d3ae49f6a74a1a699945",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/43fffd310498be55baa58338/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/45371636ba3351d091842aa2/01.request.json",
+      "bytes": 23439,
+      "sha256": "4f2178305c5821501d4a13f8487cc6701ee9d056201d17ab8b1b537d84da4fe8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/45371636ba3351d091842aa2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/45371636ba3351d091842aa2/01.response.json",
+      "bytes": 1499,
+      "sha256": "ac080aa9c0509733d8487a0d5f2ca7b15486ba8d4f542591febf95999ce3a9a8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/45371636ba3351d091842aa2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/45ab6e0aab66a7d026d67a74/01.request.json",
+      "bytes": 28570,
+      "sha256": "ed5c663b16636253007be10550fdca902bf0a9cddd36de492066fe3db47795a6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/45ab6e0aab66a7d026d67a74/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/45ab6e0aab66a7d026d67a74/01.response.json",
+      "bytes": 1501,
+      "sha256": "274b88d3cc8dfa7a688783621aae5160268ed9dc9e5b1476b6c5066a3b8b9f0f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/45ab6e0aab66a7d026d67a74/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/46228ea7b6495fe18545605b/01.request.json",
+      "bytes": 23674,
+      "sha256": "f4efbbdc0814cdd6f0ff26fda5fe54e7762c94865119d039ce4857d2b1184fa1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/46228ea7b6495fe18545605b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/46228ea7b6495fe18545605b/01.response.json",
+      "bytes": 1500,
+      "sha256": "7fe9a9012645b4ee8f70a1574d3f8b70fe2338d234c42540a6c9e5429b8c42e1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/46228ea7b6495fe18545605b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4632ac69d17de2134ab566a5/01.request.json",
+      "bytes": 17592,
+      "sha256": "b8da7b6f83e33f960c981bb97d591aae0ce5c8be6641fc3fa1f08d80e2eb2603",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4632ac69d17de2134ab566a5/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4632ac69d17de2134ab566a5/01.response.json",
+      "bytes": 1501,
+      "sha256": "046715480da8b1b5e76a7089e4b3863fae5433ebc95eb423e1092b37d9a48bd7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4632ac69d17de2134ab566a5/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/48fd2e4e7c46a4997021496a/01.request.json",
+      "bytes": 23581,
+      "sha256": "f7b0e16555bd9d5935128ceabdb317086ee15d3a58b4f969993fa78c851a209b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/48fd2e4e7c46a4997021496a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/48fd2e4e7c46a4997021496a/01.response.json",
+      "bytes": 1497,
+      "sha256": "5781091c3aec1e3e1e3238d08aa93857deeb415c65a2986a1030d9d711062d4e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/48fd2e4e7c46a4997021496a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4df5d3882033d8e8be955712/01.request.json",
+      "bytes": 22549,
+      "sha256": "b1d916b2fbf6f70034514351847caaffe0225f3b2facbaf92ba6c78c98ad449b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4df5d3882033d8e8be955712/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4df5d3882033d8e8be955712/01.response.json",
+      "bytes": 1501,
+      "sha256": "45e447ba1fcfc71649717ac9be2c6727a30d38c2cf3eea596b987f5ae5ea8dee",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4df5d3882033d8e8be955712/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4fc26480bbab39e579513138/01.request.json",
+      "bytes": 18950,
+      "sha256": "75ef42e5cca13c9b317e0495765fdca07ceb34c7b4156a1208c7ca2676c3f35b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4fc26480bbab39e579513138/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4fc26480bbab39e579513138/01.response.json",
+      "bytes": 1502,
+      "sha256": "acb02f52827b7dde52c9c8127026bec7b7c726680c75aeec4bcae459e777e60b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4fc26480bbab39e579513138/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4fefa14d1e64f1a249eeab16/01.request.json",
+      "bytes": 23191,
+      "sha256": "f01f25e6913bbf68ee0fcf1a32b38e97acb3fd26911062aa8a9419a91e2a6946",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4fefa14d1e64f1a249eeab16/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4fefa14d1e64f1a249eeab16/01.response.json",
+      "bytes": 1497,
+      "sha256": "975ed9ed9e9278f38cb7d1b3487f601bbd45cea74e5f2cf22ceea56822801f84",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4fefa14d1e64f1a249eeab16/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4ff16106d08732384a743f0b/01.request.json",
+      "bytes": 28184,
+      "sha256": "4342e98a4c3976ca1444d53beaf018b47ffb42aae0aa635e7e4d2ce75ba7ded6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4ff16106d08732384a743f0b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/4ff16106d08732384a743f0b/01.response.json",
+      "bytes": 1497,
+      "sha256": "24426dd935c5500ca5ff5d7bae71f1a96a8e13af12229dad8f6d4d811299da59",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/4ff16106d08732384a743f0b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5201eaec165844956a98f95f/01.request.json",
+      "bytes": 28894,
+      "sha256": "31e7f9373225ba456723aa4dd3ecbea9d7a17aee69b862897dca7bcf48de8c03",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5201eaec165844956a98f95f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5201eaec165844956a98f95f/01.response.json",
+      "bytes": 1499,
+      "sha256": "b8a706b94312b5aabe93290429870380fa166e6b25c30cc9dde0481327708e9a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5201eaec165844956a98f95f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/52c7824572c5a77315e6622c/01.request.json",
+      "bytes": 28715,
+      "sha256": "39c66a44faa00f94cd2f40760edb99b4032400d7b1278c3416fca9dfbb9bf74e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/52c7824572c5a77315e6622c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/52c7824572c5a77315e6622c/01.response.json",
+      "bytes": 1501,
+      "sha256": "de8b4e77efe990915bad1dd08d4c1065d509c15c05996664af39e0ed57618cb9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/52c7824572c5a77315e6622c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/52d201a81906a5277642c053/01.request.json",
+      "bytes": 18545,
+      "sha256": "964757a053331a8f18df6c52c8f88f4e3722e0878800269ebd830ad36a02b66f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/52d201a81906a5277642c053/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/52d201a81906a5277642c053/01.response.json",
+      "bytes": 1500,
+      "sha256": "c1b4d236292d3005d06512c7d4c09b589619ce54f7b4c0dbbdd1338a55cc3e2a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/52d201a81906a5277642c053/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5349f84bab09c216fb1683ef/01.request.json",
+      "bytes": 18130,
+      "sha256": "00e7d2111dfa3aeab2f56582f6276189948061e58ad7d6a5dafac2d5d155d621",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5349f84bab09c216fb1683ef/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5349f84bab09c216fb1683ef/01.response.json",
+      "bytes": 1500,
+      "sha256": "2c237a0df43e0a298ef9d844739df742e291eb138895f5205243a3e3291c3a67",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5349f84bab09c216fb1683ef/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/54c50bffe22b5c0de0763920/01.request.json",
+      "bytes": 24255,
+      "sha256": "eb134ec48a4f10e3f6418b697b7ac27cd9630abb9c0c994920d0c68c2235048a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/54c50bffe22b5c0de0763920/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/54c50bffe22b5c0de0763920/01.response.json",
+      "bytes": 1499,
+      "sha256": "1f8bd0e058967bb31d05223e5cd52b9ac495c19766a9117b89874cf5507defc1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/54c50bffe22b5c0de0763920/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/56adf68ace0fc1cde169301b/01.request.json",
+      "bytes": 23015,
+      "sha256": "e1164afea27beacf1465d3b32f0f5f64e09e8607a154a2438a4dd83f7dc3196a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/56adf68ace0fc1cde169301b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/56adf68ace0fc1cde169301b/01.response.json",
+      "bytes": 1501,
+      "sha256": "f7ba2dd10339e67da3b98e5695cc20b59984496b2ea8583078b80158ead7439e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/56adf68ace0fc1cde169301b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/576b1fc31139fae4c408e3ff/01.request.json",
+      "bytes": 28164,
+      "sha256": "31fa27b7b5b217d2cb080196375296fafd87b5ea8d5c2628f9ebf0d870f8f2aa",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/576b1fc31139fae4c408e3ff/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/576b1fc31139fae4c408e3ff/01.response.json",
+      "bytes": 1502,
+      "sha256": "4dd6ee7c8183d61cc86bf7af3bf53ab81ce73a9d276b14064c45283fe3c391d4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/576b1fc31139fae4c408e3ff/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/57c674df93d0256825376d7f/01.request.json",
+      "bytes": 23563,
+      "sha256": "731ade1dfe2ce8d192bd72bb62c53b49b3fcb5ad9bef591ac2fffec48b56f33f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/57c674df93d0256825376d7f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/57c674df93d0256825376d7f/01.response.json",
+      "bytes": 1502,
+      "sha256": "19f2a3044fc2f896dd4e3d914db256a8377c87c5c0f41bb8b9e7d8b1353a12fa",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/57c674df93d0256825376d7f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5a744845418e6ced05dcb131/01.request.json",
+      "bytes": 28458,
+      "sha256": "1b6d62a57a54d6f7399c16b6324c133b78c9cf331d0379266cc0681c83fc1c4b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5a744845418e6ced05dcb131/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5a744845418e6ced05dcb131/01.response.json",
+      "bytes": 1501,
+      "sha256": "761e7d61ca5bd13d8f207bf9d75d9494f7821f2f3539fc0abb7b79f1d40356f4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5a744845418e6ced05dcb131/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5aa97c0eceb9333f0166b3e5/01.request.json",
+      "bytes": 28266,
+      "sha256": "40725e34e16e47f28acbba29cdfe9b3ec2e3aadf481a5fcc9cb29c22b3a957cb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5aa97c0eceb9333f0166b3e5/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5aa97c0eceb9333f0166b3e5/01.response.json",
+      "bytes": 1501,
+      "sha256": "8f415b09437f5c19497b2ec17e19331e291c24bc401ec586236e4936e68f2d17",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5aa97c0eceb9333f0166b3e5/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5d94ec656e15a58e34a0abe2/01.request.json",
+      "bytes": 23519,
+      "sha256": "52d845ab23fcbb502c79e082523125cdac663f57f96e1a2dadbfcc8dd9d24252",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5d94ec656e15a58e34a0abe2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5d94ec656e15a58e34a0abe2/01.response.json",
+      "bytes": 1502,
+      "sha256": "2b417cd257d3c83401da8319dd139e18e02546b0863e089fc6731e546c200fd3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5d94ec656e15a58e34a0abe2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5de94d09b5be20b78d7f647f/01.request.json",
+      "bytes": 22592,
+      "sha256": "bad146cfec8fc5e304b88881d2eb110c0359a896a8391a4d5e77d344266bec63",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5de94d09b5be20b78d7f647f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5de94d09b5be20b78d7f647f/01.response.json",
+      "bytes": 1501,
+      "sha256": "a438108bca30bd48af54fbe46930debf85e6c0f74b81b4e6ebb929768e2ec18d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5de94d09b5be20b78d7f647f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5f9ef08f88c4945128087065/01.request.json",
+      "bytes": 18121,
+      "sha256": "d939ef503b646b543cd81c377789fb99148ea139c9f6e44bfc6c0db1f5abcfdf",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5f9ef08f88c4945128087065/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/5f9ef08f88c4945128087065/01.response.json",
+      "bytes": 1498,
+      "sha256": "09c51cbeca09ce664c2f41cfae644b045f51da84b911755ed0cd3999d37ba87a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/5f9ef08f88c4945128087065/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/60032f91062acdf0846ea768/01.request.json",
+      "bytes": 17942,
+      "sha256": "5310a8a1f01448c07122683201b6f9736f0e9a9c664441a9ed5b64626362f11d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/60032f91062acdf0846ea768/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/60032f91062acdf0846ea768/01.response.json",
+      "bytes": 1500,
+      "sha256": "f95138fde3b1738cc3a4260e3b655b84cb85bf98be2e01d18b6cfadd9be68f81",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/60032f91062acdf0846ea768/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/60314b0a81ed4d0821401825/01.request.json",
+      "bytes": 22594,
+      "sha256": "fb1c3371ce93ef0371508d5a2f7e39442d08ce542091ce26f49b6ebca21df1cb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/60314b0a81ed4d0821401825/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/60314b0a81ed4d0821401825/01.response.json",
+      "bytes": 1498,
+      "sha256": "f35adb0eae8dcdc73f0ced4e098689facc8865b430561469f5f012b60344a223",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/60314b0a81ed4d0821401825/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/605ed7ffc399f1029ae96df1/01.request.json",
+      "bytes": 23093,
+      "sha256": "9f61479c64d4ceedef3788f9475c686a18ec93e3b38bbe41a072be61d0108120",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/605ed7ffc399f1029ae96df1/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/605ed7ffc399f1029ae96df1/01.response.json",
+      "bytes": 1499,
+      "sha256": "8a5e8e4e0ed777c3f08696ec291ce3a68d00089a3da87bdcb177c61ece8bc087",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/605ed7ffc399f1029ae96df1/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/617a6ed80869fbaae95fad8f/01.request.json",
+      "bytes": 17672,
+      "sha256": "4f76c794e0c57c80c2b4e7c7e474f510095a489e871b1d1b95bedd17c0d93d84",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/617a6ed80869fbaae95fad8f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/617a6ed80869fbaae95fad8f/01.response.json",
+      "bytes": 1500,
+      "sha256": "3db2a6cee55badb06bb73c1f6dd085f35bd45f0acced45355afdbcfd1f70b835",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/617a6ed80869fbaae95fad8f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/634415833f9c5c040f649b2a/01.request.json",
+      "bytes": 23323,
+      "sha256": "8dab146dc36c09e83c46e619dde6f3a07e8f21a232d6859f591d8045d39b857a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/634415833f9c5c040f649b2a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/634415833f9c5c040f649b2a/01.response.json",
+      "bytes": 1498,
+      "sha256": "37990799c2536ccdd928c24b0f3ef196836ed485fe8ba3a0c978631fa1f3537d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/634415833f9c5c040f649b2a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/64057eba12bfff5f476d0766/01.request.json",
+      "bytes": 23691,
+      "sha256": "e12b2192f752ba3b4c63dc2a9a258a1299724f9f3e62db29c234a06bb5c91a62",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/64057eba12bfff5f476d0766/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/64057eba12bfff5f476d0766/01.response.json",
+      "bytes": 1500,
+      "sha256": "c556ed8191a1433070aac9d3f14e8f00c70897a882ca61c074f999c670f99154",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/64057eba12bfff5f476d0766/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/64451537627612f7e6f1c30e/01.request.json",
+      "bytes": 23122,
+      "sha256": "ec8088a85704a643ae5b925a7a77421df08be2b1ef18307511d04d96fd5e62f8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/64451537627612f7e6f1c30e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/64451537627612f7e6f1c30e/01.response.json",
+      "bytes": 1502,
+      "sha256": "fc4d4538af8926cdf0259cbfa648356c6ffaad8f3e847c4b4dd25518d0fdf913",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/64451537627612f7e6f1c30e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/659fa6a730633e2adf4981d1/01.request.json",
+      "bytes": 24078,
+      "sha256": "5a4e07fba745adf5952eb99be83075d6dc48a04df78375d921352433b31585f8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/659fa6a730633e2adf4981d1/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/659fa6a730633e2adf4981d1/01.response.json",
+      "bytes": 1499,
+      "sha256": "98245298b62df044da3c3e2de1be24a22a49b78465f746e037e491566810c261",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/659fa6a730633e2adf4981d1/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/684c4266e53223391a2775ae/01.request.json",
+      "bytes": 18282,
+      "sha256": "aea44785811242f4e36889bbab16fb4e61861216fb8ac16a9a8c457206d0f8ef",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/684c4266e53223391a2775ae/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/684c4266e53223391a2775ae/01.response.json",
+      "bytes": 1499,
+      "sha256": "d1c62305363db7b7dd1f92f8b5894a27f59b4c1a62f1c13a06e6e4ec73f33136",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/684c4266e53223391a2775ae/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/6966224dbb73a7d7697ca98f/01.request.json",
+      "bytes": 23735,
+      "sha256": "4c64474c09781761614c1f073787307f2a8b2634036dea4af275e7257945b960",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/6966224dbb73a7d7697ca98f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/6966224dbb73a7d7697ca98f/01.response.json",
+      "bytes": 1498,
+      "sha256": "ca142749082d585969a2921698d27cb0453cf7a577d6ce5ea3d24b5520c46587",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/6966224dbb73a7d7697ca98f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/6b4afdfb41149f6f4b5a4c32/01.request.json",
+      "bytes": 22329,
+      "sha256": "c9a2951396b03bc1c8a4d80fa8f84d81bcbe76a86d1da4d3cd1fc531bf11eb41",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/6b4afdfb41149f6f4b5a4c32/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/6b4afdfb41149f6f4b5a4c32/01.response.json",
+      "bytes": 1501,
+      "sha256": "37618895d0b3d16baba6218aa3c82c56d874269cf3d5380f563e9e7c7d785e43",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/6b4afdfb41149f6f4b5a4c32/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/6ceaba0ad5128f9a925bf3b0/01.request.json",
+      "bytes": 22573,
+      "sha256": "d90c78f4f4abac2ae7aab58104c82ff5a96a57cdc44fe216758fa281088d2e4e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/6ceaba0ad5128f9a925bf3b0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/6ceaba0ad5128f9a925bf3b0/01.response.json",
+      "bytes": 1502,
+      "sha256": "830e839044752e599b64449ec20748464aee0227e5629cbbac7ebb753dcad630",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/6ceaba0ad5128f9a925bf3b0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/72013310e2cc18c6d78f6fe0/01.request.json",
+      "bytes": 28698,
+      "sha256": "645852f6942a9aed6749ada70c8caf46be6121524dafc91aa0a42469440ba9d0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/72013310e2cc18c6d78f6fe0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/72013310e2cc18c6d78f6fe0/01.response.json",
+      "bytes": 1499,
+      "sha256": "d40c986023cd120dd6e6c4715d0f017890ad1579b8b6ae316c5de2561ecbdaf2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/72013310e2cc18c6d78f6fe0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/72b9db97b099f6fcd1a6bf7f/01.request.json",
+      "bytes": 22303,
+      "sha256": "cde29c35db05d0e576f7e2bedf36fc4076e1382e08ef7f920a8b42f25ad74994",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/72b9db97b099f6fcd1a6bf7f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/72b9db97b099f6fcd1a6bf7f/01.response.json",
+      "bytes": 1502,
+      "sha256": "4a01678391dc68ef103e0264979fa53f2db195c515999bdb4b5b3eabfcb8ea33",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/72b9db97b099f6fcd1a6bf7f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/72c1a4a1dd1395a4a172be32/01.request.json",
+      "bytes": 30192,
+      "sha256": "3db1cace17dfaeace7418f2077c1cc96aab3e0ea6f64a9d4e3ca3c306d77a464",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/72c1a4a1dd1395a4a172be32/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/72c1a4a1dd1395a4a172be32/01.response.json",
+      "bytes": 1499,
+      "sha256": "886c922e3797c35e87f76f5f0dc5b506f0141bd3a9b0ceb99b060c369ab08a3a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/72c1a4a1dd1395a4a172be32/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/733f99c865b11517db842476/01.request.json",
+      "bytes": 23179,
+      "sha256": "5911475d0dd57c25939ee4f41b4981289aa138439a7fa7fd8a3d559a033da380",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/733f99c865b11517db842476/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/733f99c865b11517db842476/01.response.json",
+      "bytes": 1501,
+      "sha256": "f09c923ad46dbf830fa382cdc0bad62376cca059eb13a7033f360d0a65ec4d3d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/733f99c865b11517db842476/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/76a01c88380fba39152ab629/01.request.json",
+      "bytes": 22678,
+      "sha256": "7b8356b03a4ff498e21e9f7d2ca9cc64d3c11bb27fe1787f0bbf05df15dc3264",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/76a01c88380fba39152ab629/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/76a01c88380fba39152ab629/01.response.json",
+      "bytes": 1500,
+      "sha256": "c1d6a581737861029345b587de2a956a5514e1d6c531f5643d6e1a28a3113405",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/76a01c88380fba39152ab629/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7888d13b90c6eef06f0ef4af/01.request.json",
+      "bytes": 28627,
+      "sha256": "d5bf35c2ab66c5675322933412dd1198cd49efe7b6f7a088a2a6f06e8c289444",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7888d13b90c6eef06f0ef4af/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7888d13b90c6eef06f0ef4af/01.response.json",
+      "bytes": 1502,
+      "sha256": "762164c35b4b2da126e1620a4639a216664815afe71328ee4564424eb49814f9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7888d13b90c6eef06f0ef4af/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/789165b100e652075e257900/01.request.json",
+      "bytes": 22828,
+      "sha256": "331fb1b2f0df07a5f845109ad50f74fb42a63905899da33270d3f83ee53f204a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/789165b100e652075e257900/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/789165b100e652075e257900/01.response.json",
+      "bytes": 1501,
+      "sha256": "15fc7fb5dee1072340962c4bca042e8f2800fa05c60db30a2d5a235747f1478a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/789165b100e652075e257900/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/78e3f3ca3110c2b4b8c838d9/01.request.json",
+      "bytes": 23782,
+      "sha256": "c5b4b437e5d52d750711e8dcfb8bf89d83a3b631481b50670b2d0438ac21092f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/78e3f3ca3110c2b4b8c838d9/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/78e3f3ca3110c2b4b8c838d9/01.response.json",
+      "bytes": 1501,
+      "sha256": "90aaacd635d019dab5e22baa105e34cc08dbabb4e5e1f86d2df715c4442c74c5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/78e3f3ca3110c2b4b8c838d9/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/79abbf1143a03282d87473fa/01.request.json",
+      "bytes": 22247,
+      "sha256": "0e55f466cfe598874eebd64267b8c6c861ad6fd2d5a8b4d41237c7fa31a02046",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/79abbf1143a03282d87473fa/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/79abbf1143a03282d87473fa/01.response.json",
+      "bytes": 1502,
+      "sha256": "e4e06d6bf66978d5dd31c911f485f7406935aee7748532309b3cf0d691b5a15e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/79abbf1143a03282d87473fa/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/79d326aaccd3fa392a84d78c/01.request.json",
+      "bytes": 22833,
+      "sha256": "dd11675addbe8ba0496f36a101ccee325b141559d2d82bb2a51ed58ebe2f4e97",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/79d326aaccd3fa392a84d78c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/79d326aaccd3fa392a84d78c/01.response.json",
+      "bytes": 1502,
+      "sha256": "e68be3a93848f5898c8939524a1e6354c7c9c32fe98d188734379dc1581551ab",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/79d326aaccd3fa392a84d78c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7b935e3d15d6257f1636a2cb/01.request.json",
+      "bytes": 18084,
+      "sha256": "385a54625b5f4bdc06c2f234e57ca4153c19a0dfe4b940976dd78d363595ca20",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7b935e3d15d6257f1636a2cb/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7b935e3d15d6257f1636a2cb/01.response.json",
+      "bytes": 1498,
+      "sha256": "71384fda9f7379477211bccf4eae02b7c9404b11fd3f595a176a4ba2c719f5d2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7b935e3d15d6257f1636a2cb/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7c944d6936fe538cdcbfb920/01.request.json",
+      "bytes": 17596,
+      "sha256": "ac5f8b2f81c9cdeaea2599dd26ca00f6057eeaf0b3be3b51dcea45185201c4ba",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7c944d6936fe538cdcbfb920/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7c944d6936fe538cdcbfb920/01.response.json",
+      "bytes": 1501,
+      "sha256": "38fd9e5970cfeb76d693bb424f4ab386dea74eaade7d7ae33db7520216dd5f51",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7c944d6936fe538cdcbfb920/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7cea2e804db55b65ed70e3aa/01.request.json",
+      "bytes": 23321,
+      "sha256": "cc92f7bc99d5b725c57db1d032b53bc4b8c849e24278337df9df7cc362a7f265",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7cea2e804db55b65ed70e3aa/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7cea2e804db55b65ed70e3aa/01.response.json",
+      "bytes": 1501,
+      "sha256": "e48aebee047626914094c8a1452381614acbb0d0434aa5666bcc5050ea993dfb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7cea2e804db55b65ed70e3aa/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7d497bbe287be1e7b1e01e9d/01.request.json",
+      "bytes": 29206,
+      "sha256": "2035c3c52d0887fbfba0bb5402a856fdc0265b7aa8ce3cdea8a8714c02bb94de",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7d497bbe287be1e7b1e01e9d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7d497bbe287be1e7b1e01e9d/01.response.json",
+      "bytes": 1500,
+      "sha256": "bbd19a092aa8633fd5ebf5025edb00343fdd15dd2a6ae455f056351d0df6bb85",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7d497bbe287be1e7b1e01e9d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7dd147a5a9d81c205150720e/01.request.json",
+      "bytes": 17778,
+      "sha256": "38e4d93713ac2cdd269650238b2cc4aa02e3d9e629f8326b5320709d203b12c7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7dd147a5a9d81c205150720e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7dd147a5a9d81c205150720e/01.response.json",
+      "bytes": 1500,
+      "sha256": "b9248f52514b6064f3155c81d99146b47f21922b892e480e0ea92d7e2dfe0d57",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7dd147a5a9d81c205150720e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7e4b0985e7642b69199033c1/01.request.json",
+      "bytes": 29118,
+      "sha256": "ab00b0bc48b01081853b8e7509ddc0a2162555b5ea69532eb8fc964018a7c11b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7e4b0985e7642b69199033c1/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/7e4b0985e7642b69199033c1/01.response.json",
+      "bytes": 1501,
+      "sha256": "a3f298a903d1937ab7961c49989d3c494f4b2299ca9141136c2bb5159d9b4919",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/7e4b0985e7642b69199033c1/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/80683fe2e65de0e6bc90146f/01.request.json",
+      "bytes": 29611,
+      "sha256": "c9f30f0fa874c2f0b4f512828a0d327ac7f691180246f1c4e39bf130b7b360f5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/80683fe2e65de0e6bc90146f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/80683fe2e65de0e6bc90146f/01.response.json",
+      "bytes": 1501,
+      "sha256": "b6b22fc5a3c441c9375cc96ab7a0df4bf9fabf700614a90df4024e266e4b5593",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/80683fe2e65de0e6bc90146f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8194d1d3cd25a975093b9e16/01.request.json",
+      "bytes": 29350,
+      "sha256": "4c58bea00eae1ad198d156df6648f304bd48d4f2fcf237fb2fe0f4be1cb2c12d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8194d1d3cd25a975093b9e16/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8194d1d3cd25a975093b9e16/01.response.json",
+      "bytes": 1499,
+      "sha256": "2ff5b1076baa779bfa41ad708dd4b802ff10031f5146ebfdff5b2e54f1a8d208",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8194d1d3cd25a975093b9e16/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8284f83e3c41a41b1a0e9e9b/01.request.json",
+      "bytes": 17856,
+      "sha256": "3bffedb9669ff24081582cb6c907dcf848c4f3555713c39a205570fcde52cf92",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8284f83e3c41a41b1a0e9e9b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8284f83e3c41a41b1a0e9e9b/01.response.json",
+      "bytes": 1502,
+      "sha256": "b3fac3c823d595ec97688087193202d095aee88d2b00a418cefb91f7acd9f29b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8284f83e3c41a41b1a0e9e9b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/82fd9135a9f6c3ecac58971b/01.request.json",
+      "bytes": 23875,
+      "sha256": "2518978333d55449d6a577489fc22cfdab25488b6f47ddd7f3939a786946547e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/82fd9135a9f6c3ecac58971b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/82fd9135a9f6c3ecac58971b/01.response.json",
+      "bytes": 1502,
+      "sha256": "10d6f09c0ecde9dec0b27ce4c1e591a084528bf4b5b3baeccd626835f6a7de32",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/82fd9135a9f6c3ecac58971b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/832432c4936a953bcc994865/01.request.json",
+      "bytes": 18638,
+      "sha256": "98ae0cbafb65571a08f7be3247d40d65fb5dc18f0700e9d47844a3cc691565d2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/832432c4936a953bcc994865/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/832432c4936a953bcc994865/01.response.json",
+      "bytes": 1499,
+      "sha256": "798f9935d7c11e12173bd441efa9069a64644b4c6fc4d2022d468609dfdeb220",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/832432c4936a953bcc994865/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8468d668af8b94b8c48f8837/01.request.json",
+      "bytes": 23149,
+      "sha256": "96849f001b67da2df5d0693ac412bff472719b7adaa9dd1ea4f1a0c2d8d8a5db",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8468d668af8b94b8c48f8837/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8468d668af8b94b8c48f8837/01.response.json",
+      "bytes": 1500,
+      "sha256": "da5ae8f6a1d1d7920feff79009396cead0f23d942b9e6ec2da7ca24e315e233a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8468d668af8b94b8c48f8837/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/84c911afd0eee13f43a155ae/01.request.json",
+      "bytes": 28345,
+      "sha256": "2c42de677bf0732eff5e5f13c048b3ace4d6eb9ab3d0bab7abdce1b28388f043",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/84c911afd0eee13f43a155ae/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/84c911afd0eee13f43a155ae/01.response.json",
+      "bytes": 1502,
+      "sha256": "3871b0b2a07248ea9dec9fb1384d836fdac6a75059dbc147add25d57a7b166c0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/84c911afd0eee13f43a155ae/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/855685856d27c4dde1cdd996/01.request.json",
+      "bytes": 29409,
+      "sha256": "ed95ea99bca0937dd8e6dc6a6d49b3f6eec522def0df482cf876b9f6dd12c4d9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/855685856d27c4dde1cdd996/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/855685856d27c4dde1cdd996/01.response.json",
+      "bytes": 1497,
+      "sha256": "8a56a4a4cc0eb3a58a433231326fa828e24ab5dbd22b4bf1b92496d19c946a8a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/855685856d27c4dde1cdd996/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/855ac9d3f92db091609949a0/01.request.json",
+      "bytes": 23155,
+      "sha256": "004f7fd602647f39b6a173bdfcafdbf3f60a48aaff412ab050a03a9ac000a193",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/855ac9d3f92db091609949a0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/855ac9d3f92db091609949a0/01.response.json",
+      "bytes": 1502,
+      "sha256": "11ea96e1304ef9046cb62078964778840e7202afaf045cb6005f1001db798dd3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/855ac9d3f92db091609949a0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/88aa954420a77787f1239667/01.request.json",
+      "bytes": 18326,
+      "sha256": "e85301ec783eff2fd1d18e8c9c587370f950888fb4b3408291b089f332f49a29",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/88aa954420a77787f1239667/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/88aa954420a77787f1239667/01.response.json",
+      "bytes": 1499,
+      "sha256": "be4e946dc8108084979c820de6c2101799c590725a4547068aec53f6277688e7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/88aa954420a77787f1239667/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/898e3a8011a4d12877ed700c/01.request.json",
+      "bytes": 23665,
+      "sha256": "a429359afff857f939504485d6ed4eeefe6b3b37d7eb2eed67c2ba235af6fb92",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/898e3a8011a4d12877ed700c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/898e3a8011a4d12877ed700c/01.response.json",
+      "bytes": 1502,
+      "sha256": "39985bf6df2fde15e553bc9f1bc6a958cbda6e333dd8fb6ef73bdabbcb594f91",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/898e3a8011a4d12877ed700c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8b180849a8ea41f7d0dc7871/01.request.json",
+      "bytes": 22778,
+      "sha256": "9bded4d70fd08ca6c1116eeb82802546604d4c957bc069020eb5e234b8eef45f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8b180849a8ea41f7d0dc7871/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8b180849a8ea41f7d0dc7871/01.response.json",
+      "bytes": 1498,
+      "sha256": "44d8c2fc369ef93760ac95fe5393367e11f3312c7f20be74b53ea479383111d7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8b180849a8ea41f7d0dc7871/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8ce7c1246631d1275f78a9f1/01.request.json",
+      "bytes": 17748,
+      "sha256": "1dc65fd4f58eac16f5b404d8fa54520e0a35f6cdf3c3a4a77c99732bcec755b8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8ce7c1246631d1275f78a9f1/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8ce7c1246631d1275f78a9f1/01.response.json",
+      "bytes": 1498,
+      "sha256": "170e6190fc05d23069465cd2bb67ad0aa17966e592326bade9ac8eda5163e883",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8ce7c1246631d1275f78a9f1/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8ce8ad6a5bc9e4d3f4c0ce71/01.request.json",
+      "bytes": 23269,
+      "sha256": "afc3da853058ef9ad61c5bbed289e100a857bc61e6bfa712474e09ccde3c580e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8ce8ad6a5bc9e4d3f4c0ce71/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8ce8ad6a5bc9e4d3f4c0ce71/01.response.json",
+      "bytes": 1501,
+      "sha256": "6290546b94f89a3b713742bc2277874c4ecf6770280afbc0ee45d1b713e80d9f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8ce8ad6a5bc9e4d3f4c0ce71/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8debdb99646dfd79fea5db4e/01.request.json",
+      "bytes": 22595,
+      "sha256": "e32d49f6d5bcfeb94f966c54a7a24ea0da5041f935204a7f82162d61c96d6f01",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8debdb99646dfd79fea5db4e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8debdb99646dfd79fea5db4e/01.response.json",
+      "bytes": 1501,
+      "sha256": "3cbbe8d5fc69f78dc6459f0c53a8619c02a9054386cd9dc30646cf75ca49d5e7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8debdb99646dfd79fea5db4e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8dee55d8fda8fd30431decb8/01.request.json",
+      "bytes": 17959,
+      "sha256": "546dae42d4d948367025d9475f38d9cdec1f32fd2f5b4fd4b88a04f31c2876ce",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8dee55d8fda8fd30431decb8/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8dee55d8fda8fd30431decb8/01.response.json",
+      "bytes": 1499,
+      "sha256": "e479483a37d5669bda8c2016c7fa114dd8053c5bd600d8325737e02f7c93441a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8dee55d8fda8fd30431decb8/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8f62bf12152479296069e568/01.request.json",
+      "bytes": 18151,
+      "sha256": "ecbb9c38301af2998a3b45aa4cb2af998beb48c394aa869a15ae1147d2709021",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8f62bf12152479296069e568/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8f62bf12152479296069e568/01.response.json",
+      "bytes": 1498,
+      "sha256": "3865341852626a1f1a6d411b485cfa78925e330f5662b944e58d36d1c03bc0d7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8f62bf12152479296069e568/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8f6f1d740b4b3bf0a43a6223/01.request.json",
+      "bytes": 22590,
+      "sha256": "1f1018ce44a34e82dc7dd37ec8bd860dc9b1a78298eda6222950e67512659863",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8f6f1d740b4b3bf0a43a6223/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/8f6f1d740b4b3bf0a43a6223/01.response.json",
+      "bytes": 1502,
+      "sha256": "e2da2f2401950e9f2afc2289addd29bf98bb7e9fa1e5f17af5acdc72008513ca",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/8f6f1d740b4b3bf0a43a6223/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/91f15e83a97f5639e43e81cf/01.request.json",
+      "bytes": 22319,
+      "sha256": "6dcbf6fc5eca226955702318f89a5818f881c8a161ee86b8b42bb9457be7b569",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/91f15e83a97f5639e43e81cf/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/91f15e83a97f5639e43e81cf/01.response.json",
+      "bytes": 1502,
+      "sha256": "e270abe61bc722359663e93a5301e50611efe2c647a50e4f3a901e4246eec404",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/91f15e83a97f5639e43e81cf/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/93eba2ff800e7f43e344567b/01.request.json",
+      "bytes": 32738,
+      "sha256": "2b93a3e3ed34f300e8d65fb42ab471a136f4bf95e5d35b3838b4380ddb9fd150",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/93eba2ff800e7f43e344567b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/93eba2ff800e7f43e344567b/01.response.json",
+      "bytes": 1499,
+      "sha256": "e8a13fcbde2e3e6d274b489edc830dcb1c5e9fb0758a8500dae66c6df0d2fcfc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/93eba2ff800e7f43e344567b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/94dd1ad938a6fc890643f54a/01.request.json",
+      "bytes": 26801,
+      "sha256": "ac5d46d56763d7df017e5113d97f66cdd4676c08ba27e721aba3bdc2764c3000",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/94dd1ad938a6fc890643f54a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/94dd1ad938a6fc890643f54a/01.response.json",
+      "bytes": 1501,
+      "sha256": "ff62513a15018a3672b7d84ce4b5deb238bbd29a15fb31cb79ede4a58f9e1140",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/94dd1ad938a6fc890643f54a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/94f9afa5a8fa34e25cc4b30b/01.request.json",
+      "bytes": 23413,
+      "sha256": "c450a1a0c284c58292b6d21d53a94c0699c63ec765a3dee61ec97ff79bd5d4f0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/94f9afa5a8fa34e25cc4b30b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/94f9afa5a8fa34e25cc4b30b/01.response.json",
+      "bytes": 1501,
+      "sha256": "d0b5a181ba6a439a13e0dbf99be39a02f5e8ffa9d78e80677d2404763353286a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/94f9afa5a8fa34e25cc4b30b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9647b51e4229548fbfb97bfe/01.request.json",
+      "bytes": 17961,
+      "sha256": "89243c0e21fc1f4baf02e6b82709bbc89b11645f3e03fd3c7faee96a6447378e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9647b51e4229548fbfb97bfe/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9647b51e4229548fbfb97bfe/01.response.json",
+      "bytes": 1502,
+      "sha256": "8f274790f5f117d2e5cfff250426ed20f5781258331683a4567765df3e12bbe9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9647b51e4229548fbfb97bfe/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/968507155d4f5808ed3d629f/01.request.json",
+      "bytes": 28532,
+      "sha256": "e21f8723125c8d9af47034fc087a8369f6defaac238e9512cc7036b28b777b4d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/968507155d4f5808ed3d629f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/968507155d4f5808ed3d629f/01.response.json",
+      "bytes": 1499,
+      "sha256": "4d133b686e6a64a9859c9b9b53c11fc79a25365b1f66fff20d80fb572c184cf8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/968507155d4f5808ed3d629f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/98ab2037c71368cb1b0bde97/01.request.json",
+      "bytes": 28546,
+      "sha256": "060841172f6473b3c9955e57676f5766567e958fba1fa032edb244f8fcfafb03",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/98ab2037c71368cb1b0bde97/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/98ab2037c71368cb1b0bde97/01.response.json",
+      "bytes": 1501,
+      "sha256": "fca0f88bd7f79ea9750936d0953e15b5728009f8db40d05de61c4a538b430f7b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/98ab2037c71368cb1b0bde97/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9b6e77d45bb14ba855e2dd73/01.request.json",
+      "bytes": 23085,
+      "sha256": "de50ac357d671073c4d38c0e136ad79c6a51c940a4813491f4788bf20511131e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9b6e77d45bb14ba855e2dd73/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9b6e77d45bb14ba855e2dd73/01.response.json",
+      "bytes": 1501,
+      "sha256": "37578d6f03d80ef58b3e7eb29d03ecd4a316db9ec570c0a8641fabcb7c1decf0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9b6e77d45bb14ba855e2dd73/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9c4aecf8798f19e1ff289043/01.request.json",
+      "bytes": 22985,
+      "sha256": "4ef8f4e8f139172f88fd0a04ff9bbfd2acb36c6a464a409cd2c866879fe98754",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9c4aecf8798f19e1ff289043/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9c4aecf8798f19e1ff289043/01.response.json",
+      "bytes": 1501,
+      "sha256": "0f94fe04999dd87b3a44fab40faf64dc793ccdb34c54f5a1cdc4a0fd09acfced",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9c4aecf8798f19e1ff289043/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9c64806a59fa58fa1a021374/01.request.json",
+      "bytes": 23146,
+      "sha256": "faa7856cd119cecfaf3e48abe73c36ac19760081f25ebed4502cac5fc3a3336c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9c64806a59fa58fa1a021374/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/9c64806a59fa58fa1a021374/01.response.json",
+      "bytes": 1502,
+      "sha256": "b50fb9cc9d976f1ba5d4b81791fd396a25fd00226d48c56f849430accaf19c1b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/9c64806a59fa58fa1a021374/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a009db38c9292ed04ed15945/01.request.json",
+      "bytes": 22853,
+      "sha256": "b349ff9d43efc966415c7478239485080016a8b18e11aaa6ade6b3faa5ad08f0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a009db38c9292ed04ed15945/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a009db38c9292ed04ed15945/01.response.json",
+      "bytes": 1502,
+      "sha256": "69f10bef17e1a310ec24e427585ac72866ecf1d2e4c50dd0a37848789c02dea2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a009db38c9292ed04ed15945/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a1af58bc58b2844f5e1a06e0/01.request.json",
+      "bytes": 18047,
+      "sha256": "193afc658679e8a5c997ec1df97cb865d46eabc1923501b1cc128fa676cc9b18",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a1af58bc58b2844f5e1a06e0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a1af58bc58b2844f5e1a06e0/01.response.json",
+      "bytes": 1500,
+      "sha256": "fe9061bbc020ff60c510637e5ee89aa71a931a402a5238cf6e8d71535fbb040b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a1af58bc58b2844f5e1a06e0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a225164ecd16456d55d66350/01.request.json",
+      "bytes": 17777,
+      "sha256": "be3e923a505236c7f43f477ab5489a4cb62f8fc2c855fb927424d2db8fdc6f32",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a225164ecd16456d55d66350/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a225164ecd16456d55d66350/01.response.json",
+      "bytes": 1498,
+      "sha256": "76cc7cc4b2f92637076138e70be25a24042a97cc0cdca2a4836006a779189abf",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a225164ecd16456d55d66350/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a2956656bb8fce8c83f05165/01.request.json",
+      "bytes": 17709,
+      "sha256": "1954dfa8c813d3d2dac3f4ddaa5fae0e72d90b5c31d2c946fd945472af53f2be",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a2956656bb8fce8c83f05165/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a2956656bb8fce8c83f05165/01.response.json",
+      "bytes": 1500,
+      "sha256": "675461e8e717447e6b57e727da346cf01ecd9c92a735eb748c9c08fdaa4113bb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a2956656bb8fce8c83f05165/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a4628f969713642214c6b05a/01.request.json",
+      "bytes": 24019,
+      "sha256": "86650bb085a73c2b0ed7c84dcf00252c868070d8c60df44a852da6812c8ae090",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a4628f969713642214c6b05a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a4628f969713642214c6b05a/01.response.json",
+      "bytes": 1501,
+      "sha256": "be16bbab80fd0fa6a03c9af0588ebb7d3a9f04f02983b1ea9f9e098a64b38f70",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a4628f969713642214c6b05a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a53ad8bb8c595cf446807f67/01.request.json",
+      "bytes": 18059,
+      "sha256": "61da56606b3661a46cde54743b838a6b7fc8f78bb07af8de927cd7c5b9f735d9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a53ad8bb8c595cf446807f67/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a53ad8bb8c595cf446807f67/01.response.json",
+      "bytes": 1499,
+      "sha256": "da27063d2c96bd54f46a12f8542a8cfb264368fa8fb07bebc3e41c1e19351b3c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a53ad8bb8c595cf446807f67/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a63cf02a7fe815495a3beb3d/01.request.json",
+      "bytes": 22909,
+      "sha256": "457541b09c014614083667011c90b2b3e8178332701fc9522739504f5f343f33",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a63cf02a7fe815495a3beb3d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a63cf02a7fe815495a3beb3d/01.response.json",
+      "bytes": 1502,
+      "sha256": "9f2b5b3b87d9974a23be7b3ddfc421f2fd2bfe26f2156c361ba9c2f3e05889dc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a63cf02a7fe815495a3beb3d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a66bbd34c73f7c47da451089/01.request.json",
+      "bytes": 23296,
+      "sha256": "0bb78bf31ef3a5e985520567b2e97686ae7c46f16bab8b6481fd365ca503f7a0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a66bbd34c73f7c47da451089/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/a66bbd34c73f7c47da451089/01.response.json",
+      "bytes": 1501,
+      "sha256": "448288979206cdcd7cd72d28229f037e8e4c3c5ca1de509a557f129787ee8247",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/a66bbd34c73f7c47da451089/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/aa2702eba76f7e55802d5345/01.request.json",
+      "bytes": 23498,
+      "sha256": "6c03ff5bb29e6ae0beb8045ec4604b70a3a86cba8a9f53c709141b3d4a64e68f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/aa2702eba76f7e55802d5345/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/aa2702eba76f7e55802d5345/01.response.json",
+      "bytes": 1500,
+      "sha256": "834734844485b13b5b3793a9e6ca9086d76b41cbc41fcd5cdeb7c4974d1098a6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/aa2702eba76f7e55802d5345/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ad59f7c8c394fa02b2e81e68/01.request.json",
+      "bytes": 17918,
+      "sha256": "0021c511d9b4b6bd88cd278907c6b44ce090ab7e16f0284522f14acc652b02f6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ad59f7c8c394fa02b2e81e68/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ad59f7c8c394fa02b2e81e68/01.response.json",
+      "bytes": 1502,
+      "sha256": "d40483630aa8599c5d4463bc35dd657d75ea11436e822fc3bb662624f0609133",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ad59f7c8c394fa02b2e81e68/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ad6bc2db5be4bef2d7a528a9/01.request.json",
+      "bytes": 23125,
+      "sha256": "5c80cf6a9603399cd972f378424e23f3b756d8155e4bf512fe8f778d81c48b43",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ad6bc2db5be4bef2d7a528a9/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ad6bc2db5be4bef2d7a528a9/01.response.json",
+      "bytes": 1502,
+      "sha256": "d959fb2764f5b841c6609903c4c8db3bf98fe080d8148752b59c51a09c3dc145",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ad6bc2db5be4bef2d7a528a9/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/adf50674c443fd389be951d3/01.request.json",
+      "bytes": 17616,
+      "sha256": "ab0c16f95f172420f28fe9ee24a36fe5516cdfb94b8463a8c7bc570facba25b1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/adf50674c443fd389be951d3/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/adf50674c443fd389be951d3/01.response.json",
+      "bytes": 1501,
+      "sha256": "a7e7f471a0c07c64c151c76fa205b68d1b11e308e5471968478880b6954920c3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/adf50674c443fd389be951d3/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/affdd977944f3fba783cc99b/01.request.json",
+      "bytes": 22954,
+      "sha256": "379561604cedbdbb52d3f7c168d97edc034ceda2d8d2bb417cda16be79a0fc47",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/affdd977944f3fba783cc99b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/affdd977944f3fba783cc99b/01.response.json",
+      "bytes": 1501,
+      "sha256": "80f105f515bbec8b85c06c44397c728b4a422e3ef3353c59851337ae40f7f755",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/affdd977944f3fba783cc99b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b0297b35e2e23763c505d204/01.request.json",
+      "bytes": 28453,
+      "sha256": "15e08bfcbed2c0b3a2e03b31fbc9baf8b818d119a66599703a0864444a140da8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b0297b35e2e23763c505d204/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b0297b35e2e23763c505d204/01.response.json",
+      "bytes": 1500,
+      "sha256": "fb67ed16e40882c87d2785a45803ffba0df76b8f67e04e2dcfc617d0ac048b74",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b0297b35e2e23763c505d204/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b060f40d2892754fa4c37267/01.request.json",
+      "bytes": 22782,
+      "sha256": "cb136b58204d9a678bac97864cb435031aff266a4106a6c5ab157fa2c7e0aecd",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b060f40d2892754fa4c37267/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b060f40d2892754fa4c37267/01.response.json",
+      "bytes": 1500,
+      "sha256": "5e7154de39fe045e6b0562e8b38c49962e20ecbd174fd269ddb538e4c933f2a0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b060f40d2892754fa4c37267/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b075e8f4f8ac48b20ac14586/01.request.json",
+      "bytes": 29518,
+      "sha256": "736916723d501922a13e464829e661e88b5683175b283b69e76a3d2f83922171",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b075e8f4f8ac48b20ac14586/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b075e8f4f8ac48b20ac14586/01.response.json",
+      "bytes": 1498,
+      "sha256": "76fa4d16c1ed674a82c3a9ef5423b317db99a5e249101001c421ba637f2d85ee",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b075e8f4f8ac48b20ac14586/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b0afc49f638bac0310200bb2/01.request.json",
+      "bytes": 28689,
+      "sha256": "8e71ae2a39bf8156fcd9fc6b0890825cfe35f9d8eeacd5513ea9a2095a0fb1b5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b0afc49f638bac0310200bb2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b0afc49f638bac0310200bb2/01.response.json",
+      "bytes": 1499,
+      "sha256": "489c62480c959c6d66198044340f6922abdadb080a2eee365ad492f316a4d58b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b0afc49f638bac0310200bb2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b132543872618c96b08bdfbf/01.request.json",
+      "bytes": 22609,
+      "sha256": "b0098fd6c4a8454ef4d593c9a72338b9142c5b5a0f14f8947368188d3da1bbe0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b132543872618c96b08bdfbf/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b132543872618c96b08bdfbf/01.response.json",
+      "bytes": 1500,
+      "sha256": "f34868f711df8a4c54c53f06f8b9e88587d8dfa0518b3d65edf7c1ae6f937d7d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b132543872618c96b08bdfbf/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b2d1eba0f5f08ebfea571f77/01.request.json",
+      "bytes": 22487,
+      "sha256": "0f970c1b42ab5bb561732dbbe4274b329b87d668a1ff4b37ef1e6abb02f308a4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b2d1eba0f5f08ebfea571f77/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b2d1eba0f5f08ebfea571f77/01.response.json",
+      "bytes": 1502,
+      "sha256": "baabb249c774b94b5ff4b556ff1927f3c4ac566c099dbf136de6b226d43700b3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b2d1eba0f5f08ebfea571f77/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b2fa6f02da91e44151f1876d/01.request.json",
+      "bytes": 22340,
+      "sha256": "195c6ff1307995129d7bf89ce88c4d8909e308e9059d1827905635c181bd2440",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b2fa6f02da91e44151f1876d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b2fa6f02da91e44151f1876d/01.response.json",
+      "bytes": 1502,
+      "sha256": "235cf25de993620839b630c29f2f5cd66c3a84f1384287f7ceaaf7e0caea0169",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b2fa6f02da91e44151f1876d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b35e7747b4b3601edabed0b9/01.request.json",
+      "bytes": 22935,
+      "sha256": "3215ab4fedbc958fa4fa6f347e21f884f3c6bf63af9cec40d958adb75780e0a1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b35e7747b4b3601edabed0b9/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b35e7747b4b3601edabed0b9/01.response.json",
+      "bytes": 1501,
+      "sha256": "4aef21c71afa370caabaac95055739cf95a91f79b4c603c993cfafd06cb16cbc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b35e7747b4b3601edabed0b9/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b3903fd61608708a839fa311/01.request.json",
+      "bytes": 23384,
+      "sha256": "b7edc99b8cc5682e06692af914a057798e8ac4f31fa51d9f72c798b9faa08e9f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b3903fd61608708a839fa311/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b3903fd61608708a839fa311/01.response.json",
+      "bytes": 1501,
+      "sha256": "e88f4f33bb24c1acb6a86359bfd0d4c8c631dc38f79473f30fb3eca565c62c31",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b3903fd61608708a839fa311/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b4aecfdf9d6126ab9b3ca1ff/01.request.json",
+      "bytes": 28240,
+      "sha256": "85f4e4e38fbe5ec995126502c487bc1a7ed7830f8bcd1c30d598b57b4af2e5c0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b4aecfdf9d6126ab9b3ca1ff/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b4aecfdf9d6126ab9b3ca1ff/01.response.json",
+      "bytes": 1501,
+      "sha256": "02fbd0315d916832550762b8eedefe944b0b8eda50e66a00d1f3a7ba39ef5303",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b4aecfdf9d6126ab9b3ca1ff/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b64858e1ee262b0bd76d6707/01.request.json",
+      "bytes": 24861,
+      "sha256": "d3ff3c4ee744b30475fba7b0a20b9f48d5550353c00452cedde2df6bda4e0e20",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b64858e1ee262b0bd76d6707/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b64858e1ee262b0bd76d6707/01.response.json",
+      "bytes": 1499,
+      "sha256": "0c7279311d5d76ea7dd4715ac93e42b588d6d2efed4f3b193d8087cfa5550928",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b64858e1ee262b0bd76d6707/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b66f6e05ce1870d61cd10a65/01.request.json",
+      "bytes": 23284,
+      "sha256": "00e6136e63b109a7f5038603d5fa0f10a09278b470f1b6f4cfa2b74ee1348916",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b66f6e05ce1870d61cd10a65/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b66f6e05ce1870d61cd10a65/01.response.json",
+      "bytes": 1502,
+      "sha256": "4b127257b0956177f0da6ae5aabbbfddda538db6620aa52c9fa0e7e933747400",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b66f6e05ce1870d61cd10a65/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b7404c0934952e572ced3039/01.request.json",
+      "bytes": 22913,
+      "sha256": "0218f455069f1b92c8622c0b7992d80d5dd6c3d2d4fc0443c9649c96fe0375e3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b7404c0934952e572ced3039/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b7404c0934952e572ced3039/01.response.json",
+      "bytes": 1501,
+      "sha256": "06133b28622fc06671b6bedbdf545275595c76b09fb54089d5605ba0d962a5cd",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b7404c0934952e572ced3039/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b74d6086f79f0b1badfbb63e/01.request.json",
+      "bytes": 22752,
+      "sha256": "711dac19ed57e3b1e143f12993cf2912b5442c3feba1814302865970d5fb7b05",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b74d6086f79f0b1badfbb63e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b74d6086f79f0b1badfbb63e/01.response.json",
+      "bytes": 1500,
+      "sha256": "70591038e42615e519789dc68ef75e6e76c38489d866628eabd5c3e9b2e4b6ba",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b74d6086f79f0b1badfbb63e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b75bcbfc4725f85f6132114a/01.request.json",
+      "bytes": 23063,
+      "sha256": "aea540c60a2a550d60e3a3e8bf4727ad321742ccf78f4182d5af6b6b4a78d668",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b75bcbfc4725f85f6132114a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b75bcbfc4725f85f6132114a/01.response.json",
+      "bytes": 1500,
+      "sha256": "dec344d277c62acdd72eb1618b285a97b13db6d8c736919173110ef27f3bd2ab",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b75bcbfc4725f85f6132114a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b93d8e67dec32d61dacc4fe3/01.request.json",
+      "bytes": 22568,
+      "sha256": "e4190ce83efa8de97ad41467316dfd1db8684a9f7085dd55ec06fd7e5f078404",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b93d8e67dec32d61dacc4fe3/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b93d8e67dec32d61dacc4fe3/01.response.json",
+      "bytes": 1500,
+      "sha256": "0ce40015026b8529acb30fa2ad6027f3ffed9025c5678ac8bf4680ab1483789b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b93d8e67dec32d61dacc4fe3/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b97f4c3298ade347d22e8305/01.request.json",
+      "bytes": 23198,
+      "sha256": "bb642d208dcfc40fd02bfd8ffda62f9f8b6436c42b92ce59926f5cda2e583281",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b97f4c3298ade347d22e8305/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/b97f4c3298ade347d22e8305/01.response.json",
+      "bytes": 1501,
+      "sha256": "1ee69a39d4419ed0097864622a416159133e13207272caa4b0cb01849852f88d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/b97f4c3298ade347d22e8305/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ba27a1e98dbbc6a189d7a644/01.request.json",
+      "bytes": 28480,
+      "sha256": "a2c00b6ec2947eaa9aa0386af860b27b025da780a0be088d6f7d85911807c1f0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ba27a1e98dbbc6a189d7a644/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ba27a1e98dbbc6a189d7a644/01.response.json",
+      "bytes": 1500,
+      "sha256": "5d5ec91310dc9e6e092bc4cb5a55ab1c6f3093363a7428fced1cb35715bf06eb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ba27a1e98dbbc6a189d7a644/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/bb7f7891e54a5f3f2c884a9b/01.request.json",
+      "bytes": 23797,
+      "sha256": "d0ac4b1256e25feb9a88fe43574b89679e9a7949f8acccd5d9e118eb19e8b852",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/bb7f7891e54a5f3f2c884a9b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/bb7f7891e54a5f3f2c884a9b/01.response.json",
+      "bytes": 1500,
+      "sha256": "a49896f519f016b56b2fd51eef6ce68ad429c39bb044dbe8c7c6c14cf62c2aec",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/bb7f7891e54a5f3f2c884a9b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/bbb65c16f35b4acf8d572b70/01.request.json",
+      "bytes": 22457,
+      "sha256": "162f4e2169a57ecb2a2ccfb24a1d778ef97b4d7b945b84c0284b83306b607331",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/bbb65c16f35b4acf8d572b70/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/bbb65c16f35b4acf8d572b70/01.response.json",
+      "bytes": 1499,
+      "sha256": "9af7de0ec81542aac3802e35b67da87d6251fed717b199ef8dea55a30cc69795",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/bbb65c16f35b4acf8d572b70/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/be60201af08298f2a8e4ea7c/01.request.json",
+      "bytes": 23043,
+      "sha256": "949afd8c35239c75a585357a9941822c0987f655408ab47248f51edda86e531f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/be60201af08298f2a8e4ea7c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/be60201af08298f2a8e4ea7c/01.response.json",
+      "bytes": 1502,
+      "sha256": "fb85e3a8b2007e8e9f7bdc7f23b9804570bbe88582b1674a7295c05e6f807a19",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/be60201af08298f2a8e4ea7c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/bf4e836c57079ba161453e3d/01.request.json",
+      "bytes": 28424,
+      "sha256": "2ea67ba56bb1242ed1f4ca0f90694ac94f6ab1747669e0afe9dbbd2657a3cab5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/bf4e836c57079ba161453e3d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/bf4e836c57079ba161453e3d/01.response.json",
+      "bytes": 1502,
+      "sha256": "8ab0093478647da3be7f0f702c0e95708a156082ff35a74ff69152b845e0e494",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/bf4e836c57079ba161453e3d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c06bc8c351c6d6253f5fa3b0/01.request.json",
+      "bytes": 23472,
+      "sha256": "274c532c50b5a681f1226bc6dc31192f128c6178c4ebba9733b6abb3f7dfb3d2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c06bc8c351c6d6253f5fa3b0/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c06bc8c351c6d6253f5fa3b0/01.response.json",
+      "bytes": 1500,
+      "sha256": "87dc21d36a38295691a71065cf5cff9375931dba1e10180cd6a746e6bd677958",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c06bc8c351c6d6253f5fa3b0/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c0b384b3817cdb0c0397332a/01.request.json",
+      "bytes": 18147,
+      "sha256": "b8da0f22ba0c84bfab6602663b67814e7e904faee6b375df8ab0283813eb4558",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c0b384b3817cdb0c0397332a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c0b384b3817cdb0c0397332a/01.response.json",
+      "bytes": 1499,
+      "sha256": "1223adb7616e4a87263f9d1a0952783532ecaffce6c9b79d8c7d6b06d6c7a95b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c0b384b3817cdb0c0397332a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c0b74b9cc5be44aff3ca1a06/01.request.json",
+      "bytes": 28316,
+      "sha256": "c40b2eea02baae0c2fb65bb9cccc339ae11eeca87e99e192ca9630f3b9ea47aa",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c0b74b9cc5be44aff3ca1a06/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c0b74b9cc5be44aff3ca1a06/01.response.json",
+      "bytes": 1499,
+      "sha256": "275eb6a707df1d8daaa9214a3a43dd1f36d92b91f550cc82784bdef786988588",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c0b74b9cc5be44aff3ca1a06/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c129284016f561499409e23e/01.request.json",
+      "bytes": 26271,
+      "sha256": "4be49025c12ede33f87d2734ac7654a5d7f6d7d9af45130e081b222dc2fec386",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c129284016f561499409e23e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c129284016f561499409e23e/01.response.json",
+      "bytes": 1501,
+      "sha256": "19c900530b7cd88b69221c03df89c2dd34bd812b8a8df90de7543ae651178745",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c129284016f561499409e23e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c1f3f958db5ab35a2204b944/01.request.json",
+      "bytes": 29113,
+      "sha256": "76ec278ab25feee21eee214463b3227fd9d1b5084550086142e1e08765a3a0d7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c1f3f958db5ab35a2204b944/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c1f3f958db5ab35a2204b944/01.response.json",
+      "bytes": 1501,
+      "sha256": "55f68cf438e327fb576b9462a2de1b75a524c1a34031390df602ede4b5b0cc0b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c1f3f958db5ab35a2204b944/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c348f63ee5fbbd0cbd9304ee/01.request.json",
+      "bytes": 22516,
+      "sha256": "3f5bb5080413a1b67d5ef04bad3822ff2e4600f42ca65998891385dee098d5fe",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c348f63ee5fbbd0cbd9304ee/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c348f63ee5fbbd0cbd9304ee/01.response.json",
+      "bytes": 1501,
+      "sha256": "4adcf9fba9783f3171eff26f55e41ac1a35b7d84fcaa7a1d0902f37b8d070c1e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c348f63ee5fbbd0cbd9304ee/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c5fc8a0a6c76599a08e92344/01.request.json",
+      "bytes": 32208,
+      "sha256": "25e4b6ba83d42f02e294efd9f9dab81ce3c4f77c4c30441ae00b702b2480e5b1",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c5fc8a0a6c76599a08e92344/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c5fc8a0a6c76599a08e92344/01.response.json",
+      "bytes": 1499,
+      "sha256": "ff20b3db64674bd1af74250d777ebe18d14dfeadc38f42f559ddcefd27155252",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c5fc8a0a6c76599a08e92344/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c681540d34b25f7602a5526c/01.request.json",
+      "bytes": 22519,
+      "sha256": "b120a7358cbad6183f070985cd077e0ca31eca5bef621ed6d99a37d2ed75a1fe",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c681540d34b25f7602a5526c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c681540d34b25f7602a5526c/01.response.json",
+      "bytes": 1500,
+      "sha256": "959401447a732cd33af466f26518099c7b3bbdb9117a79b7425a6f5ab346464b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c681540d34b25f7602a5526c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c70ae42c1f49947d7e650b41/01.request.json",
+      "bytes": 23127,
+      "sha256": "08f90da255d8bc7da388e31c081dfbc3698bdeb7aac4423cf413278aaf7a8c90",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c70ae42c1f49947d7e650b41/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c70ae42c1f49947d7e650b41/01.response.json",
+      "bytes": 1500,
+      "sha256": "dc2c5552561b88604382317278aa777717755727d1bbf7a7cd4ea9190469097a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c70ae42c1f49947d7e650b41/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c77c2f6fea81b2ff1303e86e/01.request.json",
+      "bytes": 23127,
+      "sha256": "a781587cf9439b31e612a646f7697f38f901fa4b74632451ca97ea769ff71da5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c77c2f6fea81b2ff1303e86e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c77c2f6fea81b2ff1303e86e/01.response.json",
+      "bytes": 1501,
+      "sha256": "42bd8112f8d769275e720ab0af9b3d58e2ecdacd76e643e02ebc849c15707567",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c77c2f6fea81b2ff1303e86e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c85f08457b23535567f7de9d/01.request.json",
+      "bytes": 17890,
+      "sha256": "293dd3a049bd4eb2a697f37c0b6c139141a203e93dc7ef11c8d0494c03f982d4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c85f08457b23535567f7de9d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c85f08457b23535567f7de9d/01.response.json",
+      "bytes": 1500,
+      "sha256": "20426b1bd180253273dd45fe44277e7d26c6d63d991fe9108d62017303aeb89c",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c85f08457b23535567f7de9d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c8605b4a7b2a5d53f3a8e76d/01.request.json",
+      "bytes": 23358,
+      "sha256": "82b569a3f364b78585f5eb42ef02dc327d4bbb4b0f985120cf847e76d1a9557f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c8605b4a7b2a5d53f3a8e76d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c8605b4a7b2a5d53f3a8e76d/01.response.json",
+      "bytes": 1501,
+      "sha256": "60286784411fb336099b4820cc8d8198509b7574a41ad273c0fb9ef7af0591a4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c8605b4a7b2a5d53f3a8e76d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c8e2b9b44b0053075296308a/01.request.json",
+      "bytes": 17592,
+      "sha256": "470f4cc449d8f7c7f6b51e982be4ee29c0683800e23fdb5b2f6f81f9b9e7397b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c8e2b9b44b0053075296308a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c8e2b9b44b0053075296308a/01.response.json",
+      "bytes": 1496,
+      "sha256": "93e028661f675d4554132a47f949fe937f95088420a26e243ac9543636d1af7e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c8e2b9b44b0053075296308a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c8eb23f4f30a937ca067f9d5/01.request.json",
+      "bytes": 22892,
+      "sha256": "7d1c10359aa347f537a75e8ec6f5a428e55455ffb94323d41d68629d3c29a110",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c8eb23f4f30a937ca067f9d5/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/c8eb23f4f30a937ca067f9d5/01.response.json",
+      "bytes": 1499,
+      "sha256": "551fc6199b2e2d5be6610d6f6021f550ed857d82b30218876ecbe998cb9fee04",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/c8eb23f4f30a937ca067f9d5/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/cb813be1d5982d80ed62fec6/01.request.json",
+      "bytes": 23215,
+      "sha256": "d6cc65a5c2d950ebb7113ade44da0e55b07a42ac1c41f24803b03f3baa6eb080",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/cb813be1d5982d80ed62fec6/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/cb813be1d5982d80ed62fec6/01.response.json",
+      "bytes": 1501,
+      "sha256": "51dc0a531986e5214f658c9c9d0240f617cadc455217b97c53d685066511e6a4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/cb813be1d5982d80ed62fec6/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/cc77482755c569235deb3824/01.request.json",
+      "bytes": 18560,
+      "sha256": "fdb65006366434304b9f577481d996fe21ca7f278a824e2eed1ad18681cb4a99",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/cc77482755c569235deb3824/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/cc77482755c569235deb3824/01.response.json",
+      "bytes": 1501,
+      "sha256": "eb485d87deacf273c8e38186f38fedcd2d82361b6dca9b6768a0b43a64a9c73f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/cc77482755c569235deb3824/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ce4381c45ffbaa8d0fcdc149/01.request.json",
+      "bytes": 28256,
+      "sha256": "a72c89839740137104b25a34bd6d0e4d60077499ca72240ec5ef6de0b05163ee",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ce4381c45ffbaa8d0fcdc149/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ce4381c45ffbaa8d0fcdc149/01.response.json",
+      "bytes": 1501,
+      "sha256": "e1e971ecc446160f0fd606a6aa957a0efb20b2e92b6bd7fc6e5e88c9fbc05a3f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ce4381c45ffbaa8d0fcdc149/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/cf53ee7a2c576d08eb76632b/01.request.json",
+      "bytes": 17826,
+      "sha256": "2d8abb51f4d103e5f96a487494b9000930240bf59378a3951882c9b7748f2d57",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/cf53ee7a2c576d08eb76632b/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/cf53ee7a2c576d08eb76632b/01.response.json",
+      "bytes": 1498,
+      "sha256": "3d845d38685cbb5ba7d2d76484ede497ce784655c78acede55704ce27196b193",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/cf53ee7a2c576d08eb76632b/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d00c7c28a2c1f3f79b8a8f95/01.request.json",
+      "bytes": 28456,
+      "sha256": "bb060846c0a805641290ad7f3db2111ec0f1153ed0f9f10a3c9f21dd96595693",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d00c7c28a2c1f3f79b8a8f95/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d00c7c28a2c1f3f79b8a8f95/01.response.json",
+      "bytes": 1499,
+      "sha256": "c4de4c38678c756ab93401655ab7175db5d55989061672ba769df459ed359a0f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d00c7c28a2c1f3f79b8a8f95/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d1803db90cb79b4ea4a5e150/01.request.json",
+      "bytes": 17963,
+      "sha256": "131774aa9a6106a318fb8c718a48b1a7b7cd043a7b557f15f01d33ba9fae192b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d1803db90cb79b4ea4a5e150/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d1803db90cb79b4ea4a5e150/01.response.json",
+      "bytes": 1501,
+      "sha256": "70f4469137d2773d27a1138702cc715a10f5759708cf33d66cbbcc75cabac31d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d1803db90cb79b4ea4a5e150/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d2f861fce3c541a1855e62c6/01.request.json",
+      "bytes": 18428,
+      "sha256": "4ebae4658177f470adf717cd512689f7f6e88167e8efec027eca8ec1cdc2db61",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d2f861fce3c541a1855e62c6/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d2f861fce3c541a1855e62c6/01.response.json",
+      "bytes": 1500,
+      "sha256": "85c75d0fb96b838f6996487705a19bc76193ab90cf0298a878f6ae2d3b53874b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d2f861fce3c541a1855e62c6/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d2fb9bd4b2ab332719678843/01.request.json",
+      "bytes": 18296,
+      "sha256": "8e264397ee30cbbce128bc9e6582e744cc702c831498348d0d8a19d61bbeb0d3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d2fb9bd4b2ab332719678843/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d2fb9bd4b2ab332719678843/01.response.json",
+      "bytes": 1502,
+      "sha256": "8da620186cef79c56f866db9cbae01e6fa2b4470e3168fad0718ee036ce741e0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d2fb9bd4b2ab332719678843/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d3744bd48932d15f0c26d35e/01.request.json",
+      "bytes": 23115,
+      "sha256": "9af161fe226cc5eb847ead32bdf94a1757da51c412863d492c9cd58976d8a2ab",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d3744bd48932d15f0c26d35e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d3744bd48932d15f0c26d35e/01.response.json",
+      "bytes": 1502,
+      "sha256": "5b0f8661015d9d0981391d721d3454308a912f6b39c4a31070a464c1e352e7c2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d3744bd48932d15f0c26d35e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d40e7dde0e4758f97e61821f/01.request.json",
+      "bytes": 22833,
+      "sha256": "b36b2cc1ca75503c2447b682102b1bc73958346cbbe7d1455922142930030235",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d40e7dde0e4758f97e61821f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d40e7dde0e4758f97e61821f/01.response.json",
+      "bytes": 1502,
+      "sha256": "9064bb0952f3f539d10bf6915b5a533997bfb811d45cb149c05c9370ed4956e7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d40e7dde0e4758f97e61821f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d6b7f94e5b0ace1201b2cf24/01.request.json",
+      "bytes": 23367,
+      "sha256": "a357532ad8e2dd7961efb415642830155c5c88a1a53d0e60bba5a5f94372a4d4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d6b7f94e5b0ace1201b2cf24/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d6b7f94e5b0ace1201b2cf24/01.response.json",
+      "bytes": 1499,
+      "sha256": "1c3b6dfc7d3f31110ecf9fa6db26399ce24336cdc90e4a86464bf12f4e090d41",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d6b7f94e5b0ace1201b2cf24/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d7b35fa22b1a9b52d21d292a/01.request.json",
+      "bytes": 28458,
+      "sha256": "ca888e6df353bd10cee57c9fab9f311c921464b364ea907884818425dc573c9d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d7b35fa22b1a9b52d21d292a/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d7b35fa22b1a9b52d21d292a/01.response.json",
+      "bytes": 1501,
+      "sha256": "61ba1e2beebeb8cba9b2b0a4e8455a514214f95f6fec44832eecead1a62706d2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d7b35fa22b1a9b52d21d292a/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d97cd91d8f38dd8bba849cd1/01.request.json",
+      "bytes": 29128,
+      "sha256": "e0bb31ee3d9b65e0d4314c60fa1ad8860276e4984b31c7d3b6d95263b51ea4d6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d97cd91d8f38dd8bba849cd1/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/d97cd91d8f38dd8bba849cd1/01.response.json",
+      "bytes": 1498,
+      "sha256": "5216eb22149ae2e4ed391a1edb1c6c7ebeff41cad16d76ad286ff2cd4cd11082",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/d97cd91d8f38dd8bba849cd1/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/db9ffeea082e4bca138b0599/01.request.json",
+      "bytes": 18841,
+      "sha256": "7212b108ee79a515880a6ce146e6ac0cb0bfe5124a3941a1e65de0944400b616",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/db9ffeea082e4bca138b0599/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/db9ffeea082e4bca138b0599/01.response.json",
+      "bytes": 1499,
+      "sha256": "dd6c209b24e92f71714abfda4fc8ac3d09f73aef496b7287b03c37b3d5575df0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/db9ffeea082e4bca138b0599/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/dd829e65e380807e9d957918/01.request.json",
+      "bytes": 23200,
+      "sha256": "13eaed065afd3405a276a804f854a55ecae38fe7fabacdb70968204b1494faaf",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/dd829e65e380807e9d957918/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/dd829e65e380807e9d957918/01.response.json",
+      "bytes": 1500,
+      "sha256": "664835220e7d1247acd3f2f141a96c7b4c8732960ba2aa57381c5d09e40a8545",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/dd829e65e380807e9d957918/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/dd8b6c9d3352cf3234dae7cd/01.request.json",
+      "bytes": 17878,
+      "sha256": "9a5d1f9edc643c3b196f4de6e05883f8ebef1a1bdfeb92ce2b122869e1826f08",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/dd8b6c9d3352cf3234dae7cd/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/dd8b6c9d3352cf3234dae7cd/01.response.json",
+      "bytes": 1502,
+      "sha256": "38ea1434e691e10e80e1ba2ad3ea00bb2188a43133a7696d5469b1d351ef7093",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/dd8b6c9d3352cf3234dae7cd/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/df3b1935cc652743516a9dc7/01.request.json",
+      "bytes": 22715,
+      "sha256": "f98788a272521b4f3befa724ab3139f3904d9b72cf099fa814a5229e59635b0a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/df3b1935cc652743516a9dc7/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/df3b1935cc652743516a9dc7/01.response.json",
+      "bytes": 1501,
+      "sha256": "47d5fecf371b02f27ba5c0a285b03f129711bec1c0b7ec49db8209e3abb3d27b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/df3b1935cc652743516a9dc7/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e056b137a4b39b10e43ad8e7/01.request.json",
+      "bytes": 23239,
+      "sha256": "20f9c1c34b8fac40eef16d128406f4e39b43ef2885121593c2740a8daa55bf23",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e056b137a4b39b10e43ad8e7/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e056b137a4b39b10e43ad8e7/01.response.json",
+      "bytes": 1501,
+      "sha256": "8080d2de28ddb52896fffebc1b47577dd4c8469058eaa30d1482d0b579b005e0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e056b137a4b39b10e43ad8e7/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e21af46776e143bc6b47d660/01.request.json",
+      "bytes": 29022,
+      "sha256": "4080e816f2a82894f8af77f1d7887e4abaa92c0cfcc78ee4c45b83ab7ea75908",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e21af46776e143bc6b47d660/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e21af46776e143bc6b47d660/01.response.json",
+      "bytes": 1502,
+      "sha256": "c754bac51ce3f56b0f511a6dbc0e51cba1d6c67b1cd8e826a6298e91195b7696",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e21af46776e143bc6b47d660/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e296647c72de53cf309b4e45/01.request.json",
+      "bytes": 22521,
+      "sha256": "9a9dbbc043a41ea8c078567f005fedbda056a2e4d56e70784dcb5705acd83ed6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e296647c72de53cf309b4e45/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e296647c72de53cf309b4e45/01.response.json",
+      "bytes": 1502,
+      "sha256": "cce84dafba96ffb929b19410f89ab29747ae817c3f5ece14f3af22454f020035",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e296647c72de53cf309b4e45/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e2f22b4a8fa70f48c0af2cf8/01.request.json",
+      "bytes": 19624,
+      "sha256": "9028db8b2bad7bd0a2389fbcc130f969dbd10fd6661df19a0284e40876bcb784",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e2f22b4a8fa70f48c0af2cf8/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e2f22b4a8fa70f48c0af2cf8/01.response.json",
+      "bytes": 1500,
+      "sha256": "f77f57b155d0f43a23fcae9d80e8d27eabcf6c5b95ef5ea3e6ffe3aeb9a9003f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e2f22b4a8fa70f48c0af2cf8/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e37aae61cf95619c522a6f6e/01.request.json",
+      "bytes": 17890,
+      "sha256": "8de82f44ef659e750eb419463b5e735e416074f8f1461fa0a1fe207420c0a94a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e37aae61cf95619c522a6f6e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e37aae61cf95619c522a6f6e/01.response.json",
+      "bytes": 1499,
+      "sha256": "3d69828ba7a6b38598dbf4ac894e61927f9d7c5892a737cec482a914400ed3fb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e37aae61cf95619c522a6f6e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e562d6c8a2e4a5d4a2a7992f/01.request.json",
+      "bytes": 23201,
+      "sha256": "305bb6e602ce77a7407453e7b6bd11addc2d13b966f53983d375250132840532",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e562d6c8a2e4a5d4a2a7992f/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e562d6c8a2e4a5d4a2a7992f/01.response.json",
+      "bytes": 1501,
+      "sha256": "d0f798a221a5cbc50696e15504c844bf1b2d302b16a0a7e781a0768257ee5b18",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e562d6c8a2e4a5d4a2a7992f/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e5ab33ca0bcf8c7f529c2ffc/01.request.json",
+      "bytes": 17912,
+      "sha256": "cc997bc5bd0a52859ca2371095c83718199cc62d11226c4cd1de3261501d3061",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e5ab33ca0bcf8c7f529c2ffc/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e5ab33ca0bcf8c7f529c2ffc/01.response.json",
+      "bytes": 1499,
+      "sha256": "f5b4fda88b4a4ce23f189e1d4fc3826c2de00850ae38115b4c4f3c17831c6f9e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e5ab33ca0bcf8c7f529c2ffc/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e728282baa7d0d1ef1d9888c/01.request.json",
+      "bytes": 28374,
+      "sha256": "a959938a3957fda57bed0e1dce6ae793da019fdf7a39768464a0c834978497e4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e728282baa7d0d1ef1d9888c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e728282baa7d0d1ef1d9888c/01.response.json",
+      "bytes": 1500,
+      "sha256": "a4e8ad8608b258341dc63007d82fc40a04eb695becc94bc5f2161c2a0d52390e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e728282baa7d0d1ef1d9888c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e81ea2d7b635a07d78f0bc97/01.request.json",
+      "bytes": 28510,
+      "sha256": "c925cb01486135671b601669a6def3f129efe3ef63ab544ced0e64fec08d1a11",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e81ea2d7b635a07d78f0bc97/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e81ea2d7b635a07d78f0bc97/01.response.json",
+      "bytes": 1501,
+      "sha256": "0fd38fbd687968f81e3c439b1ae6838997434ae81a51c94cb298cdbbce4c60dc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e81ea2d7b635a07d78f0bc97/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e9e7578c18ae6fa2f1cdbefd/01.request.json",
+      "bytes": 26877,
+      "sha256": "139f955ed8747bc098028992f6898fee52207289fe919b144ad0d55ab274b7a5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e9e7578c18ae6fa2f1cdbefd/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e9e7578c18ae6fa2f1cdbefd/01.response.json",
+      "bytes": 1499,
+      "sha256": "55026971c7a40ab1a358170e6402482e628cdecb1d80afa48c2d39dfb58ebbc6",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e9e7578c18ae6fa2f1cdbefd/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e9fceaa18dae8508b757b1b8/01.request.json",
+      "bytes": 24280,
+      "sha256": "f4670671e1b228d33823997a95b0450797a5cf4adb2e30d6a02a7db207448366",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e9fceaa18dae8508b757b1b8/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/e9fceaa18dae8508b757b1b8/01.response.json",
+      "bytes": 1502,
+      "sha256": "bf2fcaf33445fea7b8fa3cd6278f3f56d3f2c0a3e8bee161f0631b4d8d7fda01",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/e9fceaa18dae8508b757b1b8/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ead4fbce9b3827fd31b2fa6c/01.request.json",
+      "bytes": 22957,
+      "sha256": "29ab354fa09b11561807d4e0912c1babde50f564b8f5df3fe884427930b2894b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ead4fbce9b3827fd31b2fa6c/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ead4fbce9b3827fd31b2fa6c/01.response.json",
+      "bytes": 1498,
+      "sha256": "67d9c443bbd8ce6b73e143b8a4bbf713e4406ed7ec62c696e683a3ef78a9ff79",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ead4fbce9b3827fd31b2fa6c/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/eb9f8c9101185455ac3478a2/01.request.json",
+      "bytes": 22829,
+      "sha256": "0b3d63c70f7f53c5d5d6bbef7aff0c63b4ad417480ce8c6887f4d23765092f2d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/eb9f8c9101185455ac3478a2/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/eb9f8c9101185455ac3478a2/01.response.json",
+      "bytes": 1502,
+      "sha256": "acfa5991e8c611faa888a317f60504d4ca5b05c72bddb2d735bf2bd4bb9988b7",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/eb9f8c9101185455ac3478a2/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ecf3d8f8e773c3d570c4e680/01.request.json",
+      "bytes": 17888,
+      "sha256": "687d1ddb4e3cbf14d65e009db3ed4dea231cfb3aa75f2d4e4af32eff9874c374",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ecf3d8f8e773c3d570c4e680/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ecf3d8f8e773c3d570c4e680/01.response.json",
+      "bytes": 1501,
+      "sha256": "b021f2a2e4aea7600c160f351cd71c19d9e3dfbcd43776683782d1603d97d202",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ecf3d8f8e773c3d570c4e680/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ed8389714ff8e7a54ae62246/01.request.json",
+      "bytes": 23546,
+      "sha256": "35d16e7194d7d975a1981ed8d8fb21a3fcd425f7534d12865157eb22ef3348d3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ed8389714ff8e7a54ae62246/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ed8389714ff8e7a54ae62246/01.response.json",
+      "bytes": 1499,
+      "sha256": "4adc9e1967f98f83c2fb9624bd0ae90b9746a4978cf80385d4fb3ebfa2c04efb",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ed8389714ff8e7a54ae62246/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/efa439b842ac95081fdad731/01.request.json",
+      "bytes": 28877,
+      "sha256": "d4b0b46e73c7fe74d5da00a3f7100eb706da1b20869f93f5e9ced6ddf1509dc9",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/efa439b842ac95081fdad731/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/efa439b842ac95081fdad731/01.response.json",
+      "bytes": 1502,
+      "sha256": "2dd388e312f2e25d976d8e538f35923646673d4f945ea876ceb7d1d0cda5eac0",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/efa439b842ac95081fdad731/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f126db515fae98f6c4feac24/01.request.json",
+      "bytes": 28531,
+      "sha256": "7fd62fb1afb2821842c5b58cfbb8f710c1d69359e0388a07f3c0a2860a8310ea",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f126db515fae98f6c4feac24/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f126db515fae98f6c4feac24/01.response.json",
+      "bytes": 1497,
+      "sha256": "4cd4653b18650392894bfe6bd6f7f846e02e567f82b832e64d1be560a249a12a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f126db515fae98f6c4feac24/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f1a299dd5ed998fcfecdf6a6/01.request.json",
+      "bytes": 22927,
+      "sha256": "7663a050492c76e593275ccb4edd519753e2b2006f037877251fc9336c709812",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f1a299dd5ed998fcfecdf6a6/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f1a299dd5ed998fcfecdf6a6/01.response.json",
+      "bytes": 1499,
+      "sha256": "50ceabb205eca7c3c4200ecf77dc17018a011180aea9f13a731aea9b61b54743",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f1a299dd5ed998fcfecdf6a6/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f226ca09bb67bcbb8c4a23ee/01.request.json",
+      "bytes": 17688,
+      "sha256": "0e5c79c6c0efe2296c7c73d0a8ce42f854eb91af1dd70a9cf713cfe07879e518",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f226ca09bb67bcbb8c4a23ee/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f226ca09bb67bcbb8c4a23ee/01.response.json",
+      "bytes": 1502,
+      "sha256": "ae258cb27c003d6e10882c25f5d7a73441943e9a62ea591409b926f5fd46a64d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f226ca09bb67bcbb8c4a23ee/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f3f1302922f6968b975cfa44/01.request.json",
+      "bytes": 17698,
+      "sha256": "5339e3bfded52ab0a1e664aef29d0d73a7efb49e5ee576413b85197e5da922a8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f3f1302922f6968b975cfa44/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f3f1302922f6968b975cfa44/01.response.json",
+      "bytes": 1499,
+      "sha256": "8cab8e3a32ee6bb3647d871d25e53d0981015acbaf8b629406c34bbf04959e64",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f3f1302922f6968b975cfa44/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f4adcf52cbd2dfe86cf90f95/01.request.json",
+      "bytes": 28346,
+      "sha256": "3a168ec64294f26bf21c7c5bce6decd4402f5130ca5738b3d98c461cd71c0a2e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f4adcf52cbd2dfe86cf90f95/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f4adcf52cbd2dfe86cf90f95/01.response.json",
+      "bytes": 1499,
+      "sha256": "dec17392ef737444cad6156e3399df443aa6592bbf4a80412ef367e97f1ab870",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f4adcf52cbd2dfe86cf90f95/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f4b8cc9ab2f3407b2d30e9c5/01.request.json",
+      "bytes": 22509,
+      "sha256": "18ee90344d036105677869a4eb19eba31dca4ff71bb1ca68112b17bb8567a99e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f4b8cc9ab2f3407b2d30e9c5/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f4b8cc9ab2f3407b2d30e9c5/01.response.json",
+      "bytes": 1501,
+      "sha256": "49313135acdaf2571d94c633e405b79986a486d3b23f8dff7ba074850904eb10",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f4b8cc9ab2f3407b2d30e9c5/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f4ba1dd3b0ae42c28be97d22/01.request.json",
+      "bytes": 22170,
+      "sha256": "7f7e795b9485c19cb662ef5b9ec93123e61e9b232dfc179488fdb758118f06dc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f4ba1dd3b0ae42c28be97d22/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f4ba1dd3b0ae42c28be97d22/01.response.json",
+      "bytes": 1500,
+      "sha256": "d372084ba66f09a477927a74d5052fd3b541ed03174921b41d7d6fb9596a6793",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f4ba1dd3b0ae42c28be97d22/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f5c655a6e20a91f9f74a874e/01.request.json",
+      "bytes": 23388,
+      "sha256": "efd19e8f39ec1e52c2a7333872519394ae17958e7ccf52d0750587bfe1544de8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f5c655a6e20a91f9f74a874e/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f5c655a6e20a91f9f74a874e/01.response.json",
+      "bytes": 1498,
+      "sha256": "1f202805117b8f036cc6e0010db9fe82c9386401825f63d9d4416d101a7b083b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f5c655a6e20a91f9f74a874e/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f6c357b587713b9da4089614/01.request.json",
+      "bytes": 18782,
+      "sha256": "43f6ee126713ca89bcf51ff50e8ded45e5a439c9fdda0126f884674da5c58d8e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f6c357b587713b9da4089614/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f6c357b587713b9da4089614/01.response.json",
+      "bytes": 1499,
+      "sha256": "4ce06d0ff876c0273869c4549ce9648b31bd4711136d460962e4e985ea508876",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f6c357b587713b9da4089614/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f6e10893308d3b2cb0f2bc64/01.request.json",
+      "bytes": 28446,
+      "sha256": "466197d051e9a89b35a214727dba1447a16513fa6725098114c8fe10c73c6547",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f6e10893308d3b2cb0f2bc64/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f6e10893308d3b2cb0f2bc64/01.response.json",
+      "bytes": 1501,
+      "sha256": "3e1fd4588a4cd15d5824fc4201c889f146a019f2ae4fe82c39b9c73a48686f2b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f6e10893308d3b2cb0f2bc64/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f82b9aae8447942513c367ec/01.request.json",
+      "bytes": 18002,
+      "sha256": "330c03152917ac23e0b92627090f4b3f86ed662d37eda048961c61afb083316e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f82b9aae8447942513c367ec/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f82b9aae8447942513c367ec/01.response.json",
+      "bytes": 1500,
+      "sha256": "26d1f8b2669b1ac980bf054d28b912aae5a5c5a9feca797bf6696e84ae3a9a3f",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f82b9aae8447942513c367ec/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f90c87be04694bb9fffcfe09/01.request.json",
+      "bytes": 18309,
+      "sha256": "c222ce89f51904fafecbbdb7bf665bdb0172229df1513097ff65212816163b34",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f90c87be04694bb9fffcfe09/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/f90c87be04694bb9fffcfe09/01.response.json",
+      "bytes": 1500,
+      "sha256": "6eddd5cb7df6df80c9a73aad68845c15b8c07cc96fa5c02e24ad28d0a7f119df",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/f90c87be04694bb9fffcfe09/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/faa34b46ba298aa7c2f47fa4/01.request.json",
+      "bytes": 22227,
+      "sha256": "264a9310ac59e35ee3d10406e1a35d8f1dab61e19cc72dbec18d3cbd4d458e70",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/faa34b46ba298aa7c2f47fa4/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/faa34b46ba298aa7c2f47fa4/01.response.json",
+      "bytes": 1501,
+      "sha256": "f35d91538db98fd714bc2fcb442e8931e3b3ba7d85689b2b6bad1bb920f8dbb8",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/faa34b46ba298aa7c2f47fa4/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/fb4dcf3681efefd6642d85c9/01.request.json",
+      "bytes": 18692,
+      "sha256": "e348774ac202520d58be1ad0e3c61c462163d050a1e37bfe40f6d0ade17f82a5",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/fb4dcf3681efefd6642d85c9/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/fb4dcf3681efefd6642d85c9/01.response.json",
+      "bytes": 1499,
+      "sha256": "83d9bed4c1526c2bd9aee40bf2fe491f2ff02747ebd6d801471a4c37cc941c44",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/fb4dcf3681efefd6642d85c9/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/fe8efa61026db33cf2269d6d/01.request.json",
+      "bytes": 22543,
+      "sha256": "fe9cddfe4c0d4f94eeaa28708344f0ded1f941db824b4e17f275f3135c8b8033",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/fe8efa61026db33cf2269d6d/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/fe8efa61026db33cf2269d6d/01.response.json",
+      "bytes": 1501,
+      "sha256": "70eb0d4c8a7ca1cbb282ce6c87be58cc74a12db0887281590c7ab6efa84e9a0b",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/fe8efa61026db33cf2269d6d/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/febb70cfae8ee0a523980864/01.request.json",
+      "bytes": 23181,
+      "sha256": "a24196cd51c45e19bedd45db3e5f9592997a9a6e8c3ece1b305022d34570c2fc",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/febb70cfae8ee0a523980864/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/febb70cfae8ee0a523980864/01.response.json",
+      "bytes": 1501,
+      "sha256": "69f5f491ff9ec916e7ca8ce91ea09be0248ec0600e9d69695ac100cb917e1ec2",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/febb70cfae8ee0a523980864/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ff298313ccd2d79ecacbbf50/01.request.json",
+      "bytes": 22408,
+      "sha256": "4253c039774611ab3cf09775bfbff9a47394488328d58a188bcc4163d11c9bc3",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ff298313ccd2d79ecacbbf50/01.request.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/attempts/ff298313ccd2d79ecacbbf50/01.response.json",
+      "bytes": 1502,
+      "sha256": "512ad431c758a08368b4241364c376c14bbbf810d505e4b8488806fa2f0262b4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/attempts/ff298313ccd2d79ecacbbf50/01.response.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/authorization.json",
+      "bytes": 950,
+      "sha256": "8f7ab42fb1dfcf2aa11f9b6985e5017c1edc82da9c3944f2ff468e9a2ec4559d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/authorization.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/completed-analysis-v1.json",
+      "bytes": 112692,
+      "sha256": "535aff5f099a728f5c87dfe6eee062c78160d0b318f4864849a8a17581f89492",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/completed-analysis-v1.json"
+    },
+    {
       "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/dispatch-proposal.json",
       "bytes": 684,
       "sha256": "7600f17b611402c56ce7bf7885f46fc289d3b1a009898a32944dc3602b4220fd",
@@ -328417,6 +331791,13 @@
       "sha256": "a9b566faed596576fa47f9b59862ac49391cffdb5f20cbfddb62ff72cf914535",
       "category": "original_evidence",
       "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/common.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/completion_report_v1.py",
+      "bytes": 5292,
+      "sha256": "33ba18a5ed03bc00e666306325a77e9f0c902e45e9c3c5197c40f0151cb1d33e",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/completion_report_v1.py"
     },
     {
       "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/discourse-portraits-v2.json",
@@ -328447,11 +331828,46 @@
       "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/jev_runner.py"
     },
     {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/lab_jobs-status-v2.py",
+      "bytes": 7931,
+      "sha256": "56face9589a56cac435b0820aa5210ffc0505cc458ff123164d7506ee9849a2d",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/lab_jobs-status-v2.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/frozen-source/lab_jobs.py",
+      "bytes": 7823,
+      "sha256": "21720c88b832275ab1b972e5bfd934f7c9add9443091f165bf08d60f8fa32457",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/frozen-source/lab_jobs.py"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/job-execution-v1.json",
+      "bytes": 651,
+      "sha256": "26a736ba983063ee60ac75e2f537c7825da8f2a408a2b52b85286e488f990244",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/job-execution-v1.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/job-status-v2.json",
+      "bytes": 548,
+      "sha256": "4601cb5c325bdeecce760b335cf0997aeb163cef4e8c5f931c8c21c2a60c7da4",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/job-status-v2.json"
+    },
+    {
       "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/plan.json",
       "bytes": 235510,
       "sha256": "d636b68e62226950e2428911df37e5c9d08d51bdf5c856ea540b07f8a5641d78",
       "category": "original_evidence",
       "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/plan.json"
+    },
+    {
+      "path": "evidence/mind-lenses/discourse-portraits-20260918-v2/summary.json",
+      "bytes": 318,
+      "sha256": "580be774992d1773c861c4a61704124c070efbf6ff8706170859183cd496113a",
+      "category": "original_evidence",
+      "workspace_path": "mind-lenses/discourse-portraits-20260918-v2/summary.json"
     },
     {
       "path": "evidence/mixed-gemma-haiku-20260916-1139/api-export.json",
@@ -337819,5 +341235,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "3594cc3cc8dff5cedb271286eea530c9e71d26a94a826d9c6cfceaf570716dff"
+  "bundle_sha256": "a1c8106ff27fbcf3fe4906487239264046cbd4a4f6d6f9150a46567277a365cf"
 }

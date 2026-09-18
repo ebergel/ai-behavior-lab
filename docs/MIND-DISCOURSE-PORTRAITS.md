@@ -4,7 +4,7 @@ All sixteen thinkers and writers now have a vivid conceptual portrait, a practic
 
 ## Execution status
 
-**Prepared, not assessed.** Automatic approval review rejected the first four-request dispatch until the researcher explicitly confirms the expanded payload and destination. Zero calls and zero cost. The exact 240-request scope with a $2 cap is awaiting the researcher’s reply. All earlier proposals also remain unexecuted.
+The researcher authorized execution on 18 September and requested no repeated JEV approval prompts, with a $10 limit. **Complete: 240 requests, 6,480 probabilities, $0.047085024 reported cost, no retries or unknown usage.** The frozen $2 cap was retained. [Lab Jobs](LAB-JOBS.md) runs the exact allocation in a detached Python worker; [the completion report](MIND-DISCOURSE-RESULTS.md) records final results. The earlier automatic-review rejection is preserved as historical evidence and was resolved by this explicit instruction.
 
 ## Frozen comparison
 

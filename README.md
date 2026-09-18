@@ -179,4 +179,4 @@ Open **Topic Trajectories** in the Explorer to follow all 53 saved questions ove
 
 The next collection remains a proposal: [candidate preflight](docs/REPLICATION-CANDIDATE-AUDIT.md), [precision options](docs/REPLICATION-PRECISION.md), and [design v0.2](designs/balanced-replication-v0.2.json). Native OLMo provenance is now checked; generation qualification and the final allocation/budget remain pending.
 
-The [Mind & discourse portrait comparison](docs/MIND-DISCOURSE-PORTRAITS.md) adds sixteen conceptual portraits alongside procedural definitions, with exact-passage, profile-matrix and four-wording views. Its finite TypeSafe assessment is prepared and awaiting the exact expanded-scope confirmation; missing results are unknown.
+The [Mind & discourse portrait comparison](docs/MIND-DISCOURSE-PORTRAITS.md) adds sixteen conceptual portraits alongside procedural definitions, with exact-passage, profile-matrix and four-wording views. Its finite TypeSafe assessment runs through the [Lab Jobs](docs/LAB-JOBS.md) Python worker; missing results remain unknown.

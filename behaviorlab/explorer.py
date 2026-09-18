@@ -1,6 +1,6 @@
 """Local transcript exploration. Source evidence is read-only; notes are separate.
 
-This module never imports an inference client for dispatch or executes a campaign.
+Assessment execution is delegated to allowlisted detached Python jobs; this HTTP process never calls a model provider.
 Search operates on recorded visible messages, including explicitly flagged partial
 outputs. Tags are personal research notes, not validated semantic annotations.
 """
@@ -31,6 +31,7 @@ from .lab_tasks import LabTasks, STATUSES as TASK_STATUSES, STREAMS as TASK_STRE
 from .gem_finder import GemFinder
 from .discourse_view import build as discourse_view, export_plan as discourse_plan
 from .lab_dictionary import dictionary_catalog
+from . import lab_jobs
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
 from .topic_trajectories import build_trajectories
@@ -41,7 +42,7 @@ from .trajectory_outcomes import line_features, repeated_state
 
 STATIC = Path(__file__).with_name('explorer_ui')
 REPORTS = [
-    ('discourse-lenses','Mind & discourse: conceptual portraits','MIND-DISCOURSE-PORTRAITS.md'),('gem-finder', 'Gem Finder: pilot and reading guide', 'GEM-FINDER.md'), ('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
+    ('mind-discourse-results','Mind & discourse: completed comparison','MIND-DISCOURSE-RESULTS.md'),('lab-jobs','Lab Jobs: bounded Python execution','LAB-JOBS.md'),('discourse-lenses','Mind & discourse: conceptual portraits','MIND-DISCOURSE-PORTRAITS.md'),('gem-finder', 'Gem Finder: pilot and reading guide', 'GEM-FINDER.md'), ('planning-workspace', 'Purpose, musings & ideas board', 'PLANNING-WORKSPACE.md'), ('topic-trajectories', 'Topic Trajectories', 'TOPIC-TRAJECTORIES.md'), ('replication-candidates', 'Replication candidate audit', 'REPLICATION-CANDIDATE-AUDIT.md'), ('replication-precision', 'Replication precision planning', 'REPLICATION-PRECISION.md'), ('balanced-replication-design', 'Balanced replication design', 'BALANCED-REPLICATION-DESIGN.md'), ('model-design-coverage', 'Model & Design Coverage', 'MODEL-DESIGN-COVERAGE.md'), ('opening-partner', 'Opening and partner: development reading', 'OPENING-PARTNER-STUDY.md'),
            ('opening-partner-design', 'Opening and partner: next study design', 'OPENING-PARTNER-DESIGN.md'),
            ('trajectory', 'Trajectory outcomes', 'PILOT-OUTCOMES-V0.2.md'),
            ('topic-atlas', 'Initial topics, variants and recurrence', 'TOPIC-ATLAS.md'),
@@ -449,6 +450,8 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
+                if path=='/api/jobs':return self.send(lab_jobs.listing(workspace))
+                if path in ('/jobs.js','/jobs.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/discourse':return self.send(discourse_view(workspace,catalog))
                 if path=='/api/discourse/export':return self.send({'view':discourse_view(workspace,catalog),'plan':discourse_plan(workspace)},download='mind-and-discourse.json')
                 if path in ('/discourse.js','/discourse.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
@@ -550,6 +553,9 @@ def make_server(workspace, port=8765):
                 limit=524288 if self.path=='/api/studies' else 262144 if self.path in ('/api/musings','/api/tasks') else 65536
                 require(0<size<=limit and self.headers.get('Content-Type')=='application/json','Expected a small JSON request')
                 data=read_json(self.rfile.read(size).decode())
+                if self.path in ('/api/jobs/start','/api/jobs/pause'):
+                    require(set(data)=={'id'} and isinstance(data['id'],str),'Expected registered job ID only')
+                    return self.send((lab_jobs.start if self.path.endswith('/start') else lab_jobs.pause)(workspace,data['id']))
                 if self.path=='/api/gems/readings':return self.send(gems.save(data))
                 if self.path=='/api/analysis/views': return self.send(analysis.save(data))
                 if self.path=='/api/jev-atlas/prepare': return self.send(jev_atlas.prepare(data,catalog,topic_atlas,studies))

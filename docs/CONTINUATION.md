@@ -1,3 +1,13 @@
+## Completed milestone · Lab Jobs and portrait comparison
+
+**Implemented:** [Lab Jobs](LAB-JOBS.md) delegates registered JEV assessment work to a detached Python worker. The sidebar page shows progress, attempts, known/reserved cost, effective cap, Start/Resume, graceful pause and result links. Polling is browser-local and only active while the view is visible. No language model supervises runtime requests. GPT-5.6 Luna implemented the frontend and focused UI tests.
+
+**Authorization updated:** the researcher explicitly said to proceed and not ask for JEV approval, using a $10 expenditure limit. This resolves the earlier approval block recorded below. Current portrait plan `49f5b17c48e18825b7635c591163e9505cc3806fe1bbe15b7bf28e548de3e0b3` retains its stricter frozen $2 cap: 240 unique TypeSafe requests, up to 252 attempts, exactly the previously prepared 60 texts × four wordings. Four successful checks preceded detached execution. Earlier unexecuted proposals remain superseded and must not also run.
+
+**Complete:** 240 successes in 240 attempts, 6,480 probabilities, $0.047085024 reported cost, no retries or unknown reserves. The allocation is exhausted. Its authoritative status comes from saved receipts and the final summary. Deterministic completion processing produced `completed-analysis-v1.json` and [the descriptive results report](MIND-DISCOURSE-RESULTS.md). No scientific input, classifier, source transcript, Gem score, reserved lineage or notebook row was changed. Runtime state is excluded from research exports; immutable evidence and authorization are retained. New JEV tasks within the user's direction use a finite scope and $10 cap without another approval question.
+
+**Next:** review whether the four wording conditions yield useful distinctions, inspect their disagreements by source model and passage length, then choose a separately frozen next assessment. No automatic expansion, new participant generation, local-model summarizer, remote-access setup or recurring scheduler is installed. Historical preparation/blocked entries below retain their original status at the time they were written.
+
 ## Prepared · 18 September 2026: all sixteen conceptual portraits
 
 **Implemented and tested:** [Mind & discourse portraits](MIND-DISCOURSE-PORTRAITS.md) adds sixteen conceptual portraits, recognition guidance, attributed reading sources and the preserved procedural definitions. The fourth condition compares names + portraits with names + definitions; the eleven discourse questions remain unchanged references within the altered pack. The interface supports both label and portrait contrasts, four-condition passage tables, profile matrices, length filtering and exact source reading.

@@ -49,7 +49,7 @@ function option(value,label,selected){return `<option value="${esc(value)}" ${va
 function renderSidebar(){
  const b=state.boot, f=state.filters;
  $('#sidebar').innerHTML=`<div class="brand"><span class="brand-mark">⌘</span><div><strong>Behavior Lab</strong><small>Observe. Explore. Understand.</small></div></div>
- <div class="side-label">WORKSPACE</div><nav class="nav-links" aria-label="Main navigation">${[['purpose','sun','Purpose & musings',''],['library','library','All transcripts',(b.counts.reference||0)+(b.counts.lab||0)],['topic-atlas','atlas','Topic atlas',''],['jev-atlas','sun','JEV Topic Atlas',''],['analysis','results','Analysis',''],['coverage','atlas','Model & Design Coverage',''],['trajectories','results','Topic Trajectories',''],['gems','sun','Gem Finder',''],['discourse','compare','Mind & discourse',''],['dictionary','document','Lab dictionary',''],['finder','filter','Conversation Finder',''],['atlas','atlas','Run atlas',''],['studies','folder','Research collections',''],['workbench','compare','Study workbench',''],['notebook','book','Notebook',''],['topics','tag','Consciousness & self',''],['assessment','compare','Model assessment',''],['results','results','Results','']].map(([v,i,t,c])=>`<button class="side-link ${!state.run&&state.view===v?'active':''}" data-action="view" data-view="${v}">${icon(i)}<span>${t}</span><span class="count">${c}</span></button>`).join('')}</nav>
+ <div class="side-label">WORKSPACE</div><nav class="nav-links" aria-label="Main navigation">${[['purpose','sun','Purpose & musings',''],['library','library','All transcripts',(b.counts.reference||0)+(b.counts.lab||0)],['jobs','clock','Lab Jobs',''],['topic-atlas','atlas','Topic atlas',''],['jev-atlas','sun','JEV Topic Atlas',''],['analysis','results','Analysis',''],['coverage','atlas','Model & Design Coverage',''],['trajectories','results','Topic Trajectories',''],['gems','sun','Gem Finder',''],['discourse','compare','Mind & discourse',''],['dictionary','document','Lab dictionary',''],['finder','filter','Conversation Finder',''],['atlas','atlas','Run atlas',''],['studies','folder','Research collections',''],['workbench','compare','Study workbench',''],['notebook','book','Notebook',''],['topics','tag','Consciousness & self',''],['assessment','compare','Model assessment',''],['results','results','Results','']].map(([v,i,t,c])=>`<button class="side-link ${!state.run&&state.view===v?'active':''}" data-action="view" data-view="${v}">${icon(i)}<span>${t}</span><span class="count">${c}</span></button>`).join('')}</nav>
  <div class="collection-links"><div class="side-label">COLLECTIONS</div>${Object.entries(names).map(([id,title],i)=>`<button class="side-link ${f.collection===id?'active':''}" data-action="collection" data-id="${id}">${icon(i===3?'folder':'dot',14)}<span>${esc(title)}</span><span class="count">${b.collections[id]||0}</span></button>`).join('')}<button class="side-link ${f.scope==='synthetic'?'active':''}" data-action="synthetic">${icon('code',14)}<span>Synthetic fixtures</span><span class="count">${b.counts.synthetic||0}</span></button></div>
  ${(b.studies||[]).map(d=>`<button class="side-study" data-action="study-open" data-id="${d.id}">${icon('folder',12)}<span>${esc(d.title)}</span></button>`).join('')}<div class="side-label">YOUR TAGS</div><div class="side-tags">${Object.entries(b.tags).length?Object.entries(b.tags).map(([tag,count])=>`<button class="tag ${f.tag===tag?'active':''}" data-action="tag-filter" data-tag="${esc(tag)}">${esc(tag)} <span>${count}</span></button>`).join(''):'<span class="small muted">Save a passage to begin.</span>'}</div>
  <div class="side-footer"><span class="live-dot"></span> <strong>Local evidence, close at hand</strong><br>Source transcripts stay unchanged.<br>Notes are saved on this Mac.<br><button class="quiet" data-action="sources">Source index · ${b.issues.length} notice${b.issues.length===1?'':'s'}</button></div>`;
@@ -129,7 +129,12 @@ function reportMarkdown(markdown){
  flushTable();return html;
 }
 function showError(e){toast(e.message||String(e));if(!state.result&&!state.run)$('#main').innerHTML=`<div class="content"><div class="error-banner">${esc(e.message)}<p><button class="button" data-action="retry">Try again</button></p></div></div>`;}
+async function loadJobs(){
+ const version=routeVersion;state.view='jobs';state.run=null;renderSidebar();renderCompareTray();
+ await window.LabJobs.load({api,isCurrent:()=>version===routeVersion&&state.view==='jobs'});
+}
 async function route(){
+ window.LabJobs?.stop();
  window.LabAnalysis?.unmount();
  state.request++;routeVersion++;state.selection=null;$('.selection-bar')?.remove();const p=new URLSearchParams(location.hash.slice(1));
  state.fromTask=p.get('fromTask')||null;
@@ -155,6 +160,7 @@ async function route(){
  if(p.get('view')==='jev-atlas'){await loadJevAtlas(jevFilters(p));return;}
  if(p.has('fromJev')){try{state.view='jev-atlas';state.jevFilters=JSON.parse(p.get('fromJev'));}catch(e){showError(e);return;}}
  if(p.get('view')==='assessment'){await loadAssessments();return;}
+ if(p.get('view')==='jobs'){await loadJobs();return;}
  if(p.get('view')==='topic-atlas'){await loadTopicAtlas(atlasRouteFilters(p));return;}
  if(p.has('fromAtlas')){state.view='topic-atlas';state.atlasFilters=atlasRouteFilters(p);}
  if(p.get('view')==='topics'){await loadTopics(p.get('topic')||'any');return;}
@@ -171,7 +177,7 @@ document.addEventListener('click',async event=>{
  if(event.target.closest('.skip-link')){event.preventDefault();$('#main').focus();$('#main').scrollIntoView();return;}
  const el=event.target.closest('[data-action]');if(!el||el.disabled)return;const a=el.dataset.action;
  try{
- if(a==='view'){state.run=null;state.offset=0;state.view=el.dataset.view;if(state.view==='library'){state.filters.scope='all';state.filters.collection='';}if(state.view==='finder')finderGo();else if(state.view==='gems')gemGo();else if(state.view==='discourse')lensGo();else if(state.view==='dictionary')go({view:'dictionary'});else if(state.view==='trajectories')trajectoryGo();else if(state.view==='coverage')coverageGo();else if(state.view==='analysis')go({view:'analysis',analysis:JSON.stringify(state.analysisReturn||{})});else library(state.view);}
+ if(a==='view'){state.run=null;state.offset=0;state.view=el.dataset.view;if(state.view==='library'){state.filters.scope='all';state.filters.collection='';}if(state.view==='finder')finderGo();else if(state.view==='gems')gemGo();else if(state.view==='discourse')lensGo();else if(state.view==='dictionary')go({view:'dictionary'});else if(state.view==='trajectories')trajectoryGo();else if(state.view==='coverage')coverageGo();else if(state.view==='analysis')go({view:'analysis',analysis:JSON.stringify(state.analysisReturn||{})});else if(state.view==='jobs')go({view:'jobs'});else library(state.view);}
  else if(a==='collection'){state.filters={...state.filters,collection:el.dataset.id,scope:el.dataset.id==='lab'?'lab':'reference'};state.offset=0;state.run=null;if(['notebook','studies','assessment','topics','topic-atlas','jev-atlas','analysis','finder','purpose','workbench','coverage','trajectories','gems','dictionary','discourse'].includes(state.view))state.view='library';library();}
  else if(a==='synthetic'){state.filters={...state.filters,scope:'synthetic',collection:'',model:'',condition:''};state.offset=0;state.run=null;state.view='library';library();}
  else if(a==='open'){if($('#dialog').open)$('#dialog').close();if(el.dataset.study)state.activeStudy=el.dataset.study;if(el.dataset.finding)state.returnFinding=el.dataset.finding;go({run:el.dataset.id,...(el.dataset.message?{message:el.dataset.message}:{})});}

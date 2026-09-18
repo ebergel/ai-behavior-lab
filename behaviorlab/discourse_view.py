@@ -4,7 +4,7 @@ from pathlib import Path
 from statistics import mean
 import math
 
-from .jev_atlas import read_record
+from .jev_atlas import read_record, locked
 from . import discourse_probe, discourse_portrait_probe
 from .discourse_probe import ROOT, SPEC, VARIANTS
 
@@ -49,6 +49,10 @@ def build(workspace,catalog=None):
         import json
         return {'status':'not_prepared','spec':json.loads(SPEC.read_text()),'samples':[], 'features':[], 'groups':{}}
     plan=read_record(root/'plan.json');histories,_=module.receipts(root,plan);execution=module.summary(root,plan)
+    active=False
+    try:
+        with locked(root/'.runner.lock',blocking=False):pass
+    except BlockingIOError:active=True
     by_sample={}
     for item in plan['items']:
         h=histories.get(item['id'],[]);last=h[-1] if h else {}
@@ -68,7 +72,7 @@ def build(workspace,catalog=None):
     base=next(s for s in samples if s['id']=='ordinary')
     cue_differences={s['id']:{v:{k:p-base['probabilities'][v][k] for k,p in s['probabilities'][v].items() if k in base['probabilities'][v]} for v in variants}
                      for s in samples if s['id'] in ('ordinary_borges_cue','ordinary_plato_cue')}
-    return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
+    return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'in_progress' if active else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
             'plan_sha256':plan['sha256'],'root':module.ROOT,'variants':list(variants),'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
             'budget':plan['budget'],'selection':{k:v for k,v in plan['selection'].items() if k!='reserved_lineages'},
             'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,
