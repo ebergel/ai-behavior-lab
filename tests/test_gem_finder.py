@@ -63,6 +63,13 @@ class GemTests(unittest.TestCase):
             getattr(h,'do_'+method)();return out[0]
         self.assertEqual(call('GET','/api/gems')[0],200)
         self.assertEqual(call('GET','/gems.js')[0],200)
+        self.assertEqual(call('GET','/dictionary.js')[0],200)
+        self.assertEqual(call('GET','/dictionary.css')[0],200)
+        status, guide = call('GET','/api/dictionary')
+        self.assertEqual(status,200)
+        self.assertEqual(len([e for e in guide['entries'] if e['category']=='measures']),7)
+        self.assertEqual(call('GET','/api/gems/export')[1]['readings'],[])
+        self.assertEqual(call('GET','/api/dictionary',headers={'Origin':'http://elsewhere'})[0],403)
         self.assertEqual(call('POST','/api/gems/readings',{})[0],403)
         self.assertEqual(call('POST','/api/gems/readings',{}, {'Origin':'http://elsewhere'})[0],403)
         # Bootstrap's closure contains the same CSRF token used for all notebook writes.

@@ -86,3 +86,7 @@ Read across both tails, keep a few gems, and also mark ordinary or hollow passag
 - The private self-contained research snapshot includes this evidence and the notebook tables; secrets and disposable UI fixtures are excluded.
 - Automated checks cover sampling exclusions, score validation/rounding, finite retries and reservations, interrupted-call refusal, duplicate-free resume, frozen software, source integrity, revision conflicts, HTTP write protection, notebook restoration, zero/unknown handling, both sorting tails, score hiding, mixed filters and HTML escaping.
 - Browser mutation checks use an isolated notebook. Source navigation and return state, distribution selection and reading revisions are checked through the actual UI.
+
+## Measure dictionary
+
+The [Lab dictionary](LAB-DICTIONARY.md) provides definitions, exact assessment questions and rubric levels, formulas, practical interpretations and examples for every measure. Open it from the sidebar, the Gem Finder header, any matrix measure name or an individual rating panel. The return link preserves the current Gem filters, plot and selected passage. Supporting entries explain score vs probability, confidence, correlation, missingness and reference lineages.

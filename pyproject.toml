@@ -16,4 +16,4 @@ behaviorlab = "behaviorlab.cli:main"
 include = ["behaviorlab*"]
 
 [tool.setuptools.package-data]
-behaviorlab = ["explorer_ui/*.html", "explorer_ui/*.css", "explorer_ui/*.js"]
+behaviorlab = ["explorer_ui/*.html", "explorer_ui/*.css", "explorer_ui/*.js", "gem_rubric.json", "lab_dictionary.json"]

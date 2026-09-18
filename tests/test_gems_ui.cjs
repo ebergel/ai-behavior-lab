@@ -2,6 +2,7 @@ const {test}=require('node:test');const assert=require('node:assert/strict');con
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rubric=JSON.parse(fs.readFileSync('behaviorlab/gem_rubric.json','utf8'));
 const ctx=vm.createContext({document:{addEventListener(){}},state:{gems:{rubric,ratings:{gem:'Keep as a gem'},items:[]}},esc,URLSearchParams,option:(v,l,s)=>`<option value="${esc(v)}" ${v===s?'selected':''}>${esc(l)}</option>`});
+vm.runInContext(fs.readFileSync('behaviorlab/explorer_ui/dictionary.js','utf8'),ctx);
 vm.runInContext(fs.readFileSync('behaviorlab/explorer_ui/gems.js','utf8'),ctx);
 const item={id:'one',model:'a',model_label:'Model A',turn:2,speaker:'X',title:'Conversation',text:'A passage',source_current:true,broad_topic:'mind',answers:{surprise:{normalized_score:0},contribution:{normalized_score:84.75}},profile_distance:{value:5,neighbors:[]},readings:[],context:[],sample_role:'pilot',condition:'open',words:2};
 test('zero remains observed, absent and stale scores stay unknown',()=>{assert.equal(ctx.gemValue(item,'surprise'),0);assert.equal(ctx.gemValue(item,'complexity'),null);assert.equal(ctx.gemValue({...item,source_current:false},'profile'),null);assert.equal(ctx.gemBin(100),9);assert.equal(ctx.gemBin(null),null);});

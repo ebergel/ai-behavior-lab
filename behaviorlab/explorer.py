@@ -29,6 +29,7 @@ from .finder import experiment, model_info, FinderViews, finder_result
 from .lab_musings import LabMusings, KINDS as MUSING_KINDS, STATUSES as MUSING_STATUSES
 from .lab_tasks import LabTasks, STATUSES as TASK_STATUSES, STREAMS as TASK_STREAMS
 from .gem_finder import GemFinder
+from .lab_dictionary import dictionary_catalog
 from .study_workbench import build_workbench
 from .design_coverage import build_coverage
 from .topic_trajectories import build_trajectories
@@ -446,7 +447,8 @@ def make_server(workspace, port=8765):
             if not self.allowed(): return self.send({'error':'Local origin required'},403)
             url=urlsplit(self.path); path=url.path
             try:
-                if path in ('/gems.js','/gems.css'):
+                if path == '/api/dictionary': return self.send(dictionary_catalog())
+                if path in ('/gems.js','/gems.css','/dictionary.js','/dictionary.css'):
                     return self.send((STATIC/path[1:]).read_bytes(),mime='text/javascript; charset=utf-8' if path.endswith('.js') else 'text/css; charset=utf-8')
                 if path=='/api/gems':
                     q=parse_qs(url.query);return self.send(gems.detail(q.get('run',[None])[0],q.get('message',[None])[0]))

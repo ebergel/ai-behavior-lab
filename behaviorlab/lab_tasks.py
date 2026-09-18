@@ -11,7 +11,7 @@ STATUSES = {'ideas': 'Ideas', 'next': 'Next', 'active': 'In progress', 'done': '
 STREAMS = {'': 'Unsorted', 'tools': 'Exploration tools', 'experiments': 'Experiments', 'synthesis': 'Research synthesis'}
 AUTHORS = ('Local researcher', 'Codex')
 VIEWS = {'finder': 'Conversation Finder', 'topic-atlas': 'Topic atlas', 'jev-atlas': 'JEV Topic Atlas',
-         'analysis': 'Analysis', 'coverage': 'Model & Design Coverage', 'trajectories': 'Topic Trajectories', 'gems': 'Gem Finder',
+         'analysis': 'Analysis', 'coverage': 'Model & Design Coverage', 'trajectories': 'Topic Trajectories', 'gems': 'Gem Finder', 'dictionary': 'Lab dictionary',
          'workbench': 'Study workbench', 'assessment': 'Model assessment'}
 SEED = Path(__file__).with_name('lab_tasks_seed.json')
 

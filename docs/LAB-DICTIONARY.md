@@ -1,0 +1,29 @@
+# Lab dictionary
+
+The Dictionary is a first-class Explorer section at `#view=dictionary`. Its initial scope is **17 terms**: all seven Gem Finder measures, six terms for interpreting numbers, and four terms for passages and researcher judgments. It is a measurement guide, distinct from the Topic atlas’s evolving topic vocabulary.
+
+Each measure includes a plain definition, practical interpretation, lower/higher-value descriptions, an explicitly illustrative example, technical specification, limitations, related terms and implementation provenance. The six JEV entries reproduce the exact assessment question, five rubric criteria and shared scope directly from `behaviorlab/gem_rubric.json`; the guide does not maintain a second copy of the scoring rubric. The computed topic-profile entry specifies its 24-dimensional RMS distance, nearest-per-lineage selection and mean across five neighbors.
+
+## Use
+
+- Open **Lab dictionary** from the main sidebar, or **Measure dictionary** in Gem Finder.
+- Click a matrix measure name for its definition. Focused plots, individual assessment panels and the neighboring-profile panel also link to the relevant entry.
+- Search definitions, synonyms, rubrics and methods; filter by section. Every selected term and search has a bookmarkable URL.
+- Follow related terms without losing the return link. **Return to your Gem view** preserves filters, plot mode, axis ranges, selected passage, bin and hidden-score setting.
+- Export the complete guide as JSON. Task cards can link to the Dictionary view.
+
+The six ratings use expected ordinal levels scaled to 0–100. They are not probabilities that a passage is extraordinary. Topic-profile distance uses distance units against a frozen reference; display filters do not recompute that reference. Supporting entries distinguish these from topic probabilities, provider confidence, Pearson correlation, unknown values and personal judgments.
+
+Illustrative examples are authored explanations, not newly scored passages or additional corpus evidence. The guide keeps factual accuracy, historical originality and personal value separate from what each rating actually measures. Independent human qualification of the provisional Gem rubric remains pending.
+
+## Implementation and extension
+
+`behaviorlab/lab_dictionary.json` holds editorial explanations and stable term IDs. `behaviorlab/lab_dictionary.py` enriches the six measure entries from the canonical rubric and includes its version and file SHA-256. `GET /api/dictionary` is read-only and does not need a pilot workspace. The UI lives in `explorer_ui/dictionary.js` and `dictionary.css`.
+
+Add future concepts as entries with definitions, methods, practical meanings, boundaries, related IDs and sources. A scientific change to the scoring rubric needs a separately frozen version; an explanatory guide edit does not rerate any existing passage.
+
+This change makes no inference calls or notebook writes. It leaves the research snapshot and frozen scoring files unchanged.
+
+## Verification · 18 September 2026
+
+313 Python and 62 JavaScript tests passed. Tests cover canonical rubric consistency, complete measure coverage, valid references, safe rendering, search and category combinations, unavailable terms, export/API origin enforcement, and preservation of the complete Gem return state. Live-browser checks cover sidebar access, measure selection, synonym search, matrix links and the return path to the selected filtered matrix.

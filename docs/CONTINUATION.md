@@ -1,3 +1,7 @@
+## UI refinement · 18 September 2026: Lab dictionary
+
+**Complete:** a first-class [Lab dictionary](LAB-DICTIONARY.md) explains all seven Gem Finder measures and ten supporting concepts. Searchable entries provide plain definitions, practical interpretations, technical specifications, exact canonical rubric levels, illustrative examples, boundaries and related terms. Links from matrix names and rating panels preserve the Gem view on return. This is documentation and navigation over existing measures; no new scoring, notebook revisions or research snapshot changes. Researcher example collection remains the next substantive measurement-development step.
+
 ## UI refinement · 18 September 2026: Gem Finder matrix
 
 **Complete:** the [Gem Finder scatterplot matrix](GEM-FINDER.md#scatterplot-matrix) shows all seven measures (42 scatterplots, seven diagonal distributions), paired correlations/counts, full or observed axis ranges, passage selection and enlargement of any pair. It follows the existing filters and retains an active bin on its original measure when changing pairs. Hidden-score mode withholds the matrix. This is a view of existing results; no new inference, notebook write or evidence-snapshot change is involved. Researcher example collection remains the next research step.
