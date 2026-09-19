@@ -29,3 +29,7 @@ The verified snapshot is being copied into `research/` for the private repositor
 Investigate TypeSafe transport reliability before any new frozen continuation. Only the 1,002 never-dispatched requests remain eligible for such a continuation; the five unknown outcomes must not be automatically repeated. The latest v2 allocation is blocked by its stop policy and is not silently reopened.
 
 The descriptive results are exploratory, message-weighted classifier responses. Independent classifier validation, model-balanced comparisons and conversation-aware uncertainty remain pending. Names plus portraits and names plus definitions assess different operational constructs; neither provides evidence of model experience or author identity.
+
+## Publication outcome verified after recording
+
+Local commit `87a6d5bb4101c869e34d6086030815ef7cf2ce3f` contains the audited snapshot, recovery implementation and records. GitHub was verified PRIVATE. Two authorized push attempts failed with HTTP 408, including a buffered HTTP/1.1 retry. A subsequent GitHub API read confirms remote `main` remains at `e7070934ffd79b8fb51693633990b91bc9b93049`. **The new snapshot is committed locally but is not yet backed up to GitHub.** No force push or remote history change was attempted. Retry private publication when connectivity permits, separately from any inference continuation.
