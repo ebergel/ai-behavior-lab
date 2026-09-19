@@ -1,5 +1,6 @@
 """Read the separately frozen corpus through the existing descriptive viewer."""
 from pathlib import Path
+import json
 from . import discourse_corpus as corpus
 from .jev_atlas import read_record, locked
 
@@ -21,7 +22,8 @@ def load(workspace):
             identity=t['id']+':'+v;items.append({'id':identity,'sample_id':t['id'],'variant':v})
             if (t['id'],v) in results:histories[identity]=[dict(results[(t['id'],v)],status='complete')]
     viewplan=dict(plan,samples=plan['targets'],items=items,conditions={v:plan['packs'][v]['questions'] for v in variants})
-    execution={'planned':progress['logical_requests'],'complete':progress['completed_assessments'],
+    saved=json.loads((root/'.status.json').read_text()) if (root/'.status.json').exists() else {}
+    execution={'outcome':saved.get('state'),'planned':progress['logical_requests'],'complete':progress['completed_assessments'],
                'attempts':progress['new_attempts'],'known_cost_usd':progress['known_cost_usd'],
                'unknown_reserved_usd':progress['unknown_cost_reserved_usd'],'reused':plan['counts']['reuse_requests'],
                'stopped':fatal if not active else []}

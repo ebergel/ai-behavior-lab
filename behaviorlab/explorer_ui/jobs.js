@@ -1,7 +1,7 @@
 'use strict';
 (function (root) {
   const ALLOWED_JOB_IDS = new Set(['mind-portraits-v2','mind-discourse-corpus-v1']);
-  const STATES = new Set(['prepared', 'running', 'paused', 'complete', 'blocked']);
+  const STATES = new Set(['prepared', 'running', 'paused', 'complete', 'complete_with_unknowns', 'blocked']);
   let timer = null, active = null;
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const number = value => Number(value || 0).toLocaleString();

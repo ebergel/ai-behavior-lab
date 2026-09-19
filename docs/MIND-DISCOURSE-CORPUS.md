@@ -2,6 +2,8 @@
 
 The researcher explicitly authorized the full JEV job on 18 September 2026, after reviewing the pilot and actual token costs. This is a new finite allocation under the standing **$10 ceiling**, separate from the completed $2 pilot. A detached Python worker runs it through **Lab Jobs**; no language model supervises dispatch or polling.
 
+**Latest outcome, 19 September:** stopped at 18,309 / 19,316 verified assessments after bounded recovery. Five uncertain outcomes and 1,002 unstarted requests remain. See [the recovery audit and descriptive report](MIND-DISCOURSE-RECOVERY.md). The historical running snapshot below is preserved.
+
 ## Frozen scope
 
 - **9,646 real messages:** 9,605 conversation messages and 41 technical/short-run messages, across 408 source runs and 406 lineages.

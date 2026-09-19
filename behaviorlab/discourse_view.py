@@ -91,7 +91,7 @@ def build(workspace,catalog=None,analysis=None,batch='pilot'):
     base=next(s for s in samples if s['id']=='ordinary')
     cue_differences={s['id']:{v:{k:p-base['probabilities'][v][k] for k,p in s['probabilities'][v].items() if k in base['probabilities'][v]} for v in variants}
                      for s in samples if s['id'] in ('ordinary_borges_cue','ordinary_plato_cue')}
-    return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'in_progress' if active else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
+    return {'schema':'behaviorlab.discourse-view/1','status':'complete' if execution['complete']==len(plan['items']) else 'in_progress' if active else 'complete_with_unknowns' if execution.get('outcome')=='complete_with_unknowns' else 'stopped' if execution['stopped'] else 'in_progress' if execution['attempts'] else 'prepared',
             'batch':batch,'batches':(['pilot','corpus'] if (Path(workspace)/'mind-lenses/discourse-corpus-20260918-v1/plan.json').exists() else ['pilot']),'plan_sha256':plan['sha256'],'root':module.ROOT,'variants':list(variants),'spec':plan['spec'],'conditions':plan['conditions'],'execution':execution,
             'budget':plan['budget'],'selection':{k:v for k,v in plan['selection'].items() if k!='reserved_lineages'},
             'interpretation':plan['interpretation'],'samples':samples,'groups':groups,'author_cue_differences':cue_differences,'topic_filter':topic_filter,

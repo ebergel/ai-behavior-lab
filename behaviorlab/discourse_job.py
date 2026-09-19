@@ -10,6 +10,7 @@ from . import discourse_corpus as corpus
 JOB_ID = 'mind-discourse-corpus-v1'
 PLAN_SHA = '5f7bebae4472d6cab782364479b6999c120c472118c0e5e02ff0f208c71f60ac'
 RELEASE_SHA = '9f849cabccd155bfe0752a4fb594eea0352562db337a88c557c178435319f168'
+RECOVERY_SHA = 'cf1eacffeaf51663069fb146b54f30f2686633bbd440260f6f868c094ec8f2b5'
 _cache = {}
 
 
@@ -23,6 +24,10 @@ def check(workspace):
         _cache.clear();_cache[sig]=(plan,release)
     plan,release=_cache[sig]
     require(release['software_sha256']==corpus.software(),'Frozen corpus software changed')
+    if (root/'recovery-20260919-v2.json').exists():
+        from . import discourse_recovery_v2 as recovery
+        r=read_record(root/recovery.RECOVERY)
+        require(r['sha256']==RECOVERY_SHA and r['software_sha256']==recovery.recovery_software(),'Registered recovery differs')
     return root,plan,release
 
 
@@ -44,6 +49,10 @@ def status(workspace):
         active=lab_jobs.busy(runtime/'worker.lock') or lab_jobs.busy(root/'.runner.lock') or launching
         if active:out.update(status='running',can_pause=True)
         elif progress.get('state')=='complete':out['status']='complete'
+        elif progress.get('state')=='complete_with_unknowns':
+            out.update(status='complete_with_unknowns',error='Continuation finished. Four preserved transport outcomes remain unknown and were not repeated.')
+        elif (root/'recovery-20260919-v2.json').exists() and progress.get('new_attempts')==18175:
+            out.update(status='paused',can_start=True,error='Frozen continuation: 1,021 never-dispatched assessments; four preserved unknowns remain excluded.')
         elif progress.get('state') in ('stopped','running','backoff','draining') or state.get('status')=='blocked':
             out.update(status='blocked',error='Worker stopped; inspect durable receipts before resuming. Unknown requests are never repeated.')
         else:out.update(status='paused' if out['attempts'] else 'prepared',can_start=True)
@@ -58,8 +67,11 @@ def worker(workspace):
     try:
         with locked(runtime/'worker.lock',blocking=False):
             root,_,_=check(workspace);lab_jobs.write_state(runtime,status='running')
-            report=corpus.run(workspace,root)
-            state='complete' if report['state']=='complete' else 'paused' if report['state']=='paused' else 'blocked'
+            if (root/'recovery-20260919-v2.json').exists():
+                from . import discourse_recovery_v2
+                report=discourse_recovery_v2.run(workspace,root)
+            else:report=corpus.run(workspace,root)
+            state=report['state'] if report['state'] in ('complete','complete_with_unknowns') else 'paused' if report['state']=='paused' else 'blocked'
             lab_jobs.write_state(runtime,status=state)
     except BlockingIOError:return
     except Exception:lab_jobs.write_state(runtime,status='blocked',error='Corpus worker stopped. Inspect preserved evidence; no automatic restart.')

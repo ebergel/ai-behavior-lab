@@ -1,3 +1,7 @@
+## Current execution outcome · 19 September 2026: Mind & discourse recovery
+
+The bounded continuation added 18 valid assessments; the full corpus now has **18,309 / 19,316** assessments, **494,343 probabilities**, **$3.961531728** reported new cost and **$0.01344** reserved. The original three transport unknowns, one sandbox DNS failure and one new network-enabled transport failure remain excluded. **1,002 never-dispatched requests remain; the job is stopped, not running.** See [recovery protocol, coverage and descriptive results](MIND-DISCOURSE-RECOVERY.md). Frozen v1/v2 recovery manifests retain all original evidence and aggregate limits; no automatic retry or scheduler is active. Diagnose transport reliability before any further frozen continuation; do not resend the five uncertain outcomes.
+
 ## Running milestone · 18 September 2026: full Mind & discourse assessment
 
 The researcher authorized the full JEV job after reviewing its low actual cost. [Full-corpus protocol](MIND-DISCOURSE-CORPUS.md) freezes 9,646 nonblank real messages outside the 60 reserved validation lineages, plus twelve existing synthetic controls. Two unchanged 27-feature packs (names + definitions; names + portraits) give 19,316 logical assessments, 120 exact reuses and 19,196 new calls under one $10 ceiling. The first two new calls passed; the detached Lab Jobs worker is running the remaining finite allocation.

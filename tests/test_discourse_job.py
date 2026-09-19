@@ -38,3 +38,8 @@ class DiscourseJobTests(unittest.TestCase):
     def test_progress_cannot_claim_a_different_allocation(self):
         self.progress('complete');p=self.root/'.status.json';d=json.loads(p.read_text());d['plan_sha256']='wrong';p.write_text(json.dumps(d))
         self.assertFalse(job.status(self.ws)['can_start']);self.assertEqual(job.status(self.ws)['status'],'blocked')
+    def test_finished_with_unknowns_is_not_restartable(self):
+        self.progress('complete_with_unknowns')
+        s=job.status(self.ws)
+        self.assertEqual(s['status'],'complete_with_unknowns')
+        self.assertFalse(s['can_start']);self.assertFalse(s['can_pause'])
