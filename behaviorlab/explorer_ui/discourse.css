@@ -8,3 +8,5 @@
 .lens-assessment-details{margin-bottom:22px}.lens-assessment-details>summary{font-size:12px;color:#677b6d;padding:10px 0;cursor:pointer}.lens-assessment-details[open]>summary{margin-bottom:10px}
 
 .lens-dataset,.lens-pagination{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0}.lens-dataset label{display:flex;flex-direction:column;gap:5px;font-size:12px}.lens-dataset select{min-width:290px;padding:10px;border:1px solid #d4ddd4;border-radius:6px;background:white}.lens-pagination span{color:#647b67;font-size:12px}.lens-filters select[name="run"]{max-width:340px}
+
+.lens-definition>summary{cursor:pointer;font-weight:600;color:#674687;font-size:16px}.lens-definition-body{margin-top:18px}.lens-definition>summary:focus-visible{outline:2px solid #654882;outline-offset:4px}
