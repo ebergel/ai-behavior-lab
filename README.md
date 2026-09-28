@@ -1,5 +1,7 @@
 # Behavior Laboratory
 
+[Full project report · 28 September 2026](PROJECT-REPORT-2026-09-28-1734.md) covers origins, objectives, methods, findings, limitations and the next research phase.
+
 [Project landmark · 20 September 2026](PROJECT-RECORD-2026-09-20-1300.md) records the lab’s development and the role of JEV in finding worthwhile ideas within large volumes of model output.
 
 [Gem Finder](docs/GEM-FINDER.md) explores six distinct passage ratings, topic-profile distance, word count and your own saved judgments. The [model × length expansion](docs/GEM-EXPANSION.md) brings it to **1,000 assessed replies and 6,000 ratings** across 14 model variants, for **$0.09068 combined**. Switch between the original 100, fresh 900 and combined sample. The full matrix, length filters and source-linked readings support exploration; the rubric still needs researcher evaluation. One empty historical reply is explicitly labeled and preserved.
