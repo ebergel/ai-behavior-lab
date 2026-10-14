@@ -8,6 +8,14 @@ The researcher authorized the full JEV job after reviewing its low actual cost. 
 
 Full-corpus results are available in Mind & discourse through a separate dataset selector, with technical/run filters, chronological ordering, pagination and explicit score refresh. The pilot and all historical evidence remain unchanged. Lab summary includes the new batch. Validation: 387 Python and 114 JavaScript tests pass; live job and results navigation checked. This is a running allocation, not a completion claim. The next continuation should read its saved status and receipts, inspect any actual stop without duplicating uncertain calls, then produce the completed descriptive report and a verified research snapshot. No recurring scheduler or supervising model was installed.
 
+## Completed overview correction · 18 September 2026: original Topic atlas
+
+Lab summary now includes the original Topic atlas as its first analysis row, distinct from JEV assessment batches. A reading-cohort selector changes that row only and links to the same cohort in Topic atlas. It shows eligible source runs, messages in scan scope, current reviewed opening outcomes and topic definitions; stale, unavailable and unreviewed openings remain distinct. These run-level reviews and scan counts do not enter message-assessment coverage.
+
+Verified local counts: all 438 eligible runs / 11,204 messages / 12 current opening reviews; Opening & partner cohort 12 runs / 168 messages / 12 reviewed outcomes; 23 definitions. The 13 assessment batches retain their unique coverage union of 11,054 / 11,245 real messages (98.3%). Both API routes include every atlas cohort. See [Lab summary](LAB-SUMMARY.md).
+
+Validation: 370 Python tests and 111 JavaScript tests passed; live browser checks cover cohort switching, pinned atlas placement during sorting, and unchanged headline totals. Research notebook rows and histories remain unchanged. The requested summary correction is complete; further opening reviews remain scientific work requiring their own scoped reading pass.
+
 ## Completed overview milestone · 18 September 2026: Goals, Ideas & Task / Lab summary
 
 The top workspace section is now **Goals, Ideas & Task**. Its fourth tab, **Lab summary**, sits beside Ideas & tasks. A live read-only overview separates indexed data-generation experiments from assessment batches, with real/synthetic message proportions, explicit denominators, sortable/filterable source rows, exact run navigation and assessment links. Synthetic classifier controls stay distinct from synthetic conversation fixtures; repeated questions and wordings do not inflate message counts.

@@ -1,6 +1,6 @@
 {
   "schema": "behaviorlab.research-bundle/1",
-  "created_at": "2026-09-19T15:42:16.574698+00:00",
+  "created_at": "2026-10-14T15:21:51.208886+00:00",
   "inventory": {
     "records": 573,
     "by_kind": {
@@ -596056,5 +596056,5 @@
     "locks, caches, logs and disposable test fixtures"
   ],
   "secret_review": "Known local credential sentinels plus token/private-key patterns; export fails on candidates; no source redaction.",
-  "bundle_sha256": "bd961610467c320bea37393021f3967d3055ee6a07a0844d37246166cca33bb8"
+  "bundle_sha256": "8578fe198690a536cec77713917f37b47d082a8e914b65e6f36ecb6eac2e5eec"
 }

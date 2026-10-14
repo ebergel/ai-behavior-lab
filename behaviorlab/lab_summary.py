@@ -2,11 +2,13 @@
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+import sqlite3
 
 from .common import fingerprint
 from .design_coverage import project
 from .jev_atlas import read_record
 from . import analysis_corpus, gem_runner, mind_lens_probe, discourse_probe, discourse_portrait_probe
+from .topic_atlas import eligible, participant_messages
 
 
 def percent(numerator, denominator):
@@ -98,7 +100,37 @@ def assessment(identity, title, samples, message_index, *, questions, wordings=1
     return row, covered
 
 
-def build_summary(workspace, catalog, analysis, gems, jev):
+def atlas_inventory(catalog, atlas, studies):
+    """Read atlas scope/review counts without treating scans as message assessments."""
+    runs = {r['id']: r for r in catalog.runs.values() if eligible(r)}
+    dictionary = atlas.dictionary()
+    reviews = {r['run_id']: r for r in atlas.reviews(catalog)}
+    message_counts = {identity: sum(isinstance(m.get('text'), str) for m in participant_messages(r))
+                      for identity, r in runs.items()}
+    groups = [('all', 'All atlas-eligible runs', set(runs))]
+    groups.extend((s['id'], s['title'], {r['run_id'] for r in s['runs']} & set(runs))
+                  for s in studies.all())
+    cohorts = []
+    from urllib.parse import urlencode
+    for identity, title, ids in groups:
+        selected = [reviews[i] for i in ids if i in reviews]
+        current = [r for r in selected if r['source_current'] and r['dictionary_current']]
+        cohorts.append({'id': identity, 'title': title, 'runs': len(ids),
+                        'scan_messages': sum(message_counts[i] for i in ids),
+                        'opening_reviews_resolved': sum(r['status'] != 'unavailable' for r in current),
+                        'opening_reviews_unavailable': sum(r['status'] == 'unavailable' for r in current),
+                        'opening_reviews_stale': len(selected) - len(current),
+                        'opening_reviews_pending': len(ids) - len(selected),
+                        'review_authors': dict(Counter(r['author'] for r in current if r['status'] != 'unavailable')),
+                        'href': '#' + urlencode({'view': 'topic-atlas', 'cohort': identity})})
+    return {'id': 'topic-atlas', 'title': 'Topic atlas · dictionary matching & opening reviews',
+            'status': 'Reading instrument', 'eligible_runs': len(runs),
+            'topic_definitions': len(dictionary), 'cohorts': cohorts,
+            'included_in_assessment_coverage': False,
+            'scope_note': 'All models within the selected cohort. Message counts describe the literal-scan scope; opening outcomes are attributed run-level reviews.'}
+
+
+def build_summary(workspace, catalog, analysis, gems, jev, topic_atlas=None, studies=None):
     base, message_index = inventory(catalog)
     rows = []; covered = set(); issues = []
     def collect(identity, title, loader):
@@ -167,8 +199,17 @@ def build_summary(workspace, catalog, analysis, gems, jev):
                               wordings=len(module.VARIANTS), requests=len(attempts), source=module.ROOT,
                               href='#view=discourse' if module is discourse_portrait_probe else None)
         collect(module.ROOT,title,mind)
+    atlas = None
+    if topic_atlas is not None and studies is not None:
+        try:
+            atlas = atlas_inventory(catalog, topic_atlas, studies)
+        except (OSError, ValueError, KeyError, TypeError, AttributeError, sqlite3.Error) as error:
+            atlas = {'id': 'topic-atlas', 'title': 'Topic atlas · dictionary matching & opening reviews',
+                     'status': 'Unavailable', 'error': str(error)[:240], 'included_in_assessment_coverage': False}
+            issues.append({'id': 'topic-atlas', 'title': atlas['title'], 'message': atlas['error']})
     return {'schema':'behaviorlab.lab-summary/1','generated_at':datetime.now(timezone.utc).isoformat(),
             'indexed_at':getattr(catalog,'indexed_at',None), 'inventory':base,'assessments':rows,
+            'topic_atlas': atlas,
             'assessment_union':{'covered_messages':len(covered),'denominator':base['real_messages'],
                                 'coverage':percent(len(covered),base['real_messages'])},
             'issues':issues,'catalog_notices':getattr(catalog,'issues',[]),
@@ -179,5 +220,6 @@ def build_summary(workspace, catalog, analysis, gems, jev):
                 'Generation shares divide by all recorded messages (real + synthetic fixtures). Each source experiment appears once. Synthetic classifier controls are separate texts and are not generated-conversation messages.',
                 'Assessment coverage divides completed, source-current real messages by the real-message corpus. A message must have every planned question pack or wording completed. Repeated questions, retries, packs and wordings do not add messages.',
                 'Assessment batches overlap. Their percentages must not be added. Combined coverage is a union of source-message identities across readable batches; unavailable batches remain unknown.',
+                'Topic atlas counts dictionary definitions, messages in its literal-scan scope and attributed opening outcomes per run. These counts never contribute to message-assessment coverage. Its cohort selector does not filter the assessment batches.',
                 'This inventory covers indexed experiment sources and registered assessment plans. Diagnostic probe requests are listed separately; they do not add conversations or messages. Counts are descriptive, not independent experimental replicates.'
             ]}

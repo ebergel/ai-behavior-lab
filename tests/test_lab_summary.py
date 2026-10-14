@@ -7,7 +7,9 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from behaviorlab.lab_summary import inventory, assessment, build_summary, percent, source_label
-from behaviorlab.explorer import make_server
+from behaviorlab.explorer import make_server, Notes
+from behaviorlab.topic_atlas import TopicAtlas
+from behaviorlab.exploration_collections import ResearchCollections
 from test_topic_atlas import run
 
 
@@ -23,6 +25,43 @@ def source(identity='r', kind='lab', texts=None):
 
 
 class SummaryTests(unittest.TestCase):
+    def test_atlas_uses_its_own_scope_reviews_and_never_adds_assessment_coverage(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            w=Path(tmp); notes=Notes(w/'notes.sqlite'); atlas=TopicAtlas(notes); studies=ResearchCollections(notes)
+            real=source(); stale=source('stale'); unknown=source('unknown'); pending=source('pending')
+            fake=source('synthetic','synthetic'); short=source('short',texts=['one']); unstarted=source('unstarted');unstarted['unstarted_assessment']=True
+            # A shared branch node counts once; unavailable text does not count as scanned.
+            real['messages'].append(copy.deepcopy(real['messages'][0]));unknown['messages'][0]['text']=None
+            c=SimpleNamespace(runs={r['id']:r for r in [real,stale,unknown,pending,fake,short,unstarted]},issues=[],probes=[])
+            study=studies.save({'title':'Chosen cohort','runs':[{'run_id':r['id']} for r in [real,fake,short,unstarted]],'findings':[]},c)
+            atlas.save_review({'run_id':'r','status':'no_selection','author':'Codex'},c)
+            atlas.save_review({'run_id':'stale','status':'no_selection','author':'Codex'},c)
+            atlas.save_review({'run_id':'unknown','status':'unavailable','author':'Codex'},c)
+            stale['source']['sha256']='changed'
+            before=copy.deepcopy(c.runs)
+            with notes.connect() as db:snapshot='\n'.join(db.iterdump())
+            data=build_summary(w,c,None,SimpleNamespace(batches=lambda:[]),SimpleNamespace(root=w/'jev-atlas'),atlas,studies)
+            a=data['topic_atlas'];all_runs=a['cohorts'][0];selected=next(x for x in a['cohorts'] if x['id']==study['id'])
+            self.assertEqual((a['eligible_runs'],all_runs['scan_messages']),(4,23))
+            self.assertEqual((selected['runs'],selected['scan_messages'],selected['opening_reviews_resolved']),(1,6,1))
+            self.assertEqual((all_runs['opening_reviews_resolved'],all_runs['opening_reviews_stale'],all_runs['opening_reviews_unavailable'],all_runs['opening_reviews_pending']),(1,1,1,1))
+            original=atlas.analyze(c,studies,study['id'])['denominators']
+            self.assertEqual(selected['scan_messages'],original['visible_messages'])
+            for key in ('runs','opening_reviews_resolved','opening_reviews_pending','opening_reviews_stale','opening_reviews_unavailable'):
+                self.assertEqual(selected[key],original[key])
+            self.assertEqual(selected['review_authors'],{'Codex':1})
+            self.assertIn('cohort='+study['id'],selected['href'])
+            self.assertFalse(a['included_in_assessment_coverage']);self.assertEqual(data['assessment_union']['covered_messages'],0)
+            self.assertEqual(data['assessments'],[]);self.assertEqual(c.runs,before)
+            with notes.connect() as db:self.assertEqual('\n'.join(db.iterdump()),snapshot)
+
+    def test_atlas_failure_is_unavailable_and_not_a_zero_review_count(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            broken=SimpleNamespace(dictionary=lambda: (_ for _ in ()).throw(ValueError('Cannot read dictionary')))
+            d=build_summary(Path(tmp),SimpleNamespace(runs={}),None,SimpleNamespace(batches=lambda:[]),SimpleNamespace(root=Path(tmp)/'jev-atlas'),broken,SimpleNamespace())
+            self.assertEqual(d['topic_atlas']['status'],'Unavailable');self.assertNotIn('cohorts',d['topic_atlas'])
+            self.assertEqual(d['issues'][0]['id'],'topic-atlas');self.assertIsNone(d['assessment_union']['coverage'])
+
     def test_source_labels_distinguish_same_folder_names_in_different_experiments(self):
         self.assertEqual(source_label('/workspace/a/campaign','/workspace'),'a/campaign')
         self.assertEqual(source_label('/workspace/b/campaign','/workspace'),'b/campaign')

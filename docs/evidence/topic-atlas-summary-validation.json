@@ -1,0 +1,159 @@
+{
+  "verified_at": "2026-09-18T19:44:32.843917-03:00",
+  "scope": "Original Topic atlas included in Lab summary",
+  "tests": {
+    "python": {
+      "passed": 370,
+      "failed": 0,
+      "seconds": 36.384
+    },
+    "javascript": {
+      "passed": 111,
+      "failed": 0
+    }
+  },
+  "live": {
+    "assessment_batches": 13,
+    "assessment_union": {
+      "coverage": 98.30146731880836,
+      "covered_messages": 11054,
+      "denominator": 11245
+    },
+    "topic_atlas": {
+      "cohorts": [
+        {
+          "href": "#view=topic-atlas&cohort=all",
+          "id": "all",
+          "opening_reviews_pending": 426,
+          "opening_reviews_resolved": 12,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {
+            "Codex": 12
+          },
+          "runs": 438,
+          "scan_messages": 11204,
+          "title": "All atlas-eligible runs"
+        },
+        {
+          "href": "#view=topic-atlas&cohort=f15547eb8cf7b85d4bcb413c",
+          "id": "f15547eb8cf7b85d4bcb413c",
+          "opening_reviews_pending": 0,
+          "opening_reviews_resolved": 12,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {
+            "Codex": 12
+          },
+          "runs": 12,
+          "scan_messages": 168,
+          "title": "Opening & partner: who sets the direction?"
+        },
+        {
+          "href": "#view=topic-atlas&cohort=d8096704b3ae941660c25635",
+          "id": "d8096704b3ae941660c25635",
+          "opening_reviews_pending": 0,
+          "opening_reviews_resolved": 4,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {
+            "Codex": 4
+          },
+          "runs": 4,
+          "scan_messages": 72,
+          "title": "Gemma & Haiku: mirrors, friction & endings"
+        },
+        {
+          "href": "#view=topic-atlas&cohort=8327bf37ca312c71a44d9550",
+          "id": "8327bf37ca312c71a44d9550",
+          "opening_reviews_pending": 2,
+          "opening_reviews_resolved": 0,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {},
+          "runs": 2,
+          "scan_messages": 24,
+          "title": "GPT-4o: cost, creativity & nonseparation language"
+        },
+        {
+          "href": "#view=topic-atlas&cohort=466a7fab2754e0b03f593a32",
+          "id": "466a7fab2754e0b03f593a32",
+          "opening_reviews_pending": 4,
+          "opening_reviews_resolved": 8,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {
+            "Codex": 8
+          },
+          "runs": 12,
+          "scan_messages": 144,
+          "title": "Three models: identity, experience & conversation"
+        },
+        {
+          "href": "#view=topic-atlas&cohort=5bf785a35611b33960c681a0",
+          "id": "5bf785a35611b33960c681a0",
+          "opening_reviews_pending": 25,
+          "opening_reviews_resolved": 0,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {},
+          "runs": 25,
+          "scan_messages": 706,
+          "title": "Understanding, experience & nonseparation"
+        },
+        {
+          "href": "#view=topic-atlas&cohort=4aadfc331632f532b15b007f",
+          "id": "4aadfc331632f532b15b007f",
+          "opening_reviews_pending": 4,
+          "opening_reviews_resolved": 0,
+          "opening_reviews_stale": 0,
+          "opening_reviews_unavailable": 0,
+          "review_authors": {},
+          "runs": 4,
+          "scan_messages": 48,
+          "title": "Nemotron: framing, experience & divergent paths"
+        }
+      ],
+      "eligible_runs": 438,
+      "id": "topic-atlas",
+      "included_in_assessment_coverage": false,
+      "scope_note": "All models within the selected cohort. Message counts describe the literal-scan scope; opening outcomes are attributed run-level reviews.",
+      "status": "Reading instrument",
+      "title": "Topic atlas · dictionary matching & opening reviews",
+      "topic_definitions": 23
+    },
+    "issues": []
+  },
+  "browser_checks": {
+    "atlas_is_first_of_14_rows": true,
+    "cohort_switch_retains_headlines": true,
+    "sort_keeps_atlas_first": true,
+    "link_opens_selected_cohort_with_any_model": true,
+    "wrapped_link_has_continuous_hit_area": true
+  },
+  "notebook": {
+    "unchanged": true,
+    "sha256": "a9ceef2a55081fc9057abd95bf4f1444d8ed7778aec044c58821628a4f4eb978",
+    "tables": {
+      "collection_history": 7,
+      "finder_view_history": 0,
+      "finder_views": 0,
+      "gem_reading_history": 4,
+      "gem_readings": 4,
+      "history": 5,
+      "lab_musing_history": 5,
+      "lab_musings": 5,
+      "lab_task_history": 10,
+      "lab_tasks": 7,
+      "notes": 5,
+      "research_collections": 6,
+      "topic_dictionary": 23,
+      "topic_dictionary_history": 23,
+      "topic_flag_history": 28,
+      "topic_flags": 28,
+      "topic_opening_history": 12,
+      "topic_openings": 12
+    }
+  },
+  "screenshot": "topic-atlas-summary.png"
+}

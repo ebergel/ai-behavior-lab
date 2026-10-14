@@ -8,7 +8,7 @@
 
 A standalone local laboratory for controlled experiments on AI model behavior.
 
-**Private development repository:** [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab). The project is under active research and development; a public release and its license have not been decided. See [repository scope and publication](docs/REPOSITORY.md).
+**Project repository:** [ebergel/ai-behavior-lab](https://github.com/ebergel/ai-behavior-lab). Public publication was authorized on 14 October 2026. The project remains under active research and development; no open-source license has been selected. See [repository scope and publication](docs/REPOSITORY.md).
 
 The [research purpose](docs/RESEARCH-PURPOSE.md) is to explore what models develop with other models under reduced human steering. The researcher's guiding interpretation is preserved alongside the conditions we can actually measure.
 

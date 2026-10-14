@@ -453,7 +453,7 @@ def make_server(workspace, port=8765):
             url=urlsplit(self.path); path=url.path
             try:
                 if path in ('/api/lab-summary','/api/lab-summary/export'):
-                    return self.send(build_summary(workspace,catalog,analysis,gems,jev_atlas),download='behavior-lab-summary.json' if path.endswith('/export') else None)
+                    return self.send(build_summary(workspace,catalog,analysis,gems,jev_atlas,topic_atlas,studies),download='behavior-lab-summary.json' if path.endswith('/export') else None)
                 if path=='/api/jobs':return self.send(lab_jobs.listing(workspace))
                 if path in ('/jobs.js','/jobs.css'):return self.send((STATIC/path[1:]).read_bytes(),mime='text/css; charset=utf-8' if path.endswith('.css') else 'text/javascript; charset=utf-8')
                 if path=='/api/discourse':return self.send(discourse_view(workspace,catalog,analysis,batch=parse_qs(url.query).get('batch',['pilot'])[0]))

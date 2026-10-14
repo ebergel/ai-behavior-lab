@@ -7,6 +7,28 @@ const c=vm.createContext({state,document:{addEventListener:(k,fn)=>(listeners[k]
 vm.runInContext(fs.readFileSync('behaviorlab/explorer_ui/summary.js','utf8'),c);
 const plain=x=>JSON.parse(JSON.stringify(x));
 
+test('atlas cohort changes show scan and review units without changing assessment coverage',()=>{
+ const cohort=(id,title,runs,messages,reviews)=>({id,title,runs,scan_messages:messages,opening_reviews_resolved:reviews,opening_reviews_pending:runs-reviews,opening_reviews_stale:0,opening_reviews_unavailable:0,href:'#view=topic-atlas&cohort='+id});
+ const atlas={title:'Topic atlas · dictionary matching & opening reviews',status:'Reading instrument',eligible_runs:438,topic_definitions:23,cohorts:[cohort('all','All atlas-eligible runs',438,11204,12),cohort('study','Opening & partner',12,168,12)]};
+ state.boot={studies:[{id:'study'}]};state.atlasFilters=undefined;state.summaryAtlasCohort=undefined;
+ const union={covered_messages:11054,denominator:11245,coverage:98.301467};
+ state.labSummary={topic_atlas:atlas,assessment_union:union};state.view='library';
+ let html=c.summaryAtlasRow(atlas);
+ assert.match(html,/168/);assert.match(html,/12 \/ 12/);assert.match(html,/23 topic definitions/);
+ assert.match(html,/messages in scan scope/);assert.match(html,/Not comparable/);assert.match(html,/Excluded from assessment coverage/);
+ assert.match(html,/#view=topic-atlas&amp;cohort=study/);assert.doesNotMatch(html,/168 source-current messages|168 \/ 168/);
+ listeners.change.forEach(fn=>fn({target:{id:'summary-atlas-cohort',value:'all'}}));
+ html=c.summaryAtlasRow(atlas);assert.match(html,/11204/);assert.match(html,/12 \/ 438/);assert.match(html,/426 unreviewed/);
+ assert.deepEqual(union,{covered_messages:11054,denominator:11245,coverage:98.301467});
+ listeners.change.forEach(fn=>fn({target:{id:'summary-atlas-cohort',value:'unknown'}}));assert.equal(state.summaryAtlasCohort,'all');
+ state.summaryAtlasCohort='removed';assert.equal(c.summaryAtlasCohort(atlas).id,'all');
+ state.summaryAtlasCohort=undefined;state.boot=undefined;state.view='purpose';
+});
+test('unavailable atlas stays visible with escaped error and unknown metrics',()=>{
+ const html=c.summaryAtlasRow({title:'Topic atlas',status:'Unavailable',error:'<missing>'});
+ assert.match(html,/Unavailable/);assert.match(html,/&lt;missing&gt;/);assert.doesNotMatch(html,/<missing>|0 \/ 0/);
+});
+
 test('generation filtering and sorting preserve source rows and percentage denominators',()=>{
  const rows=[{id:'a',title:'Alpha',kind:'real',messages:10,share_all:25,share_kind:100,models:['M'],conditions:['open'],source:'a'}, {id:'b',title:'Beta',kind:'synthetic',messages:30,share_all:75,share_kind:100,models:[],conditions:[],source:'b'}];
  assert.deepEqual(plain(c.summaryRows(rows,{kind:'all',q:'',sort:'messages',direction:'desc'})).map(r=>r.id),['b','a']);
