@@ -23,4 +23,11 @@ Private runtime credentials, caches and the live database remain ignored. Notebo
 
 ## Final publication verification
 
-Final push and visibility verification will be recorded below after the remote actions complete.
+Verified 2026-10-14T12:24:16-03:00:
+
+- Publication commit `be57aaa75aa85b6a6a553d6f13f4aad10169b59c` pushed successfully; remote `main` matched it.
+- GitHub reports `PUBLIC` at https://github.com/ebergel/ai-behavior-lab.
+- Unauthenticated GitHub API access independently confirmed the repository is public.
+- Anonymous downloads of the committed research manifest, transcript catalog and readable notebook matched local SHA-256 hashes exactly.
+- All earlier local-only commits, the full evidence snapshot, current notebook tables, project reports and pending Lab Summary changes are now published. This final verification note is committed and pushed separately; it does not change the research snapshot.
+
