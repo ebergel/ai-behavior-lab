@@ -1,5 +1,7 @@
 # Behavior Laboratory
 
+[**Interactive research report · project website**](https://ebergel.github.io/ai-behavior-lab/) — a self-contained introduction for external reviewers, with methods, findings, interactive figures and review questions.
+
 [Full project report · 28 September 2026](PROJECT-REPORT-2026-09-28-1734.md) covers origins, objectives, methods, findings, limitations and the next research phase.
 
 [Project landmark · 20 September 2026](PROJECT-RECORD-2026-09-20-1300.md) records the lab’s development and the role of JEV in finding worthwhile ideas within large volumes of model output.
