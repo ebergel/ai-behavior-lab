@@ -26,6 +26,10 @@ After reviewing and committing later changes, publish them with `git push origin
 
 The researcher explicitly authorized synchronization of the full project, including transcripts and notebooks, and changing this repository to public. The publication preserves existing history, research records and failed/partial results. Historical references to a private repository describe earlier milestones.
 
-Public visibility does not by itself grant an open-source license; no new code or data license is selected in this work. Existing third-party notices and provenance remain intact. Private runtime credentials, caches and the live SQLite database remain excluded; the portable snapshot carries the notebook contents and revision histories.
+Public visibility does not by itself grant an open-source license, and none was selected in this work; the licenses came later (see below). Existing third-party notices and provenance remain intact. Private runtime credentials, caches and the live SQLite database remain excluded; the portable snapshot carries the notebook contents and revision histories.
 
 See the timestamped publication session record for verification of the remote commit, visibility and snapshot. Publication does not deploy the local app or establish automatic synchronization.
+
+## Licenses · 11 November 2026
+
+Code is under the MIT License ([`LICENSE`](../LICENSE)). Documents and data are under CC BY 4.0 ([`LICENSE-DATA.md`](../LICENSE-DATA.md)), which also states the terms for the imported conversations, model outputs from other parties and third-party JavaScript. The licenses were decided on 23 October 2026 and added on 11 November 2026.
